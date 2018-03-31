@@ -34,3 +34,5 @@ Route::get('search-tour/{country_id}','FilterController@search_tour');
 Route::get('adminlogin','LoginController@adminLogin');
 
 Route::get('dashboard','AdminController@dashboard');
+
+Route::get('tour-detail','TourController@tour_detail');
