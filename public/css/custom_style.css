@@ -573,3 +573,21 @@ hr {
 #priceSlider .slider-selection {
     background: red;
 }
+
+/* green 4/1/18 */
+
+.product-email .btn-pdf {
+    border-radius: 8px;
+    width: auto;
+    margin: 10px 0px 0 0px;
+    color: #fff;
+    background-color: #F58A1F;
+    border-color: #F58A1F;
+    font-size: 20px; 
+}
+
+.product-email .btn-pdf:hover {
+    color: #fff;
+    background-color: #F87300;
+    border-color: #F87300;
+}
