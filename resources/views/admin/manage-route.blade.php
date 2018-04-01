@@ -17,39 +17,44 @@
     <section class="content">
         <div class="row">
             <div class="col-lg-3"></div>
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="ค้นหาข้อมูลเส้นทาง">
-                    <span class="input-group-btn">
-                        <button class="btn btn-secondary" type="button">ค้นหา</button>
-                    </span>
-                </div>
+            <div class="col-lg-1">
+                 <label>เส้นทาง : </label>
+             </div>
+            <div class="col-lg-4">
+                 <input type="text" class="form-control" id="usr">
+            </div>
+        </div>
+        <br>
+         <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-6"> 
+                <button type="button" class="btn btn-success">ค้นหา</button>
+                <button type="button" class="btn btn-info">เพิ่มเส้นทาง</button>
+                <button type="button" class="btn btn-danger">ล้างเงื่อนไข</button>
             </div>
         </div>
         <br> <br> <br>
         <div class="row">
-            <table id="example" class="display" style="width:100%">
-                <thead>
-                    <tr>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </tfoot>
-            </table>
+        <table id="routeTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>รหัสเส้นทาง</th>
+                <th>ชื่อเส้นทาง</th>
+                <th>ผู้สร้าง</th>
+                <th>แก้ไขข้อมูล</th>
+                <th>ลบข้อมูล</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>รหัสเส้นทาง</th>
+                <th>ชื่อเส้นทาง</th>
+                <th>ผู้สร้าง</th>
+                <th>แก้ไขข้อมูล</th>
+                <th>ลบข้อมูล</th>
+            </tr>
+        </tfoot>
+    </table>
         </div>
     </section>
 </div>
@@ -58,4 +63,6 @@
 @stop
 @section('footer_scripts')
 <script type="text/javascript" src="../js/admin/manage-route.js"></script>
+<script src='https://code.jquery.com/jquery-1.12.4.js'></script>
+<script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
 @endsection
