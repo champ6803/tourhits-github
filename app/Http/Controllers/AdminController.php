@@ -22,5 +22,7 @@ class AdminController extends Controller {
     public function manage_route(){
         return view('admin.manage-route');
     }
-
+    public function search_route(){
+        
+    }
 }

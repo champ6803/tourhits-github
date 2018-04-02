@@ -779,5 +779,7 @@
 
         <!-- Lion_admin for demo purposes -->
         <script src="js/demo.js"></script>
+        
+        @yield('footer_scripts')
     </body>
 </html>
