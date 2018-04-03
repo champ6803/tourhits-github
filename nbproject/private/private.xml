@@ -5,13 +5,10 @@
         <group>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/css/style.css</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/FilterController.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/routes/web.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/AdminController.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/dashboard.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/manage-route.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-confirm.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/demo.css</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
         </group>
     </open-files>
 </project-private>

@@ -1035,7 +1035,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-elements form-adult">
-                                        <label>Adult</label>
+                                        <label>ผู้ใหญ่</label>
                                         <div class="form-item">
                                             <select class="awe-select">
                                                 <option>0</option>
@@ -1047,7 +1047,7 @@
                                         <span>อายุ 12 ปีขึ้นไป</span>
                                     </div>
                                     <div class="form-elements form-kids">
-                                        <label>Kids</label>
+                                        <label>เด็ก</label>
                                         <div class="form-item">
                                             <select class="awe-select">
                                                 <option>0</option>

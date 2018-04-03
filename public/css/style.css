@@ -5616,15 +5616,19 @@ body.single-post .blog-page__content > .post .post-content {
 .checkout-page__sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0px;
+    width: 100%;
+    
 }
 .checkout-page__sidebar ul li {
     position: relative;
     counter-increment: count;
     margin-bottom: 5px;
+    
 }
 .checkout-page__sidebar ul li:before {
-    content: counter(count);
+/*    content: counter(count);*/
+
     display: block;
     position: absolute;
     width: 34px;
@@ -5650,10 +5654,11 @@ body.single-post .blog-page__content > .post .post-content {
     transition: all 0.3s ease;
 }
 .checkout-page__sidebar ul li a {
+    
     display: block;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
-    color: #A5A5A5;
+    color: #fff;
     background-color: #fff;
     line-height: 60px;
     white-space: nowrap;
@@ -5662,14 +5667,15 @@ body.single-post .blog-page__content > .post .post-content {
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     border-radius: 2px;
-    padding: 0 15px 0 60px;
+    text-align: left;
+    padding: 0 15px 0 15px;
 }
 .checkout-page__sidebar ul li:hover:before {
     border-color: #0091ea;
-    color: #0091ea;
+    color: #EC2424;
 }
 .checkout-page__sidebar ul li:hover a {
-    color: #0091ea;
+    color: #EC2424;
 }
 .checkout-page__sidebar ul li.current:before {
     border-color: #fff;
@@ -5678,6 +5684,10 @@ body.single-post .blog-page__content > .post .post-content {
 .checkout-page__sidebar ul li.current a {
     background-color: #0091ea;
     color: #fff;
+}
+
+.checkout-page__sidebar li .fa-calendar-check{
+    color: #F6A95B;
 }
 
 .woocommerce-error,
@@ -6589,7 +6599,7 @@ body.single-post .blog-page__content > .post .post-content {
     margin-right: -15px;
 }
 .product-detail__info .trips .item {
-    padding: 13px 15px;
+    padding: 0px 15px;
     float: left;
     width: 33.3333333333%;
 }
@@ -6601,7 +6611,7 @@ body.single-post .blog-page__content > .post .post-content {
     margin-bottom: 5px;
 }
 .product-detail__info .trips .item p {
-    font-size: 25px;
+    font-size: 20px;
     color: #515050;
     margin-bottom: 0;
     text-overflow: ellipsis;
@@ -10071,4 +10081,8 @@ select {
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.option-confirm-tour{
+    margin: 6px 0 20px 0;
 }

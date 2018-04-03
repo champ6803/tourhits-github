@@ -35,11 +35,13 @@
 .cart-footer .cart-subtotal .subtotal-title h5 {color: #EC2424;   }
 .cart-footer .cart-subtotal .subtotal {color: #EC2424;}
 
-.checkout-page__content #payment .place-order input {
-   
-    background-color: #EC2424; }
+.checkout-page__content #payment .place-order input {background-color: #EC2424; }
+.checkout-page__sidebar ul li a {background-color: #333333; }
+.checkout-page__sidebar ul li:hover a {color: #F6A95B;}
+.checkout-page__sidebar ul li a p {margin-left: 100px; }
+.checkout-page__sidebar ul li a h5 {font-weight: 300;}
+.fix-img { width: 60px; height:60px;  padding-right: 20px;}
 
-    
 </style>
     
     <!-- BREADCRUMB -->
@@ -185,22 +187,44 @@
                     <div class="col-lg-12">
                         <div class="checkout-page__top">
                             <div class="title">
-                                <h1 class="text-uppercase" style="color:#333333; "><i class="fas fa-suitcase"></i> กรอกรายละเอียดการจอง</h1>
+                                <h1 class="text-uppercase" style="color:#333333; "><i class="fas fa-suitcase"></i> ข้อมูลการจอง</h1>
                             </div>
                             <span class="phone"><i class="awe-icon awe-icon-phone"></i> ติดต่อเรา : 062 914 2361 <br> <i class="fab fa-line"></i> จองผ่านไลน์ : @Tourhits </span>
                             
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-md-3">
                         <div class="checkout-page__sidebar">
                             <ul>
-                                <li class="current"><a href="checkout-yourcart.html">Your Cart</a></li>
-                                <li><a href="checkout-customer.html">Customer information</a></li>
-                                <li><a href="checkout-complete.html">Complete order</a></li>
+                                <li><a style="background-color: #EC2424;">
+                                        <div class="fix-img" style="float:left;"><img src="../images/ticket.png" alt=""></div>
+                                        วันเดินทางที่เลือก
+                                    </a>
+                                </li>
+                                <select class="form-control form-control-sm option-confirm-tour">
+                                    <option>วันเดินทางที่เลือก</option>
+                                    <option>2018-04-06 - 2018-06-06</option>
+                                    <option>2018-04-09 - 2018-06-013</option>
+                                    <option>2018-04-15 - 2018-06-20</option>
+                                </select>
+                                <li>
+                                    <a>
+                                        <div class="fix-img" style="float:left;"><img src="../images/airplane.png" alt=""></div>
+                                        <h5 style="color:#C1BDBD;">วันเดินทางไป</h5>
+                                        <p>2018-04-06</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <div class="fix-img" style="float:left;"><img src="../images/luggage.png" alt=""></div>
+                                        <h5 style="color:#C1BDBD">วันเดินทางกลับ</h5>
+                                        <p>2018-04-06</p>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-md-9">
                         <div class="checkout-page__content">
                             <div class="yourcart-content">
                                 <div class="content-title">
