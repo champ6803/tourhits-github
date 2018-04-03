@@ -2533,6 +2533,7 @@ span.dropcap {
     display: block;
     color: #666;
     margin-right: 32px;
+    font-size: 14px;
 }
 .breadcrumb ul li a:after {
     content: '';
@@ -5722,7 +5723,7 @@ body.single-post .blog-page__content > .post .post-content {
 .checkout-page__content .customer-content,
 .checkout-page__content .complete-content {
     background-color: #fff;
-    padding: 32px 30px;
+    padding: 10px 30px 30px 30px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
@@ -5740,8 +5741,8 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .checkout-page__content .content-title h2 {
     font-weight: 700;
-    font-size: 18px;
-    color: #666;
+    font-size: 25px;
+    color: #333333;
     margin: 0;
     padding: 14px 0;
 }
@@ -5793,12 +5794,12 @@ body.single-post .blog-page__content > .post .post-content {
     margin-top: 36px;
 }
 .checkout-page__content .woocommerce-billing-fields h3 {
-    font-weight: 700;
-    font-size: 18px;
-    color: #666;
+    font-weight: 600;
+    font-size: 25px;
+    color: #333333;
     margin: 0;
     padding: 14px 0;
-    border-bottom: 1px solid #D4D4D4;
+    border-top: 1px solid #D4D4D4;
 }
 .checkout-page__content .woocommerce-shipping-fields .shipping_address,
 .checkout-page__content .woocommerce-billing-fields {
@@ -5811,15 +5812,15 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .checkout-page__content .woocommerce-shipping-fields .shipping_address .form-row label,
 .checkout-page__content .woocommerce-billing-fields .form-row label {
-    font-weight: 600;
-    font-size: 14px;
-    color: #666;
+    font-weight: 300;
+    font-size: 20px;
+    color: #333333;
     margin-bottom: 10px;
 }
 .checkout-page__content .woocommerce-shipping-fields .shipping_address .form-row input,
 .checkout-page__content .woocommerce-billing-fields .form-row input {
     width: 100%;
-    background-color: #eee;
+    background-color: #FEF9F9;
 }
 .checkout-page__content .woocommerce-shipping-fields .shipping_address #shipping_first_name_field,
 .checkout-page__content .woocommerce-shipping-fields .shipping_address #billing_first_name_field,
@@ -5889,8 +5890,8 @@ body.single-post .blog-page__content > .post .post-content {
 .checkout-page__content .woocommerce-billing-fields #shipping_state_field,
 .checkout-page__content .woocommerce-billing-fields #billing_phone_field,
 .checkout-page__content .woocommerce-billing-fields #billing_state_field {
-    width: 22%;
-    margin-left: 3%;
+    width: 50%;
+    margin-left: 0%;
 }
 .checkout-page__content .woocommerce-shipping-fields .shipping_address #shipping_address_1_field,
 .checkout-page__content .woocommerce-shipping-fields .shipping_address #billing_address_1_field,
@@ -5906,13 +5907,15 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .checkout-page__content .woocommerce-shipping-fields .shipping_address #order_comments_field textarea,
 .checkout-page__content .woocommerce-billing-fields #order_comments_field textarea {
-    background-color: #eee;
+    background-color: #FEF9F9;
     width: 100%;
-    height: 130px;
+    height: 110px;
 }
 .checkout-page__content .woocommerce-shipping-fields .shipping_address .create-account,
 .checkout-page__content .woocommerce-billing-fields .create-account {
-    margin-top: 40px;
+    margin-top: 20px;
+    float: right;
+    line-height: 1.3;
 }
 .checkout-page__content .woocommerce-shipping-fields .shipping_address .create-account input[type="checkbox"],
 .checkout-page__content .woocommerce-billing-fields .create-account input[type="checkbox"] {
@@ -6014,20 +6017,21 @@ body.single-post .blog-page__content > .post .post-content {
     margin-left: 15px;
 }
 .checkout-page__content #payment .place-order {
-    border-top: 2px solid #C2C5CD;
-    padding: 20px 0;
-    text-align: right;
+    border-top: 0px solid #C2C5CD;
+    padding: 0px 0;
+    text-align: center;
+    
 }
 .checkout-page__content #payment .place-order input {
     border: 0;
-    background-color: #0091ea;
+    background-color: #F6A95B;
     border-radius: 4px;
     text-align: center;
     line-height: 40px;
     height: 40px;
     white-space: nowrap;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 300;
     color: #fff;
     padding: 0 20px;
     -webkit-transition: all 0.3s ease;
@@ -6037,7 +6041,7 @@ body.single-post .blog-page__content > .post .post-content {
     transition: all 0.3s ease;
 }
 .checkout-page__content #payment .place-order input:hover {
-    background-color: #403F3F;
+    background-color: #F6A95B;
 }
 
 .your-order {
@@ -6170,14 +6174,14 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .cart-content .cart-table thead th {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 20px;
     color: #0091ea;
     padding: 14px 0;
 }
 .cart-content .cart-table tbody td {
-    font-weight: 700;
-    font-size: 12px;
-    color: #A5A5A5;
+    font-weight: 100;
+    font-size: 18px;
+    color: #515050;
     padding: 0 0 10px 0;
 }
 .cart-content .cart-table tbody td.product-remove {
@@ -6230,32 +6234,32 @@ body.single-post .blog-page__content > .post .post-content {
     bottom: 0;
 }
 .cart-content .cart-table tbody td .quantity .qty {
-    font-size: 12px;
+    font-size: 20px;
     color: #A5A5A5;
-    line-height: 26px;
+    line-height: 0px;
     height: 26px;
     max-width: 100px;
     border: 0;
 }
 
 .cart-footer .cart-subtotal {
-    border-bottom: 1px solid #D4D4D4;
-    padding: 30px 0;
+    border-bottom: 0px solid #D4D4D4;
+    padding: 20px 0;
 }
 .cart-footer .cart-subtotal .subtotal-title {
     float: left;
 }
 .cart-footer .cart-subtotal .subtotal-title h5 {
     font-weight: 600;
-    font-size: 14px;
-    color: #0091ea;
+    font-size: 25px;
+    color: #EC2424;
     margin: 0;
 }
 .cart-footer .cart-subtotal .subtotal {
     position: relative;
     font-weight: 700;
-    font-size: 14px;
-    color: #0091ea;
+    font-size: 25px;
+    color: #EC2424;
     float: right;
 }
 .cart-footer .cart-subtotal .subtotal .sale {
@@ -6365,7 +6369,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .cart-footer .shipping-handling .check-shipping-rate .form-row input {
     width: 100%;
-    background-color: #eee;
+    background-color: #FEF9F9;
 }
 .cart-footer .shipping-handling .check-shipping-rate .form-submit {
     float: left;
@@ -6471,6 +6475,15 @@ body.single-post .blog-page__content > .post .post-content {
     color: #0091ea;
     margin: 0;
 }
+
+.container-detail-confirm .product-title h3 {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 600;
+    color: #0091ea;
+    margin: 0;
+}
+
 .product-detail__info .product-title .hotel-star {
     display: inline-block;
     font-size: 10px;
@@ -7767,7 +7780,7 @@ body.single-post .blog-page__content > .post .post-content {
     float: left;
 }
 .booking-info .form-submit .add-to-cart button {
-    font-size: 20px;
+    font-size: 20containerpx;
     color: #FCF2E5;
     background-color: #FF6666;
     border: 0;
@@ -10053,3 +10066,9 @@ select {
 }
 /*# sourceMappingURL=style.css.map */
 
+.container-detail-confirm {
+    width: 1140px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}

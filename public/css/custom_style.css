@@ -3890,3 +3890,11 @@ Custom BS3
     -webkit-transition-delay: 2s;
     opacity: 1;
 }
+
+/* 4/3/18 */
+
+.top-detail-confirm {
+    height: 400px;
+    padding: 10px;
+}
+

@@ -38,3 +38,5 @@ Route::get('dashboard','AdminController@dashboard');
 Route::get('tour-detail','TourController@tour_detail');
 
 Route::get('manage-route','AdminController@manage_route');
+
+Route::get('tour-confirm','ConfirmController@tour_confirm');
