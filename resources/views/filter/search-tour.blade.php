@@ -200,89 +200,35 @@
                         <span class='filter-header-text'><i class="far fa-calendar-alt"></i> วันเดินทาง ไป-กลับ</span>
                     </div>
                     <!--            เว้นไว้ใส่ปฎิทิน-->
-                    <div class="option-all">
-                        <label for="cbxall" class="label-cbx">
-                            <input id="cbxall" type="checkbox" class="invisible">
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span>แสดงทั้งหมด</span>
-                        </label>
+                    <div id="filter-date">
+                        <div class="option-all">
+                            <label for="holiday_all" class="label-cbx">
+                                <input id="holiday_all" type="checkbox" class="invisible" checked>
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span>แสดงทั้งหมด</span>
+                            </label>
+                        </div>
+                        @foreach ($holidayList as $holiday)
+                        <div class="option">
+                            <label for="route_{{ $holiday->holiday_id }}" class="label-cbx">
+                                <input id="route_{{ $holiday->holiday_id }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">{{ $holiday->holiday_name }}</span>
+                                <span class="clear"></span>
+                            </label>
+                        </div>
+                        @endforeach
                     </div>
-                    <div class="option">
-                        <label for="cbx" class="label-cbx">
-                            <input id="cbx" type="checkbox" class="invisible">
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span class="name">วันสงกรานต์</span>
-
-                            <span class="clear"></span>
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label for="cbx" class="label-cbx">
-                            <input id="cbx" type="checkbox" class="invisible">
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span class="name">วันแรงงาน</span>
-
-                            <span class="clear"></span>
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label for="cbx" class="label-cbx">
-                            <input id="cbx" type="checkbox" class="invisible">
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span class="name">ฉัตรมงคล</span>
-
-                            <span class="clear"></span>
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label for="cbx" class="label-cbx">
-                            <input id="cbx" type="checkbox" class="invisible">
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span class="name">วิสาขบูชา</span>
-
-                            <span class="clear"></span>
-                        </label>
-                    </div>
-                    <div class="option">
-                        <label for="cbx" class="label-cbx">
-                            <input id="cbx" type="checkbox" class="invisible">
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span class="name">วันจักรี</span>
-
-                            <span class="clear"></span>
-                        </label>
-                    </div>
-
                 </div>
                 <hr>
                 <div class="filter-month">
