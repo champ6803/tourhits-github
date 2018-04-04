@@ -1,13 +1,14 @@
 $(function () {
     $("#price").slider({});
     $("#price").on("slide", function (slideEvt) {
-        var test = slideEvt;
         $("#price_from").text(slideEvt.value[0]);
         $("#price_to").text(slideEvt.value[1]);
     });
     expandCheckboxRoute();
     expandCheckboxAirline();
     expandCheckboxHoliday();
+    
+    $('#card_area').pageMe({pagerSelector:'#search_tour_pager',showPrevNext:true,hidePageNumbers:false,perPage:9});
 });
 
 var slider = new Slider('#price', {});

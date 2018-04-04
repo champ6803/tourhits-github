@@ -215,8 +215,8 @@
                         </div>
                         @foreach ($holidayList as $holiday)
                         <div class="option">
-                            <label for="route_{{ $holiday->holiday_id }}" class="label-cbx">
-                                <input id="route_{{ $holiday->holiday_id }}" type="checkbox" class="invisible">
+                            <label for="holiday_{{ $holiday->holiday_id }}" class="label-cbx">
+                                <input id="holiday_{{ $holiday->holiday_id }}" type="checkbox" class="invisible">
                                 <div class="checkbox">
                                     <svg width="20px" height="20px" viewBox="0 0 20 20">
                                     <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -229,13 +229,13 @@
                         </div>
                         @endforeach
                     </div>
+                    <div id="expandToggleHoliday" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreHoliday">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
                 </div>
                 <hr>
                 <div class="filter-month">
                     <div class='filter-header'>
                         <span class='filter-header-text'><i class="far fa-calendar-check"></i> เดือน</span>
                     </div>
-                    <div class='expand-toggle'>ดูเพิ่มเติม <i class="fas fa-caret-down"></i></div>
                     <div class="option-all">
                         <label for="cbxall" class="label-cbx">
                             <input id="cbxall" type="checkbox" class="invisible">
@@ -635,7 +635,199 @@
 
                 </div>
                 <!--วางการ์ด-->
-                <div class="row">
+                <div id="card_area" class="row">
+                    <div class="col-sm-6 col-md-4" align="center">
+                        <div class="thumbnail">
+                            <img src="../images/tour-package.jpg" alt="...">
+                            <div class="caption">
+                                <div class="tabbable">
+                                    <div class="tab-content">
+                                        <div id="tab1" class="tab-pane active">
+                                            <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                            <hr>
+                                            <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา</div>
+                                            <hr>
+                                            <div class="card-price">ราคา</div>
+                                            <hr>
+                                            <div class="button-card">
+                                                <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                            </div>
+                                        </div>
+                                        <div id="tab2" class="tab-pane">tab2 content</div>
+                                        <div id="tab3" class="tab-pane">tab3 content</div>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                        <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" align="center">
+                        <div class="thumbnail">
+                            <img src="../images/tour-package.jpg" alt="...">
+                            <div class="caption">
+                                <div class="tabbable">
+                                    <div class="tab-content">
+                                        <div id="tab1" class="tab-pane active">
+                                            <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                            <hr>
+                                            <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา</div>
+                                            <hr>
+                                            <div class="card-price">ราคา</div>
+                                            <hr>
+                                            <div class="button-card">
+                                                <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                            </div>
+                                        </div>
+                                        <div id="tab2" class="tab-pane">tab2 content</div>
+                                        <div id="tab3" class="tab-pane">tab3 content</div>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                        <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" align="center">
+                        <div class="thumbnail">
+                            <img src="../images/tour-package.jpg" alt="...">
+                            <div class="caption">
+                                <div class="tabbable">
+                                    <div class="tab-content">
+                                        <div id="tab1" class="tab-pane active">
+                                            <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                            <hr>
+                                            <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา</div>
+                                            <hr>
+                                            <div class="card-price">ราคา</div>
+                                            <hr>
+                                            <div class="button-card">
+                                                <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                            </div>
+                                        </div>
+                                        <div id="tab2" class="tab-pane">tab2 content</div>
+                                        <div id="tab3" class="tab-pane">tab3 content</div>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                        <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" align="center">
+                        <div class="thumbnail">
+                            <img src="../images/tour-package.jpg" alt="...">
+                            <div class="caption">
+                                <div class="tabbable">
+                                    <div class="tab-content">
+                                        <div id="tab1" class="tab-pane active">
+                                            <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                            <hr>
+                                            <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา</div>
+                                            <hr>
+                                            <div class="card-price">ราคา</div>
+                                            <hr>
+                                            <div class="button-card">
+                                                <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                            </div>
+                                        </div>
+                                        <div id="tab2" class="tab-pane">tab2 content</div>
+                                        <div id="tab3" class="tab-pane">tab3 content</div>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                        <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" align="center">
+                        <div class="thumbnail">
+                            <img src="../images/tour-package.jpg" alt="...">
+                            <div class="caption">
+                                <div class="tabbable">
+                                    <div class="tab-content">
+                                        <div id="tab1" class="tab-pane active">
+                                            <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                            <hr>
+                                            <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา</div>
+                                            <hr>
+                                            <div class="card-price">ราคา</div>
+                                            <hr>
+                                            <div class="button-card">
+                                                <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                            </div>
+                                        </div>
+                                        <div id="tab2" class="tab-pane">tab2 content</div>
+                                        <div id="tab3" class="tab-pane">tab3 content</div>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                        <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4" align="center">
+                        <div class="thumbnail">
+                            <img src="../images/tour-package.jpg" alt="...">
+                            <div class="caption">
+                                <div class="tabbable">
+                                    <div class="tab-content">
+                                        <div id="tab1" class="tab-pane active">
+                                            <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                            <hr>
+                                            <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา</div>
+                                            <hr>
+                                            <div class="card-price">ราคา</div>
+                                            <hr>
+                                            <div class="button-card">
+                                                <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                            </div>
+                                        </div>
+                                        <div id="tab2" class="tab-pane">tab2 content</div>
+                                        <div id="tab3" class="tab-pane">tab3 content</div>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                        <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-sm-6 col-md-4" align="center">
                         <div class="thumbnail">
                             <img src="../images/tour-package.jpg" alt="...">
@@ -800,15 +992,7 @@
                 <!--ปุ่ม next-->
                 <div class="row">
                     <div class="col-md-12">
-                        <div class='pagination'>
-                            <!--            <a class='first' href='#'>First</a>-->
-                            <a class='p' href='#'>1</a>
-                            <a class='p' href='#'>2</a>
-                            <a class='p' href='#'>3</a>
-                            <a class='p' href='#'>4</a>
-                            <a class="more"><i class="fas fa-ellipsis-h"></i></a>
-                            <a class='next' href='#'>หน้าถัดไป <i class="fas fa-chevron-circle-right"></i></a>
-                        </div>
+                        <ul class="pagination" id="search_tour_pager"></ul>
                     </div>
                 </div>
             </div>
@@ -820,7 +1004,6 @@
 
 @section('footer_scripts')
 
-<!--<script src='https://www.google.com/recaptcha/api.js'></script>
-<script type="text/javascript" src="js/auth/register.js"></script>-->
+<script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
 
 @endsection

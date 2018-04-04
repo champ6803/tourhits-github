@@ -260,7 +260,7 @@
         <script type="text/javascript" src="{{ asset('js/lib/bootstrap.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/bootstrap-slider.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/lib/pagination.js') }}"></script>
 
         <!-- REVOLUTION DEMO -->
         <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.revolution.min.js') }}"></script>
