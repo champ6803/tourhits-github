@@ -390,7 +390,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">ออนเซ็น</span>
+                                            <span class="name_tab">ออนเซ็น</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -404,7 +404,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">ออนเซ็น</span>
+                                            <span class="name_tab">ออนเซ็น</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -418,7 +418,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">ออนเซ็น</span>
+                                            <span class="name_tab">ออนเซ็น</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -432,7 +432,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">ออนเซ็น</span>
+                                            <span class="name_tab">ออนเซ็น</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -446,7 +446,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">ออนเซ็น</span>
+                                            <span class="name_tab">ออนเซ็น</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -460,7 +460,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">ออนเซ็น</span>
+                                            <span class="name_tab">ออนเซ็น</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -474,7 +474,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">ออนเซ็น</span>
+                                            <span class="name_tab">ออนเซ็น</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -501,7 +501,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">บินตรง</span>
+                                            <span class="name_tab">บินตรง</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -515,7 +515,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">บินตรง</span>
+                                            <span class="name_tab">บินตรง</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -529,7 +529,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">บินตรง</span>
+                                            <span class="name_tab">บินตรง</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -543,7 +543,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">บินตรง</span>
+                                            <span class="name_tab">บินตรง</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -557,7 +557,7 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name">บินตรง</span>
+                                            <span class="name_tab">บินตรง</span>
                                             <span class="count">()</span>
                                             <span class="clear"></span>
                                         </label>
@@ -582,12 +582,19 @@
                         </div>
                         <!--วาง Tag-->
                         <div class="row">
-                            <div class="col-md-2">
-                                <div class="alert alert-warning alert-dismissible">
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                                    <strong><span style="font-size: 18px">ฮอกไกโด</span></strong>
-                                </div>
-                            </div>             
+                            <div class="col-md-12">
+                                    <div class="alert alert-danger alert-dismissible pull-left" style="width: 200px; margin-right: 5px;">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                                        <strong><span style="font-size: 18px">โตเกียว</span></strong>
+                                    </div>
+                                    <div class="alert alert-danger alert-dismissible pull-left" style="width: 200px">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                                        <strong><span style="font-size: 18px">ฮอกไกโด</span></strong>
+                                    </div>
+                            </div>    
+
+
+
                         </div>
                     </div>
                 </div>
