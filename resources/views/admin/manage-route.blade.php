@@ -59,7 +59,6 @@
     </section>
 </div>
 
-
 @stop
 @section('footer_scripts')
 <script type="text/javascript" src="../js/admin/manage-route.js"></script>

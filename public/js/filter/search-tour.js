@@ -1,12 +1,14 @@
 $(function () {
     $("#price").slider({});
     $("#price").on("slide", function (slideEvt) {
-        var test = slideEvt;
         $("#price_from").text(slideEvt.value[0]);
         $("#price_to").text(slideEvt.value[1]);
     });
     expandCheckboxRoute();
     expandCheckboxAirline();
+    expandCheckboxHoliday();
+    
+    $('#card_area').pageMe({pagerSelector:'#search_tour_pager',showPrevNext:true,hidePageNumbers:false,perPage:9});
 });
 
 var slider = new Slider('#price', {});
@@ -23,7 +25,7 @@ function expandCheckboxRoute() {
     }
     $('#filter-route .option:lt(' + x + ')').show();
     $('#loadMoreRoute').click(function () {
-        if (x == 5) {
+        if (x === 5) {
             x = (x + 10 <= size_li) ? x + 5 : size_li;
             $("#loadMoreRoute").html("ดูน้อยลง&nbsp;<i class='fas fa-caret-up'></i>");
             $('#filter-route .option:lt(' + x + ')').show();
@@ -43,7 +45,7 @@ function expandCheckboxAirline() {
     }
     $('#filter-airline .option:lt(' + x + ')').show();
     $('#loadMoreAirline').click(function () {
-        if (x == 5) {
+        if (x === 5) {
             x = (x + 10 <= size_li) ? x + 5 : size_li;
             $("#loadMoreAirline").html("ดูน้อยลง&nbsp;<i class='fas fa-caret-up'></i>");
             $('#filter-airline .option:lt(' + x + ')').show();
@@ -51,6 +53,26 @@ function expandCheckboxAirline() {
             x = (x - 5 <= 5) ? 5 : x - 5;
             $("#loadMoreAirline").html("ดูเพิ่มเติม&nbsp;<i class='fas fa-caret-down'></i>");
             $('#filter-airline .option').not(':lt(' + x + ')').hide();
+        }
+    });
+}
+
+function expandCheckboxHoliday() {
+    var size_li = $("#filter-date .option").size();
+    var x = 5;
+    if (size_li < 5) {
+        $("#expandToggleHoliday").hide();
+    }
+    $('#filter-holiday .option:lt(' + x + ')').show();
+    $('#loadMoreHoliday').click(function () {
+        if (x === 5) {
+            x = (x + 10 <= size_li) ? x + 5 : size_li;
+            $("#loadMoreHoliday").html("ดูน้อยลง&nbsp;<i class='fas fa-caret-up'></i>");
+            $('#filter-date .option:lt(' + x + ')').show();
+        } else if (x > 5) {
+            x = (x - 5 <= 5) ? 5 : x - 5;
+            $("#loadMoreHoliday").html("ดูเพิ่มเติม&nbsp;<i class='fas fa-caret-down'></i>");
+            $('#filter-date .option').not(':lt(' + x + ')').hide();
         }
     });
 }
