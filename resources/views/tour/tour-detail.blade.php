@@ -1,25 +1,20 @@
 @extends('layout.main')
 @section('page_title','Tour Detail')
 @section('main-content')
-
-
         <!-- BREADCRUMB -->
         <section>
             <div class="container">
                 <div class="breadcrumb">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Destinations</a></li>
-                        <li><a href="#">North America</a></li>
-                        <li><a href="#">USA</a></li>
-                        <li><span>NewYork</span></li>
+                        <li><a href="#">แพ็คเกจทัวร์</a></li>
+                        <li><a href="#">ทัวร์ญี่ปุ่น</a></li>
+                        <li><a href="#">ทัวร์ญี่ปุ่น โอซาก้า ทาคายาม่า นากาโน่ (6 วัน 4 คืน)</a></li>
                     </ul>
                 </div>
             </div>
         </section>
         <!-- BREADCRUMB -->
 
-        
         <section class="product-detail">
             <div class="container">
                 <div class="row">

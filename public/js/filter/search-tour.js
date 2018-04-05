@@ -20,7 +20,7 @@ slider.on("slide", function (sliderValue) {
 function expandCheckboxRoute() {
     var size_li = $("#filter-route .option").size();
     var x = 5;
-    if (size_li < 5) {
+    if (size_li <= 5) {
         $("#expandToggleRoute").hide();
     }
     $('#filter-route .option:lt(' + x + ')').show();
@@ -40,7 +40,7 @@ function expandCheckboxRoute() {
 function expandCheckboxAirline() {
     var size_li = $("#filter-airline .option").size();
     var x = 5;
-    if (size_li < 5) {
+    if (size_li <= 5) {
         $("#expandToggleAirline").hide();
     }
     $('#filter-airline .option:lt(' + x + ')').show();
@@ -60,7 +60,7 @@ function expandCheckboxAirline() {
 function expandCheckboxHoliday() {
     var size_li = $("#filter-date .option").size();
     var x = 5;
-    if (size_li < 5) {
+    if (size_li <= 5) {
         $("#expandToggleHoliday").hide();
     }
     $('#filter-holiday .option:lt(' + x + ')').show();

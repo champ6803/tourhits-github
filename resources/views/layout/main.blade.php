@@ -57,7 +57,7 @@
 
             <!-- HEADER PAGE -->
             <header id="header-page">
-                <div class="header-page__inner">
+                <div class="header-page__inner" style="border-bottom: 5px solid #ff5600;">
                     <div class="container">
                         <!-- LOGO -->
                         <div class="logo">
@@ -71,7 +71,7 @@
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
                                     <a href="index.html">แพ็คเกจทัวร์</a>
-                                    <hr class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <!--<hr class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">-->
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="destinations-list.html">ทัวร์มาแรง</a>
