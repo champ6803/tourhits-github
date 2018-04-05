@@ -5,10 +5,10 @@
     <div id="slider-revolution">
         <ul>
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 1">
-                <img src="images/bg/1.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                <img src="images/bg/indexbanner1.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
 
                 <div class="tp-caption sfb fadeout slider-caption slider-caption-2" data-x="center" data-y="100" data-speed="700" data-start="1500" data-easing="easeOutBack">
-                    แหล่งรวมทัวร์ทั่วโลก
+<!--                    แหล่งรวมทัวร์ทั่วโลก-->
                 </div>
 
                 <!--                <div class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">Top discount Paris Hotels</div>
@@ -17,7 +17,7 @@
             </li> 
 
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
-                <img src="images/bg/2.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                <img src="images/bg/indexbanner1.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
 
                 <!--                <div class="tp-caption  sft fadeout slider-caption-sub slider-caption-sub-2" data-x="center" data-y="220" data-speed="700" data-start="1500" data-easing="easeOutBack">
                                     Check out the top weekly destination
