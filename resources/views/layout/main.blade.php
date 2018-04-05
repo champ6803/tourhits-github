@@ -57,7 +57,7 @@
 
             <!-- HEADER PAGE -->
             <header id="header-page">
-                <div class="header-page__inner" style="border-bottom: 2px solid #ff5600;">
+                <div class="header-page__inner" style="border-bottom: 0px solid #ff5600;">
                     <div class="container">
                         <!-- LOGO -->
                         <div class="logo">

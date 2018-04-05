@@ -1,6 +1,76 @@
 @extends('layout.main')
 @section('page_title','Tour Detail')
 @section('main-content')
+
+<style>
+body {
+    counter-reset: count;
+}
+
+.trip-schedule-accordion .days{    
+    counter-increment: count;
+    margin-bottom: 5px;
+    padding: 20px;
+    
+    
+}
+
+.trip-schedule-accordion .days::before {
+    content: counter(count);
+/*    ส้ม*/
+/*    background-color: #F6A95B; */
+    background-color:#EC2424;
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    line-height: 30px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 60px;
+    color: #fff;
+    text-align: center;
+    
+    font-weight: 700;
+    border: 2px solid #EC2424;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.accordion .ui-state-active,
+.accordion .ui-widget-content .ui-state-active {
+    color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+    color: #EC2424;
+    border-bottom-color: #EC2424;
+}
+
+.trip-schedule-accordion h5 {
+    background-color: #F6A95B;
+    width: 110px;
+    padding-left: 10px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail__info .product-title h2{
+    color: #EC2424;
+}
+</style>
+
         <!-- BREADCRUMB -->
         <section>
             <div class="container">
@@ -625,7 +695,7 @@
                             <div class="product-tabs__content">
                                 <div id="tabs-1">
                                     <div class="trip-schedule-accordion accordion">
-                                        <h4>วันที่ 1 : สนามบินดอนเมือง</h4>
+                                        <h4>วันที่ <span class="days"></span>สนามบินดอนเมือง</h4>
                                             <div>
                                                 <div class="tour-map-wrapper">
                                                         <div class="tour-map">
@@ -688,7 +758,7 @@
                                                 </ul>
                                             </div>
                                         
-                                        <h4>วันที่ 2 : สนามบินนาริตะ–วัดอาซากุสะ–ผ่านชมโตเกียวสกายทรี – ล่องเรือโจรสลัด - โกเท็มบะ เอ้าต์เลต–บุฟเฟ่ต์ขาปูยักษ์ แช่ออนเซน</h4>
+                                        <h4>วันที่ <span class="days"></span>สนามบินนาริตะ–วัดอาซากุสะ–ผ่านชมโตเกียวสกายทรี – ล่องเรือโจรสลัด - โกเท็มบะ เอ้าต์เลต–บุฟเฟ่ต์ขาปูยักษ์ แช่ออนเซน</h4>
                                             <div>
                                                 <div class="tour-map-wrapper">
                                                         <div class="tour-map">
@@ -762,7 +832,7 @@
                                                 </ul>
                                             </div>
                                         
-                                        <h4>วันที่ 3 : ภูเขาไฟฟูจิ-หมู่บ้านโอชิโนะฮักไก-พิพิธภัณฑ์แผ่นดินไหว-ช้อปปิ้งสุดมันส์ชินจูกุ</h4>
+                                        <h4>วันที่ <span class="days"></span>ภูเขาไฟฟูจิ-หมู่บ้านโอชิโนะฮักไก-พิพิธภัณฑ์แผ่นดินไหว-ช้อปปิ้งสุดมันส์ชินจูกุ</h4>
                                             <div>
                                                 <div class="tour-map-wrapper">
                                                         <div class="tour-map">
@@ -830,7 +900,7 @@
                                                 </ul>
                                             </div>                                        
 
-                                        <h4>วันที่ 4 : อิสระในกรุงโตเกียว หรือ ซื้อทัวร์เสริมโตเกียวดิสนีย์แลนด์</h4>
+                                        <h4>วันที่ <span class="days"></span>อิสระในกรุงโตเกียว หรือ ซื้อทัวร์เสริมโตเกียวดิสนีย์แลนด์</h4>
                                             <div>
                                                 <div class="tour-map-wrapper">
                                                         <div class="tour-map">
@@ -898,7 +968,7 @@
                                                 </ul>
                                             </div>
 
-                                        <h4>วันที่ 5 : สนามบินนาริตะ – สนามบินดอนเมือง</h4>
+                                        <h4>วันที่ <span class="days"></span>สนามบินนาริตะ – สนามบินดอนเมือง</h4>
                                             <div>
                                                 <div class="tour-map-wrapper">
                                                         <div class="tour-map">
