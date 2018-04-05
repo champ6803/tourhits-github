@@ -1,7 +1,7 @@
 @extends('layout.main')
 @section('page_title','Tour Detail')
 @section('main-content')
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 
         <!-- BREADCRUMB -->
         <section>
@@ -630,69 +630,348 @@
                             <div class="product-tabs__content">
                                 <div id="tabs-1">
                                     <div class="trip-schedule-accordion accordion">
-                                        <h3>Day 1 : Downtown Tour</h3>
-                                        <div>
-                                            <div class="tour-map-wrapper">
-                                                <div class="tour-map">
-                                                    <div data-latlong="21.036697, 105.834871"></div>
+                                        <h4>วันที่ 1 : สนามบินดอนเมือง</h4>
+                                            <div>
+                                                <div class="tour-map-wrapper">
+                                                        <div class="tour-map">
+
+                                                        <div class="product-slider">
+                                                        <div class="item">
+                                                            <img src="images/img/1.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/2.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/3.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/4.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/5.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/6.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/7.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/8.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/9.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/10.jpg" alt="">
+                                                        </div>
+                                                </div>                                                            
+                                        
                                                 </div>
 
                                                 <div class="trips">
                                                     <div class="item">
-                                                        <h6>Sights and Stops</h6>
-                                                        <p><i class="awe-icon awe-icon-attraction"></i>26</p>
+                                                        <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
+                                                        <p>บริการอาหารและเครื่องดื่มบนเครื่อง</p>
                                                     </div>
                                                     <div class="item">
-                                                        <h6>Time length</h6>
-                                                        <p><i class="fa fa-clock-o"></i>2 hours</p>
+                                                        <h6><i class="far fa-moon"></i> โรงแรม</h6>
+                                                        <p>-</p>
                                                     </div>
                                                 </div>
                                                 <br>
-                                                <h6>Departure time</h6>
+                                                <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
                                                 <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
                                                 <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
+                                                </div>
+                                                <br>
+                                                <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงดึก</h5>                                               
+                                                <ul>
+                                                    <li>20.00 น. พร้อมกันที่ สนามบินนานาชาติดอนเมือง ชั้น 3 อาคารผู้โดยสารระหว่างประเทศ เคาน์เตอร์ สายการบิน AIR ASIA X เจ้าหน้าที่ของบริษัทฯ คอยให้การต้อนรับ และอำนวยความสะดวกในการเช็คอิน สายการบิน AIR ASIA X ใช้เครื่อง AIRBUS A330-300 จำนวน 377 ที่นั่ง จัดที่นั่งแบบ 3-3-3 (น้ำหนักกระเป๋า 20 กก./ท่าน หากต้องการซื้อน้ำหนักเพิ่ม ต้องเสียค่าใช้จ่าย)</li>
+                                                    <li>23.45 น. เหินฟ้าสู่ เมืองนาริตะ ประเทศญี่ปุ่น โดยเที่ยวบินที่ XJ600 (บริการอาหารและเครื่องดื่มบนเครื่อง)</li>                                                    
+                                                </ul>
                                             </div>
-                                            <br>
-                                            <p>Get on and go places! If you want to hit the most-visited spots in New York City, this is the one: CitySights NY’s Downtown Tour. You’ll get easy access to the most popular sites in town: the Statue of Liberty, the Empire State Building and “Ground Zero,” where the World Trade Center once stood and where a stunning new skyscraper soars today. Narrated by licensed NYC tour guides who know the city inside and out, this hop on/hop off excursion on a double-decker bus takes you through Greenwich Village, Little Italy, Chinatown, Wall Street and the Financial District, Battery Park City, South Street Seaport, the Lower East Side, along with Rockefeller Center, the United Nations building, Carnegie Hall, the Broadway theater district and more.</p>
-                                            <p>Get on and go places! If you want to hit the most-visited spots in New York City, this is the one: CitySights NY’s Downtown Tour. You’ll get easy access to the most popular sites in town: the Statue of Liberty, the Empire State Building and “Ground Zero,” where the World Trade Center once stood and where a stunning new skyscraper soars today. Narrated by licensed NYC tour guides who know the city inside and out, this hop on/hop off excursion on a double-decker bus takes you through Greenwich Village, Little Italy, Chinatown, Wall Street and the Financial District, Battery Park City, South Street Seaport, the Lower East Side, along with Rockefeller Center, the United Nations building, Carnegie Hall, the Broadway theater district and more.</p>
-                                        </div>
-                                        <h3>Day 2 : Uptown Treasures &amp; Harlem Tour</h3>
-                                        <div>
-                                            <p>
-                                            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-                                            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-                                            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                                            suscipit faucibus urna.
-                                            </p>
-                                        </div>
-                                        <h3>Day 3 : Chinatown</h3>
-                                        <div>
-                                            <p>
-                                            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                                            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                                            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                                            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                                            </p>
-                                            <ul>
-                                                <li>List item one</li>
-                                                <li>List item two</li>
-                                                <li>List item three</li>
-                                            </ul>
-                                        </div>
-                                        <h3>Day 4 : Parks &amp; Bridges</h3>
-                                        <div>
-                                            <p>
-                                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                                            mauris vel est.
-                                            </p>
-                                            <p>
-                                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                                            inceptos himenaeos.
-                                            </p>
-                                        </div>
+                                        
+                                        <h4>วันที่ 2 : สนามบินนาริตะ–วัดอาซากุสะ–ผ่านชมโตเกียวสกายทรี – ล่องเรือโจรสลัด - โกเท็มบะ เอ้าต์เลต–บุฟเฟ่ต์ขาปูยักษ์ แช่ออนเซน</h4>
+                                            <div>
+                                                <div class="tour-map-wrapper">
+                                                        <div class="tour-map">
+
+                                                        <div class="product-slider">
+                                                        <div class="item">
+                                                            <img src="images/img/1.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/2.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/3.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/4.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/5.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/6.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/7.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/8.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/9.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/10.jpg" alt="">
+                                                        </div>
+                                                </div>                                                            
+                                        
+                                                </div>
+
+                                                <div class="trips">
+                                                    <div class="item">
+                                                        <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
+                                                        <p>เที่ยง & เย็น</p>
+                                                    </div>
+                                                    <div class="item">
+                                                        <h6><i class="far fa-moon"></i> โรงแรม</h6>
+                                                        <p>พักที่โรงแรม FUJISAN GARDEN HOTEL หรือระดับเดียวกัน</p>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
+                                                <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
+                                                <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
+                                </div>
+                                                <br>
+                                                <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
+                                                <ul>
+                                                    <li>08.00 น. ถึง เมืองนาริตะ ประเทศญี่ปุ่น หลังจากผ่านขั้นตอนศุลกากรแล้วนำท่านเดินทางสู่ที่พัก (เวลาที่ญี่ปุ่น เร็วกว่าเมืองไทย 2 ชั่วโมง กรุณาปรับนาฬิกาของท่านเพื่อความสะดวกในการนัดหมายเวลา)</li>
+                                                    <li>นำท่านสู่ “กรุงโตเกียว” นมัสการเจ้าแม่กวนอิม “วัดอาซากุสะ” วัดที่ได้ชื่อว่าเป็นวัดที่มีความศักดิ์สิทธิ์และได้รับความเคารพนับถือมากที่สุดแห่งหนึ่งในกรุงโตเกียว ภายในประดิษฐานองค์เจ้าแม่กวนอิมทองคำมีผู้คนนิยมมากราบไหว้ขอพรเพื่อความเป็นสิริมงคลตลอดทั้งปี วัดพุทธที่เก่าแก่ที่สุดในภูมิภาคคันโต และมีผู้คนนิยมมากราบไหว้เพื่อความเป็นสิริมงคลตลอดทั้งปี</li>
+                                                    <li>ถ่ายภาพเป็นที่ระลึกกับ ประตูฟ้าคำรณ ซึ่งมีโคมไฟสีแดง ขนาดยักษ์ที่มีความสูงถึง 4.5 เมตร เป็นโคมไฟที่ใหญ่ที่สุดในโลก เลือกชมและเช่าเครื่องรางของขลังอันศักดิ์สิทธ์ของวัดแห่งนี้</li>
+                                                    <li>เดินต่อไปที่ “ถนนนากามิเซะ” (Nakamise dori) ถนนช๊อปปิ้ง ขายขนม ของฝาก ของที่ระลึก ขนมที่ซื้อกลับบ้านจะใส่กล่อง ห่อสวยงาม สามารถซื้อเป็นของฝากได้อย่างสวยงาม ส่วนขนมแบบที่กินเลยเช่น Soft ice cream, มันอัดแท่ง, ซาลาเปาทอด, ข้าวพองคล้ายขนมนางเล็ด ฯลฯ</li>
+                                                    <li>เดินทางผ่านชม “โตเกียวสกายทรี” (Tokyo Sky tree) เป็นหอที่เพิ่งสร้างขึ้นมาใหม่และยังเป็นเหมือนแลนด์มาร์คของโตเกียวถ่ายรูปกับหอคอย ตั้งอยู่ใจกลางของ Sumida City Ward เป็นตึกที่สูงที่สุดในญี่ปุ่น มีความสูงถึง 634 เมตร บริเวณโดยรอบๆเป็นแหล่งช็อปปิ้งขนาดใหญ่รวมทั้งมีอควอเรียมอยู่ในนั้นด้วย โตเกียวสกายทรีถูกแบ่งเป็นสองขั้นโดยชั้นแรกสูง 350 เมตร และชั้นบนสูง 450 เมตร เป็นจุดชมวิวเมืองโตเกียวที่สวยที่สุดอีกจุดหนึ่งเนื่องจากสามารถชมวิวได้รอบทิศ 360 องศา </li>
+                                                </ul>
+                                                <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
+                                                <ul>
+                                                    <li>เดินทางสู่ วนอุทยานแห่งชาติ ฮาโกเน่ สถานที่ท่องเที่ยวที่ได้รับความนิยม โดยเป็นส่วนหนึ่งของอุทยานแห่งชาติ ฟูจิ-ฮาโกเน่-อิสึ ที่ผู้มาเยือนสามารถชื่นชมความงามแห่งธรรมชาติ และดอกไม้นานาพันธุ์หลากสีสันที่เบ่งบานตลอดทั้งปี ทิวทัศน์ที่สวยงามหลากหลาย รวมไปถึงภูเขาไฟฟูจิ ทะเลสาบอะชิ และ โอวาคุดานิ ฮาโกเน่ยังมีชื่อเสียงในเรื่องของการเป็นแหล่งน้ำพุร้อน ที่แปลกไปกว่านั้นคือ มีจำนวนน้ำพุร้อนมากถึง 17 แห่ง</li>
+                                                    <li>นำท่าน ล่องเรือโจรสลัด ที่ทะเลสาบอาชิ ทะเลสาบที่ก่อตัวจากลาวาของภูเขาไฟฟูจิ หากวันใดอากาศสดใส ท่านจะได้สัมผัสกับทัศนียภาพอันงดงามของทะเลสาบที่มีภูเขาไฟฟูจิเป็นฉากหลัง</li>
+                                                    <li>นำเดินทางสู่ โกเท็มบะ แฟคทอรี่ เอ้าท์เล็ต ให้ท่านได้ช้อปปิ้งอย่างจุใจกับสินค้าแบรนด์เนมที่แหล่งรวมสินค้านำเข้าและสินค้าแบรนด์ญี่ปุ่นโกอินเตอร์มากมาย เช่น MK MICHEL KLEIN, MORGAN, ELLE, CYNTHIA ROWLEY, DIFFUSIONE TESSILE ฯลฯ เลือกซื้อกระเป๋าไฮไซ BALLY, PRADA, GUCCI, DIESEL,TUMI,GAP, ARMANY ฯลฯ </li>
+                                                    <li>ได้เวลานำท่านเข้าสู่ที่พัก </li>
+                                                    <li>ให้ท่านได้ผ่อนคลายกับการ แช่น้ำแร่ออนเซ็นธรรมชาติ เชื่อว่าถ้าได้แช่น้ำแร่แล้ว จะทำให้ผิวพรรณสวยงามและช่วยให้ระบบหมุนเวียนโลหิตดีขึ้น </li>
+                                                </ul>
+                                            </div>
+                                        
+                                        <h4>วันที่ 3 : ภูเขาไฟฟูจิ-หมู่บ้านโอชิโนะฮักไก-พิพิธภัณฑ์แผ่นดินไหว-ช้อปปิ้งสุดมันส์ชินจูกุ</h4>
+                                            <div>
+                                                <div class="tour-map-wrapper">
+                                                        <div class="tour-map">
+
+                                                        <div class="product-slider">
+                                                        <div class="item">
+                                                            <img src="images/img/1.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/2.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/3.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/4.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/5.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/6.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/7.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/8.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/9.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/10.jpg" alt="">
+                                                        </div>
+                                                </div>                                                            
+                                        
+                                                </div>
+
+                                                <div class="trips">
+                                                    <div class="item">
+                                                        <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
+                                                        <p>เช้า & บ่าย</p>
+                                                    </div>
+                                                    <div class="item">
+                                                        <h6><i class="far fa-moon"></i> โรงแรม</h6>
+                                                        <p>พักที่โรงแรม NARITA GATEWAY HOTEL หรือเทียบเท่าระดับเดียวกัน</p>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
+                                                <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
+                                                <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
+                                </div>
+                                                <br>
+                                                <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
+                                                <ul>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                                <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
+                                                <ul>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </div>                                        
+
+                                        <h4>วันที่ 4 : อิสระในกรุงโตเกียว หรือ ซื้อทัวร์เสริมโตเกียวดิสนีย์แลนด์</h4>
+                                            <div>
+                                                <div class="tour-map-wrapper">
+                                                        <div class="tour-map">
+
+                                                        <div class="product-slider">
+                                                        <div class="item">
+                                                            <img src="images/img/1.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/2.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/3.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/4.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/5.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/6.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/7.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/8.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/9.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/10.jpg" alt="">
+                                                        </div>
+                                                </div>                                                            
+                                        
+                                                </div>
+
+                                                <div class="trips">
+                                                    <div class="item">
+                                                        <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
+                                                        <p>อาหารเช้าโรงแรม</p>
+                                                    </div>
+                                                    <div class="item">
+                                                        <h6><i class="far fa-moon"></i> โรงแรม</h6>
+                                                        <p>ที่พัก NARITA GATEWAY HOTEL หรือเทียบเท่าระดับเดียวกัน</p>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
+                                                <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
+                                                <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
+                                                </div>
+                                                <br>
+                                                <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
+                                                <ul>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                                <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
+                                                <ul>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </div>
+
+                                        <h4>วันที่ 5 : สนามบินนาริตะ – สนามบินดอนเมือง</h4>
+                                            <div>
+                                                <div class="tour-map-wrapper">
+                                                        <div class="tour-map">
+
+                                                        <div class="product-slider">
+                                                        <div class="item">
+                                                            <img src="images/img/1.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/2.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/3.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/4.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/5.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/6.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/7.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/8.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/9.jpg" alt="">
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="images/img/10.jpg" alt="">
+                                                        </div>
+                                                </div>                                                            
+                                        
+                                                </div>
+
+                                                <div class="trips">
+                                                    <div class="item">
+                                                        <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
+                                                        <p>บริการอาหารและเครื่องดื่มบนเครื่อง</p>
+                                                    </div>
+                                                    <div class="item">
+                                                        <h6><i class="far fa-moon"></i> โรงแรม</h6>
+                                                        <p>-</p>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
+                                                <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
+                                                <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
+                                                </div>
+                                                <br>
+                                                <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
+                                                <ul>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                                <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
+                                                <ul>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                                
+                                            </div>                                        
+                                        
                                     </div>
                                 </div>
 
