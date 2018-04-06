@@ -57,15 +57,19 @@
 
             <!-- HEADER PAGE -->
             <header id="header-page">
+<<<<<<< HEAD
                 <div class="header-page__inner">
+=======
+                <div class="header-page__inner" style="border-bottom: 0px solid #ff5600;">
+>>>>>>> 2eea5a143b3f90d5aab316c5d48f8d5697cb24d3
                     <div class="container">
                         <!-- LOGO -->
                         <div class="logo">
                             <a href="/"><img src="../images/logo.png" alt=""></a>
+                            <span style="font-size: 18px; color: #515050;"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/06195</span>
                         </div>
 
                         <!-- END / LOGO -->
-
                         <!-- NAVIGATION -->
                         <nav class="navigation awe-navigation" data-responsive="1200">
                             <ul class="menu-list">
@@ -260,7 +264,7 @@
         <script type="text/javascript" src="{{ asset('js/lib/bootstrap.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/bootstrap-slider.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/lib/pagination.js') }}"></script>
 
         <!-- REVOLUTION DEMO -->
         <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.revolution.min.js') }}"></script>

@@ -66,6 +66,7 @@
     </section>
 </div>
 
+<<<<<<< HEAD
  <!--add Modal -->
 <div class="modal fade" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -147,6 +148,8 @@
     </div>
   </div>
 </div>
+=======
+>>>>>>> 77f14b5b96f2023ec3cead630928387a11c8d484
 @stop
 @section('footer_scripts')
 <script type="text/javascript" src="../js/admin/manage-route.js"></script>
