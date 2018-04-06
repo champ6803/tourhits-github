@@ -39,4 +39,10 @@ Route::get('tour-detail','TourController@tour_detail');
 
 Route::get('manage-route','AdminController@manage_route');
 
-Route::get('tour-confirm','ConfirmController@tour_confirm');
+Route::post('searchRoute','AdminController@searchRoute');
+
+Route::post('saveRoute','AdminController@saveRoute');
+
+Route::post('deleteRoute','AdminController@deleteRoute');
+
+Route::post('updateRoute','AdminController@updateRoute');
