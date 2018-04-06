@@ -84,7 +84,7 @@
           </div>
         </form>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" style="text-align: right">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">ยกเลิก</button>
         <button type="button" class="btn btn-primary" onclick="saveRoute()">บันทึก</button>
       </div>
@@ -119,7 +119,7 @@
           </div>
         </form>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" style="text-align: right">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="updateClose">ยกเลิก</button>
         <button type="button" class="btn btn-primary" onclick="updateRoute()">แก้ไข</button>
       </div>
