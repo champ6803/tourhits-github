@@ -12,6 +12,7 @@ use App\Models\Tour_Package;
 use App\Models\Holiday;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\DatabaseManager;
+use Illuminate\Database\Eloquent\Collection;
 
 /**
  * Description of FilterController
@@ -37,9 +38,23 @@ class FilterController extends Controller {
                 ->where('tour_country.tour_country_name', $country)
                 ->get();
 
-        $holidayList = DB::table('holiday')->get();
+        $holidayList = Holiday::all();
 
-        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList'));
+        $monthList = Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
+                ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                ->select(DB::raw('COUNT(*) as m_num, month(tour_period.tour_period_start) as m_month'))
+                ->groupBy('m_month')
+                ->where('tour_country.tour_country_name', $country)
+                ->get();
+        
+        $dayList = Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
+                ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                ->select(DB::raw('COUNT(*) as sum, DATEDIFF(tour_period.tour_period_end,tour_period.tour_period_start) + 1 AS duration'))
+                ->groupBy('duration')
+                ->where('tour_country.tour_country_name', $country)
+                ->get();
+
+        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList'));
     }
 
 }

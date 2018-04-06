@@ -617,7 +617,7 @@ hr {
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px;  
-    
+
 }
 
 #calendar .panel-body{
@@ -629,7 +629,7 @@ hr {
     font-size: 18px;
     padding: 10px 0;
     font-family: sans-serif;
-    
+
 }
 
 .fc-header-right{
@@ -642,7 +642,7 @@ hr {
 
 /* Content
 ------------------------------------------------------------------------*/
- .fc-content {
+.fc-content {
     clear: both;
 }
 .fc-view {
@@ -652,9 +652,9 @@ hr {
 }
 /* Cell Styles
 ------------------------------------------------------------------------*/
- .fc-widget-header,
+.fc-widget-header,
 /* <th>, usually */
- .fc-widget-content {
+.fc-widget-content {
     /* <td>, usually */
     border: 1px solid #ddd;
 }
@@ -672,7 +672,7 @@ hr {
 }
 /* Buttons
 ------------------------------------------------------------------------*/
- .fc-button {
+.fc-button {
     position: relative;
     display: inline-block;
     padding: 0 .6em;
@@ -698,9 +698,9 @@ hr {
 }
 /*
     Our default prev/next buttons use HTML entities like ‹ › « »
-	and we'll try to make them look good cross-browser.
+        and we'll try to make them look good cross-browser.
 */
- .fc-text-arrow {
+.fc-text-arrow {
     margin: 0 .1em;
     font-size: 2em;
     font-family:"Courier New", Courier, monospace;
@@ -712,7 +712,7 @@ hr {
     font-weight: bold;
 }
 /* icon (for jquery ui) */
- .fc-button .fc-icon-wrap {
+.fc-button .fc-icon-wrap {
     position: relative;
     float: left;
     top: 50%;
@@ -728,7 +728,7 @@ hr {
   button states
   borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
 */
- .fc-state-default {
+.fc-state-default {
     background-color: #f5f5f5;
     background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
@@ -770,7 +770,7 @@ hr {
 }
 /* Global Event Styles
 ------------------------------------------------------------------------*/
- .fc-event {
+.fc-event {
     border: 1px solid #3a87ad;
     /* default BORDER color */
     background-color: #3a87ad;
@@ -810,7 +810,7 @@ a.fc-event, .fc-event-draggable {
 }
 /* Horizontal Events
 ------------------------------------------------------------------------*/
- .fc-event-hori {
+.fc-event-hori {
     border-width: 1px 0;
     margin-bottom: 1px;
 }
@@ -825,7 +825,7 @@ a.fc-event, .fc-event-draggable {
     border-bottom-right-radius: 3px;
 }
 /* resizable */
- .fc-event-hori .ui-resizable-e {
+.fc-event-hori .ui-resizable-e {
     top: 0 !important;
     /* importants override pre jquery ui 1.7 styles */
     right: -3px !important;
@@ -846,7 +846,7 @@ a.fc-event, .fc-event-draggable {
 }
 /* Reusable Separate-border Table
 ------------------------------------------------------------*/
- table.fc-border-separate {
+table.fc-border-separate {
     border-collapse: separate;
 }
 .fc-border-separate th, .fc-border-separate td {
@@ -863,7 +863,7 @@ a.fc-event, .fc-event-draggable {
 }
 /* Month View, Basic Week View, Basic Day View
 ------------------------------------------------------------------------*/
- .fc-grid th {
+.fc-grid th {
     text-align: center;
 }
 .fc .fc-week-number {
@@ -882,8 +882,8 @@ a.fc-event, .fc-event-draggable {
     filter: alpha(opacity=30);
     /* for IE */
     /* opacity with small font can sometimes look too faded
-	   might want to set the 'color' property instead
-	   making day-numbers bold also fixes the problem */
+           might want to set the 'color' property instead
+           making day-numbers bold also fixes the problem */
 }
 .fc-grid .fc-day-content {
     clear: both;
@@ -891,15 +891,15 @@ a.fc-event, .fc-event-draggable {
     font-weight: 300;
     font-size: 15px;
     color: #333333;
-    
+
     /* distance between events and day edges */
 }
 /* event styles */
- .fc-grid .fc-event-time {
+.fc-grid .fc-event-time {
     font-weight: bold;
 }
 /* right-to-left */
- .fc-rtl .fc-grid .fc-day-number {
+.fc-rtl .fc-grid .fc-day-number {
     float: left;
 }
 .fc-rtl .fc-grid .fc-event-time {
@@ -907,7 +907,7 @@ a.fc-event, .fc-event-draggable {
 }
 /* Agenda Week View, Agenda Day View
 ------------------------------------------------------------------------*/
- .fc-agenda table {
+.fc-agenda table {
     border-collapse: separate;
 }
 .fc-agenda-days th {
@@ -928,14 +928,14 @@ a.fc-event, .fc-event-draggable {
     padding: 2px 2px 1px;
 }
 /* make axis border take precedence */
- .fc-agenda-days .fc-agenda-axis {
+.fc-agenda-days .fc-agenda-axis {
     border-right-width: 1px;
 }
 .fc-agenda-days .fc-col0 {
     border-left-width: 0;
 }
 /* all-day area */
- .fc-agenda-allday th {
+.fc-agenda-allday th {
     border-width: 0 1px;
 }
 .fc-agenda-allday .fc-day-content {
@@ -944,7 +944,7 @@ a.fc-event, .fc-event-draggable {
     _height: 34px;
 }
 /* divider (between all-day and slots) */
- .fc-agenda-divider-inner {
+.fc-agenda-divider-inner {
     height: 2px;
     overflow: hidden;
 }
@@ -952,7 +952,7 @@ a.fc-event, .fc-event-draggable {
     background: #eee;
 }
 /* slot rows */
- .fc-agenda-slots th {
+.fc-agenda-slots th {
     border-width: 1px 1px 0;
 }
 .fc-agenda-slots td {
@@ -974,7 +974,7 @@ a.fc-event, .fc-event-draggable {
 }
 /* Vertical Events
 ------------------------------------------------------------------------*/
- .fc-event-vert {
+.fc-event-vert {
     border-width: 0 1px;
 }
 .fc-event-vert.fc-event-start {
@@ -1009,12 +1009,12 @@ a.fc-event, .fc-event-draggable {
 }
 .fc .ui-draggable-dragging .fc-event-bg,
 /* TODO: something nicer like .fc-opacity */
- .fc-select-helper .fc-event-bg {
+.fc-select-helper .fc-event-bg {
     display: none\9;
     /* for IE6/7/8. nested opacity filters while dragging don't work */
 }
 /* resizable */
- .fc-event-vert .ui-resizable-s {
+.fc-event-vert .ui-resizable-s {
     bottom: 0 !important;
     /* importants override pre jquery ui 1.7 styles */
     width: 100% !important;
@@ -1031,8 +1031,8 @@ a.fc-event, .fc-event-draggable {
     _overflow: hidden;
 }
 /* CUSTOM */
- body .calendar {
-    
+body .calendar {
+
     margin-bottom: 0px;
 }
 body .calendar .fc-header {
@@ -1106,8 +1106,8 @@ body .calendar .fc-header .fc-header-left .fc-button.fc-state-active .fc-button-
     font-weight: 400;
 }
 body .calendar .fc-header .fc-header-title h3 {
-/*    font-family:'Roboto', Helvetica, sans-serif;*/
-    
+    /*    font-family:'Roboto', Helvetica, sans-serif;*/
+
     padding-left: 0px;
     padding-top: 0px;
 }
@@ -1197,7 +1197,7 @@ body .calendar .fc-content .fc-border-separate tr.fc-last th, body .calendar .fc
  * Docs & License: http://arshaw.com/fullcalendar/
  * (c) 2013 Adam Shaw
  */
- .fc {
+.fc {
     direction: ltr;
     text-align: left;
 }
@@ -1213,7 +1213,7 @@ html .fc, .fc table {
     vertical-align: top;
 }
 /**** ANIMATIONS ****/
- @charset"UTF-8";
+@charset"UTF-8";
 
 /*!
 Animate.css - http://daneden.me/animate
@@ -1229,7 +1229,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 /* Custom Background */
- .bg {
+.bg {
     background-image: url(http://www.ecampusnews.com/wp-content/blogs.dir/3/files/2011/03/students633.jpg);
     background-size: 100% 100%;
     content:"";
@@ -1246,7 +1246,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     filter: blur(3px);
 }
 /* Default Aniamtions */
- .animated {
+.animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
@@ -1257,7 +1257,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-duration: 2s;
 }
 /* Custom Delay Animations */
- .animated-sm {
+.animated-sm {
     -webkit-animation-delay: .25s;
     animation-delay: .25s;
     -webkit-animation-fill-mode: both;
@@ -1300,7 +1300,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-fill-mode: both;
 }
 /* Custom Duration Animations */
- .animated-long {
+.animated-long {
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
     -webkit-animation-fill-mode: both;
@@ -1374,7 +1374,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-name: flash;
 }
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
- @-webkit-keyframes pulse {
+@-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -1554,7 +1554,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-name: tada;
 }
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
- @-webkit-keyframes wobble {
+@-webkit-keyframes wobble {
     0% {
         -webkit-transform: translateX(0%);
         transform: translateX(0%);
@@ -3609,7 +3609,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-name: hinge;
 }
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
- @-webkit-keyframes rollIn {
+@-webkit-keyframes rollIn {
     0% {
         opacity: 0;
         -webkit-transform: translateX(-100%) rotate(-120deg);
@@ -3640,7 +3640,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-name: rollIn;
 }
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
- @-webkit-keyframes rollOut {
+@-webkit-keyframes rollOut {
     0% {
         opacity: 1;
         -webkit-transform: translateX(0px) rotate(0deg);
@@ -3677,14 +3677,14 @@ Flip that shit
 */
 
 /* entire container, keeps perspective */
- body .flip-container {
+body .flip-container {
     width: 100%;
 }
 body .flip-container .flipper {
     position: relative;
 }
 /* hide back of pane during swap */
- body .flip-container .flipper .front, body .flip-container .flipper .back {
+body .flip-container .flipper .front, body .flip-container .flipper .back {
     left: 0;
     position: absolute;
     top: 0;
@@ -3702,7 +3702,7 @@ body .flip-container .flipper {
     transition: 0.6s;
 }
 /* front pane, placed above back */
- body .flip-container .flipper .front {
+body .flip-container .flipper .front {
     z-index: 2;
     -webkit-transform: perspective(1000px) rotateY(0);
     -moz-transform: perspective(1000px) rotateY(0);
@@ -3710,7 +3710,7 @@ body .flip-container .flipper {
     transform: perspective(1000px) rotateY(0);
 }
 /* front pane, placed above back */
- body .flip-container:hover .flipper .front {
+body .flip-container:hover .flipper .front {
     -webkit-animation: 0;
     opactity: 0;
     -webkit-transform: perspective(1000px) rotateY(-179.9deg);
@@ -3719,7 +3719,7 @@ body .flip-container .flipper {
     transform: perspective(1000px) rotateY(-179.9deg);
 }
 /* back, initially hidden pane */
- body .flip-container:hover .flipper .back {
+body .flip-container:hover .flipper .back {
     opcaity: .1;
     position: absolute;
     z-index:3;
@@ -3733,7 +3733,7 @@ body .flip-container .flipper {
 floating
 ==============================================
 */
- .floating {
+.floating {
     animation-name: floating;
     -webkit-animation-name: floating;
     -moz-animation-name: floating;
@@ -3796,7 +3796,7 @@ floating
 Custom BS3
 ==============================================
 */
- .jumbo-profile {
+.jumbo-profile {
     background: #2c3e50;
     color: #fff;
 }
@@ -3826,7 +3826,7 @@ Custom BS3
   button states
   borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
 */
- .fc-state-default {
+.fc-state-default {
     background-color: #fff;
     background-image: none;
     background-image: none;
@@ -3846,7 +3846,7 @@ Custom BS3
 }
 /* Global Event Styles
 ------------------------------------------------------------------------*/
- .fc-event {
+.fc-event {
     border: 1px solid #357ebd;
     /* changed BORDER color */
     background-color: #428bca;
@@ -3862,7 +3862,7 @@ Custom BS3
 ------------------------------------------------------------------------*/
 
 /* resizable */
- .fc-event-hori .ui-resizable-e {
+.fc-event-hori .ui-resizable-e {
     top: 0 !important;
     /* importants override pre jquery ui 1.7 styles */
     right: -3px !important;
@@ -3878,7 +3878,7 @@ Custom BS3
     cursor: w-resize;
 }
 /* stylish circle */
- .stylish {
+.stylish {
     display:block;
     width:100px;
     height:100px;
@@ -3914,4 +3914,46 @@ Custom BS3
 
 .filter-section{
     margin-bottom: 70px;
+}
+
+.tour-cover{
+    height: 210px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.airline-logo{
+    background-repeat: no-repeat;
+    padding: 5px;
+    line-height: 0;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.8);
+    position: absolute;
+    background-size: contain;
+    left: 10px;
+    top: 10px;
+}
+
+.tour-header{
+    position: relative;
+    top: 10px;
+}
+
+.tour-footer{
+    position: relative;
+    top: 170px;
+    display: block;
+}
+
+.tour-header .days{
+    display: inline-block;
+    padding: 2px 7px 0;
+    font-weight: bold;
+    line-height: 30px;
+    color: #fff;
+    background: #C62B34;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 20px;
 }

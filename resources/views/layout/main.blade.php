@@ -57,21 +57,21 @@
 
             <!-- HEADER PAGE -->
             <header id="header-page">
-                <div class="header-page__inner" style="border-bottom: 2px solid #ff5600;">
+                <div class="header-page__inner">
                     <div class="container">
                         <!-- LOGO -->
                         <div class="logo">
                             <a href="/"><img src="../images/logo.png" alt=""></a>
+                            <span style="font-size: 18px; color: #515050;"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/06195</span>
                         </div>
 
                         <!-- END / LOGO -->
-
                         <!-- NAVIGATION -->
                         <nav class="navigation awe-navigation" data-responsive="1200">
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
                                     <a href="index.html">แพ็คเกจทัวร์</a>
-                                    <!--<hr class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">-->
+                                    <hr class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="destinations-list.html">ทัวร์มาแรง</a>
