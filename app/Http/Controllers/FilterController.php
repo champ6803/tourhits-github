@@ -11,8 +11,6 @@ namespace App\Http\Controllers;
 use App\Models\Tour_Package;
 use App\Models\Holiday;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\DatabaseManager;
-use Illuminate\Database\Eloquent\Collection;
 
 /**
  * Description of FilterController
@@ -21,7 +19,7 @@ use Illuminate\Database\Eloquent\Collection;
  */
 class FilterController extends Controller {
 
-    public function search_tour(DatabaseManager $db, $country) {
+    public function search_tour($country) {
         $routeList = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
                 ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                 ->join('route', 'route.route_id', '=', 'tour_route.route_id')
@@ -46,7 +44,7 @@ class FilterController extends Controller {
                 ->groupBy('m_month')
                 ->where('tour_country.tour_country_name', $country)
                 ->get();
-        
+
         $dayList = Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
                 ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                 ->select(DB::raw('COUNT(*) as sum, DATEDIFF(tour_period.tour_period_end,tour_period.tour_period_start) + 1 AS duration'))
@@ -55,6 +53,36 @@ class FilterController extends Controller {
                 ->get();
 
         return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList'));
+    }
+
+    public function getTourPackage() {
+        try {
+            $country = request()->get('country');
+//            $route = request()->get('_rooute');
+//            $start_date = request()->get('_start_date');
+//            $end_date = request()->get('_end_date');
+//            $month = request()->get('_month');
+//            $days = request()->get('_days');
+//            $airline = request()->get('_airline');
+//            $tags = request()->get('_tags');
+//            $attraction = request()->get('_attraction');
+//
+//            if (!empty($route) && empty($start_date) && empty($end_date) && empty($month) && empty($days) && empty($airline) && empty($tags) && empty($attraction)) {
+//                $tourPackageList = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
+//                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+//                        ->where('tour_country.tour_country_name', $country)
+//                        ->where('tour_route.route_id', $route)
+//                        ->get();
+//            } else {
+//                $tourPackageList = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+//                        ->where('tour_country.tour_country_name', $country)
+//                        ->where('tour_route.route_id', $route)
+//                        ->get();
+//            }
+            return $country;
+        } catch (\Exception $e) {
+            
+        }
     }
 
 }

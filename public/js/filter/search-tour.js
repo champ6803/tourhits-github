@@ -7,8 +7,15 @@ $(function () {
     expandCheckboxRoute();
     expandCheckboxAirline();
     expandCheckboxHoliday();
-    
-    $('#card_area').pageMe({pagerSelector:'#search_tour_pager',showPrevNext:true,hidePageNumbers:false,perPage:9});
+
+    $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
+
+    //getTourPackage("", "", "", "", "", "", "", "", "");
+
+    $("#test").click(function () {
+        getTourPackage("ญี่ปุ่น", "", "", "", "", "", "", "", "");
+    });
+    getDistrict(1);
 });
 
 var slider = new Slider('#price', {});
@@ -75,4 +82,72 @@ function expandCheckboxHoliday() {
             $('#filter-date .option').not(':lt(' + x + ')').hide();
         }
     });
+}
+
+function getTourPackage(country, route, start_date, end_date, month, days, airline, tags, attraction) {
+    var tour_package = "";
+    if (country != "" && country != null) {
+        // check null
+        route = null ? "" : route;
+        start_date = null ? "" : start_date;
+        end_date = null ? "" : end_date;
+        month = null ? "" : month;
+        days = null ? "" : days;
+        airline = null ? "" : days;
+        tags = null ? "" : tags;
+        attraction = null ? "" : attraction;
+
+        $.ajax({
+            type: 'post',
+            url: 'getTourPackage',
+            async: false,
+            data: {
+                'country': country
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (data) {
+                if (data != null) {
+                    tour_package = data;
+                } else {
+                    alert('select fail');
+                }
+            },
+            error: function (data) {
+                alert('error');
+            }
+        });
+    } else {
+        alert("no country");
+    }
+
+    return tour_package;
+}
+
+function getDistrict(province_id) {
+    var district = '';
+    //var province_id = $('#province').val();
+    $.ajax({
+        type: 'post',
+        url: 'getDistrict',
+        async: false,
+        data: {
+            'province_id': province_id
+        },
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            if (data != null) {
+                district = data;
+            } else {
+                alert('select fail');
+            }
+        },
+        error: function (data) {
+            alert('error');
+        }
+    });
+    return district;
 }
