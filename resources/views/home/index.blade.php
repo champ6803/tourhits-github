@@ -363,6 +363,22 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -375,7 +391,10 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div>                                        
+                                        <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         
+                                        <div class="card-price">฿49,900</div>                                       
+                                    </div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -414,6 +433,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -426,7 +453,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/airasia_x.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -465,6 +493,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -477,7 +513,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -515,6 +552,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -527,7 +572,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -608,6 +654,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -620,7 +674,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -659,6 +714,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -671,7 +734,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -710,6 +774,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -722,7 +794,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -761,6 +834,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -773,7 +854,7 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -819,3 +900,6 @@
 </section>
 
 @stop
+
+
+
