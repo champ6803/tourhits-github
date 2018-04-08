@@ -34,13 +34,16 @@
                             </div>
                             <form class="contact-form" action="processContact.php" method="post">
                                 <div class="form-item">
-                                    <input type="text" value="ชื่อของคุณ *" name="name">
+                                    <input type="text" value="" name="name" placeholder="ชื่อของคุณ *" autofocus>
                                 </div>
                                 <div class="form-item">
-                                    <input type="email" value="อีเมล์ของคุณ *" name="email">
+                                    <input type="email" value="" name="email" placeholder="อีเมล์ของคุณ *">
                                 </div>
                                 <div class="form-item">
-                                    <input type="text" value="เรื่องที่ต้องการติดต่อ *" name="subject">
+                                    <input type="text" value="" name="subject" placeholder="เรื่องที่ต้องการติดต่อ *">
+                                </div>
+                                <div class="form-item">
+                                    <input type="number" value="" name="number" maxlength="10" placeholder="เบอร์โทรศัพท์ *">
                                 </div>
                                 <div class="form-item form-captcha">
                                     <img src="images/img/captcha-demo.png" alt="" class="wpcf7-captchac">
