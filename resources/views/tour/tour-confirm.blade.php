@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('page_title','Tour Detail')
+@section('page_title','รายละเอียดการจอง')
 @section('main-content')
 <style>
     

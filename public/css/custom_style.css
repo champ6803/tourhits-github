@@ -4000,3 +4000,19 @@ Custom BS3
     border-radius: 6px;
     font-size: 20px;
 }
+
+.img-about{
+    height: 400px;     
+}
+
+.img-about img{
+    width: auto;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.tabs-aboutpage {
+    
+}

@@ -3645,6 +3645,12 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .contact-page__form .descriptions {
     color: #666;
+    font-size: 18px;
+    text-align: left;
+}
+
+.contact-page__form .descriptions p {
+    line-height: 1em;
 }
 
 .contact-form {
@@ -3661,6 +3667,7 @@ body.single-post .blog-page__content > .post .post-content {
     width: 100%;
     border: 1px solid #eee;
     background-color: #eee;
+    font-size: 19px;
 }
 .contact-form .form-textarea-wrapper {
     width: 100%;
@@ -3671,6 +3678,7 @@ body.single-post .blog-page__content > .post .post-content {
     width: 100%;
     border: 1px solid #eee;
     background-color: #eee;
+    font-size: 19px;
 }
 .contact-form .form-captcha {
     position: relative;
