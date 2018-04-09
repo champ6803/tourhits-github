@@ -9,7 +9,7 @@
     border-bottom-color: #EC2424; }
 
 .hero-section {
-    height: 300px;
+/*    height: 300px;*/
 }
     
     
@@ -26,7 +26,7 @@
             <div id="slider-revolution">
             <ul>
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 1">
-                <img src="images/head/aboutus.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                <img src="images/head/aboutus2.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
             
             </ul>
@@ -34,14 +34,19 @@
         </section>    
         
         
-        <section>
+        <section> 
             <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 style="color:#EC2424;">ABOUT US</h2>                        
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12 tabs-aboutpage">
                         <div class="product-tabs tabs">
                             <ul>
                                 <li>
-                                    <a href="#tabs-1">About Us</a>
+                                    <a href="#tabs-1">เกี่ยวกับเรา</a>
                                 </li>
                                 <li>
                                     <a href="#tabs-2">ใบอนุญาต</a>
@@ -53,324 +58,137 @@
                         
                         <div class="product-tabs__content">
                                 <div id="tabs-1">
-                                    <div class="trip-schedule-accordion accordion">
-                                        
-                                            About Us
-
-                                        
-                                              
+                                    <div class="about-tab1">
+                                        <row>
+                                            <div class="col-md-12" style="text-align: center;">
+                                                <img src="images/logo.png" alt="" title="">                                                                                                
+                                                <p><strong>เว็บไซต์ที่ให้บริการท่องเที่ยว ในเส้นทางยอดนิยมรอบโลก บริหารงานโดยบริษัททัวร์ชั้นนำของประเทศไทย “ทัวร์เอ็กเพรสเซ็นเตอร์”</strong></p>
+                                                <p>เพราะเราเชื่อว่าการท่องเที่ยวไม่ใช่แค่การพักผ่อนเท่านั้น แต่ยังเป็นการบ่งบอกถึงไลฟ์สไตล์ และตัวตนของผู้เดินทาง ซึ่งทางเราจะขอเป็นศูนย์รวมของโปรแกรมทัวร์คุณภาพ ในเส้นทางยอดนิยมทั่วโลก เพื่อตอบสนองไลฟ์สไตล์ที่แตกต่างกันของทุกคน และด้วย<strong>ประสบการณ์นำเที่ยวกว่า 10 ปี</strong> ท่านจึงมั่นใจได้ว่าจะได้รับการบริการ และคำปรึกษาด้านการเดินทาง จากมืออาชีพที่ชำนาญการแน่นอน</p>
+                                                <h4><hr></h4>
+                                                <div class="col-md-6" style="float:left;">
+                                                <strong><p>E-mail address : <strong><a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;">tourhits@gmail.com</a></strong></p>
+                                                <p style="color:#EC2424;">Our Vision : Prestige Travel Atmost Quality</p>
+                                                <p>ใบอนุญาตประกอบธุรกิจนำเที่ยว เลขที่ 11/06195</p></strong>
+                                                </div>
+                                                <p><img src="images/Certificate/TAT-TEC-W.png" alt="" title=""></p>
+                                                <br>
+                                                <hr>
+                                            </div>
+                                            
+                                            <div class="col-md-6" style="text-align: left;">
+                                                <h4 style="color:#EC2424;">ตำแหน่งงาน การมอบหมายหน้าที่ และความรับผิดชอบ(Job description)</h4>
+                                                <h5>ฝ่ายบริหาร</h5>
+                                                <p>ทำหน้าที่วางแผนกำหนดนโยบายบริหารภายในองค์กร
+                                                    และใช้ดุลยพินิจในการตัดสินใจด้าน ต่างๆ ให้เป็นไปตาม
+                                                    นโยบายของบริษัท และตรวจ สอบดูแล ด้านการจัดสรรงบ ประมาณในแต่ละหน่วยงานส่งเสริมให้ พนักงานมี
+                                                    ความรู้โดยฝึกเทคนิคให้เกิดความชำนาญ สร้างขวัญ
+                                                    และ กำลังใจใน การทำงานให้พนักงานวางยุทธศาสตร์
+                                                    การขายบริหาร จัดการกำกับดูแลฝ่ายต่างๆ ให้ปฏิบัติ
+                                                    การตามกฎระเบียบขององค์กรจัดกำหนดการของงาน
+                                                    ให้มีประสิทธิภาพดูแล ตรวจสอบแผนกบัญชี และ
+                                                    การเงิน ทำการจัดซือ้ จัดจ้างและ ดูแลฝ่ายบุคคล
+                                                    ของบริษัทฯ ทำหน้าที่วางแผน และบริหารทรัพยากร
+                                                    บุคคลในทุกฝ่าย สรรหา พนักงานจัดให้มีการอบรม
+                                                    พัฒนาบุคลากรดูแลบุคลากรต่างๆ ดูแล สวัสดิการ
+                                                    การเลิกจ้าง การรับพนักงานใหม่ตลอดจนการพัฒนา
+                                                    ความรู้ ความ สามารถของพนักงานเพื่อให้ทำงาน
+                                                    อย่างมีประสิทธิภาพเพื่อบรรลุ เป้าหมายและนโยบา
+                                                    ยของบริษัท
+                                                </p>
+                                                <h5>ฝ่ายบัญชี</h5>
+                                                <p>มีหน้าที่จัดการด้านบัญชี รายรับ รายจ่าย และรายงาน
+                                                สถานการณ์ การเงินบริษัท เรื่อง ภาษีต่างๆ ตลอดจน
+                                                การติดตามทวงหนี้ หรือการ ให้สินเชื่อแก่ลูกค้าบริษัท
+                                                และงบดุลประจำปี บริษัท รวมถึงคิดถึง ผลกำไรการ
+                                                ประกอบการของบริษัท</p>
+                                                <h5>ฝ่ายการเงิน</h5>
+                                                <p>รับผิดชอบการเงินของบริษัท ทั้ง รายรับและรายจ่ายตรวจสอบ จำนวนเงินให้ถูกต้อง</p>
+                                                <h5>ฝ่ายขายและปฎิบัติการ</h5>
+                                                <p>
+                                                    มีหน้าที่รับจองและนำเสนอข้อมูลและโปรแกรมท่องเที่ยวให้กับลูกค้าและสำรองบริการกับ ผู้ประกอบการธุรกิจผลิตสินค้านำเที่ยวต่างๆ ที่เกี่ยวข้องกับการจัดนำเที่ยว (Land operation ) การเขียนรายการ นำเที่ยว ประสานงานการเดินทาง การยืนยันการเดินทาง การคิดต้นทุน บวกกำไร เพื่อกำหนดการขาย รับผิดชอบการทำงานของมัคคุเทศน์ หรือหัวหน้า ทัวร์รวมถึงดูแลงานเอกสาร ที่เกี่ยวข้องกับการจัดนำเที่ยว โดยแยกออกเป็น 3 แผนก ดังนี้
+                                                </p>
                                                 
-                                                                                  
-                                        
+                                            </div>
+                                    
+                                            <div class="col-md-6" style="text-align: left;">
+                                                <br><br>
+                                                <h5>แผนกทัวร์หมู่คณะ (Incentive Group)</h5>
+                                                <p>ดูแลการนำเที่ยวเป็นหมู่คณะ เช่นองค์กรต่างๆทั้งภาครัฐและเอกชน ที่ต้องการเดิน ทางท่องเที่ยว สัมมนา ดูงานสวัสดิการพนักงานหรือ รางวัลส่งเสริมการขาย</p>
+                                                <h5>แผนกทัวร์หน้าร้าน (Collective Tour)</h5>
+                                                <p>ดูแลลูกค้ากลุ่มย่อย ที่สามารถเดินทางรวมกับผู้เดินทางอื่นๆ ที่สำรอง การเดินทางเข้ามา ในช่วงเวลาและรายการทัวร์เดียวกัน รวมตัวกัน เป็นหมู่คณะ โดยจัดทำเส้นทางท่องเที่ยว มาตรฐานและเป็นที่นิยม ของบริษัทเป็นประจำทุกเดือน</p>
+                                                <h5>แผนกทัวร์ตัวแทนจำหน่าย/จอยทัวร์ (Tour Distributor)</h5>
+                                                <p>ดูแลลูกค้าที่ต้องการเดินทางไปในเส้นทางต่างๆนอกเหนือจากโปรแกรมของบริษัท โดยจัดหาโปรแกรมในกลุ่มพันธมิตรบริษัทท่องเที่ยวชั้น นำให้เหมาะสมตรงตามความ ต้องการของลูกค้าฝ่ายตั๋วเครื่องบิน ทำหน้าที่ให้บริการจองตั๋ว เครื่องบินและจำหน่ายตั๋ว เครื่องบิน สำหรับผู้ใช้บริการที่ต้องการเดินทางไปในประเทศและต่างประเทศ</p>
+                                                <h5>ฝ่ายเอกสารธุรการ</h5>
+                                                <p>ทำงานด้านธุรการต่างๆ ติดต่อข้อมูลข่าวสารต่างๆ กับผู้ประกอบธุรกิจ ผลิตสินค้าบริการด้าน ท่องเที่ยวทางจดหมาย จดหมายอิเลคโทรนิค โทรสาร รวบรวมเอกสาร ข้อมูลแบบฟอร์ม ต่างๆที่เกี่ยวกับประเทศ ต่างๆ เช่นกฎระเบียบของการทำหนังสือเดินทาง ตรวจสอบ เอกสาร ที่ต้องใช้ประกอบการขอทำวีซ่าของลูกค้า ติดต่อสถานทูตต่างๆเพื่อขอ ทำวีซ่า กรอกแบบฟอร์มในการเดินทางให้กับลูกค้าประชาสัมพันธ์ เผยแพร่ เอกสารการนำเที่ยวและ ดูแลในส่วนของลูกค้าสัมพันธ์รับ ส่งเอกสารในและนอกบริษัท</p>
+                                                <h5>ฝ่ายหัวหน้าทัวร์</h5>
+                                                <p>เป็นผู้นำลูกค้าไปท่องเที่ยวตามสถานที่ต่างๆ ตามโปรแกรม บริหาร จัดการนำเที่ยว และดูแลบริการลูกค้าระหว่างการท่องเที่ยวในด้าน ต่างๆ ตลอดการเดินทางให้ครบถ้วนและบรรลุตาม เป้าประสงค์ ที่ได้กำหนดไว้ในโปรแกรมการเดินทาง</p>                                                                                                                                                                                               
+                                           </div>    
+                                            
+                                        </row>                                       
                                     </div>
                                 </div>
 
                                 <div id="tabs-2">
-                                    <table class="good-to-know-table">
-                                        <tbody>
-                                            <tr>
-                                                <th>
-                                                    <p>Check in</p>
-                                                </th>
-                                                <td>
-                                                    <p>From 15:00 hours</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <p>Check out</p>
-                                                </th>
-                                                <td>
-                                                    <p>Until 11:00 hours</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <p>Cancellation / prepayment</p>
-                                                </th>
-                                                <td>
-                                                    <p>Cancellation and prepayment policies vary according to room type. Please check the room conditions when selecting your room above.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <p>Children and extra beds</p>
-                                                </th>
-                                                <td>
-                                                    <p>The maximum number of children’s cots/cribs in a room is 1.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <p>Internet</p>
-                                                </th>
-                                                <td>
-                                                    <p>free! WiFi is available in all areas and is free of charge.</p>
-                                                    <p><span class="light">Free</span>children under 2 years stay free of charge when using existing beds.</p>
-                                                    <p><span class="light">Free</span>children under 2 years stay free of charge when using existing beds.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <p>Pets</p>
-                                                </th>
-                                                <td>
-                                                    <p>Pets are allowed. Charges may be applicable.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <p>Groups</p>
-                                                </th>
-                                                <td>
-                                                    <p>When booking for more than 11 persons, different policies and additional supplements may apply.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <p>Accepted cards for payment</p>
-                                                </th>
-                                                <td>
-                                                    <p><img src="images/paypal2.png" alt=""></p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div id="tabs-3">
-                                    <div id="reviews">
-                                        <div class="rating-info">
-                                            <div class="average-rating-review good">
-                                                <span class="count">7.5</span>
-                                                <em>Average rating</em>
-                                                <span>Good</span>
+                                  <div class="about-tab2">
+                                        <row>
+                                            <div class="col-md-6" style="text-align: center;">
+                                                <img src="images/Certificate/Cer.jpg" alt="" title="">
                                             </div>
-                                            <ul class="rating-review">
-                                                <li>
-                                                    <em>Facility</em>
-                                                    <span>7.5</span>
-                                                </li>
-                                                <li>
-                                                    <em>Human</em>
-                                                    <span>9.0</span>
-                                                </li>
-                                                <li>
-                                                    <em>Service</em>
-                                                    <span>9.5</span>
-                                                </li>
-                                                <li>
-                                                    <em>Interesting</em>
-                                                    <span>8.7</span>
-                                                </li>
-                                            </ul>
-                                            <a href="#" class="write-review">Write a review</a>
-                                        </div>
-                                        <div id="add_review">
-                                            <h3 class="comment-reply-title">Add a review</h3>
-                                            <form>
-                                                <div class="comment-form-author">
-                                                    <label for="author">Name <span class="required">*</span></label>
-                                                    <input id="author" type="text">
-                                                </div>
-                                                <div class="comment-form-email">
-                                                    <label for="email">Email <span class="required">*</span></label>
-                                                    <input id="email" type="text">
-                                                </div>
-                                                <div class="comment-form-rating">
-                                                    <h4>Your Rating</h4>
-                                                    <div class="comment-form-rating__content">
-                                                        <div class="item facility">
-                                                            <label>Facility</label>
-                                                            <select class="awe-select">
-                                                                <option>5.0</option>
-                                                                <option>6.5</option>
-                                                                <option>7.5</option>
-                                                                <option>8.5</option>
-                                                                <option>9.0</option>
-                                                                <option>10</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="item human">
-                                                            <label>Human</label>
-                                                            <select class="awe-select">
-                                                                <option>5.0</option>
-                                                                <option>6.5</option>
-                                                                <option>7.5</option>
-                                                                <option>8.5</option>
-                                                                <option>9.0</option>
-                                                                <option>10</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="item service">
-                                                            <label>Service</label>
-                                                            <select class="awe-select">
-                                                                <option>5.0</option>
-                                                                <option>6.5</option>
-                                                                <option>7.5</option>
-                                                                <option>8.5</option>
-                                                                <option>9.0</option>
-                                                                <option>10</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="item interesting">
-                                                            <label>Interesting</label>
-                                                            <select class="awe-select">
-                                                                <option>5.0</option>
-                                                                <option>6.5</option>
-                                                                <option>7.5</option>
-                                                                <option>8.5</option>
-                                                                <option>9.0</option>
-                                                                <option>10</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="comment-form-comment">
-                                                    <label for="comment">Your Review</label>
-                                                    <textarea id="comment"></textarea>
-                                                </div>
-                                                <div class="form-submit">
-                                                    <input type="submit" class="submit" value="Submit">
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div id="comments">
-                                            <ol class="commentlist">
-                                                <li>
-                                                    <div class="comment-box">
-                                                        <div class="avatar">
-                                                            <img src="images/img/demo-thumb.jpg" alt="">
-                                                        </div>
-                                                        <div class="comment-body">
-                                                            <p class="meta">
-                                                                <strong>Nguyen Gallahendahry</strong>
-                                                                <span class="time">December 10, 2012</span>
-                                                            </p>
-                                                            <div class="description">
-                                                                <p>Takes me back to my youth. I love the design of this soda machine. A bit pricy though..!</p>
-                                                            </div>
-
-                                                            <div class="rating-info">
-                                                                <div class="average-rating-review good">
-                                                                    <span class="count">7.5</span>
-                                                                    <em>Average rating</em>
-                                                                    <span>Good</span>
-                                                                </div>
-                                                                <ul class="rating-review">
-                                                                    <li>
-                                                                        <em>Facility</em>
-                                                                        <span>7.5</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <em>Human</em>
-                                                                        <span>9.0</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <em>Service</em>
-                                                                        <span>9.5</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <em>Interesting</em>
-                                                                        <span>8.7</span>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="comment-box">
-                                                        <div class="avatar">
-                                                            <img src="images/img/demo-thumb.jpg" alt="">
-                                                        </div>
-                                                        <div class="comment-body">
-                                                            <p class="meta">
-                                                                <strong>James Bond not 007</strong>
-                                                                <span class="time">December 10, 2012</span>
-                                                            </p>
-                                                            <div class="description">
-                                                                <p>Takes me back to my youth. I love the design of this soda machine. A bit pricy though..!</p>
-                                                            </div>
-
-                                                            <div class="rating-info">
-                                                                <div class="average-rating-review good">
-                                                                    <span class="count">7.5</span>
-                                                                    <em>Average rating</em>
-                                                                    <span>Good</span>
-                                                                </div>
-                                                                <ul class="rating-review">
-                                                                    <li>
-                                                                        <em>Facility</em>
-                                                                        <span>7.5</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <em>Human</em>
-                                                                        <span>9.0</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <em>Service</em>
-                                                                        <span>9.5</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <em>Interesting</em>
-                                                                        <span>8.7</span>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="comment-box">
-                                                        <div class="avatar">
-                                                            <img src="images/img/demo-thumb.jpg" alt="">
-                                                        </div>
-                                                        <div class="comment-body">
-                                                            <p class="meta">
-                                                                <strong>Bratt not Pitt</strong>
-                                                                <span class="time">December 10, 2012</span>
-                                                            </p>
-                                                            <div class="description">
-                                                                <p>Takes me back to my youth. I love the design of this soda machine. A bit pricy though..!</p>
-                                                            </div>
-
-                                                            <div class="rating-info">
-                                                                <div class="average-rating-review fine">
-                                                                    <span class="count">5.0</span>
-                                                                    <em>Average rating</em>
-                                                                    <span>Fine</span>
-                                                                </div>
-                                                                <ul class="rating-review">
-                                                                    <li>
-                                                                        <em>Facility</em>
-                                                                        <span>7.5</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <em>Human</em>
-                                                                        <span>9.0</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <em>Service</em>
-                                                                        <span>9.5</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <em>Interesting</em>
-                                                                        <span>8.7</span>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                       
+                                            <div class="col-md-6" style="text-align: center;">
+                                                <img src="images/Certificate/Certificate.png" alt="" title="">
+                                            </div>
+                                        </row>    
+                                        <row>    
+                                            <div class="col-md-6" style="text-align: center;">
+                                                <img src="images/Certificate/TAT-TEC-W.png" alt="" title="">      
+                                            </div>
+                                            
+                                        </row>
+    
+                                 </div>
+                               </div>    
+                            
+                                <div id="tabs-3">
+                                    <div class="about-tab1">
+                                        <row>
+                                            <div class="col-md-12" style="text-align: left;">
+                                               <h5 style="color:#EC2424;">วิสัยทัศน์ | Vision</h5>
+                                                <p>เป็นผู้นำการท่องเที่ยว ต่างประเทศโดยยืนอยู่
+                                                    บนพื้นฐานการท่องเที่ยวแบบคุณภาพในราคามิตรภาพ
+                                                    และมีมาตรฐานระดับสากล
+                                                </p>
+                                                <h5 style="color:#EC2424;">นโยบาย | Policy</h5>
+                                                <p>1. พัฒนาปรับปรุงโครงสร้างองค์กรให้เจริญก้าวหน้า</p>
+                                                <p>2. กำกับดูแลองค์กรที่ดีและบริหารความเสี่ยงในการดำเนินกิจการ</p>
+                                                <p>3. สรรหาและพัฒนาแหล่งท่องเที่ยวใหม่ที่หลากหลาย</p>
+                                                <p>4. การคำนึงถึงประโยชน์ของลูกค้าเป็นสำคัญ</p>
+                                                <h5 style="color:#EC2424;">กลยุทธ์ | Strategy</h5>
+                                                <p>1. การแนะนำบริการที่ตรงตามความต้องการของลูกค้า
+รายบุคคล</p>
+                                                <p>2. การใช้ระบบการจัดการอันทันสมัย ทั้งการจัดเก็บข้อมูล
+การจัดการแผนกลูกค้าสัมพันธ์</p>
+                                                <p>3. การตั้งใจทุ่มเทให้กับการบริการที่เปี่ยมด้วยคุณภาพ</p>
+                                                <p>4. การดำเนินธุรกิจอย่างโปร่งใสและมีธรรมาภิบาล</p>
+                                                <h5 style="color:#EC2424;">พันธกิจ | Mission</h5>
+                                                <p>1. มุ่งมั่นและร่วมเป็นพลังเสริม กับหน่วยงานของรัฐ เพื่อให้การ
+ท่องที่ยวเป็นสะพานเชื่อมมิตรภาพของระหว่างผู้คน</p>
+                                                <p>2. เป็นผู้นำที่แตกต่างในการให้บริการด้านการท่องเที่ยวที่ครบวงจร</p>
+                                                <p>3. เน้นที่การให้บริการที่มีมาตรฐานที่ดีเสมอมา</p>
+                                                <p>4. การให้บริการที่จะสามารถตอบสนองความต้องการทุกอย่างของ
+ลูกค้าได้อย่างรวดเร็วและมีประสิทธิภาพ</p>
+                                                <h5 style="color:#EC2424;">บริการ | Service</h5>
+                                                <p>Land operation จัดกรุ๊ปเหมา สัมมนา ดูงาน Group Insentive
+จำหน่ายแพคเกจทัวร์เดินทางต่างประเทศจำหน่ายแพคเกจทัวร์เดินทางของสายการบินชั้นนำรวมถึงบริการจัดหาและวางแผนการท่องเที่ยว แบบหมู่คณะแบบกลุ่มส่วนตัว และกรุ๊ปทัวร์ ที่โดดเด่นในเรื่องของคุณภาพ พร้อมยังทำหน้าที่เป็นศูนย์กลางในการเป็นผู้กระจายบริการท่องเที่ยว และทำการตลาดไปสู่ลูกค้าด้วยช่องทางการตลาดอันหลากหลาย(Tours Distributor) ในกลุ่มพันธมิตรบริษัท ท่องเที่ยวชั้นนำ</p>
+                                            </div>
+                                            
+                                        </row>
+                                    </div>                                       
+                                </div>                     
                         </div>    
-
-                </div>            
+                        </div>            
+                    </div>
+                </div>
+            </div>    
         </section>
             
 

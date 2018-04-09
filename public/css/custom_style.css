@@ -226,20 +226,20 @@
 }
 
 .btn-pdf:focus, .btn-pdf.focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+/*    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);*/
 }
 
 .btn-pdf.disabled, .btn-pdf:disabled {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #EC2424;
+    border-color: #EC2424;
 }
 
 .btn-pdf:not(:disabled):not(.disabled):active, .btn-pdf:not(:disabled):not(.disabled).active,
 .show > .btn-pdf.dropdown-toggle {
     color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf;
+    background-color: #EC2424;
+    border-color: #EC2424;
 }
 
 .btn-pdf:not(:disabled):not(.disabled):active:focus, .btn-pdf:not(:disabled):not(.disabled).active:focus,
@@ -4013,6 +4013,14 @@ Custom BS3
     width: 100%;
 }
 
-.tabs-aboutpage {
-    
+.about-tab1 p{
+    font-size: 20px;
+    padding-top: 5px;
+    line-height: 1.2;
+}
+
+.tabs-aboutpage{
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+    margin-top: -60px;
 }
