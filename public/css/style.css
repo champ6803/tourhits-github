@@ -1133,7 +1133,7 @@ span.dropcap {
     overflow-y: auto;
     top: 0;
     right: 0;
-    padding-top: 60px;
+    padding-top: 70px;
     background-color: #fff;
     max-width: 320px;
     width: 100%;
@@ -7574,7 +7574,7 @@ body.single-post .blog-page__content > .post .post-content {
     display: block;
     font-size: 13px;
     font-style: normal;
-    color: #488BF8;
+    color: #ec2424;
     line-height: 1.2em;
     font-weight: 600;
 }
@@ -7605,7 +7605,7 @@ body.single-post .blog-page__content > .post .post-content {
     display: block;
     font-size: 13px;
     font-style: normal;
-    color: #488BF8;
+    color: #ec2424;
     line-height: 1.2em;
     font-weight: 600;
 }
