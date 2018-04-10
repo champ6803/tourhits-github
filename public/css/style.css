@@ -582,6 +582,7 @@ span.dropcap {
     font-family: "Open Sans", sans-serif, supermarket;
     font-size: 14px;
 }
+
 .accordion .ui-accordion-header {
     background: none;
     border: 0;
@@ -589,20 +590,38 @@ span.dropcap {
     margin-top: 0;
     margin-bottom: 10px;
     padding: 0 20px;
-    line-height: 60px;
-    font-size: 25px;
-    font-weight: 600;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: 900;
     color: #444;
     border-radius: 8px;
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
-    
+    user-select: none;  
+    line-height:1.4;
+    padding-bottom: 5px;    
 }
+
+@media (min-width: 900px)
+{
+    .accordion .ui-accordion-header
+    {
+        font-size: 20px;
+        line-height: 1.5;
+    }  
+}
+
+@media (min-width: 900px)
+{
+        .product-detail__info .trips .item h6{font-size: 25px;}
+        
+}
+
 .accordion .ui-accordion-header .ui-accordion-header-icon {
     margin-top: 0;
-    right: 20px;
+    right: 5px;
     left: auto;
+/*    top: 26px;*/
     width: 0;
     height: 0;
     background: none;
@@ -1031,7 +1050,7 @@ span.dropcap {
     transform: translateY(-50%);
 }
 #header-page .logo img {
-    max-height: 90px;
+    max-height: 80px;
 }
 
 .awe-navigation {
@@ -1159,9 +1178,9 @@ span.dropcap {
 }
 .awe-navigation-responsive .menu-list li a {
     display: block;
-    font-family: "Open Sans", sans-serif;
+    font-family: "supermarket", sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 18px;
     color: #67728A;
     line-height: 56px;
 }
@@ -6502,6 +6521,7 @@ body.single-post .blog-page__content > .post .post-content {
     font-weight: 600;
     color: #0091ea;
     margin: 0;
+    
 }
 
 .container-detail-confirm .product-title h3 {
@@ -6623,7 +6643,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .product-detail__info .trips .item h6 {
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     color: #333333;
     margin-top: 0;
     margin-bottom: 5px;
@@ -8148,9 +8168,10 @@ body.single-post .blog-page__content > .post .post-content {
 }
 
 .tour-map {
+    
     max-width: 100%;
     width: 309px; /* 745 x 496.66 */
-    height: 200px;
+    
     float: left;
     margin-right: 30px;
 }

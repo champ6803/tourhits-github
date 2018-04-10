@@ -495,6 +495,7 @@ hr {
 
 .ui-widget.ui-widget-content {
     border: 0px solid #c5c5c5;
+    margin-top: -2px;
 }
 
 .ui-slider-horizontal {
@@ -613,17 +614,19 @@ hr {
 
 /* green 4/1/18 */
 
-.product-email .btn-pdf {
+.item .btn-pdf {
     border-radius: 8px;
     width: auto;
-    margin: 10px 0px 0 0px;
+    margin: 10px 0px 10px 0px;
     color: #fff;
-    background-color: #F58A1F;
-    border-color: #F58A1F;
-    font-size: 20px; 
+    background-color: #ec2424;
+    border-color: #ec2424;
+    font-size: 16px; 
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
 }
 
-.product-email .btn-pdf:hover {
+.item .btn-pdf:hover {
     color: #fff;
     background-color: #F87300;
     border-color: #F87300;
@@ -4023,4 +4026,9 @@ Custom BS3
     padding-bottom: 50px;
     margin-bottom: 100px;
     margin-top: -60px;
+}
+
+.cer-logo {
+    margin-left: -10px;    
+    display: inline-grid;        
 }
