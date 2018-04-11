@@ -6,10 +6,11 @@
     
 .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
     color: #EC2424;
-    border-bottom-color: #EC2424; }
+    border-bottom-color: #EC2424;
+}
 
-.hero-section {
-/*    height: 300px;*/
+.ui-widget.ui-widget-content{
+    margin-top: 50px;
 }
     
     

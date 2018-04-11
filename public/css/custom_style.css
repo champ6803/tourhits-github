@@ -4032,3 +4032,9 @@ Custom BS3
     margin-left: -10px;    
     display: inline-grid;        
 }
+
+.line-gradient{
+    height: 1.5px;
+    background: #EC1C24; /* For browsers that do not support gradients */
+    background: linear-gradient(to right, #D0171F, #EC1C24, #F58A1F, #FFDB00  ); /* Standard syntax (must be last) */
+}

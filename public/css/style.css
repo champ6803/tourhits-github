@@ -5640,12 +5640,12 @@ body.single-post .blog-page__content > .post .post-content {
     color: #666;
     margin: 0;
 }
-.checkout-page__top .phone {
+.checkout-page__sidebar .phone {
     display: block;
     float: right;
-    font-size: 16px;
-    font-weight: 600;
-    color: #666;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
     margin-top: 5px;
 }
 
@@ -10121,7 +10121,7 @@ select {
 /*# sourceMappingURL=style.css.map */
 
 .container-detail-confirm {
-    width: 1140px;
+/*    width: 1140px;*/
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -10129,7 +10129,9 @@ select {
 
 .option-confirm-tour{
     margin: 6px 0 20px 0;
+    font-size: 18px;
 }
+
 
 .product-tabs__content p{
     margin-left: 17.5px;
@@ -10146,4 +10148,111 @@ select {
     color: #666;
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+/* confirm form */
+
+.contact-page__form {
+    padding-top: 82px;
+    padding-bottom: 120px;
+}
+.contact-page__form .title span {
+    font-size: 24px;
+    color: #8f8f8f;
+}
+.contact-page__form .title h2 {
+    color: #0091ea;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.1em;
+    margin-top: 5px;
+}
+.contact-page__form .descriptions {
+    color: #666;
+    font-size: 18px;
+    text-align: left;
+}
+
+.confirm-form .descriptions p {
+    line-height: 1em;
+}
+
+.confirm-form {
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+}
+.confirm-form .form-item {
+    width: 50%;
+    padding: 15px;
+    float: left;
+}
+.confirm-form .form-item input {
+    width: 100%;
+    border: 1px solid #eee;
+    background-color: #eee;
+    font-size: 19px;
+}
+.confirm-form .form-textarea-wrapper {
+    width: 100%;
+    padding: 15px;
+    float: left;
+}
+.confirm-form .form-textarea-wrapper textarea {
+    width: 100%;
+    border: 1px solid #eee;
+    background-color: #eee;
+    font-size: 19px;
+}
+.confirm-form .form-captcha {
+    position: relative;
+}
+.confirm-form .form-captcha .wpcf7-captchac {
+    position: absolute;
+    padding: 15px 0;
+    top: 8px;
+    left: 22px;
+}
+.confirm-form .form-captcha .wpcf7-form-control-wrap {
+    display: block;
+}
+.confirm-form .form-captcha input {
+    padding-left: 90px;
+}
+.confirm-form .form-actions {
+    width: 100%;
+    padding: 15px;
+    float: left;
+}
+.confirm-form .form-actions input {
+    width: 100%;
+    max-width: 100px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0091ea;
+    border: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 9;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.confirm-form .form-actions input:hover {
+    opacity: .7;
+}
+
+/* end */
+
+.option-confirm-tour .form-control{
+   padding: 0px 12px;
 }

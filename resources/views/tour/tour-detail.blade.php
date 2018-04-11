@@ -66,9 +66,6 @@ body {
     display: inline;
 }
 
-.tour-map .product-slider .item img{
-        
-}
 </style>
 
         <!-- BREADCRUMB -->
