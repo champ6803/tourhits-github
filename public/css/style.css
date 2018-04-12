@@ -5780,7 +5780,7 @@ body.single-post .blog-page__content > .post .post-content {
     width: 100%;
 }
 .checkout-page__content .yourcart-content {
-    min-width: 720px;
+/*    min-width: 720px;*/
 }
 .checkout-page__content .content-title {
     border-bottom: 1px dashed #D4D4D4;
@@ -6215,6 +6215,9 @@ body.single-post .blog-page__content > .post .post-content {
 .cart-content .cart-table {
     width: 100%;
     border-bottom: 1px dashed #D4D4D4;
+    border-collapse: collapse;
+    border-spacing: 0;
+    
 }
 .cart-content .cart-table .product-subtotal {
     text-align: right;
@@ -6243,12 +6246,12 @@ body.single-post .blog-page__content > .post .post-content {
     color: #FF6666;
 }
 .cart-content .cart-table tbody td.product-name {
-    width: 31%;
-    padding-right: 20px;
+    width: 30%;
+/*    padding-right: 20px;*/
 }
 .cart-content .cart-table tbody td.product-price, .cart-content .cart-table tbody td.product-quantity {
-    width: 23%;
-    padding-right: 20px;
+/*    width: 23%;*/
+/*    padding-right: 20px;*/
 }
 .cart-content .cart-table tbody td.product-subtotal {
     width: 33.4%;
@@ -6257,6 +6260,47 @@ body.single-post .blog-page__content > .post .post-content {
     position: relative;
     padding-left: 14px;
 }
+
+.cart-table th.product-name{
+     width:80%;
+}
+/*
+@media screen and (max-width: 500px) {
+    .cart-content .cart-table tbody td.product-price .amount{
+    display: none;
+    }
+}*/
+
+@media screen and (max-width: 660px) {
+    
+    .cart-table th.product-name{
+     width:50%; }
+    
+    .cart-footer .cart-subtotal{
+    display: none;}
+    
+    .container .checkout-page__content {
+    padding: 10px;}
+    
+    .cart-content .cart-table tbody td.product-price .amount{
+    display: none;}
+} 
+
+@media screen and (max-width: 425px) {
+    .cart-content .cart-table tbody td.product-price .amount{
+    display: none;}
+    
+    .cart-table th.product-name{
+     width:30%; }
+    
+    .container .checkout-page__content {
+    padding: 10px;}
+}
+
+/*@media screen and (max-width: 425px) {
+    
+}*/
+
 .cart-content .cart-table tbody td .quantity .plus,
 .cart-content .cart-table tbody td .quantity .minus {
     position: absolute;
@@ -10255,4 +10299,10 @@ select {
 
 .option-confirm-tour .form-control{
    padding: 0px 12px;
+}
+
+.checkout-page__content {
+    background-color: #fff;
+    padding: 10px 40px;
+    
 }

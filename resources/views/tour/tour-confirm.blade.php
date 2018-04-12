@@ -43,6 +43,10 @@
 .fix-img { width: 60px; height:60px;  padding-right: 20px;}
 
 .form-control{padding: 0px 12px;}
+.checkout-page__content .contact-form{
+    margin-left: 0px;
+    margin-right: 0px;}
+.checkout-page__content .contact-form .form-item { padding: 5px;}
 
 </style>
     
@@ -232,13 +236,13 @@
                     </div>
                     <div class="col-md-9 col-sm-12">
                         <div class="checkout-page__content">
-                            <div class="yourcart-content">
+<!--<div class="yourcart-content">-->
                                 <div class="content-title">
                                     <h2><i class="fas fa-male"></i> <i class="fas fa-female"></i> <i class="fas fa-child"></i>&nbspจำนวนผู้โดยสาร</h2>
                                 </div>
                                 <div class="cart-content">
-<!--ผู้ใหญ่                                        -->
-                                    <table class="cart-table" style="overflow-x:auto;">
+<!--ผู้ใหญ่-->
+                                    <table class="cart-table">
                                         <thead>
                                             <tr>
 <!--                                                <th class="product-remove"></th>-->
@@ -344,7 +348,7 @@
                                             </tr>-->
                                         </tbody>
                                     </table>
-<!--เด็ก                                       -->
+<!--เด็ก -->
                                     <table class="cart-table">
                                         <thead>
                                             <tr>
@@ -433,41 +437,34 @@
                                 </div>        
                                     <table class="cart-table">                                      
                                         <tbody>
+                                            <thead>
                                             <tr>
-                                                
-                                                <td class="product-name">
-                                                    <span>ผู้ใหญ่</span>
-                                                </td>
-                                                <td class="product-price">
-                                                    <span class="amount">2&nbspท่าน</span>
-                                                </td>
-                                                
+<!--                                                <th class="product-remove"></th>-->
+                                                <th class="product-name" colspan="3" style="color: #EC2424">ราคารวมทั้งหมด</th>
+                                                <th class="product-subtotal" style="color: #EC2424">$ 67.909</th>
+                                            </tr>
+                                            </thead>
+                                            <tr>                                               
+                                                <td class="product-name" colspan="3">
+                                                    <li><span>ผู้ใหญ่ 2 ท่าน</span></li>                                                   
+                                                </td>                                                                                              
                                                 <td class="product-subtotal">
                                                     <span class="amount">$ 253</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                
-                                                <td class="product-name">
-                                                    <span>เด็ก</span>
+                                                <td class="product-name" colspan="3">
+                                                <li><span>เด็ก 0 ท่าน</span></li>
                                                 </td>
-                                                <td class="product-price">
-                                                    <span class="amount">0&nbspท่าน</span>
-                                                </td>
-                                                
                                                 <td class="product-subtotal">
                                                     <span class="amount">0</span>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 
-                                                <td class="product-name">
-                                                    <span>ส่วนลด</span>
-                                                </td>
-                                                <td class="product-price">
-                                                    <span class="amount">500&nbspบาท x 2 ท่าน</span>
-                                                </td>
-                                                
+                                                <td class="product-name" colspan="3">
+                                                    <li><span>ส่วนลด</span></li>  
+                                                </td>                                                                                           
                                                 <td class="product-subtotal">
                                                     <span class="amount">-1000</span>
                                                 </td>
@@ -475,7 +472,7 @@
                                         </tbody>
                                     </table>
 
-                                    <div class="cart-footer">
+<!--                                    <div class="cart-footer">
                                         <div class="cart-subtotal">
                                             <div class="subtotal-title">
                                                 <h5>ราคารวมทั้งหมด</h5>
@@ -485,11 +482,11 @@
                                                 
                                             </div>                                            
                                         </div>                                                                                
-                                    </div>
+                                    </div>-->
                                 </div>
-<!-- รายละเอียดคนจอง -->                                 
-                                <div class="woocommerce-billing-fields">
-                                    <h3 style="color:#ec2424;"><i class="far fa-handshake"></i> ข้อมูลผู้จองสำหรับติดต่อกลับ</h3><em>กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
+<!-- รายละเอียดคนจอง -->                            
+                                <form class="contact-form" action="processContact.php" method="post">
+                                    <h4 style="color:#ec2424;"><i class="far fa-handshake"></i> ข้อมูลผู้จองสำหรับติดต่อกลับ</h4><em>กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
                                     <div class="confirm-form">
                                         <div class="form-item">
                                         <input type="text" value="" name="name" placeholder="ชื่อของคุณ *">
@@ -506,8 +503,10 @@
                                         <div class="form-textarea-wrapper">
                                             <textarea name="message">หมายเหตุ</textarea>
                                         </div>
-                                    </div>    
-                                </div>
+                                    </div> 
+                                 </form>   
+                                
+                            
                                 
                                 <div id="payment">
                                     
@@ -522,7 +521,7 @@
                             </div> <!-- พท การ์ดทางขวา -->  
                           
                             
-                        </div>
+                        
                         
                         
                         
