@@ -335,7 +335,7 @@
         <div class="package-hit-title">
             <div class="section-title">
                 <h1><i class="fas fa-fire" style='color: #EC2424;'></i>&nbsp;แพ็คเกจยอดนิยม</h1>
-                <hr>
+                <div class="line-gradient"></div>
             </div>
             <div class='section-descripion'>
                 ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
@@ -363,6 +363,22 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -375,7 +391,10 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div>                                        
+                                        <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         
+                                        <div class="card-price">฿49,900</div>                                       
+                                    </div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -414,6 +433,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -426,7 +453,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/airasia_x.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -465,6 +493,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -477,7 +513,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -515,6 +552,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -527,7 +572,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -559,7 +605,7 @@
         <div class="package-hit-title">
             <div class="section-title">
                 <h1><i class="fas fa-align-justify" style='color: #EC2424;'></i>&nbsp;เราคัดสรรมาให้จากกว่า 200 ทัวร์</h1>
-                <hr>
+                <div class="line-gradient"></div>
             </div>
             <div class='section-descripion'>
                 ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
@@ -580,7 +626,7 @@
         <div class="package-hit-title">
             <div class="section-title">
                 <h1><i class="fas fa-fire" style='color: #EC2424;'></i>&nbsp;แพ็คเกจยอดนิยม</h1>
-                <hr>
+                <div class="line-gradient"></div>
             </div>
             <div class='section-descripion'>
                 ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
@@ -608,6 +654,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -620,7 +674,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -659,6 +714,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -671,7 +734,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -710,6 +774,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -722,7 +794,8 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                    <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -761,6 +834,14 @@
                                 </div>
                                 <span class="clear"></span>
                             </div>
+                            <div class="tour-bottom-right">
+                                <div>
+                                    <span class="tag">
+                                        #6600
+                                    </span>
+                                </div>
+                                <span class="clear"></span>                               
+                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -773,7 +854,7 @@
                                     <hr>
                                     <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                     <hr>
-                                    <div class="card-price">ราคา 49,900 บาท</div>
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         <div class="card-price">฿49,900</div>
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
@@ -805,7 +886,7 @@
         <div class="package-hit-title">
             <div class="section-title">
                 <h1><i class="fas fa-heart" style='color: #EC2424;'></i>&nbsp;ลูกค้าที่ไว้วางใจกับเรา</h1>
-                <hr>
+                <div class="line-gradient"></div>
             </div>
 
             <div align="center">
@@ -819,3 +900,6 @@
 </section>
 
 @stop
+
+
+

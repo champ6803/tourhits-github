@@ -47,4 +47,14 @@ Route::post('deleteRoute','AdminController@deleteRoute');
 
 Route::post('updateRoute','AdminController@updateRoute');
 
+<<<<<<< HEAD
 Route::post('search-tour/getTourPackage', 'FilterController@getTourPackage');
+=======
+Route::post('getTourPackage', 'FilterController@getTourPackage');
+
+Route::get('about','AboutController@about_us');
+
+Route::get('tour-confirm','ConfirmController@tour_confirm');
+
+Route::get('contact','ContactController@contact_us');
+>>>>>>> cacac2e55a727923818c775dc09f2229e130a8fd

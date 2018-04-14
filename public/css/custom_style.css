@@ -157,8 +157,12 @@
 
 /* card body */
 
+.thumbnail{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
 .card-detail{
-    font-size: 18px;
+    font-size: 20px;
     height: 120px;
     overflow: auto;
 }
@@ -176,32 +180,50 @@
 
 .card-time{
     padding: 3px 0;
-    color: #E61212;
+    color: #EC2424;
     font-size: 25px;
+    text-align: left;
+    margin-left: 9px;
 }
 
+.card-airline{
+    position: relative;
+    width: 150px;
+    height: 42.4px;
+    float: left;
+    overflow: hidden;
+    padding: 0px 10px 0px 0;
+    margin-bottom: 5px;
+/*    font-family: sans-serif;*/
+}
+
+.card-airline img{ max-width: 100.1%; margin-top: auto; margin-bottom: auto; height: 42.4px; width: auto; position: absolute; left:0; margin-left: 9px;}
+
 .card-price{
-    padding: 0 10px 0 0; 
-    color: #E61212; 
+    
+    padding: 0 0px 0 0; 
+    color: #EC2424; 
     text-align: right;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 900;
+    margin-bottom: 5px;
+/*    font-family: sans-serif;*/
 }
 
 
 /* css for btn card */
 
 .button-card{
-    margin-top: 13px;
+    margin-top: 3px;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0px;
 
 }
 
 .btn-pdf {
     border-radius: 8px;
     width: 127px;
-    margin: 0 5px 0 5px;
+    margin: 0 10px 0 10px;
     color: #fff;
     background-color: #F58A1F;
     border-color: #F58A1F;
@@ -216,20 +238,20 @@
 }
 
 .btn-pdf:focus, .btn-pdf.focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+/*    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);*/
 }
 
 .btn-pdf.disabled, .btn-pdf:disabled {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #EC2424;
+    border-color: #EC2424;
 }
 
 .btn-pdf:not(:disabled):not(.disabled):active, .btn-pdf:not(:disabled):not(.disabled).active,
 .show > .btn-pdf.dropdown-toggle {
     color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf;
+    background-color: #EC2424;
+    border-color: #EC2424;
 }
 
 .btn-pdf:not(:disabled):not(.disabled):active:focus, .btn-pdf:not(:disabled):not(.disabled).active:focus,
@@ -495,6 +517,7 @@ hr {
 
 .ui-widget.ui-widget-content {
     border: 0px solid #c5c5c5;
+    margin-top: -2px;
 }
 
 .ui-slider-horizontal {
@@ -613,17 +636,19 @@ hr {
 
 /* green 4/1/18 */
 
-.product-email .btn-pdf {
+.item .btn-pdf {
     border-radius: 8px;
     width: auto;
-    margin: 10px 0px 0 0px;
+    margin: 10px 0px 10px 0px;
     color: #fff;
-    background-color: #F58A1F;
-    border-color: #F58A1F;
-    font-size: 20px; 
+    background-color: #ec2424;
+    border-color: #ec2424;
+    font-size: 16px; 
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
 }
 
-.product-email .btn-pdf:hover {
+.item .btn-pdf:hover {
     color: #fff;
     background-color: #F87300;
     border-color: #F87300;
@@ -3970,12 +3995,69 @@ Custom BS3
 
 .tour-header .days{
     display: inline-block;
-    padding: 2px 7px 0;
+    padding: 1px 14px;
     font-weight: bold;
     line-height: 30px;
     color: #fff;
-    background: #C62B34;
+    background: rgba(236, 36, 36, 0.5);    
     margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 20px;
 }
+
+.tour-bottom-right{
+/*    position: relative;*/
+    position: absolute;
+    top: 170px;
+    display: block;
+    margin-left: 230px;
+    
+}
+
+.tour-bottom-right .tag{
+    display: inline-block;
+    padding: 0px 11px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #fff;
+    background: rgba(236, 36, 36, 0.6);    
+    margin-right: 0px;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.img-about{
+    height: 400px;     
+}
+
+.img-about img{
+    width: auto;
+    height: 400px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.about-tab1 p{
+    font-size: 20px;
+    padding-top: 5px;
+    line-height: 1.2;
+}
+
+.tabs-aboutpage{
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+    margin-top: -60px;
+}
+
+.cer-logo {
+    margin-left: -10px;    
+    display: inline-grid;        
+}
+
+.line-gradient{
+    height: 1.5px;
+    background: #EC1C24; /* For browsers that do not support gradients */
+    background: linear-gradient(to right, #D0171F, #EC1C24, #F58A1F, #FFDB00  ); /* Standard syntax (must be last) */
+}
+

@@ -2,10 +2,15 @@
 @section('page_title','Search Tour')
 @section('main-content')
 <style type="text/css">
+<<<<<<< HEAD
     .filter-tabcard .nav-tabs {  width: 510px; margin-left:auto; margin-right: auto; } 
     .filter-tabcard .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {color: #fff; background: #EC2424; border: none; box-shadow: 0 0px 5px rgba(112, 112, 112, 0.3); transform: scale(1.005); } <!--กด-->
+=======
+    .filter-tabcard .nav-tabs {  width: 50%; margin-left:auto; margin-right: auto; } 
+    .filter-tabcard .nav-tabs > li.active > a, .filter-tabcard .nav-tabs > li.active > a:focus, .filter-tabcard .nav-tabs > li.active > a:hover {color: #fff; background: #EC2424; border: none; box-shadow: 0 0px 5px rgba(112, 112, 112, 0.3); transform: scale(1.005); } <!--กด-->
+>>>>>>> cacac2e55a727923818c775dc09f2229e130a8fd
     .filter-tabcard .nav-tabs > li > a { border: none; color: #515050; background: #fff;  } <!--ยังไม่ได้กด--> 
-    .filter-tabcard .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none;  color: #fff !important; background: #EC2424; }
+    .filter-tabcard .nav-tabs > li.active > a,.filter-tabcard .nav-tabs > li > a:hover { border: none;  color: #fff !important; background: #EC2424; }
     .filter-tabcard .nav-tabs > li > a::after { content: ""; background: #F58A1F; height: 3px; position: absolute; width: 100%; left: 0px; bottom: -8px; transition: all 250ms ease 0s; transform: scale(0); }
     .filter-tabcard .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
     .filter-tabcard .tab-nav > li > a::after { background: #5a4080 none repeat scroll 0% 0%; color: #fff; }
@@ -76,6 +81,9 @@
             margin-right: auto;
             width: 100%;*/
     }
+    
+    .alert-danger{ background-color: rgba(248,115,0,0.6); }
+    .alert { border: 0px solid transparent; }
 
     .filter-pickdate{
         padding-top: 10px;

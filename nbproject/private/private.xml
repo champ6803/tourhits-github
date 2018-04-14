@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/xampp/htdocs/tourhits-github/public/js/scripts.js</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/js/filter/search-tour.js</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/css/style.css</file>
@@ -10,6 +11,16 @@
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/home/index.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
+=======
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/about/aboutus.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/style.css</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/bootstrap-extend.css</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/home/index.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/demo.css</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-confirm.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/contact/contactus.blade.php</file>
+>>>>>>> cacac2e55a727923818c775dc09f2229e130a8fd
             <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/FilterController.php</file>
         </group>

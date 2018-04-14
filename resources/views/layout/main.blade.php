@@ -63,7 +63,7 @@
                         <!-- LOGO -->
                         <div class="logo">
                             <a href="/"><img src="../images/logo.png" alt=""></a>
-                            <span style="font-size: 18px; color: #515050;"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/06195</span>
+                            <span class="cer-logo" style="font-size: 10px; color: #515050; font-weight: 900;"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/06195</span>
                         </div>
 
                         <!-- END / LOGO -->
