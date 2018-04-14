@@ -2,10 +2,15 @@
 @section('page_title','Search Tour')
 @section('main-content')
 <style type="text/css">
-    .filter-tabcard .nav-tabs {  width: 50%; margin-left:auto; margin-right: auto; } 
+<<<<<<< HEAD
+    .filter-tabcard .nav-tabs {  width: 510px; margin-left:auto; margin-right: auto; } 
     .filter-tabcard .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {color: #fff; background: #EC2424; border: none; box-shadow: 0 0px 5px rgba(112, 112, 112, 0.3); transform: scale(1.005); } <!--กด-->
+=======
+    .filter-tabcard .nav-tabs {  width: 50%; margin-left:auto; margin-right: auto; } 
+    .filter-tabcard .nav-tabs > li.active > a, .filter-tabcard .nav-tabs > li.active > a:focus, .filter-tabcard .nav-tabs > li.active > a:hover {color: #fff; background: #EC2424; border: none; box-shadow: 0 0px 5px rgba(112, 112, 112, 0.3); transform: scale(1.005); } <!--กด-->
+>>>>>>> cacac2e55a727923818c775dc09f2229e130a8fd
     .filter-tabcard .nav-tabs > li > a { border: none; color: #515050; background: #fff;  } <!--ยังไม่ได้กด--> 
-    .filter-tabcard .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none;  color: #fff !important; background: #EC2424; }
+    .filter-tabcard .nav-tabs > li.active > a,.filter-tabcard .nav-tabs > li > a:hover { border: none;  color: #fff !important; background: #EC2424; }
     .filter-tabcard .nav-tabs > li > a::after { content: ""; background: #F58A1F; height: 3px; position: absolute; width: 100%; left: 0px; bottom: -8px; transition: all 250ms ease 0s; transform: scale(0); }
     .filter-tabcard .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
     .filter-tabcard .tab-nav > li > a::after { background: #5a4080 none repeat scroll 0% 0%; color: #fff; }
@@ -13,11 +18,11 @@
     .filter-tabcard .tab-content {
         padding:10px; 
         height: auto; 
-        width: 880px; 
+        /*width: 880px;*/ 
         border-radius: 10px;         
         border: 2px solid #F58A1F;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 50px;
+        margin-right: 50px;
         margin-top:  25px;
         margin-bottom: 25px;
     }
@@ -30,6 +35,9 @@
     }
 
     @media all and (max-width:724px){
+        .filter-tabcard .nav-tabs{
+            width: 300px;
+        }
         .nav-tabs > li > a > span {display:none;}	
         .nav-tabs > li > a {padding: 0px 0px;}
     }
@@ -61,7 +69,7 @@
         padding-right: 10px;
     }
 
-    .dropdown-menu{
+    .dropdown-pos .dropdown-menu{
         width: 100%;
         text-align: center;
     }
@@ -72,6 +80,23 @@
             margin-left: auto;
             margin-right: auto;
             width: 100%;*/
+    }
+    
+    .alert-danger{ background-color: rgba(248,115,0,0.6); }
+    .alert { border: 0px solid transparent; }
+
+    .filter-pickdate{
+        padding-top: 10px;
+        position: relative; 
+    }
+
+    .filter-pickdate i {
+        position: absolute; 
+        bottom: 12px; 
+        right: 12px; 
+        top: auto; 
+        cursor: pointer;
+        color: black;
     }
 
 </style>
@@ -84,113 +109,31 @@
                 <div class="row filter-tabcard">
                     <div class="col-md-12">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#event" aria-controls="event" role="tab" data-toggle="tab"><span><i class="fab fa-gratipay"></i> กิจกรรม</span></a></li>
-                            <li role="presentation"><a href="#place" aria-controls="profile" role="place" data-toggle="tab"><span><i class="fab fa-fort-awesome-alt"></i> สถานที่</span></a></li>
-                            <li role="presentation"><a href="#etc" aria-controls="messages" role="etc" data-toggle="tab"><span>อื่นๆ</span></a></li>
+                            <li role="presentation" class="active"><a href="#event" aria-controls="event" role="tab" data-toggle="tab"><i class="fas fa-bicycle"></i><span class="tab-text"> กิจกรรม</span></a></li>
+                            <li role="presentation"><a href="#place" aria-controls="profile" role="place" data-toggle="tab"><i class="fas fa-building"></i><span class="tab-text"> สถานที่</span></a></li>
+                            <li role="presentation"><a href="#etc" aria-controls="messages" role="etc" data-toggle="tab"><i class="fas fa-clone"></i><span> อื่นๆ</span></a></li>
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <!--เนื้อหา tab event-->
                             <div role="tabpanel" class="tab-pane active" id="event">
-                                <div class="row option-event">
-                                    <div class="col-md-3">
-                                        <label for="cbx-event" class="label-cbx">
-                                            <input id="cbx-event" type="checkbox" class="invisible">
+                                <div class="row tab-tags">
+                                    @foreach ($tagList as $tag)
+                                    <div class="col-lg-3 col-md-6 option">
+                                        <label for="tag_{{ $tag->t_id }}" class="label-cbx">
+                                            <input id="tag_{{ $tag->t_id }}" type="checkbox" class="invisible">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name_tab">ออนเซ็น</span>
-                                            <span class="count">()</span>
+                                            <span class="name">{{ $tag->t_name }}</span>
+                                            <span class="count">({{ $tag->t_num }})</span>
                                             <span class="clear"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md-3">
-                                        <label for="cbx-event" class="label-cbx">
-                                            <input id="cbx-event" type="checkbox" class="invisible">
-                                            <div class="checkbox">
-                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="name_tab">ออนเซ็น</span>
-                                            <span class="count">()</span>
-                                            <span class="clear"></span>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="cbx-event" class="label-cbx">
-                                            <input id="cbx-event" type="checkbox" class="invisible">
-                                            <div class="checkbox">
-                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="name_tab">ออนเซ็น</span>
-                                            <span class="count">()</span>
-                                            <span class="clear"></span>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="cbx-event" class="label-cbx">
-                                            <input id="cbx-event" type="checkbox" class="invisible">
-                                            <div class="checkbox">
-                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="name_tab">ออนเซ็น</span>
-                                            <span class="count">()</span>
-                                            <span class="clear"></span>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="cbx-event" class="label-cbx">
-                                            <input id="cbx-event" type="checkbox" class="invisible">
-                                            <div class="checkbox">
-                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="name_tab">ออนเซ็น</span>
-                                            <span class="count">()</span>
-                                            <span class="clear"></span>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="cbx-event" class="label-cbx">
-                                            <input id="cbx-event" type="checkbox" class="invisible">
-                                            <div class="checkbox">
-                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="name_tab">ออนเซ็น</span>
-                                            <span class="count">()</span>
-                                            <span class="clear"></span>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="cbx-event" class="label-cbx">
-                                            <input id="cbx-event" type="checkbox" class="invisible">
-                                            <div class="checkbox">
-                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span class="name_tab">ออนเซ็น</span>
-                                            <span class="count">()</span>
-                                            <span class="clear"></span>
-                                        </label>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <!--จบเนื้อหา tab event-->                
                             </div>
@@ -203,8 +146,8 @@
 
                             <!--เนื้อหา tab อื่นๆ-->
                             <div role="tabpanel" class="tab-pane" id="etc">
-                                <div class="row option-etc">
-                                    <div class="col-md-3">
+                                <div class="row tab-other">
+                                    <div class="col-lg-3 col-md-6 option">
                                         <label for="cbx-ect" class="label-cbx">
                                             <input id="cbx-ect" type="checkbox" class="invisible">
                                             <div class="checkbox">
@@ -213,12 +156,12 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name_tab">บินตรง</span>
-                                            <span class="count">()</span>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
                                             <span class="clear"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-6 option">
                                         <label for="cbx-ect" class="label-cbx">
                                             <input id="cbx-ect" type="checkbox" class="invisible">
                                             <div class="checkbox">
@@ -227,12 +170,12 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name_tab">บินตรง</span>
-                                            <span class="count">()</span>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
                                             <span class="clear"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-6 option">
                                         <label for="cbx-ect" class="label-cbx">
                                             <input id="cbx-ect" type="checkbox" class="invisible">
                                             <div class="checkbox">
@@ -241,12 +184,12 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name_tab">บินตรง</span>
-                                            <span class="count">()</span>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
                                             <span class="clear"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-6 option">
                                         <label for="cbx-ect" class="label-cbx">
                                             <input id="cbx-ect" type="checkbox" class="invisible">
                                             <div class="checkbox">
@@ -255,12 +198,12 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name_tab">บินตรง</span>
-                                            <span class="count">()</span>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
                                             <span class="clear"></span>
                                         </label>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-lg-3 col-md-6 option">
                                         <label for="cbx-ect" class="label-cbx">
                                             <input id="cbx-ect" type="checkbox" class="invisible">
                                             <div class="checkbox">
@@ -269,8 +212,92 @@
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
                                             </div>
-                                            <span class="name_tab">บินตรง</span>
-                                            <span class="count">()</span>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
+                                            <span class="clear"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 option">
+                                        <label for="cbx-ect" class="label-cbx">
+                                            <input id="cbx-ect" type="checkbox" class="invisible">
+                                            <div class="checkbox">
+                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                <polyline points="4 11 8 15 16 6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
+                                            <span class="clear"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 option">
+                                        <label for="cbx-ect" class="label-cbx">
+                                            <input id="cbx-ect" type="checkbox" class="invisible">
+                                            <div class="checkbox">
+                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                <polyline points="4 11 8 15 16 6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
+                                            <span class="clear"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 option">
+                                        <label for="cbx-ect" class="label-cbx">
+                                            <input id="cbx-ect" type="checkbox" class="invisible">
+                                            <div class="checkbox">
+                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                <polyline points="4 11 8 15 16 6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
+                                            <span class="clear"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 option">
+                                        <label for="cbx-ect" class="label-cbx">
+                                            <input id="cbx-ect" type="checkbox" class="invisible">
+                                            <div class="checkbox">
+                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                <polyline points="4 11 8 15 16 6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
+                                            <span class="clear"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 option">
+                                        <label for="cbx-ect" class="label-cbx">
+                                            <input id="cbx-ect" type="checkbox" class="invisible">
+                                            <div class="checkbox">
+                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                <polyline points="4 11 8 15 16 6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
+                                            <span class="clear"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 option">
+                                        <label for="cbx-ect" class="label-cbx">
+                                            <input id="cbx-ect" type="checkbox" class="invisible">
+                                            <div class="checkbox">
+                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                <polyline points="4 11 8 15 16 6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span class="name">บินตรง</span>
+                                            <span class="count">(2)</span>
                                             <span class="clear"></span>
                                         </label>
                                     </div>
@@ -292,11 +319,11 @@
                             <div class="col-md-6">
                                 <div class="alert alert-danger alert-dismissible pull-left" style="margin-right: 5px;">
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                                    <strong><span style="font-size: 18px">โตเกียว</span></strong>
+                                    <strong><span style="font-size: 18px"><i class="fas fa-map"></i> โตเกียว</span></strong>
                                 </div>
                                 <div class="alert alert-danger alert-dismissible pull-left">
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                                    <strong><span style="font-size: 18px">ฮอกไกโด</span></strong>
+                                    <strong><span style="font-size: 18px"><i class="fas fa-map"></i> ฮอกไกโด</span></strong>
                                 </div>
                             </div>    
 
@@ -346,7 +373,6 @@
                                 </ul>
                             </li>
                         </ul>
-
                     </div>
                 </div>
                 <!--วางการ์ด-->
@@ -1216,7 +1242,7 @@
                         <span class='filter-header-text'>฿ ราคา</span>
                     </div>
                     <div class="textsm">กำหนดช่วงราคา</div>
-                    <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to">10000</span></div>
+                    <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to">80,000</span> บาท</div>
                     <input id="price" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
                 </div>     
                 <hr>
@@ -1240,7 +1266,7 @@
                         @foreach ($routeList as $route)
                         <div class="option">
                             <label for="route_{{ $route->r_id }}" class="label-cbx">
-                                <input id="route_{{ $route->r_id }}" type="checkbox" class="invisible">
+                                <input id="route_{{$route->r_id }}" value="{{ $route->r_name }}" type="checkbox" class="route_checkbox invisible">
                                 <div class="checkbox">
                                     <svg width="20px" height="20px" viewBox="0 0 20 20">
                                     <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1331,6 +1357,11 @@
                     <div class='filter-header'>
                         <span class='filter-header-text'><i class="far fa-calendar-alt"></i> วันเดินทาง ไป-กลับ</span>
                     </div>
+                    <div class='filter-pickdate'>
+                        <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
+                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                    </div>
+
                     <!--            เว้นไว้ใส่ปฎิทิน-->
                     <div id="filter-date">
                         <div class="option-all">
@@ -1368,85 +1399,220 @@
                     <div class='filter-header'>
                         <span class='filter-header-text'><i class="far fa-calendar-check"></i> เดือน</span>
                     </div>
-                    <div class="option-all">
-                        <label for="month_all" class="label-cbx">
-                            <input id="month_all" type="checkbox" class="invisible" checked>
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span>แสดงทั้งหมด</span>
-                        </label>
+                    <div id="filter-month">
+                        <div class="option-all">
+                            <label for="month_all" class="label-cbx">
+                                <input id="month_all" type="checkbox" class="invisible" checked>
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span>แสดงทั้งหมด</span>
+                            </label>
+                        </div>
+                        @foreach ($monthList as $month)
+                        <div class="option">
+                            @if ($month->m_month === 1)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">มกราคม</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 2)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">กุมภาพันธ์</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 3)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">มีนาคม</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 4)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">เมษายน</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 5)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">พฤษภาคม</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 6)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">มิถุนายน</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 7)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">กรกฎาคม</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 8)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">สิงหาคม</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 9)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">กันยายน</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 10)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">ตุลาคม</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 11)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">พฤศจิกายน</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @elseif ($month->m_month === 12)
+                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">ธันวาคม</span>
+                                <span class="count">({{$month->m_num}})</span>
+                                <span class="clear"></span>
+                            </label>
+                            @endif
+                        </div>
+                        @endforeach
                     </div>
-                    @foreach ($monthList as $month)
-                    <div class="option">
-                        @if ($month->m_month === 4)
-                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                            <input id="month_{{ $month->m_month }}" type="checkbox" class="invisible">
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span class="name">เมษายน</span>
-                            <span class="count">({{$month->m_num}})</span>
-                            <span class="clear"></span>
-                        </label>
-                        @elseif ($month->m_month === 5)
-                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                            <input id="month_{{ $month->m_month }}" type="checkbox" class="invisible">
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span class="name">พฤษภาคม</span>
-                            <span class="count">({{$month->m_num}})</span>
-                            <span class="clear"></span>
-                        </label>
-                        @endif
-                    </div>
-                    @endforeach
-
+                    <div id="expandToggleMonth" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreMonth">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
                 </div>
                 <hr>   
                 <div class="filter-countdate">
                     <div class='filter-header'>
                         <span class='filter-header-text'><i class="far fa-clock"></i> จำนวนวัน</span>
                     </div>
-                    <div class="option-all">
-                        <label for="day_all" class="label-cbx">
-                            <input id="day_all" type="checkbox" class="invisible" checked>
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span>แสดงทั้งหมด</span>
-                        </label>
+                    <div id="filter-countdate">
+                        <div class="option-all">
+                            <label for="day_all" class="label-cbx">
+                                <input id="day_all" type="checkbox" class="invisible" checked>
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span>แสดงทั้งหมด</span>
+                            </label>
+                        </div>
+                        @foreach ($dayList as $day)
+                        <div class="option">
+                            <label for="day_{{ $day->duration }}" class="label-cbx">
+                                <input id="day_{{ $day->duration }}" type="checkbox" class="invisible days_checkbox">
+                                <div class="checkbox">
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                    </svg>
+                                </div>
+                                <span class="name">{{ $day->duration }} วัน</span>
+                                <span class="count">({{$day->sum}})</span>
+                                <span class="clear"></span>
+                            </label>
+                        </div>
+                        @endforeach
                     </div>
-                    @foreach ($dayList as $day)
-                    <div class="option">
-                        <label for="day_{{ $day->duration }}" class="label-cbx">
-                            <input id="day_{{ $day->duration }}" type="checkbox" class="invisible">
-                            <div class="checkbox">
-                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                            </div>
-                            <span class="name">{{ $day->duration }} วัน</span>
-                            <span class="count">({{$day->sum}})</span>
-                            <span class="clear"></span>
-                        </label>
-                    </div>
-                    @endforeach
-
+                    <div id="expandToggleDates" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreDates">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
+                    <button class="btn btn-primary" id="test">test</button>
                 </div>
                 <hr>
                 <div class="filter-airline">
@@ -1469,7 +1635,7 @@
                         @foreach ($airlineList as $airline)
                         <div class="option">
                             <label for="airline_{{ $airline->a_id }}" class="label-cbx">
-                                <input id="airline_{{ $airline->a_id }}" type="checkbox" class="invisible">
+                                <input id="airline_{{ $airline->a_id }}" type="checkbox" class="invisible airline_checkbox">
                                 <div class="checkbox">
                                     <svg width="20px" height="20px" viewBox="0 0 20 20">
                                     <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>

@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('page_title','Tour Detail')
+@section('page_title','รายละเอียดทัวร์')
 @section('main-content')
 
 <style>
@@ -10,9 +10,8 @@ body {
 .trip-schedule-accordion .days{    
     counter-increment: count;
     margin-bottom: 5px;
-    padding: 20px;
-    
-    
+    padding: 0 10px 0 10px;
+            
 }
 
 .trip-schedule-accordion .days::before {
@@ -20,18 +19,13 @@ body {
 /*    ส้ม*/
 /*    background-color: #F6A95B; */
     background-color:#EC2424;
-    display: block;
-    position: absolute;
-    width: 34px;
-    height: 34px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
     line-height: 30px;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 60px;
     color: #fff;
     text-align: center;
-    
+    margin-top: 5px;
     font-weight: 700;
     border: 2px solid #EC2424;
     -webkit-border-radius: 50%;
@@ -55,6 +49,7 @@ body {
 .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
     color: #EC2424;
     border-bottom-color: #EC2424;
+    
 }
 
 .trip-schedule-accordion h5 {
@@ -68,7 +63,9 @@ body {
 
 .product-detail__info .product-title h2{
     color: #EC2424;
+    display: inline;
 }
+
 </style>
 
         <!-- BREADCRUMB -->
@@ -96,10 +93,7 @@ body {
                             <div class="product-address">
                                 <span>เทศกาลแสงสี Nabana no Sato Winter Illumination ลิงแช่ออนเซ็น ตะลุยหิมะ 'เล่นสกีรีสอร์ท' บิน XJ</span>
                             </div>
-                            <div class="product-email">
-                                
-                                <a href="#" class="btn btn-pdf" style="color: #FFFFFF; "><i class="fas fa-cloud-download-alt"></i>&nbsp;ดาวน์โหลด PDF</a>
-                            </div>
+                            
 
                             <div class="trips">
                                 <div class="item">
@@ -122,6 +116,9 @@ body {
                                 <div class="item">
                                     <h6><i class="fas fa-share-alt" style="padding-right: 10px"></i>แชร์</h6>
                                     <p></p>
+                                </div>
+                                <div class="item">
+                                <a href="#" class="btn btn-pdf" style="color: #FFFFFF; "><i class="fas fa-cloud-download-alt"></i>&nbsp;ดาวน์โหลด PDF</a>
                                 </div>
                             </div>
 
@@ -695,12 +692,12 @@ body {
                             <div class="product-tabs__content">
                                 <div id="tabs-1">
                                     <div class="trip-schedule-accordion accordion">
-                                        <h4>วันที่ <span class="days"></span>สนามบินดอนเมือง</h4>
-                                            <div>
-                                                <div class="tour-map-wrapper">
-                                                        <div class="tour-map">
+                                        <h4>วันที่<span class="days"></span>สนามบินดอนเมือง</h4>
+                                           <div>
+                                            <div class="tour-map-wrapper">
+                                                  <div class="tour-map">
 
-                                                        <div class="product-slider">
+                                                    <div class="product-slider">
                                                         <div class="item">
                                                             <img src="images/img/1.jpg" alt="">
                                                         </div>
@@ -731,9 +728,9 @@ body {
                                                         <div class="item">
                                                             <img src="images/img/10.jpg" alt="">
                                                         </div>
-                                                </div>                                                            
+                                                    </div>                                                            
                                         
-                                                </div>
+                                                  </div>
 
                                                 <div class="trips">
                                                     <div class="item">
@@ -749,16 +746,16 @@ body {
                                                 <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
                                                 <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
                                                 <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
-                                                </div>
+                                            </div>
                                                 <br>
                                                 <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงดึก</h5>                                               
                                                 <ul>
                                                     <li>20.00 น. พร้อมกันที่ สนามบินนานาชาติดอนเมือง ชั้น 3 อาคารผู้โดยสารระหว่างประเทศ เคาน์เตอร์ สายการบิน AIR ASIA X เจ้าหน้าที่ของบริษัทฯ คอยให้การต้อนรับ และอำนวยความสะดวกในการเช็คอิน สายการบิน AIR ASIA X ใช้เครื่อง AIRBUS A330-300 จำนวน 377 ที่นั่ง จัดที่นั่งแบบ 3-3-3 (น้ำหนักกระเป๋า 20 กก./ท่าน หากต้องการซื้อน้ำหนักเพิ่ม ต้องเสียค่าใช้จ่าย)</li>
                                                     <li>23.45 น. เหินฟ้าสู่ เมืองนาริตะ ประเทศญี่ปุ่น โดยเที่ยวบินที่ XJ600 (บริการอาหารและเครื่องดื่มบนเครื่อง)</li>                                                    
                                                 </ul>
-                                            </div>
+                                        </div>
                                         
-                                        <h4>วันที่ <span class="days"></span>สนามบินนาริตะ–วัดอาซากุสะ–ผ่านชมโตเกียวสกายทรี – ล่องเรือโจรสลัด - โกเท็มบะ เอ้าต์เลต–บุฟเฟ่ต์ขาปูยักษ์ แช่ออนเซน</h4>
+                                        <h4>วันที่<span class="days"></span>สนามบินนาริตะ – วัดอาซากุสะ – ผ่านชมโตเกียวสกายทรี – ล่องเรือโจรสลัด - โกเท็มบะ เอ้าต์เลต – บุฟเฟ่ต์ขาปูยักษ์ แช่ออนเซน</h4>
                                             <div>
                                                 <div class="tour-map-wrapper">
                                                         <div class="tour-map">
@@ -832,7 +829,7 @@ body {
                                                 </ul>
                                             </div>
                                         
-                                        <h4>วันที่ <span class="days"></span>ภูเขาไฟฟูจิ-หมู่บ้านโอชิโนะฮักไก-พิพิธภัณฑ์แผ่นดินไหว-ช้อปปิ้งสุดมันส์ชินจูกุ</h4>
+                                        <h4>วันที่<span class="days"></span>ภูเขาไฟฟูจิ - หมู่บ้านโอชิโนะฮักไก - พิพิธภัณฑ์แผ่นดินไหว - ช้อปปิ้งสุดมันส์ชินจูกุ</h4>
                                             <div>
                                                 <div class="tour-map-wrapper">
                                                         <div class="tour-map">
@@ -900,7 +897,7 @@ body {
                                                 </ul>
                                             </div>                                        
 
-                                        <h4>วันที่ <span class="days"></span>อิสระในกรุงโตเกียว หรือ ซื้อทัวร์เสริมโตเกียวดิสนีย์แลนด์</h4>
+                                        <h4>วันที่<span class="days"></span>อิสระในกรุงโตเกียว หรือ ซื้อทัวร์เสริมโตเกียวดิสนีย์แลนด์</h4>
                                             <div>
                                                 <div class="tour-map-wrapper">
                                                         <div class="tour-map">
@@ -968,7 +965,7 @@ body {
                                                 </ul>
                                             </div>
 
-                                        <h4>วันที่ <span class="days"></span>สนามบินนาริตะ – สนามบินดอนเมือง</h4>
+                                        <h4>วันที่<span class="days"></span>สนามบินนาริตะ – สนามบินดอนเมือง</h4>
                                             <div>
                                                 <div class="tour-map-wrapper">
                                                         <div class="tour-map">
@@ -1374,7 +1371,7 @@ body {
                                             <i class="awe-icon awe-icon-calendar"></i>
                                             <input type="text" class="awe-calendar" value="Date">
                                         </div>
-                                        <span>* Vouchers valid for 12 months after purchase.</span>
+                                        <span></span>
                                     </div>
                                 </div>
                                 <div class="form-group">

@@ -582,6 +582,7 @@ span.dropcap {
     font-family: "Open Sans", sans-serif, supermarket;
     font-size: 14px;
 }
+
 .accordion .ui-accordion-header {
     background: none;
     border: 0;
@@ -589,20 +590,38 @@ span.dropcap {
     margin-top: 0;
     margin-bottom: 10px;
     padding: 0 20px;
-    line-height: 60px;
-    font-size: 25px;
-    font-weight: 600;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: 900;
     color: #444;
     border-radius: 8px;
     -webkit-user-select: none;
     -moz-user-select: none;
-    user-select: none;
-    
+    user-select: none;  
+    line-height:1.4;
+    padding-bottom: 5px;    
 }
+
+@media (min-width: 900px)
+{
+    .accordion .ui-accordion-header
+    {
+        font-size: 20px;
+        line-height: 1.5;
+    }  
+}
+
+@media (min-width: 900px)
+{
+        .product-detail__info .trips .item h6{font-size: 25px;}
+        
+}
+
 .accordion .ui-accordion-header .ui-accordion-header-icon {
     margin-top: 0;
-    right: 20px;
+    right: 5px;
     left: auto;
+/*    top: 26px;*/
     width: 0;
     height: 0;
     background: none;
@@ -1031,7 +1050,7 @@ span.dropcap {
     transform: translateY(-50%);
 }
 #header-page .logo img {
-    max-height: 90px;
+    max-height: 80px;
 }
 
 .awe-navigation {
@@ -1114,7 +1133,7 @@ span.dropcap {
     overflow-y: auto;
     top: 0;
     right: 0;
-    padding-top: 60px;
+    padding-top: 70px;
     background-color: #fff;
     max-width: 320px;
     width: 100%;
@@ -1159,9 +1178,9 @@ span.dropcap {
 }
 .awe-navigation-responsive .menu-list li a {
     display: block;
-    font-family: "Open Sans", sans-serif;
+    font-family: "supermarket", sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 18px;
     color: #67728A;
     line-height: 56px;
 }
@@ -3645,6 +3664,12 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .contact-page__form .descriptions {
     color: #666;
+    font-size: 18px;
+    text-align: left;
+}
+
+.contact-page__form .descriptions p {
+    line-height: 1em;
 }
 
 .contact-form {
@@ -3661,6 +3686,7 @@ body.single-post .blog-page__content > .post .post-content {
     width: 100%;
     border: 1px solid #eee;
     background-color: #eee;
+    font-size: 19px;
 }
 .contact-form .form-textarea-wrapper {
     width: 100%;
@@ -3671,6 +3697,7 @@ body.single-post .blog-page__content > .post .post-content {
     width: 100%;
     border: 1px solid #eee;
     background-color: #eee;
+    font-size: 19px;
 }
 .contact-form .form-captcha {
     position: relative;
@@ -5613,12 +5640,12 @@ body.single-post .blog-page__content > .post .post-content {
     color: #666;
     margin: 0;
 }
-.checkout-page__top .phone {
+.checkout-page__sidebar .phone {
     display: block;
     float: right;
-    font-size: 16px;
-    font-weight: 600;
-    color: #666;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
     margin-top: 5px;
 }
 
@@ -5753,7 +5780,7 @@ body.single-post .blog-page__content > .post .post-content {
     width: 100%;
 }
 .checkout-page__content .yourcart-content {
-    min-width: 720px;
+/*    min-width: 720px;*/
 }
 .checkout-page__content .content-title {
     border-bottom: 1px dashed #D4D4D4;
@@ -6188,6 +6215,9 @@ body.single-post .blog-page__content > .post .post-content {
 .cart-content .cart-table {
     width: 100%;
     border-bottom: 1px dashed #D4D4D4;
+    border-collapse: collapse;
+    border-spacing: 0;
+    
 }
 .cart-content .cart-table .product-subtotal {
     text-align: right;
@@ -6216,12 +6246,12 @@ body.single-post .blog-page__content > .post .post-content {
     color: #FF6666;
 }
 .cart-content .cart-table tbody td.product-name {
-    width: 31%;
-    padding-right: 20px;
+    width: 30%;
+/*    padding-right: 20px;*/
 }
 .cart-content .cart-table tbody td.product-price, .cart-content .cart-table tbody td.product-quantity {
-    width: 23%;
-    padding-right: 20px;
+/*    width: 23%;*/
+/*    padding-right: 20px;*/
 }
 .cart-content .cart-table tbody td.product-subtotal {
     width: 33.4%;
@@ -6230,6 +6260,47 @@ body.single-post .blog-page__content > .post .post-content {
     position: relative;
     padding-left: 14px;
 }
+
+.cart-table th.product-name{
+     width:80%;
+}
+/*
+@media screen and (max-width: 500px) {
+    .cart-content .cart-table tbody td.product-price .amount{
+    display: none;
+    }
+}*/
+
+@media screen and (max-width: 660px) {
+    
+    .cart-table th.product-name{
+     width:50%; }
+    
+    .cart-footer .cart-subtotal{
+    display: none;}
+    
+    .container .checkout-page__content {
+    padding: 10px;}
+    
+    .cart-content .cart-table tbody td.product-price .amount{
+    display: none;}
+} 
+
+@media screen and (max-width: 425px) {
+    .cart-content .cart-table tbody td.product-price .amount{
+    display: none;}
+    
+    .cart-table th.product-name{
+     width:30%; }
+    
+    .container .checkout-page__content {
+    padding: 10px;}
+}
+
+/*@media screen and (max-width: 425px) {
+    
+}*/
+
 .cart-content .cart-table tbody td .quantity .plus,
 .cart-content .cart-table tbody td .quantity .minus {
     position: absolute;
@@ -6494,6 +6565,7 @@ body.single-post .blog-page__content > .post .post-content {
     font-weight: 600;
     color: #0091ea;
     margin: 0;
+    
 }
 
 .container-detail-confirm .product-title h3 {
@@ -6615,7 +6687,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .product-detail__info .trips .item h6 {
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     color: #333333;
     margin-top: 0;
     margin-bottom: 5px;
@@ -7546,7 +7618,7 @@ body.single-post .blog-page__content > .post .post-content {
     display: block;
     font-size: 13px;
     font-style: normal;
-    color: #488BF8;
+    color: #ec2424;
     line-height: 1.2em;
     font-weight: 600;
 }
@@ -7577,7 +7649,7 @@ body.single-post .blog-page__content > .post .post-content {
     display: block;
     font-size: 13px;
     font-style: normal;
-    color: #488BF8;
+    color: #ec2424;
     line-height: 1.2em;
     font-weight: 600;
 }
@@ -8140,9 +8212,10 @@ body.single-post .blog-page__content > .post .post-content {
 }
 
 .tour-map {
+    
     max-width: 100%;
     width: 309px; /* 745 x 496.66 */
-    height: 200px;
+    
     float: left;
     margin-right: 30px;
 }
@@ -10092,7 +10165,7 @@ select {
 /*# sourceMappingURL=style.css.map */
 
 .container-detail-confirm {
-    width: 1140px;
+/*    width: 1140px;*/
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -10100,7 +10173,9 @@ select {
 
 .option-confirm-tour{
     margin: 6px 0 20px 0;
+    font-size: 18px;
 }
+
 
 .product-tabs__content p{
     margin-left: 17.5px;
@@ -10117,4 +10192,117 @@ select {
     color: #666;
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+/* confirm form */
+
+.contact-page__form {
+    padding-top: 82px;
+    padding-bottom: 120px;
+}
+.contact-page__form .title span {
+    font-size: 24px;
+    color: #8f8f8f;
+}
+.contact-page__form .title h2 {
+    color: #0091ea;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.1em;
+    margin-top: 5px;
+}
+.contact-page__form .descriptions {
+    color: #666;
+    font-size: 18px;
+    text-align: left;
+}
+
+.confirm-form .descriptions p {
+    line-height: 1em;
+}
+
+.confirm-form {
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+}
+.confirm-form .form-item {
+    width: 50%;
+    padding: 15px;
+    float: left;
+}
+.confirm-form .form-item input {
+    width: 100%;
+    border: 1px solid #eee;
+    background-color: #eee;
+    font-size: 19px;
+}
+.confirm-form .form-textarea-wrapper {
+    width: 100%;
+    padding: 15px;
+    float: left;
+}
+.confirm-form .form-textarea-wrapper textarea {
+    width: 100%;
+    border: 1px solid #eee;
+    background-color: #eee;
+    font-size: 19px;
+}
+.confirm-form .form-captcha {
+    position: relative;
+}
+.confirm-form .form-captcha .wpcf7-captchac {
+    position: absolute;
+    padding: 15px 0;
+    top: 8px;
+    left: 22px;
+}
+.confirm-form .form-captcha .wpcf7-form-control-wrap {
+    display: block;
+}
+.confirm-form .form-captcha input {
+    padding-left: 90px;
+}
+.confirm-form .form-actions {
+    width: 100%;
+    padding: 15px;
+    float: left;
+}
+.confirm-form .form-actions input {
+    width: 100%;
+    max-width: 100px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0091ea;
+    border: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 9;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.confirm-form .form-actions input:hover {
+    opacity: .7;
+}
+
+/* end */
+
+.option-confirm-tour .form-control{
+   padding: 0px 12px;
+}
+
+.checkout-page__content {
+    background-color: #fff;
+    padding: 10px 40px;
+    
 }

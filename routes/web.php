@@ -106,3 +106,13 @@ Route::post('saveTourCategory','AdminController@saveTourCategory');
 Route::post('deleteTourCategory','AdminController@deleteTourCategory');
 
 Route::post('updateTourCategory','AdminController@updateTourCategory');
+
+Route::post('search-tour/getTourPackage', 'FilterController@getTourPackage');
+
+Route::post('getTourPackage', 'FilterController@getTourPackage');
+
+Route::get('about','AboutController@about_us');
+
+Route::get('tour-confirm','ConfirmController@tour_confirm');
+
+Route::get('contact','ContactController@contact_us');

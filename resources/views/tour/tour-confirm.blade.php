@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('page_title','Tour Detail')
+@section('page_title','รายละเอียดการจอง')
 @section('main-content')
 <style>
     
@@ -41,6 +41,12 @@
 .checkout-page__sidebar ul li a p {margin-left: 100px; }
 .checkout-page__sidebar ul li a h5 {font-weight: 300;}
 .fix-img { width: 60px; height:60px;  padding-right: 20px;}
+
+.form-control{padding: 0px 12px;}
+.checkout-page__content .contact-form{
+    margin-left: 0px;
+    margin-right: 0px;}
+.checkout-page__content .contact-form .form-item { padding: 5px;}
 
 </style>
     
@@ -174,26 +180,27 @@
                         </div>
                     </div>
                     <div class="col-md-1"></div>
+                    
                 </div>
             
         </section>
         
         <section class="checkout-section-demo">
-            <div class="container-detail-confirm">
-
+<!--            <div class="container-detail-confirm">-->
+            <div class="container">     
                 
-                
+                <div class="line-gradient"></div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-sm-12">
                         <div class="checkout-page__top">
                             <div class="title">
-                                <h1 class="text-uppercase" style="color:#333333; "><i class="fas fa-suitcase"></i> ข้อมูลการจอง</h1>
+                                <h1 class="text-uppercase" style="color:#333333; padding-top:20px;"><i class="fas fa-suitcase"></i> ข้อมูลการจอง</h1>
                             </div>
-                            <span class="phone"><i class="awe-icon awe-icon-phone"></i> ติดต่อเรา : 062 914 2361 <br> <i class="fab fa-line"></i> จองผ่านไลน์ : @Tourhits </span>
+                            
                             
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-12">
                         <div class="checkout-page__sidebar">
                             <ul>
                                 <li><a style="background-color: #EC2424;">
@@ -207,6 +214,7 @@
                                     <option>2018-04-09 - 2018-06-013</option>
                                     <option>2018-04-15 - 2018-06-20</option>
                                 </select>
+                                <hr>
                                 <li>
                                     <a>
                                         <div class="fix-img" style="float:left;"><img src="../images/airplane.png" alt=""></div>
@@ -222,29 +230,30 @@
                                     </a>
                                 </li>
                             </ul>
+                            <hr>
+    <!--                            <span class="phone"><i class="awe-icon awe-icon-phone"></i> ติดต่อเรา : 062 914 2361 <br> <i class="fab fa-line"></i> จองผ่านไลน์ : @Tourhits</span>-->
                         </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-9 col-sm-12">
                         <div class="checkout-page__content">
-                            <div class="yourcart-content">
+<!--<div class="yourcart-content">-->
                                 <div class="content-title">
                                     <h2><i class="fas fa-male"></i> <i class="fas fa-female"></i> <i class="fas fa-child"></i>&nbspจำนวนผู้โดยสาร</h2>
                                 </div>
                                 <div class="cart-content">
-<!--ผู้ใหญ่                                        -->
+<!--ผู้ใหญ่-->
                                     <table class="cart-table">
                                         <thead>
                                             <tr>
 <!--                                                <th class="product-remove"></th>-->
-                                                <th class="product-name" style="color: #EC2424"><i class="fas fa-male"></i> <i class="fas fa-female"></i> ผู้ใหญ่ (บาท/ท่าน)</th>
-                                                <th class="product-price"></th>
-                                                <th class="product-quantity"></th>
+                                                <th class="product-name" colspan="3" style="color: #EC2424"><i class="fas fa-male"></i> <i class="fas fa-female"></i> ผู้ใหญ่ (บาท/ท่าน)</th>
+<!--                                            <th class="product-price"></th>
+                                                <th class="product-quantity"></th>-->
                                                 <th class="product-subtotal" style="color: #EC2424">$ 67.909</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                
+                                            <tr>                                                
                                                 <td class="product-name">
                                                     <span>พักคู่</span>
                                                 </td>
@@ -339,14 +348,14 @@
                                             </tr>-->
                                         </tbody>
                                     </table>
-<!--เด็ก                                       -->
+<!--เด็ก -->
                                     <table class="cart-table">
                                         <thead>
                                             <tr>
 <!--                                                <th class="product-remove"></th>-->
-                                                <th class="product-name" style="color: #EC2424"><i class="fas fa-child"></i> เด็ก (บาท/ท่าน)</th>
-                                                <th class="product-price"></th>
-                                                <th class="product-quantity"></th>
+                                                <th class="product-name" colspan="3" style="color: #EC2424"><i class="fas fa-child"></i> เด็ก (บาท/ท่าน)</th>
+<!--                                                <th class="product-price"></th>
+                                                <th class="product-quantity"></th>-->
                                                 <th class="product-subtotal" style="color: #EC2424">$ 67.909</th>
                                             </tr>
                                         </thead>
@@ -428,41 +437,34 @@
                                 </div>        
                                     <table class="cart-table">                                      
                                         <tbody>
+                                            <thead>
                                             <tr>
-                                                
-                                                <td class="product-name">
-                                                    <span>ผู้ใหญ่</span>
-                                                </td>
-                                                <td class="product-price">
-                                                    <span class="amount">2&nbspท่าน</span>
-                                                </td>
-                                                
+<!--                                                <th class="product-remove"></th>-->
+                                                <th class="product-name" colspan="3" style="color: #EC2424">ราคารวมทั้งหมด</th>
+                                                <th class="product-subtotal" style="color: #EC2424">$ 67.909</th>
+                                            </tr>
+                                            </thead>
+                                            <tr>                                               
+                                                <td class="product-name" colspan="3">
+                                                    <li><span>ผู้ใหญ่ 2 ท่าน</span></li>                                                   
+                                                </td>                                                                                              
                                                 <td class="product-subtotal">
                                                     <span class="amount">$ 253</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                
-                                                <td class="product-name">
-                                                    <span>เด็ก</span>
+                                                <td class="product-name" colspan="3">
+                                                <li><span>เด็ก 0 ท่าน</span></li>
                                                 </td>
-                                                <td class="product-price">
-                                                    <span class="amount">0&nbspท่าน</span>
-                                                </td>
-                                                
                                                 <td class="product-subtotal">
                                                     <span class="amount">0</span>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 
-                                                <td class="product-name">
-                                                    <span>ส่วนลด</span>
-                                                </td>
-                                                <td class="product-price">
-                                                    <span class="amount">500&nbspบาท x 2 ท่าน</span>
-                                                </td>
-                                                
+                                                <td class="product-name" colspan="3">
+                                                    <li><span>ส่วนลด</span></li>  
+                                                </td>                                                                                           
                                                 <td class="product-subtotal">
                                                     <span class="amount">-1000</span>
                                                 </td>
@@ -470,7 +472,7 @@
                                         </tbody>
                                     </table>
 
-                                    <div class="cart-footer">
+<!--                                    <div class="cart-footer">
                                         <div class="cart-subtotal">
                                             <div class="subtotal-title">
                                                 <h5>ราคารวมทั้งหมด</h5>
@@ -480,36 +482,31 @@
                                                 
                                             </div>                                            
                                         </div>                                                                                
-                                    </div>
+                                    </div>-->
                                 </div>
-<!-- รายละเอียดคนจอง -->                                 
-                                <div class="woocommerce-billing-fields">
-                                    <h3><i class="far fa-handshake"></i> ข้อมูลผู้จองสำหรับติดต่อกลับ</h3><em>กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
-                                    
-                                    <div class="form-row" id="billing_first_name_field">
-                                        <label>ชื่อ *</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="form-row" id="billing_last_name_field">
-                                        <label>นามสกุล *</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="form-row" id="billing_email">
-                                        <label>อีเมล</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="form-row" id="billing_phone_field">
-                                        <label>หมายเลขโทรศัพท์ *</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="form-row" id="order_comments_field">
-                                            <label>ข้อมูลเพิ่มเติม</label>
-                                            <textarea></textarea>
-                                    </div>
-                                    <div class="form-row form-row-wide create-account">
-                                        <input id="createaccount" type="checkbox"> <label for="createaccount">สมัครสมาชิก ?</label>
-                                    </div>              
-                                </div>
+<!-- รายละเอียดคนจอง -->                            
+                                <form class="contact-form" action="processContact.php" method="post">
+                                    <h4 style="color:#ec2424;"><i class="far fa-handshake"></i> ข้อมูลผู้จองสำหรับติดต่อกลับ</h4><em>กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
+                                    <div class="confirm-form">
+                                        <div class="form-item">
+                                        <input type="text" value="" name="name" placeholder="ชื่อของคุณ *">
+                                        </div>
+                                        <div class="form-item">
+                                            <input type="email" value="" name="email" placeholder="อีเมล์ของคุณ">
+                                        </div>
+                                        <div class="form-item">
+                                            <input type="text" value="" name="lastname" placeholder="นามสกุล *">
+                                        </div>
+                                        <div class="form-item">
+                                            <input type="number" value="" name="number" maxlength="10" placeholder="เบอร์โทรศัพท์ *">
+                                        </div>
+                                        <div class="form-textarea-wrapper">
+                                            <textarea name="message">หมายเหตุ</textarea>
+                                        </div>
+                                    </div> 
+                                 </form>   
+                                
+                            
                                 
                                 <div id="payment">
                                     
@@ -524,7 +521,7 @@
                             </div> <!-- พท การ์ดทางขวา -->  
                           
                             
-                        </div>
+                        
                         
                         
                         
