@@ -47,4 +47,4 @@ Route::post('deleteRoute','AdminController@deleteRoute');
 
 Route::post('updateRoute','AdminController@updateRoute');
 
-Route::post('getTourPackage', 'FilterController@getTourPackage');
+Route::post('search-tour/getTourPackage', 'FilterController@getTourPackage');

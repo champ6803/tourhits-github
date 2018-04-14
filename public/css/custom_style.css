@@ -162,6 +162,17 @@
     height: 120px;
     overflow: auto;
 }
+.card-highlight{
+    font-size: 18px;
+    height: 318px;
+    overflow: auto;
+}
+
+.card-period{
+    font-size: 18px;
+    height: 318px;
+    overflow: auto;
+}
 
 .card-time{
     padding: 3px 0;
@@ -195,6 +206,7 @@
     background-color: #F58A1F;
     border-color: #F58A1F;
     font-size: 20px;
+    font-family: supermarket, sans-serif;
 }
 
 .btn-pdf:hover {
@@ -239,7 +251,7 @@
     background-color: #7F7FF5;
     border-color: #7F7FF5;
     font-size: 20px;    
-
+    font-family: supermarket, sans-serif;
 }
 
 .btn-nextpage:hover{
@@ -422,7 +434,6 @@ hr {
 .label-cbx > .name_tab {
     pointer-events: none;
     vertical-align: middle;
-    line-height: 3;
     font-weight: normal;
 }
 
@@ -453,6 +464,17 @@ hr {
     margin-top: 0px;
 
 }
+
+.tab-tags .option{
+    font-size: 20px;
+    color: #515050;
+}
+
+.tab-other .option{
+    font-size: 20px;
+    color: #515050;
+}
+
 /* slider bar */
 
 .slider.slider-green {
@@ -586,7 +608,7 @@ hr {
 }
 
 #priceSlider .slider-selection {
-    background: red;
+    background: #ff6600;
 }
 
 /* green 4/1/18 */

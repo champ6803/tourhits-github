@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tour_Package;
 use App\Models\Holiday;
+use App\Models\Tour_Period;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -52,36 +53,68 @@ class FilterController extends Controller {
                 ->where('tour_country.tour_country_name', $country)
                 ->get();
 
-        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList'));
+        $tagList = Tour_Package::join('tour_tag', 'tour_tag.tour_package_id', '=', 'tour_package.tour_package_id')
+                ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                ->join('tag', 'tag.tag_id', '=', 'tour_tag.tag_id')
+                ->select(DB::raw('COUNT(*) as t_num, tag.tag_id as t_id, tag.tag_name as t_name'))
+                ->groupBy('t_id', 't_name')
+                ->where('tour_country.tour_country_name', $country)
+                ->get();
+
+        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList'));
     }
 
     public function getTourPackage() {
         try {
-            $country = request()->get('country');
-//            $route = request()->get('_rooute');
-//            $start_date = request()->get('_start_date');
-//            $end_date = request()->get('_end_date');
-//            $month = request()->get('_month');
-//            $days = request()->get('_days');
-//            $airline = request()->get('_airline');
-//            $tags = request()->get('_tags');
-//            $attraction = request()->get('_attraction');
-//
-//            if (!empty($route) && empty($start_date) && empty($end_date) && empty($month) && empty($days) && empty($airline) && empty($tags) && empty($attraction)) {
-//                $tourPackageList = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
-//                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-//                        ->where('tour_country.tour_country_name', $country)
-//                        ->where('tour_route.route_id', $route)
-//                        ->get();
-//            } else {
-//                $tourPackageList = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-//                        ->where('tour_country.tour_country_name', $country)
-//                        ->where('tour_route.route_id', $route)
-//                        ->get();
-//            }
-            return $country;
+            $country = request()->get('_country');
+            $route = request()->get('_route');
+            $start_date = request()->get('_start_date');
+            $end_date = request()->get('_end_date');
+            $month = request()->get('_month');
+            $days = request()->get('_days');
+            $airline = request()->get('_airline');
+            $tags = request()->get('_tags');
+            $attraction = request()->get('_attraction');
+
+            if (!empty($route) && empty($start_date) && empty($end_date) && empty($month) && empty($days) && empty($airline) && empty($tags) && empty($attraction)) {
+                $tourPackageList = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
+                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                        ->join('route', 'route.route_id', '=', 'tour_route.route_id')
+                        ->where('tour_country.tour_country_name', $country)
+                        ->where('route.route_name', $route)
+                        ->get();
+            } else if (empty($route) && !empty($start_date) && empty($end_date) && empty($month) && empty($days) && empty($airline) && empty($tags) && empty($attraction)) {
+                $tourPackageList = Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
+                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                        ->where('tour_country.tour_country_name', $country)
+                        ->where('tour_period.start_date', $start_date)
+                        ->get();
+            } else if (empty($route) && empty($start_date) && !empty($end_date) && empty($month) && empty($days) && empty($airline) && empty($tags) && empty($attraction)) {
+                $tourPackageList = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
+                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                        ->where('tour_country.tour_country_name', $country)
+                        ->where('tour_route.route_id', $route)
+                        ->get();
+            } else if (empty($route) && empty($start_date) && empty($end_date) && !empty($month) && empty($days) && empty($airline) && empty($tags) && empty($attraction)) {
+                $tourPackageList = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
+                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                        ->where('tour_country.tour_country_name', $country)
+                        ->where('tour_route.route_id', $route)
+                        ->get();
+            } else {
+                $tourPackageList = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                        ->where('tour_country.tour_country_name', $country)
+                        ->get();
+                $array = array();
+                foreach ($tourPackageList as $tour) {
+                    array_push($array, $tour->tour_package_id);
+                }
+                $tourPeriod = Tour_Period::whereIn('tour_package_id', $array)
+                        ->get();
+            }
+            return response()->json(array('tourPackageList' => $tourPackageList, 'tourPeriod' => $tourPeriod));
         } catch (\Exception $e) {
-            
+            return response($e->getMessage());
         }
     }
 

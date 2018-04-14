@@ -1,40 +1,40 @@
 
-(function($) {
+(function ($) {
     "use strict";
     /*==============================
-        Is mobile
-    ==============================*/
+     Is mobile
+     ==============================*/
     var isMobile = {
-        Android: function() {
+        Android: function () {
             return navigator.userAgent.match(/Android/i);
         },
-        BlackBerry: function() {
+        BlackBerry: function () {
             return navigator.userAgent.match(/BlackBerry/i);
         },
-        iOS: function() {
+        iOS: function () {
             return navigator.userAgent.match(/iPhone|iPad|iPod/i);
         },
-        Opera: function() {
+        Opera: function () {
             return navigator.userAgent.match(/Opera Mini/i);
         },
-        Windows: function() {
+        Windows: function () {
             return navigator.userAgent.match(/IEMobile/i);
         },
-        any: function() {
+        any: function () {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
     }
 
     /*==============================
-        Image cover
-    ==============================*/
-    $.fn.imageCover = function() {
-        $(this).each(function() {
+     Image cover
+     ==============================*/
+    $.fn.imageCover = function () {
+        $(this).each(function () {
             var self = $(this),
-                image = self.find('img'),
-                heightWrap = self.outerHeight(),
-                widthImage = image.outerWidth(),
-                heightImage = image.outerHeight();
+                    image = self.find('img'),
+                    heightWrap = self.outerHeight(),
+                    widthImage = image.outerWidth(),
+                    heightImage = image.outerHeight();
             if (heightImage < heightWrap) {
                 image.css({
                     'height': '100%',
@@ -46,14 +46,14 @@
 
     function placeholder() {
         var $ph = $('input[type="search"], input[type="text"], input[type="email"], textarea');
-        $ph.each(function() {
+        $ph.each(function () {
             var value = $(this).val();
-            $(this).focus(function() {
+            $(this).focus(function () {
                 if ($(this).val() === value) {
                     $(this).val('');
                 }
             });
-            $(this).blur(function() {
+            $(this).blur(function () {
                 if ($(this).val() === '') {
                     $(this).val(value);
                 }
@@ -62,13 +62,13 @@
     }
 
     /*==============================
-        Masonry
-    ==============================*/
+     Masonry
+     ==============================*/
     function masonry() {
-        $('.awe-masonry').each(function(){ 
+        $('.awe-masonry').each(function () {
             var $gallery = $(this),
-                $galleryItem = $gallery.children('.awe-masonry__item');
-            setTimeout(function() {
+                    $galleryItem = $gallery.children('.awe-masonry__item');
+            setTimeout(function () {
                 $gallery.masonry({
                     columnWidth: '.awe-masonry__item:first-child',
                     itemSelector: '.awe-masonry__item'
@@ -104,7 +104,7 @@
         });
     }
     function parallax() {
-        $('.awe-parallax').each(function() {
+        $('.awe-parallax').each(function () {
             if (isMobile.any()) {
             } else {
                 $(this).parallax("50%", 0.2);
@@ -145,74 +145,74 @@
                 singleItem: true,
                 autoHeight: true,
                 navigationText: paginationSlider,
-                afterAction : syncPosition
+                afterAction: syncPosition
             });
 
             $('.product-slider-thumb').owlCarousel({
                 slideSpeed: 500,
                 items: 5,
-                itemsCustom: [[320, 3],[480, 4], [768, 4], [992, 5], [1200, 5]],
-                pagination:false,
-                navigation:false,
+                itemsCustom: [[320, 3], [480, 4], [768, 4], [992, 5], [1200, 5]],
+                pagination: false,
+                navigation: false,
                 navigationText: paginationSlider,
-                mouseDrag:false,
-                afterInit : function(el){
-                  el.find(".owl-item").eq(0).addClass("synced");
+                mouseDrag: false,
+                afterInit: function (el) {
+                    el.find(".owl-item").eq(0).addClass("synced");
                 }
             });
-            
-            $('.product-slider-thumb').on("click", ".owl-item", function(e){
+
+            $('.product-slider-thumb').on("click", ".owl-item", function (e) {
                 e.preventDefault();
-                if($(this).hasClass('synced')){
+                if ($(this).hasClass('synced')) {
                     return false;
-                }else{
+                } else {
                     var number = $(this).data("owlItem");
-                    $('.product-slider').trigger("owl.goTo",number);
+                    $('.product-slider').trigger("owl.goTo", number);
                 }
             });
         }
     }
 
-    function syncPosition(el){
+    function syncPosition(el) {
         var current = this.currentItem;
         $('.product-slider-thumb')
-            .find(".owl-item")
-            .removeClass("synced")
-            .eq(current)
-            .addClass("synced")
-        if($('.product-slider-thumb').data("owlCarousel") !== undefined){
+                .find(".owl-item")
+                .removeClass("synced")
+                .eq(current)
+                .addClass("synced")
+        if ($('.product-slider-thumb').data("owlCarousel") !== undefined) {
             center(current)
         }
     }
-     
-    function center(number){
+
+    function center(number) {
         var slidethumnailvisible = $('.product-slider-thumb').data("owlCarousel").owl.visibleItems;
         var num = number;
         var found = false;
-        for(var i in slidethumnailvisible){
-            if(num == slidethumnailvisible[i]) {
+        for (var i in slidethumnailvisible) {
+            if (num == slidethumnailvisible[i]) {
                 var found = true;
             }
         }
-     
-        if(found == false){
-            if(num>slidethumnailvisible[slidethumnailvisible.length-1]){
-                $('.product-slider-thumb').trigger("owl.goTo", num - slidethumnailvisible.length+2)
+
+        if (found == false) {
+            if (num > slidethumnailvisible[slidethumnailvisible.length - 1]) {
+                $('.product-slider-thumb').trigger("owl.goTo", num - slidethumnailvisible.length + 2)
             } else {
-            if(num - 1 == -1) {
-                num = 0;
-            }
+                if (num - 1 == -1) {
+                    num = 0;
+                }
                 $('.product-slider-thumb').trigger("owl.goTo", num);
             }
-        } else if(num == slidethumnailvisible[slidethumnailvisible.length-1]) {
+        } else if (num == slidethumnailvisible[slidethumnailvisible.length - 1]) {
             $('.product-slider-thumb').trigger("owl.goTo", slidethumnailvisible[1])
-        } else if(num == slidethumnailvisible[0]) {
-            $('.product-slider-thumb').trigger("owl.goTo", num-1)
+        } else if (num == slidethumnailvisible[0]) {
+            $('.product-slider-thumb').trigger("owl.goTo", num - 1)
         }
     }
 
     function aweCalendar() {
-        $('.awe-calendar').each(function() {
+        $('.awe-calendar').each(function () {
             $(this).datepicker({
                 showOtherMonths: true,
                 selectOtherMonths: true,
@@ -223,30 +223,30 @@
 
 
     function priceSlider() {
-        $('.price-slider').each(function() {
+        $('.price-slider').each(function () {
             var priceslider = $(this);
             priceslider.slider({
                 min: 0,
                 max: 10000,
                 step: 5,
-                values: [ 0, 10000 ],
+                values: [0, 10000],
                 range: true,
-                slide: function( event, ui ) {
-                    var $this=$(this),
-                        values=ui.values;
+                slide: function (event, ui) {
+                    var $this = $(this),
+                            values = ui.values;
                     priceslider.siblings('.price_slider_amount').find('.from').text('$' + values[0]);
                     priceslider.siblings('.price_slider_amount').find('.to').text('$' + values[1]);
                 }
             });
 
-            var values = priceslider.slider( "option", "values");
+            var values = priceslider.slider("option", "values");
             priceslider.siblings('.price_slider_amount').find('.from').text('$' + values[0]);
             priceslider.siblings('.price_slider_amount').find('.to').text('$' + values[1]);
         });
     }
 
     function aweSelect() {
-        $('.awe-select').each(function() {
+        $('.awe-select').each(function () {
             var aweselect = $(this);
             aweselect.wrap('<div class="awe-select-wrapper"></div>');
             aweselect.after('<i class="fa fa-caret-down"></i>');
@@ -277,40 +277,40 @@
 
     function seasonHover() {
         var season = $('.travelling-tabs__time').find('.season'),
-            seasonItem = season.find('.item'),
-            month = $('.travelling-tabs__time').find('.month'),
-            monthItem = month.find('.item');
-            seasonItem.each(function() {
-                var $this = $(this);
-                $this.hover(function() {
-                    $(this).addClass('hover-active');
-                    if ($(this).hasClass('spring')) {
-                        $('[data-season="spring"]').addClass('hover-active');
-                    }
-                    if ($(this).hasClass('summer')) {
-                        $('[data-season="summer"]').addClass('hover-active');
-                    }
-                    if ($(this).hasClass('autumn')) {
-                        $('[data-season="autumn"]').addClass('hover-active');
-                    }
-                    if ($(this).hasClass('winter')) {
-                        $('[data-season="winter"]').addClass('hover-active');
-                    }
+                seasonItem = season.find('.item'),
+                month = $('.travelling-tabs__time').find('.month'),
+                monthItem = month.find('.item');
+        seasonItem.each(function () {
+            var $this = $(this);
+            $this.hover(function () {
+                $(this).addClass('hover-active');
+                if ($(this).hasClass('spring')) {
+                    $('[data-season="spring"]').addClass('hover-active');
+                }
+                if ($(this).hasClass('summer')) {
+                    $('[data-season="summer"]').addClass('hover-active');
+                }
+                if ($(this).hasClass('autumn')) {
+                    $('[data-season="autumn"]').addClass('hover-active');
+                }
+                if ($(this).hasClass('winter')) {
+                    $('[data-season="winter"]').addClass('hover-active');
+                }
 
-                }, function() {
-                    $(this).removeClass('hover-active');
-                    monthItem.removeClass('hover-active');
-                });
-                monthItem.hover(function() {
-                    var $this = $(this),
-                        filterSeason = $this.data('season');
-                    $this.addClass('hover-active');
-                    $('.' + filterSeason).addClass('hover-active');
-                }, function() {
-                    monthItem.removeClass('hover-active');
-                    seasonItem.removeClass('hover-active');
-                });
+            }, function () {
+                $(this).removeClass('hover-active');
+                monthItem.removeClass('hover-active');
             });
+            monthItem.hover(function () {
+                var $this = $(this),
+                        filterSeason = $this.data('season');
+                $this.addClass('hover-active');
+                $('.' + filterSeason).addClass('hover-active');
+            }, function () {
+                monthItem.removeClass('hover-active');
+                seasonItem.removeClass('hover-active');
+            });
+        });
     }
 
     function theiaStickySidebar() {
@@ -340,7 +340,7 @@
             $('.flight-popup-open').magnificPopup({
                 type: 'ajax',
                 callbacks: {
-                    ajaxContentAdded: function() {
+                    ajaxContentAdded: function () {
                         var paginationSlider = ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>'];
                         $('.flight-popup__slider').owlCarousel({
                             autoPlay: false,
@@ -361,7 +361,7 @@
                         });
                         if (isMobile.any()) {
                         } else {
-                            $('.flight-popup__scrollbar').each(function() {
+                            $('.flight-popup__scrollbar').each(function () {
                                 var $scrollbar = $(this);
                                 $scrollbar.perfectScrollbar({
                                     maxScrollbarLength: 150,
@@ -381,9 +381,9 @@
                                 effect: "fade",
                                 duration: 200
                             },
-                            activate: function(event, ui) {
+                            activate: function (event, ui) {
                                 $('.flight-popup__grid-wrapper .image-wrap').imageCover();
-                                if ($('.flight-popup__grid-wrapper', ui.newPanel).length && !$('.flight-popup__grid-wrapper',ui.newPanel).data('mansory-loaded')) {
+                                if ($('.flight-popup__grid-wrapper', ui.newPanel).length && !$('.flight-popup__grid-wrapper', ui.newPanel).data('mansory-loaded')) {
                                     $('.flight-popup__grid-wrapper', ui.newPanel).masonry({
                                         columnWidth: '.grid-item.col-md-3',
                                         itemSelector: '.grid-item'
@@ -394,12 +394,12 @@
                         });
                         if ($('.flight-popup__grid-wrapper').length) {
                             $('.flight-popup__grid-wrapper .grid-item:nth-of-type(1), .flight-popup__grid-wrapper .grid-item:nth-of-type(10n + 1)')
-                                .removeClass('col-md-3')
-                                .addClass('col-md-6');
+                                    .removeClass('col-md-3')
+                                    .addClass('col-md-6');
 
                             $('.flight-popup__grid-wrapper .grid-item:nth-of-type(8), .flight-popup__grid-wrapper .grid-item:nth-of-type(10n + 8)')
-                                .removeClass('col-md-3')
-                                .addClass('col-md-6');
+                                    .removeClass('col-md-3')
+                                    .addClass('col-md-6');
                         }
                     }
                 }
@@ -411,11 +411,11 @@
                 type: 'ajax',
                 closeMarkup: '<button title="%title%" class="mfp-close">Cancel <i class="awe-icon awe-icon-close-o"></i></button>',
                 callbacks: {
-                    ajaxContentAdded: function() {
+                    ajaxContentAdded: function () {
                         aweSelect();
                         placeholder();
 
-                        $('.awe-calendar').each(function() {
+                        $('.awe-calendar').each(function () {
                             $(this).datepicker({
                                 showOtherMonths: true,
                                 selectOtherMonths: true,
@@ -429,34 +429,33 @@
     }
     function stickyMenu() {
         var $fixed = $('.header-page__inner'),
-            offsetTop = $fixed.offset().top,
-            scrollTop = $(window).scrollTop(),
-            height = $fixed.outerHeight(),
-            limitTop = offsetTop + height;
-        $fixed.data('scrollTop', scrollTop); 
-        $(window).scroll( function () {
+                offsetTop = $fixed.offset().top,
+                scrollTop = $(window).scrollTop(),
+                height = $fixed.outerHeight(),
+                limitTop = offsetTop + height;
+        $fixed.data('scrollTop', scrollTop);
+        $(window).scroll(function () {
             var scrollTop = $(window).scrollTop(),
-                beforeTop = $fixed.data('scrollTop');  
-        
+                    beforeTop = $fixed.data('scrollTop');
+
             if (beforeTop < scrollTop) {
-                if (!$fixed.hasClass('header-page__fixed')) {  
-                    if (scrollTop > limitTop ) {
-                        var transform = 'translateY(-'+ height +'px)';
+                if (!$fixed.hasClass('header-page__fixed')) {
+                    if (scrollTop > limitTop) {
+                        var transform = 'translateY(-' + height + 'px)';
                         $fixed.addClass('header-page__fixed')
-                            .css({
-                                '-webkit-transform': transform,
-                                '-moz-transform': transform,
-                                '-ms-transform': transform,
-                                '-o-transform': transform,
-                                'transform': transform,
-                        }).data('y', height); 
+                                .css({
+                                    '-webkit-transform': transform,
+                                    '-moz-transform': transform,
+                                    '-ms-transform': transform,
+                                    '-o-transform': transform,
+                                    'transform': transform,
+                                }).data('y', height);
                     }
-                }
-                else {
+                } else {
                     var y = $fixed.data('y'),
-                        offsetScroll = beforeTop - scrollTop,
-                        newTop = (y + offsetScroll) < height ? (y - offsetScroll) : height,
-                        newTransform = 'translateY(-'+ newTop +'px)'; 
+                            offsetScroll = beforeTop - scrollTop,
+                            newTop = (y + offsetScroll) < height ? (y - offsetScroll) : height,
+                            newTransform = 'translateY(-' + newTop + 'px)';
                     $fixed.css({
                         '-webkit-transform': newTransform,
                         '-moz-transform': newTransform,
@@ -464,16 +463,15 @@
                         '-o-transform': newTransform,
                         'transform': newTransform,
                     }).data('y', newTop);
-                
+
                 }
-            }
-            else {
+            } else {
                 if ($fixed.hasClass('header-page__fixed')) {
-                var y = $fixed.data('y'),
-                    offsetScroll = beforeTop - scrollTop,
-                    newTop = (y - offsetScroll) > 0 ? (y - offsetScroll) : 0,
-                    newTransform = 'translateY(-'+ newTop +'px)'; 
-                
+                    var y = $fixed.data('y'),
+                            offsetScroll = beforeTop - scrollTop,
+                            newTop = (y - offsetScroll) > 0 ? (y - offsetScroll) : 0,
+                            newTransform = 'translateY(-' + newTop + 'px)';
+
                     $fixed.css({
                         '-webkit-transform': newTransform,
                         '-moz-transform': newTransform,
@@ -481,9 +479,9 @@
                         '-o-transform': newTransform,
                         'transform': newTransform,
                     }).data('y', newTop);
-                
+
                     if (scrollTop < offsetTop) {
-                        $fixed.removeClass('header-page__fixed'); 
+                        $fixed.removeClass('header-page__fixed');
                         $fixed.css({
                             '-webkit-transform': 'translateY(0px)',
                             '-moz-transform': 'translateY(0px)',
@@ -503,55 +501,55 @@
     function subToggle() {
         if ($('.menu-list').find('.submenu-toggle').length === 0) {
             $('.menu-item-has-children')
-                .children('a')
-                .after(
-                        '<span class="submenu-toggle">\
+                    .children('a')
+                    .after(
+                            '<span class="submenu-toggle">\
                             <i class="fa fa-angle-right"></i>\
                         </span>\
                     ');
-            $('.menu-list').on('click', '.submenu-toggle', function(evt) {
+            $('.menu-list').on('click', '.submenu-toggle', function (evt) {
                 evt.preventDefault();
                 $(this)
-                    .siblings('.sub-menu')
-                    .addClass('sub-menu-active');
+                        .siblings('.sub-menu')
+                        .addClass('sub-menu-active');
             });
         }
     }
     function submenuBack() {
-        $('.menu-list .sub-menu').each(function() {
+        $('.menu-list .sub-menu').each(function () {
             var $this = $(this);
             if ($this.find('.back-mb').length === 0) {
                 $this
-                    .prepend(
-                            '<li class="back-mb">\
+                        .prepend(
+                                '<li class="back-mb">\
                                 <a href="#">\
                                     <i class="fa fa-angle-left"></i>Back\
                                 </a>\
                             </li>\
                         ');
             }
-            $('.menu-list').on('click', '.back-mb a', function(evt) {
+            $('.menu-list').on('click', '.back-mb a', function (evt) {
                 evt.preventDefault();
                 $(this)
-                    .parent()
-                    .parent()
-                    .removeClass('sub-menu-active');
+                        .parent()
+                        .parent()
+                        .removeClass('sub-menu-active');
             });
         });
     }
 
-    $(window).on('load resize', function() {
+    $(window).on('load resize', function () {
         var dataResponsive = $('.navigation').data('responsive'),
-            windowWidth = window.innerWidth,
-            windowHeight = window.innerHeight,
-            headerHeight = $('#header-page').height();
+                windowWidth = window.innerWidth,
+                windowHeight = window.innerHeight,
+                headerHeight = $('#header-page').height();
         $('.toggle-menu-responsive').hide();
         if (windowWidth <= dataResponsive) {
             $('.toggle-menu-responsive').show();
             $('.navigation').prependTo('#page-wrap');
             $('.navigation')
-                .removeClass('awe-navigation')
-                .addClass('awe-navigation-responsive');
+                    .removeClass('awe-navigation')
+                    .addClass('awe-navigation-responsive');
             $('.awe-navigation-responsive').height(windowHeight - headerHeight);
             $('.search-box .form-search').css('right', '-60px');
             subToggle();
@@ -559,20 +557,20 @@
         } else {
             $('.navigation').insertAfter('.header-page__inner .logo');
             $('.navigation')
-                .removeClass('awe-navigation-responsive')
-                .addClass('awe-navigation');
+                    .removeClass('awe-navigation-responsive')
+                    .addClass('awe-navigation');
             $(document).find('.navigation').css('height', 'auto');
             $('.search-box .form-search').css('right', '0');
             $('.submenu-toggle, .back-mb').remove();
         }
         $('.search-box .form-search').width($('#header-page .container').width());
     });
-    $('.toggle-menu-responsive').on('click', function(evt) {
+    $('.toggle-menu-responsive').on('click', function (evt) {
         evt.preventDefault();
         $(this).toggleClass('toggle-active');
         $(document).find('.awe-navigation-responsive').toggleClass('awe-navigation-responsive-active');
     });
-    $(window).load(function() {
+    $(window).load(function () {
         $('.preloader').fadeOut(1200);
         masonry();
         placeholder();
@@ -581,17 +579,17 @@
         $('.image-cover').imageCover();
         if ($('body').hasClass('single-post') === false) {
             $('.post .image-wrap').addClass('image-style');
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.post .image-wrap').imageCover();
-            },10);
+            }, 10);
         }
         $('.related-post .post .image-wrap').addClass('image-style');
-        setTimeout(function() {
+        setTimeout(function () {
             $('.related-post .post .image-wrap').imageCover();
-        },10);
+        }, 10);
     });
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         aweCalendar();
         priceSlider();
         aweSelect();
@@ -610,10 +608,10 @@
 
         if (isMobile.iOS()) {
             $('.awe-parallax, .awe-static')
-                .addClass('fix-background-ios');
+                    .addClass('fix-background-ios');
         }
 
-        $('.write-review').on('click', function(evt) {
+        $('.write-review').on('click', function (evt) {
             evt.preventDefault();
             $('#add_review').slideToggle(400);
             $(this).toggleClass('write-review-active');
@@ -658,27 +656,130 @@
 
 
         if (isMobile.any()) {
-            $('.search-box').on('click', '.searchtoggle', function() {
+            $('.search-box').on('click', '.searchtoggle', function () {
                 $(this).toggleClass('searchtoggle-active');
                 $(this).siblings('.form-search').toggleClass('form-active');
             });
-            $(document).on('click', function() {
+            $(document).on('click', function () {
                 $('.search-box .searchtoggle').removeClass('searchtoggle-active');
                 $('.search-box .form-search').removeClass('form-active');
                 $('.minicart-body')
-                    .removeClass('cart-toggle');
+                        .removeClass('cart-toggle');
                 $('.toggle-minicart').removeClass('toggle-active');
             });
-            $(document).on('click', '.search-box', function(e) {
+            $(document).on('click', '.search-box', function (e) {
                 e.stopPropagation();
             });
         } else {
-            $('.search-box').hover(function() {
+            $('.search-box').hover(function () {
                 $('.search-box .form-search').addClass('form-active');
-            }, function() {
+            }, function () {
                 $('.search-box .form-search').removeClass('form-active');
-            }); 
+            });
         }
 
     });
+
 })(jQuery);
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+function setMonthString(month) {
+    var monthString = "";
+    if (month === "01") {
+        monthString = "มกราคม";
+    }
+    if (month === "02") {
+        monthString = "กุมภาพันธ์";
+    }
+    if (month === "03") {
+        monthString = "มีนาคม";
+    }
+    if (month === "04") {
+        monthString = "เมษายน";
+    }
+    if (month === "05") {
+        monthString = "พฤษภาคม";
+    }
+    if (month === "06") {
+        monthString = "มิถุนายน";
+    }
+    if (month === "07") {
+        monthString = "กรกฎาคม";
+    }
+    if (month === "08") {
+        monthString = "สิงหาคม";
+    }
+    if (month === "09") {
+        monthString = "กันยายน";
+    }
+    if (month === "10") {
+        monthString = "ตุลาคม";
+    }
+    if (month === "11") {
+        monthString = "พฤศจิกายน";
+    }
+    if (month === "12") {
+        monthString = "ธันวาคม";
+    }
+    return monthString;
+}
+
+function setYearToBE(year) {
+    var yearBE = year + 543;
+    return yearBE;
+}
+
+function setCTMonthString(month) {
+    var monthString = "";
+    if (month === "01") {
+        monthString = "ม.ค.";
+    }
+    if (month === "02") {
+        monthString = "ก.พ.";
+    }
+    if (month === "03") {
+        monthString = "มี.ค.";
+    }
+    if (month === "04") {
+        monthString = "เม.ย.";
+    }
+    if (month === "05") {
+        monthString = "พ.ค.";
+    }
+    if (month === "06") {
+        monthString = "มิ.ย.";
+    }
+    if (month === "07") {
+        monthString = "ก.ค.";
+    }
+    if (month === "08") {
+        monthString = "ส.ค.";
+    }
+    if (month === "09") {
+        monthString = "ก.ย.";
+    }
+    if (month === "10") {
+        monthString = "ต.ค.";
+    }
+    if (month === "11") {
+        monthString = "พ.ย.";
+    }
+    if (month === "12") {
+        monthString = "ธ.ค.";
+    }
+    return monthString;
+}

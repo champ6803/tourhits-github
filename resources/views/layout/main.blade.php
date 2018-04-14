@@ -24,6 +24,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/owl.carousel.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/jquery-ui.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/bootstrap-slider.css') }}">
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('css/lib/daterangepicker.css') }}" />
 
         <!-- REVOLUTION DEMO -->
         <link rel="stylesheet" type="text/css" href="{{ asset('revslider-demo/css/settings.css') }}">
@@ -261,6 +262,9 @@
         <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/bootstrap-slider.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/pagination.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/lib/moment.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
+
 
         <!-- REVOLUTION DEMO -->
         <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.revolution.min.js') }}"></script>
