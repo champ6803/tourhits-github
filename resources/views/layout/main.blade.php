@@ -143,11 +143,11 @@
                         <div class="col-md-3">
                             <h5 style="color:#FFFFFF;">บริษัท ทัวร์เอ็กซ์เพรสเซ็นเตอร์ดอทคอม จำกัด</h5><br>
 
-
+                            <p style="font-size:15px">
                             เลขที่ 300/76 โครงการพรีเมี่ยมเพลส 6 ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กทม. 10240<br>
                             300/76 PREMIUM PLACE 6 NAWAMIN RD. NAWAMIN BUENGKUM BANGKOK THAILAND 10240<br><br>
                             Tel 0-2379-1249 Fax 0-2379-1966-7<br>
-                            E-mail address : tourhits@gmail.com
+                            <a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;">tourhits@gmail.com</a></p>
 
 
                             <!--                            <div class="widget widget_contact_info">
