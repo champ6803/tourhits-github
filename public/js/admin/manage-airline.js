@@ -1,25 +1,25 @@
 $(function () {
     $('#searchButton').click(function () {
-        var input_route_name= $('#input_route_name').val();
-        var checkEmpty = input_route_name.trim();
+        var input_airline_name= $('#input_airline_name').val();
+        var checkEmpty = input_airline_name.trim();
         if(checkEmpty.length<=0){
             refresh()
         }
         else{
-             findRouteByName(input_route_name);
+             findAirlineByName(input_airline_name);
         }
     });
     $('#clearButton').click(function () {
-           $('#routeTable').dataTable().fnClearTable();
-           $('#input_route_name').val('');
-           $('#route_name').val('');
+           $('#airlineTable').dataTable().fnClearTable();
+           $('#input_airline_name').val('');
+           $('#airline_name').val('');
     });
     $('#close').click(function () {
-           $('#route_name').val('');
+           $('#airline_name').val('');
     });
     $(document).ready(function() {
         createTable()
-        $('#routeTable').DataTable();
+        $('#airlineTable').DataTable();
     } );
 });
 
@@ -27,9 +27,9 @@ function createTable(){
     var Str = '';
             $.ajax({
             type: 'post',
-            url: 'searchRoute',
+            url: 'searchAirline',
             async: false,
-            data: {'input_route_name': null},
+            data: {'input_airline_name': null},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -39,16 +39,16 @@ function createTable(){
                  for(var row = 0 ; row<data.length ;row++){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td>'+data[row].route_name+'</td>';
+                    Str=Str+'<td>'+data[row].airline_name+'</td>';
                     Str=Str+'<td>'+data[row].created_by+'</td>';
-                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAirline('+data[row].airline_id+',\''+data[row].airline_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
-                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeRoute('+data[row].route_id+')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeAirline('+data[row].airline_id+')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
                     Str=Str+'</tr>';  
                     rowNo++;
                }
-                document.getElementById("routeData").innerHTML = Str;
+                document.getElementById("airlineData").innerHTML = Str;
                     
                 } else {
                     alert('select fail');
@@ -60,28 +60,26 @@ function createTable(){
         });
 }
 
-function removeRoute(id){
+function removeAirline(id){
         $('#hidden_remove_id').val(id);
-       // $('#removeModal').modal('show'); 
 }
-function editRoute(id,routeName){
+function editAirline(id,airlineName){
     $('#hidden_update_id').val(id);
-    $('#update_route_name').val(routeName);
-   // $('#editModal').modal('hide'); 
+    $('#update_airline_name').val(airlineName);
 }
 
-function saveRoute(){
-    var route_name= $('#route_name').val();
-    var checkEmpty = route_name.trim();
+function saveAirline(){
+    var airline_name= $('#airline_name').val();
+    var checkEmpty = airline_name.trim();
     if(checkEmpty.length<=0){
-        alert('กรุณาระบุชื่อเส้นทาง')
+        alert('กรุณาระบุชื่อสายการบิน')
         return false;
     }
     $.ajax({
             type: 'post',
-            url: 'saveRoute',
+            url: 'saveAirline',
             async: false,
-            data: {'route_name': route_name},
+            data: {'airline_name': airline_name},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -103,36 +101,36 @@ function saveRoute(){
 }
 
 function refresh(){
-    document.getElementById("routeData").innerHTML = '';
-    $('#route_name').val('');
-    $('#routeTable').DataTable().destroy();
+    document.getElementById("airlineData").innerHTML = '';
+    $('#airline_name').val('');
+    $('#airlineTable').DataTable().destroy();
     createTable();
-    $('#routeTable').DataTable();
+    $('#airlineTable').DataTable();
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
 }
 
-function findRouteByName(routeName){
+function findAirlineByName(airlineName){
         var Str = '';
-            var input_route_name= $('#input_route_name').val();
+            var input_airline_name= $('#input_airline_name').val();
             $.ajax({
             type: 'post',
-            url: 'searchRoute',
+            url: 'searchAirline',
             async: false,
-            data: {'input_route_name': input_route_name},
+            data: {'input_airline_name': input_airline_name},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (data) {
                 if (data != null) {
-                    document.getElementById("routeData").innerHTML = '';
-                    $('#route_name').val('');
-                    $('#routeTable').DataTable().destroy();
+                    document.getElementById("airlineData").innerHTML = '';
+                    $('#airline_name').val('');
+                    $('#airlineTable').DataTable().destroy();
                     var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td>'+data[row].route_name+'</td>';
+                    Str=Str+'<td>'+data[row].airline_name+'</td>';
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -141,8 +139,8 @@ function findRouteByName(routeName){
                     Str=Str+'</tr>';  
                     rowNo++;
                     }
-                document.getElementById("routeData").innerHTML = Str;
-                $('#routeTable').DataTable();   
+                document.getElementById("airlineData").innerHTML = Str;
+                $('#airlineTable').DataTable();   
                 } else {
                     alert('select fail');
                 }
@@ -153,11 +151,11 @@ function findRouteByName(routeName){
         });
 }
 
-function deleteRoute(){
+function deleteAirline(){
     var id= $('#hidden_remove_id').val();
             $.ajax({
             type: 'post',
-            url: 'deleteRoute',
+            url: 'deleteAirline',
             async: false,
             data: {'id': id},
             headers: {
@@ -179,14 +177,14 @@ function deleteRoute(){
 }
 
 
-function updateRoute(){
+function updateAirline(){
     var id= $('#hidden_update_id').val();
-    var update_route_name= $('#update_route_name').val();
+    var update_airline_name= $('#update_airline_name').val();
             $.ajax({
             type: 'post',
-            url: 'updateRoute',
+            url: 'updateAirline',
             async: false,
-            data: {'id': id,'update_route_name': update_route_name},
+            data: {'id': id,'update_airline_name': update_airline_name},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },

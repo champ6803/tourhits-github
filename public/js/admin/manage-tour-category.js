@@ -1,25 +1,28 @@
 $(function () {
     $('#searchButton').click(function () {
-        var input_route_name= $('#input_route_name').val();
-        var checkEmpty = input_route_name.trim();
+        var input_tour_category_name= $('#input_tour_category_name').val();
+        var checkEmpty = input_tour_category_name.trim();
         if(checkEmpty.length<=0){
             refresh()
         }
         else{
-             findRouteByName(input_route_name);
+             findTourCategoryByName(input_tour_category_name);
         }
     });
     $('#clearButton').click(function () {
-           $('#routeTable').dataTable().fnClearTable();
-           $('#input_route_name').val('');
-           $('#route_name').val('');
+           $('#tourCategoryTable').dataTable().fnClearTable();
+           $('#input_tour_category_name').val('');
+           $('#tour_category_name').val('');
+           $('#tour_category_picture').val('')
+           $('#update_tour_category_picture').val('');
     });
     $('#close').click(function () {
-           $('#route_name').val('');
+           $('#tour_category_name').val('');
+           $('#tour_category_picture').val('')
     });
     $(document).ready(function() {
         createTable()
-        $('#routeTable').DataTable();
+        $('#tourCategoryTable').DataTable();
     } );
 });
 
@@ -27,9 +30,9 @@ function createTable(){
     var Str = '';
             $.ajax({
             type: 'post',
-            url: 'searchRoute',
+            url: 'searchTourCategory',
             async: false,
-            data: {'input_route_name': null},
+            data: {'input_tour_category_name': null},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -37,18 +40,24 @@ function createTable(){
                 if (data != null) {
                  var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
+                    var pictureName =data[row].tour_category_img!=null ? (data[row].tour_category_img).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td>'+data[row].route_name+'</td>';
+                    Str=Str+'<td>'+data[row].tour_category_name+'</td>';
+                    if(pictureName!=null){
+                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
+                    }else{
+                     Str=Str+'<td></td>';  
+                    }
                     Str=Str+'<td>'+data[row].created_by+'</td>';
-                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCategory('+data[row].tour_category_id+',\''+data[row].tour_category_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
-                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeRoute('+data[row].route_id+')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeTourCategory('+data[row].tour_category_id+')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
                     Str=Str+'</tr>';  
                     rowNo++;
                }
-                document.getElementById("routeData").innerHTML = Str;
+                document.getElementById("tourCategoryData").innerHTML = Str;
                     
                 } else {
                     alert('select fail');
@@ -60,28 +69,30 @@ function createTable(){
         });
 }
 
-function removeRoute(id){
+function removeTourCategory(id){
         $('#hidden_remove_id').val(id);
        // $('#removeModal').modal('show'); 
 }
-function editRoute(id,routeName){
+function editTourCategory(id,tourCategoryName){
     $('#hidden_update_id').val(id);
-    $('#update_route_name').val(routeName);
+    $('#update_tour_category_name').val(tourCategoryName);
    // $('#editModal').modal('hide'); 
 }
 
-function saveRoute(){
-    var route_name= $('#route_name').val();
-    var checkEmpty = route_name.trim();
+function saveTourCategory(){
+    var tour_category_name= $('#tour_category_name').val();
+    var tour_category_picture= $('#tour_category_picture').val();
+    var checkEmpty = tour_category_name.trim();
     if(checkEmpty.length<=0){
-        alert('กรุณาระบุชื่อเส้นทาง')
+        alert('กรุณาระบุชื่อหมวดหมู่')
         return false;
     }
     $.ajax({
             type: 'post',
-            url: 'saveRoute',
+            url: 'saveTourCategory',
             async: false,
-            data: {'route_name': route_name},
+            data: {'tour_category_name': tour_category_name
+                ,'tour_category_picture': tour_category_picture},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -103,46 +114,54 @@ function saveRoute(){
 }
 
 function refresh(){
-    document.getElementById("routeData").innerHTML = '';
-    $('#route_name').val('');
-    $('#routeTable').DataTable().destroy();
+    document.getElementById("tourCategoryData").innerHTML = '';
+    $('#tour_category_name').val('');
+    $('#tourCategoryTable').DataTable().destroy();
     createTable();
-    $('#routeTable').DataTable();
+    $('#tourCategoryTable').DataTable();
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
+    $('#update_tour_category_picture').val('');
+    $('#tour_category_picture').val('');
 }
 
-function findRouteByName(routeName){
+function findTourCategoryByName(tourCategoryName){
         var Str = '';
-            var input_route_name= $('#input_route_name').val();
+            var input_tour_category_name= $('#input_tour_category_name').val();
             $.ajax({
             type: 'post',
-            url: 'searchRoute',
+            url: 'searchTourCategory',
             async: false,
-            data: {'input_route_name': input_route_name},
+            data: {'input_tour_category_name': input_tour_category_name},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (data) {
                 if (data != null) {
-                    document.getElementById("routeData").innerHTML = '';
-                    $('#route_name').val('');
-                    $('#routeTable').DataTable().destroy();
+                    document.getElementById("tourCategoryData").innerHTML = '';
+                    $('#tour_category_name').val('');
+                    $('#tourCategoryTable').DataTable().destroy();
                     var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
+                    var pictureName =data[row].tour_category_img!=null ? (data[row].tour_category_img).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td>'+data[row].route_name+'</td>';
+                    Str=Str+'<td>'+data[row].tour_category_name+'</td>';
+                    if(pictureName!=null){
+                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
+                    }else{
+                     Str=Str+'<td></td>';  
+                    }
                     Str=Str+'<td>'+data[row].created_by+'</td>';
-                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCategory('+data[row].tour_category_id+',\''+data[row].tour_category_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
-                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeRoute('+data[row].route_id+')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeTourCategory('+data[row].tour_category_id+')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
                     Str=Str+'</tr>';  
                     rowNo++;
                     }
-                document.getElementById("routeData").innerHTML = Str;
-                $('#routeTable').DataTable();   
+                document.getElementById("tourCategoryData").innerHTML = Str;
+                $('#tourCategoryTable').DataTable();   
                 } else {
                     alert('select fail');
                 }
@@ -153,11 +172,11 @@ function findRouteByName(routeName){
         });
 }
 
-function deleteRoute(){
+function deleteTourCategory(){
     var id= $('#hidden_remove_id').val();
             $.ajax({
             type: 'post',
-            url: 'deleteRoute',
+            url: 'deleteTourCategory',
             async: false,
             data: {'id': id},
             headers: {
@@ -179,14 +198,16 @@ function deleteRoute(){
 }
 
 
-function updateRoute(){
+function updateTourCategory(){
     var id= $('#hidden_update_id').val();
-    var update_route_name= $('#update_route_name').val();
+    var update_tour_category_name= $('#update_tour_category_name').val();
+    var tour_category_picture= $('#update_tour_category_picture').val();
             $.ajax({
             type: 'post',
-            url: 'updateRoute',
+            url: 'updateTourCategory',
             async: false,
-            data: {'id': id,'update_route_name': update_route_name},
+            data: {'id': id,'update_tour_category_name': update_tour_category_name,
+                'tour_category_picture': tour_category_picture},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },

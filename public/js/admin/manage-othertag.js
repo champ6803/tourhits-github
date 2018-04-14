@@ -1,25 +1,25 @@
 $(function () {
     $('#searchButton').click(function () {
-        var input_route_name= $('#input_route_name').val();
-        var checkEmpty = input_route_name.trim();
+        var input_other_name= $('#input_other_name').val();
+        var checkEmpty = input_other_name.trim();
         if(checkEmpty.length<=0){
             refresh()
         }
         else{
-             findRouteByName(input_route_name);
+             findOtherByName(input_other_name);
         }
     });
     $('#clearButton').click(function () {
-           $('#routeTable').dataTable().fnClearTable();
-           $('#input_route_name').val('');
-           $('#route_name').val('');
+           $('#otherTable').dataTable().fnClearTable();
+           $('#input_other_name').val('');
+           $('#other_name').val('');
     });
     $('#close').click(function () {
-           $('#route_name').val('');
+           $('#other_name').val('');
     });
     $(document).ready(function() {
         createTable()
-        $('#routeTable').DataTable();
+        $('#otherTable').DataTable();
     } );
 });
 
@@ -27,9 +27,9 @@ function createTable(){
     var Str = '';
             $.ajax({
             type: 'post',
-            url: 'searchRoute',
+            url: 'searchOther',
             async: false,
-            data: {'input_route_name': null},
+            data: {'input_other_name': null},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -39,16 +39,16 @@ function createTable(){
                  for(var row = 0 ; row<data.length ;row++){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td>'+data[row].route_name+'</td>';
+                    Str=Str+'<td>'+data[row].other_name+'</td>';
                     Str=Str+'<td>'+data[row].created_by+'</td>';
-                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editOther('+data[row].other_id+',\''+data[row].other_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
-                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeRoute('+data[row].route_id+')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeOther('+data[row].other_id+')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
                     Str=Str+'</tr>';  
                     rowNo++;
                }
-                document.getElementById("routeData").innerHTML = Str;
+                document.getElementById("otherData").innerHTML = Str;
                     
                 } else {
                     alert('select fail');
@@ -60,28 +60,28 @@ function createTable(){
         });
 }
 
-function removeRoute(id){
+function removeOther(id){
         $('#hidden_remove_id').val(id);
        // $('#removeModal').modal('show'); 
 }
-function editRoute(id,routeName){
+function editOther(id,otherName){
     $('#hidden_update_id').val(id);
-    $('#update_route_name').val(routeName);
+    $('#update_other_name').val(otherName);
    // $('#editModal').modal('hide'); 
 }
 
-function saveRoute(){
-    var route_name= $('#route_name').val();
-    var checkEmpty = route_name.trim();
+function saveOther(){
+    var other_name= $('#other_name').val();
+    var checkEmpty = other_name.trim();
     if(checkEmpty.length<=0){
-        alert('กรุณาระบุชื่อเส้นทาง')
+        alert('กรุณาระบุชื่อ Tags')
         return false;
     }
     $.ajax({
             type: 'post',
-            url: 'saveRoute',
+            url: 'saveOther',
             async: false,
-            data: {'route_name': route_name},
+            data: {'other_name': other_name},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -103,46 +103,46 @@ function saveRoute(){
 }
 
 function refresh(){
-    document.getElementById("routeData").innerHTML = '';
-    $('#route_name').val('');
-    $('#routeTable').DataTable().destroy();
+    document.getElementById("otherData").innerHTML = '';
+    $('#other_name').val('');
+    $('#otherTable').DataTable().destroy();
     createTable();
-    $('#routeTable').DataTable();
+    $('#otherTable').DataTable();
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
 }
 
-function findRouteByName(routeName){
+function findOtherByName(otherName){
         var Str = '';
-            var input_route_name= $('#input_route_name').val();
+            var input_other_name= $('#input_other_name').val();
             $.ajax({
             type: 'post',
-            url: 'searchRoute',
+            url: 'searchOther',
             async: false,
-            data: {'input_route_name': input_route_name},
+            data: {'input_other_name': input_other_name},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (data) {
                 if (data != null) {
-                    document.getElementById("routeData").innerHTML = '';
-                    $('#route_name').val('');
-                    $('#routeTable').DataTable().destroy();
+                    document.getElementById("otherData").innerHTML = '';
+                    $('#other_name').val('');
+                    $('#otherTable').DataTable().destroy();
                     var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td>'+data[row].route_name+'</td>';
+                    Str=Str+'<td>'+data[row].other_name+'</td>';
                     Str=Str+'<td>'+data[row].created_by+'</td>';
-                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editOther('+data[row].other_id+',\''+data[row].other_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
-                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeRoute('+data[row].route_id+')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeOther('+data[row].other_id+')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
                     Str=Str+'</tr>';  
                     rowNo++;
                     }
-                document.getElementById("routeData").innerHTML = Str;
-                $('#routeTable').DataTable();   
+                document.getElementById("otherData").innerHTML = Str;
+                $('#otherTable').DataTable();   
                 } else {
                     alert('select fail');
                 }
@@ -153,11 +153,11 @@ function findRouteByName(routeName){
         });
 }
 
-function deleteRoute(){
+function deleteOther(){
     var id= $('#hidden_remove_id').val();
             $.ajax({
             type: 'post',
-            url: 'deleteRoute',
+            url: 'deleteOther',
             async: false,
             data: {'id': id},
             headers: {
@@ -179,14 +179,14 @@ function deleteRoute(){
 }
 
 
-function updateRoute(){
+function updateOther(){
     var id= $('#hidden_update_id').val();
-    var update_route_name= $('#update_route_name').val();
+    var update_other_name= $('#update_other_name').val();
             $.ajax({
             type: 'post',
-            url: 'updateRoute',
+            url: 'updateOther',
             async: false,
-            data: {'id': id,'update_route_name': update_route_name},
+            data: {'id': id,'update_other_name': update_other_name},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },

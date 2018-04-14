@@ -1,25 +1,28 @@
 $(function () {
     $('#searchButton').click(function () {
-        var input_route_name= $('#input_route_name').val();
-        var checkEmpty = input_route_name.trim();
+        var input_attraction_name= $('#input_attraction_name').val();
+        var checkEmpty = input_attraction_name.trim();
         if(checkEmpty.length<=0){
             refresh()
         }
         else{
-             findRouteByName(input_route_name);
+             findAttractionByName(input_attraction_name);
         }
     });
     $('#clearButton').click(function () {
-           $('#routeTable').dataTable().fnClearTable();
-           $('#input_route_name').val('');
-           $('#route_name').val('');
+           $('#attractionTable').dataTable().fnClearTable();
+           $('#input_attraction_name').val('');
+           $('#attraction_name').val('');
+           $('#attraction_picture').val('')
+           $('#update_attraction_picture').val('');
     });
     $('#close').click(function () {
-           $('#route_name').val('');
+           $('#attraction_name').val('');
+           $('#attraction_picture').val('')
     });
     $(document).ready(function() {
         createTable()
-        $('#routeTable').DataTable();
+        $('#attractionTable').DataTable();
     } );
 });
 
@@ -27,9 +30,9 @@ function createTable(){
     var Str = '';
             $.ajax({
             type: 'post',
-            url: 'searchRoute',
+            url: 'searchAttraction',
             async: false,
-            data: {'input_route_name': null},
+            data: {'input_attraction_name': null},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -37,18 +40,24 @@ function createTable(){
                 if (data != null) {
                  var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
+                    var pictureName =data[row].attraction_picture!=null ? (data[row].attraction_picture).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td>'+data[row].route_name+'</td>';
+                    Str=Str+'<td>'+data[row].attraction_name+'</td>';
+                    if(pictureName!=null){
+                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
+                    }else{
+                     Str=Str+'<td></td>';  
+                    }
                     Str=Str+'<td>'+data[row].created_by+'</td>';
-                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction('+data[row].attraction_id+',\''+data[row].attraction_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
-                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeRoute('+data[row].route_id+')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeAttraction('+data[row].attraction_id+')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
                     Str=Str+'</tr>';  
                     rowNo++;
                }
-                document.getElementById("routeData").innerHTML = Str;
+                document.getElementById("attractionData").innerHTML = Str;
                     
                 } else {
                     alert('select fail');
@@ -60,28 +69,29 @@ function createTable(){
         });
 }
 
-function removeRoute(id){
+function removeAttraction(id){
         $('#hidden_remove_id').val(id);
        // $('#removeModal').modal('show'); 
 }
-function editRoute(id,routeName){
+function editAttraction(id,attractionName){
     $('#hidden_update_id').val(id);
-    $('#update_route_name').val(routeName);
+    $('#update_attraction_name').val(attractionName);
    // $('#editModal').modal('hide'); 
 }
 
-function saveRoute(){
-    var route_name= $('#route_name').val();
-    var checkEmpty = route_name.trim();
+function saveAttraction(){
+    var attraction_name= $('#attraction_name').val();
+    var attraction_picture= $('#attraction_picture').val();
+    var checkEmpty = attraction_name.trim();
     if(checkEmpty.length<=0){
-        alert('กรุณาระบุชื่อเส้นทาง')
+        alert('กรุณาระบุชื่อสถานที่ท่องเที่ยว')
         return false;
     }
     $.ajax({
             type: 'post',
-            url: 'saveRoute',
+            url: 'saveAttraction',
             async: false,
-            data: {'route_name': route_name},
+            data: {'attraction_name': attraction_name,'attraction_picture': attraction_picture},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -103,46 +113,54 @@ function saveRoute(){
 }
 
 function refresh(){
-    document.getElementById("routeData").innerHTML = '';
-    $('#route_name').val('');
-    $('#routeTable').DataTable().destroy();
+    document.getElementById("attractionData").innerHTML = '';
+    $('#attraction_name').val('');
+    $('#attractionTable').DataTable().destroy();
     createTable();
-    $('#routeTable').DataTable();
+    $('#attractionTable').DataTable();
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
+    $('#update_attraction_picture').val('');
+    $('#attraction_picture').val('');
 }
 
-function findRouteByName(routeName){
+function findAttractionByName(attractionName){
         var Str = '';
-            var input_route_name= $('#input_route_name').val();
+            var input_attraction_name= $('#input_attraction_name').val();
             $.ajax({
             type: 'post',
-            url: 'searchRoute',
+            url: 'searchAttraction',
             async: false,
-            data: {'input_route_name': input_route_name},
+            data: {'input_attraction_name': input_attraction_name},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (data) {
                 if (data != null) {
-                    document.getElementById("routeData").innerHTML = '';
-                    $('#route_name').val('');
-                    $('#routeTable').DataTable().destroy();
+                    document.getElementById("attractionData").innerHTML = '';
+                    $('#attraction_name').val('');
+                    $('#attractionTable').DataTable().destroy();
                     var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
+                    var pictureName =data[row].attraction_picture!=null ? (data[row].attraction_picture).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td>'+data[row].route_name+'</td>';
+                    Str=Str+'<td>'+data[row].attraction_name+'</td>';
+                    if(pictureName!=null){
+                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
+                    }else{
+                     Str=Str+'<td></td>';  
+                    }
                     Str=Str+'<td>'+data[row].created_by+'</td>';
-                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction('+data[row].attraction_id+',\''+data[row].attraction_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
-                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeRoute('+data[row].route_id+')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeAttraction('+data[row].attraction_id+')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
                     Str=Str+'</tr>';  
                     rowNo++;
                     }
-                document.getElementById("routeData").innerHTML = Str;
-                $('#routeTable').DataTable();   
+                document.getElementById("attractionData").innerHTML = Str;
+                $('#attractionTable').DataTable();   
                 } else {
                     alert('select fail');
                 }
@@ -153,11 +171,11 @@ function findRouteByName(routeName){
         });
 }
 
-function deleteRoute(){
+function deleteAttraction(){
     var id= $('#hidden_remove_id').val();
             $.ajax({
             type: 'post',
-            url: 'deleteRoute',
+            url: 'deleteAttraction',
             async: false,
             data: {'id': id},
             headers: {
@@ -179,14 +197,16 @@ function deleteRoute(){
 }
 
 
-function updateRoute(){
+function updateAttraction(){
     var id= $('#hidden_update_id').val();
-    var update_route_name= $('#update_route_name').val();
+    var update_attraction_name= $('#update_attraction_name').val();
+    var attraction_picture= $('#update_attraction_picture').val();
             $.ajax({
             type: 'post',
-            url: 'updateRoute',
+            url: 'updateAttraction',
             async: false,
-            data: {'id': id,'update_route_name': update_route_name},
+            data: {'id': id,'update_attraction_name': update_attraction_name,
+                'attraction_picture': attraction_picture},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },

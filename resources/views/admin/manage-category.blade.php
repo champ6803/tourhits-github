@@ -7,7 +7,7 @@
     <section class="content-header">
         <h1>
             จัดการทัวร์
-            <small>จัดการเส้นทาง</small>
+            <small>จัดการหมวดหมู่</small>
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -18,10 +18,10 @@
         <div class="row">
             <div class="col-lg-2"></div>
             <div class="col-lg-2" style="text-align: right">
-                 <label>ชื่อเส้นทาง : </label>
+                 <label>ชื่อหมวดหมู่ : </label>
              </div>
             <div class="col-lg-4">
-                 <input type="text" class="form-control" id="input_route_nname">
+                 <input type="text" class="form-control" id="input_tour_category_name">
             </div>
         </div>
         <br>
@@ -30,8 +30,8 @@
             <div class="col-lg-6"> 
                 <button type="button" id="searchButton" class="btn btn-success">
                     <span class="glyphicon glyphicon-search"></span>&nbsp;ค้นหา</button>
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#routeModal"> 
-                    <span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มเส้นทาง</button>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#tourCategoryModal"> 
+                    <span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มหมวดหมู่</button>
                 <button type="button" id="clearButton" class="btn btn-danger">
                     <span class="glyphicon glyphicon-erase"></span>&nbsp;ล้างเงื่อนไข</button>
             </div>
@@ -39,22 +39,24 @@
         <br> <br> <br>
         <div class="row">
         <div class="col-lg-12">
-        <table id="routeTable" class="table table-striped table-bordered" style="width:100%">
+        <table id="tourCategoryTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>ลำดับที่</th>
-                <th>ชื่อเส้นทาง</th>
+                <th>ชื่อหมวดหมู่</th>
+                <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
                 <th>ลบ</th>
             </tr>
         </thead>
-        <tbody id="routeData">
+        <tbody id="tourCategoryData">
         </tbody>
         <tfoot>
             <tr>
                 <th>ลำดับที่</th>
-                <th>ชื่อเส้นทาง</th>
+                <th>ชื่อหมวดหมู่</th>
+                <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
                 <th>ลบ</th>
@@ -67,11 +69,11 @@
 </div>
 
  <!--add Modal -->
-<div class="modal fade" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="tourCategoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">เพิ่มข้อมูลเส้นทาง</h5>
+        <h5 class="modal-title" id="exampleModalLabel">เพิ่มข้อมูลหมวดหมู่</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -79,14 +81,17 @@
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">ชื่อเส้นทาง:</label>
-            <input type="text" class="form-control" id="route_name">
+            <label for="recipient-name" class="col-form-label">ชื่อหมวดหมู่:</label>
+            <input type="text" class="form-control" id="tour_category_name">
+            <br>
+            <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
+            <input type="file" class="form-control" id="tour_category_picture">
           </div>
         </form>
       </div>
       <div class="modal-footer" style="text-align: right">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">ยกเลิก</button>
-        <button type="button" class="btn btn-primary" onclick="saveRoute()">บันทึก</button>
+        <button type="button" class="btn btn-primary" onclick="saveTourCategory()">บันทึก</button>
       </div>
     </div>
   </div>
@@ -97,7 +102,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">แก้ไขข้อมูลเส้นทาง</h5>
+        <h5 class="modal-title" id="exampleModalLabel">แก้ไขข้อมูลหมวดหมู่</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -105,15 +110,18 @@
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">ชื่อเส้นทาง:</label>
-            <input type="text" class="form-control" id="update_route_name">
+            <label for="recipient-name" class="col-form-label">ชื่อหมวดหมู่:</label>
+            <input type="text" class="form-control" id="update_tour_category_name">
             <input type="hidden" class="form-control" id="hidden_update_id">
+            <br>
+            <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
+            <input type="file" class="form-control" id="update_tour_category_picture">
           </div>
         </form>
       </div>
       <div class="modal-footer" style="text-align: right">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="updateClose">ยกเลิก</button>
-        <button type="button" class="btn btn-primary" onclick="updateRoute()">แก้ไข</button>
+        <button type="button" class="btn btn-primary" onclick="updateTourCategory()">แก้ไข</button>
       </div>
     </div>
   </div>
@@ -126,7 +134,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">ต้องการลบข้อมูลเส้นทางใช่หรือไม่?</h5>
+        <h5 class="modal-title" id="exampleModalLabel">ต้องการลบข้อมูลหมวดหมู่ใช่หรือไม่?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           <input type="hidden" class="form-control" id="hidden_remove_id">
@@ -134,7 +142,7 @@
       </div>
         <div class="modal-footer" style="text-align: center">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="deleteClose">ยกเลิก</button>
-        <button type="button" class="btn btn-primary" onclick="deleteRoute()">ตกลง</button>
+        <button type="button" class="btn btn-primary" onclick="deleteTourCategory()">ตกลง</button>
       </div>
     </div>
   </div>
@@ -142,7 +150,7 @@
 
 @stop
 @section('footer_scripts')
-<script type="text/javascript" src="../js/admin/manage-route.js"></script>
+<script type="text/javascript" src="../js/admin/manage-tour-category.js"></script>
 <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
 <script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
