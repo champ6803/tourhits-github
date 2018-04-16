@@ -264,6 +264,7 @@
         <script type="text/javascript" src="{{ asset('js/lib/pagination.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/moment.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/lib/AutoNumeric.js') }}"></script>
 
 
         <!-- REVOLUTION DEMO -->
