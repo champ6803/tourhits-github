@@ -8,72 +8,114 @@
         margin-left: 16px;}*/
     }
     
-    .container-hothits{
+    .hothits-item{
+        max-width: 280px;
         position: relative;
-        width: 100%;
-        overflow: hidden;
-        background-color: #f1f1f1;
+        box-shadow: 0px 0px 6px rgba(0,0,0,0.25);
+        margin: 10px 10px 10px 0px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
-    .hothits-cover-all{
-        height: calc(100% + 15px);
-        box-sizing: content-box;
-        display: -webkit-box;
-        display: flex;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        
+    .hothits-name-box {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    background: rgba(226, 29, 44, .8);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     }
     
-    .hothits-cover {
-    flex-basis: 180px;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    flex-shrink: 0;
-    max-width: 250px;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 10px;
-
+    .hothits-name-box .text {
+    color: #ffffff;
+    padding: 3px 10px 2px 10px;
+    font-size: 20px; 
     }
     
-    
-    .hothits-cover-img {
-    margin-bottom: 12px;
+    .hothits-img {
     overflow: hidden;
-    background-position: 50%;
-    background-size: cover;
-    border-radius: 5px;
-    text-align: center;
+    height: 200px;
+    }  
+    
+    .center-crop {
+         max-width: 280px;
+         overflow:hidden;  
+    }  
+    
+    .hothits-detail {
+    background: #d30000;
+    color: #fff;
+    font-size: 17px;
+    height: 100px;
+    line-height: 20px;
+    padding: 10px;
+/*    text-align: justify;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
     }
     
-    .hothits-country-name{
-        font-size: 18px;
-        
-        padding: 13px;
-        
-        color: #fff;
-        
-        margin: 0;
-        line-height: 1;
-        text-shadow: 0 0 8px rgba(0,0,0,.3);
-        text-transform: capitalize;
-        display: block;
-        background-color: rgba(55,35,35,.3);
-        transition: background-color .15s ease-in-out;
-        
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        
-        font-weight: 500;
-             
+    .tour-description {
+    padding: 8px 5px;
+    min-height: 65px;
+    background: #fff;
     }
     
-    .hothits-cover-img a:hover{
-        color: #fff;
-        background-color: rgba(0,0,0,.4);
+    .tour-description .tour-price {
+    color: #d30000;
+    font-size: 25px;
+    text-align: right;
+    position: absolute;
+    
+    right: 0;
+    padding: 0px 20px;
+    line-height: 2;
+    text-shadow: 0px 1px 5px rgba(0,0,0,0.1);
     }
+    
+    .tour-description .tour-airline-logo {
+    max-width: 110px;
+    margin-top: 5px; }
+    
+    .tour-description .num-pack-here{
+       color: #d30000;
+       font-size: 30px;
+       font-weight: 500;
+       text-align: center;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       padding: 10px 10px; 
+    }
+    
+    .tour-description .tour-price small.strike {
+    line-height: 27px;
+    color: #999;}
+    
+    .tour-description .tour-price small {
+    color: #999;
+    font-size: 20px;
+    line-height: 24px;
+    display: block;
+    }
+    
+    .tour-description .strike {
+    position: relative;
+    }
+    
+    .hothits-item a .hothits-img .center-crop img{
+       min-height: 200px!important;
+       width: 100%;    
+        
+      -moz-transition: all 0.7s;
+      -webkit-transition: all 0.7s;
+      -transition: all 0.7s;
+    }
+      
+    .hothits-item a .hothits-img .center-crop img:hover{
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.2);
+    }
+
     
 </style>
     <!-- BREADCRUMB -->
@@ -332,10 +374,798 @@
 
         <section class="detail-section" style="padding: 30px 0;">
             <div class="container">
+<!--                ญี่ปุ่น-->
                 <div class="row">
-                    <h2>สถานที่ในญี่ปุ่นยอดนิยม</h2>
-                    <span>แมวน้ำ</span>
+                    <h2>สถานที่ยอดนิยมในญี่ปุ่น</h2><div class="line-gradient"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="https://images.unsplash.com/photo-1454179659346-524fcc7bd5e7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7b0a70cb51906491b81b41534be2b6cd&auto=format&fit=crop&w=500&q=60" alt="">
+                                        
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					ภูเขาฟูจิเป็นภูเขาที่สูงที่สุดในญี่ปุ่น รอบๆภูเขาเต็มไปด้วยธรรชาติอันงดงาม ภูเขาฟูจิมีอิทธิพลต่อศิลปวัฒนธรรมของญี่ปุ่นมาตั้งแต่สมัยโบราณ เรียกว่าภูเขาฟูจิเป็นหัวใจของญี่ปุ่น
+                                        
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ภูเขาไฟฟูจิ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					<!-- <ul class="single_blog_post_info nopadding">
+						<li><a href="javascript:void(0);">TT171696</a></li>
+						<li>
+							<div class="five-stars-container pull-right">
+								<span class="five-stars" style="width: 60%;"></span>
+							</div>
+						</li>
+					</ul> -->
+<!--                                    <div class="tour-airline-logo">
+                                        <img src="https://www.thaitravelcenter.com/_admin2/userfiles//vehicle/airline/171004-CX-1-188x66.png" alt="Cathay Pacific คาเธ่ย์ แปซิฟิค" title="Cathay Pacific คาเธ่ย์ แปซิฟิค">
+                                    </div>-->
+                                    <div class="num-pack-here">
+                                           139 แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                        
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+				
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>  
+			</div>
+                    </div>                        
                 </div>
+                
+<!--                เกาหลี-->                
+                <div class="row">
+                    <h2>สถานที่ยอดนิยมในเกาหลี</h2><div class="line-gradient"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="https://images.unsplash.com/photo-1502737459521-e4b80edec108?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f79faf1db2e29a3b469562cd68c53c05&auto=format&fit=crop&w=500&q=60" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					<!-- <ul class="single_blog_post_info nopadding">
+						<li><a href="javascript:void(0);">TT171696</a></li>
+						<li>
+							<div class="five-stars-container pull-right">
+								<span class="five-stars" style="width: 60%;"></span>
+							</div>
+						</li>
+					</ul> -->
+<!--                                    <div class="tour-airline-logo">
+                                        <img src="https://www.thaitravelcenter.com/_admin2/userfiles//vehicle/airline/171004-CX-1-188x66.png" alt="Cathay Pacific คาเธ่ย์ แปซิฟิค" title="Cathay Pacific คาเธ่ย์ แปซิฟิค">
+                                    </div>-->
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+				
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>  
+			</div>
+                    </div>                        
+                </div>
+
+<!--                ฮ่องกง-->                
+                <div class="row">
+                    <h2>สถานที่ยอดนิยมในฮ่องกง</h2><div class="line-gradient"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="https://images.unsplash.com/photo-1519222588400-47f6bea38294?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dc0077daebb63d648cc5bdf8b314f4d5&auto=format&fit=crop&w=500&q=60" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					<!-- <ul class="single_blog_post_info nopadding">
+						<li><a href="javascript:void(0);">TT171696</a></li>
+						<li>
+							<div class="five-stars-container pull-right">
+								<span class="five-stars" style="width: 60%;"></span>
+							</div>
+						</li>
+					</ul> -->
+<!--                                    <div class="tour-airline-logo">
+                                        <img src="https://www.thaitravelcenter.com/_admin2/userfiles//vehicle/airline/171004-CX-1-188x66.png" alt="Cathay Pacific คาเธ่ย์ แปซิฟิค" title="Cathay Pacific คาเธ่ย์ แปซิฟิค">
+                                    </div>-->
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            <!-- <small>ราคาเริ่มต้น</small> -->
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+				
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>
+                           
+			</div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hothits-item">
+                            <a href="">
+				<div class="hothits-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="" alt="">                                       
+                                   </div> 
+				</div>
+				<div class="hothits-detail">
+					รายละเอียด
+                                </div>    
+				<div class="hothits-name-box">
+                                    <div class="text ">ชื่อ</div>
+				</div>
+                            </a>
+                            
+                            <div class="tour-description">
+					
+                                    <div class="num-pack-here">
+                                           xxx แพ็คเกจไปที่นี่
+                                    </div>
+					<a class="tour-price" href="">
+                                            
+                                            <small class="strike"></small>
+                                            <i class="fas fa-map-marker"></i>
+                                        </a>
+                            </div>  
+			</div>
+                    </div>                        
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
             </div>
         </section>
 
