@@ -115,10 +115,6 @@ Route::get('about','AboutController@about_us');
 
 Route::get('tour-confirm','ConfirmController@tour_confirm');
 
-<<<<<<< HEAD
-Route::get('contact','ContactController@contact_us');
-=======
 Route::get('contact','ContactController@contact_us');
 
 Route::get('hothits','HothitsController@hot_hits');
->>>>>>> 772e72afa24e663d678756d9775e45faa168dbaa
