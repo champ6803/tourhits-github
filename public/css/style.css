@@ -1633,6 +1633,7 @@ span.dropcap {
 .awe-search-tabs__content {
     background: #fff;
     padding: 20px;
+    margin-bottom: -2px;
 }
 .awe-search-tabs__content .ui-tabs-panel {
     padding: 0;
