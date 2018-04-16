@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('page_title','สถานที่ยอดนิยม')
+@section('page_title','สถานที่ยอดฮิต')
 @section('main-content')
 <style>
     
@@ -68,7 +68,7 @@
     right: 0;
     padding: 0px 20px;
     line-height: 2;
-    text-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+/*    text-shadow: 0px 1px 5px rgba(0,0,0,0.1);*/
     }
     
     .tour-description .tour-airline-logo {
@@ -115,7 +115,7 @@
         -webkit-transform: scale(1.1);
         transform: scale(1.2);
     }
-
+    
     
 </style>
     <!-- BREADCRUMB -->
@@ -125,7 +125,7 @@
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Destinations</a></li>                        
-                        <li><span>สถานที่ยอดนิยม</span></li>
+                        <li><span>สถานที่ยอดฮิต</span></li>
                     </ul>
                 </div>
             </div>
@@ -376,7 +376,7 @@
             <div class="container">
 <!--                ญี่ปุ่น-->
                 <div class="row">
-                    <h2>สถานที่ยอดนิยมในญี่ปุ่น</h2><div class="line-gradient"></div>
+                    <h1>สถานที่ยอดฮิตในญี่ปุ่น</h1><div class="line-gradient"></div>
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="hothits-item">
                             <a href="">
@@ -639,7 +639,7 @@
                 
 <!--                เกาหลี-->                
                 <div class="row">
-                    <h2>สถานที่ยอดนิยมในเกาหลี</h2><div class="line-gradient"></div>
+                    <h2>สถานที่ยอดฮิตในเกาหลี</h2><div class="line-gradient"></div>
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="hothits-item">
                             <a href="">
@@ -900,7 +900,7 @@
 
 <!--                ฮ่องกง-->                
                 <div class="row">
-                    <h2>สถานที่ยอดนิยมในฮ่องกง</h2><div class="line-gradient"></div>
+                    <h2>สถานที่ยอดฮิตในฮ่องกง</h2><div class="line-gradient"></div>
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="hothits-item">
                             <a href="">

@@ -78,7 +78,7 @@
                                     <a href="destinations-list.html">ทัวร์มาแรง</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="trip.html">สถานที่ยอดนิยม</a>
+                                    <a href="trip.html">สถานที่ยอดฮิต</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="hotel.html">เกี่ยวกับเรา</a>
