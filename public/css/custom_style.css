@@ -79,9 +79,9 @@
 }
 
 .panel-default > .panel-heading{
-    background-color: #D5E3E6;
-    font-size: 21px;
-    color: #ffffff;
+    background-color: #fff;
+    font-size: 25px;
+    color: #333333;
 }
 
 .full-width{
@@ -229,6 +229,7 @@
     border-color: #F58A1F;
     font-size: 20px;
     font-family: supermarket, sans-serif;
+    margin-left: 0px;
 }
 
 .btn-pdf:hover {
@@ -320,6 +321,13 @@ hr {
 
 .login-content{
     padding: 70px 0;
+   
+    
+}
+
+.login-section2{
+    background-image: url(../images/bg/register-bg.jpg);
+    background-size:cover;
 }
 /* footer css */
 

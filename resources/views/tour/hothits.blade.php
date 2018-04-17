@@ -114,6 +114,7 @@
         -moz-transform: scale(1.1);
         -webkit-transform: scale(1.1);
         transform: scale(1.2);
+        opacity: 0.7;
     }
     
     
