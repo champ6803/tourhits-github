@@ -13,9 +13,12 @@ $(function () {
            $('#airlineTable').dataTable().fnClearTable();
            $('#input_airline_name').val('');
            $('#airline_name').val('');
+           $('#airline_picture').val('')
+           $('#update_airline_picture').val('');
     });
     $('#close').click(function () {
            $('#airline_name').val('');
+           $('#airline_picture').val('')
     });
     $(document).ready(function() {
         createTable()
@@ -37,9 +40,15 @@ function createTable(){
                 if (data != null) {
                  var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
+                    var pictureName =data[row].airline_picture!=null ? (data[row].airline_picture).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].airline_name+'</td>';
+                    if(pictureName!=null){
+                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
+                    }else{
+                     Str=Str+'<td></td>';  
+                    }
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAirline('+data[row].airline_id+',\''+data[row].airline_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -75,11 +84,12 @@ function saveAirline(){
         alert('กรุณาระบุชื่อสายการบิน')
         return false;
     }
+    var airline_picture= $('#airline_picture').val();
     $.ajax({
             type: 'post',
             url: 'saveAirline',
             async: false,
-            data: {'airline_name': airline_name},
+            data: {'airline_name': airline_name,'airline_picture': airline_picture},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -108,6 +118,8 @@ function refresh(){
     $('#airlineTable').DataTable();
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
+    $('#update_airline_picture').val('');
+    $('#airline_picture').val('');
 }
 
 function findAirlineByName(airlineName){
@@ -128,9 +140,15 @@ function findAirlineByName(airlineName){
                     $('#airlineTable').DataTable().destroy();
                     var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
+                    var pictureName =data[row].airline_picture!=null ? (data[row].airline_picture).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].airline_name+'</td>';
+                    if(pictureName!=null){
+                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
+                    }else{
+                     Str=Str+'<td></td>';  
+                    }
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -180,11 +198,12 @@ function deleteAirline(){
 function updateAirline(){
     var id= $('#hidden_update_id').val();
     var update_airline_name= $('#update_airline_name').val();
+    var airline_picture= $('#update_airline_picture').val();
             $.ajax({
             type: 'post',
             url: 'updateAirline',
             async: false,
-            data: {'id': id,'update_airline_name': update_airline_name},
+            data: {'id': id,'update_airline_name': update_airline_name,'airline_picture': airline_picture},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
