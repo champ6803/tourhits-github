@@ -489,13 +489,13 @@
                                     <h4 style="color:#ec2424;"><i class="far fa-handshake"></i> ข้อมูลผู้จองสำหรับติดต่อกลับ</h4><em>กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
                                     <div class="confirm-form">
                                         <div class="form-item">
-                                        <input type="text" value="" name="name" placeholder="ชื่อของคุณ *">
+                                        <input type="text" value="" name="name" placeholder=" ชื่อของคุณ *">
                                         </div>
                                         <div class="form-item">
                                             <input type="email" value="" name="email" placeholder="อีเมล์ของคุณ">
                                         </div>
                                         <div class="form-item">
-                                            <input type="text" value="" name="lastname" placeholder="นามสกุล *">
+                                            <input type="text" value="" name="lastname" placeholder=" นามสกุล *">
                                         </div>
                                         <div class="form-item">
                                             <input type="number" value="" name="number" maxlength="10" placeholder="เบอร์โทรศัพท์ *">

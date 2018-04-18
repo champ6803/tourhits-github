@@ -2,13 +2,8 @@
 @section('page_title','Search Tour')
 @section('main-content')
 <style type="text/css">
-<<<<<<< HEAD
-    .filter-tabcard .nav-tabs {  width: 510px; margin-left:auto; margin-right: auto; } 
-    .filter-tabcard .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {color: #fff; background: #EC2424; border: none; box-shadow: 0 0px 5px rgba(112, 112, 112, 0.3); transform: scale(1.005); } <!--กด-->
-=======
     .filter-tabcard .nav-tabs {  width: 50%; margin-left:auto; margin-right: auto; } 
     .filter-tabcard .nav-tabs > li.active > a, .filter-tabcard .nav-tabs > li.active > a:focus, .filter-tabcard .nav-tabs > li.active > a:hover {color: #fff; background: #EC2424; border: none; box-shadow: 0 0px 5px rgba(112, 112, 112, 0.3); transform: scale(1.005); } <!--กด-->
->>>>>>> cacac2e55a727923818c775dc09f2229e130a8fd
     .filter-tabcard .nav-tabs > li > a { border: none; color: #515050; background: #fff;  } <!--ยังไม่ได้กด--> 
     .filter-tabcard .nav-tabs > li.active > a,.filter-tabcard .nav-tabs > li > a:hover { border: none;  color: #fff !important; background: #EC2424; }
     .filter-tabcard .nav-tabs > li > a::after { content: ""; background: #F58A1F; height: 3px; position: absolute; width: 100%; left: 0px; bottom: -8px; transition: all 250ms ease 0s; transform: scale(0); }
@@ -35,9 +30,9 @@
     }
 
     @media all and (max-width:724px){
-        .filter-tabcard .nav-tabs{
+/*        .filter-tabcard .nav-tabs{
             width: 300px;
-        }
+        }*/
         .nav-tabs > li > a > span {display:none;}	
         .nav-tabs > li > a {padding: 0px 0px;}
     }

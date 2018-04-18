@@ -23,6 +23,7 @@ $(function () {
         getTourPackage();
     });
     checkboxChecked();
+    $('.price_to').autoNumeric();
 });
 
 var slider = new Slider('#price', {

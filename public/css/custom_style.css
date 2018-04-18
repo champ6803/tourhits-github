@@ -79,9 +79,9 @@
 }
 
 .panel-default > .panel-heading{
-    background-color: #D5E3E6;
-    font-size: 21px;
-    color: #ffffff;
+    background-color: #fff;
+    font-size: 25px;
+    color: #333333;
 }
 
 .full-width{
@@ -229,6 +229,7 @@
     border-color: #F58A1F;
     font-size: 20px;
     font-family: supermarket, sans-serif;
+    margin-left: 0px;
 }
 
 .btn-pdf:hover {
@@ -320,6 +321,13 @@ hr {
 
 .login-content{
     padding: 70px 0;
+   
+    
+}
+
+.login-section2{
+    background-image: url(../images/bg/register-bg.jpg);
+    background-size:cover;
 }
 /* footer css */
 
@@ -4061,3 +4069,72 @@ Custom BS3
     background: linear-gradient(to right, #D0171F, #EC1C24, #F58A1F, #FFDB00  ); /* Standard syntax (must be last) */
 }
 
+/* หน้าสถานที่ยอดนิยม */
+
+    .container-hothits{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+    
+    .hothits-cover-all{
+        height: calc(100% + 15px);
+        box-sizing: content-box;
+        display: -webkit-box;
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        
+    }
+    
+    .hothits-cover {
+    flex-basis: 180px;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 250px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 10px;
+
+    }
+    
+    
+    .hothits-cover-img {
+    margin-bottom: 12px;
+    overflow: hidden;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 5px;
+    text-align: center;
+    }
+    
+    .hothits-country-name{
+        font-size: 18px;
+        
+        padding: 13px;
+        
+        color: #fff;
+        
+        margin: 0;
+        line-height: 1;
+        text-shadow: 0 0 8px rgba(0,0,0,.3);
+        text-transform: capitalize;
+        display: block;
+        background-color: rgba(55,35,35,.3);
+        transition: background-color .15s ease-in-out;
+        
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        
+        font-weight: 500;
+             
+    }
+    
+    .hothits-cover-img a:hover{
+        color: #fff;
+        background-color: rgba(0,0,0,.4);
+    }
+    
