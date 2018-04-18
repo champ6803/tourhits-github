@@ -371,14 +371,6 @@
                                 </div>
                                 <span class="clear"></span>                               
                             </div>
-                            <div class="tour-bottom-right">
-                                <div>
-                                    <span class="tag">
-                                        #6600
-                                    </span>
-                                </div>
-                                <span class="clear"></span>                               
-                            </div>
                         </div>
                     </a>
                     <div class="caption">
@@ -398,7 +390,7 @@
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-pane">tab2 content</div>
@@ -458,7 +450,7 @@
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-pane">tab2 content</div>
@@ -518,7 +510,7 @@
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-pane">tab2 content</div>
@@ -577,7 +569,7 @@
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-pane">tab2 content</div>
@@ -679,7 +671,7 @@
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-pane">tab2 content</div>
@@ -739,7 +731,7 @@
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-pane">tab2 content</div>
@@ -799,7 +791,7 @@
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-pane">tab2 content</div>
@@ -858,7 +850,7 @@
                                     <hr>
                                     <div class="button-card">
                                         <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-pdf">ดูรายละเอียด</a>
+                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-pane">tab2 content</div>
