@@ -22,7 +22,7 @@
           text-decoration: none; /* remove underline from anchors */
         }
 
-        input:hover,
+        input:hover{}
         .btn-lr:hover {
           opacity: 1;
           color : white;
