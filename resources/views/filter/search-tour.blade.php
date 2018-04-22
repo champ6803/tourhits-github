@@ -1374,7 +1374,7 @@
                         @foreach ($holidayList as $holiday)
                         <div class="option">
                             <label for="holiday_{{ $holiday->holiday_id }}" class="label-cbx">
-                                <input id="holiday_{{ $holiday->holiday_id }}" type="checkbox" class="invisible">
+                                <input id="holiday_{{ $holiday->holiday_id }}" value="{{ $holiday->start_date }}||{{ $holiday->end_date }}" type="checkbox" class="holiday_checkbox invisible">
                                 <div class="checkbox">
                                     <svg width="20px" height="20px" viewBox="0 0 20 20">
                                     <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
