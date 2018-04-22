@@ -1,6 +1,11 @@
 @extends('layout.main')
 @section('page_title','Register')
 @section('main-content')
+<style>
+    
+</style>
+
+
 <section class="register-section">
     <div class="register-content">
         <div class="container">
@@ -8,10 +13,11 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading" align="center">
-                            <button class="btn btn-primary"><i class="fab fa-facebook"></i>&nbsp;Continuous With Facebook</button>
-                            <button class="btn btn-success"><i class="fab fa-line"></i>&nbsp;Start With Line</button>
+                            <a href="#" class="fb btn-facebook-reg"><i class="fab fa-facebook-f"></i> Login with Facebook</a>
+<!--                        <button class="btn btn-primary"><i class="fab fa-facebook"></i>&nbsp;Continuous With Facebook</button>-->
+<!--                            <button class="btn btn-success"><i class="fab fa-line"></i>&nbsp;Start With Line</button>-->
                         </div>
-                        <div class="panel-body">
+                        <div class="panel-body" style="background-color: #f2f2f2;">
                             <div class="row">
                                 <div class="col-md-6">
                                     <hr />
@@ -34,7 +40,7 @@
                                 <div class="col-md-6">
 
                                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                        <label for="email" class="col-sm-4 control-label"><i class="fas fa-envelope fa-2x"></i></label>
+                                        <label for="email" class="col-sm-4 control-label"><i class="far fa-envelope fa-2x"></i></label>
                                         <div class="col-sm-6">
                                             {!! Form::email('email', null, ['class' => 'form-control', 'id' => 'email', 'placeholder' => 'Email' , 'required', 'autofocus']) !!}
                                             @if ($errors->has('email'))
@@ -46,7 +52,7 @@
                                     </div>
 
                                     <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                                        <label for="username" class="col-sm-4 control-label"><i class="fas fa-user fa-2x"></i></label>
+                                        <label for="username" class="col-sm-4 control-label"><i class="far fa-user-circle fa-2x"></i></label>
                                         <div class="col-sm-6">
                                             {!! Form::text('username', null, ['class' => 'form-control','id' => 'username', 'placeholder' => 'Username', 'required']) !!}
                                             @if ($errors->has('username'))
@@ -70,9 +76,9 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="password-confirm" class="col-sm-4 control-label"><i class="fas fa-check-circle fa-2x"></i></label>
+                                        <label for="password-confirm" class="col-sm-4 control-label"><i class="fas fa-check-circle fa-2x" style="color: #20bf6b;"></i></label>
                                         <div class="col-sm-6">
-                                            {!! Form::password('password_confirmation', ['class' => 'form-control', 'id' => 'password-confirm', 'placeholder' => 'Password Confirm', 'required']) !!}
+                                            {!! Form::password('password_confirmation', ['class' => 'form-control', 'id' => 'password-confirm', 'placeholder' => 'Confirm Password', 'required']) !!}
                                         </div>
                                     </div>
 
@@ -97,7 +103,7 @@
                                     </div>
 
                                     <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                                        <label for="phone" class="col-sm-4 control-label"><i class="fas fa-phone fa-2x"></i></label>
+                                        <label for="phone" class="col-sm-4 control-label"><i class="fas fa-mobile-alt fa-2x"></i></label>
                                         <div class="col-sm-4">
                                             {!! Form::text('phone', null, ['class' => 'form-control', 'id' => 'phone', 'placeholder' => 'Phone']) !!}
                                             @if ($errors->has('phone'))
@@ -122,7 +128,7 @@
                                 <div class="vl"></div>
                                 <div class="col-md-6">
                                     <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                                        <label for="address" class="col-sm-2 control-label"><i class="fas fa-2x fa-address-card"></i></label>
+                                        <label for="address" class="col-sm-2 control-label"><i class="far fa-address-card fa-2x"></i></label>
                                         <div class="col-sm-6">
                                             {!! Form::text('address', null, ['class' => 'form-control', 'id' => 'address', 'placeholder' => 'Address']) !!}
                                             @if ($errors->has('address'))

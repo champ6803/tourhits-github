@@ -9,7 +9,7 @@
 
         
         /* style inputs and link buttons */
-        input, .btn {
+        input, .btn-lr{
           width: 100%;
           padding: 12px;
           border: none;
@@ -22,26 +22,14 @@
           text-decoration: none; /* remove underline from anchors */
         }
 
-        input:hover,
-        .btn:hover {
+        input:hover{}
+        .btn-lr:hover {
           opacity: 1;
+          color : white;
         }
 
         /* add appropriate colors to fb, twitter and google buttons */
-        .fb {
-          background-color: #3B5998;
-          color: white;
-        }
-
-        .twitter {
-          background-color: #55ACEE;
-          color: white;
-        }
-
-        .google {
-          background-color: #dd4b39;
-          color: white;
-        }
+        
 
         /* style the submit button */
         input[type=submit] {
@@ -154,8 +142,6 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #f2f2f2;
-/*            border: 1px solid #ccc;*/
-/*            border-radius: 50%;*/
             padding: 5px 10px;
             font-size: 18px;
             color:
@@ -188,7 +174,7 @@
                                 <label for="email" class="col-md-4 control-label">Email</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
                                     @if ($errors->has('email'))
                                     <span class="help-block">
@@ -278,28 +264,29 @@
                                         <span class="vl-innertext" style="color:#333333;">Login with social media</span>
                                     </div>
                                       
-                                    <a href="#" class="fb btn">
+                                    <a href="#" class="fb btn-lr">
                                       <i class="fab fa-facebook-f"></i> Login with Facebook
                                     </a>
-                                    <a href="#" class="twitter btn">
+                                    <a href="#" class="twitter btn-lr">
                                       <i class="fab fa-twitter"></i> Login with Twitter
                                     </a>
-                                    <a href="#" class="google btn">
+                                    <a href="#" class="google btn-lr">
                                       <i class="fab fa-google"></i> Login with Google+
                                     </a>
+                                    
                                   </div>
                                   
                                   <div class="col">
                                     <div class="hide-md-lg">
-                                      <h4>เข้าสู่ระบบ</h4>
+                                      <h4>หรือ</h4>
                                     </div>
-
-                                    <input type="text" name="username" placeholder="Email" required>
+                                      <div class="login-head"> 
+                                      <span style="font-size: 20px; font-weight: 300;"><i class="far fa-envelope"></i> เข้าสู่ระบบด้วยอีเมล์</span>
+                                      </div> 
+                                    <input type="text" name="username" placeholder="Email" required autofocus>
                                     <input type="password" name="password" placeholder="Password" required>
                                     <input type="submit" value="เข้าสู่ระบบ">
-                                    <a class="btn btn-link forgot" style="color:#333333" href="http://localhost:8000">
-                                        Forgot Your Password?
-                                    </a>
+                                    <a class="btn btn-link forgot" href="http://localhost:8000">Forgot Your Password ?</a>
                                     
                                   </div>
 
@@ -309,7 +296,7 @@
                         <div class="bottom-container">
                             <div class="row">
                               <div class="col-signup">
-                                <a href="#" style="color:white; font-size: 25px;" class="btn">สมัครสมาชิก</a>
+                                  <a href="#" style="color:white; font-size: 25px;" class="btn-lr">สมัครสมาชิก ?</a>
                                 
                               </div>                             
                             </div>
