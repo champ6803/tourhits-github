@@ -39,7 +39,7 @@
         <br> <br> <br>
         <div class="row">
         <div class="col-lg-12">
-        <table id="tourCategoryTable" class="table table-striped table-bordered" style="width:100%">
+        <table id="tourCategoryTable" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>ลำดับที่</th>

@@ -114,3 +114,15 @@ Route::get('tour-confirm','ConfirmController@tour_confirm');
 Route::get('contact','ContactController@contact_us');
 
 Route::get('hothits','HothitsController@hot_hits');
+
+Route::get('manage-front-country','ManageFrontController@manage_front_country');
+
+Route::post('searchAllCountry', 'ManageFrontController@searchAllCountry');
+
+Route::post('searchTourCountry', 'ManageFrontController@searchTourCountry');
+
+Route::post('saveTourCountry', 'ManageFrontController@saveTourCountry');
+
+Route::post('deleteTourCountry', 'ManageFrontController@deleteTourCountry');
+
+Route::post('updateTourCountry', 'ManageFrontController@updateTourCountry');
