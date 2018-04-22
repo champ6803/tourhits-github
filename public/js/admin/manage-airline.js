@@ -18,7 +18,8 @@ $(function () {
     });
     $('#close').click(function () {
            $('#airline_name').val('');
-           $('#airline_picture').val('')
+           $('#airline_picture').val('');
+           $('#update_airline_picture').val('');
     });
     $(document).ready(function() {
         createTable()
@@ -45,7 +46,7 @@ function createTable(){
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].airline_name+'</td>';
                     if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
+                      Str=Str+'<td> <img src="images/airline/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
                     }else{
                      Str=Str+'<td></td>';  
                     }
@@ -145,7 +146,7 @@ function findAirlineByName(airlineName){
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].airline_name+'</td>';
                     if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
+                      Str=Str+'<td> <img src="images/airline/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
                     }else{
                      Str=Str+'<td></td>';  
                     }

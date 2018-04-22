@@ -19,6 +19,7 @@ $(function () {
     $('#close').click(function () {
            $('#attraction_name').val('');
            $('#attraction_picture').val('')
+           $('#update_attraction_picture').val('');
     });
     $(document).ready(function() {
         createTable()

@@ -6,8 +6,9 @@ $(function () {
             "format": 'DD/MM/YYYY',
         }
     }, function (start, end, label) {
-        start_date = start.format('YYYY-MM-DD hh:mm:ss');
-        end_date = end.format('YYYY-MM-DD hh:mm:ss');
+        start_date = start.format('YYYY-MM-DD');
+        end_date = end.format('YYYY-MM-DD');
+        getTourPackage();
     });
     $('#date_picker').val("");
 
@@ -23,7 +24,6 @@ $(function () {
         getTourPackage();
     });
     checkboxChecked();
-    $('.price_to').autoNumeric();
 });
 
 var slider = new Slider('#price', {
@@ -33,8 +33,8 @@ var slider = new Slider('#price', {
     value: [0, 80000]
 });
 slider.on("slide", function (sliderValue) {
-    document.getElementById("price_from").textContent = sliderValue[0];
-    document.getElementById("price_to").textContent = sliderValue[1];
+    document.getElementById("price_from").textContent = numberWithCommas(sliderValue[0]);
+    document.getElementById("price_to").textContent = numberWithCommas(sliderValue[1]);
 });
 
 function expandCheckboxRoute() {
@@ -153,7 +153,8 @@ function getTourPackage() {
                 '_days': JSON.stringify(ary_days),
                 '_airline': JSON.stringify(ary_airline),
                 '_tags': JSON.stringify(ary_tags),
-                '_attraction': JSON.stringify(ary_attraction)
+                '_attraction': JSON.stringify(ary_attraction),
+                '_others': JSON.stringify(ary_others)
             },
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -181,35 +182,63 @@ var ary_days = [];
 var ary_airline = [];
 var ary_tags = [];
 var ary_attraction = [];
+var ary_others = [];
 function checkboxChecked() {
+    $('#route_all').on('change', function (evt) {
+        if ($('#route_all').is(':checked')) {
+            ary_route = [];
+            $('.route_checkbox').prop('checked', false);
+            getTourPackage();
+        }
+    });
+
     $('.route_checkbox:checkbox').on('change', function (evt) {
         ary_route = [];
         $('.route_checkbox:checkbox:checked').each(function (i) {
             ary_route[i] = $(this).val();
         });
+        $('#route_all').prop('checked', false); // Unchecks it
+        getTourPackage();
     });
+
+    $('#holiday_all').on('change', function (evt) {
+        if ($('#holiday_all').is(':checked')) {
+            start_date = "";
+            end_date = "";
+            $('.holiday_checkbox').prop('checked', false);
+            getTourPackage();
+        }
+    });
+
+    $('.holiday_checkbox:checkbox').on('change', function (evt) {
+        $('.holiday_checkbox:checkbox:checked').each(function (i) {
+            var se = $(this).val().split("||");
+            start_date = se[0];
+            end_date = se[1];
+        });
+        $('#holiday_all').prop('checked', false); // Unchecks it
+        $('.holiday_checkbox').not(this).prop('checked', false);
+        getTourPackage();
+    });
+
     $('.month_checkbox:checkbox').on('change', function (evt) {
         ary_month = [];
         $('.month_checkbox:checkbox:checked').each(function (i) {
             ary_month[i] = $(this).val();
         });
     });
+
     $('.days_checkbox:checkbox').on('change', function (evt) {
         ary_days = [];
         $('.days_checkbox:checkbox:checked').each(function (i) {
             ary_days[i] = $(this).val();
         });
     });
+
     $('.airline_checkbox:checkbox').on('change', function (evt) {
         ary_airline = [];
         $('.airline_checkbox:checkbox:checked').each(function (i) {
             ary_airline[i] = $(this).val();
-        });
-    });
-    $('.month_checkbox:checkbox').on('change', function (evt) {
-        ary_month = [];
-        $('.month_checkbox:checkbox:checked').each(function (i) {
-            ary_month[i] = $(this).val();
         });
     });
 }
@@ -229,13 +258,24 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             div = div + '<div class="tour-footer">';
             div = div + '<div class="pull-left">';
             div = div + '<span class="flag">';
-            div = div + '<img width="70%" alt="" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">';
+            div = div + '<img class="flag-small" alt="" src="../images/flags/' + val['country_code'] + '.png">';
             div = div + '</span>';
             div = div + '</div>';
             div = div + '</div>';
             div = div + '<div class="tour-header">';
             div = div + '<div class="pull-right">';
             div = div + '<span class="days">' + val['tour_period_day_number'] + ' วัน ' + val['tour_period_night_number'] + ' คืน</span>';
+            div = div + '</div>';
+            div = div + '<span class="clear"></span>';
+            div = div + '</div>';
+            div = div + '<div class="tour-bottom-right">';
+            div = div + '<div class="pull-right">';
+            var tour_code = val['tour_package_id'];
+            while (tour_code.length != 4)
+            {
+                tour_code = '0' + tour_code;
+            }
+            div = div + '<span class="tag">#' + tour_code + '</span>';
             div = div + '</div>';
             div = div + '<span class="clear"></span>';
             div = div + '</div>';
@@ -247,11 +287,14 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             div = div + '<div id="tab' + val['tour_package_id'] + '1" class="tab-pane active">';
             div = div + '<div class="card-detail">' + val['tour_package_detail'] + '</div>';
             div = div + '<hr>';
-            div = div + '<div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา ' + 'period' + '</div>';
+            var all_as = val["tour_package_period_start"].split("-");
+            var all_ae = val["tour_package_period_end"].split("-");
+            div = div + '<div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</div>';
             div = div + '<hr>';
+            div = div + '<div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>';
             $.each(tourPeriod, function (keyPrice, valPrice) {
                 if (valPrice['tour_package_id'] === val['tour_package_id']) {
-                    div = div + '<div class="card-price">ราคา ' + tourPeriod[keyPrice].tour_period_adult_price + ' บาท</div>';
+                    div = div + '<div class="card-price">' + numberWithCommas(tourPeriod[keyPrice].tour_period_adult_price) + '฿</div>';
                     return false;
                 }
             });
@@ -275,9 +318,9 @@ function renderTourPackage(tourPackageList, tourPeriod) {
                     var ae2 = ae[2].split(' ');
                     var as2 = as[2].split(' ');
                     var date = as2[0] + " " + setCTMonthString(as[1]) + " - " + ae2[0] + " " + setCTMonthString(ae[1]) + " " + ae[0];
-                    
+
                     div = div + '<tr><td>' + date + '</td>';
-                    div = div + '<td>' + valPrice['tour_period_adult_price'] + '</td></tr>';
+                    div = div + '<td style="text-align:right">' + numberWithCommas(valPrice['tour_period_adult_price']) + '฿</td></tr>';
                 }
             });
             div = div + '</table>';

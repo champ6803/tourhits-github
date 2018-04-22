@@ -390,6 +390,15 @@ hr {
 
 }
 
+.flag-small{
+    width: 49px;
+    height: 32.9px;
+    border-radius: 5px;
+}
+
+.thumbnail .tour-footer .flag{
+    margin-left: 10px;
+}
 /* css หน้า filter*/
 
 

@@ -130,7 +130,7 @@
 
             <div class=”flag-all”>
                 <div class="row">
-                    <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ญี่ปุ่น?country=ทัวร์ญี่ปุ่น')}}">
+                    <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ญี่ปุ่น?country=1')}}">
                             <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/7/Japan.png" alt="ทัวร์ญี่ปุ่น" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/7/Japan.png">
                             <h5>ทัวร์ญี่ปุ่น</h5>
                         </a>
