@@ -44,6 +44,7 @@
             <tr>
                 <th>ลำดับที่</th>
                 <th>ชื่อสายการบิน</th>
+                <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
                 <th>ลบ</th>
@@ -55,6 +56,7 @@
             <tr>
                 <th>ลำดับที่</th>
                 <th>ชื่อสายการบิน</th>
+                <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
                 <th>ลบ</th>
@@ -81,6 +83,9 @@
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อสายการบิน:</label>
             <input type="text" class="form-control" id="airline_name">
+            <br>
+            <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
+            <input type="file" class="form-control" id="airline_picture">
           </div>
         </form>
       </div>
@@ -108,6 +113,9 @@
             <label for="recipient-name" class="col-form-label">ชื่อสายการบิน:</label>
             <input type="text" class="form-control" id="update_airline_name">
             <input type="hidden" class="form-control" id="hidden_update_id">
+            <br>
+            <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
+            <input type="file" class="form-control" id="update_airline_picture">
           </div>
         </form>
       </div>

@@ -133,13 +133,15 @@ class AdminController extends Controller {
     public function saveAirline(){
          try {
             $airline_name = $_POST['airline_name'];
+            $airline_picture= $_POST['airline_picture'];
             $date = \Carbon\Carbon::now();
             \DB::table('airline')->insert(
             ['airline_name' => $airline_name
              , 'created_by' => 'admin'
              , 'created_at' => $date
              , 'updated_by' => 'admin'        
-             , 'updated_at' => $date]
+             , 'updated_at' => $date
+             , 'airline_picture' => $airline_picture]
             );
             return response('success');
         } catch (\Exception $e) {
@@ -164,11 +166,21 @@ class AdminController extends Controller {
             $id = $_POST['id'];
             $update_airline_name = $_POST['update_airline_name'];
             $date = \Carbon\Carbon::now();  
-            \DB::table('airline')
-            ->where('airline_id',$id)  
-            ->update(['airline_name'=>$update_airline_name
-                     ,'updated_at' => $date 
-                    , 'updated_by' => 'admin'  ]);     
+            $airline_picture= $_POST['airline_picture'];
+             if(null==$airline_picture){
+                    \DB::table('airline')
+                    ->where('airline_id',$id)  
+                    ->update(['airline_name'=>$update_airline_name
+                             ,'updated_at' => $date 
+                            , 'updated_by' => 'admin'  ]);     
+             }else{
+                    \DB::table('airline')
+                    ->where('airline_id',$id)  
+                    ->update(['airline_name'=>$update_airline_name
+                             ,'updated_at' => $date 
+                            , 'updated_by' => 'admin'  , 'airline_picture' => $airline_picture  ]);   
+             }
+
             
             return response('success');
         } catch (\Exception $e) {
