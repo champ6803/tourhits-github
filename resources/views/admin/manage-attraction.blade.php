@@ -82,7 +82,7 @@
       <div class="modal-body">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อสถานที่ท่องเที่ยว:</label>
-            <input type="text" class="form-control" id="attraction_name" name="attraction_name">
+            <input type="text" class="form-control" id="attraction_name" name="attraction_name" required="required">
             <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
             <input class="form-control" type="file" id="file" name="file">
