@@ -82,27 +82,29 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form action="{{ URL::to('saveTourCountry') }}" method="post" enctype="multipart/form-data">
       <div class="modal-body">
-        <form>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อประเทศ:</label>
             <div id="selectCountry"></div>
             </br> 
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
-            <input type="text" class="form-control" id="tour_country_name" maxlength="100">
+            <input type="text" class="form-control" id="tour_country_name" name="tour_country_name" maxlength="100" required="required">
             </br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
-            <input type="text" class="form-control" id="tour_country_detail">
-            <br>
+            <input type="text" class="form-control" id="tour_country_detail" name="tour_country_detail">
+            </br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
-            <input type="file" class="form-control" id="tour_country_picture">
+            <input class="form-control" type="file" id="file" name="file">
+            <input type="hidden" value="{{ csrf_token() }}" name="_token">
           </div>
-        </form>
+
       </div>
-      <div class="modal-footer" style="text-align: right">
-         <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">ยกเลิก</button>
-        <button type="button" class="btn btn-primary" onclick="saveTourCountry()">บันทึก</button>
+      <div class="modal-footer" style="text-align: right; width: 100%">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">ยกเลิก</button>
+        <button type="submit" value="Upload" name="submit" class="btn btn-primary">บันทึก</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -117,28 +119,29 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form action="{{ URL::to('updateTourCountry') }}" method="post" enctype="multipart/form-data">
       <div class="modal-body">
-        <form>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อประเทศ:</label>
             <div id="selectCountryEdit"></div>
             </br> 
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
-            <input type="text" class="form-control" id="update_tour_country_name" maxlength="100">
-            <input type="hidden" class="form-control" id="hidden_update_id">
+            <input type="text" class="form-control" id="update_tour_country_name" name="update_tour_country_name" maxlength="100" >
+            <input type="hidden" class="form-control" id="hidden_update_id" name="hidden_update_id">
             </br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
-            <input type="text" class="form-control" id="update_tour_country_detail">
+            <input type="text" class="form-control" id="update_tour_country_detail" name="update_tour_country_detail">
             <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
-            <input type="file" class="form-control" id="update_tour_country_picture">
+            <input class="form-control" type="file" id="updateFile" name="file">
+            <input type="hidden" value="{{ csrf_token() }}" name="_token">
           </div>
-        </form>
       </div>
-      <div class="modal-footer" style="text-align: right">
+      <div class="modal-footer" style="text-align: right ; width: 100%">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="updateClose">ยกเลิก</button>
-        <button type="button" class="btn btn-primary" onclick="updateTourCountry()">แก้ไข</button>
+        <button type="submit" value="Upload" name="submit" class="btn btn-primary">แก้ไข</button>
       </div>
+     </form>    
     </div>
   </div>
 </div>

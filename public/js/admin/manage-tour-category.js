@@ -15,10 +15,20 @@ $(function () {
            $('#tour_category_name').val('');
            $('#tour_category_picture').val('')
            $('#update_tour_category_picture').val('');
+           $('#file').val('')
+           $('#updateFile').val('')
+    });
+    $('#updateClose').click(function () {
+           $('#tour_category_name').val('');
+           $('#tour_category_picture').val('')
+           $('#file').val('')
+           $('#updateFile').val('')
     });
     $('#close').click(function () {
            $('#tour_category_name').val('');
            $('#tour_category_picture').val('')
+           $('#file').val('')
+           $('#updateFile').val('')
     });
     $(document).ready(function() {
         createTable()
@@ -40,15 +50,10 @@ function createTable(){
                 if (data != null) {
                  var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
-                    var pictureName =data[row].tour_category_img!=null ? (data[row].tour_category_img).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].tour_category_name+'</td>';
-                    if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
-                    }else{
-                     Str=Str+'<td></td>';  
-                    }
+                    Str=Str+'<td> <img src="images/category/'+data[row].tour_category_img+'" style="width:60px;height:60px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCategory('+data[row].tour_category_id+',\''+data[row].tour_category_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -143,15 +148,10 @@ function findTourCategoryByName(tourCategoryName){
                     $('#tourCategoryTable').DataTable().destroy();
                     var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
-                    var pictureName =data[row].tour_category_img!=null ? (data[row].tour_category_img).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].tour_category_name+'</td>';
-                    if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
-                    }else{
-                     Str=Str+'<td></td>';  
-                    }
+                    Str=Str+'<td> <img src="images/category/'+data[row].tour_category_img+'" style="width:60px;height:60px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCategory('+data[row].tour_category_id+',\''+data[row].tour_category_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';

@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Input as Input;
 use App\Models\Country;
 /**
  * Description of AdminController
@@ -52,7 +53,7 @@ class ManageFrontController extends Controller {
         }
     }
     
-    public function saveTourCountry(){
+    /*public function saveTourCountry(){
          try {
              
             $tour_country_name = $_POST['tour_country_name'];
@@ -76,7 +77,7 @@ class ManageFrontController extends Controller {
             $msg = $e->getMessage();
             return response($msg);
         }
-    }
+    }*/
     
     public function deleteTourCountry(){
          try {
@@ -91,12 +92,12 @@ class ManageFrontController extends Controller {
     
     public function updateTourCountry(){
         try {
-            $id = $_POST['id'];
+            $id = $_POST['hidden_update_id'];
             $update_tour_country_name = $_POST['update_tour_country_name'];
             $date = \Carbon\Carbon::now();  
-            $tour_country_img= $_POST['tour_country_img'];
-            $country_id= $_POST['country_id'];
-            $tour_country_detail= $_POST['tour_country_detail'];
+            $tour_country_img= $_FILES['file']['name'];
+            $country_id= $_POST['countryEdit'];
+            $tour_country_detail= $_POST['update_tour_country_detail'];
 
              if(null==$tour_country_img){
                     \DB::table('tour_country')
@@ -105,6 +106,10 @@ class ManageFrontController extends Controller {
                            ,'updated_at' => $date 
                            , 'updated_by' => 'admin', 'tour_country_detail' => $tour_country_detail
                            ,'country_id' => $country_id ]);     
+                        echo "<script>
+                        alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
+                        window.location.href='manage-front-country';
+                        </script>";
              }else{
                     \DB::table('tour_country')
                     ->where('tour_country_id',$id)  
@@ -112,7 +117,15 @@ class ManageFrontController extends Controller {
                             ,'updated_at' => $date 
                             , 'updated_by' => 'admin'  , 'tour_country_img' => $tour_country_img
                             , 'tour_country_detail' => $tour_country_detail
-                            ,'country_id' => $country_id  ]);   
+                            ,'country_id' => $country_id  ]);  
+                   if(Input::hasFile('file')){
+			$file = Input::file('file');
+			$file->move('images/tourCountry', $file->getClientOriginalName());
+                        echo "<script>
+                        alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
+                        window.location.href='manage-front-country';
+                        </script>";
+                }
              }
             return response('success');
         } catch (\Exception $e) {
@@ -120,4 +133,38 @@ class ManageFrontController extends Controller {
             return response($msg);
         }
     }
+    
+    public function saveTourCountry(){
+        try {
+            $tour_country_name = $_POST['tour_country_name'];
+            $country_id = $_POST['country'];
+            $tour_country_detail = $_POST['tour_country_detail'];
+            $tour_country_img = $_FILES['file']['name'];
+            
+            $date = \Carbon\Carbon::now();
+            \DB::table('tour_country')->insert(
+            ['tour_country_name' => $tour_country_name
+             , 'country_id' => $country_id
+             , 'tour_country_detail' => $tour_country_detail
+             , 'tour_country_img' => $tour_country_img
+             , 'created_by' => 'admin'
+             , 'created_at' => $date
+             , 'updated_by' => 'admin'        
+             , 'updated_at' => $date]
+            );
+            
+            if(Input::hasFile('file')){
+			$file = Input::file('file');
+			$file->move('images/tourCountry', $file->getClientOriginalName());
+	    }
+             echo "<script>
+             alert('บันทึกข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-front-country';
+             </script>";
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
+ 
 }

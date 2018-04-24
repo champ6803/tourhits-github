@@ -1,4 +1,23 @@
 $(function () {
+    
+    $('#upload').on('click', function() {
+    var file_data = $('#sortpicture').prop('files')[0];   
+    var form_data = new FormData();                  
+    form_data.append('file', file_data);
+    alert(form_data);                             
+    $.ajax({
+        url: 'saveImageTourCountry', // point to server-side PHP script 
+        dataType: 'text',  // what to expect back from the PHP script, if anything
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: form_data,                         
+        type: 'post',
+        success: function(php_script_response){
+            alert(php_script_response); // display response from the PHP script, if any
+        }
+     });
+    });
     $('#searchButton').click(function () {
         createTable()
      var input_tour_country_name= $('#input_tour_country_name').val();
@@ -17,12 +36,21 @@ $(function () {
            $('#tour_country_picture').val('');
            $('#update_tour_country_picture').val('');
     });
+    $('#updateClose').click(function () {
+           $('#tour_country_name').val('');
+           $('#tour_country_picture').val('');
+           $('#update_tour_country_picture').val('');
+           document.getElementById("country").selectedIndex = "0";
+           document.getElementById("countryEdit").selectedIndex = "0";
+           $('#updateFile').val('');
+    });
     $('#close').click(function () {
            $('#tour_country_name').val('');
            $('#tour_country_picture').val('');
            $('#update_tour_country_picture').val('');
            document.getElementById("country").selectedIndex = "0";
            document.getElementById("countryEdit").selectedIndex = "0";
+           $('#file').val('');
     });
     $(document).ready(function() {
         createCountryDropDown();
@@ -104,17 +132,12 @@ function createTable(){
                 if (data != null) {
                  var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
-                    var pictureName =data[row].tour_country_img!=null ? (data[row].tour_country_img).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].country_name+'</td>';
                     Str=Str+'<td>'+data[row].tour_country_name+'</td>';
                     Str=Str+'<td>'+data[row].tour_country_detail+'</td>';
-                    if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/tourCountry/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
-                    }else{
-                     Str=Str+'<td></td>';  
-                    }
+                    Str=Str+'<td> <img src="images/tourCountry/'+data[row].tour_country_img+'" style="width:60px;height:60px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCountry('+data[row].tour_country_id+',\''+data[row].tour_country_name+'\',\''+data[row].tour_country_detail+'\',\''+data[row].country_id+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -211,17 +234,12 @@ function findTourCountryByName(input_tour_country_name){
                 if (data != null) {
                  var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
-                    var pictureName =data[row].tour_country_img!=null ? (data[row].tour_country_img).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].country_name+'</td>';
                     Str=Str+'<td>'+data[row].tour_country_name+'</td>';
                     Str=Str+'<td>'+data[row].tour_country_detail+'</td>';
-                    if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/tourCountry/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
-                    }else{
-                     Str=Str+'<td></td>';  
-                    }
+                    Str=Str+'<td> <img src="images/tourCountry/'+data[row].tour_country_img+'" style="width:60px;height:60px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCountry('+data[row].tour_country_id+',\''+data[row].tour_country_name+'\',\''+data[row].tour_country_detail+'\',\''+data[row].country_id+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';

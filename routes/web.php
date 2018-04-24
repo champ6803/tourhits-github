@@ -126,3 +126,4 @@ Route::post('saveTourCountry', 'ManageFrontController@saveTourCountry');
 Route::post('deleteTourCountry', 'ManageFrontController@deleteTourCountry');
 
 Route::post('updateTourCountry', 'ManageFrontController@updateTourCountry');
+

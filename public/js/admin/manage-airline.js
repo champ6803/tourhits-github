@@ -15,11 +15,19 @@ $(function () {
            $('#airline_name').val('');
            $('#airline_picture').val('')
            $('#update_airline_picture').val('');
+           $('#file').val('');
+    });
+    $('#updateClose').click(function () {
+           $('#airline_name').val('');
+           $('#airline_picture').val('');
+           $('#update_airline_picture').val('');
+           $('#fileUpdate').val('');
     });
     $('#close').click(function () {
            $('#airline_name').val('');
            $('#airline_picture').val('');
            $('#update_airline_picture').val('');
+           $('#file').val('');
     });
     $(document).ready(function() {
         createTable()
@@ -41,15 +49,10 @@ function createTable(){
                 if (data != null) {
                  var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
-                    var pictureName =data[row].airline_picture!=null ? (data[row].airline_picture).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].airline_name+'</td>';
-                    if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/airline/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
-                    }else{
-                     Str=Str+'<td></td>';  
-                    }
+                    Str=Str+'<td> <img src="images/airline/'+data[row].airline_picture+'" style="width:60px;height:60px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAirline('+data[row].airline_id+',\''+data[row].airline_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -141,15 +144,10 @@ function findAirlineByName(airlineName){
                     $('#airlineTable').DataTable().destroy();
                     var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
-                    var pictureName =data[row].airline_picture!=null ? (data[row].airline_picture).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].airline_name+'</td>';
-                    if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/airline/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
-                    }else{
-                     Str=Str+'<td></td>';  
-                    }
+                    Str=Str+'<td> <img src="images/airline/'+data[row].airline_picture+'" style="width:60px;height:60px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';

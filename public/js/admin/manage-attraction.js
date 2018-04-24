@@ -15,11 +15,22 @@ $(function () {
            $('#attraction_name').val('');
            $('#attraction_picture').val('')
            $('#update_attraction_picture').val('');
+           $('#file').val('');
+           $('#updateFile').val('');
     });
     $('#close').click(function () {
            $('#attraction_name').val('');
            $('#attraction_picture').val('')
            $('#update_attraction_picture').val('');
+           $('#file').val('');
+           $('#updateFile').val('');
+    });
+    $('#updateClose').click(function () {
+           $('#attraction_name').val('');
+           $('#attraction_picture').val('')
+           $('#update_attraction_picture').val('');
+           $('#file').val('');
+           $('#updateFile').val('');
     });
     $(document).ready(function() {
         createTable()
@@ -41,15 +52,10 @@ function createTable(){
                 if (data != null) {
                  var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
-                    var pictureName =data[row].attraction_picture!=null ? (data[row].attraction_picture).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].attraction_name+'</td>';
-                    if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
-                    }else{
-                     Str=Str+'<td></td>';  
-                    }
+                    Str=Str+'<td> <img src="images/attraction/'+data[row].attraction_picture+'" style="width:60px;height:60px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction('+data[row].attraction_id+',\''+data[row].attraction_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -143,15 +149,10 @@ function findAttractionByName(attractionName){
                     $('#attractionTable').DataTable().destroy();
                     var rowNo=1;
                  for(var row = 0 ; row<data.length ;row++){
-                    var pictureName =data[row].attraction_picture!=null ? (data[row].attraction_picture).split("\\"): null;
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].attraction_name+'</td>';
-                    if(pictureName!=null){
-                      Str=Str+'<td> <img src="images/attraction/'+pictureName[2]+'" style="width:60px;height:60px;"></td>'; 
-                    }else{
-                     Str=Str+'<td></td>';  
-                    }
+                    Str=Str+'<td> <img src="images/attraction/'+data[row].attraction_picture+'" style="width:60px;height:60px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction('+data[row].attraction_id+',\''+data[row].attraction_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';

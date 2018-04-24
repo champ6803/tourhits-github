@@ -78,21 +78,22 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form action="{{ URL::to('saveAirline') }}" method="post" enctype="multipart/form-data">
       <div class="modal-body">
-        <form>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อสายการบิน:</label>
-            <input type="text" class="form-control" id="airline_name">
+            <input type="text" class="form-control" id="airline_name" name="airline_name" required="required">
             <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
-            <input type="file" class="form-control" id="airline_picture">
+             <input class="form-control" type="file" id="file" name="file">
+            <input type="hidden" value="{{ csrf_token() }}" name="_token">
           </div>
-        </form>
       </div>
-      <div class="modal-footer" style="text-align: right">
+      <div class="modal-footer" style="text-align: right;width: 100%">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">ยกเลิก</button>
-        <button type="button" class="btn btn-primary" onclick="saveAirline()">บันทึก</button>
+         <button type="submit" value="Upload" name="submit" class="btn btn-primary">บันทึก</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -107,22 +108,23 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form action="{{ URL::to('updateAirline') }}" method="post" enctype="multipart/form-data">
       <div class="modal-body">
-        <form>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อสายการบิน:</label>
-            <input type="text" class="form-control" id="update_airline_name">
-            <input type="hidden" class="form-control" id="hidden_update_id">
+            <input type="text" class="form-control" id="update_airline_name" name="update_airline_name">
+            <input type="hidden" class="form-control" id="hidden_update_id" name="hidden_update_id">
             <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
-            <input type="file" class="form-control" id="update_airline_picture">
+            <input class="form-control" type="file" id="fileUpdate" name="file">
+            <input type="hidden" value="{{ csrf_token() }}" name="_token">
           </div>
-        </form>
       </div>
-      <div class="modal-footer" style="text-align: right">
+      <div class="modal-footer" style="text-align: right;width: 100%">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="updateClose">ยกเลิก</button>
-        <button type="button" class="btn btn-primary" onclick="updateAirline()">แก้ไข</button>
+         <button type="submit" value="Upload" name="submit" class="btn btn-primary">แก้ไข</button>
       </div>
+     </form>         
     </div>
   </div>
 </div>
