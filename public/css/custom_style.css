@@ -198,7 +198,7 @@
     /*    font-family: sans-serif;*/
 }
 
-.card-airline img{ max-width: 140px; margin-top: 7px; height: 35px; position: absolute; left: 0; margin-left: 9px;}
+.card-airline img{ max-width: 140px; margin-top: 7px; max-height: 35px; position: absolute; left: 0; margin-left: 9px;}
 
 .card-price{
 

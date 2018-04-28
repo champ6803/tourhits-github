@@ -422,7 +422,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="pages/app/app-chat.html">Banner</a></li>
-                                <li><a href="pages/app/project-table.html">ประเทศ</a></li>
+                                <li><a href="{{ url('manage-front-country')}}">ประเทศ</a></li>
                                 <li><a href="pages/app/app-contact.html">ทัวร์แนะนำ</a></li>
                                 <li><a href="pages/app/app-ticket.html">สปอนเซอร์</a></li>
                                 <li><a href="pages/app/calendar.html">รีวิว</a></li>
@@ -437,12 +437,14 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/mailbox/mailbox.html">สร้างรายการทัวร์</a></li>
-                                <li><a href="pages/mailbox/compose.html">จัดการหมวดหมู่</a></li>
-                                <li><a href="pages/mailbox/read-mail.html">จัดการ Tags</a></li>
-                                <li><a href="pages/mailbox/read-mail.html">จัดการสถานที่ท่องเที่ยว</a></li>
-                                <li><a href="pages/mailbox/read-mail.html">จัดการสายการบิน</a></li>
-                                <li><a href="pages/mailbox/read-mail.html">จัดการเส้นทาง</a></li>
+                                <li><a href="{{ url('manage-route')}}">สร้างรายการทัวร์</a></li>
+                                <li><a href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
+                                <li><a href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
+                                <li><a href="{{ url('manage-route')}}">จัดการ Tags อื่นๆ</a></li>
+                                <li><a href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
+                                <li><a href="{{ url('manage-airline')}}">จัดการสายการบิน</a></li>
+                                <li><a href="{{ url('manage-route')}}">จัดการเส้นทาง</a></li>
+                                <li><a href="{{ url('manage-route')}}">จัดการวันหยุด</a></li>
                             </ul>
                         </li>
                         <li class="treeview">

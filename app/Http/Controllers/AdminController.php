@@ -14,6 +14,7 @@ use App\Models\Tag;
 use App\Models\Holiday;
 use App\Models\Other;
 use App\Models\Tour_Category;
+use Illuminate\Support\Facades\Input as Input;
 /**
  * Description of AdminController
  *
@@ -133,7 +134,7 @@ class AdminController extends Controller {
     public function saveAirline(){
          try {
             $airline_name = $_POST['airline_name'];
-            $airline_picture= $_POST['airline_picture'];
+            $airline_picture= $_FILES['file']['name'];
             $date = \Carbon\Carbon::now();
             \DB::table('airline')->insert(
             ['airline_name' => $airline_name
@@ -143,7 +144,15 @@ class AdminController extends Controller {
              , 'updated_at' => $date
              , 'airline_picture' => $airline_picture]
             );
-            return response('success');
+            
+            if(Input::hasFile('file')){
+			$file = Input::file('file');
+			$file->move('images/airline', $file->getClientOriginalName());
+	    }
+             echo "<script>
+             alert('บันทึกข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-airline';
+             </script>";
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
@@ -163,22 +172,34 @@ class AdminController extends Controller {
     
      public function updateAirline(){
         try {
-            $id = $_POST['id'];
+            $id = $_POST['hidden_update_id'];
             $update_airline_name = $_POST['update_airline_name'];
             $date = \Carbon\Carbon::now();  
-            $airline_picture= $_POST['airline_picture'];
+            $airline_picture=  $_FILES['file']['name'];
              if(null==$airline_picture){
                     \DB::table('airline')
                     ->where('airline_id',$id)  
                     ->update(['airline_name'=>$update_airline_name
                              ,'updated_at' => $date 
                             , 'updated_by' => 'admin'  ]);     
+                        echo "<script>
+                        alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
+                        window.location.href='manage-front-country';
+                        </script>";      
              }else{
                     \DB::table('airline')
                     ->where('airline_id',$id)  
                     ->update(['airline_name'=>$update_airline_name
                              ,'updated_at' => $date 
                             , 'updated_by' => 'admin'  , 'airline_picture' => $airline_picture  ]);   
+                if(Input::hasFile('file')){
+			$file = Input::file('file');
+			$file->move('images/tourCountry', $file->getClientOriginalName());
+                        echo "<script>
+                        alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
+                        window.location.href='manage-airline';
+                        </script>";
+                } 
              }
 
             
@@ -207,7 +228,7 @@ class AdminController extends Controller {
     public function saveAttraction(){
          try {
             $attraction_name = $_POST['attraction_name'];
-            $attraction_picture= $_POST['attraction_picture'];
+            $attraction_picture= $_FILES['file']['name'];
             $date = \Carbon\Carbon::now();
             \DB::table('attraction')->insert(
             ['attraction_name' => $attraction_name
@@ -217,7 +238,14 @@ class AdminController extends Controller {
              , 'updated_at' => $date
              ,'attraction_picture' => $attraction_picture]
             );
-            return response('success');
+            if(Input::hasFile('file')){
+			$file = Input::file('file');
+			$file->move('images/attraction', $file->getClientOriginalName());
+	    }
+             echo "<script>
+             alert('บันทึกข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-attraction';
+             </script>";
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
@@ -237,9 +265,9 @@ class AdminController extends Controller {
     
      public function updateAttraction(){
         try {
-            $id = $_POST['id'];
+            $id = $_POST['hidden_update_id'];
             $update_attraction_name = $_POST['update_attraction_name'];
-            $attraction_picture= $_POST['attraction_picture'];
+            $attraction_picture=  $_FILES['file']['name'];
             $date = \Carbon\Carbon::now();
             if(null==$attraction_picture){
              \DB::table('attraction')
@@ -247,6 +275,11 @@ class AdminController extends Controller {
             ->update(['attraction_name'=>$update_attraction_name
                     , 'updated_at' => $date
                     , 'updated_by' => 'admin'   ]);     
+             
+             echo "<script>
+             alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-attraction';
+             </script>";
             }else{
             \DB::table('attraction')
             ->where('attraction_id',$id)  
@@ -254,9 +287,15 @@ class AdminController extends Controller {
                     ,'attraction_picture' => $attraction_picture
                     , 'updated_at' => $date
                     , 'updated_by' => 'admin'   ]);     
+            if(Input::hasFile('file')){
+			$file = Input::file('file');
+			$file->move('images/attraction', $file->getClientOriginalName());
+	    }
+             echo "<script>
+             alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-attraction';
+             </script>";
             }
-            
-            return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
@@ -482,7 +521,7 @@ class AdminController extends Controller {
     public function saveTourCategory(){
          try {
             $tour_category_name = $_POST['tour_category_name'];
-            $tour_category_picture= $_POST['tour_category_picture'];
+            $tour_category_picture= $_FILES['file']['name'];
             $date = \Carbon\Carbon::now();
             \DB::table('tour_category')->insert(
             ['tour_category_name' => $tour_category_name
@@ -493,7 +532,14 @@ class AdminController extends Controller {
              ,'tour_category_img' => $tour_category_picture
              ,'tour_category_block'=>1]
             );
-            return response('success');
+            if(Input::hasFile('file')){
+			$file = Input::file('file');
+			$file->move('images/category', $file->getClientOriginalName());
+	    }
+             echo "<script>
+             alert('บันทึกข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-category';
+             </script>";
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
@@ -513,23 +559,35 @@ class AdminController extends Controller {
     
      public function updateTourCategory(){
         try {
-            $id = $_POST['id'];
+            $id = $_POST['hidden_update_id'];
             $update_tour_category_name = $_POST['update_tour_category_name'];
-            $tour_category_picture= $_POST['tour_category_picture'];
+            $tour_category_picture= $_FILES['file']['name'];
             $date = \Carbon\Carbon::now();
             if(null==$tour_category_picture){
             \DB::table('tour_category')
             ->where('tour_category_id',$id)  
             ->update(['tour_category_name'=>$update_tour_category_name
                     , 'updated_at' => $date
-                    , 'updated_by' => 'admin'  ]);     
+                    , 'updated_by' => 'admin'  ]);
+             echo "<script>
+             alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-category';
+             </script>";
             }else{
              \DB::table('tour_category')
             ->where('tour_category_id',$id)  
             ->update(['tour_category_name'=>$update_tour_category_name
                     ,'tour_category_img' => $tour_category_picture
                     , 'updated_at' => $date
-                    , 'updated_by' => 'admin'  ]);     
+                    , 'updated_by' => 'admin'  ]);   
+            if(Input::hasFile('file')){
+			$file = Input::file('file');
+			$file->move('images/category', $file->getClientOriginalName());
+	    }
+             echo "<script>
+             alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-category';
+             </script>";
             }
             
             return response('success');

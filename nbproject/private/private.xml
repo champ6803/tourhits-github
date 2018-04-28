@@ -2,12 +2,27 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/js/filter/search-tour.js</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/js/lib/pagination.js</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
+=======
+<<<<<<< HEAD
+        <group/>
+=======
+        <group>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/manage-front/manage-front-country.js</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/ManageFrontController.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/manage-front/manage-front-country.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/admin/manage-attraction.js</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/AdminController.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/admin/manage-airline.js</file>
+>>>>>>> b09d047177b0bfc9ac903c2d8b2923236a05f3b3
         </group>
+>>>>>>> c351288569404c6075b4b3a93bee2cb43814335b
     </open-files>
 </project-private>
