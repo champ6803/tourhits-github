@@ -61,7 +61,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+<!--                                    <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
                                         <label for="username" class="col-md-2 control-label"><i class="far fa-user-circle fa-2x"></i></label><span class="hide-md"> ยูสเซอร์ไอดี</span>
                                         <div class="col-md-10">
                                             {!! Form::text('username', null, ['class' => 'form-control','id' => 'username', 'placeholder' => 'Username', 'required']) !!}
@@ -71,7 +71,7 @@
                                             </span>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div>-->
 
                                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                         <label for="password" class="col-md-2 control-label"><i class="fas fa-key fa-2x"></i></label><span class="hide-md"> พาสเวิร์ด</span>
