@@ -162,6 +162,8 @@ function getTourPackage() {
             success: function (data) {
                 if (data != null) {
                     renderTourPackage(data.tourPackageList, data.tourPeriod);
+                    $("#search_tour_pager").empty();
+                    $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
                 } else {
                     alert('select fail');
                 }
@@ -301,7 +303,7 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             div = div + '<hr>';
             div = div + '<div class="button-card">';
             div = div + '<a href="' + 'pdf' + '" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>';
-            div = div + '<a href="tour-detail?package=' + val['tour_package_detail_id'] + '" class="btn btn-pdf">ดูรายละเอียด</a>';
+            div = div + '<a href="tour-detail?package=' + val['tour_package_detail_id'] + '" class="btn btn-detail">ดูรายละเอียด</a>';
             div = div + '</div>';
             div = div + '</div>';
             div = div + '<div id="tab' + val['tour_package_id'] + '2" class="tab-pane">';
@@ -339,5 +341,12 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             divs = divs + div;
         });
         $('#card_area').html(divs);
+        $('#search_tour_pager').show();
+    }
+    else{
+        $("#card_area").empty();
+        var div = "<div class='search-empty'>ขออภัยไม่พบทัวร์ที่ค้นหา</div>";
+        $('#card_area').html(div);
+        $('#search_tour_pager').hide();
     }
 }                       

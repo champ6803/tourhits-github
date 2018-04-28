@@ -115,6 +115,8 @@ Route::get('contact','ContactController@contact_us');
 
 Route::get('hothits','HothitsController@hot_hits');
 
+Route::get('logout','LoginController@logout');
+
 Route::get('manage-front-country','ManageFrontController@manage_front_country');
 
 Route::post('searchAllCountry', 'ManageFrontController@searchAllCountry');
@@ -127,3 +129,4 @@ Route::post('deleteTourCountry', 'ManageFrontController@deleteTourCountry');
 
 Route::post('updateTourCountry', 'ManageFrontController@updateTourCountry');
 
+Route::get('admin','AdminLoginController@login_admin');

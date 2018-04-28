@@ -48,7 +48,7 @@ class LoginController {
             $email = $data['email'];
             $password = $data['password'];
             $checkLogin = User::where(['email' => $email, 'password' => $password])->first();
-            if ($checkLogin != null) {
+            if ($checkLogin != null && $checkLogin->count() > 0) {
                 session_start();
                 if ($checkLogin->role == 'C') {
                     $customer = Customer::where(['user_id' => $checkLogin->user_id])->first();
@@ -69,12 +69,17 @@ class LoginController {
                 }
             } else {
                 return redirect('login')->with('error', 'ไม่สามารถ Login ได้');
-                dd('fail');
-                return response()->json(array('msg' => 'fail'));
             }
         } catch (\Exception $e) {
-            return $e->getMessage();
+            return dd($e->getMessage());
         }
+    }
+    
+    function logout() {
+        session_start();
+        session_destroy();
+        $result = (new HomeController)->index();
+        return redirect('/')->with('logout', 'bye bye');
     }
 
 }

@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -54,7 +57,24 @@
             <!-- PRELOADER -->
             <div class="preloader"></div>
             <!-- END / PRELOADER -->
-
+            @if(!isset($_SESSION['m_user']))
+            <input type="hidden" name="_token" id="m_user" value="">
+            @else
+            <input type="hidden" name="_token" id="m_user"
+                   value="<?php echo $_SESSION['m_user'] ?>">
+            @endif
+            @if(!isset($_SESSION['role']))
+            <input type="hidden" name="_token" id="role" value="">
+            @else
+            <input type="hidden" name="_token" id="role"
+                   value="<?php echo $_SESSION['role'] ?>">
+            @endif
+            @if(!isset($_SESSION['customer_id']))
+            <input type="hidden" name="_token" id="customer_id" value="">
+            @else
+            <input type="hidden" name="_token" id="customer_id"
+                   value="<?php echo $_SESSION['customer_id'] ?>">
+            @endif
 
             <!-- HEADER PAGE -->
             <header id="header-page">
@@ -71,20 +91,23 @@
                         <nav class="navigation awe-navigation" data-responsive="1200">
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
-                                    <a href="index.html">แพ็คเกจทัวร์</a>
+                                    <a href="{{url('/')}}">แพ็คเกจทัวร์</a>
                                     <hr class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="destinations-list.html">ทัวร์มาแรง</a>
+                                    <a href="{{ url('hothits')}}">ทัวร์มาแรง</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="trip.html">สถานที่ยอดฮิต</a>
+                                    <a href="{{ url('hothits') }}">สถานที่ยอดฮิต</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="hotel.html">เกี่ยวกับเรา</a>
+                                    <a href="{{ url('about') }}">เกี่ยวกับเรา</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="flight.html">ติดต่อเรา</a>
+                                    <a href="{{ url('contact') }}">ติดต่อเรา</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="{{ url('blog') }}">บทความ</a>
                                 </li>
                                 <!--                                <li class="menu-item-has-children">
                                                                     <a href="{{ url('login')}}">เข้าสู่ระบบ</a>
@@ -98,14 +121,21 @@
                         <!-- SEARCH BOX -->
                         <div class="search-box">
                             <span class="searchtoggle"><i class="fas fa-user"></i></span>
+
                             <form class="form-search">
                                 <div class="form-item">
+                                    @if(!isset($_SESSION['m_user']))
                                     <div>
                                         <a href="{{ url('login')}}">เข้าสู่ระบบ</a>
                                     </div>
                                     <div>
                                         <a href="{{ url('register')}}">สมัครสมาชิก</a>
                                     </div>
+                                    @else
+                                    <div>
+                                        <a href="{{url('logout')}}">ออกจากระบบ</a>
+                                    </div>
+                                    @endif
                                 </div>
                             </form>
                         </div>
@@ -144,10 +174,10 @@
                             <h5 style="color:#FFFFFF;">บริษัท ทัวร์เอ็กซ์เพรสเซ็นเตอร์ดอทคอม จำกัด</h5><br>
 
                             <p style="font-size:15px">
-                            เลขที่ 300/76 โครงการพรีเมี่ยมเพลส 6 ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กทม. 10240<br>
-                            300/76 PREMIUM PLACE 6 NAWAMIN RD. NAWAMIN BUENGKUM BANGKOK THAILAND 10240<br><br>
-                            Tel 0-2379-1249 Fax 0-2379-1966-7<br>
-                            <a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;">tourhits@gmail.com</a></p>
+                                เลขที่ 300/76 โครงการพรีเมี่ยมเพลส 6 ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กทม. 10240<br>
+                                300/76 PREMIUM PLACE 6 NAWAMIN RD. NAWAMIN BUENGKUM BANGKOK THAILAND 10240<br><br>
+                                Tel 0-2379-1249 Fax 0-2379-1966-7<br>
+                                <a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;">tourhits@gmail.com</a></p>
 
 
                             <!--                            <div class="widget widget_contact_info">
