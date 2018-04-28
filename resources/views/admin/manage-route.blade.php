@@ -7,10 +7,12 @@
     <section class="content-header">
         <h1>
             จัดการทัวร์
-            <small>จัดการเส้นทาง</small>
         </h1>
     </section>
     <section class="content">
+        <form>
+            <fieldset>
+        <legend>จัดการเส้นทาง:</legend>
         <div class="row">
             <div class="col-lg-4" style="text-align: left">
                 <div class="input-group">
@@ -24,10 +26,10 @@
              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#routeModal"> 
                     <span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มเส้นทาง</button>&nbsp;&nbsp;
               <button type="button" id="clearButton" class="btn btn-danger">
-             <span class="glyphicon glyphicon-erase"></span>&nbsp;ล้างเงื่อนไข</button>
-                
+             <span class="glyphicon glyphicon-erase"></span>&nbsp;ล้างเงื่อนไข</button> 
             </div>
-        </div> <br> <br>
+        </div>  </fieldset>
+</form><br> <br>
         <div class="row">
         <div class="col-lg-12">
         <table id="routeTable" class="display responsive nowrap" style="width:100%">

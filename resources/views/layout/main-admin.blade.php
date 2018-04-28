@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+        fieldset 
+            {
+		border: 1px solid #ddd !important;
+		margin: 0;
+		xmin-width: 0;
+		padding: 10px;       
+		position: relative;
+		border-radius:4px;
+		background-color:#f5f5f5;
+		padding-left:10px!important;
+            }	
+        </style>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -438,14 +451,14 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="{{ url('manage-route')}}">สร้างรายการทัวร์</a></li>
+                                <li><a href="{{ url('manage-route')}}">จัดการรายการทัวร์</a></li>
                                 <li><a href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
                                 <li><a href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
-                                <li><a href="{{ url('manage-route')}}">จัดการ Tags อื่นๆ</a></li>
+                                <li><a href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
                                 <li><a href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
                                 <li><a href="{{ url('manage-airline')}}">จัดการสายการบิน</a></li>
                                 <li><a href="{{ url('manage-route')}}">จัดการเส้นทาง</a></li>
-                                <li><a href="{{ url('manage-route')}}">จัดการวันหยุด</a></li>
+                                <li><a href="{{ url('manage-holiday')}}">จัดการวันหยุด</a></li>
                             </ul>
                         </li>
                         <li class="treeview">

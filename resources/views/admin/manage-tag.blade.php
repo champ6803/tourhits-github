@@ -7,36 +7,29 @@
     <section class="content-header">
         <h1>
             จัดการทัวร์
-            <small>จัดการ Tags</small>
         </h1>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
     </section>
     <section class="content">
+        <form>
+        <fieldset>
+        <legend>จัดการ Tags :</legend>
         <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-2" style="text-align: right">
-                 <label>ชื่อ Tags : </label>
-             </div>
-            <div class="col-lg-4">
-                 <input type="text" class="form-control" id="input_tag_name">
+            <div class="col-lg-4" style="text-align: left">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="ค้นหาTags"id="input_tag_name">
+                    <span class="input-group-btn">
+                    <button class="btn btn-secondary" type="button" id="searchButton"> <span class="glyphicon glyphicon-search"></span>ค้นหา</button></button>
+                  </span>
+                </div>
             </div>
-        </div>
-        <br>
-         <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-6"> 
-                <button type="button" id="searchButton" class="btn btn-success">
-                    <span class="glyphicon glyphicon-search"></span>&nbsp;ค้นหา</button>
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#tagModal"> 
-                    <span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่ม Tags</button>
-                <button type="button" id="clearButton" class="btn btn-danger">
-                    <span class="glyphicon glyphicon-erase"></span>&nbsp;ล้างเงื่อนไข</button>
+            <div class="col-lg-4" style="text-align: left">
+             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#tagModal"> 
+                    <span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มTags</button>&nbsp;&nbsp;
+              <button type="button" id="clearButton" class="btn btn-danger">
+             <span class="glyphicon glyphicon-erase"></span>&nbsp;ล้างเงื่อนไข</button> 
             </div>
-        </div>
-        <br> <br> <br>
+        </div>  </fieldset>
+        </form>  <br> <br>
         <div class="row">
         <div class="col-lg-12">
         <table id="tagTable" class="display responsive nowrap" style="width:100%">
