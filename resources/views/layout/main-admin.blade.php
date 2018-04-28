@@ -78,22 +78,21 @@
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
 
-                            <li class="search-box">
+                           <!-- <li class="search-box">
                                 <a class="nav-link hidden-sm-down" href="javascript:void(0)"><i class="mdi mdi-magnify"></i></a>
                                 <form class="app-search" style="display: none;">
                                     <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
                                 </form>
                             </li>			
-
+                            -->
                             <!-- Messages -->
                             <li class="dropdown messages-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="mdi mdi-email"></i>
-                                </a>
+                                </a>-->
                                 <ul class="dropdown-menu scale-up">
                                     <li class="header">You have 5 messages</li>
                                     <li>
-                                        <!-- inner menu: contains the actual data -->
                                         <ul class="menu inner-content-div">
                                             <li><!-- start message -->
                                                 <a href="#">
@@ -173,9 +172,10 @@
                             </li>
                             <!-- Notifications -->
                             <li class="dropdown notifications-menu">
+                                <!--
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="mdi mdi-bell"></i>
-                                </a>
+                                </a>-->
                                 <ul class="dropdown-menu scale-up">
                                     <li class="header">You have 7 notifications</li>
                                     <li>
@@ -223,9 +223,10 @@
                             </li>
                             <!-- Tasks -->
                             <li class="dropdown tasks-menu">
+                                <!-- 
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="mdi mdi-message"></i>
-                                </a>
+                                </a>-->
                                 <ul class="dropdown-menu scale-up">
                                     <li class="header">You have 6 tasks</li>
                                     <li>
@@ -371,7 +372,7 @@
                             </li>
                             <!-- Control Sidebar Toggle Button -->
                             <li>
-                                <a href="#" data-toggle="control-sidebar"><i class="fa fa-cog fa-spin"></i></a>
+                              <!--   <a href="#" data-toggle="control-sidebar"><i class="fa fa-cog fa-spin"></i></a>-->
                             </li>
                         </ul>
                     </div>
@@ -531,8 +532,8 @@
             <!-- Content Wrapper. Contains page content -->
             @yield('main-content')
             <!-- /.content-wrapper -->
-
             <footer class="main-footer">
+                <!--
                 <div class="pull-right d-none d-sm-inline-block">
                     <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
                         <li class="nav-item">
@@ -544,8 +545,8 @@
                     </ul>
                 </div>
                 &copy; 2018 <a href="https://www.multipurposethemes.com/">Tourhits</a>. All Rights Reserved.
-            </footer>
-
+             -->
+</footer>
             <!-- Control Sidebar -->
             <aside class="control-sidebar control-sidebar-dark">
                 <!-- Create the tabs -->
