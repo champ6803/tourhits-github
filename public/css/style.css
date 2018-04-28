@@ -579,7 +579,7 @@ span.dropcap {
 }
 
 .accordion {
-    font-family: "Open Sans", sans-serif, supermarket;
+    font-family: supermarket, sans-serif;
     font-size: 14px;
 }
 
@@ -2763,7 +2763,7 @@ span.dropcap {
     padding-top: 60px;
     font-size: 13px;
     color: #EDEDED;
-    font-family: sans-serif, supermarket;
+    font-family: supermarket;
 }
 #footer-page .widget {
     margin-bottom: 40px;

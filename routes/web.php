@@ -114,3 +114,5 @@ Route::get('tour-confirm','ConfirmController@tour_confirm');
 Route::get('contact','ContactController@contact_us');
 
 Route::get('hothits','HothitsController@hot_hits');
+
+Route::get('logout','LoginController@logout');
