@@ -151,7 +151,7 @@
                             <div class="panel panel-login-admin">
                                 <div class="panel-heading">
                                     <div class="head-logo-login">
-                                        <a href=""><img src="../images/logo.png" alt=""></a>
+                                        <a href="/"><img src="../images/logo.png" alt=""></a>
         <!--                                    <span style="text-align:center; font-size: 25px;">Administration</span>-->
                                     </div>
                                 </div>
