@@ -7,7 +7,6 @@
     <section class="content-header">
         <h1>
             จัดการทัวร์
-            <small>จัดการสถานที่ท่องเที่ยว</small>
         </h1>
     </section>
     <section class="content">

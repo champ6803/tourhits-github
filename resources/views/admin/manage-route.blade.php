@@ -29,7 +29,8 @@
              <span class="glyphicon glyphicon-erase"></span>&nbsp;ล้างเงื่อนไข</button> 
             </div>
         </div>  </fieldset>
-</form><br> <br>
+        </form>
+        <br> <br>
         <div class="row">
         <div class="col-lg-12">
         <table id="routeTable" class="display responsive nowrap" style="width:100%">
