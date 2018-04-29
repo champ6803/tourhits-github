@@ -9,8 +9,12 @@
 }
 
 .register-section{
-    background-image: url(../images/bg/register-bg.jpg);
-    background-size:cover;
+/*    background-image: url(../images/bg/register-bg.jpg);
+    background-size:cover;*/
+    background: #304352;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .register-content{
@@ -358,20 +362,65 @@ hr {
 }
 
 .login-section{
-    background-image: url(../images/bg/register-bg.jpg);
-    background-size:cover;
+/*    background-image: url(../images/bg/register-bg.jpg);
+    background-size:cover;*/
+    background: #304352;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .login-content{
     padding: 70px 0;
-
-
 }
 
-.login-section2{
-    background-image: url(../images/bg/register-bg.jpg);
-    background-size:cover;
+.login-section .panel{
+    border: 0px solid transparent;
 }
+
+.login-section .panel-body{
+        background-color: #f2f2f2;
+    }
+    
+.login-section .panel-login{
+        border-radius: 10px;
+    }        
+
+    .login-section .panel-heading{
+        font-size: 25px;
+    }
+    
+
+    /* text inside the vertical line */
+    .login-section .inner {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 8px 10px;
+    }
+
+
+    /* bottom container */
+    .login-section .bottom-container {
+        text-align: center;
+        background-color: #5670a5;
+        border-radius: 0px 0px 4px 4px;
+
+    }
+    
+    .login-section .vl-innertext{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f2f2f2;
+        padding: 5px 10px;
+        font-size: 18px;
+        color: #fff;   
+    }
+    
 /* footer css */
 
 #footer-page .col-md-3{
@@ -4211,7 +4260,7 @@ Custom BS3
 .register-content .form-group .form-control{
     background-color: #ffffff;
     border: 0px;
-    font-size: 18px;   
+    font-size: 17px;   
 }  
 
 .btn-lr{
@@ -4233,10 +4282,10 @@ Custom BS3
 }        
 
 .btn-facebook-reg{ 
-    padding: 12px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 4px;
-    margin: 5px 0;
+    border-radius: 6px;
+    
     opacity: 0.85;
     display: inline-block;
     font-size: 17px;
@@ -4250,7 +4299,7 @@ Custom BS3
     margin-right: -15px;
 }
 
-.login-section2 .col .forgot{
+.login-section .col .forgot{
     text-align: center;
     width: 100%;
     font-size: 17px;
@@ -4261,3 +4310,54 @@ Custom BS3
     text-align: center;
     
 }
+
+.register-section .panel-register{
+    border: 0px solid transparent;
+    border-radius: 10px;
+}    
+    
+.register-section .btn-reg-submit{
+    font-size:20px; 
+    color: #fff; 
+    background-color: #5670a5;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    opacity: 0.85;
+    padding: 5px 25px;    
+}
+    
+.register-section .btn-reg-submit:hover{
+    opacity: 1;
+}
+
+/* หน้าโหลดแยก */
+
+    .loading-section{
+    width: 100%;
+    height: 100%;
+    background: #304352;
+    background: -webkit-linear-gradient(to left, #d7d2cc, #304352);
+    background: linear-gradient(to left, #d7d2cc, #304352);
+    }
+    
+    
+    .loading-section .loading-box{
+        padding: 200px 0 314px 0;
+    }
+    
+    .loading-section .loading-text{
+        font-size: 25px;
+        font-weight: 300; 
+    }
+    
+    .loading-section .loading-text span{
+        color: #fff;
+    }
+    
+    .loading-section .loading-io{
+        margin-top: 50px;
+    }
+    
+    .loading-section .loading-text .fa-spinner{
+        color: #fff;
+        animation: spin 2s linear infinite;
+    }

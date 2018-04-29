@@ -130,3 +130,5 @@ Route::post('deleteTourCountry', 'ManageFrontController@deleteTourCountry');
 Route::post('updateTourCountry', 'ManageFrontController@updateTourCountry');
 
 Route::get('admin','AdminLoginController@login_admin');
+
+Route::get('loading','LoadingScreenController@loading_screen');
