@@ -1822,7 +1822,6 @@
                         @endforeach
                     </div>
                     <div id="expandToggleDates" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreDates">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
-                    <button class="btn btn-primary" id="test">test</button>
                 </div>
                 <hr>
                 <div class="filter-airline">
