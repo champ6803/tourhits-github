@@ -2,31 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <group>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/filter/search-tour.js</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/lib/pagination.js</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/style.css</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/home/index.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/login-admin.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/auth/register.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/contact/contactus.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/loading/loading-screen.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
-=======
-<<<<<<< HEAD
-        <group/>
-=======
->>>>>>> ef95ffe820866c4f47392c610e2984536a929102
-        <group>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/manage-attraction.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/ManageFrontController.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/manage-front/manage-front-country.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/admin/manage-attraction.js</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/AdminController.php</file>
-<<<<<<< HEAD
-=======
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/admin/manage-airline.js</file>
->>>>>>> b09d047177b0bfc9ac903c2d8b2923236a05f3b3
->>>>>>> ef95ffe820866c4f47392c610e2984536a929102
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/hothits.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/auth/login.blade.php</file>
         </group>
     </open-files>
 </project-private>

@@ -205,7 +205,7 @@
                         <div class="bottom-container">
                             <div class="row">
                                 <div class="col-signup">
-                                    <a href="#" style="color:white; font-size: 25px;" class="btn-lr"><i class="fas fa-plus-circle"></i> สมัครสมาชิก ?</a>
+                                    <a href="http://localhost:8000/register" style="color:white; font-size: 25px;" class="btn-lr"><i class="fas fa-plus-circle"></i> สมัครสมาชิก ?</a>
                                 </div>                             
                             </div>
                         </div>
