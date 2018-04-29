@@ -55,12 +55,13 @@ class AdminController extends Controller {
     }
    
     public function searchRoute(){
+        $routeModel = new Route();
          try {
             $input_route_name = $_POST['input_route_name'];
             if($input_route_name!=null){
-               $route = Route::where('route_name', $input_route_name)->get();
+               $route = $routeModel->getRouteByName($input_route_name);
             }else{
-               $route = Route::all();
+               $route = $routeModel->getRouteAll();
             }
             return response($route);
             
@@ -70,16 +71,10 @@ class AdminController extends Controller {
         }
     }
     public function saveRoute(){
+         $routeModel = new Route();
          try {
             $route_name = $_POST['route_name'];
-            $date = \Carbon\Carbon::now();
-            \DB::table('route')->insert(
-            ['route_name' => $route_name
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date]
-            );
+            $routeModel->insertRoute($route_name);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -88,9 +83,10 @@ class AdminController extends Controller {
     }
     
     public function deleteRoute(){
+        $routeModel = new Route();
          try {
             $id = $_POST['id'];
-            \DB::table('route')->where('route_id', $id)->delete();            
+            $routeModel->removeRoute($id);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -99,16 +95,11 @@ class AdminController extends Controller {
     }
     
      public function updateRoute(){
+        $routeModel = new Route();
         try {
             $id = $_POST['id'];
-            $update_route_name = $_POST['update_route_name'];
-            $date = \Carbon\Carbon::now();
-            \DB::table('route')
-            ->where('route_id',$id)  
-            ->update(['route_name'=>$update_route_name
-                    ,'updated_at' => $date 
-                    , 'updated_by' => 'admin'  ]);     
-            
+            $update_route_name = $_POST['update_route_name'];   
+            $routeModel->editRoute($id, $update_route_name);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();

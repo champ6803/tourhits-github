@@ -99,7 +99,9 @@
                 font-size: 25px;
                 margin-left: 25%;
                 margin-right: 25%;
-                margin-top: 10px;
+                margin-top: 20px;
+                opacity: 0.85;
+                box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
             }
 
             input[type=submit]:hover {
@@ -111,6 +113,7 @@
                 font-size: 25px;
                 margin-left: 25%;
                 margin-right: 25%;
+                opacity: 1;
             }
 
             input[type="text"], input[type="password"] {
@@ -130,6 +133,11 @@
 
             .col .login-head{
                 padding-bottom: 10px;
+                text-align: left;
+            }
+            
+            .admin-login .login-content{
+                padding: 150px 0;
             }
 
         </style>
@@ -143,7 +151,7 @@
                             <div class="panel panel-login-admin">
                                 <div class="panel-heading">
                                     <div class="head-logo-login">
-                                        <a href=""><img src="../images/logo.png" alt=""></a>
+                                        <a href="/"><img src="../images/logo.png" alt=""></a>
         <!--                                    <span style="text-align:center; font-size: 25px;">Administration</span>-->
                                     </div>
                                 </div>

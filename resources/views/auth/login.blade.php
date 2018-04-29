@@ -4,13 +4,9 @@
 
 
 <style>
-
-    * {box-sizing: border-box}
-
-
     /* style inputs and link buttons */
     input, .btn-lr{
-        width: 100%;
+        
         padding: 12px;
         border: none;
         border-radius: 4px;
@@ -30,7 +26,6 @@
 
     /* add appropriate colors to fb, twitter and google buttons */
 
-
     /* style the submit button */
     input[type=submit] {
         background-color: #333333;
@@ -41,7 +36,8 @@
         font-size: 25px;
         margin-left: 25%;
         margin-right: 25%;
-
+        opacity: 0.85;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     }
 
     input[type=submit]:hover {
@@ -53,6 +49,7 @@
         font-size: 25px;
         margin-left: 25%;
         margin-right: 25%;
+        opacity: 1;     
     }
 
     input[type="email"], input[type="password"] {
@@ -61,14 +58,14 @@
         width: 100%;
         font-size: 20px;
     }
-
+    
     /* Two-column layout */
     .col {
         float: left;
         width: 50%;
         margin: auto;
         padding: 0 50px;
-        margin-top: 30px;
+/*        margin-top: 30px;*/
     }
 
     /* Clear floats after the columns */
@@ -84,36 +81,16 @@
         left: 26%;
         transform: translate(-50%);
         border: 1.2px solid #EC2424;
-        /*          height: 175px;*/
         width: 400px;
         height: 0px;
-        /*          top: 50%;*/
-        margin-top: -18px;
+        margin-top: -43px;
     }
-
-    /* text inside the vertical line */
-    .inner {
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #f1f1f1;
-        border: 1px solid #ccc;
-        border-radius: 50%;
-        padding: 8px 10px;
-    }
-
+    
     /* hide some text on medium and large screens */
     .hide-md-lg {
         display: none;
     }
 
-    /* bottom container */
-    .bottom-container {
-        text-align: center;
-        background-color: #4CAF50;
-        border-radius: 0px 0px 4px 4px;
-
-    }
 
     /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
     @media screen and (max-width: 740px) {
@@ -135,25 +112,8 @@
             display: none;
         }
     }
-
-
-    .vl-innertext {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #f2f2f2;
-        padding: 5px 10px;
-        font-size: 18px;
-        color:
-    }
-
-    .login-section2 .panel-body{
-        background-color: #f2f2f2;
-    }
-
-    /*        style หน้ากรอกรายละเอียด*/
-
-
+    
+    
 
 </style>
 
@@ -162,8 +122,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">เข้าสู่ระบบ</div>
+                    <div class="panel panel-login">
+                        <div class="panel-heading"><i class="fab fa-pushed"></i> เข้าสู่ระบบ</div>
                         <div class="panel-body">
                             <div class="row">
                                 <h2 style="text-align:center"></h2>
@@ -222,11 +182,12 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <div class="checkbox">
+                                            <div class="checkbox">                                              
                                                 <label>
-                                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>Remember Me
-                                                </label>
+                                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>Remember Me                                                           
+                                                </label> 
                                             </div>
+                                            
                                         </div>
                                     </div>
                                     <input type="submit" value="เข้าสู่ระบบ">
@@ -244,7 +205,7 @@
                         <div class="bottom-container">
                             <div class="row">
                                 <div class="col-signup">
-                                    <a href="#" style="color:white; font-size: 25px;" class="btn-lr">สมัครสมาชิก ?</a>
+                                    <a href="http://localhost:8000/register" style="color:white; font-size: 25px;" class="btn-lr"><i class="fas fa-plus-circle"></i> สมัครสมาชิก ?</a>
                                 </div>                             
                             </div>
                         </div>
