@@ -36,6 +36,7 @@ class Route extends Model {
                return $ex;
         }
     }
+    
     public function insertRoute($route_name){
          try {
             $date = \Carbon\Carbon::now();

@@ -3,27 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/manage-attraction.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/manage-holiday.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/admin/manage-route.js</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main-admin.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/AdminController.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Airline.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/manage-airline.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/manage-route.blade.php</file>
-=======
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/style.css</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/home/index.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/login-admin.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/auth/register.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/contact/contactus.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/loading/loading-screen.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/hothits.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/auth/login.blade.php</file>
->>>>>>> 9a14fe1ae9534b0de53014bd4e38e099e945a2e6
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Attraction.php</file>
         </group>
     </open-files>
 </project-private>

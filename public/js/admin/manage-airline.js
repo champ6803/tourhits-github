@@ -30,6 +30,9 @@ $(function () {
            $('#file').val('');
     });
     $(document).ready(function() {
+        //ไฮไลต์เมนูที่เข้าอยู่
+        document.getElementById("airlineMenu").style.color = "blue";
+                document.getElementById("managetour").className = "active";
         createTable()
         $('#airlineTable').DataTable();
     } );
