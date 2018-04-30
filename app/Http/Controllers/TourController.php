@@ -8,15 +8,19 @@
 
 namespace App\Http\Controllers;
 
-/**
+use App\Models\Tour_Package;
+
+/**x
  * Description of TourController
  *
  * @author chonl
  */
 class TourController {
 
-    public function tour_detail() {
-        return view('tour.tour-detail');
+    public function tour_detail($tour_package_id, $tour_package_name) {
+        $tourModel = new Tour_Package();
+        $tourPackage = $tourModel->getTourDetail($tour_package_id);
+        $page_title = $tourPackage->tour_package_name;
+        return view('tour.tour-detail', compact('tourPackage', 'page_title'));
     }
-
 }

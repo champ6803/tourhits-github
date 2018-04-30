@@ -21,47 +21,13 @@ use Illuminate\Support\Facades\DB;
 class FilterController extends Controller {
 
     public function search_tour($country) {
-        $date = \Carbon\Carbon::now();
-        $routeList = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
-                ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                ->join('route', 'route.route_id', '=', 'tour_route.route_id')
-                ->select(DB::raw('COUNT(*) as r_num, route.route_id as r_id, route.route_name as r_name'))
-                ->groupBy('r_id', 'r_name')
-                ->where('tour_country.tour_country_name', $country)
-                ->get();
-
-        $airlineList = Tour_Package::join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
-                ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
-                ->select(DB::raw('COUNT(*) as a_num, airline.airline_id as a_id, airline.airline_name as a_name'))
-                ->groupBy('a_id', 'a_name')
-                ->where('tour_country.tour_country_name', $country)
-                ->get();
-        $holidayList = Holiday::where('start_date', '<=', $date)
-                ->get();
-
-        $monthList = Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
-                ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                ->select(DB::raw('COUNT(*) as m_num, month(tour_period.tour_period_start) as m_month'))
-                ->groupBy('m_month')
-                ->where('tour_country.tour_country_name', $country)
-                ->get();
-
-        $dayList = Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
-                ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                ->select(DB::raw('COUNT(*) as sum, DATEDIFF(tour_period.tour_period_end,tour_period.tour_period_start) + 1 AS duration'))
-                ->groupBy('duration')
-                ->where('tour_country.tour_country_name', $country)
-                ->get();
-
-        $tagList = Tour_Package::join('tour_tag', 'tour_tag.tour_package_id', '=', 'tour_package.tour_package_id')
-                ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                ->join('tag', 'tag.tag_id', '=', 'tour_tag.tag_id')
-                ->select(DB::raw('COUNT(*) as t_num, tag.tag_id as t_id, tag.tag_name as t_name'))
-                ->groupBy('t_id', 't_name')
-                ->where('tour_country.tour_country_name', $country)
-                ->get();
-
+        $tourModel = new Tour_Package();
+        $routeList = $tourModel->getFilterRoute($country);
+        $airlineList = $tourModel->getFilterAirline($country);
+        $holidayList = $tourModel->getFilterHoliday($country);
+        $monthList = $tourModel->getFilterMonth($country);
+        $dayList = $tourModel->getFilterDay($country);
+        $tagList = $tourModel->getFilterTag($country);
         return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList'));
     }
 
@@ -82,9 +48,11 @@ class FilterController extends Controller {
                         ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                         ->join('country', 'country.country_id', '=', 'tour_country.country_id')
                         ->join('route', 'route.route_id', '=', 'tour_route.route_id')
+                        ->join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
+                        ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                         ->where('tour_country.tour_country_id', $country)
                         ->whereIn('route.route_name', $route)
-                        ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code'))
+                        ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_picture'))
                         ->get();
                 $array = array();
                 foreach ($tourPackageList as $tour) {
@@ -122,6 +90,8 @@ class FilterController extends Controller {
             } else {
                 $tourPackageList = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                         ->join('country', 'country.country_id', '=', 'tour_country.country_id')
+                        ->join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
+                        ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                         ->where('tour_country.tour_country_id', $country)
                         ->get();
                 $array = array();
@@ -136,5 +106,13 @@ class FilterController extends Controller {
             return response($e->getMessage());
         }
     }
-
+    public function test(){
+        $this->delete($id);
+        return true;
+    }
+    
+    private function delete($id){
+        $tourModel = new Tour_Package();
+        $tourModel->deleteRoute($id);
+    } 
 }

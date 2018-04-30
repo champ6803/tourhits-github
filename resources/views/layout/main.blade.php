@@ -7,7 +7,7 @@ session_start();
         <meta charset="utf-8">
 
         <!-- TITLE -->
-        <title>@yield('page_title')</title>
+        <title>{{$page_title or 'Welcome To Tourhits'}}</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
@@ -39,7 +39,7 @@ session_start();
         <link rel="stylesheet" type="text/css" href="{{ asset('css/demo.css') }}">
 
         <!-- CSS COLOR -->
-        <link id="colorreplace" rel="stylesheet" type="text/css" href="css/colors/blue.css">
+        <link id="colorreplace" rel="stylesheet" type="text/css" href="{{ asset('css/colors/blue.css')}}">
 
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -82,7 +82,7 @@ session_start();
                     <div class="container">
                         <!-- LOGO -->
                         <div class="logo">
-                            <a href="/"><img src="../images/logo.png" alt=""></a>
+                            <a href="/"><img src="{{ asset('/images/logo.png')}}" alt=""></a>
                             <span class="cer-logo" style="font-size: 10px; color: #515050; font-weight: 900;"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/06195</span>
                         </div>
 
@@ -289,14 +289,13 @@ session_start();
         <script type="text/javascript" src="{{ asset('js/lib/theia-sticky-sidebar.js') }}"></script>
         <script type='text/javascript' src="{{ asset('js/lib/jquery-ui.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/bootstrap.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/bootstrap-slider.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/pagination.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/moment.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/AutoNumeric.js') }}"></script>
-
-
+        @yield('footer_scripts')
+        <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
         <!-- REVOLUTION DEMO -->
         <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.revolution.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.tools.min.js') }}"></script>
@@ -376,8 +375,5 @@ if ($('#slider-revolution').length) {
     });
 }
         </script>
-
-        @yield('footer_scripts')
-
     </body>
 </html>
