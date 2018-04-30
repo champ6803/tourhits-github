@@ -58,7 +58,7 @@ function createTable(){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].attraction_name+'</td>';
-                    Str=Str+'<td> <img src="images/attraction/'+data[row].attraction_picture+'" style="width:60px;height:60px;"></td>'; 
+                    Str=Str+'<td> <img src="images/attraction/'+data[row].attraction_picture+'" style="height:40px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction('+data[row].attraction_id+',\''+data[row].attraction_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -155,7 +155,7 @@ function findAttractionByName(attractionName){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].attraction_name+'</td>';
-                    Str=Str+'<td> <img src="images/attraction/'+data[row].attraction_picture+'" style="width:60px;height:60px;"></td>'; 
+                    Str=Str+'<td> <img src="images/attraction/'+data[row].attraction_picture+'" style="height:40px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction('+data[row].attraction_id+',\''+data[row].attraction_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
