@@ -32,7 +32,7 @@
         </form><br> <br>
         <div class="row">
         <div class="col-lg-12">
-        <table id="tourCountryTable" class="display responsive nowrap" style="width:100%">
+        <table id="tourCountryTable" class="display responsive nowrap">
         <thead>
             <tr>
                 <th>ลำดับที่</th>

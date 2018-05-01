@@ -108,12 +108,13 @@ class AdminController extends Controller {
     }
     
      public function searchAirline(){
+         $airlineModel = new Airline();
          try {
             $input_airline_name = $_POST['input_airline_name'];
             if($input_airline_name!=null){
-               $airline = Airline::where('airline_name', $input_airline_name)->get();
+               $airline = $airlineModel->getAirlineByName($input_airline_name);
             }else{
-               $airline = Airline::all();
+               $airline = $airlineModel->getAirlineAll();
             }
             return response($airline);
             
@@ -123,24 +124,12 @@ class AdminController extends Controller {
         }
     }
     public function saveAirline(){
+         $airlineModel = new Airline();
          try {
             $airline_name = $_POST['airline_name'];
             $airline_picture= $_FILES['file']['name'];
-            $date = \Carbon\Carbon::now();
-            \DB::table('airline')->insert(
-            ['airline_name' => $airline_name
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date
-             , 'airline_picture' => $airline_picture]
-            );
-            
-            if(Input::hasFile('file')){
-			$file = Input::file('file');
-			$file->move('images/airline', $file->getClientOriginalName());
-	    }
-             echo "<script>
+            $airlineModel->insertAirline($airline_name, $airline_picture);
+            echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-airline';
              </script>";
@@ -162,38 +151,16 @@ class AdminController extends Controller {
     }
     
      public function updateAirline(){
+        $airlineModel = new Airline();
         try {
             $id = $_POST['hidden_update_id'];
             $update_airline_name = $_POST['update_airline_name'];
-            $date = \Carbon\Carbon::now();  
             $airline_picture=  $_FILES['file']['name'];
-             if(null==$airline_picture){
-                    \DB::table('airline')
-                    ->where('airline_id',$id)  
-                    ->update(['airline_name'=>$update_airline_name
-                             ,'updated_at' => $date 
-                            , 'updated_by' => 'admin'  ]);     
-                        echo "<script>
-                        alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
-                        window.location.href='manage-front-country';
-                        </script>";      
-             }else{
-                    \DB::table('airline')
-                    ->where('airline_id',$id)  
-                    ->update(['airline_name'=>$update_airline_name
-                             ,'updated_at' => $date 
-                            , 'updated_by' => 'admin'  , 'airline_picture' => $airline_picture  ]);   
-                if(Input::hasFile('file')){
-			$file = Input::file('file');
-			$file->move('images/tourCountry', $file->getClientOriginalName());
+            $airlineModel->editAirline($id, $update_airline_name, $airline_picture);
                         echo "<script>
                         alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
                         window.location.href='manage-airline';
                         </script>";
-                } 
-             }
-
-            
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -202,37 +169,26 @@ class AdminController extends Controller {
     }
     
     public function searchAttraction(){
+         $attractionModel = new Attraction();
          try {
             $input_attraction_name = $_POST['input_attraction_name'];
             if($input_attraction_name!=null){
-               $attraction = Attraction::where('attraction_name', $input_attraction_name)->get();
+               $attraction = $attractionModel->getAttractionByName($input_attraction_name);
             }else{
-               $attraction = Attraction::all();
+               $attraction = $attractionModel->getAttractionAll();
             }
             return response($attraction);
-            
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
         }
     }
     public function saveAttraction(){
+        $attractionModel = new Attraction();
          try {
             $attraction_name = $_POST['attraction_name'];
             $attraction_picture= $_FILES['file']['name'];
-            $date = \Carbon\Carbon::now();
-            \DB::table('attraction')->insert(
-            ['attraction_name' => $attraction_name
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date
-             ,'attraction_picture' => $attraction_picture]
-            );
-            if(Input::hasFile('file')){
-			$file = Input::file('file');
-			$file->move('images/attraction', $file->getClientOriginalName());
-	    }
+            $attractionModel->insertAttraction($attraction_name, $attraction_picture);
              echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-attraction';
@@ -244,9 +200,10 @@ class AdminController extends Controller {
     }
     
     public function deleteAttraction(){
+        $attractionModel = new Attraction();
          try {
             $id = $_POST['id'];
-            \DB::table('attraction')->where('attraction_id', $id)->delete();            
+            $attractionModel->removeAttraction($id)  ;      
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -255,38 +212,16 @@ class AdminController extends Controller {
     }
     
      public function updateAttraction(){
+        $attractionModel = new Attraction();
         try {
             $id = $_POST['hidden_update_id'];
             $update_attraction_name = $_POST['update_attraction_name'];
             $attraction_picture=  $_FILES['file']['name'];
-            $date = \Carbon\Carbon::now();
-            if(null==$attraction_picture){
-             \DB::table('attraction')
-            ->where('attraction_id',$id)  
-            ->update(['attraction_name'=>$update_attraction_name
-                    , 'updated_at' => $date
-                    , 'updated_by' => 'admin'   ]);     
-             
+            $attractionModel->editAttraction($id, $update_attraction_name, $attraction_picture);
              echo "<script>
              alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-attraction';
              </script>";
-            }else{
-            \DB::table('attraction')
-            ->where('attraction_id',$id)  
-            ->update(['attraction_name'=>$update_attraction_name
-                    ,'attraction_picture' => $attraction_picture
-                    , 'updated_at' => $date
-                    , 'updated_by' => 'admin'   ]);     
-            if(Input::hasFile('file')){
-			$file = Input::file('file');
-			$file->move('images/attraction', $file->getClientOriginalName());
-	    }
-             echo "<script>
-             alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
-             window.location.href='manage-attraction';
-             </script>";
-            }
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
@@ -294,12 +229,13 @@ class AdminController extends Controller {
     }
     
     public function searchTag(){
+        $tagModel = new Tag();
          try {
             $input_tag_name = $_POST['input_tag_name'];
             if($input_tag_name!=null){
-               $tag = Tag::where('tag_name', $input_tag_name)->get();
+               $tag = $tagModel->getTagByName($input_tag_name);
             }else{
-               $tag = Tag::all();
+               $tag = $tagModel->getTagAll();
             }
             return response($tag);
             
@@ -309,16 +245,10 @@ class AdminController extends Controller {
         }
     }
     public function saveTag(){
-         try {
+        $tagModel = new Tag();
+        try {
             $tag_name = $_POST['tag_name'];
-            $date = \Carbon\Carbon::now();
-            \DB::table('tag')->insert(
-            ['tag_name' => $tag_name
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date]
-            );
+            $tagModel->insertTag($tag_name);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -327,9 +257,10 @@ class AdminController extends Controller {
     }
     
     public function deleteTag(){
+         $tagModel = new Tag();
          try {
             $id = $_POST['id'];
-            \DB::table('tag')->where('tag_id', $id)->delete();            
+            $tagModel->removeTag($id);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -338,16 +269,11 @@ class AdminController extends Controller {
     }
     
      public function updateTag(){
+        $tagModel = new Tag();
         try {
             $id = $_POST['id'];
             $update_tag_name = $_POST['update_tag_name'];
-            $date = \Carbon\Carbon::now();
-            \DB::table('tag')
-            ->where('tag_id',$id)  
-            ->update(['tag_name'=>$update_tag_name
-                    , 'updated_at' => $date
-                    , 'updated_by' => 'admin'   ]);     
-            
+            $tagModel->editTag($id, $update_tag_name);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -356,12 +282,13 @@ class AdminController extends Controller {
     }
     
     public function searchHoliday(){
+        $holidayModel = new Holiday();
          try {
             $input_holiday_name = $_POST['input_holiday_name'];
             if($input_holiday_name!=null){
-               $holiday = Holiday::where('holiday_name', $input_holiday_name)->get();
+               $holiday = $holidayModel->getHolidayByName($input_holiday_name);
             }else{
-               $holiday = Holiday::all();
+               $holiday = $holidayModel->getHolidayAll();
             }
             return response($holiday);
             
@@ -371,23 +298,15 @@ class AdminController extends Controller {
         }
     }
     public function saveHoliday(){
+         $holidayModel = new Holiday();
          try {
             $holiday_name = $_POST['holiday_name'];
             $start_date = $_POST['start_date'];
             $end_date = $_POST['end_date'];
             $dateStart = str_replace('/', '-', $start_date);
             $dateEnd = str_replace('/', '-', $end_date);
+            $holidayModel->insertHoliday($holiday_name, $dateStart, $dateEnd);
             
-            $date = \Carbon\Carbon::now();
-            \DB::table('holiday')->insert(
-            ['holiday_name' => $holiday_name
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date 
-             , 'start_date' => date('Y-m-d', strtotime($dateStart))
-             , 'end_date' => date('Y-m-d', strtotime($dateEnd))]
-            );
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -396,9 +315,10 @@ class AdminController extends Controller {
     }
     
     public function deleteHoliday(){
+        $holidayModel = new Holiday();
          try {
             $id = $_POST['id'];
-            \DB::table('holiday')->where('holiday_id', $id)->delete();            
+            $holidayModel->removeHoliday($id);        
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -407,6 +327,7 @@ class AdminController extends Controller {
     }
     
      public function updateHoliday(){
+        $holidayModel = new Holiday();
         try {
             
             $id = $_POST['id'];
@@ -415,15 +336,7 @@ class AdminController extends Controller {
             $end_date = $_POST['end_date'];
             $dateStart = str_replace('/', '-', $start_date);
             $dateEnd = str_replace('/', '-', $end_date);
-            $date = \Carbon\Carbon::now();
-            \DB::table('holiday')
-            ->where('holiday_id',$id)  
-            ->update(['holiday_name'=>$update_holiday_name           
-             , 'start_date' => date('Y-m-d', strtotime($dateStart))
-             , 'end_date' => date('Y-m-d', strtotime($dateEnd))
-             , 'updated_at' => $date
-             , 'updated_by' => 'admin'   ]);     
-            
+            $holidayModel->editHoliday($id, $update_holiday_name, $dateStart, $dateEnd);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -432,12 +345,13 @@ class AdminController extends Controller {
     }
     
     public function searchOther(){
+        $otherModel = new Other();
          try {
             $input_other_name = $_POST['input_other_name'];
             if($input_other_name!=null){
-               $other = Other::where('other_name', $input_other_name)->get();
+               $other = $otherModel->getOtherByName($input_other_name);
             }else{
-               $other = Other::all();
+               $other = $otherModel->getOtherAll();
             }
             return response($other);
             
@@ -447,16 +361,11 @@ class AdminController extends Controller {
         }
     }
     public function saveOther(){
+        $otherModel = new Other();
          try {
             $other_name = $_POST['other_name'];
-              $date = \Carbon\Carbon::now();
-            \DB::table('other')->insert(
-            ['other_name' => $other_name
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date ]
-            );
+            $date = \Carbon\Carbon::now();
+            $otherModel->insertOther($other_name);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -465,9 +374,10 @@ class AdminController extends Controller {
     }
     
     public function deleteOther(){
+        $otherModel = new Other();
          try {
             $id = $_POST['id'];
-            \DB::table('other')->where('other_id', $id)->delete();            
+            $otherModel->removeOther($id);         
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -476,17 +386,11 @@ class AdminController extends Controller {
     }
     
      public function updateOther(){
+        $otherModel = new Other();
         try {
-            
             $id = $_POST['id'];
             $update_other_name = $_POST['update_other_name'];
-            $date = \Carbon\Carbon::now();
-            \DB::table('other')
-            ->where('other_id',$id)  
-            ->update(['other_name'=>$update_other_name
-                    , 'updated_at' => $date
-                    , 'updated_by' => 'admin'   ]);     
-            
+            $otherModel->editOther($id, $update_other_name);  
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -495,12 +399,13 @@ class AdminController extends Controller {
     }
     
      public function searchTourCategory(){
+         $tourCategoryModel = new Tour_Category();
          try {
             $input_tour_category_name = $_POST['input_tour_category_name'];
             if($input_tour_category_name!=null){
-               $tour_category = Tour_Category::where('tour_category_name', $input_tour_category_name)->get();
+               $tour_category = $tourCategoryModel->getTourCategoryByName($input_tour_category_name);
             }else{
-               $tour_category = Tour_Category::all();
+               $tour_category = $tourCategoryModel->getTourCategoryAll();
             }
             return response($tour_category);
             
@@ -510,23 +415,11 @@ class AdminController extends Controller {
         }
     }
     public function saveTourCategory(){
+        $tourCategoryModel = new Tour_Category();
          try {
             $tour_category_name = $_POST['tour_category_name'];
             $tour_category_picture= $_FILES['file']['name'];
-            $date = \Carbon\Carbon::now();
-            \DB::table('tour_category')->insert(
-            ['tour_category_name' => $tour_category_name
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date
-             ,'tour_category_img' => $tour_category_picture
-             ,'tour_category_block'=>1]
-            );
-            if(Input::hasFile('file')){
-			$file = Input::file('file');
-			$file->move('images/category', $file->getClientOriginalName());
-	    }
+            $tourCategoryModel->insertTourCategory($tour_category_name, $tour_category_picture);
              echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-category';
@@ -538,9 +431,10 @@ class AdminController extends Controller {
     }
     
     public function deleteTourCategory(){
+        $tourCategoryModel = new Tour_Category();
          try {
             $id = $_POST['id'];
-            \DB::table('tour_category')->where('tour_category_id', $id)->delete();            
+            $tourCategoryModel->removeTourCategory($id);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -549,37 +443,17 @@ class AdminController extends Controller {
     }
     
      public function updateTourCategory(){
+        $tourCategoryModel = new Tour_Category();
         try {
+            
             $id = $_POST['hidden_update_id'];
             $update_tour_category_name = $_POST['update_tour_category_name'];
             $tour_category_picture= $_FILES['file']['name'];
-            $date = \Carbon\Carbon::now();
-            if(null==$tour_category_picture){
-            \DB::table('tour_category')
-            ->where('tour_category_id',$id)  
-            ->update(['tour_category_name'=>$update_tour_category_name
-                    , 'updated_at' => $date
-                    , 'updated_by' => 'admin'  ]);
+            $tourCategoryModel->editTourCategory($id, $update_tour_category_name, $tour_category_picture);
              echo "<script>
              alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-category';
              </script>";
-            }else{
-             \DB::table('tour_category')
-            ->where('tour_category_id',$id)  
-            ->update(['tour_category_name'=>$update_tour_category_name
-                    ,'tour_category_img' => $tour_category_picture
-                    , 'updated_at' => $date
-                    , 'updated_by' => 'admin'  ]);   
-            if(Input::hasFile('file')){
-			$file = Input::file('file');
-			$file->move('images/category', $file->getClientOriginalName());
-	    }
-             echo "<script>
-             alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
-             window.location.href='manage-category';
-             </script>";
-            }
             
             return response('success');
         } catch (\Exception $e) {

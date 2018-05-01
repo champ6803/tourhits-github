@@ -24,7 +24,7 @@
             </div>
             <div class="col-lg-4" style="text-align: left">
              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#attractionModal"> 
-                    <span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่ม Tags </button>&nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มสถานที่ท่องเที่ยว</button>&nbsp;&nbsp;
               <button type="button" id="clearButton" class="btn btn-danger">
              <span class="glyphicon glyphicon-erase"></span>&nbsp;ล้างเงื่อนไข</button> 
             </div>
