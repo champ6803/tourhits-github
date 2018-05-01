@@ -31,7 +31,7 @@ Route::get('adminlogin','LoginController@adminLogin');
 
 Route::get('dashboard','AdminController@dashboard');
 
-Route::get('tour-detail/{tour_pakage_id}/{tour_package_name}','TourController@tour_detail');
+Route::get('{tour_country}/{tour_pakage_id}/{tour_package_name}','TourController@tour_detail');
 
 Route::get('manage-route','AdminController@manage_route');
 

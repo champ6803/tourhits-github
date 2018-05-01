@@ -17,7 +17,7 @@ use App\Models\Tour_Package;
  */
 class TourController {
 
-    public function tour_detail($tour_package_id, $tour_package_name) {
+    public function tour_detail($tour_countr_name,$tour_package_id, $tour_package_name) {
         $tourModel = new Tour_Package();
         $tourPackage = $tourModel->getTourDetail($tour_package_id);
         $page_title = $tourPackage->tour_package_name;
