@@ -137,7 +137,7 @@ function createTable(){
                     Str=Str+'<td>'+data[row].country_name+'</td>';
                     Str=Str+'<td>'+data[row].tour_country_name+'</td>';
                     Str=Str+'<td>'+data[row].tour_country_detail+'</td>';
-                    Str=Str+'<td> <img src="images/tourCountry/'+data[row].tour_country_img+'" style="width:60px;height:60px;"></td>'; 
+                    Str=Str+'<td> <img src="images/tourCountry/'+data[row].tour_country_img+'" style="height:40px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCountry('+data[row].tour_country_id+',\''+data[row].tour_country_name+'\',\''+data[row].tour_country_detail+'\',\''+data[row].country_id+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -239,7 +239,7 @@ function findTourCountryByName(input_tour_country_name){
                     Str=Str+'<td>'+data[row].country_name+'</td>';
                     Str=Str+'<td>'+data[row].tour_country_name+'</td>';
                     Str=Str+'<td>'+data[row].tour_country_detail+'</td>';
-                    Str=Str+'<td> <img src="images/tourCountry/'+data[row].tour_country_img+'" style="width:60px;height:60px;"></td>'; 
+                    Str=Str+'<td> <img src="images/tourCountry/'+data[row].tour_country_img+'" style="height:40px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCountry('+data[row].tour_country_id+',\''+data[row].tour_country_name+'\',\''+data[row].tour_country_detail+'\',\''+data[row].country_id+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';

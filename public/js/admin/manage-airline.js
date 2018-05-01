@@ -30,6 +30,9 @@ $(function () {
            $('#file').val('');
     });
     $(document).ready(function() {
+        //ไฮไลต์เมนูที่เข้าอยู่
+        document.getElementById("airlineMenu").style.color = "blue";
+                document.getElementById("managetour").className = "active";
         createTable()
         $('#airlineTable').DataTable();
     } );
@@ -52,7 +55,7 @@ function createTable(){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].airline_name+'</td>';
-                    Str=Str+'<td> <img src="images/airline/'+data[row].airline_picture+'" style="width:60px;height:60px;"></td>'; 
+                    Str=Str+'<td> <img src="images/airline/'+data[row].airline_picture+'" style="height:40px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAirline('+data[row].airline_id+',\''+data[row].airline_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -147,7 +150,7 @@ function findAirlineByName(airlineName){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].airline_name+'</td>';
-                    Str=Str+'<td> <img src="images/airline/'+data[row].airline_picture+'" style="width:60px;height:60px;"></td>'; 
+                    Str=Str+'<td> <img src="images/airline/'+data[row].airline_picture+'" style="height:40px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editRoute('+data[row].route_id+',\''+data[row].route_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';

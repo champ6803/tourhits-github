@@ -18,5 +18,13 @@ use Illuminate\Database\Eloquent\Model;
 class Country extends Model {
 
     protected $table = 'country';
-
+    
+    public function getCountryAll(){
+        try {
+         $countryList = Country::all();
+         return $countryList;
+        } catch (Exception $ex) {
+               return $ex;
+        }
+    }
 }

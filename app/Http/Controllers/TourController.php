@@ -24,3 +24,4 @@ class TourController {
         return view('tour.tour-detail', compact('tourPackage', 'page_title'));
     }
 }
+

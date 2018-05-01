@@ -418,7 +418,7 @@
                     <ul class="sidebar-menu" data-widget="tree">
                         <li class="nav-devider"></li>
                         <li class="header nav-small-cap">PERSONAL</li>
-                        <li class="active">
+                        <li>
                             <a href="index.html">
                                 <i class="fa fa-clipboard"></i> <span>Dashboard</span>
                                 <span class="pull-right-container">
@@ -443,7 +443,7 @@
                                 <li><a href="pages/app/profile.html">การติดต่อ</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li id="managetour" class="treeview">
                             <a href="#">
                                 <i class="fa fa-database"></i> <span>จัดการทัวร์</span>
                                 <span class="pull-right-container">
@@ -451,14 +451,14 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="{{ url('manage-route')}}">จัดการรายการทัวร์</a></li>
-                                <li><a href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
-                                <li><a href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
-                                <li><a href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
-                                <li><a href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
-                                <li><a href="{{ url('manage-airline')}}">จัดการสายการบิน</a></li>
-                                <li><a href="{{ url('manage-route')}}">จัดการเส้นทาง</a></li>
-                                <li><a href="{{ url('manage-holiday')}}">จัดการวันหยุด</a></li>
+                                <li><a  id="tourMenu"  href="#">จัดการรายการทัวร์</a></li>
+                                <li><a id="categoryMenu"  href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
+                                <li><a id="tagMenu"  href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
+                                <li><a id="otherMenu"  href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
+                                <li><a id="attractionMenu"  href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
+                                <li><a id="airlineMenu"  href="{{ url('manage-airline')}}">จัดการสายการบิน</a></li>
+                                <li><a id="routeMenu"  href="{{ url('manage-route')}}">จัดการเส้นทาง</a></li>
+                                <li><a id="holidayMenu"  href="{{ url('manage-holiday')}}">จัดการวันหยุด</a></li>
                             </ul>
                         </li>
                         <li class="treeview">

@@ -31,6 +31,9 @@ $(function () {
            $('#updateFile').val('')
     });
     $(document).ready(function() {
+        //ไฮไลต์เมนูที่เข้าอยู่
+        document.getElementById("categoryMenu").style.color = "blue";
+        document.getElementById("managetour").className = "active";
         createTable()
         $('#tourCategoryTable').DataTable();
     } );
@@ -53,7 +56,7 @@ function createTable(){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].tour_category_name+'</td>';
-                    Str=Str+'<td> <img src="images/category/'+data[row].tour_category_img+'" style="width:60px;height:60px;"></td>'; 
+                    Str=Str+'<td> <img src="images/category/'+data[row].tour_category_img+'" style="height:40px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCategory('+data[row].tour_category_id+',\''+data[row].tour_category_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -151,7 +154,7 @@ function findTourCategoryByName(tourCategoryName){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].tour_category_name+'</td>';
-                    Str=Str+'<td> <img src="images/category/'+data[row].tour_category_img+'" style="width:60px;height:60px;"></td>'; 
+                    Str=Str+'<td> <img src="images/category/'+data[row].tour_category_img+'" style="height:40px;"></td>'; 
                     Str=Str+'<td>'+data[row].created_by+'</td>';
                     Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCategory('+data[row].tour_category_id+',\''+data[row].tour_category_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
