@@ -110,7 +110,7 @@
                         </div>
                         <div class="item">
                             <h6><i class="fas fa-share-alt" style="padding-right: 10px"></i>แชร์</h6>
-                            <p></p>
+                            <p><i class="fab fa-facebook"></i> Facebook</p>
                         </div>
                         <div class="item">
                             <a href="#" class="btn btn-pdf" style="color: #FFFFFF; "><i class="fas fa-cloud-download-alt"></i>&nbsp;ดาวน์โหลด PDF</a>
@@ -135,7 +135,6 @@
 
                     <!-- End Column -->
                     <div id="calendar" class="animated animated-sm bounceInUp">
-
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div class="calendar fc fc-ltr">
@@ -678,360 +677,302 @@
                             <a href="#tabs-1">แผนการท่องเที่ยว</a>
                         </li>
                         <li>
-                            <a href="#tabs-2">สิ่งที่ต้องรู้</a>
+                            <a href="#tabs-2">เงื่อนไขโปรแกรมทัวร์</a>
                         </li>
                         <li>
-                            <a href="#tabs-3">Review &amp; rating</a>
+                            <a href="#tabs-3">Review &amp; Rating</a>
                         </li>
                     </ul>
                     <div class="product-tabs__content">
                         <div id="tabs-1">
                             <div class="trip-schedule-accordion accordion">
-                                <h4>วันที่<span class="days"></span>สนามบินดอนเมือง</h4>
+                                @foreach ($tourPackageDayList as $tourPackageDay)
+                                <h4>วันที่<span class="days"></span>{{$tourPackageDay->tour_package_day_name}}</h4>
                                 <div>
-                                    <div class="tour-map-wrapper">
-                                        <div class="tour-map">
-
-                                            <div class="product-slider">
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                            </div>                                                            
-
-                                        </div>
-
-                                        <div class="trips">
-                                            <div class="item">
-                                                <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
-                                                <p>บริการอาหารและเครื่องดื่มบนเครื่อง</p>
-                                            </div>
-                                            <div class="item">
-                                                <h6><i class="far fa-moon"></i> โรงแรม</h6>
-                                                <p>-</p>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
-                                        <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
-                                        <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
-                                    </div>
-                                    <br>
-                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงดึก</h5>                                               
-                                    <ul>
-                                        <li>20.00 น. พร้อมกันที่ สนามบินนานาชาติดอนเมือง ชั้น 3 อาคารผู้โดยสารระหว่างประเทศ เคาน์เตอร์ สายการบิน AIR ASIA X เจ้าหน้าที่ของบริษัทฯ คอยให้การต้อนรับ และอำนวยความสะดวกในการเช็คอิน สายการบิน AIR ASIA X ใช้เครื่อง AIRBUS A330-300 จำนวน 377 ที่นั่ง จัดที่นั่งแบบ 3-3-3 (น้ำหนักกระเป๋า 20 กก./ท่าน หากต้องการซื้อน้ำหนักเพิ่ม ต้องเสียค่าใช้จ่าย)</li>
-                                        <li>23.45 น. เหินฟ้าสู่ เมืองนาริตะ ประเทศญี่ปุ่น โดยเที่ยวบินที่ XJ600 (บริการอาหารและเครื่องดื่มบนเครื่อง)</li>                                                    
-                                    </ul>
+                                    <?php echo $tourPackageDay->tour_package_day_description ?>
                                 </div>
-
-                                <h4>วันที่<span class="days"></span>สนามบินนาริตะ – วัดอาซากุสะ – ผ่านชมโตเกียวสกายทรี – ล่องเรือโจรสลัด - โกเท็มบะ เอ้าต์เลต – บุฟเฟ่ต์ขาปูยักษ์ แช่ออนเซน</h4>
-                                <div>
-                                    <div class="tour-map-wrapper">
-                                        <div class="tour-map">
-
-                                            <div class="product-slider">
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                            </div>                                                            
-
-                                        </div>
-
-                                        <div class="trips">
-                                            <div class="item">
-                                                <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
-                                                <p>เที่ยง & เย็น</p>
-                                            </div>
-                                            <div class="item">
-                                                <h6><i class="far fa-moon"></i> โรงแรม</h6>
-                                                <p>พักที่โรงแรม FUJISAN GARDEN HOTEL หรือระดับเดียวกัน</p>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
-                                        <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
-                                        <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
-                                    </div>
-                                    <br>
-                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
-                                    <ul>
-                                        <li>08.00 น. ถึง เมืองนาริตะ ประเทศญี่ปุ่น หลังจากผ่านขั้นตอนศุลกากรแล้วนำท่านเดินทางสู่ที่พัก (เวลาที่ญี่ปุ่น เร็วกว่าเมืองไทย 2 ชั่วโมง กรุณาปรับนาฬิกาของท่านเพื่อความสะดวกในการนัดหมายเวลา)</li>
-                                        <li>นำท่านสู่ “กรุงโตเกียว” นมัสการเจ้าแม่กวนอิม “วัดอาซากุสะ” วัดที่ได้ชื่อว่าเป็นวัดที่มีความศักดิ์สิทธิ์และได้รับความเคารพนับถือมากที่สุดแห่งหนึ่งในกรุงโตเกียว ภายในประดิษฐานองค์เจ้าแม่กวนอิมทองคำมีผู้คนนิยมมากราบไหว้ขอพรเพื่อความเป็นสิริมงคลตลอดทั้งปี วัดพุทธที่เก่าแก่ที่สุดในภูมิภาคคันโต และมีผู้คนนิยมมากราบไหว้เพื่อความเป็นสิริมงคลตลอดทั้งปี</li>
-                                        <li>ถ่ายภาพเป็นที่ระลึกกับ ประตูฟ้าคำรณ ซึ่งมีโคมไฟสีแดง ขนาดยักษ์ที่มีความสูงถึง 4.5 เมตร เป็นโคมไฟที่ใหญ่ที่สุดในโลก เลือกชมและเช่าเครื่องรางของขลังอันศักดิ์สิทธ์ของวัดแห่งนี้</li>
-                                        <li>เดินต่อไปที่ “ถนนนากามิเซะ” (Nakamise dori) ถนนช๊อปปิ้ง ขายขนม ของฝาก ของที่ระลึก ขนมที่ซื้อกลับบ้านจะใส่กล่อง ห่อสวยงาม สามารถซื้อเป็นของฝากได้อย่างสวยงาม ส่วนขนมแบบที่กินเลยเช่น Soft ice cream, มันอัดแท่ง, ซาลาเปาทอด, ข้าวพองคล้ายขนมนางเล็ด ฯลฯ</li>
-                                        <li>เดินทางผ่านชม “โตเกียวสกายทรี” (Tokyo Sky tree) เป็นหอที่เพิ่งสร้างขึ้นมาใหม่และยังเป็นเหมือนแลนด์มาร์คของโตเกียวถ่ายรูปกับหอคอย ตั้งอยู่ใจกลางของ Sumida City Ward เป็นตึกที่สูงที่สุดในญี่ปุ่น มีความสูงถึง 634 เมตร บริเวณโดยรอบๆเป็นแหล่งช็อปปิ้งขนาดใหญ่รวมทั้งมีอควอเรียมอยู่ในนั้นด้วย โตเกียวสกายทรีถูกแบ่งเป็นสองขั้นโดยชั้นแรกสูง 350 เมตร และชั้นบนสูง 450 เมตร เป็นจุดชมวิวเมืองโตเกียวที่สวยที่สุดอีกจุดหนึ่งเนื่องจากสามารถชมวิวได้รอบทิศ 360 องศา </li>
-                                    </ul>
-                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
-                                    <ul>
-                                        <li>เดินทางสู่ วนอุทยานแห่งชาติ ฮาโกเน่ สถานที่ท่องเที่ยวที่ได้รับความนิยม โดยเป็นส่วนหนึ่งของอุทยานแห่งชาติ ฟูจิ-ฮาโกเน่-อิสึ ที่ผู้มาเยือนสามารถชื่นชมความงามแห่งธรรมชาติ และดอกไม้นานาพันธุ์หลากสีสันที่เบ่งบานตลอดทั้งปี ทิวทัศน์ที่สวยงามหลากหลาย รวมไปถึงภูเขาไฟฟูจิ ทะเลสาบอะชิ และ โอวาคุดานิ ฮาโกเน่ยังมีชื่อเสียงในเรื่องของการเป็นแหล่งน้ำพุร้อน ที่แปลกไปกว่านั้นคือ มีจำนวนน้ำพุร้อนมากถึง 17 แห่ง</li>
-                                        <li>นำท่าน ล่องเรือโจรสลัด ที่ทะเลสาบอาชิ ทะเลสาบที่ก่อตัวจากลาวาของภูเขาไฟฟูจิ หากวันใดอากาศสดใส ท่านจะได้สัมผัสกับทัศนียภาพอันงดงามของทะเลสาบที่มีภูเขาไฟฟูจิเป็นฉากหลัง</li>
-                                        <li>นำเดินทางสู่ โกเท็มบะ แฟคทอรี่ เอ้าท์เล็ต ให้ท่านได้ช้อปปิ้งอย่างจุใจกับสินค้าแบรนด์เนมที่แหล่งรวมสินค้านำเข้าและสินค้าแบรนด์ญี่ปุ่นโกอินเตอร์มากมาย เช่น MK MICHEL KLEIN, MORGAN, ELLE, CYNTHIA ROWLEY, DIFFUSIONE TESSILE ฯลฯ เลือกซื้อกระเป๋าไฮไซ BALLY, PRADA, GUCCI, DIESEL,TUMI,GAP, ARMANY ฯลฯ </li>
-                                        <li>ได้เวลานำท่านเข้าสู่ที่พัก </li>
-                                        <li>ให้ท่านได้ผ่อนคลายกับการ แช่น้ำแร่ออนเซ็นธรรมชาติ เชื่อว่าถ้าได้แช่น้ำแร่แล้ว จะทำให้ผิวพรรณสวยงามและช่วยให้ระบบหมุนเวียนโลหิตดีขึ้น </li>
-                                    </ul>
-                                </div>
-
-                                <h4>วันที่<span class="days"></span>ภูเขาไฟฟูจิ - หมู่บ้านโอชิโนะฮักไก - พิพิธภัณฑ์แผ่นดินไหว - ช้อปปิ้งสุดมันส์ชินจูกุ</h4>
-                                <div>
-                                    <div class="tour-map-wrapper">
-                                        <div class="tour-map">
-
-                                            <div class="product-slider">
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                            </div>                                                            
-
-                                        </div>
-
-                                        <div class="trips">
-                                            <div class="item">
-                                                <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
-                                                <p>เช้า & บ่าย</p>
-                                            </div>
-                                            <div class="item">
-                                                <h6><i class="far fa-moon"></i> โรงแรม</h6>
-                                                <p>พักที่โรงแรม NARITA GATEWAY HOTEL หรือเทียบเท่าระดับเดียวกัน</p>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
-                                        <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
-                                        <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
-                                    </div>
-                                    <br>
-                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>                                        
-
-                                <h4>วันที่<span class="days"></span>อิสระในกรุงโตเกียว หรือ ซื้อทัวร์เสริมโตเกียวดิสนีย์แลนด์</h4>
-                                <div>
-                                    <div class="tour-map-wrapper">
-                                        <div class="tour-map">
-
-                                            <div class="product-slider">
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                            </div>                                                            
-
-                                        </div>
-
-                                        <div class="trips">
-                                            <div class="item">
-                                                <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
-                                                <p>อาหารเช้าโรงแรม</p>
-                                            </div>
-                                            <div class="item">
-                                                <h6><i class="far fa-moon"></i> โรงแรม</h6>
-                                                <p>ที่พัก NARITA GATEWAY HOTEL หรือเทียบเท่าระดับเดียวกัน</p>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
-                                        <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
-                                        <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
-                                    </div>
-                                    <br>
-                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-
-                                <h4>วันที่<span class="days"></span>สนามบินนาริตะ – สนามบินดอนเมือง</h4>
-                                <div>
-                                    <div class="tour-map-wrapper">
-                                        <div class="tour-map">
-
-                                            <div class="product-slider">
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                                <div class="item">
-                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
-                                                </div>
-                                            </div>                                                            
-
-                                        </div>
-
-                                        <div class="trips">
-                                            <div class="item">
-                                                <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
-                                                <p>บริการอาหารและเครื่องดื่มบนเครื่อง</p>
-                                            </div>
-                                            <div class="item">
-                                                <h6><i class="far fa-moon"></i> โรงแรม</h6>
-                                                <p>-</p>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
-                                        <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
-                                        <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
-                                    </div>
-                                    <br>
-                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-
-                                </div>                                        
+                                @endforeach
+                                <!--                                <h4>วันที่<span class="days"></span>สนามบินนาริตะ – วัดอาซากุสะ – ผ่านชมโตเกียวสกายทรี – ล่องเรือโจรสลัด - โกเท็มบะ เอ้าต์เลต – บุฟเฟ่ต์ขาปูยักษ์ แช่ออนเซน</h4>
+                                                                <div>
+                                                                    <div class="tour-map-wrapper">
+                                                                        <div class="tour-map">
+                                
+                                                                            <div class="product-slider">
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                            </div>                                                            
+                                
+                                                                        </div>
+                                
+                                                                        <div class="trips">
+                                                                            <div class="item">
+                                                                                <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
+                                                                                <p>เที่ยง & เย็น</p>
+                                                                            </div>
+                                                                            <div class="item">
+                                                                                <h6><i class="far fa-moon"></i> โรงแรม</h6>
+                                                                                <p>พักที่โรงแรม FUJISAN GARDEN HOTEL หรือระดับเดียวกัน</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <br>
+                                                                        <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
+                                                                        <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
+                                                                        <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
+                                                                    </div>
+                                                                    <br>
+                                                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
+                                                                    <ul>
+                                                                        <li>08.00 น. ถึง เมืองนาริตะ ประเทศญี่ปุ่น หลังจากผ่านขั้นตอนศุลกากรแล้วนำท่านเดินทางสู่ที่พัก (เวลาที่ญี่ปุ่น เร็วกว่าเมืองไทย 2 ชั่วโมง กรุณาปรับนาฬิกาของท่านเพื่อความสะดวกในการนัดหมายเวลา)</li>
+                                                                        <li>นำท่านสู่ “กรุงโตเกียว” นมัสการเจ้าแม่กวนอิม “วัดอาซากุสะ” วัดที่ได้ชื่อว่าเป็นวัดที่มีความศักดิ์สิทธิ์และได้รับความเคารพนับถือมากที่สุดแห่งหนึ่งในกรุงโตเกียว ภายในประดิษฐานองค์เจ้าแม่กวนอิมทองคำมีผู้คนนิยมมากราบไหว้ขอพรเพื่อความเป็นสิริมงคลตลอดทั้งปี วัดพุทธที่เก่าแก่ที่สุดในภูมิภาคคันโต และมีผู้คนนิยมมากราบไหว้เพื่อความเป็นสิริมงคลตลอดทั้งปี</li>
+                                                                        <li>ถ่ายภาพเป็นที่ระลึกกับ ประตูฟ้าคำรณ ซึ่งมีโคมไฟสีแดง ขนาดยักษ์ที่มีความสูงถึง 4.5 เมตร เป็นโคมไฟที่ใหญ่ที่สุดในโลก เลือกชมและเช่าเครื่องรางของขลังอันศักดิ์สิทธ์ของวัดแห่งนี้</li>
+                                                                        <li>เดินต่อไปที่ “ถนนนากามิเซะ” (Nakamise dori) ถนนช๊อปปิ้ง ขายขนม ของฝาก ของที่ระลึก ขนมที่ซื้อกลับบ้านจะใส่กล่อง ห่อสวยงาม สามารถซื้อเป็นของฝากได้อย่างสวยงาม ส่วนขนมแบบที่กินเลยเช่น Soft ice cream, มันอัดแท่ง, ซาลาเปาทอด, ข้าวพองคล้ายขนมนางเล็ด ฯลฯ</li>
+                                                                        <li>เดินทางผ่านชม “โตเกียวสกายทรี” (Tokyo Sky tree) เป็นหอที่เพิ่งสร้างขึ้นมาใหม่และยังเป็นเหมือนแลนด์มาร์คของโตเกียวถ่ายรูปกับหอคอย ตั้งอยู่ใจกลางของ Sumida City Ward เป็นตึกที่สูงที่สุดในญี่ปุ่น มีความสูงถึง 634 เมตร บริเวณโดยรอบๆเป็นแหล่งช็อปปิ้งขนาดใหญ่รวมทั้งมีอควอเรียมอยู่ในนั้นด้วย โตเกียวสกายทรีถูกแบ่งเป็นสองขั้นโดยชั้นแรกสูง 350 เมตร และชั้นบนสูง 450 เมตร เป็นจุดชมวิวเมืองโตเกียวที่สวยที่สุดอีกจุดหนึ่งเนื่องจากสามารถชมวิวได้รอบทิศ 360 องศา </li>
+                                                                    </ul>
+                                                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
+                                                                    <ul>
+                                                                        <li>เดินทางสู่ วนอุทยานแห่งชาติ ฮาโกเน่ สถานที่ท่องเที่ยวที่ได้รับความนิยม โดยเป็นส่วนหนึ่งของอุทยานแห่งชาติ ฟูจิ-ฮาโกเน่-อิสึ ที่ผู้มาเยือนสามารถชื่นชมความงามแห่งธรรมชาติ และดอกไม้นานาพันธุ์หลากสีสันที่เบ่งบานตลอดทั้งปี ทิวทัศน์ที่สวยงามหลากหลาย รวมไปถึงภูเขาไฟฟูจิ ทะเลสาบอะชิ และ โอวาคุดานิ ฮาโกเน่ยังมีชื่อเสียงในเรื่องของการเป็นแหล่งน้ำพุร้อน ที่แปลกไปกว่านั้นคือ มีจำนวนน้ำพุร้อนมากถึง 17 แห่ง</li>
+                                                                        <li>นำท่าน ล่องเรือโจรสลัด ที่ทะเลสาบอาชิ ทะเลสาบที่ก่อตัวจากลาวาของภูเขาไฟฟูจิ หากวันใดอากาศสดใส ท่านจะได้สัมผัสกับทัศนียภาพอันงดงามของทะเลสาบที่มีภูเขาไฟฟูจิเป็นฉากหลัง</li>
+                                                                        <li>นำเดินทางสู่ โกเท็มบะ แฟคทอรี่ เอ้าท์เล็ต ให้ท่านได้ช้อปปิ้งอย่างจุใจกับสินค้าแบรนด์เนมที่แหล่งรวมสินค้านำเข้าและสินค้าแบรนด์ญี่ปุ่นโกอินเตอร์มากมาย เช่น MK MICHEL KLEIN, MORGAN, ELLE, CYNTHIA ROWLEY, DIFFUSIONE TESSILE ฯลฯ เลือกซื้อกระเป๋าไฮไซ BALLY, PRADA, GUCCI, DIESEL,TUMI,GAP, ARMANY ฯลฯ </li>
+                                                                        <li>ได้เวลานำท่านเข้าสู่ที่พัก </li>
+                                                                        <li>ให้ท่านได้ผ่อนคลายกับการ แช่น้ำแร่ออนเซ็นธรรมชาติ เชื่อว่าถ้าได้แช่น้ำแร่แล้ว จะทำให้ผิวพรรณสวยงามและช่วยให้ระบบหมุนเวียนโลหิตดีขึ้น </li>
+                                                                    </ul>
+                                                                </div>
+                                
+                                                                <h4>วันที่<span class="days"></span>ภูเขาไฟฟูจิ - หมู่บ้านโอชิโนะฮักไก - พิพิธภัณฑ์แผ่นดินไหว - ช้อปปิ้งสุดมันส์ชินจูกุ</h4>
+                                                                <div>
+                                                                    <div class="tour-map-wrapper">
+                                                                        <div class="tour-map">
+                                
+                                                                            <div class="product-slider">
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                            </div>                                                            
+                                
+                                                                        </div>
+                                
+                                                                        <div class="trips">
+                                                                            <div class="item">
+                                                                                <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
+                                                                                <p>เช้า & บ่าย</p>
+                                                                            </div>
+                                                                            <div class="item">
+                                                                                <h6><i class="far fa-moon"></i> โรงแรม</h6>
+                                                                                <p>พักที่โรงแรม NARITA GATEWAY HOTEL หรือเทียบเท่าระดับเดียวกัน</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <br>
+                                                                        <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
+                                                                        <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
+                                                                        <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
+                                                                    </div>
+                                                                    <br>
+                                                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
+                                                                    <ul>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
+                                                                    <ul>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                </div>                                        
+                                
+                                                                <h4>วันที่<span class="days"></span>อิสระในกรุงโตเกียว หรือ ซื้อทัวร์เสริมโตเกียวดิสนีย์แลนด์</h4>
+                                                                <div>
+                                                                    <div class="tour-map-wrapper">
+                                                                        <div class="tour-map">
+                                
+                                                                            <div class="product-slider">
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                            </div>                                                            
+                                
+                                                                        </div>
+                                
+                                                                        <div class="trips">
+                                                                            <div class="item">
+                                                                                <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
+                                                                                <p>อาหารเช้าโรงแรม</p>
+                                                                            </div>
+                                                                            <div class="item">
+                                                                                <h6><i class="far fa-moon"></i> โรงแรม</h6>
+                                                                                <p>ที่พัก NARITA GATEWAY HOTEL หรือเทียบเท่าระดับเดียวกัน</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <br>
+                                                                        <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
+                                                                        <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
+                                                                        <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
+                                                                    </div>
+                                                                    <br>
+                                                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
+                                                                    <ul>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
+                                                                    <ul>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                </div>
+                                
+                                                                <h4>วันที่<span class="days"></span>สนามบินนาริตะ – สนามบินดอนเมือง</h4>
+                                                                <div>
+                                                                    <div class="tour-map-wrapper">
+                                                                        <div class="tour-map">
+                                
+                                                                            <div class="product-slider">
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                                <div class="item">
+                                                                                    <img src="{{ asset('images/img/1.jpg')}}" alt="">
+                                                                                </div>
+                                                                            </div>                                                            
+                                
+                                                                        </div>
+                                
+                                                                        <div class="trips">
+                                                                            <div class="item">
+                                                                                <h6><i class="fas fa-utensils"></i> มื้ออาหาร</h6>
+                                                                                <p>บริการอาหารและเครื่องดื่มบนเครื่อง</p>
+                                                                            </div>
+                                                                            <div class="item">
+                                                                                <h6><i class="far fa-moon"></i> โรงแรม</h6>
+                                                                                <p>-</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <br>
+                                                                        <h6><i class="fas fa-spinner"></i> หมายเหตุ</h6>
+                                                                        <p>Departs: 08:00 am - 6:00 pm (Every 25-30 minutes)</p>
+                                                                        <p>Citysights NY Visitor Center (in lobby of Madame Tussauds) 234 W.42nd st. Times Square and 8th Avenue between 49th and 50th Streets, New York, NY 10018</p>
+                                                                    </div>
+                                                                    <br>
+                                                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงเช้า</h5>                                               
+                                                                    <ul>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                    <h5><span><i class="fas fa-circle-notch"></i></span>&nbsp;ช่วงบ่าย</h5>                                               
+                                                                    <ul>
+                                                                        <li></li>
+                                                                        <li></li>
+                                                                    </ul>
+                                
+                                                                </div>                                        -->
 
                             </div>
                         </div>
-
                         <div id="tabs-2">
                             <table class="good-to-know-table">
                                 <tbody>
@@ -1338,7 +1279,6 @@
             </div>
             <div class="col-md-3">
                 <div class="detail-sidebar">
-
                     <div class="call-to-book">
                         <i class="awe-icon awe-icon-phone"></i>
                         <em style="font-size: 15px">โทรสอบถาม/จอง</em>
@@ -1353,10 +1293,6 @@
 <!--                            <i class="awe-icon awe-icon-phone"></i>
                         <em style="font-size: 15px">จองผ่านไลน์</em>
                         <span style="font-size: 18px">@ tourhits</span>-->
-
-
-
-
                     <div class="booking-info">
                         <h3>- จองทัวร์นี้ -</h3>
                         <div class="form-select-date">
@@ -1364,7 +1300,17 @@
                                 <label>เลือกช่วงเวลาเดินทาง</label>
                                 <div class="form-item">
                                     <i class="awe-icon awe-icon-calendar"></i>
-                                    <input type="text" class="awe-calendar" value="Date">
+<!--                                    <input type="text" class="awe-calendar" value="Date">-->
+                                    <select class="form-control">
+                                        <option value="0">
+                                            กรุณาเลือกวันเดินทาง
+                                        </option>
+                                        @foreach ($tourPackageList as $tourPackageObj)
+                                        <option value="{{ $tourPackageObj->tour_package_id}}">
+                                            {{$tourPackageObj->tour_period_start}} - {{$tourPackageObj->tour_period_end}} @if($tourPackageObj->tour_period_status == 'Y')ว่าง@elseเต็ม@endif
+                                        </option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <span></span>
                             </div>
@@ -1418,8 +1364,8 @@
 <script type="text/javascript" src="{{ asset('js/tour/tour-detail.js') }}"></script>
 <script type="text/javascript">
 $(function () {
-    var tour_package_period_start = <?php echo json_encode($tourPackage->tour_period_start); ?>;
-    var tour_package_period_end = <?php echo json_encode($tourPackage->tour_period_end); ?>;
+    var tour_package_period_start = <?php echo json_encode($tourPackage->tour_package_period_start); ?>;
+    var tour_package_period_end = <?php echo json_encode($tourPackage->tour_package_period_end); ?>;
     var as = tour_package_period_start.split("-");
     var ae = tour_package_period_end.split("-");
     var ae2 = ae[2].split(' ');
