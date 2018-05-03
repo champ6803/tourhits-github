@@ -1,6 +1,17 @@
 @extends('layout.main')
 @section('page_title','Welcome to Tourhits')
 @section('main-content')
+
+<style>
+    .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {    
+    color: #EC2424;
+    border-bottom-color: #EC2424;
+    }
+    
+    .container-country .index-tab-flag{
+        margin-top: 40px;
+    }
+</style>
 <section class="hero-section">
     <div id="slider-revolution">
         <ul>
@@ -124,10 +135,31 @@
     <div class="container-country">
         <div class="destination-grid-content">
             <div class="section-title" margin-top: 30px;>
-
                  <h1>Tourhits.co (ทัวร์ฮิต) ศูนย์รวมทัวร์คุณภาพทั่วโลก</h1>
             </div>
-
+            <div class="index-tab-flag col-xs-12">
+                <div class="row">
+                        <div class="col-md-12 tabs-aboutpage">
+                            <div class="product-tabs tabs">
+                                <ul>
+                                    <li>
+                                        <a href="#tabs-1">ทัวร์ทั้งหมด</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tabs-2">ทัวร์เอเชีย</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tabs-3">ทัวร์ยุโรป</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tabs-3">ทัวร์ทวีปอื่นๆ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>    
+            </div>
+            
             <div class=”flag-all”>
                 <div class="row">
                     <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ญี่ปุ่น?country=1')}}">
