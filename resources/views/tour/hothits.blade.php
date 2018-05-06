@@ -11,7 +11,7 @@
     .hothits-item{
         max-width: 280px;
         position: relative;
-        box-shadow: 0px 0px 6px rgba(0,0,0,0.25);
+        box-shadow: 0px 0px 6px rgba(0,0,0,0.15);
         margin: 10px 10px 10px 0px;
         margin-left: auto;
         margin-right: auto;
