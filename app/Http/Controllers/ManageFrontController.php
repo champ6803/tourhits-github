@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Input as Input;
 use App\Models\Country;
 use App\Models\Tour_Country;
+use App\Models\Company;
 /**
  * Description of AdminController
  *
@@ -19,6 +20,9 @@ class ManageFrontController extends Controller {
     
     public function manage_front_country(){
         return view('manage-front.manage-front-country');
+    }
+    public function profile(){
+        return view('manage-front.profile');
     }
     
     public function searchAllCountry(){
@@ -91,6 +95,18 @@ class ManageFrontController extends Controller {
              window.location.href='manage-front-country';
              </script>";
              
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
+    
+    public function searchCompanyByCompanyCode(){
+         $companyModel = new Company();
+         try {
+            $company_code = $_POST['company_code'];
+            $company= $companyModel->getCompanyByCompanyCode($company_code);
+            return response($company);
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);

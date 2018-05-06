@@ -440,7 +440,7 @@
                                 <li><a href="pages/app/app-contact.html">ทัวร์แนะนำ</a></li>
                                 <li><a href="pages/app/app-ticket.html">สปอนเซอร์</a></li>
                                 <li><a href="pages/app/calendar.html">รีวิว</a></li>
-                                <li><a href="pages/app/profile.html">การติดต่อ</a></li>
+                                <li><a href="{{ url('profile')}}">การติดต่อ</a></li>
                             </ul>
                         </li>
                         <li id="managetour" class="treeview">

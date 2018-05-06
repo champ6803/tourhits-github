@@ -132,3 +132,7 @@ Route::post('updateTourCountry', 'ManageFrontController@updateTourCountry');
 Route::get('admin','AdminLoginController@login_admin');
 
 Route::get('loading','LoadingScreenController@loading_screen');
+
+Route::get('profile','ManageFrontController@profile');
+
+Route::post('searchCompanyByCompanyCode','ManageFrontController@searchCompanyByCompanyCode');

@@ -31,7 +31,7 @@
         </div>  </fieldset>
         </form><br> <br>
         <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="overflow-x: scroll;">
         <table id="tourCountryTable" class="display responsive nowrap">
         <thead>
             <tr>
