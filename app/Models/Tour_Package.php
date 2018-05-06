@@ -111,4 +111,18 @@ class Tour_Package extends Model {
             return $e;
         }
     }
+    
+    public function getTourDetailList($tour_package_id) {
+        try {
+            $tourPackageList = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                    ->join('tour_airline', 'tour_package.tour_package_id', '=', 'tour_airline.tour_package_id')
+                    ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
+                    ->join('tour_period', 'tour_period.tour_package_id', 'tour_package.tour_package_id')
+                    ->where('tour_package.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            return $tourPackageList;
+        } catch (\Exception $e) {
+            return $e;
+        }
+    }
 }

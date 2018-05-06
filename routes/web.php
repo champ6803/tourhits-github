@@ -31,7 +31,8 @@ Route::get('adminlogin','LoginController@adminLogin');
 
 Route::get('dashboard','AdminController@dashboard');
 
-Route::get('tour-detail/{tour_pakage_id}/{tour_package_name}','TourController@tour_detail');
+Route::get('{tour_country}/{tour_pakage_id}/{tour_package_name}','TourController@tour_detail');
+
 
 Route::get('manage-route','AdminController@manage_route');
 
@@ -136,3 +137,5 @@ Route::get('loading','LoadingScreenController@loading_screen');
 Route::get('profile','ManageFrontController@profile');
 
 Route::post('searchCompanyByCompanyCode','ManageFrontController@searchCompanyByCompanyCode');
+
+Route::get('tourhot','TourhotController@tour_hot');
