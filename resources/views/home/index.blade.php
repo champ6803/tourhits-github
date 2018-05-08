@@ -4,10 +4,10 @@
 
 <style>
     .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {    
-    color: #EC2424;
-    border-bottom-color: #EC2424;
+        color: #EC2424;
+        border-bottom-color: #EC2424;
     }
-    
+
     .container-country .index-tab-flag{
         margin-top: 40px;
     }
@@ -52,14 +52,14 @@
                             
                                             <div href="#" class="tp-caption lfr fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2000">Take you to every corner of the world</div>
                         </li> -->
-            
+
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="images/bg/indexbanner3.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="images/bg/indexbanner4.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
-            
+
         </ul>
     </div>
 </section>
@@ -139,27 +139,27 @@
             </div>
             <div class="index-tab-flag col-xs-12">
                 <div class="row">
-                        <div class="col-md-12 tabs-aboutpage">
-                            <div class="product-tabs tabs">
-                                <ul>
-                                    <li>
-                                        <a href="#tabs-1">ทัวร์ทั้งหมด</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tabs-2">ทัวร์เอเชีย</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tabs-3">ทัวร์ยุโรป</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tabs-3">ทัวร์ทวีปอื่นๆ</a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="col-md-12 tabs-aboutpage">
+                        <div class="product-tabs tabs">
+                            <ul>
+                                <li>
+                                    <a href="#tabs-1">ทัวร์ทั้งหมด</a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-2">ทัวร์เอเชีย</a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-3">ทัวร์ยุโรป</a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-3">ทัวร์ทวีปอื่นๆ</a>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
                 </div>    
             </div>
-            
+
             <div class=”flag-all”>
                 <div class="row">
                     <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ญี่ปุ่น?country=1')}}">
@@ -373,245 +373,500 @@
                 ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
             </div>
         </div>
-
-
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3" align="center">
-                <div class="thumbnail">
-                    <a href="{{ url('tour-detail') }}">
-                        <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
-                            <div class="tour-footer">
-                                <div class="pull-left">
-                                    <span class="flag">
-                                        <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
-                                    </span>
+            <div class="col-md-12">
+                <!-- Controls -->
+                <div class="controls pull-right hidden-xs">
+                    <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-1"
+                       data-slide="prev"></a><a class="right fa fa-chevron-right btn btn-primary" href="#carousel-1"
+                       data-slide="next"></a>
+                </div>
+            </div>
+        </div>
+        <div id="carousel-1" class="carousel slide hidden-xs widthcar" data-ride="carousel" style="padding-top:10px;">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div>                                        
+                                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         
+                                                    <div class="card-price">฿49,900</div>                                       
+                                                </div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="tour-header">
-                                <div class="pull-right">
-                                    <span class="days">
-                                        3 วัน 2 คืน
-                                    </span>
-                                </div>
-                                <span class="clear"></span>
-                            </div>
-                            <div class="tour-bottom-right">
-                                <div>
-                                    <span class="tag">
-                                        #6600
-                                    </span>
-                                </div>
-                                <span class="clear"></span>                               
                             </div>
                         </div>
-                    </a>
-                    <div class="caption">
-                        <div class="tabbable">
-                            <div class="tab-content">
-                                <div id="tab1" class="tab-pane active">
-                                    <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
-                                        เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
-                                        ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
-                                    <hr>
-                                    <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                    <hr>
-                                    <div>                                        
-                                        <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         
-                                        <div class="card-price">฿49,900</div>                                       
+                        <div class="col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
                                     </div>
-                                    <hr>
-                                    <div class="button-card">
-                                        <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/airasia_x.png" title="Air Asia X"></div>                                         
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div id="tab2" class="tab-pane">tab2 content</div>
-                                <div id="tab3" class="tab-pane">tab3 content</div>
                             </div>
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
-                                <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
-                                <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
-                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3" align="center">
-                <div class="thumbnail">
-                    <a href="{{ url('tour-detail') }}">
-                        <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
-                            <div class="tour-footer">
-                                <div class="pull-left">
-                                    <span class="flag">
-                                        <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="tour-header">
-                                <div class="pull-right">
-                                    <span class="days">
-                                        3 วัน 2 คืน
-                                    </span>
-                                </div>
-                                <span class="clear"></span>
-                            </div>
-                            <div class="tour-bottom-right">
-                                <div>
-                                    <span class="tag">
-                                        #6600
-                                    </span>
-                                </div>
-                                <span class="clear"></span>                               
-                            </div>
-                        </div>
-                    </a>
-                    <div class="caption">
-                        <div class="tabbable">
-                            <div class="tab-content">
-                                <div id="tab1" class="tab-pane active">
-                                    <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
-                                        เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
-                                        ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
-                                    <hr>
-                                    <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                    <hr>
-                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/airasia_x.png" title="Air Asia X"></div>                                         
-                                    <div class="card-price">฿49,900</div>
-                                    <hr>
-                                    <div class="button-card">
-                                        <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div>                                        
+                                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         
+                                                    <div class="card-price">฿49,900</div>                                       
+                                                </div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div id="tab2" class="tab-pane">tab2 content</div>
-                                <div id="tab3" class="tab-pane">tab3 content</div>
-                            </div>
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
-                                <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
-                                <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3" align="center">
-                <div class="thumbnail">
-                    <a href="{{ url('tour-detail') }}">
-                        <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
-                            <div class="tour-footer">
-                                <div class="pull-left">
-                                    <span class="flag">
-                                        <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="tour-header">
-                                <div class="pull-right">
-                                    <span class="days">
-                                        3 วัน 2 คืน
-                                    </span>
-                                </div>
-                                <span class="clear"></span>
-                            </div>
-                            <div class="tour-bottom-right">
-                                <div>
-                                    <span class="tag">
-                                        #6600
-                                    </span>
-                                </div>
-                                <span class="clear"></span>                               
                             </div>
                         </div>
-                    </a>
-                    <div class="caption">
-                        <div class="tabbable">
-                            <div class="tab-content">
-                                <div id="tab1" class="tab-pane active">
-                                    <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
-                                        เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
-                                        ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
-                                    <hr>
-                                    <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                    <hr>
-                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
-                                    <div class="card-price">฿49,900</div>
-                                    <hr>
-                                    <div class="button-card">
-                                        <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/airasia_x.png" title="Air Asia X"></div>                                         
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div id="tab2" class="tab-pane">tab2 content</div>
-                                <div id="tab3" class="tab-pane">tab3 content</div>
-                            </div>
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
-                                <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
-                                <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3" align="center">
-                <div class="thumbnail">
-                    <a href="{{ url('tour-detail') }}">
-                        <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
-                            <div class="tour-footer">
-                                <div class="pull-left">
-                                    <span class="flag">
-                                        <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="tour-header">
-                                <div class="pull-right">
-                                    <span class="days">
-                                        3 วัน 2 คืน
-                                    </span>
-                                </div>
-                                <span class="clear"></span>
-                            </div>
-                            <div class="tour-bottom-right">
-                                <div>
-                                    <span class="tag">
-                                        #6600
-                                    </span>
-                                </div>
-                                <span class="clear"></span>                               
                             </div>
                         </div>
-                    </a>
-                    <div class="caption">
-                        <div class="tabbable">
-                            <div class="tab-content">
-                                <div id="tab1" class="tab-pane active">
-                                    <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
-                                        เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
-                                        ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
-                                    <hr>
-                                    <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                    <hr>
-                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
-                                    <div class="card-price">฿49,900</div>
-                                    <hr>
-                                    <div class="button-card">
-                                        <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div id="tab2" class="tab-pane">tab2 content</div>
-                                <div id="tab3" class="tab-pane">tab3 content</div>
                             </div>
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
-                                <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
-                                <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
-                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -619,7 +874,6 @@
         </div>
 
         <a href="#" class="btn btn-nextpage">ดูแพ็คเกจทัวร์ทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a> 
-
     </div>
 </section>
 
@@ -649,250 +903,507 @@
     <div class="container">
         <div class="package-hit-title">
             <div class="section-title">
-                <h1><i class="fas fa-fire" style='color: #EC2424;'></i>&nbsp;แพ็คเกจยอดนิยม</h1>
+                <h1><i class="fas fa-fire" style='color: #EC2424;'></i>&nbsp;แพ็คเกจลดราคา</h1>
                 <div class="line-gradient"></div>
             </div>
             <div class='section-descripion'>
                 ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
             </div>
         </div>
-
-
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3" align="center">
-                <div class="thumbnail">
-                    <a href="{{ url('tour-detail') }}">
-                        <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
-                            <div class="tour-footer">
-                                <div class="pull-left">
-                                    <span class="flag">
-                                        <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="tour-header">
-                                <div class="pull-right">
-                                    <span class="days">
-                                        3 วัน 2 คืน
-                                    </span>
-                                </div>
-                                <span class="clear"></span>
-                            </div>
-                            <div class="tour-bottom-right">
-                                <div>
-                                    <span class="tag">
-                                        #6600
-                                    </span>
-                                </div>
-                                <span class="clear"></span>                               
-                            </div>
-                        </div>
-                    </a>
-                    <div class="caption">
-                        <div class="tabbable">
-                            <div class="tab-content">
-                                <div id="tab1" class="tab-pane active">
-                                    <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
-                                        เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
-                                        ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
-                                    <hr>
-                                    <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                    <hr>
-                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
-                                    <div class="card-price">฿49,900</div>
-                                    <hr>
-                                    <div class="button-card">
-                                        <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+            <div class="col-md-12">
+                <!-- Controls -->
+                <div class="controls pull-right hidden-xs">
+                    <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-2"
+                       data-slide="prev"></a><a class="right fa fa-chevron-right btn btn-primary" href="#carousel-2"
+                       data-slide="next"></a>
+                </div>
+            </div>
+        </div>
+        <div id="carousel-2" class="carousel slide hidden-xs" data-ride="carousel" style="padding-top:10px;">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div>                                        
+                                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         
+                                                    <div class="card-price">฿49,900</div>                                       
+                                                </div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div id="tab2" class="tab-pane">tab2 content</div>
-                                <div id="tab3" class="tab-pane">tab3 content</div>
                             </div>
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
-                                <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
-                                <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
-                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/airasia_x.png" title="Air Asia X"></div>                                         
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3" align="center">
-                <div class="thumbnail">
-                    <a href="{{ url('tour-detail') }}">
-                        <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
-                            <div class="tour-footer">
-                                <div class="pull-left">
-                                    <span class="flag">
-                                        <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="tour-header">
-                                <div class="pull-right">
-                                    <span class="days">
-                                        3 วัน 2 คืน
-                                    </span>
-                                </div>
-                                <span class="clear"></span>
-                            </div>
-                            <div class="tour-bottom-right">
-                                <div>
-                                    <span class="tag">
-                                        #6600
-                                    </span>
-                                </div>
-                                <span class="clear"></span>                               
-                            </div>
-                        </div>
-                    </a>
-                    <div class="caption">
-                        <div class="tabbable">
-                            <div class="tab-content">
-                                <div id="tab1" class="tab-pane active">
-                                    <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
-                                        เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
-                                        ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
-                                    <hr>
-                                    <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                    <hr>
-                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
-                                    <div class="card-price">฿49,900</div>
-                                    <hr>
-                                    <div class="button-card">
-                                        <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div>                                        
+                                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         
+                                                    <div class="card-price">฿49,900</div>                                       
+                                                </div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div id="tab2" class="tab-pane">tab2 content</div>
-                                <div id="tab3" class="tab-pane">tab3 content</div>
-                            </div>
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
-                                <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
-                                <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3" align="center">
-                <div class="thumbnail">
-                    <a href="{{ url('tour-detail') }}">
-                        <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
-                            <div class="tour-footer">
-                                <div class="pull-left">
-                                    <span class="flag">
-                                        <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="tour-header">
-                                <div class="pull-right">
-                                    <span class="days">
-                                        3 วัน 2 คืน
-                                    </span>
-                                </div>
-                                <span class="clear"></span>
-                            </div>
-                            <div class="tour-bottom-right">
-                                <div>
-                                    <span class="tag">
-                                        #6600
-                                    </span>
-                                </div>
-                                <span class="clear"></span>                               
                             </div>
                         </div>
-                    </a>
-                    <div class="caption">
-                        <div class="tabbable">
-                            <div class="tab-content">
-                                <div id="tab1" class="tab-pane active">
-                                    <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
-                                        เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
-                                        ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
-                                    <hr>
-                                    <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                    <hr>
-                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
-                                    <div class="card-price">฿49,900</div>
-                                    <hr>
-                                    <div class="button-card">
-                                        <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/airasia_x.png" title="Air Asia X"></div>                                         
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div id="tab2" class="tab-pane">tab2 content</div>
-                                <div id="tab3" class="tab-pane">tab3 content</div>
-                            </div>
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
-                                <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
-                                <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3" align="center">
-                <div class="thumbnail">
-                    <a href="{{ url('tour-detail') }}">
-                        <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
-                            <div class="tour-footer">
-                                <div class="pull-left">
-                                    <span class="flag">
-                                        <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="tour-header">
-                                <div class="pull-right">
-                                    <span class="days">
-                                        3 วัน 2 คืน
-                                    </span>
-                                </div>
-                                <span class="clear"></span>
-                            </div>
-                            <div class="tour-bottom-right">
-                                <div>
-                                    <span class="tag">
-                                        #6600
-                                    </span>
-                                </div>
-                                <span class="clear"></span>                               
                             </div>
                         </div>
-                    </a>
-                    <div class="caption">
-                        <div class="tabbable">
-                            <div class="tab-content">
-                                <div id="tab1" class="tab-pane active">
-                                    <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
-                                        เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
-                                        ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
-                                    <hr>
-                                    <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                    <hr>
-                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         <div class="card-price">฿49,900</div>
-                                    <hr>
-                                    <div class="button-card">
-                                        <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
-                                        <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div id="tab2" class="tab-pane">tab2 content</div>
-                                <div id="tab3" class="tab-pane">tab3 content</div>
                             </div>
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
-                                <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
-                                <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
-                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3" align="center">
+                            <div class="thumbnail">
+                                <a href="{{ url('tour-detail') }}">
+                                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
+                                        <div class="tour-footer">
+                                            <div class="pull-left">
+                                                <span class="flag">
+                                                    <img width="70%" alt="ทัวร์เวียดนาม" src="https://d4ulp9jtgcw4i.cloudfront.net/assets/countries/Vietnam/flag-9fb374d4ac69e1ef0f871250a59f1077.png">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tour-header">
+                                            <div class="pull-right">
+                                                <span class="days">
+                                                    3 วัน 2 คืน
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>
+                                        </div>
+                                        <div class="tour-bottom-right">
+                                            <div>
+                                                <span class="tag">
+                                                    #6600
+                                                </span>
+                                            </div>
+                                            <span class="clear"></span>                               
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="caption">
+                                    <div class="tabbable">
+                                        <div class="tab-content">
+                                            <div id="tab1" class="tab-pane active">
+                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
+                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
+                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <hr>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <hr>
+                                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>
+                                                <div class="card-price">฿49,900</div>
+                                                <hr>
+                                                <div class="button-card">
+                                                    <a href="#" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>
+                                                    <a href="#" class="btn btn-detail">ดูรายละเอียด</a>
+                                                </div>
+                                            </div>
+                                            <div id="tab2" class="tab-pane">tab2 content</div>
+                                            <div id="tab3" class="tab-pane">tab3 content</div>
+                                        </div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">แพ็คเกจ</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">ไฮไลท์</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">ช่วงเวลา</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
