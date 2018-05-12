@@ -95,6 +95,7 @@
         color: #EC2424;
         display: inline;}
     
+    /* ตารางราคา */
     body.tours.show:not(.searches) .days-from:after{
         position: absolute;
         top: 7.5px;
@@ -722,6 +723,225 @@
                 </div>
             </div>
         </div>
+    
+<!--period-table original   -->
+            <div class="container">
+            <div class="col-md-9">
+                    <div class="tabledate-form-to">
+                        <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
+                            <thead class="thead-light">
+                            <tr>
+                              <th colspan="2" class="align-middle py-4">วันเดินทาง</th>
+                              <th class="align-middle py-4">
+                                <span class="d-inline d-sm-none">ราคา</span>
+                                <span class="d-none d-sm-inline">ผู้ใหญ่ <br> (พัก 2-3 ท่าน)</span>
+                              </th>
+                              <th class="align-middle d-none d-sm-table-cell py-4">เด็ก <br> (ไม่เพิ่มเตียง)</th>
+                              <th class="align-middle d-none d-sm-table-cell py-4"></th>
+                            </tr>
+                            </thead>
+                                <tbody>
+<!--                                พีเรียด 1    -->                                    
+                                    <tr id="period_7001265_header" class="period-row-header unavailable">
+
+                                      <td class="align-middle days-from text-sm-center " data-holidays-count="ติด 2 วันหยุด">
+                                        <span class="date">
+                                          พ  9 พ.ค.
+                                        </span>
+                                        <span class="year d-none d-sm-inline">
+                                          18
+                                        </span>
+                                      </td>
+                                      <td class="align-middle days-to text-sm-center">
+                                        <span class="date">
+                                          อา 13 พ.ค.
+                                        </span>
+                                        <span class="d-none year d-sm-inline">
+                                          18
+                                        </span>
+                                      </td>
+                                      <td class="align-middle d-none d-sm-table-cell py-3 text-center">
+                                          ฿24,991
+                                      </td>
+                                      <td class="align-middle d-none d-sm-table-cell py-3 text-center">
+                                          ฿23,991
+                                      </td>
+                                      <td class="d-none d-sm-table-cell align-middle">
+                                          <button type="button" class="btn btn-outline-secondary btn-sm btn-table-cell disabled" disabled="">เต็ม</button>
+                                      </td>
+                                      <td width="100" class="d-sm-none d-table-cell align-middle">
+                                          ฿24,991
+                                        <br>
+                                          <button type="button" class="btn btn-outline-secondary btn-sm btn-table-cell py-0 disabled" disabled="">เต็ม</button>
+                                      </td>
+                                    </tr>
+<!--                                พีเรียด 2    -->
+                                    <tr id="period_1_header" class="period-row-header ">
+
+                                      <td class="align-middle days-from text-sm-center " data-holidays-count="ติด 3 วันหยุด">
+                                        <span class="date">
+                                          ศ 25 พ.ค.
+                                        </span>
+                                        <span class="year d-none d-sm-inline">
+                                          18
+                                        </span>
+                                         
+                                      </td>
+                                      <td class="align-middle days-to text-sm-center">
+                                        <span class="date">
+                                          อ 29 พ.ค.
+                                        </span>
+                                        <span class="d-none year d-sm-inline">
+                                          18
+                                        </span>
+                                      </td>
+                                      <td class="align-middle d-none d-sm-table-cell py-3 text-center">
+                                          ฿29,991
+                                      </td>
+                                      <td class="align-middle d-none d-sm-table-cell py-3 text-center">
+                                          ฿28,991
+                                      </td>
+                                      <td class="d-none d-sm-table-cell align-middle">
+                                          <button type="button" class="btn btn-outline-orange btn-sm btn-table-cell" data-toggle="collapse" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods>">เลือก</button>
+                                      </td>
+                                      <td width="100" class="d-sm-none d-table-cell align-middle">
+                                          ฿29,991
+                                        <br>
+                                          <button type="button" class="btn btn-outline-orange btn-sm btn-table-cell py-0" data-toggle="collapse" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods>">เลือก</button>
+                                      </td>
+                                    </tr>
+                                    
+                                    <tr class="collapse period_7001273_table period_hidden holiday_period" aria-labelledby="period_1_header" data-parent="#periods_table" data-period-id="7001273">
+                                      <td colspan="5" class="holidays-date text-left text-muted px-2">
+                                          วันหยุด : ส. / อา. / อ. (วิสาขบูชา)
+                                      </td>
+                                    </tr>                                                                                                         
+                                    <tr class="collapse period_7001273_table period_hidden holiday_period" aria-labelledby="period_1_header" data-parent="#periods_table" data-period-id="7001273">
+                                       <td colspan="8" class="p-0">
+                                          <div class="p-8">
+                                            <table class="table table-border-0 mb-0">
+                                              <thead>
+                                                <tr>
+                                                  <th colspan="2" class="p-2 text-left">ราคา1</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                    <td class="p-2 text-left">ผู้ใหญ่ (พัก 2 - 3 คน)</td>
+                                                    <td class="p-2 text-right">
+                                                        ฿27,991
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="p-2 text-left">ผู้ใหญ่ (พักเดี่ยว)</td>
+                                                    <td class="p-2 text-right">
+                                                        ฿35,891
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="p-2 text-left">เด็ก (เพิ่มเตียง)</td>
+                                                    <td class="p-2 text-right">
+                                                        ฿27,991
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="p-2 text-left">เด็ก (ไม่เพิ่มเตียง)</td>
+                                                    <td class="p-2 text-right">
+                                                        ฿26,991
+                                                    </td>
+                                                  </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                          <a class="btn btn-orange btn-block btn-lg rounded-0" href="/orders/new?period_id=7001268&amp;start=2018-05-16&amp;tour_id=8034">จองทัวร์ช่วงเวลานี้</a>
+                                        </td>
+                                    </tr>
+<!--                                พีเรียด 3    -->
+                                    <tr id="period_7083164_header" class="period-row-header ">
+          
+                                        <td class="align-middle days-from text-sm-center" data-holidays-count="ติด 2 วันหยุด">
+                                          <span class="date">
+                                            พ  6 มิ.ย.
+                                          </span>
+                                          <span class="year d-none d-sm-inline">
+                                            18
+                                          </span>
+                                        </td>
+                                        <td class="align-middle days-to text-sm-center">
+                                          <span class="date">
+                                            อา 10 มิ.ย.
+                                          </span>
+                                          <span class="d-none year d-sm-inline">
+                                            18
+                                          </span>
+                                        </td>
+                                        <td class="align-middle d-none d-sm-table-cell py-3 text-center">
+                                            ฿29,991
+                                        </td>
+                                        <td class="align-middle d-none d-sm-table-cell py-3 text-center">
+                                            ฿28,991
+                                        </td>
+                                        <td class="d-none d-sm-table-cell align-middle">
+                                            <button type="button" class="btn btn-outline-orange btn-sm btn-table-cell" data-toggle="collapse" data-target=".period_7083164_table" aria-expanded="false" aria-controls="periods>">เลือก</button>
+                                        </td>
+                                        <td width="100" class="d-sm-none d-table-cell align-middle">
+                                            ฿29,991
+                                          <br>
+                                            <button type="button" class="btn btn-outline-orange btn-sm btn-table-cell py-0" data-toggle="collapse" data-target=".period_7083164_table" aria-expanded="false" aria-controls="periods>">เลือก</button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr class="period_7083164_table period_hidden holiday_period collapse" aria-labelledby="period_7083164_header" data-parent="#periods_table" data-period-id="7083164" style="">
+                                        <td colspan="5" class="holidays-date text-left text-muted px-2">
+                                            วันหยุด : ส. / อา.
+                                        </td>
+                                    </tr>
+                                    <tr class="period_7083164_table period-row-table period_hidden collapse " aria-labelledby="period_7083164_header" data-parent="#periods_table" data-period-id="7083164" style="">
+                                        <td colspan="8" class="p-0">
+                                          <div class="p-8">
+                                            <table class="table table-border-0 mb-0">
+                                              <thead>
+                                                <tr>
+                                                  <th colspan="2" class="p-2 text-left">ราคา2</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                    <td class="p-2 text-left">ผู้ใหญ่ (พัก 2 - 3 คน)</td>
+                                                    <td class="p-2 text-right">
+                                                        ฿29,991
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="p-2 text-left">ผู้ใหญ่ (พักเดี่ยว)</td>
+                                                    <td class="p-2 text-right">
+                                                        ฿37,891
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="p-2 text-left">เด็ก (เพิ่มเตียง)</td>
+                                                    <td class="p-2 text-right">
+                                                        ฿29,991
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="p-2 text-left">เด็ก (ไม่เพิ่มเตียง)</td>
+                                                    <td class="p-2 text-right">
+                                                        ฿28,991
+                                                    </td>
+                                                  </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                          <a class="btn btn-orange btn-block btn-lg rounded-0" href="/orders/new?period_id=7083164&amp;start=2018-06-06&amp;tour_id=8034">จองทัวร์ช่วงเวลานี้</a>
+                                        </td>
+                                    </tr>         
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    </div>
+<!--end period-table-->   
         <div class="row">
             <div class="col-md-9">
                 <div class="product-tabs tabs">
@@ -1458,6 +1678,8 @@
                     </div>
                 </div>
             </div>
+          
+<!--          กล่องจอง -->
             <div class="col-md-3">
                 <div class="detail-sidebar">
                     <div class="call-to-book">
@@ -1537,8 +1759,16 @@
                 </div>
             </div>
             
-            <div class="row">
-                <div class="col-md-12">
+
+
+        </div>
+    </div>
+</section>
+
+    <!--period-table    -->
+    <div class="container">
+        <div class="row">  
+            <div class="col-md-9">
                     <div class="tabledate-form-to">
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                             <thead class="thead-light">
@@ -1553,6 +1783,7 @@
                             </tr>
                             </thead>
                                 <tbody>
+<!--                                พีเรียด 1    -->                                    
                                     <tr id="period_7001265_header" class="period-row-header unavailable">
 
                                       <td class="align-middle days-from text-sm-center " data-holidays-count="ติด 2 วันหยุด">
@@ -1586,8 +1817,8 @@
                                           <button type="button" class="btn btn-outline-secondary btn-sm btn-table-cell py-0 disabled" disabled="">เต็ม</button>
                                       </td>
                                     </tr>
-
-                                    <tr id="period_7001273_header" class="period-row-header ">
+<!--                                พีเรียด 2    -->
+                                    <tr id="period_1_header" class="period-row-header ">
 
                                       <td class="align-middle days-from text-sm-center " data-holidays-count="ติด 3 วันหยุด">
                                         <span class="date">
@@ -1596,6 +1827,7 @@
                                         <span class="year d-none d-sm-inline">
                                           18
                                         </span>
+                                         
                                       </td>
                                       <td class="align-middle days-to text-sm-center">
                                         <span class="date">
@@ -1620,20 +1852,19 @@
                                           <button type="button" class="btn btn-outline-orange btn-sm btn-table-cell py-0" data-toggle="collapse" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods>">เลือก</button>
                                       </td>
                                     </tr>
-                                    <tr class="collapse period_7001273_table period_hidden holiday_period" aria-labelledby="period_7001273_header" data-parent="#periods_table" data-period-id="7001273">
+                                    
+                                    <tr class="collapse period_7001273_table period_hidden holiday_period" aria-labelledby="period_1_header" data-parent="#periods_table" data-period-id="7001273">
                                       <td colspan="5" class="holidays-date text-left text-muted px-2">
                                           วันหยุด : ส. / อา. / อ. (วิสาขบูชา)
                                       </td>
-                                    </tr>
-                                    
-                                                                       
-                                    <tr class="collapse period_7001273_table period_hidden holiday_period" aria-labelledby="period_7001273_header" data-parent="#periods_table" data-period-id="7001273">
+                                    </tr>                                                                                                         
+                                    <tr class="collapse period_7001273_table period_hidden holiday_period" aria-labelledby="period_1_header" data-parent="#periods_table" data-period-id="7001273">
                                        <td colspan="8" class="p-0">
                                           <div class="p-8">
                                             <table class="table table-border-0 mb-0">
                                               <thead>
                                                 <tr>
-                                                  <th colspan="2" class="p-2 text-left">ราคา</th>
+                                                  <th colspan="2" class="p-2 text-left">ราคา1</th>
                                                 </tr>
                                               </thead>
                                               <tbody>
@@ -1667,141 +1898,93 @@
                                           <a class="btn btn-orange btn-block btn-lg rounded-0" href="/orders/new?period_id=7001268&amp;start=2018-05-16&amp;tour_id=8034">จองทัวร์ช่วงเวลานี้</a>
                                         </td>
                                     </tr>
-                                    
-                                                                        <tr id="period_7001273_header" class="period-row-header ">
-
-                                      <td class="align-middle days-from text-sm-center " data-holidays-count="ติด 3 วันหยุด">
-                                        <span class="date">
-                                          ศ 25 พ.ค.
-                                        </span>
-                                        <span class="year d-none d-sm-inline">
-                                          18
-                                        </span>
-                                      </td>
-                                      <td class="align-middle days-to text-sm-center">
-                                        <span class="date">
-                                          อ 29 พ.ค.
-                                        </span>
-                                        <span class="d-none year d-sm-inline">
-                                          18
-                                        </span>
-                                      </td>
-                                      <td class="align-middle d-none d-sm-table-cell py-3 text-center">
-                                          ฿29,991
-                                      </td>
-                                      <td class="align-middle d-none d-sm-table-cell py-3 text-center">
-                                          ฿28,991
-                                      </td>
-                                      <td class="d-none d-sm-table-cell align-middle">
-                                          <button type="button" class="btn btn-outline-orange btn-sm btn-table-cell" data-toggle="collapse" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods>">เลือก</button>
-                                      </td>
-                                      <td width="100" class="d-sm-none d-table-cell align-middle">
-                                          ฿29,991
-                                        <br>
-                                          <button type="button" class="btn btn-outline-orange btn-sm btn-table-cell py-0" data-toggle="collapse" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods>">เลือก</button>
-                                      </td>
-                                    </tr>
-                                    <tr class="collapse period_7001273_table period_hidden holiday_period" aria-labelledby="period_7001273_header" data-parent="#periods_table" data-period-id="7001273">
-                                      <td colspan="5" class="holidays-date text-left text-muted px-2">
-                                          วันหยุด : ส. / อา. / อ. (วิสาขบูชา)
-                                      </td>
-                                    </tr>
-                                    
-                                                                       
-                                    <tr class="collapse period_7001273_table period_hidden holiday_period" aria-labelledby="period_7001273_header" data-parent="#periods_table" data-period-id="7001273">
-                                       <td colspan="8" class="p-0">
-                                          <div class="p-8">
-                                            <table class="table table-border-0 mb-0">
-                                              <thead>
-                                                <tr>
-                                                  <th colspan="2" class="p-2 text-left">ราคา</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                  <tr>
-                                                    <td class="p-2 text-left">ผู้ใหญ่ (พัก 2 - 3 คน)</td>
-                                                    <td class="p-2 text-right">
-                                                        ฿27,991
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="p-2 text-left">ผู้ใหญ่ (พักเดี่ยว)</td>
-                                                    <td class="p-2 text-right">
-                                                        ฿35,891
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="p-2 text-left">เด็ก (เพิ่มเตียง)</td>
-                                                    <td class="p-2 text-right">
-                                                        ฿27,991
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="p-2 text-left">เด็ก (ไม่เพิ่มเตียง)</td>
-                                                    <td class="p-2 text-right">
-                                                        ฿26,991
-                                                    </td>
-                                                  </tr>
-                                              </tbody>
-                                            </table>
-                                          </div>
-                                          <a class="btn btn-orange btn-block btn-lg rounded-0" href="/orders/new?period_id=7001268&amp;start=2018-05-16&amp;tour_id=8034">จองทัวร์ช่วงเวลานี้</a>
+<!--                                พีเรียด 3    -->
+                                    <tr id="period_7083164_header" class="period-row-header ">
+          
+                                        <td class="align-middle days-from text-sm-center" data-holidays-count="ติด 2 วันหยุด">
+                                          <span class="date">
+                                            พ  6 มิ.ย.
+                                          </span>
+                                          <span class="year d-none d-sm-inline">
+                                            18
+                                          </span>
+                                        </td>
+                                        <td class="align-middle days-to text-sm-center">
+                                          <span class="date">
+                                            อา 10 มิ.ย.
+                                          </span>
+                                          <span class="d-none year d-sm-inline">
+                                            18
+                                          </span>
+                                        </td>
+                                        <td class="align-middle d-none d-sm-table-cell py-3 text-center">
+                                            ฿29,991
+                                        </td>
+                                        <td class="align-middle d-none d-sm-table-cell py-3 text-center">
+                                            ฿28,991
+                                        </td>
+                                        <td class="d-none d-sm-table-cell align-middle">
+                                            <button type="button" class="btn btn-outline-orange btn-sm btn-table-cell" data-toggle="collapse" data-target=".period_7083164_table" aria-expanded="false" aria-controls="periods>">เลือก</button>
+                                        </td>
+                                        <td width="100" class="d-sm-none d-table-cell align-middle">
+                                            ฿29,991
+                                          <br>
+                                            <button type="button" class="btn btn-outline-orange btn-sm btn-table-cell py-0" data-toggle="collapse" data-target=".period_7083164_table" aria-expanded="false" aria-controls="periods>">เลือก</button>
                                         </td>
                                     </tr>
                                     
-<!--                                    <tr class="period_7001268_table period-row-table period_hidden collapse show" aria-labelledby="period_7001268_header" data-parent="#periods_table" data-period-id="7001268" style="">
+                                    <tr class="period_7083164_table period_hidden holiday_period collapse" aria-labelledby="period_7083164_header" data-parent="#periods_table" data-period-id="7083164" style="">
+                                        <td colspan="5" class="holidays-date text-left text-muted px-2">
+                                            วันหยุด : ส. / อา.
+                                        </td>
+                                    </tr>
+                                    <tr class="period_7083164_table period-row-table period_hidden collapse " aria-labelledby="period_7083164_header" data-parent="#periods_table" data-period-id="7083164" style="">
                                         <td colspan="8" class="p-0">
                                           <div class="p-8">
                                             <table class="table table-border-0 mb-0">
                                               <thead>
                                                 <tr>
-                                                  <th colspan="2" class="p-2 text-left">ราคา</th>
+                                                  <th colspan="2" class="p-2 text-left">ราคา2</th>
                                                 </tr>
                                               </thead>
                                               <tbody>
                                                   <tr>
                                                     <td class="p-2 text-left">ผู้ใหญ่ (พัก 2 - 3 คน)</td>
                                                     <td class="p-2 text-right">
-                                                        ฿27,991
+                                                        ฿29,991
                                                     </td>
                                                   </tr>
                                                   <tr>
                                                     <td class="p-2 text-left">ผู้ใหญ่ (พักเดี่ยว)</td>
                                                     <td class="p-2 text-right">
-                                                        ฿35,891
+                                                        ฿37,891
                                                     </td>
                                                   </tr>
                                                   <tr>
                                                     <td class="p-2 text-left">เด็ก (เพิ่มเตียง)</td>
                                                     <td class="p-2 text-right">
-                                                        ฿27,991
+                                                        ฿29,991
                                                     </td>
                                                   </tr>
                                                   <tr>
                                                     <td class="p-2 text-left">เด็ก (ไม่เพิ่มเตียง)</td>
                                                     <td class="p-2 text-right">
-                                                        ฿26,991
+                                                        ฿28,991
                                                     </td>
                                                   </tr>
                                               </tbody>
                                             </table>
                                           </div>
-                                          <a class="btn btn-orange btn-block btn-lg rounded-0" href="/orders/new?period_id=7001268&amp;start=2018-05-16&amp;tour_id=8034">จองทัวร์ช่วงเวลานี้</a>
+                                          <a class="btn btn-orange btn-block btn-lg rounded-0" href="/orders/new?period_id=7083164&amp;start=2018-06-06&amp;tour_id=8034">จองทัวร์ช่วงเวลานี้</a>
                                         </td>
-                                    </tr>-->
-                                    
-                                 
-                                    
+                                    </tr>         
                             </tbody>
                         </table>
                     </div>
                 </div>
-            </div> 
-            
-            
-        </div>
-    </div>
-</section>
+        </div>      
+    </div>        
+    <!--end period-table--> 
 @stop
 
 @section('footer_scripts')
