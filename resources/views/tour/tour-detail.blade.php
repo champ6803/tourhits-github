@@ -117,6 +117,22 @@
         color: #8d8d8d;
     }
     
+    .periods-table-detail .table .thead-light th{
+        color: #fff;
+        background-color: #d30000;
+        border-color: #d30000;
+        font-size: 23px;
+        font-weight: 300;
+    }
+    
+    .periods-table-detail .table-bordered,.periods-table-detail .table-bordered  tbody  tr  td{
+        border: 1px solid #b5b5b5;
+    }
+    
+    .period-row-header{
+        font-size: 21px;
+        
+    }
 
 
 </style>
@@ -725,7 +741,7 @@
         </div>
     
 <!--period-table original   -->
-            <div class="container">
+        <div class="container">
             <div class="col-md-9">
                     <div class="tabledate-form-to">
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
@@ -1769,7 +1785,7 @@
     <div class="container">
         <div class="row">  
             <div class="col-md-9">
-                    <div class="tabledate-form-to">
+                    <div class="tabledate-form-to periods-table-detail">
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                             <thead class="thead-light">
                             <tr>
