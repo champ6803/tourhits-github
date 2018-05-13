@@ -1858,6 +1858,12 @@
 </section>
 
 @stop
+@section('footer_scripts')
 
+<script type="text/javascript">
+    $(function(){
+        $('#indx').addClass('menu-active');
+    });
+</script>
 
-
+@endsection

@@ -6,11 +6,12 @@
     opacity: 0;
     z-index: 1;
     position: absolute;
+    display: none;
 }
 
 .register-section{
-/*    background-image: url(../images/bg/register-bg.jpg);
-    background-size:cover;*/
+    /*    background-image: url(../images/bg/register-bg.jpg);
+        background-size:cover;*/
     background: #304352;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -363,11 +364,11 @@ hr {
 }
 
 .login-section{
-/*    background-image: url(../images/bg/register-bg.jpg);
-    background-size:cover;*/
+    /*    background-image: url(../images/bg/register-bg.jpg);
+        background-size:cover;*/
     background: #304352;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to left, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -380,48 +381,48 @@ background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Fi
 }
 
 .login-section .panel-body{
-        background-color: #f2f2f2;
-    }
-    
+    background-color: #f2f2f2;
+}
+
 .login-section .panel-login{
-        border-radius: 10px;
-    }        
+    border-radius: 10px;
+}        
 
-    .login-section .panel-heading{
-        font-size: 25px;
-    }
-    
-
-    /* text inside the vertical line */
-    .login-section .inner {
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #f1f1f1;
-        border: 1px solid #ccc;
-        border-radius: 50%;
-        padding: 8px 10px;
-    }
+.login-section .panel-heading{
+    font-size: 25px;
+}
 
 
-    /* bottom container */
-    .login-section .bottom-container {
-        text-align: center;
-        background-color: #5670a5;
-        border-radius: 0px 0px 4px 4px;
+/* text inside the vertical line */
+.login-section .inner {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 8px 10px;
+}
 
-    }
-    
-    .login-section .vl-innertext{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #f2f2f2;
-        padding: 5px 10px;
-        font-size: 18px;
-        color: #fff;   
-    }
-    
+
+/* bottom container */
+.login-section .bottom-container {
+    text-align: center;
+    background-color: #5670a5;
+    border-radius: 0px 0px 4px 4px;
+
+}
+
+.login-section .vl-innertext{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: #fff;   
+}
+
 /* footer css */
 
 #footer-page .col-md-3{
@@ -627,7 +628,7 @@ background: linear-gradient(to left, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Fi
 
 .ui-widget.ui-widget-content {
     border: 0px solid #c5c5c5;
-/*    margin-top: -2px;*/
+    /*    margin-top: -2px;*/
 }
 
 .ui-slider-horizontal {
@@ -4293,7 +4294,7 @@ Custom BS3
     padding: 12px 25px;
     border: none;
     border-radius: 6px;
-    
+
     opacity: 0.85;
     display: inline-block;
     font-size: 17px;
@@ -4316,14 +4317,14 @@ Custom BS3
 .search-empty{
     margin-top: 100px;
     text-align: center;
-    
+
 }
 
 .register-section .panel-register{
     border: 0px solid transparent;
     border-radius: 10px;
 }    
-    
+
 .register-section .btn-reg-submit{
     font-size:20px; 
     color: #fff; 
@@ -4332,53 +4333,55 @@ Custom BS3
     opacity: 0.85;
     padding: 5px 25px;    
 }
-    
+
 .register-section .btn-reg-submit:hover{
     opacity: 1;
 }
 
 /* หน้าโหลดแยก */
 
-    .loading-section{
+.loading-section{
     width: 100%;
     height: 100%;
     background: #304352;
     background: -webkit-linear-gradient(to left, #d7d2cc, #304352);
     background: linear-gradient(to left, #d7d2cc, #304352);
-    }
-    
-    
-    .loading-section .loading-box{
-        padding: 200px 0 314px 0;
-    }
-    
-    .loading-section .loading-text{
-        font-size: 25px;
-        font-weight: 300; 
-    }
-    
-    .loading-section .loading-text span{
-        color: #fff;
-    }
-    
-    .loading-section .loading-io{
-        margin-top: 50px;
-    }
-    
-    .loading-section .loading-text .fa-spinner{
-        color: #fff;
-        animation: spin 2s linear infinite;
-    }
-    
-    /* table หน้า detail */
-    
-    .tabledate-form-to .table .thead-light th{
-        color: #495057;
-        background-color: #e9ecef;
-        border-color: #dee2e6;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 600;
-    }
-    
-    
+}
+
+
+.loading-section .loading-box{
+    padding: 200px 0 314px 0;
+}
+
+.loading-section .loading-text{
+    font-size: 25px;
+    font-weight: 300; 
+}
+
+.loading-section .loading-text span{
+    color: #fff;
+}
+
+.loading-section .loading-io{
+    margin-top: 50px;
+}
+
+.loading-section .loading-text .fa-spinner{
+    color: #fff;
+    animation: spin 2s linear infinite;
+}
+
+/* table หน้า detail */
+
+.tabledate-form-to .table .thead-light th{
+    color: #495057;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.menu-active{
+    display: inherit;
+}

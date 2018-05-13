@@ -92,22 +92,35 @@ session_start();
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
                                     <a href="{{url('/')}}">แพ็คเกจทัวร์</a>
-                                    <hr class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Home 1</a></li>
+                                        <li class="current-menu-item"><a href="index2.html">Home 2</a></li>
+                                        <li><a href="index3.html">Menu hamburger</a></li>
+                                        <li><a href="index-dark.html">Home 1 (Dark)</a></li>
+                                        <li><a href="index2-dark.html">Home 2 (Dark)</a></li>
+                                        <li><a href="index3-dark.html">Menu hamburger (Dark)</a></li>
+                                    </ul>
+                                    <hr id="indx" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('tourhot')}}">ทัวร์มาแรง</a>
+                                    <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('hothits') }}">สถานที่ยอดฮิต</a>
+                                    <hr id="hothits" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('about') }}">เกี่ยวกับเรา</a>
+                                    <hr id="about" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('contact') }}">ติดต่อเรา</a>
+                                    <hr id="contact" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('blog') }}">บทความ</a>
+                                    <hr id="blog" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <!--                                <li class="menu-item-has-children">
                                                                     <a href="{{ url('login')}}">เข้าสู่ระบบ</a>
@@ -294,86 +307,91 @@ session_start();
         <script type="text/javascript" src="{{ asset('js/lib/moment.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/AutoNumeric.js') }}"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('.underline-link').removeClass('menu-active');
+            });
+        </script>
         @yield('footer_scripts')
         <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
         <!-- REVOLUTION DEMO -->
         <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.revolution.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.tools.min.js') }}"></script>
         <script type="text/javascript">
-if ($('#slider-revolution').length) {
-    $('#slider-revolution').show().revolution({
-        ottedOverlay: "none",
-        delay: 10000,
-        startwidth: 1600,
-        startheight: 448,
-        hideThumbs: 200,
+            if ($('#slider-revolution').length) {
+                $('#slider-revolution').show().revolution({
+                    ottedOverlay: "none",
+                    delay: 10000,
+                    startwidth: 1600,
+                    startheight: 448,
+                    hideThumbs: 200,
 
-        thumbWidth: 100,
-        thumbHeight: 50,
-        thumbAmount: 5,
+                    thumbWidth: 100,
+                    thumbHeight: 50,
+                    thumbAmount: 5,
 
-        simplifyAll: "off",
+                    simplifyAll: "off",
 
-        navigationType: "none",
-        navigationArrows: "solo",
-        navigationStyle: "preview4",
+                    navigationType: "none",
+                    navigationArrows: "solo",
+                    navigationStyle: "preview4",
 
-        touchenabled: "on",
-        onHoverStop: "on",
-        nextSlideOnWindowFocus: "off",
+                    touchenabled: "on",
+                    onHoverStop: "on",
+                    nextSlideOnWindowFocus: "off",
 
-        swipe_threshold: 0.7,
-        swipe_min_touches: 1,
-        drag_block_vertical: false,
+                    swipe_threshold: 0.7,
+                    swipe_min_touches: 1,
+                    drag_block_vertical: false,
 
-        parallax: "mouse",
-        parallaxBgFreeze: "on",
-        parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
+                    parallax: "mouse",
+                    parallaxBgFreeze: "on",
+                    parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
 
-        keyboardNavigation: "off",
+                    keyboardNavigation: "off",
 
-        navigationHAlign: "center",
-        navigationVAlign: "bottom",
-        navigationHOffset: 0,
-        navigationVOffset: 20,
+                    navigationHAlign: "center",
+                    navigationVAlign: "bottom",
+                    navigationHOffset: 0,
+                    navigationVOffset: 20,
 
-        soloArrowLeftHalign: "left",
-        soloArrowLeftValign: "center",
-        soloArrowLeftHOffset: 20,
-        soloArrowLeftVOffset: 0,
+                    soloArrowLeftHalign: "left",
+                    soloArrowLeftValign: "center",
+                    soloArrowLeftHOffset: 20,
+                    soloArrowLeftVOffset: 0,
 
-        soloArrowRightHalign: "right",
-        soloArrowRightValign: "center",
-        soloArrowRightHOffset: 20,
-        soloArrowRightVOffset: 0,
+                    soloArrowRightHalign: "right",
+                    soloArrowRightValign: "center",
+                    soloArrowRightHOffset: 20,
+                    soloArrowRightVOffset: 0,
 
-        shadow: 0,
-        fullWidth: "on",
-        fullScreen: "off",
+                    shadow: 0,
+                    fullWidth: "on",
+                    fullScreen: "off",
 
-        spinner: "spinner2",
+                    spinner: "spinner2",
 
-        stopLoop: "off",
-        stopAfterLoops: -1,
-        stopAtSlide: -1,
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
 
-        shuffle: "off",
+                    shuffle: "off",
 
-        autoHeight: "off",
-        forceFullWidth: "off",
+                    autoHeight: "off",
+                    forceFullWidth: "off",
 
-        hideThumbsOnMobile: "off",
-        hideNavDelayOnMobile: 1500,
-        hideBulletsOnMobile: "off",
-        hideArrowsOnMobile: "off",
-        hideThumbsUnderResolution: 0,
+                    hideThumbsOnMobile: "off",
+                    hideNavDelayOnMobile: 1500,
+                    hideBulletsOnMobile: "off",
+                    hideArrowsOnMobile: "off",
+                    hideThumbsUnderResolution: 0,
 
-        hideSliderAtLimit: 0,
-        hideCaptionAtLimit: 0,
-        hideAllCaptionAtLilmit: 0,
-        startWithSlide: 0
-    });
-}
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    startWithSlide: 0
+                });
+            }
         </script>
     </body>
 </html>

@@ -751,3 +751,9 @@
 </section>
                     
 @stop
+
+@section('footer_scripts')
+
+<script type="text/javascript" src="{{ asset('js/tour/tourhot.js') }}"></script>
+
+@endsection
