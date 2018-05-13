@@ -111,7 +111,7 @@ class Tour_Package extends Model {
             return $e;
         }
     }
-    
+
     public function getTourDetailList($tour_package_id) {
         try {
             $tourPackageList = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
@@ -125,4 +125,16 @@ class Tour_Package extends Model {
             return $e;
         }
     }
+
+    public function getTourImages($tour_package_id) {
+        try {
+            $tourImages = Tour_Package::join('tour_image', 'tour_image.tour_package_id', '=', 'tour_package.tour_package_id')
+                    ->where('tour_package.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            return $tourImages;
+        } catch (\Exception $ex) {
+            return $ex;
+        }
+    }
+
 }

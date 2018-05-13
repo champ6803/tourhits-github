@@ -44,6 +44,7 @@ class RegisterController extends Controller {
                     'password' => 'required|min:6|max:20|confirmed',
                     'password_confirmation' => 'required|same:password',
                     'phone' => 'required|numeric|min:10',
+                    'line_id' => 'required|min:6',
                     'address' => 'required',
                     'country' => 'required',
                     'province' => 'required',
@@ -77,6 +78,7 @@ class RegisterController extends Controller {
                         'customer_lname' => $data['last_name'],
                         'customer_email' => $data['email'],
                         'customer_phone' => $data['phone'],
+                        'customer_line' => $data['line_id'],
                         'created_by' => 'user',
                         'updated_by' => 'user'
             ]);

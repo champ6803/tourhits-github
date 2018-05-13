@@ -95,7 +95,7 @@ session_start();
                                     <hr class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('hothits')}}">ทัวร์มาแรง</a>
+                                    <a href="{{ url('tourhot')}}">ทัวร์มาแรง</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('hothits') }}">สถานที่ยอดฮิต</a>

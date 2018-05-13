@@ -1571,7 +1571,6 @@
                         <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
                         <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                     </div>
-
                     <!--            เว้นไว้ใส่ปฎิทิน-->
                     <div id="filter-date">
                         <div class="option-all">
