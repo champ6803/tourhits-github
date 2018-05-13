@@ -14,7 +14,7 @@
         <input type="hidden" id="company_code" value="THG">
         <div class="card border-success mb-3" >
   <div class="card-body text-success">
-      <h4 class="card-title" style="color: black; background-color: #F0FFF0">รายละเอียดการติดต่อ</h4>
+      <h4 class="card-title" style="color: black; background-color: #F0FFF0 ">รายละเอียดการติดต่อ</h4>
          <div class="row" style="padding: 7px">
           <div class="col-lg-1"></div>
           <div class="col-lg-2"> <p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;">บริษัท : </p></div> 
