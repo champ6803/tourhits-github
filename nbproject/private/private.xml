@@ -6,13 +6,13 @@
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/js/filter/search-tour.js</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Package_Day.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/style.css</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/home/index.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/login-admin.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/RegisterController.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/auth/register.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/TourController.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Package.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/LoginController.php</file>
         </group>
     </open-files>
 </project-private>
