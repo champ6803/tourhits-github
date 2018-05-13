@@ -1489,7 +1489,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-12">
                     <div class="tabledate-form-to">
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                             <thead class="thead-light">
