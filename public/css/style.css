@@ -6558,7 +6558,7 @@ body.single-post .blog-page__content > .post .post-content {
 --------------------------------------------------------------------------------*/
 .product-detail {
     padding-top: 52px;
-    padding-bottom: 160px;
+    padding-bottom:50px;
 }
 
 .product-detail__info .product-title h2 {
