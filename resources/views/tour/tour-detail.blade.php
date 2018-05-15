@@ -95,82 +95,7 @@
         color: #EC2424;
         display: inline;}
 
-    /* ตารางราคา */
-/*    body.tours.show:not(.searches) .days-from:after{
-        position: absolute;
-        top: 7.5px;
-        right: -22.5px;
-        height: 45px;
-        width: 45px;
-        padding: 4.8px;
-        padding: .3rem;
-        content: attr(data-holidays-count);
-        background-color: #fff;
-        border: 1px solid #d8d8d8;
-        border-radius: 50px;
-        text-align: center;
-        line-height: 16px;
-        line-height: 1rem;
-        font-family: Kanit,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
-        font-size: 10.4px;
-        font-size: .65rem;
-        color: #8d8d8d;
-    }*/
-
-    .periods-table-detail .table .thead-light th{
-        color: #fff;
-        background-color: #d30000;
-        border-color: #d30000;
-        font-size: 23px;
-        font-weight: 300;
-    }
-
-    .periods-table-detail .table-bordered,.periods-table-detail .table-bordered  tbody  tr  td{
-        border: 1px solid #b5b5b5;
-    }
-
-    .period-row-header{
-        font-size: 21px;
-    }
-    
-    .btn-confirm-periods{
-        color: #fff;
-        font-size: 21px;
-        background-color: #d30000;
-        padding: 0 20px;
-        line-height: 1.3;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-    }
-    
-    .btn-confirm-periods:hover {
-    background-color: #444;
-    color: #fff;
-    }
-    
-    .periods-sm-screen, .periods-table-detail .thead-light .py-4 .d-sm-none{
-        display: none;
-    }
-    
-    .period-table-bottom{
-        padding-bottom: 50px;
-    }
-    
-    @media screen and (max-width: 660px) {
-        .periods-sm-screen{
-             display: table-cell;
-        }
-        .d-none{
-            display: none;
-        }
-        .periods-table-detail .thead-light .py-4 .d-sm-none{
-            display: inline;
-        }
-        
-    } 
+ 
 
 
 </style>
@@ -1282,6 +1207,7 @@
     <div class="period-table-bottom">
         <div class="row">  
         <div class="col-md-9">
+            <h3><i class="far fa-calendar"></i> ข้อมูลราคา</h3>
             <div class="tabledate-form-to periods-table-detail">
                 <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                     <thead class="thead-light">
