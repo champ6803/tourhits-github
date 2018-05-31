@@ -4,20 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/scripts.js</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/js/filter/search-tour.js</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/RegisterController.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/tour/tourhot.js</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/auth/register.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/TourController.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/LoginController.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/tour/tour-detail.js</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Package_Day.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tourhot.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/home/index.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/tour/tourhot.js</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/loading/loading-screen.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/TourController.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Package.php</file>
         </group>
     </open-files>
 </project-private>
