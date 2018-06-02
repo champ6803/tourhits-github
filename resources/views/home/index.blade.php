@@ -110,10 +110,14 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <select>
-                                        <option>จำนวนคน</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
+                                        <option val="0">จำนวนวัน</option>
+                                        <option val="1">1</option>
+                                        <option val="2">2</option>
+                                        <option val="3">3</option>
+                                        <option val="4">4</option>
+                                        <option val="5">5</option>
+                                        <option val="6">6</option>
+                                        <option val="7">7</option>
                                     </select>
                                 </div>
                             </div>

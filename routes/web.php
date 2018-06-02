@@ -27,7 +27,7 @@ Route::post('getSubdistrict','MasterController@getSubdistrict');
 
 Route::get('search-tour/{country_id}','FilterController@search_tour');
 
-Route::get('adminlogin','LoginController@adminLogin');
+//Route::get('adminlogin','LoginController@adminLogin');
 
 Route::get('dashboard','AdminController@dashboard');
 
