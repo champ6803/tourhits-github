@@ -23,7 +23,7 @@
 }
 
 .search-container{
-    width: 900px !important;
+    max-width: 900px;
 }
 
 .destination-grid-content .row{
@@ -4218,7 +4218,7 @@ Custom BS3
     background-position: 50%;
     background-size: cover;
     border-radius: 5px;
-    text-align: center;
+    text-align: center;  
 }
 
 .hothits-country-name{
