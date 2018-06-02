@@ -20,7 +20,6 @@ $(function () {
     $(document).ready(function() {
         //ไฮไลต์เมนูที่เข้าอยู่
         document.getElementById("holidayMenu").style.color = "blue";
-        document.getElementById("managetour").className = "active";
         
         $( "#startDate" ).datepicker({
                 //format: 'dd/mm/yy',

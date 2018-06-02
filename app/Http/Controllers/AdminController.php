@@ -14,6 +14,7 @@ use App\Models\Tag;
 use App\Models\Holiday;
 use App\Models\Other;
 use App\Models\Tour_Category;
+use App\Models\Tour_Country;
 use Illuminate\Support\Facades\Input as Input;
 /**
  * Description of AdminController
@@ -54,6 +55,9 @@ class AdminController extends Controller {
         return view('admin.manage-category');
     }
    
+    public function manage_tourlist(){
+        return view('admin.manage-tourlist');
+    }
     public function searchRoute(){
         $routeModel = new Route();
          try {
@@ -461,4 +465,27 @@ class AdminController extends Controller {
             return response($msg);
         }
     }
+    
+    public function searchAllTourCountry(){
+         $tourCountryModel = new Tour_Country();
+         try {
+            $tourCountry = $tourCountryModel->getTourCountryAll();
+            return response($tourCountry);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
+    
+    public function searchAllTourCategory(){
+         $tourCategoryModel = new Tour_Category();
+         try {
+            $tourCategory = $tourCategoryModel->getTourCategoryAll();
+            return response($tourCategory);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
+    
 }
