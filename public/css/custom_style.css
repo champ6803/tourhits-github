@@ -23,7 +23,7 @@
 }
 
 .search-container{
-    width: 900px !important;
+    max-width: 900px;
 }
 
 .destination-grid-content .row{
