@@ -1111,7 +1111,63 @@
                         </div>
                     </div>
                 </div>
+                <div class="period-table-bottom">
+                    <h3><i class="far fa-calendar"></i> ข้อมูลราคา</h3>
+                    <div class="tabledate-form-to periods-table-detail">
+                        <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th colspan="2" class="align-middle py-4">กำหนดการดินทาง</th>
+                                    <th class="align-middle py-4">
+                                        <span class="d-inline d-sm-none">ราคา</span>
+                                        <span class="d-none d-sm-inline">ผู้ใหญ่พักคู่<br> ท่านละ</span>
+                                    </th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กเพิ่มเตียง<br> ท่านละ</th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4">พักเดี่ยว<br> ท่านละ</th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($tourPackageList as $tourPackageObj)
+                                <tr class="period-row-header">
+                                    <td class="align-middle days-from text-sm-center">
+                                        {{$tourPackageObj->tour_period_start}}
+                                    </td>
+                                    <td class="align-middle days-from text-sm-center">
+                                        {{$tourPackageObj->tour_period_end}}
+                                    </td>
+                                    <td class="align-middle days-from text-sm-center">
+                                        ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
+                                    </td>
+                                    <td class="align-middle days-from text-sm-center">
+                                        ฿{{number_format($tourPackageObj->tour_period_child_price)}}
+                                    </td>
+                                    <td class="align-middle days-from text-sm-center">
+                                        ฿{{number_format($tourPackageObj->tour_period_child_nb_price)}}
+                                    </td>
+                                    <td class="align-middle days-from text-sm-center">
+                                        ฿{{number_format($tourPackageObj->tour_period_alone_price)}}
+                                    </td>
+                                    <td class="align-middle days-from text-sm-center">
+                                        @if($tourPackageObj->tour_period_status == 'Y')
+                                        <a type="button" href="{{ url('/tour-confirm') }}" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods"  data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>
+                                        @else
+                                        <a type="button" href="{{ url('/tour-confirm') }}" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">เต็ม</a>
+                                        @endif
+                                    </td> 
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        <p class="text-center">*** ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม ***</p>
+                    </div>
+                </div>
+                
+                
             </div>
+
+
             <!-- กล่องจอง -->
             <div class="col-md-3">
                 <div class="detail-sidebar">
@@ -1243,67 +1299,14 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 </section>
 
 <!--period-table    -->
 <div class="container">
-    <div class="period-table-bottom">
-        <div class="row">  
-            <div class="col-md-9">
-                <h3><i class="far fa-calendar"></i> ข้อมูลราคา</h3>
-                <div class="tabledate-form-to periods-table-detail">
-                    <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
-                        <thead class="thead-light">
-                            <tr>
-                                <th colspan="2" class="align-middle py-4">กำหนดการดินทาง</th>
-                                <th class="align-middle py-4">
-                                    <span class="d-inline d-sm-none">ราคา</span>
-                                    <span class="d-none d-sm-inline">ผู้ใหญ่พักคู่<br> ท่านละ</span>
-                                </th>
-                                <th class="align-middle d-none d-sm-table-cell py-4">เด็กเพิ่มเตียง<br> ท่านละ</th>
-                                <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
-                                <th class="align-middle d-none d-sm-table-cell py-4">พักเดี่ยว<br> ท่านละ</th>
-                                <th class="align-middle d-none d-sm-table-cell py-4"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($tourPackageList as $tourPackageObj)
-                            <tr class="period-row-header">
-                                <td class="align-middle days-from text-sm-center">
-                                    {{$tourPackageObj->tour_period_start}}
-                                </td>
-                                <td class="align-middle days-from text-sm-center">
-                                    {{$tourPackageObj->tour_period_end}}
-                                </td>
-                                <td class="align-middle days-from text-sm-center">
-                                    ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
-                                </td>
-                                <td class="align-middle days-from text-sm-center">
-                                    ฿{{number_format($tourPackageObj->tour_period_child_price)}}
-                                </td>
-                                <td class="align-middle days-from text-sm-center">
-                                    ฿{{number_format($tourPackageObj->tour_period_child_nb_price)}}
-                                </td>
-                                <td class="align-middle days-from text-sm-center">
-                                    ฿{{number_format($tourPackageObj->tour_period_alone_price)}}
-                                </td>
-                                <td class="align-middle days-from text-sm-center">
-                                    @if($tourPackageObj->tour_period_status == 'Y')
-                                    <a type="button" href="{{ url('/tour-confirm') }}" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods"  data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>
-                                    @else
-                                    <a type="button" href="{{ url('/tour-confirm') }}" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">เต็ม</a>
-                                    @endif
-                                </td> 
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                    <p class="text-center">*** ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม ***</p>
-                </div>
-            </div>
-        </div>
-    </div>    
+
 </div>        
 <!--end period-table--> 
 @stop
@@ -1311,7 +1314,7 @@
 @section('footer_scripts')
 <script type="text/javascript" src="{{ asset('js/tour/tour-detail.js') }}"></script>
 <script type="text/javascript">
-    
+
 var tour_period = 0;
 var sum_appraise_adult = 0;
 var sum_appraise_child = 0;
@@ -1321,6 +1324,7 @@ var sum_appraise_child_nb = 0;
 $(function () {
     var tour_package_period_start = <?php echo json_encode($tourPackage->tour_package_period_start); ?>;
     var tour_package_period_end = <?php echo json_encode($tourPackage->tour_package_period_end); ?>;
+    var tourPackageList = <?php echo json_encode($tourPackageList); ?>;
     var as = tour_package_period_start.split("-");
     var ae = tour_package_period_end.split("-");
     var ae2 = ae[2].split(' ');
@@ -1336,17 +1340,24 @@ $(function () {
     $('#tour_code').html(tour_code);
 
     $('#tour_period').change(function () {
-        if ($(this).val() != 0) {
-            $('.awe-select').prop('disabled', false);
-        } else {
+        tour_period = $(this).val();
+        var status = "N";
+        $.each(tourPackageList, function (key, val) {
+            if (parseInt(val['tour_period_id']) == tour_period) {
+                status = val['tour_period_status'];
+            }
+        });
+
+        if ($(this).val() == 0 || status == "N") {
             $('.awe-select').prop('disabled', true);
+        } else {
+            $('.awe-select').prop('disabled', false);
         }
         $('.awe-select').val(0);
-        $('#appraise').html('฿'+0);
-        tour_period = $(this).val();
+        $('#appraise').html('฿' + 0);
     });
 
-    var tourPackageList = <?php echo json_encode($tourPackageList); ?>
+
 
     $('#adult_price').change(function () {
         var value = ($(this).val());
@@ -1356,8 +1367,8 @@ $(function () {
                 sum_appraise_adult = sum_appraise_adult + parseInt(val['tour_period_adult_price']);
             }
         });
-        sum_appraise_adult = sum_appraise_adult*parseInt(value);
-        $('#appraise').html('฿'+numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
+        sum_appraise_adult = sum_appraise_adult * parseInt(value);
+        $('#appraise').html('฿' + numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
     });
     $('#child_price').change(function () {
         var value = ($(this).val());
@@ -1367,8 +1378,8 @@ $(function () {
                 sum_appraise_child = sum_appraise_child + parseInt(val['tour_period_child_price']);
             }
         });
-        sum_appraise_child = sum_appraise_child*parseInt(value);
-        $('#appraise').html('฿'+numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
+        sum_appraise_child = sum_appraise_child * parseInt(value);
+        $('#appraise').html('฿' + numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
     });
     $('#child_nb_price').change(function () {
         var value = ($(this).val());
@@ -1378,8 +1389,8 @@ $(function () {
                 sum_appraise_child_nb = sum_appraise_child_nb + parseInt(val['tour_period_child_nb_price']);
             }
         });
-        sum_appraise_child_nb = sum_appraise_child_nb*parseInt(value);
-        $('#appraise').html('฿'+numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
+        sum_appraise_child_nb = sum_appraise_child_nb * parseInt(value);
+        $('#appraise').html('฿' + numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
     });
     $('#alone_price').change(function () {
         var value = ($(this).val());
@@ -1389,8 +1400,8 @@ $(function () {
                 sum_appraise_alone = sum_appraise_alone + parseInt(val['tour_period_alone_price']);
             }
         });
-        sum_appraise_alone = sum_appraise_alone*parseInt(value);
-        $('#appraise').html('฿'+numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
+        sum_appraise_alone = sum_appraise_alone * parseInt(value);
+        $('#appraise').html('฿' + numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
     });
 });
 </script>
