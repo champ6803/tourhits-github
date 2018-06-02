@@ -54,10 +54,10 @@ class RegisterController extends Controller {
         ]);
         if ($validator->fails()) {
             return redirect('register')
-                        ->withErrors($validator)
-                        ->withInput();
+                            ->withErrors($validator)
+                            ->withInput();
         }
-        
+
         try {
             $user_id = User::insertGetId([
                         'username' => $data['username'],
@@ -69,7 +69,6 @@ class RegisterController extends Controller {
                         'created_by' => 'user',
                         'updated_by' => 'user'
             ]);
-
 
             $customer_id = Customer::insertGetId([
                         'user_id' => $user_id,
@@ -105,7 +104,7 @@ class RegisterController extends Controller {
             return response($e->getMessage());
         }
 
-        return redirect('/')->with('alert', 'สมัครสมาชิกเรียบร้อย!');;
+        return redirect('loading')->with(['text' => 'สมัครสมาชิกเรียบร้อย รอสักครู่เรากำลังพาท่าน เข้าสู่ระบบ', 'name' => $data['first_name']]);
     }
 
 }
