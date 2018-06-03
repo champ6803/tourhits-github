@@ -146,3 +146,4 @@ Route::post('searchAllTourCountry', 'AdminController@searchAllTourCountry');
 
 Route::post('searchAllTourCategory', 'AdminController@searchAllTourCategory');
 
+Route::post('saveTourlistAndDay', 'AdminController@saveTourlistAndDay');

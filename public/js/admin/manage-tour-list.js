@@ -1,75 +1,85 @@
 $(function () {
     $(document).ready(function() {
       $('#saveAll').prop('disabled', true);
+      $('#saveBtn').prop('disabled', false);
       $('#dayTable').DataTable();
       createTourCountryDropDown();
       createTourCategoryDropDown();
-      $( "#startDate" ).datepicker({
+      $( "#start_date" ).datepicker({
                 //format: 'dd/mm/yy',
-                dateFormat: 'dd/mm/yy',
+                dateFormat: 'yy/mm/dd',
                 todayBtn: true
             }).datepicker("setDate", "0");
-       $( "#endDate" ).datepicker({
+       $( "#end_date" ).datepicker({
                 //format: 'dd/mm/yy',
-                dateFormat: 'dd/mm/yy',
+                dateFormat: 'yy/mm/dd',
                 todayBtn: true
             }).datepicker("setDate", "0");
     } );
 });
 function clearGenTable(){
-    $('#tourCategory').prop('disabled', false);
-    $('#tourCountry').prop('disabled', false);
-    $('#highlightTour').prop('disabled', false);
-    $('#tourName').prop('disabled', false);
-    $('#tourDetail').prop('disabled', false);
-    $('#picture').prop('disabled', false);
-    $('#day').prop('disabled', false);
-    $('#night').prop('disabled', false);
-    $('#startDate').prop('disabled', false);
-    $('#endDate').prop('disabled', false);
+   /* $('#saveBtn').prop('disabled', false);
+    $('#saveAll').prop('disabled', true);
+    $('#tour_category').prop('disabled', false);
+    $('#tour_country').prop('disabled', false);
+    $('#highlight_tour').prop('disabled', false);
+    $('#tour_name').prop('disabled', false);
+    $('#tour_detail').prop('disabled', false);
+    $('#file').prop('disabled', false);
+    $('#day_tour').prop('disabled', false);
+    $('#night_tour').prop('disabled', false);
+    $('#start_date').prop('disabled', false);
+    $('#end_date').prop('disabled', false);
+    $('#tour_package_code').prop('disabled', false);*/
     $('#dayTable').dataTable().fnClearTable();
-    document.getElementById("tourCategory").selectedIndex = "0";
-    document.getElementById("tourCountry").selectedIndex = "0";
-    $('#highlightTour').val('');
-    $('#tourName').val('');
-    $('#tourDetail').val('');
-    $('#picture').val('');
-    $('#day').val('');
-    $('#night').val('');
-    $('#startDate').val('');
-    $('#endDate').val('');
+    document.getElementById("tour_category").selectedIndex = "0";
+    document.getElementById("tour_country").selectedIndex = "0";
+    $('#highlight_tour').val('');
+    $('#tour_name').val('');
+    $('#tour_detail').val('');
+    $('#file').val('');
+    $('#day_tour').val('');
+    $('#night_tour').val('');
+    $('#start_date').val('');
+    $('#end_date').val('');
+    $('#tour_package_code').val('');
+    location.reload();
 }
 function inputDisabled(){
-    $('#tourCategory').prop('disabled', true);
-    $('#tourCountry').prop('disabled', true);
-    $('#highlightTour').prop('disabled', true);
-    $('#tourName').prop('disabled', true);
-    $('#tourDetail').prop('disabled', true);
-    $('#picture').prop('disabled', true);
-    $('#day').prop('disabled', true);
-    $('#night').prop('disabled', true);
-    $('#startDate').prop('disabled', true);
-    $('#endDate').prop('disabled', true);
+   /* $('#tour_category').prop('disabled', true);
+    $('#tour_country').prop('disabled', true);
+    $('#highlight_tour').prop('disabled', true);
+    $('#tour_name').prop('disabled', true);
+    $('#tour_detail').prop('disabled', true);
+    $('#file').prop('disabled', true);
+    $('#day_tour').prop('disabled', true);
+    $('#night_tour').prop('disabled', true);
+    $('#start_date').prop('disabled', true);
+    $('#end_date').prop('disabled', true);
+    $('#tour_package_code').prop('disabled', true);*/
 }
 function genTable(){
-    var day= $('#day').val();
+    $('#saveBtn').prop('disabled', true);
+    var day= $('#day_tour').val();
     if((day>0)){
     inputDisabled();
     var Str = '';
                 var rowNo=1;
                  for(var row = 0 ; row<day ;row++){
                     Str=Str+'<tr>';
-                    Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td><input type="text" style="width:200px"></td>';
-                    Str=Str+'<td><input type="text" style="width:400px"></td>';
-                    Str=Str+'</tr>';  
+                    Str=Str+'<td id="'+row+'day'+'" name="'+row+'day'+'">'+rowNo+'</td>';
+                    Str=Str+'<td><input id="tour_name_'+row+'" type="text" name="tour_name_'+row+'"></td>';
+                    Str=Str+'<td style="width : 1000px"><textarea name="tour_detail_'+row+'" id="tour_detail_'+row+'" cols="50"></textarea></td>';
                     rowNo++;
                }
     document.getElementById("genTable").innerHTML = Str;
+    tinymce.init({ selector:'textarea' });
     }else{
         alert('กรุณาระบุจำนวนวันให้ถูกต้อง')
+        $('#saveBtn').prop('disabled', false);
         return false;
     }
+      $('#saveAll').prop('disabled', false);
 }
 function createTourCategoryDropDown(){
        var StrDropDown = '';
@@ -83,7 +93,7 @@ function createTourCategoryDropDown(){
             },
             success: function (data) {
                 if (data != null) {
-                    StrDropDown='<select class="form-control" id="tourCategory" name="tourCategory">';
+                    StrDropDown='<select class="form-control" id="tour_category" name="tour_category">';
                      StrDropDown=StrDropDown+"<option value='0'>----กรุณาระบุ----</option>";
                      for(var row = 0 ; row<data.length ;row++){
                          StrDropDown=StrDropDown+"<option value="+data[row].tour_category_id+">"+data[row].tour_category_name+"</option>";
@@ -113,7 +123,7 @@ function createTourCountryDropDown(){
             },
             success: function (data) {
                 if (data != null) {
-                    StrDropDown='<select class="form-control" id="tourCountry" name="tourCountry">';
+                    StrDropDown='<select class="form-control" id="tour_country" name="tour_country">';
                      StrDropDown=StrDropDown+"<option value='0'>----กรุณาระบุ----</option>";
                      for(var row = 0 ; row<data.length ;row++){
                          StrDropDown=StrDropDown+"<option value="+data[row].tour_country_id+">"+data[row].tour_country_name+"</option>";

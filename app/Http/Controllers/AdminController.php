@@ -15,6 +15,8 @@ use App\Models\Holiday;
 use App\Models\Other;
 use App\Models\Tour_Category;
 use App\Models\Tour_Country;
+use App\Models\Tour_Package;
+use App\Models\Tour_Package_Day;
 use Illuminate\Support\Facades\Input as Input;
 /**
  * Description of AdminController
@@ -487,5 +489,45 @@ class AdminController extends Controller {
             return response($msg);
         }
     }
+    
+    public function saveTourlistAndDay(){
+          $tourPackageModel = new Tour_Package();
+          $tourPackageDayModel = new Tour_Package_Day();
+          try {  
+            $tour_category = $_POST['tour_category'];
+            $tour_country = $_POST['tour_country'];
+            $tour_name = $_POST['tour_name'];
+            $tour_detail = $_POST['tour_detail'];
+            $highlight_tour = $_POST['highlight_tour'];
+            $tourlist_picture=  $_FILES['file']['name'];
+            $day = $_POST['day_tour'];
+            $night = $_POST['night_tour'];
+            $start_date = $_POST['start_date'];
+            $end_date = $_POST['end_date'];
+            $tour_package_code= $_POST['tour_package_code'];
+            $dateStart = str_replace('/', '-', $start_date);
+            $dateEnd = str_replace('/', '-', $end_date);
+            $id=$tourPackageModel->insertTourPackage($tour_package_code,$tour_country, $tour_category
+            , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
+            , $night, $dateStart, $dateEnd);
+            
+            for ($x = 0; $x < $day; $x++) {
+                  $tournameStr= 'tour_name_'.$x;
+                  $tourdetailStr= 'tour_detail_'.$x;
+                  $tourname = $_POST[$tournameStr];   
+                  $tourdetail= $_POST[$tourdetailStr];   
+                  $tourPackageDayModel->insertTourPackageDay($id,$x+1,$tourname,$tourdetail);
+            }
+            echo "<script>
+             alert('บันทึกข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-tourlist';
+             </script>";
+            } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+        
+    }
+    
     
 }
