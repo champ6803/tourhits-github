@@ -27,7 +27,7 @@ Route::post('getSubdistrict','MasterController@getSubdistrict');
 
 Route::get('search-tour/{country_id}','FilterController@search_tour');
 
-Route::get('adminlogin','LoginController@adminLogin');
+//Route::get('adminlogin','LoginController@adminLogin');
 
 Route::get('dashboard','AdminController@dashboard');
 
@@ -139,3 +139,11 @@ Route::get('profile','ManageFrontController@profile');
 Route::post('searchCompanyByCompanyCode','ManageFrontController@searchCompanyByCompanyCode');
 
 Route::get('tourhot','TourhotController@tour_hot');
+
+Route::get('manage-tourlist','AdminController@manage_tourlist');
+
+Route::post('searchAllTourCountry', 'AdminController@searchAllTourCountry');
+
+Route::post('searchAllTourCategory', 'AdminController@searchAllTourCategory');
+
+Route::post('saveTourlistAndDay', 'AdminController@saveTourlistAndDay');

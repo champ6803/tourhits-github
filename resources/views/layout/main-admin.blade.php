@@ -451,7 +451,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a  id="tourMenu"  href="#">จัดการรายการทัวร์</a></li>
+                                <li><a  id="tourMenu"  href="{{ url('manage-tourlist')}}">จัดการรายการทัวร์</a></li>
                                 <li><a id="categoryMenu"  href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
                                 <li><a id="tagMenu"  href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
                                 <li><a id="otherMenu"  href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>

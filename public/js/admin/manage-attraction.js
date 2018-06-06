@@ -35,7 +35,6 @@ $(function () {
     $(document).ready(function() {
         //ไฮไลต์เมนูที่เข้าอยู่
         document.getElementById("attractionMenu").style.color = "blue";
-        document.getElementById("managetour").className = "active";
         createTable()
         $('#attractionTable').DataTable();
     } );
