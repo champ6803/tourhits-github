@@ -10,6 +10,10 @@
     .container-country .index-tab-flag{
         margin-top: 40px;
     }
+    
+    .hothits-item{
+        width: 100% !important;
+    }
 </style>
 <section class="hero-section">
     <div id="slider-revolution">
@@ -1315,12 +1319,75 @@
             <div class='section-descripion'>
                 ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
             </div>
-            <div class="row"> 
+            <div class="row">
+                <div class="col-sm-4 col-xs-6 col-md-3">
+                    <div class="select-item">
+                            <a href="">
+				<div class="select-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="images/fav/fav1.png" alt="">
+                                        
+                                   </div> 
+				</div> 
+				<div class="hothits-name-box">
+                                    <div class="text ">แนะนำ</div>
+				</div>
+                            </a>
+                    </div>   
+                </div>
+                <div class="col-sm-4 col-xs-6 col-md-3">
+                    <div class="select-item">
+                            <a href="">
+				<div class="select-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="images/fav/fav2.png" alt="">
+                                        
+                                   </div> 
+				</div> 
+				<div class="hothits-name-box">
+                                    <div class="text ">แนะนำ</div>
+				</div>
+                            </a>
+                    </div>   
+                </div>
+                <div class="col-sm-4 col-xs-6 col-md-3">
+                    <div class="select-item">
+                            <a href="">
+				<div class="select-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="images/fav/fav3.png" alt="">
+                                        
+                                   </div> 
+				</div> 
+				<div class="hothits-name-box">
+                                    <div class="text ">แนะนำ</div>
+				</div>
+                            </a>
+                    </div>   
+                </div>
+                <div class="col-sm-4 col-xs-6 col-md-3">
+                    <div class="select-item">
+                            <a href="">
+				<div class="select-img lazyloaded">
+                                    <div class="center-crop"> 
+                                        <img src="images/fav/fav4.png" alt="">
+                                        
+                                   </div> 
+				</div> 
+				<div class="hothits-name-box">
+                                    <div class="text ">แนะนำ</div>
+				</div>
+                            </a>
+                    </div>   
+                </div>
+
+            </div>
+<!--            <div class="row">
                 <div class="col-md-3" align="center"><img src="images/fav/1.png"></div>
                 <div class="col-md-3" align="center"><img src="images/fav/2.png"></div>
                 <div class="col-md-3" align="center"><img src="images/fav/3.png"></div>
                 <div class="col-md-3" align="center"><img src="images/fav/4.png"></div>   
-            </div>
+            </div>-->
         </div>
     </div>
 </section>

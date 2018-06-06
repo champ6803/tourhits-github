@@ -199,14 +199,24 @@ session_start();
                     <div class="row">
                         <!-- WIDGET -->
                         <div class="col-md-3">
-                            <h5 style="color:#FFFFFF;">บริษัท ทัวร์เอ็กซ์เพรสเซ็นเตอร์ดอทคอม จำกัด</h5><br>
-
-                            <p style="font-size:15px">
-                                เลขที่ 300/76 โครงการพรีเมี่ยมเพลส 6 ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กทม. 10240<br>
-                                300/76 PREMIUM PLACE 6 NAWAMIN RD. NAWAMIN BUENGKUM BANGKOK THAILAND 10240<br><br>
-                                Tel 0-2379-1249 Fax 0-2379-1966-7<br>
-                                <a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;">tourhits@gmail.com</a></p>
-
+                            <!-- facebook -->
+                            <div class="row facebook">
+                                <div class="fb-page" data-href="https://www.facebook.com/PAGE.TOURHITS" data-tabs="timeline" data-height="70" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                                <blockquote cite="https://www.facebook.com/PAGE.TOURHITS" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PAGE.TOURHITS">Tourhits</a></blockquote></div>         
+                            </div> 
+                            <div class="foot-location-head">
+                                บริษัท ทัวร์เอ็กซ์เพรสเซ็นเตอร์ดอทคอม จำกัด<br>
+                            
+                            </div>
+                            <div class="foot-location-detail"> 
+                                เลขที่ 300/76 โครงการพรีเมี่ยมเพลส 6<br>
+                                ถนนนวมินทร์ แขวงนวมินทร์<br> 
+                                เขตบึงกุ่ม กรุงเทพฯ 10240<br>                               
+                                โทร: 0-2379-1249<br>
+                                Fax: 0-2379-1966-7<br>
+                                E-mail:<a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;"> tourhits@gmail.com</a><br>
+                                
+                            </div>    
 
                             <!--                            <div class="widget widget_contact_info">
                                                             <div class="widget_background">
@@ -242,10 +252,10 @@ session_start();
 
                         <!-- WIDGET -->
                         <div class="col-md-2">
-                            <h6 style="color:#FFFFFF;"><i class="fas fa-registered"></i> เลขที่ใบอนุญาต 11/06195</h6><br>
+                            
 
                             <div class="widget widget_categories">
-                                <!--                                <h3>Categiries</h3>
+<!--                                                                <h3>Categiries</h3>
                                                                 <ul>
                                                                     <li><a href="#">Countries</a></li>
                                                                     <li><a href="#">Regions</a></li>
@@ -277,15 +287,18 @@ session_start();
                             </div>
                         </div>
                         <!-- END / WIDGET -->
-
+                          
                         <!-- WIDGET -->
                         <div class="col-md-3">
+                          
                             <div class="contact"
-                                 <h5 style="color:#FFFFFF;">ติดต่อเรา</h5><br>
-                                062 914 2361<br>
+                                 <h3 style="color:#FFFFFF;"><ins>ติดต่อเรา</ins><br>
+                                <i class="fas fa-mobile-alt"></i> 062 914 2361<br>
                                 <i class="fab fa-facebook-square"></i>
                                 <i class="fab fa-line"></i>
-                                <i class="fab fa-youtube-square"></i></div>
+                                <i class="fab fa-youtube-square"></i>
+                                
+                            </div>
 
                             <div class="widget widget_follow_us">
                                 <div class="widget_content">
@@ -301,6 +314,7 @@ session_start();
                         <!-- END / WIDGET -->
                     </div>
                     <div class="copyright">
+                        <h6 style="color:#FFFFFF;"><i class="fas fa-registered"></i> เลขที่ใบอนุญาต 11/06195</h6>
                         <p>2018 Tourhits All rights reserved.</p>
                     </div>
                 </div>
@@ -308,7 +322,15 @@ session_start();
             <!-- END / FOOTER PAGE -->
         </div>
         <!-- END / PAGE WRAP -->
-
+                                <div id="fb-root"></div>
+                                    <script>(function(d, s, id) {
+                                      var js, fjs = d.getElementsByTagName(s)[0];
+                                      if (d.getElementById(id)) return;
+                                      js = d.createElement(s); js.id = id;
+                                      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
+                                      fjs.parentNode.insertBefore(js, fjs);
+                                      }(document, 'script', 'facebook-jssdk'));
+                                    </script>
         <!-- LOAD JQUERY -->
         <script type="text/javascript" src="{{ asset('js/lib/jquery-1.11.2.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/masonry.pkgd.min.js') }}"></script>
