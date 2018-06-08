@@ -3,31 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/about/aboutus.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/style.css</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tourhot.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/home/index.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/login-admin.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/auth/login.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/hothits.blade.php</file>
-=======
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/Controller.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/tour/tour-confirm.js</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/js/filter/search-tour.js</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Package_Day.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tourhot.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/home/index.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/tour/tourhot.js</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/loading/loading-screen.blade.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/TourController.php</file>
-            <file>file:/C:/xampp/htdocs/tourhits-github/public/css/custom_style.css</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/RegisterController.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/main.js</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Orders.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Package.php</file>
->>>>>>> e8a8a9e6fc7d0eb0fb50ac1d0ecdfdee72ea4db4
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/TourController.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/tour/tour-detail.js</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/layout/main.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-confirm.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/auth/login.blade.php</file>
         </group>
     </open-files>
 </project-private>

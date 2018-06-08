@@ -433,7 +433,7 @@
                                                             <div>
                                                                 <div class="fc-day-number">21</div>
                                                                 <div class="fc-day-content">
-                                                                    <div style="position: relative;">120,000฿</div>
+                                                                    <div style="position: relative;"></div>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -449,7 +449,7 @@
                                                             <div>
                                                                 <div class="fc-day-number">23</div>
                                                                 <div class="fc-day-content">
-                                                                    <div style="position: relative;">29,000฿</div>
+                                                                    <div style="position: relative;"></div>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -1151,9 +1151,9 @@
                                     </td>
                                     <td class="align-middle days-from text-sm-center">
                                         @if($tourPackageObj->tour_period_status == 'Y')
-                                        <a type="button" href="{{ url('/tour-confirm') }}" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods"  data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>
+                                        <a type="button" target="_blank" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods"  data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>
                                         @else
-                                        <a type="button" href="{{ url('/tour-confirm') }}" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">เต็ม</a>
+                                        <a type="button" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">เต็ม</a>
                                         @endif
                                     </td> 
                                 </tr>
@@ -1194,7 +1194,11 @@
                                         </option>
                                         @foreach ($tourPackageList as $tourPackageObj)
                                         <option value="{{ $tourPackageObj->tour_period_id}}">
-                                            {{$tourPackageObj->tour_period_start}} - {{$tourPackageObj->tour_period_end}} @if($tourPackageObj->tour_period_status == 'Y')ว่าง@elseเต็ม@endif
+                                            {{$tourPackageObj->tour_period_start}} - {{$tourPackageObj->tour_period_end}} @if($tourPackageObj->tour_period_status == 'Y')
+                                            (ว่าง)
+                                            @else
+                                            (เต็ม)
+                                            @endif
                                         </option>
                                         @endforeach
                                     </select>
@@ -1207,7 +1211,7 @@
                                 <label>ผู้ใหญ่ (พักคู่)</label>
                                 <div class="form-item">
                                     <select id="adult_price" class="awe-select" disabled="">
-                                        <option val="0">0</option>
+                                        <option selected val="0">0</option>
                                         <option val="2">2</option>
                                         <option val="4">4</option>
                                         <option val="6">6</option>
@@ -1226,17 +1230,17 @@
                                 <label>เด็ก (เพิ่มเตียง)</label>
                                 <div class="form-item">
                                     <select id="child_price" class="awe-select" disabled="">
-                                        <option val="0">0</option>
+                                        <option selected val="0">0</option>
+                                        <option val="1">1</option>
                                         <option val="2">2</option>
+                                        <option val="3">3</option>
                                         <option val="4">4</option>
+                                        <option val="5">5</option>
                                         <option val="6">6</option>
+                                        <option val="7">7</option>
                                         <option val="8">8</option>
+                                        <option val="9">9</option>
                                         <option val="10">10</option>
-                                        <option val="12">12</option>
-                                        <option val="14">14</option>
-                                        <option val="16">16</option>
-                                        <option val="18">18</option>
-                                        <option val="20">20</option>
                                     </select>
                                 </div>
                                 <!--<span>อายุ 11 หรือต่ำกว่า</span>-->
@@ -1245,7 +1249,7 @@
                                 <label>ผู้ใหญ่ (พักเดี่ยว)</label>
                                 <div class="form-item">
                                     <select id="alone_price" class="awe-select" disabled="">
-                                        <option val="0">0</option>
+                                        <option selected val="0">0</option>
                                         <option val="1">1</option>
                                         <option val="2">2</option>
                                         <option val="3">3</option>
@@ -1264,17 +1268,17 @@
                                 <label>เด็ก (ไม่เพิ่มเตียง)</label>
                                 <div class="form-item">
                                     <select id="child_nb_price" class="awe-select" disabled="">
-                                        <option val="0">0</option>
+                                        <option selected val="0">0</option>
+                                        <option val="1">1</option>
                                         <option val="2">2</option>
+                                        <option val="3">3</option>
                                         <option val="4">4</option>
+                                        <option val="5">5</option>
                                         <option val="6">6</option>
+                                        <option val="7">7</option>
                                         <option val="8">8</option>
+                                        <option val="9">9</option>
                                         <option val="10">10</option>
-                                        <option val="12">12</option>
-                                        <option val="14">14</option>
-                                        <option val="16">16</option>
-                                        <option val="18">18</option>
-                                        <option val="20">20</option>
                                     </select>
                                 </div>
                                 <!--<span>อายุ 11 หรือต่ำกว่า</span>-->
@@ -1286,7 +1290,7 @@
                         </div>
                         <div class="form-submit">
                             <div class="add-to-cart">
-                                <button type="submit">
+                                <button onclick='redirect()'>
                                     <i class="far fa-check-circle" style="padding-right: 10px;"></i>ส่งใบจอง
                                 </button>
                             </div>
@@ -1306,99 +1310,23 @@
 @stop
 
 @section('footer_scripts')
-<script type="text/javascript" src="{{ asset('js/tour/tour-detail.js') }}"></script>
 <script type="text/javascript">
-
+var tour_package_id = <?php echo json_encode($tourPackage->tour_package_id); ?>;
 var tour_period = 0;
 var sum_appraise_adult = 0;
 var sum_appraise_child = 0;
 var sum_appraise_alone = 0;
 var sum_appraise_child_nb = 0;
-
-$(function () {
-    var tour_package_period_start = <?php echo json_encode($tourPackage->tour_package_period_start); ?>;
-    var tour_package_period_end = <?php echo json_encode($tourPackage->tour_package_period_end); ?>;
-    var tourPackageList = <?php echo json_encode($tourPackageList); ?>;
-    var as = tour_package_period_start.split("-");
-    var ae = tour_package_period_end.split("-");
-    var ae2 = ae[2].split(' ');
-    var as2 = as[2].split(' ');
-    var date = as2[0] + " " + setCTMonthString(as[1]) + " - " + ae2[0] + " " + setCTMonthString(ae[1]) + " " + ae[0];
-    $('#period_month').html(date);
-
-    var tour_code = <?php echo json_encode($tourPackage->tour_package_id); ?>;
-    while (tour_code.length != 4)
-    {
-        tour_code = '0' + tour_code;
-    }
-    $('#tour_code').html(tour_code);
-
-    $('#tour_period').change(function () {
-        tour_period = $(this).val();
-        var status = "N";
-        $.each(tourPackageList, function (key, val) {
-            if (parseInt(val['tour_period_id']) == tour_period) {
-                status = val['tour_period_status'];
-            }
-        });
-
-        if ($(this).val() == 0 || status == "N") {
-            $('.awe-select').prop('disabled', true);
-        } else {
-            $('.awe-select').prop('disabled', false);
-        }
-        $('.awe-select').val(0);
-        $('#appraise').html('฿' + 0);
-    });
-
-
-
-    $('#adult_price').change(function () {
-        var value = ($(this).val());
-        sum_appraise_adult = 0;
-        $.each(tourPackageList, function (key, val) {
-            if (parseInt(val['tour_period_id']) == tour_period) {
-                sum_appraise_adult = sum_appraise_adult + parseInt(val['tour_period_adult_price']);
-            }
-        });
-        sum_appraise_adult = sum_appraise_adult * parseInt(value);
-        $('#appraise').html('฿' + numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
-    });
-    $('#child_price').change(function () {
-        var value = ($(this).val());
-        sum_appraise_child = 0;
-        $.each(tourPackageList, function (key, val) {
-            if (parseInt(val['tour_period_id']) == tour_period) {
-                sum_appraise_child = sum_appraise_child + parseInt(val['tour_period_child_price']);
-            }
-        });
-        sum_appraise_child = sum_appraise_child * parseInt(value);
-        $('#appraise').html('฿' + numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
-    });
-    $('#child_nb_price').change(function () {
-        var value = ($(this).val());
-        sum_appraise_child_nb = 0;
-        $.each(tourPackageList, function (key, val) {
-            if (parseInt(val['tour_period_id']) == tour_period) {
-                sum_appraise_child_nb = sum_appraise_child_nb + parseInt(val['tour_period_child_nb_price']);
-            }
-        });
-        sum_appraise_child_nb = sum_appraise_child_nb * parseInt(value);
-        $('#appraise').html('฿' + numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
-    });
-    $('#alone_price').change(function () {
-        var value = ($(this).val());
-        sum_appraise_alone = 0;
-        $.each(tourPackageList, function (key, val) {
-            if (parseInt(val['tour_period_id']) == tour_period) {
-                sum_appraise_alone = sum_appraise_alone + parseInt(val['tour_period_alone_price']);
-            }
-        });
-        sum_appraise_alone = sum_appraise_alone * parseInt(value);
-        $('#appraise').html('฿' + numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
-    });
-});
+var tour_package_period_start = <?php echo json_encode($tourPackage->tour_package_period_start); ?>;
+var tour_package_period_end = <?php echo json_encode($tourPackage->tour_package_period_end); ?>;
+var tourPackageList = <?php echo json_encode($tourPackageList); ?>;
+var tour_code = <?php echo json_encode($tourPackage->tour_package_id); ?>;
+var two_qty = 0;
+var one_qty = 0;
+var child_one_qty = 0;
+var child_nb_qty = 0;
 </script>
+<script type="text/javascript" src="{{ asset('js/tour/tour-detail.js') }}"></script>
 @endsection
 
 <!--กดแล้วถ่าง                        -->

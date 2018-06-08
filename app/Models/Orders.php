@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace App;
+namespace App\Models;
 
 /**
  * Description of Employee
@@ -19,4 +19,9 @@ class Orders extends Model {
 
     protected $table = 'order';
 
+    public function saveOrder($arrOrders){
+        $order_id =  Orders::insertGetId($arrOrders)
+        
+    }
+    
 }
