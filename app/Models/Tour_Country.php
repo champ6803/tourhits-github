@@ -97,4 +97,13 @@ class Tour_Country extends Model {
 
              }
      }
+     
+    public function getTourCountryAll(){
+        try {
+         $tourCountryList = Tour_Country::all();
+         return $tourCountryList;
+        } catch (Exception $ex) {
+               return $ex;
+        }
+    }
 }

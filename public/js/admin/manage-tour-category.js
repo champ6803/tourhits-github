@@ -33,7 +33,6 @@ $(function () {
     $(document).ready(function() {
         //ไฮไลต์เมนูที่เข้าอยู่
         document.getElementById("categoryMenu").style.color = "blue";
-        document.getElementById("managetour").className = "active";
         createTable()
         $('#tourCategoryTable').DataTable();
     } );

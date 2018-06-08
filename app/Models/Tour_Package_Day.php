@@ -29,5 +29,24 @@ class Tour_Package_Day extends Model {
             return $ex;
         }
     }
+    
+    public function insertTourPackageDay($id,$day,$tourname,$tourdetail){
+          try {
+            $date = \Carbon\Carbon::now();
+            Tour_Package_Day::insert(
+            [ 'tour_package_id' => $id
+             ,'tour_package_day' => $day
+             ,'tour_package_day_name' => $tourname
+             ,'tour_package_day_description' => $tourdetail
+             , 'created_by' => 'admin'
+             , 'created_at' => $date
+             , 'updated_by' => 'admin'        
+             , 'updated_at' => $date]
+            );
+          } catch (Exception $ex) {
+               return $ex;
+          }
+    }
+    
 
 }

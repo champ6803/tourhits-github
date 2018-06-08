@@ -139,4 +139,16 @@ Route::post('searchCompanyByCompanyCode', 'ManageFrontController@searchCompanyBy
 
 Route::get('tourhot', 'TourhotController@tour_hot');
 
+<<<<<<< HEAD
 Route::post('orders', 'TourController@orders');
+=======
+Route::get('tourhot','TourhotController@tour_hot');
+
+Route::get('manage-tourlist','AdminController@manage_tourlist');
+
+Route::post('searchAllTourCountry', 'AdminController@searchAllTourCountry');
+
+Route::post('searchAllTourCategory', 'AdminController@searchAllTourCategory');
+
+Route::post('saveTourlistAndDay', 'AdminController@saveTourlistAndDay');
+>>>>>>> c6fa427662e6afd9d58051388ba7a702b2a94c4d
