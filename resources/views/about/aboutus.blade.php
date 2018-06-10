@@ -69,7 +69,7 @@
                                                 <div class="col-md-6" style="float:left;">
                                                 <strong><p>E-mail address : <strong><a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;">tourhits@gmail.com</a></strong></p>
                                                 <p style="color:#EC2424;">Our Vision : Prestige Travel Atmost Quality</p>
-                                                <p>ใบอนุญาตประกอบธุรกิจนำเที่ยว เลขที่ 11/06195</p></strong>
+                                                <p>ใบอนุญาตประกอบธุรกิจนำเที่ยว เลขที่ 11/09305</p></strong>
                                                 </div>
                                                 <p><img src="images/Certificate/TAT-TEC-W.png" alt="" title=""></p>
                                                 <br>

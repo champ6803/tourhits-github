@@ -81,7 +81,7 @@ session_start();
                         <!-- LOGO -->
                         <div class="logo">
                             <a href="/"><img src="{{ asset('/images/logo.png')}}" alt=""></a>
-                            <span class="cer-logo" style="font-size: 10px; color: #515050; font-weight: 900;"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/06195</span>
+                            <span class="cer-logo" style="font-size: 10px; color: #515050; font-weight: 900;"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/09305</span>
                         </div>
 
                         <!-- END / LOGO -->
@@ -90,7 +90,8 @@ session_start();
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
                                     <a href="{{url('/')}}">แพ็คเกจทัวร์</a>
-                                    <ul class="sub-menu">
+                                    
+<!--                                    <ul class="sub-menu">
                                         <li><a href="index.html">Home 1</a></li>
                                         <li class="current-menu-item"><a href="index2.html">Home 2</a></li>
                                         <li><a href="index3.html">Menu hamburger</a></li>
@@ -98,7 +99,7 @@ session_start();
                                         <li><a href="index2-dark.html">Home 2 (Dark)</a></li>
                                         <li><a href="index3-dark.html">Menu hamburger (Dark)</a></li>
                                     </ul>
-                                    <hr id="indx" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <hr id="indx" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">-->
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('tourhot')}}">ทัวร์มาแรง</a>
@@ -204,11 +205,14 @@ session_start();
                         <div class="col-md-3">
                             <!-- facebook -->
                             <div class="row facebook">
-                                <div class="fb-page" data-href="https://www.facebook.com/PAGE.TOURHITS" data-tabs="timeline" data-height="70" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-                                <blockquote cite="https://www.facebook.com/PAGE.TOURHITS" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PAGE.TOURHITS">Tourhits</a></blockquote></div>         
+                                <div class="fb-page" 
+                                    data-href="https://www.facebook.com/page.tourhits"
+                                    data-width="349" 
+                                    data-hide-cover="false"
+                                    data-show-facepile="false"></div>         
                             </div> 
                             <div class="foot-location-head">
-                                บริษัท ทัวร์เอ็กซ์เพรสเซ็นเตอร์ดอทคอม จำกัด<br>
+                                บริษัท ทัวร์ฮิตส์ จำกัด<br>
                             
                             </div>
                             <div class="foot-location-detail"> 
@@ -317,7 +321,7 @@ session_start();
                         <!-- END / WIDGET -->
                     </div>
                     <div class="copyright">
-                        <h6 style="color:#FFFFFF;"><i class="fas fa-registered"></i> เลขที่ใบอนุญาต 11/06195</h6>
+                        <h6 style="color:#FFFFFF;"><i class="fas fa-registered"></i> เลขที่ใบอนุญาต 11/09305</h6>
                         <p>2018 Tourhits All rights reserved.</p>
                     </div>
                 </div>
