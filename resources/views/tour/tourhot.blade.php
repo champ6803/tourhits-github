@@ -214,7 +214,7 @@
                     </div>
                     
                     <div class="hothits-cover">
-                        <div class="hothits-cover-img" style="background-image: url(&quot;;);" data-reactid="">
+                        <div class="hothits-cover-img" style="background-image: url(&quot;https://images.unsplash.com/photo-1504469233511-1a19ead30d33?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a251900ecb0110fde8dd273f9a6817d5&auto=format&fit=crop&w=500&q=60;);" data-reactid="">
                             <a class="hothits-country-name" title="" href="" data-reactid="">บรูไน</a>
                         </div>                                     
                     </div>

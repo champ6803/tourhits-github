@@ -26,6 +26,7 @@
                                 <h2 style="color: #EC2424;">ติดต่อเรา</h2>
                             </div>
                             <div class="descriptions">
+                                <p>บริษัท ทัวร์ฮิตส์ จำกัด</p>
                                 <p>เลขที่ 300/76 โครงการพรีเมี่ยมเพลส 6 ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กทม. 10240</strong></p>
                                 <p>300/76 PREMIUM PLACE 6 NAWAMIN RD. NAWAMIN BUENGKUM BANGKOK THAILAND 10240</p>
                                 <p><hr></p>
@@ -62,6 +63,24 @@
                         </div>
                     </div>
                 </div>
+                
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-xs-12">ทัวร์เอเชีย</div>
+                            <div class="col-xs-9 col-md-7">.col-xs-9 .col-md-7</div>
+                            <div class="col-xs-3 col-md-5">.col-xs-3 .col-md-5</div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-xs-6 col-md-10">.col-xs-6 .col-md-10</div>
+                          <div class="col-xs-6 col-md-2">.col-xs-6 .col-md-2</div>
+                        </div>
+                        
+                    </div>
+                </div    
+                    
             </div>
         </section>
 
