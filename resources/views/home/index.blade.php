@@ -3,6 +3,15 @@
 @section('main-content')
 
 <style>
+    ::-webkit-scrollbar {
+        display: none;
+        }
+    .tabs .ui-tabs-nav{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: -webkit-box;    
+    }
+    
     .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {    
         color: #EC2424;
         border-bottom-color: #EC2424;
@@ -1304,7 +1313,7 @@
             </div>
         </div>
 
-        <a href="#" class="btn btn-nextpage">ดูแพ็คเกจทัวร์ทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a> 
+        <a href="#" class="btn btn-nextpage">แพ็คเกจทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a> 
     </div>
 </section>
 
@@ -1904,7 +1913,7 @@
             </div>
         </div>
 
-        <a href="#" class="btn btn-nextpage">ดูแพ็คเกจทัวร์ทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a>
+        <a href="#" class="btn btn-nextpage">แพ็คเกจทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a>
 
     </div>
 </section>

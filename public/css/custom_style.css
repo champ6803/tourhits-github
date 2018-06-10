@@ -1,3 +1,4 @@
+
 .underline-link {
     border-bottom: 4px solid #488bf8;
     width: 0;
@@ -200,7 +201,7 @@
     float: left;
     overflow: hidden;
     padding: 0px 10px 0px 0;
-    margin-bottom: 5px;
+/*    margin-bottom: 5px;*/
     /*    font-family: sans-serif;*/
 }
 
@@ -314,9 +315,9 @@
 .btn-nextpage {
     position: absolute;
     right: 0px;
-    box-shadow:0 0 6px rgba(35, 173, 255, 0.5);
+/*    box-shadow:0 0 6px rgba(35, 173, 255, 0.5);*/
     /*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-    width: 200px;
+/*    width: 200px;*/
     margin: 20px 0 20px 0;
     border-radius: 8px;    
     color: #fff;
@@ -433,6 +434,7 @@ hr {
 #footer-page .col-md-3 .contact{
     text-align: left;
     font-size: 25px;
+    margin-left: 4px
 
 }
 
@@ -4615,3 +4617,43 @@ Custom BS3
         line-height: 1.4;
         margin-left: 8px;
     }
+    
+    /* sub-menu แพคเกจทัวร์ */
+    
+    .cat-asian{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+/*        margin-right: -15px;
+        margin-left: -15px;*/
+    }
+    
+    .cat-asian .flag{
+        width: 130px;
+        margin: 5px 0px;
+        padding-right: 5px;
+    }
+    
+    .cat-asian .country-link{
+        height: auto;
+        padding: 10px 0px 10px 10px;
+    }
+    
+    .cat-asian .country-link h5 {
+        width: 50%;
+        line-height: 25px;
+        font-size: 17px;
+        overflow: hidden;
+    }
+    
+    .cat-asian .country-link img {
+        height: 25px;
+    }
+    
+    .sub-menu .pagtour-head{
+        padding-left: 20px;
+        font-size: 25px;
+    }
+    

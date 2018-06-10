@@ -1084,7 +1084,8 @@ span.dropcap {
 }
 .awe-navigation .menu-list li .sub-menu {
     position: absolute;
-    width: 210px;
+/*    width: 210px;*/
+    width: 1000px;
     list-style: none;
     padding: 0;
     top: 110%;
