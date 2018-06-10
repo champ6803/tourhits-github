@@ -60,19 +60,27 @@ class TourController extends Controller {
 
     public function orders() {
         try {
+            $order = new Orders();
             $customer_id = request()->get('customer_id');
+            $order_total_price = request()->get('all_total_amount');
+            $tour_package_id = request()->get('tour_package_id');
+            $tour_period_id = request()->get('tour_period_id');
+            $quantity_adult = request()->get('adult_qty');
+            $quantity_child = request()->get('child_qty');
             if ($customer_id != null || $customer_id != "") {
-                
+                $suc = $order->saveOrder($customer_id, $order_total_price, $tour_package_id, $tour_period_id, $quantity_adult, $quantity_child);
+                if ($suc) {
+                    return response('true');
+                }
+                return response('false');
             } else {
                 $cus_name = request()->get('cus_name');
                 $cus_email = request()->get('cus_email');
                 $line_id = request()->get('line_id');
                 $phone = request()->get('phone');
                 $remark = request()->get('remark');
-                $arrOrders = ['order_name' => $cus_name, 'order_email' => $cus_email, 'order_line' => $line_id, 'order_phone' => $phone, 'order_remark' => $remark];
-                return($arrOrders);
+                return response('false');
             }
-            return response(['name' => $name, 'customer' => $customer_id]);
         } catch (\Exception $ex) {
             return response($ex);
         }

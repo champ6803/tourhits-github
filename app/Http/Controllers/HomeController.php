@@ -7,7 +7,7 @@
  */
 
 namespace App\Http\Controllers;
-
+use App\Models\Tour_Category;
 /**
  * Description of HomeController
  *
@@ -16,7 +16,9 @@ namespace App\Http\Controllers;
 class HomeController extends Controller {
 
     public function index() {
-        return view('home.index');
+        $tourCate = new Tour_Category();
+        $tourCategoryList = $tourCate->getTourCategoryAll();
+        return view('home.index', compact('tourCategoryList'));
     }
 
 }

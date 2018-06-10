@@ -150,7 +150,7 @@
             <div class="col-md-3 col-sm-12">
                 <div class="checkout-page__sidebar">
                     <ul>
-                        <li><a style="background-color: #EC2424;">
+<!--                        <li><a style="background-color: #EC2424;">
                                 <div class="fix-img" style="float:left;"><img src="{{asset('images/ticket.png')}}" alt=""></div>
                                 วันเดินทางที่เลือก
                             </a>
@@ -158,7 +158,7 @@
                         <select id='sel_tour_package_period' class="form-control form-control-sm option-confirm-tour">
                             <option val='0'>วันเดินทางที่เลือก</option>
                         </select>
-                        <hr>
+                        <hr>-->
                         <li>
                             <a>
                                 <div class="fix-img" style="float:left;"><img src="{{asset('images/airplane.png')}}" alt=""></div>
@@ -363,7 +363,7 @@
                             </thead>
                             <tr>                                               
                                 <td class="product-name" colspan="3">
-                            <li><span>ผู้ใหญ่</span></li>                                                   
+                            <li><span>ผู้ใหญ่</span> <span id="adult_qty"></span></li>                                                   
                             </td>                                                                                              
                             <td class="product-subtotal">
                                 <span class='adult_total_amount'></span> ฿
@@ -371,7 +371,7 @@
                             </tr>
                             <tr>
                                 <td class="product-name" colspan="3">
-                            <li><span>เด็ก</span></li>
+                            <li><span>เด็ก</span> <span id="child_qty"></span></li>
                             </td>
                             <td class="product-subtotal">
                                 <span class='child_total_amount'></span> ฿
@@ -402,7 +402,7 @@
                                                             </div>-->
                     </div>
                     <div id='login_panel' class="content-title text-center">
-                        <h2><i class="fas fa-lock"></i>&nbsp;<a href="/login">เข้าสู่ระบบ</a></h2>
+                        <h2 style="color:#EC2424"><i class="fas fa-lock"></i>&nbsp;<a href="/login">เข้าสู่ระบบ</a></h2>
                     </div>
                     <div class="panel-group">
                         <div class="panel panel-default">
@@ -463,6 +463,7 @@
     var tour_package_period_end = <?php echo json_encode($tourPackage->tour_package_period_end); ?>;
     var tourPackageList = <?php echo json_encode($tourPackageList); ?>;
     var tourPackagePeriod = <?php echo json_encode($tourPackagePeriod); ?>;
+    var tourPackage = <?php echo json_encode($tourPackage); ?>;
     var tour_code = <?php echo json_encode($tourPackage->tour_package_id); ?>;
 </script>
 <script type="text/javascript" src="{{ asset('js/tour/tour-confirm.js') }}"></script>
