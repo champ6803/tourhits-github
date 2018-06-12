@@ -4621,19 +4621,39 @@ Custom BS3
     /* sub-menu แพคเกจทัวร์ */
     
     .cat-asian{
+        
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+        flex-wrap: wrap;       
 /*        margin-right: -15px;
-        margin-left: -15px;*/
+        margin-left: -15px;*/       
+    }
+    
+    .cat-line{
+        border-right: 1px solid #d4d4d4;
     }
     
     .cat-asian .flag{
         width: 130px;
-        margin: 5px 0px;
-        padding-right: 5px;
+        margin: 5px -10px 5px 3px;   
+    }
+    
+    .cat-asian .flag a{
+            -webkit-transition: all 0s ease;
+            -moz-transition: all 0s ease;
+            -ms-transition: all 0s ease;
+            -o-transition: all 0s ease;
+            transition: all 0s ease;
+    }
+    
+    .cat-asian .flag:hover {
+        opacity: 0.8;
+    }
+    
+    .all-flag-content .flag:hover {
+        opacity: 0.8;
     }
     
     .cat-asian .country-link{
@@ -4656,4 +4676,15 @@ Custom BS3
         padding-left: 20px;
         font-size: 25px;
     }
+    
+    @media screen and (max-width: 1200px) {
+        .cat-asian{
+            width: 100%;
+        }
+        
+        .cat-line{
+            border-right: 0px;
+        }
+    }
+    
     
