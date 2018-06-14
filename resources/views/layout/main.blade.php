@@ -89,9 +89,9 @@ session_start();
                         <nav class="navigation awe-navigation" data-responsive="1200">
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
-                                    <a href="{{url('/')}}">แพ็คเกจทัวร์</a>
+                                    <a>แพ็คเกจทัวร์</a>
                                     <ul class="col-md-12 sub-menu">
-                                    <div class="col-md-4 cat-asian">
+                                    <div class="col-md-4 cat-asian cat-line">
 <!--                                        เอเชีย-->
                                         <div class="row">
                                             <div class="pagtour-head">ทัวร์เอเชีย</div>
@@ -226,13 +226,197 @@ session_start();
                                               </div>
                                           </div>
                                         </div>
+                                    </div>    
 <!--                                        เอเชีย-->
+<!--                                        ยุโรป-->
+                                    <div class="col-md-4 cat-asian cat-line">
+                                        <div class="row">
+                                            <div class="pagtour-head">ทัวร์ยุโรป</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ยุโรป?country=ทัวร์ยุโรป')}}">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/8/eu.png" alt="ทัวร์ยุโรป" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/8/eu.png">
+                                                    <h5>ยุโรป</h5>
+                                                </a>
+                                                </div>                                                    
+                                            </div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์รัสเซีย?country=ทัวร์รัสเซีย')}}">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/18/flag-aa38aeb9c762602cdebc9a5dbf308295.png" alt="ทัวร์รัสเซีย" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/18/flag-aa38aeb9c762602cdebc9a5dbf308295.png">
+                                                    <h5>รัสเซีย</h5>
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์อิตาลี?country=ทัวร์อิตาลี')}}">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/10/Italy.png" alt="ทัวร์อิตาลี" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/10/Italy.png">
+                                                    <h5>อิตาลี</h5>
+                                                </a>
+                                                </div></div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ออสเตรีย?country=ทัวร์ออสเตรีย')}}">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/16/Austria.png" alt="ทัวร์ออสเตรีย" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/16/Austria.png">
+                                                    <h5>ออสเตรีย</h5>
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ฝรั่งเศส?country=ทัวร์ฝรั่งเศส')}}">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/9/France.png" alt="ทัวร์ฝรั่งเศส" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/9/France.png">
+                                                    <h5>ฝรั่งเศส</h5>
+                                                </a>
+                                                </div></div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์สวิส?country=ทัวร์สวิส')}}">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/11/Switzerland.png" alt="ทัวร์สวิส" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/11/Switzerland.png">
+                                                    <h5>สวิส</h5>
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์เยอรมัน?country=ทัวร์เยอรมัน')}}">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/12/Germany.png" alt="ทัวร์เยอรมัน" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/12/Germany.png">
+                                                    <h5>เยอรมัน</h5>
+                                                </a>
+                                                </div></div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/spain-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/38/flag-00d787efb4481bfaa1fd9b08459695eb.png" alt="ทัวร์สเปน" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/38/flag-00d787efb4481bfaa1fd9b08459695eb.png">
+                                                    <h5>สเปน</h5>
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/finland-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/42/flag-a5d8c288acfeab36b4391982b5be2a2a.png" alt="ทัวร์ฟินแลนด์" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/42/flag-a5d8c288acfeab36b4391982b5be2a2a.png">
+                                                    <h5>ฟินแลนด์</h5>
+                                                </a>
+                                                </div></div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/netherlands-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/25/flag-7a4a3e84eea1ef90b9d9254380831b74.png" alt="ทัวร์เนเธอร์แลนด์" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/25/flag-7a4a3e84eea1ef90b9d9254380831b74.png">
+                                                    <h5>เนเธอร์แลนด์</h5>
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/poland-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/43/flag-0a47aeab902bdcea516949aea687a75a.png" alt="ทัวร์โปแลนด์" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/43/flag-0a47aeab902bdcea516949aea687a75a.png">
+                                                    <h5>โปแลนด์</h5>
+                                                </a>
+                                                </div></div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/croatia-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/39/flag-3baac14e2c7a3c84e4340a3e33fc3f04.png" alt="ทัวร์โครเอเชีย" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/39/flag-3baac14e2c7a3c84e4340a3e33fc3f04.png">
+                                                    <h5>โครเอเชีย</h5>
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/england-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/40/flag-c10677d43fafe551191f0370489a3ace.png" alt="ทัวร์อังกฤษ" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/40/flag-c10677d43fafe551191f0370489a3ace.png">
+                                                    <h5>อังกฤษ</h5>
+                                                </a>
+                                                </div></div>
+                                        </div>
+                                    </div>    
+<!--                                        ยุโรป-->
+<!--                                        ทวีปอื่นๆ-->
+                                    <div class="col-md-4 cat-asian">
+                                        <div class="row">
+                                            <div class="pagtour-head">ทัวร์ทวีปอื่นๆ</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์มัลดีฟส์?country=ทัวร์มัลดีฟส์')}}">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/35/Maldives.png" alt="ทัวร์มัลดีฟส์" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/35/Maldives.png">
+                                                    <h5>มัลดีฟส์</h5></a>
+                                                </div>                                                    
+                                            </div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ดูไบ?country=ทัวร์ดูไบ')}}">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/27/United-Arab-Emirates.png" alt="ทัวร์ดูไบ" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/27/United-Arab-Emirates.png">
+                                                    <h5>ดูไบ</h5></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/australia-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/14/Australia.png" alt="ทัวร์ออสเตรเลีย" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/14/Australia.png">
+                                                    <h5>ออสเตรเลีย</h5></a>
+                                                </div>                                                    
+                                            </div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/egypt-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/30/flag-ad52e00676e16b435f78782502cdd3d3.png" alt="ทัวร์อียิปต์" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/30/flag-ad52e00676e16b435f78782502cdd3d3.png">
+                                                    <h5>อียิปต์</h5></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/turkey-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/32/flag-62151bf6364345076361d9fd917f06bd.png" alt="ทัวร์ตุรกี" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/32/flag-62151bf6364345076361d9fd917f06bd.png">
+                                                    <h5>ตุรกี</h5></a>
+                                                </div>                                                    
+                                            </div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/south-africa-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/28/flag-b09ab3faf5517b872f403818f1bd72cd.png" alt="ทัวร์แอฟริกาใต้" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/28/flag-b09ab3faf5517b872f403818f1bd72cd.png">
+                                                    <h5>แอฟริกาใต้</h5></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/norway-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/41/flag-1a716cb7921f3dcba366f1bcb2b74f10.png" alt="ทัวร์นอร์เวย์" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/41/flag-1a716cb7921f3dcba366f1bcb2b74f10.png">
+                                                    <h5>นอร์เวย์</h5></a>
+                                                </div>                                                    
+                                            </div>
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/new-zealand-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/15/New-Zealand.png" alt="ทัวร์นิวซีแลนด์" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/15/New-Zealand.png">
+                                                    <h5>นิวซีแลนด์</h5></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-6 col-md-6">
+                                                <div class="flag"><a class="country-link new-thai-font" href="/united-states-tour">
+                                                    <img data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/13/United-States-of-America.png" alt="ทัวร์สหรัฐอเมริกา" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/13/United-States-of-America.png">
+                                                    <h5>อเมริกา</h5></a>
+                                                </div>                                                    
+                                            </div>                                          
+                                        </div>
+                                    </div>    
+<!--                                        ทวีปอื่นๆ-->
 
-
-
-
-
-                                    </div>
+                                    
                                     </ul>
 <!--                                    <ul class="sub-menu">
                                         <li><a href="index.html">Home 1</a></li>
