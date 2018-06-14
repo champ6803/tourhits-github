@@ -5,13 +5,13 @@
 <style>
     ::-webkit-scrollbar {
         display: none;
-        }
+    }
     .tabs .ui-tabs-nav{
         overflow-y: hidden;
         overflow-x: scroll;
         display: -webkit-box;    
     }
-    
+
     .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {    
         color: #EC2424;
         border-bottom-color: #EC2424;
@@ -19,7 +19,7 @@
     .container-country .index-tab-flag{
         margin-top: 40px;
     }
-    
+
     .hothits-item{
         width: 100% !important;
     }
@@ -828,9 +828,10 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <div class="row">
+                        @foreach($tourHitsPackageList as $tourHitsPackage)
                         <div class="col-sm-6 col-md-6 col-lg-3" align="center">
                             <div class="thumbnail">
-                                <a href="{{ url('tour-detail') }}">
+                                <a href="{{ url('tour-detail/'.$tourHitsPackage->tour_country_name.'/'.$tourHitsPackage->tour_package_id.'/'.$tourHitsPackage->tour_package_name)}}">
                                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(&quot;../images/card/tour1.jpg&quot;);">
                                         <div class="tour-footer">
                                             <div class="pull-left">
@@ -842,7 +843,7 @@
                                         <div class="tour-header">
                                             <div class="pull-right">
                                                 <span class="days">
-                                                    3 วัน 2 คืน
+                                                    {{$tourHitsPackage->tour_period_day_number}} วัน {{$tourHitsPackage->tour_period_night_number}} คืน
                                                 </span>
                                             </div>
                                             <span class="clear"></span>
@@ -850,7 +851,7 @@
                                         <div class="tour-bottom-right">
                                             <div>
                                                 <span class="tag">
-                                                    #6600
+                                                    <?php echo '#'.str_pad($tourHitsPackage->tour_package_id, 4, "0", STR_PAD_LEFT); ?>
                                                 </span>
                                             </div>
                                             <span class="clear"></span>                               
@@ -861,11 +862,9 @@
                                     <div class="tabbable">
                                         <div class="tab-content">
                                             <div id="tab1" class="tab-pane active">
-                                                <div class="card-detail">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง 
-                                                    เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม 
-                                                    ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน (รวมค่าตั๋ว) ชมโชว์ SYMPHONY OF LIGHT ช้อปปิ้งจิมซาจุ่ย</div>
+                                                <div class="card-detail">{{$tourHitsPackage->tour_package_detail}}</div>
                                                 <hr>
-                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา {{$tourHitsPackage->tour_package_period_strat}} - ส.ค.</div>
                                                 <hr>
                                                 <div>                                        
                                                     <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai.png" title="การบินไทย"></div>                                         
@@ -889,6 +888,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                         <div class="col-sm-6 col-md-6 col-lg-3" align="center">
                             <div class="thumbnail">
                                 <a href="{{ url('tour-detail') }}">
@@ -1329,74 +1329,29 @@
                 ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
             </div>
             <div class="row">
+                @foreach($categoryList as $category)
                 <div class="col-sm-4 col-xs-6 col-md-3">
                     <div class="select-item">
-                            <a href="">
-				<div class="select-img lazyloaded">
-                                    <div class="center-crop"> 
-                                        <img src="images/fav/fav1.png" alt="">
-                                        
-                                   </div> 
-				</div> 
-				<div class="hothits-name-box">
-                                    <div class="text ">แนะนำ</div>
-				</div>
-                            </a>
+                        <a href="{{url('tourCategory?tour_cate='. $category->category_id)}}">
+                            <div class="select-img lazyloaded">
+                                <div class="center-crop"> 
+                                    <img src="images/category/{{ $category->category_img }}" alt="">
+                                </div> 
+                            </div> 
+                            <div class="hothits-name-box">
+                                <div class="text ">แนะนำ</div>
+                            </div>
+                        </a>
                     </div>   
                 </div>
-                <div class="col-sm-4 col-xs-6 col-md-3">
-                    <div class="select-item">
-                            <a href="">
-				<div class="select-img lazyloaded">
-                                    <div class="center-crop"> 
-                                        <img src="images/fav/fav2.png" alt="">
-                                        
-                                   </div> 
-				</div> 
-				<div class="hothits-name-box">
-                                    <div class="text ">แนะนำ</div>
-				</div>
-                            </a>
-                    </div>   
-                </div>
-                <div class="col-sm-4 col-xs-6 col-md-3">
-                    <div class="select-item">
-                            <a href="">
-				<div class="select-img lazyloaded">
-                                    <div class="center-crop"> 
-                                        <img src="images/fav/fav3.png" alt="">
-                                        
-                                   </div> 
-				</div> 
-				<div class="hothits-name-box">
-                                    <div class="text ">แนะนำ</div>
-				</div>
-                            </a>
-                    </div>   
-                </div>
-                <div class="col-sm-4 col-xs-6 col-md-3">
-                    <div class="select-item">
-                            <a href="">
-				<div class="select-img lazyloaded">
-                                    <div class="center-crop"> 
-                                        <img src="images/fav/fav4.png" alt="">
-                                        
-                                   </div> 
-				</div> 
-				<div class="hothits-name-box">
-                                    <div class="text ">แนะนำ</div>
-				</div>
-                            </a>
-                    </div>   
-                </div>
-
+                @endforeach
             </div>
-<!--            <div class="row">
-                <div class="col-md-3" align="center"><img src="images/fav/1.png"></div>
-                <div class="col-md-3" align="center"><img src="images/fav/2.png"></div>
-                <div class="col-md-3" align="center"><img src="images/fav/3.png"></div>
-                <div class="col-md-3" align="center"><img src="images/fav/4.png"></div>   
-            </div>-->
+            <!--            <div class="row">
+                            <div class="col-md-3" align="center"><img src="images/fav/1.png"></div>
+                            <div class="col-md-3" align="center"><img src="images/fav/2.png"></div>
+                            <div class="col-md-3" align="center"><img src="images/fav/3.png"></div>
+                            <div class="col-md-3" align="center"><img src="images/fav/4.png"></div>   
+                        </div>-->
         </div>
     </div>
 </section>
@@ -1941,7 +1896,7 @@
 @section('footer_scripts')
 
 <script type="text/javascript">
-    $(function(){
+    $(function () {
         $('#indx').addClass('menu-active');
     });
 </script>

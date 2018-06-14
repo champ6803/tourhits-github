@@ -95,9 +95,12 @@ class Tour_Category extends Model {
 
     public function getTourCategoryIndex(){
         try{
-            $tourCategoryList;
+            $tourCategoryList = Tour_Category::where('tour_category_id','<>', 1)
+                    ->where('tour_category_id','<>', 2)
+                    ->get();
+            return $tourCategoryList;
         } catch(\Exception $ex){
-            
+            return $ex;
         }
     }
 }

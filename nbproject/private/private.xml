@@ -2,24 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/TourController.php</file>
-            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Package.php</file>
-            <file>file:/D:/Workspace/tourhits-github/routes/web.php</file>
-            <file>file:/D:/Workspace/tourhits-github/resources/views/loading/loading-screen.blade.php</file>
-            <file>file:/D:/Workspace/tourhits-github/public/js/tour/tour-confirm.js</file>
-            <file>file:/D:/Workspace/tourhits-github/app/Models/Orders.php</file>
-            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Category.php</file>
             <file>file:/D:/Workspace/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
             <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/HomeController.php</file>
-            <file>file:/D:/Workspace/tourhits-github/public/js/home/index.js</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Category.php</file>
+            <file>file:/D:/Workspace/tourhits-github/public/js/tour/tour-detail.js</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/TourController.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Package.php</file>
+            <file>file:/D:/Workspace/tourhits-github/public/js/filter/search-tour.js</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/FilterController.php</file>
+            <file>file:/D:/Workspace/tourhits-github/routes/web.php</file>
             <file>file:/D:/Workspace/tourhits-github/resources/views/home/index.blade.php</file>
-            <file>file:/D:/Workspace/tourhits-github/public/js/main.js</file>
-            <file>file:/D:/Workspace/tourhits-github/resources/views/tour/tour-confirm.blade.php</file>
+            <file>file:/D:/Workspace/tourhits-github/public/js/tour/tour-confirm.js</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Orders.php</file>
         </group>
->>>>>>> 50bbed81945a4b54d5ab783c68e1028574ed57da
     </open-files>
 </project-private>
