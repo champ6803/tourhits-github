@@ -24,7 +24,9 @@ class HomeController extends Controller {
         $cate = new Category();
         $tourList = new Tour_Package();
         $categoryList = $cate->getCategoryIndex();
-        $tourHitsPackageList = $tourList->getTourPackageByCategory(9999); //แพ็คเกจยอดนิยม
+        $tourHitsPackageActiveList = $tourList->getTourPackageByCategory(9999, 0); //แพ็คเกจยอดนิยม
+        $tourHitsPackageList = $tourList->getTourPackageByCategory(9999, 4);
+
         $array = array();
         foreach ($tourHitsPackageList as $tour) {
             array_push($array, $tour->tour_package_id);
@@ -32,7 +34,7 @@ class HomeController extends Controller {
         $tourPeriod = Tour_Period::whereIn('tour_package_id', $array)
                 ->get();
 
-        return view('home.index', compact('categoryList', 'tourHitsPackageList', 'tourPeriod'));
+        return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourHitsPackageList', 'tourPeriod'));
     }
 
 }

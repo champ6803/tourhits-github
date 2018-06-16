@@ -187,12 +187,13 @@ class Tour_Package extends Model {
         }
     }
 
-    public function getTourPackageByCategory($cate_id) {
+    public function getTourPackageByCategory($cate_id, $number) {
         try {
             $tourPackageList = Tour_Package::join('tour_category', 'tour_category.tour_package_id', '=', 'tour_package.tour_package_id')
                     ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                     ->join('country', 'country.country_id', '=', 'tour_country.country_id')
                     ->where('tour_category.category_id', $cate_id)
+                    ->skip($number)->take(4)
                     //->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_picture'))
                     ->get();
             
