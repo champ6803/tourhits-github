@@ -38,7 +38,7 @@
 <script type="text/javascript">
     $(function () {
         setInterval(function () {
-            window.location.href = "/";
+            history.go(-2);
         }, 5000);
     });
 </script>

@@ -103,7 +103,6 @@ class RegisterController extends Controller {
         } catch (\Exception $e) {
             return response($e->getMessage());
         }
-
         return redirect('loading')->with(['text' => 'สมัครสมาชิกเรียบร้อย รอสักครู่เรากำลังพาท่าน เข้าสู่ระบบ', 'name' => $data['first_name']]);
     }
 

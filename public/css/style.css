@@ -1084,16 +1084,20 @@ span.dropcap {
 }
 .awe-navigation .menu-list li .sub-menu {
     position: absolute;
-    width: 210px;
+/*    width: 210px;*/
+    width: 1000px;
     list-style: none;
-    padding: 0;
+    padding: 10px 0px;
     top: 110%;
-    left: 0;
+    left: -350px;
     background-color: #fff;
     text-align: left;
     border: 1px solid #d4d4d4;
-    opacity: 0;
+    opacity: 0.9;
     visibility: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;

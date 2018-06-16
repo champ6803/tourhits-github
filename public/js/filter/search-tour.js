@@ -253,7 +253,7 @@ function renderTourPackage(tourPackageList, tourPeriod) {
         $.each(obj, function (key, val) {
             var div = '<div class="col-sm-6 col-md-4" align="center">';
             div = div + '<div class="thumbnail">';
-            div = div + '<a href="/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">';
+            div = div + '<a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">';
             div = div + '<div class="tour-cover lazyloaded" data-bg="../images/tour/' + val['tour_package_image'] + '" style="background-image: url(&quot;../images/tour/' + val['tour_package_image'] + '&quot;);">';
             div = div + '<div class="tour-footer">';
             div = div + '<div class="pull-left">';
@@ -275,7 +275,7 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             {
                 tour_code = '0' + tour_code;
             }
-            div = div + '<span class="tag">#' + tour_code + '</span>';
+            div = div + '<span class="tag">#' + this.tour_package_code + '</span>';
             div = div + '</div>';
             div = div + '<span class="clear"></span>';
             div = div + '</div>';
@@ -291,7 +291,7 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             var all_ae = val["tour_package_period_end"].split("-");
             div = div + '<div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</div>';
             div = div + '<hr>';
-            div = div + '<div class="card-airline"><img alt="การบินไทย" src="../images/airline/' + val['airline_picture'] + '" title="การบินไทย"></div>';
+            div = div + '<div class="card-airline"><img alt="' + this.airline_name + '" src="../images/airline/' + val['airline_picture'] + '" title="การบินไทย"></div>';
             $.each(tourPeriod, function (keyPrice, valPrice) {
                 if (valPrice['tour_package_id'] === val['tour_package_id']) {
                     div = div + '<div class="card-price">' + numberWithCommas(tourPeriod[keyPrice].tour_period_adult_price) + '฿</div>';

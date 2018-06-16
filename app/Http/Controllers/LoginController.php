@@ -57,7 +57,7 @@ class LoginController {
                     $_SESSION['customer_id'] = $customer->customer_id;
                     $_SESSION['customer_name'] = $customer->customer_fname . ' ' . $customer->customer_lname;
                     $_SESSION['loggedin_time'] = time();
-                    $_SESSION['expire'] = $_SESSION['loggedin_time'] + (1 * 60);
+                    $_SESSION['expire'] = $_SESSION['loggedin_time'] + (30 * 60);
                     return redirect('loading')->with(['text' => 'รอสักครู่เรากำลังพาท่าน เข้าสู่ระบบ','role' => 'Customer', 'name' => $customer->customer_fname]);
                 } else if ($checkLogin->role == 'A') {
                     $admin = Admin::where(['user_id' => $checkLogin->user_id])->first();
@@ -66,7 +66,7 @@ class LoginController {
                     $_SESSION['admin_id'] = $admin->admin_id;
                     $_SESSION['admin_name'] = $admin->admin_fname . ' ' . $admin->admin_fname;
                     $_SESSION['loggedin_time'] = time();
-                    $_SESSION['expire'] = $_SESSION['loggedin_time'] + (1 * 60);
+                    $_SESSION['expire'] = $_SESSION['loggedin_time'] + (30 * 60);
                     return redirect('loading')->with(['role' => 'Admin', 'name' => $admin->admin_fname]);
                 }
             } else {
@@ -80,7 +80,7 @@ class LoginController {
     function logout() {
         session_start();
         session_destroy();
-        $result = (new HomeController)->index();
+        //$result = (new HomeController)->index();
         return redirect('/')->with('logout', 'bye bye');
     }
 

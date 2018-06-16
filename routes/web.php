@@ -1,15 +1,15 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+  |--------------------------------------------------------------------------
+  | Web Routes
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register web routes for your application. These
+  | routes are loaded by the RouteServiceProvider within a group which
+  | contains the "web" middleware group. Now create something great!
+  |
+ */
 
 Route::get('/', 'HomeController@index');
 
@@ -21,104 +21,103 @@ Route::get('login', 'LoginController@index');
 
 Route::post('login', 'LoginController@login');
 
-Route::post('getDistrict','MasterController@getDistrict');
+Route::post('getDistrict', 'MasterController@getDistrict');
 
-Route::post('getSubdistrict','MasterController@getSubdistrict');
+Route::post('getSubdistrict', 'MasterController@getSubdistrict');
 
-Route::get('search-tour/{country_id}','FilterController@search_tour');
+Route::get('search-tour/{country_id}', 'FilterController@search_tour');
 
 //Route::get('adminlogin','LoginController@adminLogin');
 
-Route::get('dashboard','AdminController@dashboard');
+Route::get('dashboard', 'AdminController@dashboard');
 
-Route::get('{tour_country}/{tour_pakage_id}/{tour_package_name}','TourController@tour_detail');
+Route::get('tour-detail/{tour_country}/{tour_pakage_id}/{tour_package_name}', 'TourController@tour_detail');
 
+Route::get('manage-route', 'AdminController@manage_route');
 
-Route::get('manage-route','AdminController@manage_route');
+Route::post('searchRoute', 'AdminController@searchRoute');
 
-Route::post('searchRoute','AdminController@searchRoute');
+Route::post('saveRoute', 'AdminController@saveRoute');
 
-Route::post('saveRoute','AdminController@saveRoute');
+Route::post('deleteRoute', 'AdminController@deleteRoute');
 
-Route::post('deleteRoute','AdminController@deleteRoute');
+Route::post('updateRoute', 'AdminController@updateRoute');
 
-Route::post('updateRoute','AdminController@updateRoute');
+Route::get('manage-airline', 'AdminController@manage_airline');
 
-Route::get('manage-airline','AdminController@manage_airline');
+Route::post('searchAirline', 'AdminController@searchAirline');
 
-Route::post('searchAirline','AdminController@searchAirline');
+Route::post('saveAirline', 'AdminController@saveAirline');
 
-Route::post('saveAirline','AdminController@saveAirline');
+Route::post('deleteAirline', 'AdminController@deleteAirline');
 
-Route::post('deleteAirline','AdminController@deleteAirline');
+Route::post('updateAirline', 'AdminController@updateAirline');
 
-Route::post('updateAirline','AdminController@updateAirline');
+Route::get('manage-attraction', 'AdminController@manage_attraction');
 
-Route::get('manage-attraction','AdminController@manage_attraction');
+Route::post('searchAttraction', 'AdminController@searchAttraction');
 
-Route::post('searchAttraction','AdminController@searchAttraction');
+Route::post('saveAttraction', 'AdminController@saveAttraction');
 
-Route::post('saveAttraction','AdminController@saveAttraction');
+Route::post('deleteAttraction', 'AdminController@deleteAttraction');
 
-Route::post('deleteAttraction','AdminController@deleteAttraction');
+Route::post('updateAttraction', 'AdminController@updateAttraction');
 
-Route::post('updateAttraction','AdminController@updateAttraction');
+Route::get('manage-tag', 'AdminController@manage_tag');
 
-Route::get('manage-tag','AdminController@manage_tag');
+Route::post('searchTag', 'AdminController@searchTag');
 
-Route::post('searchTag','AdminController@searchTag');
+Route::post('saveTag', 'AdminController@saveTag');
 
-Route::post('saveTag','AdminController@saveTag');
+Route::post('deleteTag', 'AdminController@deleteTag');
 
-Route::post('deleteTag','AdminController@deleteTag');
+Route::post('updateTag', 'AdminController@updateTag');
 
-Route::post('updateTag','AdminController@updateTag');
+Route::get('manage-holiday', 'AdminController@manage_holiday');
 
-Route::get('manage-holiday','AdminController@manage_holiday');
+Route::post('searchHoliday', 'AdminController@searchHoliday');
 
-Route::post('searchHoliday','AdminController@searchHoliday');
+Route::post('saveHoliday', 'AdminController@saveHoliday');
 
-Route::post('saveHoliday','AdminController@saveHoliday');
+Route::post('deleteHoliday', 'AdminController@deleteHoliday');
 
-Route::post('deleteHoliday','AdminController@deleteHoliday');
+Route::post('updateHoliday', 'AdminController@updateHoliday');
 
-Route::post('updateHoliday','AdminController@updateHoliday');
+Route::get('manage-othertag', 'AdminController@manage_othertag');
 
-Route::get('manage-othertag','AdminController@manage_othertag');
+Route::post('searchOther', 'AdminController@searchOther');
 
-Route::post('searchOther','AdminController@searchOther');
+Route::post('saveOther', 'AdminController@saveOther');
 
-Route::post('saveOther','AdminController@saveOther');
+Route::post('deleteOther', 'AdminController@deleteOther');
 
-Route::post('deleteOther','AdminController@deleteOther');
+Route::post('updateOther', 'AdminController@updateOther');
 
-Route::post('updateOther','AdminController@updateOther');
+Route::get('manage-category', 'AdminController@manage_category');
 
-Route::get('manage-category','AdminController@manage_category');
+Route::post('searchTourCategory', 'AdminController@searchTourCategory');
 
-Route::post('searchTourCategory','AdminController@searchTourCategory');
+Route::post('saveTourCategory', 'AdminController@saveTourCategory');
 
-Route::post('saveTourCategory','AdminController@saveTourCategory');
+Route::post('deleteTourCategory', 'AdminController@deleteTourCategory');
 
-Route::post('deleteTourCategory','AdminController@deleteTourCategory');
-
-Route::post('updateTourCategory','AdminController@updateTourCategory');
+Route::post('updateTourCategory', 'AdminController@updateTourCategory');
 
 Route::post('search-tour/getTourPackage', 'FilterController@getTourPackage');
 
 Route::post('getTourPackage', 'FilterController@getTourPackage');
 
-Route::get('about','AboutController@about_us');
+Route::get('about', 'AboutController@about_us');
 
-Route::get('tour-confirm','ConfirmController@tour_confirm');
+Route::get('tour-confirm/{tour_pakage_id}/{tour_period_id}', 'TourController@tour_confirm');
 
-Route::get('contact','ContactController@contact_us');
+Route::get('contact', 'ContactController@contact_us');
 
-Route::get('hothits','HothitsController@hot_hits');
+Route::get('hothits', 'HothitsController@hot_hits');
 
-Route::get('logout','LoginController@logout');
+Route::get('logout', 'LoginController@logout');
 
-Route::get('manage-front-country','ManageFrontController@manage_front_country');
+Route::get('manage-front-country', 'ManageFrontController@manage_front_country');
 
 Route::post('searchAllCountry', 'ManageFrontController@searchAllCountry');
 
@@ -130,13 +129,17 @@ Route::post('deleteTourCountry', 'ManageFrontController@deleteTourCountry');
 
 Route::post('updateTourCountry', 'ManageFrontController@updateTourCountry');
 
-Route::get('admin','AdminLoginController@login_admin');
+Route::get('admin', 'AdminLoginController@login_admin');
 
-Route::get('loading','LoadingScreenController@loading_screen');
+Route::get('loading', 'LoadingScreenController@loading_screen');
 
-Route::get('profile','ManageFrontController@profile');
+Route::get('profile', 'ManageFrontController@profile');
 
-Route::post('searchCompanyByCompanyCode','ManageFrontController@searchCompanyByCompanyCode');
+Route::post('searchCompanyByCompanyCode', 'ManageFrontController@searchCompanyByCompanyCode');
+
+Route::get('tourhot', 'TourhotController@tour_hot');
+
+Route::post('orders', 'TourController@orders');
 
 Route::get('tourhot','TourhotController@tour_hot');
 

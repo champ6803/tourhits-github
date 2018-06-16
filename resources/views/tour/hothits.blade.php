@@ -7,117 +7,12 @@
 /*    .hothits-section{
         margin-left: 16px;}*/
     }
-    
-    .hothits-item{
-        max-width: 280px;
-        position: relative;
-        box-shadow: 0px 0px 6px rgba(0,0,0,0.15);
-        margin: 10px 10px 10px 0px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .hothits-name-box {
-    position: absolute;
-    left: 0;
-    top: 20px;
-    background: rgba(226, 29, 44, .8);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    }
-    
-    .hothits-name-box .text {
-    color: #ffffff;
-    padding: 3px 10px 2px 10px;
-    font-size: 20px; 
-    }
-    
-    .hothits-img {
-    overflow: hidden;
-    height: 200px;
-    }  
-    
+  
     .center-crop {
          max-width: 280px;
          overflow:hidden;  
     }  
-    
-    .hothits-detail {
-    background: #d30000;
-    color: #fff;
-    font-size: 17px;
-    height: 100px;
-    line-height: 20px;
-    padding: 10px;
-/*    text-align: justify;*/
-    overflow: hidden;
-    text-overflow: ellipsis;
-    }
-    
-    .tour-description {
-    padding: 8px 5px;
-    min-height: 65px;
-    background: #fff;
-    }
-    
-    .tour-description .tour-price {
-    color: #d30000;
-    font-size: 25px;
-    text-align: right;
-    position: absolute;
-    
-    right: 0;
-    padding: 0px 20px;
-    line-height: 2;
-/*    text-shadow: 0px 1px 5px rgba(0,0,0,0.1);*/
-    }
-    
-    .tour-description .tour-airline-logo {
-    max-width: 110px;
-    margin-top: 5px; }
-    
-    .tour-description .num-pack-here{
-       color: #d30000;
-       font-size: 30px;
-       font-weight: 500;
-       text-align: center;
-       position: absolute;
-       bottom: 0;
-       left: 0;
-       padding: 10px 10px; 
-    }
-    
-    .tour-description .tour-price small.strike {
-    line-height: 27px;
-    color: #999;}
-    
-    .tour-description .tour-price small {
-    color: #999;
-    font-size: 20px;
-    line-height: 24px;
-    display: block;
-    }
-    
-    .tour-description .strike {
-    position: relative;
-    }
-    
-    .hothits-item a .hothits-img .center-crop img{
-       min-height: 200px!important;
-       width: 100%;    
-        
-      -moz-transition: all 0.7s;
-      -webkit-transition: all 0.7s;
-      -transition: all 0.7s;
-    }
-      
-    .hothits-item a .hothits-img .center-crop img:hover{
-        -moz-transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.2);
-        opacity: 0.7;
-    }
-    
-    
+   
 </style>
     <!-- BREADCRUMB -->
 <!--        <section>
