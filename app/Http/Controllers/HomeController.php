@@ -27,14 +27,22 @@ class HomeController extends Controller {
         $tourHitsPackageActiveList = $tourList->getTourPackageByCategory(9999, 0); //แพ็คเกจยอดนิยม
         $tourHitsPackageList = $tourList->getTourPackageByCategory(9999, 4);
 
-        $array = array();
+        $arrayHitActive = array();
         foreach ($tourHitsPackageList as $tour) {
-            array_push($array, $tour->tour_package_id);
+            array_push($arrayHitActive, $tour->tour_package_id);
         }
-        $tourPeriod = Tour_Period::whereIn('tour_package_id', $array)
+        $tourHitPeriodActive = Tour_Period::whereIn('tour_package_id', $arrayHitActive)
                 ->get();
+        
+        $arrayHit = array();
+        foreach ($tourHitsPackageList as $tour) {
+            array_push($arrayHit, $tour->tour_package_id);
+        }
+        $tourHitPeriod = Tour_Period::whereIn('tour_package_id', $arrayHit)
+                ->get();
+        
 
-        return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourHitsPackageList', 'tourPeriod'));
+        return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourHitsPackageList', 'tourHitPeriodActive', 'tourHitPeriod'));
     }
 
 }

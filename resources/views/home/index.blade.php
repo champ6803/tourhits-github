@@ -831,6 +831,11 @@
                         
                     </div>
                 </div>
+                <div class="item">
+                    <div id="card_area2" class="row">
+                        
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1404,9 +1409,15 @@
             </div>
 
             <div align="center">
-                <img width="250px;" src="../images/sponsor/7.jpg">
-                <img width="250px;" src="../images/sponsor/3.jpg">
-                <img width="300px;" src="../images/sponsor/benz.png">
+                <img width="200px;" src="../images/sponsor/7.jpg">
+                <img width="200px;" src="../images/sponsor/3.jpg">
+                <img width="250px;" src="../images/sponsor/benz.png">
+            </div>
+            <br>
+            <div align="center">
+                <img width="200px;" src="../images/sponsor/singha.jpg">
+                <img width="200px;" src="../images/sponsor/cp.png">
+                <img width="250px;" src="../images/sponsor/pizza.jpg">
             </div>
 
         </div>
@@ -1416,8 +1427,10 @@
 @stop
 @section('footer_scripts')
 <script type="text/javascript">
-    var tourPackageList = <?php echo json_encode($tourHitsPackageActiveList); ?>;
-    var tourPeriod = <?php echo json_encode($tourPeriod); ?>;
+    var tourHitsPackageActiveList = <?php echo json_encode($tourHitsPackageActiveList); ?>;
+    var tourHitPeriodActive = <?php echo json_encode($tourHitPeriodActive); ?>;
+    var tourHitsPackageList = <?php echo json_encode($tourHitsPackageList); ?>;
+    var tourHitPeriod = <?php echo json_encode($tourHitPeriod); ?>;
     $(function () {
         $('#indx').addClass('menu-active');
     });
