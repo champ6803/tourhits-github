@@ -30,4 +30,12 @@ class Category extends Model {
         }
     }
 
+    public function getCategoryAll() {
+        try {
+            $categoryList = Category::all();
+            return $categoryList;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
 }

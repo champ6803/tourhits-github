@@ -2,6 +2,15 @@
 @section('page_title','Admin Management')
 @section('main-content')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<style>fieldset
+{
+  padding:16px;	
+}
+.legend
+{
+  margin-bottom:0px;
+  margin-left:16px;
+}</style>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -11,7 +20,7 @@
     </section>
     <section class="content">
         <form>
-        <fieldset>
+            <fieldset>
         <legend>จัดการ Tags :</legend>
         <div class="row">
             <div class="col-lg-4" style="text-align: left">
