@@ -74,15 +74,16 @@
                 </div>
                 <!-- /.box-body -->
             </div>
-            <div class="card border-danger mb-3" >
-                <div class="card-body text-danger">
-                    <h4 class="card-title" style="color: black; background-color: #FF0000;border-radius: 12px; ">เพิ่ม packageทัวร์</h4>
 
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">เพิ่มรายละเอียดวัน package ทัวร์</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
                 </div>
-            </div>
-            <div class="card border-danger mb-3" >
-                <div class="card-body text-danger">
-                    <h4 class="card-title" style="color: black; background-color: #FF0000;border-radius: 12px; ">เพิ่ม รายละเอียดวันpackageทัวร์</h4>
+                <div class="box-body">
                     <div class="row" style="padding: 7px;" id="divTable">
                         <div class="col-lg-1"></div>
                         <table id="dayTable" style="width:85%;">
@@ -98,10 +99,18 @@
                         </table>
                     </div>
                 </div>
-            </div> 
-            <div class="card border-danger mb-3" >
-                <div class="card-body text-danger">
-                    <h4 class="card-title" style="color: black; background-color: #FF0000;border-radius: 12px; ">เพิ่มวันหยุด</h4>
+                <!-- /.box-body -->
+            </div>
+
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">เพิ่มรายละเอียดวัน package ทัวร์</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
                     <div class="row" style="padding: 7px">
                         <div class="col-lg-1"></div>
                         <select id="holiday_select" class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 800px">
@@ -114,7 +123,9 @@
                             <span class="glyphicon glyphicon-plus"></span>&nbsp;บันทึกข้อมูลทั้งหมด</button>
                     </div>
                 </div>
+                <!-- /.box-body -->
             </div>
+
         </form>
     </section>
 </div>
