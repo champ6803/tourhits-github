@@ -28,7 +28,7 @@ class HomeController extends Controller {
         $tourHitsPackageList = $tourList->getTourPackageByCategory(9999, 4);
 
         $arrayHitActive = array();
-        foreach ($tourHitsPackageList as $tour) {
+        foreach ($tourHitsPackageActiveList as $tour) {
             array_push($arrayHitActive, $tour->tour_package_id);
         }
         $tourHitPeriodActive = Tour_Period::whereIn('tour_package_id', $arrayHitActive)

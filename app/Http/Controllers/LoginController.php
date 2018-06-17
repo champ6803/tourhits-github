@@ -47,6 +47,7 @@ class LoginController {
         try {
             $email = $data['email'];
             $password = $data['password'];
+            $role = $data['role'];
             $checkLogin = User::where(['email' => $email, 'password' => $password])->first();
             if ($checkLogin != null && $checkLogin->count() > 0) {
                 session_start();
@@ -64,11 +65,13 @@ class LoginController {
                     $_SESSION['m_user'] = $checkLogin->username;
                     $_SESSION['role'] = $checkLogin->role;
                     $_SESSION['admin_id'] = $admin->admin_id;
-                    $_SESSION['admin_name'] = $admin->admin_fname . ' ' . $admin->admin_fname;
+                    //$_SESSION['admin_name'] = $admin->admin_fname . ' ' . $admin->admin_fname;
                     $_SESSION['loggedin_time'] = time();
                     $_SESSION['expire'] = $_SESSION['loggedin_time'] + (30 * 60);
-                    return redirect('loading')->with(['role' => 'Admin', 'name' => $admin->admin_fname]);
+                    return redirect('dashboard');
                 }
+            } else if($role == "A"){
+                return redirect('admin')->with('error', 'ไม่สามารถ Login ได้');
             } else {
                 return redirect('login')->with('error', 'ไม่สามารถ Login ได้');
             }

@@ -167,7 +167,6 @@
                                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                         <div class="col-md-12">
                                             <input id="password" type="password" placeholder="Password" class="form-control" name="password" required>
-
                                             @if ($errors->has('password'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('password') }}</strong>
@@ -190,10 +189,11 @@
                                             
                                         </div>
                                     </div>
+                                    <input type="text" hidden="" name="role" value="C">
                                     <input type="submit" value="เข้าสู่ระบบ">
                                     <div class="row">
                                         <div class="col-md-12 text-center">
-                                            <a class="btn btn-link forgot" href="http://localhost:8000">Forgot Your Password ?</a>
+                                            <a class="btn btn-link forgot" href="{{ url('/') }}">Forgot Your Password ?</a>
                                         </div>
                                     </div>
 
@@ -205,7 +205,7 @@
                         <div class="bottom-container">
                             <div class="row">
                                 <div class="col-signup">
-                                    <a href="http://localhost:8000/register" style="color:white; font-size: 25px;" class="btn-lr"><i class="fas fa-plus-circle"></i> สมัครสมาชิก ?</a>
+                                    <a href="{{url('/register')}}" style="color:white; font-size: 25px;" class="btn-lr"><i class="fas fa-plus-circle"></i> สมัครสมาชิก ?</a>
                                 </div>                             
                             </div>
                         </div>
