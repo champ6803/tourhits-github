@@ -48,8 +48,6 @@
                 max-height: 60px;
 
             }
-
-
             .admin-login{
                 width: 100%;
                 height: 100%;      
@@ -116,7 +114,7 @@
                 opacity: 1;
             }
 
-            input[type="text"], input[type="password"] {
+            input[type="email"], input[type="text"], input[type="password"] {
                 background-color: #ffffff;
                 border: 0px solid #7F7FF5;
                 width: 100%;
@@ -135,7 +133,7 @@
                 padding-bottom: 10px;
                 text-align: left;
             }
-            
+
             .admin-login .login-content{
                 padding: 150px 0;
             }
@@ -156,17 +154,33 @@
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <form action="/action_page.php">
+                                    <form action="login" method="POST">
+                                        {{ csrf_field() }}
                                         <div class="row">                 
                                             <div class="col">
                                                 <div class="login-head"> 
                                                     <span style="font-size: 20px; font-weight: 300;"><i class="fas fa-lock"></i> เข้าสู่ระบบ</span>
-                                                </div> 
-                                                <input type="text" name="username" placeholder="Username" required autofocus>
+                                                </div>
+                                                <input type="email" name="email" placeholder="Email" required autofocus>
+                                                @if ($errors->has('email'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('email') }}</strong>
+                                                </span>
+                                                @endif
                                                 <input type="password" name="password" placeholder="Password" required>
+                                                @if ($errors->has('password'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                </span>
+                                                @endif
+                                                @if (session('error'))
+                                                <span class="help-block">
+                                                    <strong>{{ session('error') }}</strong>
+                                                </span>
+                                                @endif
+                                                <input name="role" hidden="" type="text" value="A">
                                                 <input type="submit" value="เข้าสู่ระบบ">                                   
                                             </div>
-
                                         </div>
                                     </form>
                                 </div>

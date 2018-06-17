@@ -18,5 +18,20 @@ use Illuminate\Database\Eloquent\Model;
 class Tour_Tag extends Model {
 
     protected $table = 'tour_tag';
-
+    
+        public function insertTourTag($id,$tag_id){
+          try {
+            $date = \Carbon\Carbon::now();
+            Tour_Tag::insert(
+            [ 'tag_id' => $tag_id
+             ,'tour_package_id' => $id
+             , 'created_by' => 'admin'
+             , 'created_at' => $date
+             , 'updated_by' => 'admin'        
+             , 'updated_at' => $date]
+            );
+          } catch (Exception $ex) {
+               return $ex;
+          }
+    }
 }

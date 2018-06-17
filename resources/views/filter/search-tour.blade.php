@@ -1445,7 +1445,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-md-pull-9 filter-bar">
                 <div class="filter-price">
                     <div class='filter-header'>
@@ -1862,8 +1861,7 @@
                 </div>
                 <hr>
             </div>
-
-        </div>       
+        </div>
     </div>
 </section>
 @stop

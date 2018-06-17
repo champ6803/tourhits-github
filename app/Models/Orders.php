@@ -67,5 +67,15 @@ class Orders extends Model {
             return $ex;
         }
     }
+    
+    public function getOrder(){
+        try{
+            $date = \Carbon\Carbon::now();
+            $order = Orders::all();
+            return $order;
+        } catch (\Exception $ex){
+            return $ex;
+        }
+    }
 
 }

@@ -9,7 +9,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">Login</div>
                         <div class="panel-body">
-                            {!! Form::open(['url' => 'admin-login', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'POST'] ) !!}
+                            {!! Form::open(['url' => 'login', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'POST'] ) !!}
 
                             {{ csrf_field() }}
 
@@ -92,6 +92,6 @@
 @section('footer_scripts')
 
 
-
+<script type="text/javascript" src="js/admin/admin.js"></script>
 
 @endsection

@@ -19,4 +19,6 @@ class AdminLoginController extends Controller {
         return view('admin.login-admin');
     }
 
+    
+    
 }

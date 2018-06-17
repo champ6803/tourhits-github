@@ -29,7 +29,7 @@ Route::get('search-tour/{country_id}', 'FilterController@search_tour');
 
 //Route::get('adminlogin','LoginController@adminLogin');
 
-Route::get('dashboard', 'AdminController@dashboard');
+Route::get('dashboard', 'DashboardController@dashboard');
 
 Route::get('tour-detail/{tour_country}/{tour_pakage_id}/{tour_package_name}', 'TourController@tour_detail');
 
@@ -151,4 +151,18 @@ Route::post('searchAllTourCategory', 'AdminController@searchAllTourCategory');
 
 Route::post('saveTourlistAndDay', 'AdminController@saveTourlistAndDay');
 
+<<<<<<< HEAD
 Route::get('tour-detail2', 'TourDetailController@tour_detail2');
+=======
+Route::post('searchAllCategory', 'AdminController@searchAllCategory');
+
+Route::post('searchAllHoliday', 'AdminController@searchAllHoliday');
+
+Route::get('order-list', 'DashboardController@order_list');
+
+Route::post('searchAllAttraction', 'AdminController@searchAllAttraction');
+
+Route::post('searchAllTag', 'AdminController@searchAllTag');
+
+Route::post('searchAllTag', 'AdminController@searchAllTag');
+>>>>>>> 807167c7500be40f13132af64b559c0db47afcf3

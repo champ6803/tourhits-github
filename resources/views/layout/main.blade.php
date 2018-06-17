@@ -90,6 +90,7 @@ session_start();
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
                                     <a>แพ็คเกจทัวร์</a>
+                                    <hr id="indx" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                     <ul class="col-md-12 sub-menu">
                                     <div class="col-md-4 cat-asian cat-line">
 <!--                                        เอเชีย-->
