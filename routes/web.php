@@ -151,9 +151,6 @@ Route::post('searchAllTourCategory', 'AdminController@searchAllTourCategory');
 
 Route::post('saveTourlistAndDay', 'AdminController@saveTourlistAndDay');
 
-<<<<<<< HEAD
-Route::get('tour-detail2', 'TourDetailController@tour_detail2');
-=======
 Route::post('searchAllCategory', 'AdminController@searchAllCategory');
 
 Route::post('searchAllHoliday', 'AdminController@searchAllHoliday');
@@ -165,4 +162,5 @@ Route::post('searchAllAttraction', 'AdminController@searchAllAttraction');
 Route::post('searchAllTag', 'AdminController@searchAllTag');
 
 Route::post('searchAllTag', 'AdminController@searchAllTag');
->>>>>>> 807167c7500be40f13132af64b559c0db47afcf3
+
+Route::get('tour-detail2', 'TourDetailController@tour_detail2');
