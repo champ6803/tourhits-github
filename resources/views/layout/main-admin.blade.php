@@ -46,6 +46,8 @@
 
         <!-- bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
+        
+        <link rel="stylesheet" href="{{ asset('css/lib/bootstrap-table.css')}}">
 
         <!-- theme style -->
         <link rel="stylesheet" href="css/master_style.css">
@@ -409,22 +411,23 @@
                         </div>
                         <div class="info">
                             <p>Tour Management</p>
-                            <a href="" class="link" data-toggle="tooltip" title="" data-original-title="Settings"><i class="ion ion-gear-b"></i></a>
-                            <a href="" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i class="ion ion-android-mail"></i></a>
-                            <a href="" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i class="ion ion-power"></i></a>
                         </div>
                     </div>
                     <!-- sidebar menu -->
                     <ul class="sidebar-menu" data-widget="tree">
                         <li class="nav-devider"></li>
                         <li class="header nav-small-cap">PERSONAL</li>
-                        <li>
-                            <a href="index.html">
+                        <li class="treeview">
+                            <a href="#">
                                 <i class="fa fa-clipboard"></i> <span>Dashboard</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
                                 </span>
                             </a>
+                            <ul class="treeview-menu">
+                                <li><a href="{{ url('/order-list')}}">Dashboard</a></li>
+                                <li><a href="{{ url('/order-list')}}">รายการการจอง</a></li>
+                            </ul>
                         </li>
                         <li class="treeview">
                             <a href="#">
@@ -786,6 +789,10 @@
 
         <!-- peity -->
         <script src="../assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+        
+        <script src="{{ asset('js/lib/bootstrap-table.js')}}"></script>
+        
+        <script src="{{ asset('js/lib/bootstrap-table-editable.js')}}"></script>
 
         <!-- Lion_admin App -->
         <script src="js/template.js"></script>

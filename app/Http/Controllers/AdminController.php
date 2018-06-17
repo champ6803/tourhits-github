@@ -26,10 +26,6 @@ use App\Models\Category;
  */
 class AdminController extends Controller {
 
-    public function dashboard() {
-        return view('admin.dashboard');
-    }
-    
     public function manage_route(){
         return view('admin.manage-route');
     }
