@@ -150,3 +150,7 @@ Route::post('searchAllTourCountry', 'AdminController@searchAllTourCountry');
 Route::post('searchAllTourCategory', 'AdminController@searchAllTourCategory');
 
 Route::post('saveTourlistAndDay', 'AdminController@saveTourlistAndDay');
+
+Route::post('searchAllCategory', 'AdminController@searchAllCategory');
+
+Route::post('searchAllHoliday', 'AdminController@searchAllHoliday');

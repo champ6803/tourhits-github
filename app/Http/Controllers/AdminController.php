@@ -18,6 +18,7 @@ use App\Models\Tour_Country;
 use App\Models\Tour_Package;
 use App\Models\Tour_Package_Day;
 use Illuminate\Support\Facades\Input as Input;
+use App\Models\Category;
 /**
  * Description of AdminController
  *
@@ -529,5 +530,25 @@ class AdminController extends Controller {
         
     }
     
+    public function searchAllCategory(){
+         $categoryModel = new Category();
+         try {
+            $category = $categoryModel->getCategoryAll();
+            return response($category);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
     
+    public function searchAllHoliday(){
+         $holidayModel = new Holiday();
+         try {
+             $holiday = $holidayModel->getHolidayAll();
+            return response($holiday);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
 }

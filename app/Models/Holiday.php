@@ -74,6 +74,5 @@ class Holiday extends Model {
                return $ex;
           }
     }
-  
-    
+
 }
