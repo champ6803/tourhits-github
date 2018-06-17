@@ -77,7 +77,7 @@ function genTable() {
         for (var row = 0; row < day; row++) {
             Str = Str + '<tr>';
             Str = Str + '<td  style="width : 60px" id="' + row + 'day' + '" name="' + row + 'day' + '">' + rowNo + '</td>';
-            Str = Str + '<td><input class="form-control" id="tour_name_' + row + '" type="text" name="tour_name_' + row + '"></td>';
+            Str = Str + '<td><input class="form-control" id="tour_name_' + row + '" type="text" name="tour_name_' + row + '" required="required"></td>';
             Str = Str + '<td style="width : 800px"><textarea name="tour_detail_' + row + '" id="tour_detail_' + row + '" cols="50"></textarea></td>';
             rowNo++;
         }

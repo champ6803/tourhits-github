@@ -159,4 +159,8 @@ Route::get('order-list', 'DashboardController@order_list');
 
 Route::post('searchAllAttraction', 'AdminController@searchAllAttraction');
 
+<<<<<<< HEAD
 Route::post('searchAllTag', 'AdminController@searchAllTag');
+=======
+Route::post('searchAllTag', 'AdminController@searchAllTag');
+>>>>>>> b3c9ee4435ca81b4e81be8cf279c43ab49c22822

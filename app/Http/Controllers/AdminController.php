@@ -508,9 +508,18 @@ class AdminController extends Controller {
             $start_date = $_POST['start_date'];
             $end_date = $_POST['end_date'];
             $tour_package_code= $_POST['tour_package_code'];
-            $holiday_select= $_POST['holiday_select'];
-            $tag_select= $_POST['tag_select'];
-            $attraction_select= $_POST['attraction_select'];
+            $holiday_select=null;
+            if(isset($_POST['holiday_select'])) {
+              $holiday_select= $_POST['holiday_select'];
+            }
+            $tag_select=null;
+            if(isset($_POST['tag_select']) ) {
+              $tag_select= $_POST['tag_select'];    
+            }
+            $attraction_select=null;
+            if(isset($_POST['attraction_select'])) {
+               $attraction_select= $_POST['attraction_select'];
+            }
             $dateStart = str_replace('/', '-', $start_date);
             $dateEnd = str_replace('/', '-', $end_date);
             
