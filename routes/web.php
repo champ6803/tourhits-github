@@ -155,4 +155,10 @@ Route::post('searchAllCategory', 'AdminController@searchAllCategory');
 
 Route::post('searchAllHoliday', 'AdminController@searchAllHoliday');
 
+<<<<<<< HEAD
 Route::get('order-list', 'DashboardController@order_list');
+=======
+Route::post('searchAllAttraction', 'AdminController@searchAllAttraction');
+
+Route::post('searchAllTag', 'AdminController@searchAllTag');
+>>>>>>> d363f8cdcffa2caa04d8d3843691f60cb0ef0aba
