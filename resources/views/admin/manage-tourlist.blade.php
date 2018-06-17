@@ -31,14 +31,14 @@
                     <div class="row" style="padding: 7px">
                         <div class="col-lg-1"></div>
                         <div class="col-lg-2"><p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;"> ชื่อทัวร์ : </p> </div>
-                        <div class="col-lg-3"><input class="form-control" type="text" id="tour_name" name="tour_name"> </div>
+                        <div class="col-lg-3"><input class="form-control" type="text" id="tour_name" name="tour_name" required="required"> </div>
                         <div class="col-lg-2"><p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;"> รายละเอียดทัวร์ : </p></div>
-                        <div class="col-lg-3"> <input class="form-control"  type="text" id="tour_detail" name="tour_detail"></div>
+                        <div class="col-lg-3"> <input class="form-control"  type="text" id="tour_detail" name="tour_detail" required="required"></div>
                     </div>
                     <div class="row" style="padding: 7px">
                         <div class="col-lg-1"></div>
                         <div class="col-lg-2"><p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;">ไฮไลต์ของทัวร์ : </p> </div>
-                        <div class="col-lg-3"><input class="form-control" type="text" id="highlight_tour" name="highlight_tour"></div>
+                        <div class="col-lg-3"><input class="form-control" type="text" id="highlight_tour" name="highlight_tour" required="required"></div>
                         <div class="col-lg-2"><p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;">รูปภาพ :</p> </div>
                         <div class="col-lg-3"><input class="form-control" type="file" id="file" name="file"> 
                             <input type="hidden" value="{{ csrf_token() }}" name="_token">
@@ -47,21 +47,21 @@
                     <div class="row" style="padding: 7px">
                         <div class="col-lg-1"></div>
                         <div class="col-lg-2"><p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;">จำนวนวัน : </p> </div>
-                        <div class="col-lg-3"><input class="form-control" id="day_tour" type="number" name="day_tour"></div>
+                        <div class="col-lg-3"><input class="form-control" id="day_tour" type="number" name="day_tour" required="required"></div>
                         <div class="col-lg-2"><p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;">จำนวนคืน :</p> </div>
-                        <div class="col-lg-3"><input class="form-control" id="night_tour" type="number" name="night_tour"></div>
+                        <div class="col-lg-3"><input class="form-control" id="night_tour" type="number" name="night_tour" required="required"></div>
                     </div>
                     <div class="row" style="padding: 7px">
                         <div class="col-lg-1"></div>
                         <div class="col-lg-2"><p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;">วันที่เริ่มต้น : </p> </div>
-                        <div class="col-lg-3"><input class="form-control"  id="start_date" name="start_date"></div>
+                        <div class="col-lg-3"><input class="form-control"  id="start_date" name="start_date" required="required"></div>
                         <div class="col-lg-2"><p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;">วันที่สิ้นสุด :</p> </div>
-                        <div class="col-lg-3"><input class="form-control" type="text" id="end_date" name="end_date"></div>
+                        <div class="col-lg-3"><input class="form-control" type="text" id="end_date" name="end_date" required="required"></div>
                     </div> 
                     <div class="row" style="padding: 7px">
                         <div class="col-lg-1"></div>
                         <div class="col-lg-2"><p class="card-text" style="font-size: 15px ; color: black;  font-weight: 600;">รหัสทัวร์ : </p> </div>
-                        <div class="col-lg-3"><input class="form-control" id="tour_package_code" type="text" name="tour_package_code"></div>
+                        <div class="col-lg-3"><input class="form-control" id="tour_package_code" type="text" name="tour_package_code" required="required"></div>
                     </div> 
 
                     <div class="row" style="padding: 7px;" >
@@ -156,15 +156,14 @@
 
                         </select>
                     </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
                     <div class="row" style="padding: 7px;" >
                         <div class="col-lg-10"></div>
                         <button type="submit" class="btn btn-info" id="saveAll"> 
                             <span class="glyphicon glyphicon-plus"></span>&nbsp;บันทึกข้อมูลทั้งหมด</button>
                     </div>
-                </div>
-                <!-- /.box-body -->
-            </div>
-
         </form>
     </section>
 </div>
