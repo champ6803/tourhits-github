@@ -4,10 +4,13 @@ $(function () {
         $("#divTable").fadeOut("fast");
         $('#saveAll').prop('disabled', true);
         $('#saveBtn').prop('disabled', false);
+        $('#night_tour').val(0);
         // $('#dayTable').DataTable();
         createTourCountryDropDown();
         createTourCategoryDropDown();
         createHolidayDropDown();
+        createAttractionDropDown();
+        createTagDropDown();
         $("#start_date").datepicker({
             //format: 'dd/mm/yy',
             dateFormat: 'yy/mm/dd',
@@ -110,6 +113,68 @@ function createHolidayDropDown() {
         }
     });
 
+}
+
+function createAttractionDropDown() {
+    var StrDropDown = '';
+    $.ajax({
+        type: 'post',
+        url: 'searchAllAttraction',
+        async: true,
+        data: null,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            if (data != null) {
+                populateAttractionDropdown('attraction_select', data);
+            } else {
+                alert('select fail');
+            }
+        },
+        error: function (data) {
+            alert('error');
+        }
+    });
+}
+
+function createTagDropDown() {
+    var StrDropDown = '';
+    $.ajax({
+        type: 'post',
+        url: 'searchAllTag',
+        async: true,
+        data: null,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            if (data != null) {
+                populateTagDropdown('tag_select', data);
+            } else {
+                alert('select fail');
+            }
+        },
+        error: function (data) {
+            alert('error');
+        }
+    });
+}
+
+function populateTagDropdown(selector, data) {
+    if (data) {
+        $.each(data, function () {
+            $('#' + selector).append($('<option></option>').val(this.tag_id).html(this.tag_name));
+        });
+    }
+}
+
+function populateAttractionDropdown(selector, data) {
+    if (data) {
+        $.each(data, function () {
+            $('#' + selector).append($('<option></option>').val(this.attraction_id).html(this.attraction_name));
+        });
+    }
 }
 
 function populateDropdown(selector, data) {

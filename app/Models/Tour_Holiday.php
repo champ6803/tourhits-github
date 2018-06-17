@@ -15,15 +15,15 @@ namespace App\Models;
  */
 use Illuminate\Database\Eloquent\Model;
 
-class Tour_Tag extends Model {
+class Tour_Holiday extends Model {
 
-    protected $table = 'tour_tag';
+    protected $table = 'tour_holiday';
     
-        public function insertTourTag($id,$tag_id){
+        public function insertTourHoliday($id,$holiday_id){
           try {
             $date = \Carbon\Carbon::now();
-            Tour_Tag::insert(
-            [ 'tag_id' => $tag_id
+            Tour_Holiday::insert(
+            [ 'holiday_id' => $holiday_id
              ,'tour_package_id' => $id
              , 'created_by' => 'admin'
              , 'created_at' => $date
@@ -34,4 +34,5 @@ class Tour_Tag extends Model {
                return $ex;
           }
     }
+
 }

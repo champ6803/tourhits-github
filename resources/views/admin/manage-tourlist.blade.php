@@ -77,7 +77,7 @@
 
             <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">เพิ่มรายละเอียดวัน package ทัวร์</h3>
+                    <h3 class="box-title">เพิ่มรายละเอียดวัน package ทัวร์ &nbsp;<red style="color: red;">*</red></h3>
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -104,7 +104,7 @@
 
             <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">เพิ่มรายละเอียดวัน package ทัวร์</h3>
+                    <h3 class="box-title">เพิ่มวันหยุด</h3>
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -113,7 +113,46 @@
                 <div class="box-body">
                     <div class="row" style="padding: 7px">
                         <div class="col-lg-1"></div>
-                        <select id="holiday_select" class="js-example-basic-multiple" name="states[]" multiple="multiple" style="width: 800px">
+                        <select id="holiday_select" class="js-example-basic-multiple" name="holiday_select[]" multiple="multiple" style="width: 800px">
+
+                        </select>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            
+            <div class="box">
+            <div class="box-header with-border">
+                    <h3 class="box-title">เพิ่มสถานที่ท่องเที่ยว</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row" style="padding: 7px">
+                        <div class="col-lg-1"></div>
+                        <select id="attraction_select" class="js-example-basic-multiple" name="attraction_select[]" multiple="multiple" style="width: 800px">
+
+                        </select>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            
+            
+            <div class="box">
+            <div class="box-header with-border">
+                    <h3 class="box-title">เพิ่ม Tags</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row" style="padding: 7px">
+                        <div class="col-lg-1"></div>
+                        <select id="tag_select" class="js-example-basic-multiple" name="tag_select[]" multiple="multiple" style="width: 800px">
 
                         </select>
                     </div>
@@ -139,7 +178,9 @@
 <link rel="stylesheet" href="../assets/select2/dist/css/select2.css" >
 <script type="text/javascript" src="../assets/select2/dist/js/select2.min.js"></script>
 <script>
-                            $('#holiday_select').select2();
+ $('#holiday_select').select2();
+ $('#attraction_select').select2();
+ $('#tag_select').select2();
 </script>
 <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
 <script type="text/javascript" src="../js/admin/manage-tour-list.js"></script>

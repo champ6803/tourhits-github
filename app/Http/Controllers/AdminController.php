@@ -19,6 +19,9 @@ use App\Models\Tour_Package;
 use App\Models\Tour_Package_Day;
 use Illuminate\Support\Facades\Input as Input;
 use App\Models\Category;
+use App\Models\Tour_Holiday;
+use App\Models\Tour_Tag;
+use App\Models\Tour_Attraction;
 /**
  * Description of AdminController
  *
@@ -494,6 +497,9 @@ class AdminController extends Controller {
     public function saveTourlistAndDay(){
           $tourPackageModel = new Tour_Package();
           $tourPackageDayModel = new Tour_Package_Day();
+          $tourHolidayModel = new  Tour_Holiday();
+          $tourTagModel = new Tour_Tag;
+          $tourAttractionModel = new Tour_Attraction;
           try {  
             $tour_category = $_POST['tour_category'];
             $tour_country = $_POST['tour_country'];
@@ -506,13 +512,40 @@ class AdminController extends Controller {
             $start_date = $_POST['start_date'];
             $end_date = $_POST['end_date'];
             $tour_package_code= $_POST['tour_package_code'];
+            $holiday_select= $_POST['holiday_select'];
+            $tag_select= $_POST['tag_select'];
+            $attraction_select= $_POST['attraction_select'];
             $dateStart = str_replace('/', '-', $start_date);
             $dateEnd = str_replace('/', '-', $end_date);
+            
             $id=$tourPackageModel->insertTourPackage($tour_package_code,$tour_country, $tour_category
             , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
             , $night, $dateStart, $dateEnd);
             
-            for ($x = 0; $x < $day; $x++) {
+           //$holiday_array= explode(",",$holiday_select);
+            if(($holiday_select!=null)&&($holiday_select!='')){
+               foreach ($holiday_select as $value) {
+                   $tourHolidayModel->insertTourHoliday($id, $value); 
+                } 
+            }
+           
+           //$attraction_array= explode(",",$attraction_select);
+           if(($attraction_select!=null)&&($attraction_select!='')){
+             foreach ($attraction_select as $value) {
+             $tourAttractionModel->insertTourAttraction($id, $value); 
+           }  
+           } 
+           
+           //$tag_array= explode(",",$tag_select);
+           if(($tag_select!=null)&&($tag_select!='')){
+               foreach ($tag_select as $value) {
+               $tourTagModel->insertTourTag($id, $value); 
+           }    
+           }
+           
+           
+          
+           for ($x = 0; $x < $day; $x++) {
                   $tournameStr= 'tour_name_'.$x;
                   $tourdetailStr= 'tour_detail_'.$x;
                   $tourname = $_POST[$tournameStr];   
@@ -551,4 +584,27 @@ class AdminController extends Controller {
             return response($msg);
         }
     }
+    
+    public function searchAllAttraction(){
+         $attractionModel = new Attraction();
+         try {
+             $attraction = $attractionModel->getAttractionAll();
+            return response($attraction);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
+    
+    public function searchAllTag(){
+         $tagModel = new Tag();
+         try {
+             $tag = $tagModel->getTagAll();
+            return response($tag);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
+    
 }
