@@ -22,9 +22,8 @@ class DashboardController extends Controller {
     }
 
     public function order_list() {
-        $orderLis = getOrder
-        
-        return view('admin.order-list');
+        $orderList =  $this->getOrderList();
+        return view('admin.order-list', compact('orderList'));
     }
 
     public function getOrderList() {

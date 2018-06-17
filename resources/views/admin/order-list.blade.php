@@ -46,5 +46,9 @@
 @stop
 
 @section('footer_scripts')
-    <script type="text/javascript" src="{{asset('js/admin/order-list.js')}}"></script>
+<script>
+    var orderList = <?php echo json_encode($orderList); ?>;
+</script>
+
+<script type="text/javascript" src="{{asset('js/admin/order-list.js')}}"></script>
 @endsection

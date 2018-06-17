@@ -71,7 +71,7 @@ class Orders extends Model {
     public function getOrder(){
         try{
             $date = \Carbon\Carbon::now();
-            $order = Order::where('order.order_date', '>=', $date)->get();
+            $order = Orders::all();
             return $order;
         } catch (\Exception $ex){
             return $ex;

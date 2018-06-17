@@ -26,6 +26,9 @@ $(function () {
                 title: 'Action'
             }]
     });
-    
-    
+    loadOrderList(orderList);
 });
+
+function loadOrderList(data){
+    $('#order_table').bootstrapTable('load', data);
+}
