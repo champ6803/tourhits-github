@@ -48,7 +48,6 @@ function clearGenTable() {
     $('#end_date').val('');
     $('#tour_package_code').val('');
     
-    alert($('#holiday_select').val())
     location.reload();
 }
 function inputDisabled() {
