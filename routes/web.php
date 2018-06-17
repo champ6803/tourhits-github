@@ -161,10 +161,8 @@ Route::post('searchAllAttraction', 'AdminController@searchAllAttraction');
 
 Route::post('searchAllTag', 'AdminController@searchAllTag');
 
-<<<<<<< HEAD
 Route::post('searchAllTag', 'AdminController@searchAllTag');
-=======
+
 Route::post('searchAllTag', 'AdminController@searchAllTag');
 
 Route::get('tour-detail2', 'TourDetailController@tour_detail2');
->>>>>>> 6fd6ef28a00ad5dd2ca6eed53098d9a7bb29de1d
