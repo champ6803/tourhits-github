@@ -4492,7 +4492,7 @@ body.single-post .blog-page__content > .post .post-content {
 --------------------------------------------------------------------------------*/
 .page-top {
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .page-top .list-link {
     float: left;
