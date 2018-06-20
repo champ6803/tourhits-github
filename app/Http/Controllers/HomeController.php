@@ -24,9 +24,8 @@ class HomeController extends Controller {
         $cate = new Category();
         $tourList = new Tour_Package();
         $categoryList = $cate->getCategoryIndex();
-        $tourHitsPackageActiveList = $tourList->getTourPackageByCategory(100000, 0); //แพ็คเกจยอดนิยม
-        $tourHitsPackageList = $tourList->getTourPackageByCategory(100000, 4);
-        $tourSalesPackageActiveList = $tourList->getTourPackageByCategory(100001, 0); //แพ็คเกจลดราคา
+        $tourHitsPackageActiveList = $tourList->getTourPackageByCategory(9999, 0); //แพ็คเกจยอดนิยม
+        $tourHitsPackageList = $tourList->getTourPackageByCategory(9999, 4);
 
         $arrayHitActive = array();
         foreach ($tourHitsPackageActiveList as $tour) {
@@ -34,23 +33,16 @@ class HomeController extends Controller {
         }
         $tourHitPeriodActive = Tour_Period::whereIn('tour_package_id', $arrayHitActive)
                 ->get();
-
+        
         $arrayHit = array();
         foreach ($tourHitsPackageList as $tour) {
             array_push($arrayHit, $tour->tour_package_id);
         }
         $tourHitPeriod = Tour_Period::whereIn('tour_package_id', $arrayHit)
                 ->get();
+        
 
-        $arraySalesActive = array();
-        foreach ($tourSalesPackageActiveList as $tour) {
-            array_push($arraySalesActive, $tour->tour_package_id);
-        }
-        $tourSalesPeriodActive = Tour_Period::whereIn('tour_package_id', $arraySalesActive)
-                ->get();
-
-
-        return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourHitsPackageList', 'tourSalesPackageActiveList', 'tourHitPeriodActive', 'tourHitPeriod', 'tourSalesPeriodActive'));
+        return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourHitsPackageList', 'tourHitPeriodActive', 'tourHitPeriod'));
     }
 
 }
