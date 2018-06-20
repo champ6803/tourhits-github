@@ -4119,7 +4119,7 @@ Custom BS3
 
 .tour-bottom-right{
     /*    position: relative;*/
-    position: relative;
+    position: absolute;
     top: 170px;
     display: block;
     margin-left: 230px;
@@ -4687,41 +4687,4 @@ Custom BS3
         }
     }
     
-    /* Card version mobie หน้าแรก */
-
-    .card-body-xs {
-/*      background-color: #D8D8D8;*/
-/*      margin: 0;*/
-      display: none;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .card-xs {
-      display: none;
-      min-width: 100%;
-      min-height: 200px;
-      overflow-x: auto;
-      
-    }
-
-    .card-xs::-webkit-scrollbar {
-      display: none;
-    }
-    .card--content {
-/*      background-color: #e74c3c;*/
-      min-width: 320px;
-      margin: 5px;
-      
-    }
     
-    @media screen and (max-width: 768px) {
-        .card-body-xs {
-            display: flex;
-        }
-        
-        .card-xs {
-            display: flex;
-        }
-    }
-
