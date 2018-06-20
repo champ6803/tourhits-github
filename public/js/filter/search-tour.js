@@ -254,7 +254,7 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             var div = '<div class="col-sm-6 col-md-4" align="center">';
             div = div + '<div class="thumbnail">';
             div = div + '<a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">';
-            div = div + '<div class="tour-cover lazyloaded" data-bg="../images/tour/' + val['tour_package_image'] + '" style="background-image: url(&quot;../images/tour/' + val['tour_package_image'] + '&quot;);">';
+            div = div + '<div class="tour-cover lazyloaded" data-bg="../images/tourlist/' + val['tour_package_image'] + '" style="background-image: url(&quot;../images/tourlist/' + val['tour_package_image'] + '&quot;);">';
             div = div + '<div class="tour-footer">';
             div = div + '<div class="pull-left">';
             div = div + '<span class="flag">';
@@ -271,11 +271,11 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             div = div + '<div class="tour-bottom-right">';
             div = div + '<div class="pull-right">';
             var tour_code = val['tour_package_id'];
-            while (tour_code.length != 4)
+            while (tour_code.length != 6)
             {
                 tour_code = '0' + tour_code;
             }
-            div = div + '<span class="tag">#' + this.tour_package_code + '</span>';
+            div = div + '<span class="tag">#' + tour_code + '</span>';
             div = div + '</div>';
             div = div + '<span class="clear"></span>';
             div = div + '</div>';
@@ -329,7 +329,7 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             div = div + '</div>';
             div = div + '<ul class="nav nav-tabs">';
             div = div + '<li class="active"><a href="#tab' + val['tour_package_id'] + '1" data-toggle="tab" class="active">แพ็คเกจ</a></li>';
-            div = div + '<li><a href="#tab' + val['tour_package_id'] + '2" data-toggle="tab">ดีเทล</a></li>';
+            div = div + '<li><a href="#tab' + val['tour_package_id'] + '2" data-toggle="tab">ข้อมูล</a></li>';
             div = div + '<li><a href="#tab' + val['tour_package_id'] + '3" data-toggle="tab">ช่วงเวลา</a></li>';
             div = div + '</ul>';
             div = div + '</div>';
