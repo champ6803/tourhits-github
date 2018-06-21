@@ -22,7 +22,7 @@ class DashboardController extends Controller {
     }
 
     public function order_list() {
-        $orderList =  $this->getOrderList();
+        $orderList = $this->getOrderList();
         return view('admin.order-list', compact('orderList'));
     }
 
@@ -31,9 +31,41 @@ class DashboardController extends Controller {
             $orderModel = new Orders();
             $orderList = $orderModel->getOrder();
             return $orderList;
-            
         } catch (\Exception $ex) {
             return $ex;
+        }
+    }
+
+    public function getOrderDetailList() {
+        try {
+            $order_id = request()->get('order_id');
+            $orderModel = new Orders();
+            $orderDetailList = $orderModel->getOrderDetail($order_id);
+            foreach ($orderDetailList as $orderDetail) {
+                $newStartDate = date("d-m-Y", strtotime($orderDetail->tour_period_start));
+                $newEndDate = date("d-m-Y", strtotime($orderDetail->tour_period_end));
+                $orderDetail->tour_period_start = $newStartDate;
+                $orderDetail->tour_period_end = $newEndDate;
+            }
+            return response($orderDetailList);
+        } catch (\Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function order_action() {
+        try {
+            $order_id = request()->get('order_id');
+            $status = request()->get('status');
+            $orderModel = new Orders();
+            $suc = $orderModel->saveOrderAction($order_id, $status);
+            if ($suc) {
+                $orderList = $orderModel->getOrder();
+                return response($orderList);
+            }
+            return response(null);
+        } catch (\Exception $ex) {
+            return response($ex);
         }
     }
 

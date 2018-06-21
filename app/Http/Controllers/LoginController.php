@@ -62,7 +62,7 @@ class LoginController {
                     return redirect('loading')->with(['text' => 'รอสักครู่เรากำลังพาท่าน เข้าสู่ระบบ','role' => 'Customer', 'name' => $customer->customer_fname]);
                 } else if ($checkLogin->role == 'A') {
                     $admin = Admin::where(['user_id' => $checkLogin->user_id])->first();
-                    $_SESSION['m_user'] = $checkLogin->username;
+                    $_SESSION['a_user'] = $checkLogin->username;
                     $_SESSION['role'] = $checkLogin->role;
                     $_SESSION['admin_id'] = $admin->admin_id;
                     //$_SESSION['admin_name'] = $admin->admin_fname . ' ' . $admin->admin_fname;

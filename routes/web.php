@@ -166,3 +166,7 @@ Route::post('searchAllTag', 'AdminController@searchAllTag');
 Route::post('searchAllTag', 'AdminController@searchAllTag');
 
 Route::get('tour-detail2', 'TourDetailController@tour_detail2');
+
+Route::post('order_action', 'DashboardController@order_action');
+
+Route::post('getOrderDetailList', 'DashboardController@getOrderDetailList');

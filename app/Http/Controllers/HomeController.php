@@ -49,7 +49,6 @@ class HomeController extends Controller {
         $tourSalesPeriodActive = Tour_Period::whereIn('tour_package_id', $arraySalesActive)
                 ->get();
 
-
         return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourHitsPackageList', 'tourSalesPackageActiveList', 'tourHitPeriodActive', 'tourHitPeriod', 'tourSalesPeriodActive'));
     }
 
