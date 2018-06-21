@@ -4724,4 +4724,200 @@ Custom BS3
             display: flex;
         }
     }
+    
+    /* หน้าเสริจ */
+    
+    .tour-local-wrapper{
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .swiper-container, .swiper-slide{
+        width: 100%;
+    }
+    
+    .swiper-container{
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+        z-index: 1;
+        margin-top: 30px;
+    }
+    
+    .swiper-container-free-mode>.swiper-wrapper{
+        -webkit-transition-timing-function: ease-out;
+        -moz-transition-timing-function: ease-out;
+        -ms-transition-timing-function: ease-out;
+        -o-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+        margin: 0 auto;
+    }
+    
+    .tour-local-nav{
+        margin-left: -15px;
+        margin-right: -15px;
+        list-style-type: none;
+        white-space: nowrap;
+        padding: 0;
+        margin-bottom: 15px;
+        height: 50px;
+    }
+    
+    .tour-local-nav>.local-nav-item>a{
+        background: #d7d7d7;
+        color: #363636;
+        padding: 0px 18px;
+        display: inline-block;
+        line-height: 30px;
+        border-radius: 15px;
+        font-size: 17px;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    .tour-local-nav>.local-nav-item{
+        display: inline-block;
+        width: auto;
+        margin-right: 15px;
+        height: 30px;
+        margin-top: 0px;
+    }
+    
+    .swiper-slide{
+       -webkit-flex-shrink: 0;
+        -ms-flex: 0 0 auto;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .swiper-slide{
+        float: left;
+    }
+    
+    .swiper-container-free-mode .swiper-button-next, .swiper-container-free-mode .swiper-button-prev{
+        opacity: 1 !important;
+    }
+    
+    .tour-local-wrapper .swiper-button-next {
+        right: 0;
+        left: auto;
+    }
+    
+    .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -ms-transition-property: -ms-transform;
+    transition-property: transform;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    }
+    
+    .tour-local-wrapper .swiper-button-disabled{
+/*        display: none;*/
+    }
+    
+    
+    .swiper-button-prev, .swiper-button-next{
+        position: absolute;
 
+        width: 27px;
+
+        z-index: 10;
+        cursor: pointer;
+    }
+    
+    .tour-local-wrapper .swiper-button-prev{
+        top: 0;
+        left: 0;
+/*        height: 30px;*/
+        right: auto;
+        background: none;
+        text-align: center;
+/*        margin-top: 5px;*/
+        
+        line-height: 2.3;
+        background: linear-gradient(to left, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);
+    }
+    
+    .tour-local-wrapper .swiper-button-next{
+        
+        top: 0;
+        
+/*      height: 30px;*/
+        
+        background: none;
+        text-align: center;
+/*        margin-top: 5px;*/
+        line-height: 2.3;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);
+    }
+    
+    
+    
+    
+    /* เสิรจ silde bar ซ้าย */
+    
+    .tour-left-bar-item{
+        margin-bottom: 20px;
+    }
+    .tour-left-bar-item .media-left{
+        width: 30%;
+    }
+    
+    .media-left, .media-right, .media-body{
+        display: table-cell;
+        vertical-align: top;
+    }
+    
+    .tour-left-bar-item .media-heading{
+        font-size: 15px;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    
+    .tour-left-bar-item .price{
+        font-size: 15px
+    }
+    
+    .page-sidebar .swiper-wrapper{
+        display: inline-block;
+        margin-left: 2px;
+    }
+    
+    .page-sidebar .tour-local-nav>.local-nav-item{
+        margin-top: 5px;
+    }
+    
+    .page-sidebar .tour-local-nav>.local-nav-item>a{
+        padding: 0px 10px;
+        border-radius: 8px;
+        font-size: 15px;
+        
+    }
+    
+    .left-bar2{
+        
+    }

@@ -16,7 +16,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             var div = '<div class="col-sm-6 col-md-6 col-lg-3" align="center">';
             div = div + '<div class="thumbnail">';
             div = div + '<a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">';
-            div = div + '<div class="tour-cover lazyloaded" data-bg="../images/tourlist/' + val['tour_package_image'] + '" style="background-image: url(&quot;../images/tourlist/' + val['tour_package_image'] + '&quot;);">';
+            div = div + '<div class="tour-cover lazyloaded" data-bg="../images/tour/' + val['tour_package_image'] + '" style="background-image: url(&quot;../images/tour/' + val['tour_package_image'] + '&quot;);">';
             div = div + '<div class="tour-footer">';
             div = div + '<div class="pull-left">';
             div = div + '<span class="flag">';
