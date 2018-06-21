@@ -4750,6 +4750,7 @@ Custom BS3
         -o-backface-visibility: hidden;
         backface-visibility: hidden;
         z-index: 1;
+        margin-top: 30px;
     }
     
     .swiper-container-free-mode>.swiper-wrapper{
@@ -4875,3 +4876,48 @@ Custom BS3
     }
     
     
+    
+    
+    /* เสิรจ silde bar ซ้าย */
+    
+    .tour-left-bar-item{
+        margin-bottom: 20px;
+    }
+    .tour-left-bar-item .media-left{
+        width: 30%;
+    }
+    
+    .media-left, .media-right, .media-body{
+        display: table-cell;
+        vertical-align: top;
+    }
+    
+    .tour-left-bar-item .media-heading{
+        font-size: 15px;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    
+    .tour-left-bar-item .price{
+        font-size: 15px
+    }
+    
+    .page-sidebar .swiper-wrapper{
+        display: inline-block;
+        margin-left: 2px;
+    }
+    
+    .page-sidebar .tour-local-nav>.local-nav-item{
+        margin-top: 5px;
+    }
+    
+    .page-sidebar .tour-local-nav>.local-nav-item>a{
+        padding: 0px 10px;
+        border-radius: 8px;
+        font-size: 15px;
+        
+    }
+    
+    .left-bar2{
+        
+    }

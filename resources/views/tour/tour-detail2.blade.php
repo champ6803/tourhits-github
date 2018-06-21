@@ -3,7 +3,9 @@
 @section('main-content')
 
 <style>
-   
+    .page-sidebar .sidebar-title{
+        border-top-color: #ea1c24;
+    }
     
 </style>
 
@@ -410,14 +412,120 @@
                             <!-- END / PAGINATION -->
                         </div>
                     </div>
+                    
+<!--                    bar ซ้าย-->
                     <div class="col-md-3 col-md-pull-6">
                         <div class="page-sidebar">
-                            <div class="sidebar-title">
-                                <h2>Trip</h2>
-                                <div class="clear-filter">
+                            <div class="sidebar-title hidden-xs">
+                                <h3>ทัวร์ขายดี :</h3>
+<!--                                <div class="clear-filter">
                                     <a href="#">Clear all</a>
-                                </div>
+                                </div>-->
                             </div>
+                            <div class="left-bar1">
+                                <div class="box-content hidden-xs">
+                                    <div class="tour-left-bar-item">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="" title="">
+                                                    <img class="media-object lazy" src="https://images.unsplash.com/photo-1519882189396-71f93cb4714b?ixlib=rb-0.3.5&s=0b977d67f187eec17eb555555ef59a6d&auto=format&fit=crop&w=500&q=60" 
+                                                         alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading">
+                                                    <a href="" title="">ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการ...</a>
+                                                </h6>
+                                                <div class="peroid">เริ่มเดินทาง 21 มิ.ย. 61</div>
+                                                <div class="price"><span>14,900</span> บาท</div>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tour-left-bar-item">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="" title="">
+                                                    <img class="media-object lazy" src="https://images.unsplash.com/photo-1519882189396-71f93cb4714b?ixlib=rb-0.3.5&s=0b977d67f187eec17eb555555ef59a6d&auto=format&fit=crop&w=500&q=60" 
+                                                        alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading">
+                                                    <a href="" title="">ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการ...</a>
+                                                </h6>
+                                                <div class="peroid">เริ่มเดินทาง 21 มิ.ย. 61</div>
+                                                <div class="price"><span>14,900</span> บาท</div>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tour-left-bar-item">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="" title="">
+                                                    <img class="media-object lazy" src="https://images.unsplash.com/photo-1519882189396-71f93cb4714b?ixlib=rb-0.3.5&s=0b977d67f187eec17eb555555ef59a6d&auto=format&fit=crop&w=500&q=60" 
+                                                         alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading">
+                                                    <a href="" title="">ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการ...</a>
+                                                </h6>
+                                                <div class="peroid">เริ่มเดินทาง 21 มิ.ย. 61</div>
+                                                <div class="price"><span>14,900</span> บาท</div>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="sidebar-title hidden-xs">
+                                <h3>ทัวร์แนะนำ :</h3>         
+                            </div>
+                            <div class="left-bar2">
+                                <div class="box-content hidden-xs">
+                                   <div class="swiper-wrapper tour-local-nav" style="transform: translate3d(0px, 0px, 0px);">
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์ญี่ปุ่นราคาถูก</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์โตเกียว</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
+                                        </div>
+                                        <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                            <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
+                                        </div>                                   
+                                    </div> 
+                                </div>
+                                
+                            <div class="sidebar-title hidden-xs">
+                                <h3><i class="fas fa-filter"></i> คัดกรอง :</h3>         
+                            </div>    
                             <!-- WIDGET -->
                             <div class="widget widget_has_radio_checkbox">
                                 <h3>Trip Type</h3>
