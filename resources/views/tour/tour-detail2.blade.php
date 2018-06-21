@@ -47,9 +47,9 @@
                             </select>
                         </div>
                     </div>
-                       
+                </div>       
                     
-                    
+<!--                    กลาง-->
                     <div class="col-md-6 col-md-push-3">                       
                         <div class="row">
                             <div class="col-md-12">
@@ -101,49 +101,47 @@
                                 <div class="trip-item">
                                     <div class="item-media">
                                         <div class="image-cover">
-                                            <img src="images/trip/1.jpg" alt="">
+                                            <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
                                         </div>
-                                        <div class="trip-icon">
+<!--                                        <div class="trip-icon">
                                             <img src="images/trip.jpg" alt="">
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="#">All Around Town Tour by City Sights</a>
+                                                <a href="#">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน</a>
                                             </h2>
                                         </div>
                                         <div class="item-list">
                                             <ul>
-                                                <li>4 Attractions</li>
-                                                <li>2 days, 1 night</li>
+                                                <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
+                                                <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
                                             </ul>
                                         </div>
                                         <div class="item-footer">
                                             <div class="item-rate">
-                                                <span>7.5 Good</span>
+                                                <div class="card-airline">
+                                                    <img alt="Tigerair" src="../images/airline/tigerair.png" title="">
+                                                </div>
                                             </div>
                                             <div class="item-icon">
-                                                <i class="awe-icon awe-icon-gym"></i>
-                                                <i class="awe-icon awe-icon-car"></i>
-                                                <i class="awe-icon awe-icon-food"></i>
-                                                <i class="awe-icon awe-icon-level"></i>
-                                                <i class="awe-icon awe-icon-wifi"></i>
+                                                <div class="pass">รหัสทัวร์&nbsp</div>#00001
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            Adult ticket
+                                            ราคา
                                             <ins>
-                                                <span class="amount">$200</span>
+                                                <span class="amount">฿12,000</span>
                                             </ins>
-                                            <del>
+<!--                                            <del>
                                                 <span class="amount">$200</span>
-                                            </del>
+                                            </del>-->
                                     
                                         </div>
-                                        <a href="#" class="awe-btn">Book now</a>
+                                        <a href="#" class="awe-btn">จองทัวร์นี้</a>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
@@ -151,49 +149,47 @@
                                 <div class="trip-item">
                                     <div class="item-media">
                                         <div class="image-cover">
-                                            <img src="images/trip/2.jpg" alt="">
+                                            <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
                                         </div>
-                                        <div class="trip-icon">
+<!--                                        <div class="trip-icon">
                                             <img src="images/trip.jpg" alt="">
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="#">Spectacular City Views</a>
+                                                <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
                                             </h2>
                                         </div>
                                         <div class="item-list">
                                             <ul>
-                                                <li>4 Attractions</li>
-                                                <li>2 days, 1 night</li>
+                                                <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                                <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
                                             </ul>
                                         </div>
                                         <div class="item-footer">
                                             <div class="item-rate">
-                                                <span>7.5 Good</span>
+                                                <div class="card-airline">
+                                                    <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
+                                                </div>
                                             </div>
                                             <div class="item-icon">
-                                                <i class="awe-icon awe-icon-gym"></i>
-                                                <i class="awe-icon awe-icon-car"></i>
-                                                <i class="awe-icon awe-icon-food"></i>
-                                                <i class="awe-icon awe-icon-level"></i>
-                                                <i class="awe-icon awe-icon-wifi"></i>
+                                                <div class="pass">รหัสทัวร์&nbsp</div>#00002
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            Adult ticket
+                                            ราคา
                                             <ins>
-                                                <span class="amount">$200</span>
+                                                <span class="amount">฿8,000</span>
                                             </ins>
-                                            <del>
+<!--                                            <del>
                                                 <span class="amount">$200</span>
-                                            </del>
+                                            </del>-->
                                     
                                         </div>
-                                        <a href="#" class="awe-btn">Book now</a>
+                                        <a href="#" class="awe-btn">จองทัวร์นี้</a>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
@@ -201,49 +197,47 @@
                                 <div class="trip-item">
                                     <div class="item-media">
                                         <div class="image-cover">
-                                            <img src="images/trip/3.jpg" alt="">
+                                            <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
                                         </div>
-                                        <div class="trip-icon">
+<!--                                        <div class="trip-icon">
                                             <img src="images/trip.jpg" alt="">
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="#">Romantic New York</a>
+                                                <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
                                             </h2>
                                         </div>
                                         <div class="item-list">
                                             <ul>
-                                                <li>4 Attractions</li>
-                                                <li>2 days, 1 night</li>
+                                                <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                                <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
                                             </ul>
                                         </div>
                                         <div class="item-footer">
                                             <div class="item-rate">
-                                                <span>7.5 Good</span>
+                                                <div class="card-airline">
+                                                    <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
+                                                </div>
                                             </div>
                                             <div class="item-icon">
-                                                <i class="awe-icon awe-icon-gym"></i>
-                                                <i class="awe-icon awe-icon-car"></i>
-                                                <i class="awe-icon awe-icon-food"></i>
-                                                <i class="awe-icon awe-icon-level"></i>
-                                                <i class="awe-icon awe-icon-wifi"></i>
+                                                <div class="pass">รหัสทัวร์&nbsp</div>#00002
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            Adult ticket
+                                            ราคา
                                             <ins>
-                                                <span class="amount">$200</span>
+                                                <span class="amount">฿8,000</span>
                                             </ins>
-                                            <del>
+<!--                                            <del>
                                                 <span class="amount">$200</span>
-                                            </del>
+                                            </del>-->
                                     
                                         </div>
-                                        <a href="#" class="awe-btn">Book now</a>
+                                        <a href="#" class="awe-btn">จองทัวร์นี้</a>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
@@ -251,49 +245,47 @@
                                 <div class="trip-item">
                                     <div class="item-media">
                                         <div class="image-cover">
-                                            <img src="images/trip/4.jpg" alt="">
+                                            <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
                                         </div>
-                                        <div class="trip-icon">
+<!--                                        <div class="trip-icon">
                                             <img src="images/trip.jpg" alt="">
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="#">NYC Family Fun Pass - Winter</a>
+                                                <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
                                             </h2>
                                         </div>
                                         <div class="item-list">
                                             <ul>
-                                                <li>4 Attractions</li>
-                                                <li>2 days, 1 night</li>
+                                                <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                                <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
                                             </ul>
                                         </div>
                                         <div class="item-footer">
                                             <div class="item-rate">
-                                                <span>7.5 Good</span>
+                                                <div class="card-airline">
+                                                    <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
+                                                </div>
                                             </div>
                                             <div class="item-icon">
-                                                <i class="awe-icon awe-icon-gym"></i>
-                                                <i class="awe-icon awe-icon-car"></i>
-                                                <i class="awe-icon awe-icon-food"></i>
-                                                <i class="awe-icon awe-icon-level"></i>
-                                                <i class="awe-icon awe-icon-wifi"></i>
+                                                <div class="pass">รหัสทัวร์&nbsp</div>#00002
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            Adult ticket
+                                            ราคา
                                             <ins>
-                                                <span class="amount">$200</span>
+                                                <span class="amount">฿8,000</span>
                                             </ins>
-                                            <del>
+<!--                                            <del>
                                                 <span class="amount">$200</span>
-                                            </del>
+                                            </del>-->
                                     
                                         </div>
-                                        <a href="#" class="awe-btn">Book now</a>
+                                        <a href="#" class="awe-btn">จองทัวร์นี้</a>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
@@ -301,49 +293,47 @@
                                 <div class="trip-item">
                                     <div class="item-media">
                                         <div class="image-cover">
-                                            <img src="images/trip/5.jpg" alt="">
+                                            <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
                                         </div>
-                                        <div class="trip-icon">
+<!--                                        <div class="trip-icon">
                                             <img src="images/trip.jpg" alt="">
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="#">NYC Land &amp; Sea</a>
+                                                <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
                                             </h2>
                                         </div>
                                         <div class="item-list">
                                             <ul>
-                                                <li>4 Attractions</li>
-                                                <li>2 days, 1 night</li>
+                                                <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                                <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
                                             </ul>
                                         </div>
                                         <div class="item-footer">
                                             <div class="item-rate">
-                                                <span>7.5 Good</span>
+                                                <div class="card-airline">
+                                                    <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
+                                                </div>
                                             </div>
                                             <div class="item-icon">
-                                                <i class="awe-icon awe-icon-gym"></i>
-                                                <i class="awe-icon awe-icon-car"></i>
-                                                <i class="awe-icon awe-icon-food"></i>
-                                                <i class="awe-icon awe-icon-level"></i>
-                                                <i class="awe-icon awe-icon-wifi"></i>
+                                                <div class="pass">รหัสทัวร์&nbsp</div>#00002
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            Adult ticket
+                                            ราคา
                                             <ins>
-                                                <span class="amount">$200</span>
+                                                <span class="amount">฿8,000</span>
                                             </ins>
-                                            <del>
+<!--                                            <del>
                                                 <span class="amount">$200</span>
-                                            </del>
+                                            </del>-->
                                     
                                         </div>
-                                        <a href="#" class="awe-btn">Book now</a>
+                                        <a href="#" class="awe-btn">จองทัวร์นี้</a>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
@@ -351,49 +341,47 @@
                                 <div class="trip-item">
                                     <div class="item-media">
                                         <div class="image-cover">
-                                            <img src="images/trip/1.jpg" alt="">
+                                            <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
                                         </div>
-                                        <div class="trip-icon">
+<!--                                        <div class="trip-icon">
                                             <img src="images/trip.jpg" alt="">
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="#">Spectacular City Views</a>
+                                                <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
                                             </h2>
                                         </div>
                                         <div class="item-list">
                                             <ul>
-                                                <li>4 Attractions</li>
-                                                <li>2 days, 1 night</li>
+                                                <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                                <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
                                             </ul>
                                         </div>
                                         <div class="item-footer">
                                             <div class="item-rate">
-                                                <span>7.5 Good</span>
+                                                <div class="card-airline">
+                                                    <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
+                                                </div>
                                             </div>
                                             <div class="item-icon">
-                                                <i class="awe-icon awe-icon-gym"></i>
-                                                <i class="awe-icon awe-icon-car"></i>
-                                                <i class="awe-icon awe-icon-food"></i>
-                                                <i class="awe-icon awe-icon-level"></i>
-                                                <i class="awe-icon awe-icon-wifi"></i>
+                                                <div class="pass">รหัสทัวร์&nbsp</div>#00002
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            Adult ticket
+                                            ราคา
                                             <ins>
-                                                <span class="amount">$200</span>
+                                                <span class="amount">฿8,000</span>
                                             </ins>
-                                            <del>
+<!--                                            <del>
                                                 <span class="amount">$200</span>
-                                            </del>
+                                            </del>-->
                                     
                                         </div>
-                                        <a href="#" class="awe-btn">Book now</a>
+                                        <a href="#" class="awe-btn">จองทัวร์นี้</a>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
@@ -788,6 +776,66 @@
                         
                     </div>
                 </div>
+
+<!--                    bar ขวา-->
+                <div class="col-md-3">
+                        <div class="page-sidebar">
+                            <div class="sidebar-title hidden-xs">
+                                <h3><i class="fas fa-certificate"></i> ไฮไลท์ยอดนิยม</h3>
+                            </div>
+                            <div class="right-bar">
+                                <div class="box-content hidden-xs">
+                                    <div class="tour-left-bar-item">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="" title="">
+                                                    <img class="media-object lazy" src="https://images.unsplash.com/photo-1516464488897-e67174edf7e7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=05e319452c7a94849374b80813bcf118&auto=format&fit=crop&w=500&q=60" 
+                                                         alt="" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading">
+                                                    <a href="" title="">ออนเซน (48)</a>
+                                                </h6>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tour-left-bar-item">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="" title="">
+                                                    <img class="media-object lazy" src="https://images.unsplash.com/photo-1511543865714-5a5a5ce51a94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af1dad982f43aeb20daf60a966268317&auto=format&fit=crop&w=500&q=60" 
+                                                         alt="" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading">
+                                                    <a href="" title="">ขาปูยักษ์ (31)</a>
+                                                </h6>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tour-left-bar-item">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="" title="">
+                                                    <img class="media-object lazy" src="https://images.unsplash.com/photo-1527650285468-3301061c3a5d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e19ffc9b9bb4dbfa12f57c6830944198&auto=format&fit=crop&w=500&q=60" 
+                                                         alt="" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading">
+                                                    <a href="" title="">ภูเขาไฟฟูจิ (40)</a>
+                                                </h6>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                    
+                                </div>    
+                            </div>
+                        </div>
             </div>
         </section>
 
