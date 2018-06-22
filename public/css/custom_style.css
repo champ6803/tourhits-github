@@ -460,11 +460,13 @@ hr {
 }
 
 .filter-bar .textpricesm{
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: bold;
 }
 
 .filter-header-text {   
-    font-size: 25px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 /* padding ใน filter bar */
@@ -478,23 +480,19 @@ hr {
 
 .filter-bar hr{
     height: 20px;
-    border-color: #707070;
-    border-width: 1.5px;
-    position: absolute;
     left: 10px;
     right: 10px;   
 }
 
 .filter-bar{
-    /*    color: #fff;*/
-    /*    background-color: #515050;*/
-    color: #fff;
-    background-color: #464545;
-    box-shadow: 0px 0 7px rgba(29, 29, 29, 0.5);
 
-    padding: 20px 25px 20px 35px;
+    color: #222;
+    background-color: #fff;
+/*    box-shadow: 0px 0 7px rgba(29, 29, 29, 0.5);*/
+
+    padding: 0px 25px 0px 20px;
     height: 100%;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
 .expand-toggle{
@@ -594,9 +592,9 @@ hr {
 }
 
 .filter-bar .option-all{
-
     font-size: 20px;
     margin-top: 0px;
+    font-weight: bold;
 
 }
 
@@ -744,7 +742,7 @@ hr {
 }
 
 #priceSlider .slider-selection {
-    background: #ff6600;
+    background: #d68813;
 }
 
 /* green 4/1/18 */
@@ -4918,6 +4916,99 @@ Custom BS3
         
     }
     
-    .left-bar2{
+    .right-bar .media-left{
+        width: 40%;
+    }
+    
+    .right-bar .media-heading{
+       font-size: 20px;
+    }
+    
+    .filter-page__content .trip-item{
+       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    }
+    
+    .filter-page__content .trip-item:hover{
+       box-shadow: 0 0 0 2px #ea1c24;
+    }
+    
+    .filter-page__content .trip-item .item-body .item-title h2 a{
+        line-height: 1.2;
+        white-space: normal;
+        font-size: 18px;
+    }
+    
+    .filter-page__content .trip-item .item-body .item-list li{
+        font-size:15px;
+        font-weight: bold;
+    }
+    
+    
+    .filter-page__content .trip-item .item-body .item-footer{
+        margin-top: 0px;
+    }
+    
+    .trip-item .item-body .item-footer .item-icon{
+        font-size: 23px;
+        text-align: right;
+        color: #b1b1b1;
+        margin-top: 6px;
+    }
+    
+    .trip-item .item-body .item-footer .item-icon .pass{
+        float: left;
+    }
+    
+    .filter-page__content .trip-item .item-body{
+        padding: 5px 10px 5px 10px;
         
+    }
+    
+    .trip-item .item-price-more .price{
+        font-size: 18px;
+    }
+    
+    .trip-item .item-price-more a{
+        font-size: 15px;
+        font-weight: bold;
+        color: #ea1c24;
+    }
+    
+    .trip-item .item-price-more .awe-btn{
+        border: 1px solid #ea1c24;
+    }
+    
+    .trip-item .item-price-more .awe-btn:hover{
+        background-color: #ea1c24;
+    }
+    
+    .trip-item .item-price-more a:hover{
+        color: #fff;
+    }
+    
+    .slider.slider-horizontal{
+        margin-top: 25px;
+    }
+    
+    .filter-price .slider-handle{
+        top: -3px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    @media screen and (max-width: 1200px) {
+        .trip-item .item-price-more a {
+                position: absolute;              
+                right: 0;
+                top: -23px;
+        }
+        
+        .trip-item .item-body .item-footer .item-icon .pass{
+            display: none;
+        }
+        
+        .trip-item .item-body .item-footer .card-airline{
+            width: 110px;
+        }
+              
     }
