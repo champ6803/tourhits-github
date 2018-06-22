@@ -24,7 +24,7 @@
     }
 
     .product-detail .trips .item p{
-        font-size: 20px;
+        font-size: 21px;
         color: #515050;
         margin-bottom: 0;
         text-overflow: ellipsis;

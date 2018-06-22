@@ -65,9 +65,9 @@
     }
 
     .trip-schedule-accordion .detail-condi ul li{
-        font-size: 20px;
-        color: #333333;
-        line-height: 1.2;
+        font-size: 21px;
+        color: #333;
+        line-height: 1.4;
     }
 
     .accordion .ui-state-active,
