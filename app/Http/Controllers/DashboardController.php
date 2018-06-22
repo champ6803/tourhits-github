@@ -18,7 +18,19 @@ use App\Models\Orders;
 class DashboardController extends Controller {
 
     public function dashboard() {
+        if (!$this->checkAdminLogin()) {
+            return view('admin.login-admin');
+        }
         return view('admin.dashboard');
+    }
+
+    public function checkAdminLogin() {
+        session_start();
+       $user = $_SESSION['a_user'];
+        if ($user != null) {
+            return true;
+        }
+        return false;
     }
 
     public function order_list() {
