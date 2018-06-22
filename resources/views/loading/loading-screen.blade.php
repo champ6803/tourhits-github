@@ -21,9 +21,9 @@
                             <div class="loading-text">
                                 <i class="fas fa-spinner"></i> <span>สวัสดีคุณ {{session('name')}} {{session('text')}}</span>
                             </div>
-<!--                            <div class="loading-io">
-                                ใส่โหลดตรงนี้
-                            </div>-->
+                            <!--                            <div class="loading-io">
+                                                            ใส่โหลดตรงนี้
+                                                        </div>-->
                         </div>    
                     </div>
                 </div>
@@ -35,12 +35,6 @@
 @endsection
 @section('footer_scripts')
 
-<script type="text/javascript">
-    $(function () {
-        setInterval(function () {
-            history.go(-2);
-        }, 5000);
-    });
-</script>
+<script src="{{asset('js/loading/loading-screen.js')}}"></script>
 
 @endsection

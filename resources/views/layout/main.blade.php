@@ -488,7 +488,7 @@ session_start();
                                         ?>
                                         <input type="hidden" name="_token" id="m_user" value="<?php echo $_SESSION['m_user'] ?>">
                                         <div>
-                                            ยินดีต้อนรับ <?php echo $_SESSION['m_user'] ?>
+                                            ยินดีต้อนรับ <?php echo $_SESSION['customer_name'] ?>
                                         </div>
                                         <div>
                                             <a href="{{url('logout')}}">ออกจากระบบ</a>
