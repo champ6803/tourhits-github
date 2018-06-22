@@ -70,7 +70,7 @@ class LoginController {
                     //$_SESSION['admin_name'] = $admin->admin_fname . ' ' . $admin->admin_fname;
                     $_SESSION['loggedin_time'] = time();
                     $_SESSION['expire'] = $_SESSION['loggedin_time'] + (30 * 60);
-                    return redirect('dashboard');
+                    return redirect('order-list');
                 }
             } else if ($role == "A") {
                 return redirect('admin')->with('error', 'ไม่สามารถ Login ได้');

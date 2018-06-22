@@ -21,7 +21,7 @@ class DashboardController extends Controller {
         if (!$this->checkAdminLogin()) {
             return view('admin.login-admin');
         }
-        return view('admin.dashboard');
+        return view('admin.order-list');
     }
 
     public function checkAdminLogin() {
