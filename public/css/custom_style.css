@@ -460,11 +460,13 @@ hr {
 }
 
 .filter-bar .textpricesm{
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: bold;
 }
 
 .filter-header-text {   
-    font-size: 25px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 /* padding ใน filter bar */
@@ -478,23 +480,19 @@ hr {
 
 .filter-bar hr{
     height: 20px;
-    border-color: #707070;
-    border-width: 1.5px;
-    position: absolute;
     left: 10px;
     right: 10px;   
 }
 
 .filter-bar{
-    /*    color: #fff;*/
-    /*    background-color: #515050;*/
-    color: #fff;
-    background-color: #464545;
-    box-shadow: 0px 0 7px rgba(29, 29, 29, 0.5);
 
-    padding: 20px 25px 20px 35px;
+    color: #222;
+    background-color: #fff;
+/*    box-shadow: 0px 0 7px rgba(29, 29, 29, 0.5);*/
+
+    padding: 0px 25px 0px 20px;
     height: 100%;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
 .expand-toggle{
@@ -594,9 +592,9 @@ hr {
 }
 
 .filter-bar .option-all{
-
     font-size: 20px;
     margin-top: 0px;
+    font-weight: bold;
 
 }
 
@@ -744,7 +742,7 @@ hr {
 }
 
 #priceSlider .slider-selection {
-    background: #ff6600;
+    background: #d68813;
 }
 
 /* green 4/1/18 */
@@ -4988,13 +4986,15 @@ Custom BS3
         color: #fff;
     }
     
-/*    .trip-item .item-body .item-title h2 a:hover{
-        color: #ea1c24!important;
+    .slider.slider-horizontal{
+        margin-top: 25px;
     }
     
-    .trip-item .item-body .item-title h2 a:focus{
-        color: #ea1c24!important;
-    }*/
+    .filter-price .slider-handle{
+        top: -3px;
+        width: 25px;
+        height: 25px;
+    }
     
     @media screen and (max-width: 1200px) {
         .trip-item .item-price-more a {

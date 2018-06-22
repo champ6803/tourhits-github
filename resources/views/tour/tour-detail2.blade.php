@@ -7,6 +7,8 @@
         border-top-color: #ea1c24;
     }
     
+
+    
 </style>
 
 <!-- PAGE WRAP -->
@@ -510,270 +512,178 @@
                                         </div>                                   
                                     </div> 
                                 </div>
-                                
-                            <div class="sidebar-title hidden-xs">
-                                <h3><i class="fas fa-filter"></i> คัดกรอง :</h3>         
                             </div>    
-                            <!-- WIDGET -->
-                            <div class="widget widget_has_radio_checkbox">
-                                <h3>Trip Type</h3>
-                                <ul>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Amusement park
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Natural sight-seeing
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Pool &amp; Waterpark
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Museum
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Religious and Cultural place
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Shoping mall &amp; Market
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Others
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- END / WIDGET -->
-
-                            <!-- WIDGET -->
-                            <div class="widget widget_price_filter">
-                                <h3>Price Level</h3>
-                                <div class="price-slider-wrapper">
-                                    <div class="price-slider"></div>
-                                    <div class="price_slider_amount">
-                                        <div class="price_label">
-                                            <span class="from"></span> - <span class="to"></span>
+                                
+                            <div class="sidebar-title">
+                                <h3><i class="fas fa-filter"></i> คัดกรอง :</h3>      
+                            </div>         
+                                                        
+                            <div class="left-bar3">
+                                <div class="box-content">
+                                    <div class="filter-bar">    
+                                        <div class="filter-price">
+                                            <div class='filter-header'>
+                                                <span class='filter-header-text'><i class="fas fa-exchange-alt"></i> กำหนดช่วงราคา</span>
+                                            </div>     
+                                            <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to">80,000</span> บาท</div>
+                                            <input id="price" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
                                         </div>
+                                        
+                                        <hr>
+                                        
+                                        <div class="filter-route">
+                                            <div class='filter-header'>
+                                                <span class='filter-header-text'><i class="far fa-map"></i> เส้นทาง</span>
+                                            </div>
+                                            <div id="filter-route">
+                                                <div class="option-all">
+                                                    <label for="route_all" class="label-cbx">
+                                                        <input id="route_all" type="checkbox" class="invisible" checked>
+                                                        <div class="checkbox">
+                                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                            <polyline points="4 11 8 15 16 6"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <span>แสดงทั้งหมด</span>
+                                                    </label>
+                                                </div>
+<!--                                                เว้นไว้ให้ foreach-->
+<!--                                                เว้นไว้ให้ foreach-->
+                                                <div class="option">
+                                                    <label for="5" class="label-cbx">
+                                                        <input id="5" type="checkbox" class="invisible">
+                                                        <div class="checkbox">
+                                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                            <polyline points="4 11 8 15 16 6"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <span class="name">test</span>
+                                                        <span class="count">(1)</span>
+                                                        <span class="clear"></span>
+                                                    </label>
+                                                </div>
+                                                <div id="expandToggleRoute" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreRoute">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>                                                                                      
+                                            </div>
+                                        </div>
+                                        
+                                        <hr>
+                                         
+                                        <div class="filter-date">
+                                            <div class='filter-header'>
+                                                <span class='filter-header-text'><i class="far fa-calendar-alt"></i> วันเดินทาง ไป-กลับ</span>
+                                            </div>
+                                            <div class='filter-pickdate'>
+                                                <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
+                                                <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                            </div>
+                                            <!--            เว้นไว้ใส่ปฎิทิน-->
+                                            <div id="filter-date">
+                                                <div class="option-all">
+                                                    <label for="holiday_all" class="label-cbx">
+                                                        <input id="holiday_all" type="checkbox" class="invisible" checked>
+                                                        <div class="checkbox">
+                                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                            <polyline points="4 11 8 15 16 6"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <span>แสดงทั้งหมด</span>
+                                                    </label>
+                                                </div>
+                                                
+<!--                                                เว้นไว้ให้ foreach-->
+<!--                                                เว้นไว้ให้ foreach-->
+                                                
+                                            </div>
+                                            <div id="expandToggleHoliday" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreHoliday">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
+                                        </div>
+                                        
+                                        <hr>
+                                        
+                                        <div class="filter-month">
+                                            <div class='filter-header'>
+                                            <span class='filter-header-text'><i class="far fa-calendar-check"></i> เดือน</span>
+                                            </div>
+                                        <div id="filter-month">
+                                            <div class="option-all">
+                                                <label for="month_all" class="label-cbx">
+                                                    <input id="month_all" type="checkbox" class="invisible" checked>
+                                                    <div class="checkbox">
+                                                        <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                        <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                        <polyline points="4 11 8 15 16 6"></polyline>
+                                                        </svg>
+                                                    </div>
+                                                    <span>แสดงทั้งหมด</span>
+                                                </label>
+                                            </div>
+                                            
+<!--                                                เว้นไว้ให้ foreach-->
+<!--                                                เว้นไว้ให้ foreach-->
+                                            
+                                        </div>
+                                            <div id="expandToggleMonth" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreMonth">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
+                                        </div>
+                                        
+                                        <hr>
+                                        
+                                        <div class="filter-countdate">
+                                            <div class='filter-header'>
+                                                <span class='filter-header-text'><i class="far fa-clock"></i> จำนวนวัน</span>
+                                            </div>
+                                            <div id="filter-countdate">
+                                                <div class="option-all">
+                                                    <label for="day_all" class="label-cbx">
+                                                        <input id="day_all" type="checkbox" class="invisible" checked>
+                                                        <div class="checkbox">
+                                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                            <polyline points="4 11 8 15 16 6"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <span>แสดงทั้งหมด</span>
+                                                    </label>
+                                                </div>
+<!--                                                เว้นไว้ให้ foreach-->
+<!--                                                เว้นไว้ให้ foreach-->
+                                            </div>
+                                            <div id="expandToggleDates" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreDates">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
+                                        </div>
+                                        
+                                        <hr>
+                                        
+                                        <div class="filter-airline">
+                                            <div class='filter-header'>
+                                                <span class='filter-header-text'><i class="far fa-paper-plane"></i> สายการบิน</span>
+                                            </div>
+                                            <div id="filter-airline">
+                                                <div class="option-all">
+                                                    <label for="airline_all" class="label-cbx">
+                                                        <input id="airline_all" type="checkbox" class="invisible" checked>
+                                                        <div class="checkbox">
+                                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                            <polyline points="4 11 8 15 16 6"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <span>แสดงทั้งหมด</span>
+                                                    </label>
+                                                </div>
+                                                
+<!--                                                เว้นไว้ให้ foreach-->
+<!--                                                เว้นไว้ให้ foreach-->
+                                                
+                                            </div>
+                                            <div id="expandToggleAirline" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreAirline">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
+                                        </div>
+                                            
+            
+<!--                            end filter-bar-->                                                                           
                                     </div>
-                                </div>
+                                </div> 
                             </div>
-                            <!-- END / WIDGET -->
-
-                            <!-- WIDGET -->
-                            <div class="widget widget_has_radio_checkbox">
-                                <h3>Star Rating</h3>
-                                <ul>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                Unrated
-                                            </span>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- END / WIDGET -->
-
-                            <!-- WIDGET -->
-                            <div class="widget widget_has_radio_checkbox">
-                                <h3>Distance</h3>
-                                <ul>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Near Airport
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Near Shopping District
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Near Attractions
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Near Traffic station
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- END / WIDGET -->
-
-                            <!-- WIDGET -->
-                            <div class="widget widget_has_radio_checkbox">
-                                <h3>Service Include</h3>
-                                <ul>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Room service
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Laundry
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Meal at room
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Wifi &amp; internet
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Parking lot
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            TV and appliances
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Pool
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Gym and Spa
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- END / WIDGET -->
-
-                            <!-- WIDGET -->
-                            <div class="widget widget_product_tag_cloud">
-                                <h3>Tags</h3>
-                                <div class="tagcloud">
-                                    <a href="#">Hotel</a>
-                                    <a href="#">Motel</a>
-                                    <a href="#">Hostel</a>
-                                    <a href="#">Homestay</a>
-                                </div>
-                            </div>
-                            <!-- END / WIDGET -->
-
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-3 col-md-push-9">
-                        
                     </div>
                 </div>
 
@@ -837,15 +747,18 @@
                             </div>
                         </div>
             </div>
+
+            </div>
         </section>
 
     </div>
     <!-- END / PAGE WRAP -->
 
 
-
-
-
-
-
 @stop
+
+@section('footer_scripts')
+
+<script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
+
+@endsection
