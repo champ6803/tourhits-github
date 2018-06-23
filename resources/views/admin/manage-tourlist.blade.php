@@ -101,6 +101,40 @@
                 </div>
                 <!-- /.box-body -->
             </div>
+            
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">เพิ่มช่วงระยะเวลา</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row" style="padding: 7px;" id="divPeriodTable">
+                        <div class="col-lg-1"></div>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            
+             <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">เพิ่มรูปภาพ</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row" style="padding: 7px;" id="divPeriodTable">
+                        <div class="col-lg-1"></div>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
 
             <div class="box">
                 <div class="box-header with-border">

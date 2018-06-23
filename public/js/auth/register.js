@@ -1,5 +1,6 @@
 $(function () {
     //var country = getCountry();
+    facebook_login(user);
     $('#country').val(94);
 
 //    $('select[name=country]').change(function () {
@@ -18,7 +19,7 @@ $(function () {
 //    });
 
     $('#country').change(function () {
-        if($('#country').val() != "94"){
+        if ($('#country').val() != "94") {
             alert("ยังไม่สามารถเลิอกประเทศอื่นได้");
         }
         $('#country').val(94);
@@ -118,4 +119,22 @@ function getSubdistrict(district_id) {
         }
     });
     return subdistrict;
+}
+
+function facebook_login(source) {
+    if (source) {
+        if (source.email)
+            $('#email').val(source.email);
+        if (source.name) {
+            var fullname = source.name.split(" ");
+            var firstname = fullname[0];
+            var lastname = fullname[1];
+            $('#first_name').val(firstname);
+            $('#last_name').val(lastname);
+        }
+        if (source.password){
+            $('#password').val(source.password);
+            $('#password-confirm').val(source.password);
+        }
+    }
 }

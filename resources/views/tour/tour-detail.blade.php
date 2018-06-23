@@ -65,9 +65,9 @@
     }
 
     .trip-schedule-accordion .detail-condi ul li{
-        font-size: 20px;
-        color: #333333;
-        line-height: 1.2;
+        font-size: 21px;
+        color: #333;
+        line-height: 1.4;
     }
 
     .accordion .ui-state-active,
@@ -1293,8 +1293,13 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 @endforeach
                             </tbody>
                         </table>
-                        <p class="text-center">*** ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม ***</p>
+                        <p class="text-center">*** ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม ***</p>       
                     </div>
+                    <div class="row">
+                        <div class="pdf-download btn btn-rounded">
+                            <a id="" href="">ดาวน์โหลดเอกสารทัวร์นี้ (PDF)</a>
+                        </div>
+                    </div> 
                 </div>
             </div>
             <!-- กล่องจอง -->

@@ -24,7 +24,7 @@
     }
 
     .product-detail .trips .item p{
-        font-size: 20px;
+        font-size: 21px;
         color: #515050;
         margin-bottom: 0;
         text-overflow: ellipsis;
@@ -406,22 +406,9 @@
                     </div>
                     <div class="panel-group">
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <label data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" class="label-cbx">
-                                        <input id="other_info" type="checkbox" class="invisible">
-                                        <div class="checkbox">
-                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                            <polyline points="4 11 8 15 16 6"></polyline>
-                                            </svg>
-                                        </div>
-                                        <span><h4 style="color:#ec2424; display: inline; line-height: 1.6;"> ข้อมูลผู้จองสำหรับติดต่อกลับ (ที่อยู่อื่น)</h4></span>
-                                    </label>
-                                </h4>
-                            </div>
-                            <div id="collapse1" class="panel-collapse collapse">
-                                <form class="contact-form">
+                            <div id="collapse1" class="panel-collapse">
+                                <div class="contact-form">
+                                    <span><h4 style="color:#ec2424; display: inline; line-height: 1.6;"> ข้อมูลผู้จองสำหรับติดต่อกลับ (ที่อยู่อื่น)</h4></span><br>
                                     <em>กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
                                     <div class="confirm-form">
                                         <div class="form-item">
@@ -440,7 +427,7 @@
                                             <textarea id='remark' name="message">หมายเหตุ</textarea>
                                         </div>
                                     </div> 
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -454,6 +441,7 @@
                 </div> <!-- พท การ์ดทางขวา -->  
             </div> <!-- end lg9   -->
         </div> <!-- end row   -->
+        
     </div>
 </section>
 @stop

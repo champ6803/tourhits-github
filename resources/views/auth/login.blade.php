@@ -132,13 +132,13 @@
                                         <span class="vl-innertext" style="color:#333333;">Login with social media</span>
                                     </div>
 
-                                    <a href="#" class="fb btn-lr">
+                                    <a href="{{ url('auth/login/facebook') }}" class="fb btn-lr">
                                         <i class="fab fa-facebook-f"></i> Login with Facebook
                                     </a>
-                                    <a href="#" class="twitter btn-lr">
+                                    <a href="javascript:{alert('Comming soon')}" class="twitter btn-lr">
                                         <i class="fab fa-twitter"></i> Login with Twitter
                                     </a>
-                                    <a href="#" class="google btn-lr">
+                                    <a href="javascript:{alert('Comming soon')}" class="google btn-lr">
                                         <i class="fab fa-google"></i> Login with Google+
                                     </a>
 
@@ -218,4 +218,3 @@
 
 
 @endsection
-

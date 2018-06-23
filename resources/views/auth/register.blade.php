@@ -23,7 +23,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-register">
                         <div class="panel-heading" align="center">
-                            <a href="#" class="fb btn-facebook-reg"><i class="fab fa-facebook-f"></i> Login with Facebook</a>
+                            <a href="{{ url('auth/login/facebook') }}" class="fb btn-facebook-reg"><i class="fab fa-facebook-f"></i> Login with Facebook</a>
 <!--                        <button class="btn btn-primary"><i class="fab fa-facebook"></i>&nbsp;Continuous With Facebook</button>-->
 <!--                            <button class="btn btn-success"><i class="fab fa-line"></i>&nbsp;Start With Line</button>-->
                         </div>
@@ -60,18 +60,6 @@
                                             @endif
                                         </div>
                                     </div>
-
-<!--                                    <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                                        <label for="username" class="col-md-2 control-label"><i class="far fa-user-circle fa-2x"></i></label><span class="hide-md"> ยูสเซอร์ไอดี</span>
-                                        <div class="col-md-10">
-                                            {!! Form::text('username', null, ['class' => 'form-control','id' => 'username', 'placeholder' => 'Username', 'required']) !!}
-                                            @if ($errors->has('username'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('username') }}</strong>
-                                            </span>
-                                            @endif
-                                        </div>
-                                    </div>-->
 
                                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                         <label for="password" class="col-md-2 control-label"><i class="fas fa-key fa-2x"></i></label><span class="hide-md"> พาสเวิร์ด</span>
@@ -246,8 +234,9 @@
 @endsection
 
 @section('footer_scripts')
-
+<script type="text/javascript">
+    var user = <?php echo json_encode($regisUser); ?>;
+</script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script type="text/javascript" src="js/auth/register.js"></script>
-
 @endsection

@@ -160,3 +160,17 @@ Route::get('order-list', 'DashboardController@order_list');
 Route::post('searchAllAttraction', 'AdminController@searchAllAttraction');
 
 Route::post('searchAllTag', 'AdminController@searchAllTag');
+
+Route::post('searchAllTag', 'AdminController@searchAllTag');
+
+Route::post('searchAllTag', 'AdminController@searchAllTag');
+
+Route::get('tour-detail2', 'TourDetailController@tour_detail2');
+
+Route::post('order_action', 'DashboardController@order_action');
+
+Route::post('getOrderDetailList', 'DashboardController@getOrderDetailList');
+// for redirect to facebook auth.
+Route::get('auth/login/facebook', 'LoginController@facebookAuthRedirect');
+// facebook call back after login success.
+Route::get('auth/login/facebook/index', 'LoginController@facebookSuccess');

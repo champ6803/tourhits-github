@@ -67,18 +67,23 @@ class TourController extends Controller {
             $tour_period_id = request()->get('tour_period_id');
             $quantity_adult = request()->get('adult_qty');
             $quantity_child = request()->get('child_qty');
+
+            $cus_name = request()->get('cus_name');
+            $cus_email = request()->get('cus_email');
+            $line_id = request()->get('line_id');
+            $phone = request()->get('phone');
+            $remark = request()->get('remark');
             if ($customer_id != null || $customer_id != "") {
-                $suc = $order->saveOrder($customer_id, $order_total_price, $tour_package_id, $tour_period_id, $quantity_adult, $quantity_child);
+                $suc = $order->saveOrder($customer_id, $cus_name, $cus_email, $phone, $line_id, $remark, $order_total_price, $tour_package_id, $tour_period_id, $quantity_adult, $quantity_child);
                 if ($suc) {
                     return response('true');
                 }
                 return response('false');
             } else {
-                $cus_name = request()->get('cus_name');
-                $cus_email = request()->get('cus_email');
-                $line_id = request()->get('line_id');
-                $phone = request()->get('phone');
-                $remark = request()->get('remark');
+                $suc = $order->saveOrder($customer_id, $cus_name, $cus_email, $phone, $line_id, $remark, $order_total_price, $tour_package_id, $tour_period_id, $quantity_adult, $quantity_child);
+                if ($suc) {
+                    return response('true');
+                }
                 return response('false');
             }
         } catch (\Exception $ex) {
