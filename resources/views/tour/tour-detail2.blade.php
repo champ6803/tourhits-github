@@ -117,6 +117,7 @@
                                 </div>
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="item-price-more">
                             <div class="price">
                                 ราคา
@@ -158,6 +159,64 @@
                                 <div class="item-rate">
                                     <div class="card-airline">
                                         <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
+=======
+                        
+                        <div class="filter-page__content">
+                            <div class="filter-item-wrapper">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="country">
+                                        <img style="float: left; margin-right: 10px;" data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png" alt="ทัวร์เกาหลี" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png">
+                                        <h5>ทัวร์ญี่ปุ่น ทั้งหมด 132 แพ็คเกจ</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ITEM -->
+                                <div class="trip-item">
+                                    <div class="item-media">
+                                        <div class="image-cover">
+                                            <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
+                                        </div>
+<!--                                        <div class="trip-icon">
+                                            <img src="images/trip.jpg" alt="">
+                                        </div>-->
+                                    </div>
+                                    <div class="item-body">
+                                        <div class="item-title">
+                                            <h2>
+                                                <a href="#">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน</a>
+                                            </h2>
+                                        </div>
+                                        <div class="item-list">
+                                            <ul>
+                                                <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
+                                                <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="item-footer">
+                                            <div class="item-rate">
+                                                <div class="card-airline">
+                                                    <img alt="Tigerair" src="../images/airline/tigerair.png" title="">
+                                                </div>
+                                            </div>
+                                            <div class="item-icon">
+                                                <div class="pass">รหัสทัวร์&nbsp</div>#00001
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-price-more">
+                                        <div class="price">
+                                            ราคา
+                                            <ins>
+                                                <span class="amount">฿12,000</span>
+                                            </ins>
+<!--                                            <del>
+                                                <span class="amount">$200</span>
+                                            </del>-->
+                                    
+                                        </div>
+                                        <a href="#" class="awe-btn">จองทัวร์นี้</a>
+>>>>>>> a56fad8ea6453b60b17238ad03f58d6a61aa477b
                                     </div>
                                 </div>
                                 <div class="item-icon">
@@ -452,6 +511,7 @@
                                 </div>                                        
                             </div>
                         </div>
+<<<<<<< HEAD
                     </div>
 
                 </div>
@@ -529,6 +589,47 @@
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
                                                 <polyline points="4 11 8 15 16 6"></polyline>
                                                 </svg>
+=======
+                                               
+                </div>            
+                    
+<!--                    bar ซ้าย-->
+                    <div class="col-md-3 col-md-pull-6">
+                        <div class="page-sidebar">
+                            <div class="sidebar-title hidden-xs">
+                                <h3>ทัวร์ขายดี :</h3>
+<!--                                <div class="clear-filter">
+                                    <a href="#">Clear all</a>
+                                </div>-->
+                            </div>
+                            <div class="left-bar1">
+                                <div class="box-content hidden-xs">
+                                    <div class="tour-left-bar-item">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="" title="">
+                                                    <img class="media-object lazy" src="https://images.unsplash.com/photo-1519882189396-71f93cb4714b?ixlib=rb-0.3.5&s=0b977d67f187eec17eb555555ef59a6d&auto=format&fit=crop&w=500&q=60" 
+                                                         alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading">
+                                                    <a href="" title="">ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการ...</a>
+                                                </h6>
+                                                <div class="peroid">เริ่มเดินทาง 21 มิ.ย. 61</div>
+                                                <div class="price"><span>14,900</span> บาท</div>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tour-left-bar-item">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="" title="">
+                                                    <img class="media-object lazy" src="https://images.unsplash.com/photo-1519882189396-71f93cb4714b?ixlib=rb-0.3.5&s=0b977d67f187eec17eb555555ef59a6d&auto=format&fit=crop&w=500&q=60" 
+                                                        alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
+                                                </a>
+>>>>>>> a56fad8ea6453b60b17238ad03f58d6a61aa477b
                                             </div>
                                             <span>แสดงทั้งหมด</span>
                                         </label>

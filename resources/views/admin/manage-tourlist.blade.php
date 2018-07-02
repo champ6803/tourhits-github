@@ -192,6 +192,7 @@
                                                         <div class="form-group row">
                                                             <label for="tour_detail_0" class="col-sm-2 control-label">Attractions 1</label>
 
+<<<<<<< HEAD
                                                             <div class="col-sm-10">
                                                                 <input hidden id="day_name0" name="day_name[]" value="">
                                                                 <select id="attraction_select0" class="form-control js-example-basic-multiple attraction_select" name="attraction_select0[]" multiple="multiple"></select>
@@ -200,6 +201,64 @@
                                                     </div>
                                                 </div>
                                             </div>
+=======
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row" style="padding: 7px;" id="divTable">
+                        <div class="col-lg-1"></div>
+                        <table id="dayTable" style="width:85%;">
+                            <thead >
+                                <tr style="background-color:#FF9966; border-radius: 12px;">
+                                    <th style="color: white; font-size: 20px">วันที่</th>
+                                    <th style="color: white; font-size: 20px">package</th>
+                                    <th style="color: white; font-size: 20px">รายละเอียด</th>
+                                </tr>
+                            </thead>
+                            <tbody id="genTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">เพิ่มช่วงระยะเวลา</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row" style="padding: 7px;" id="divPeriodTable">
+                        <div class="col-lg-1"></div>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            
+             <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">เพิ่มรูปภาพ</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row" style="padding: 7px;" id="divPeriodTable">
+                        <div class="col-lg-1"></div>
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+>>>>>>> a56fad8ea6453b60b17238ad03f58d6a61aa477b
 
 
                                         </div>

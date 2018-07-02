@@ -166,7 +166,12 @@ function clearGenTable() {
     $('#start_date').val('');
     $('#end_date').val('');
     $('#tour_package_code').val('');
+<<<<<<< HEAD
 
+=======
+    $('#tour_period_end').val('');
+    $('#tour_period_start').val('');
+>>>>>>> a56fad8ea6453b60b17238ad03f58d6a61aa477b
     location.reload();
 }
 function inputDisabled() {
@@ -189,6 +194,7 @@ function genTable() {
     var divs = "";
     var row_no = 1;
     if ((day > 0)) {
+<<<<<<< HEAD
         for (var i = 0; i < day; i++) {
             divs = divs + '<div class="row">';
             divs = divs + '<div class="col-12">';
@@ -220,6 +226,22 @@ function genTable() {
 //        tinymce.init({selector: '.tour-day'});
         $('.tour-day').wysihtml5();
         $('.nav-tabs a[href="#detail"]').tab('show');
+=======
+        inputDisabled();
+        var Str = '';
+        var rowNo = 1;
+        for (var row = 0; row < day; row++) {
+            Str = Str + '<tr>';
+            Str = Str + '<td  style="width : 60px" id="' + row + 'day' + '" name="' + row + 'day' + '">' + rowNo + '</td>';
+            Str = Str + '<td><input class="form-control" id="tour_name_' + row + '" type="text" name="tour_name_' + row + '" required="required"></td>';
+            Str = Str + '<td style="width : 800px"><textarea name="tour_detail_' + row + '" id="tour_detail_' + row + '" cols="50"></textarea></td>';
+            Str = Str + '</tr>';
+            rowNo++;
+        }
+        document.getElementById("genTable").innerHTML = Str;
+        tinymce.init({selector: 'textarea'});
+        genPeriodTable();
+>>>>>>> a56fad8ea6453b60b17238ad03f58d6a61aa477b
     } else {
         alert('กรุณาระบุจำนวนวันให้ถูกต้อง')
         $('#saveBtn').prop('disabled', false);
@@ -229,9 +251,14 @@ function genTable() {
     $('#saveAll').prop('disabled', false);
 }
 
+<<<<<<< HEAD
 function addPeriod() {
 
 }
+=======
+
+
+>>>>>>> a56fad8ea6453b60b17238ad03f58d6a61aa477b
 
 function createHolidayDropDown() {
     var StrDropDown = '';
