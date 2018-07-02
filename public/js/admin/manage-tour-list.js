@@ -50,7 +50,8 @@ function clearGenTable() {
     $('#start_date').val('');
     $('#end_date').val('');
     $('#tour_package_code').val('');
-    
+    $('#tour_period_end').val('');
+    $('#tour_period_start').val('');
     location.reload();
 }
 function inputDisabled() {
@@ -79,10 +80,12 @@ function genTable() {
             Str = Str + '<td  style="width : 60px" id="' + row + 'day' + '" name="' + row + 'day' + '">' + rowNo + '</td>';
             Str = Str + '<td><input class="form-control" id="tour_name_' + row + '" type="text" name="tour_name_' + row + '" required="required"></td>';
             Str = Str + '<td style="width : 800px"><textarea name="tour_detail_' + row + '" id="tour_detail_' + row + '" cols="50"></textarea></td>';
+            Str = Str + '</tr>';
             rowNo++;
         }
         document.getElementById("genTable").innerHTML = Str;
         tinymce.init({selector: 'textarea'});
+        genPeriodTable();
     } else {
         alert('กรุณาระบุจำนวนวันให้ถูกต้อง')
         $('#saveBtn').prop('disabled', false);
@@ -90,6 +93,9 @@ function genTable() {
     }
     $('#saveAll').prop('disabled', false);
 }
+
+
+
 
 function createHolidayDropDown() {
     var StrDropDown = '';

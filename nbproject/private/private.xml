@@ -12,6 +12,7 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/public/css/style.css</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/login-admin.blade.php</file>
@@ -26,6 +27,26 @@
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/filter/search-tour.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/tour/tour-confirm.blade.php</file>
             <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/auth/login.blade.php</file>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Holiday.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Package_Day.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Category.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/public/js/admin/manage-tour-list.js</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Http/Controllers/AdminController.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Attraction.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/resources/views/admin/manage-tourlist.blade.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Attraction.php</file>
+            <file>file:/C:/xampp/htdocs/tourhits-github/app/Models/Tour_Tag.php</file>
+=======
+            <file>file:/D:/Workspace/tourhits-github/public/js/tour/tour-confirm.js</file>
+>>>>>>> a64bcf60493eef0f611d460fc63717e067b21f49
+=======
+            <file>file:/D:/Workspace/tourhits-github/public/js/tour/tour-confirm.js</file>
+>>>>>>> a64bcf60493eef0f611d460fc63717e067b21f49
+>>>>>>> 6318bca97a4cdba90abc7d1da4fac289f5527d9c
         </group>
     </open-files>
 </project-private>
