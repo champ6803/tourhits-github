@@ -159,7 +159,8 @@ function getTourPackage() {
             },
             success: function (data) {
                 if (data != null) {
-                    renderTourPackage(data.tourPackageList, data.tourPeriod);
+//                    renderTourPackage(data.tourPackageList, data.tourPeriod);
+                    renderTourCard(data.tourPackageList, data.tourPeriod);
                     $("#search_tour_pager").empty();
                     $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
                 } else {
@@ -242,8 +243,6 @@ function checkboxChecked() {
         });
     });
 }
-
-
 
 function renderTourPackage(tourPackageList, tourPeriod) {
     var obj = tourPackageList;
@@ -340,11 +339,74 @@ function renderTourPackage(tourPackageList, tourPeriod) {
         });
         $('#card_area').html(divs);
         $('#search_tour_pager').show();
-    }
-    else{
+    } else {
         $("#card_area").empty();
         var div = "<div class='search-empty'>ขออภัยไม่พบทัวร์ที่ค้นหา</div>";
         $('#card_area').html(div);
         $('#search_tour_pager').hide();
     }
-}                       
+}
+
+function renderTourCard(tourPackageList, tourPeriod) {
+    var obj = tourPackageList;
+    if (obj) {
+        var divs = "";
+        $("#card_area").empty();
+        $.each(obj, function (key, val) {
+            var div = '<div class="trip-item">';
+            div = div + '<div class="item-media">';
+            div = div + '<div class="image-cover">';
+            div = div + '<img src="../images/tour/' + this.tour_package_image + '" alt="">';
+            div = div + '</div>';
+            div = div + '</div>';
+            div = div + '<div class="item-body">';
+            div = div + '<div class="item-title"><h2><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_detail + '</a></h2></div>';
+            div = div + '<div class="item-list">';
+            div = div + '<ul>';
+            div = div + '<li><i class="far fa-clock"></i> ' + this.tour_period_day_number + ' วัน ' + this.tour_period_night_number + ' คืน</li>';
+            var all_as = val["tour_package_period_start"].split("-");
+            var all_ae = val["tour_package_period_end"].split("-");
+            div = div + '<li><i class="far fa-calendar"></i> ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</li>';
+            div = div + '</ul>';
+            div = div + '</div>';
+            div = div + '<div class="item-footer">';
+            div = div + '<div class="item-rate">';
+            div = div + '<div class="card-airline">';
+            div = div + '<img alt="' + this.airline_name + '" src="../images/airline/' + this.airline_picture + '" title="">';
+            div = div + '</div>';
+            div = div + '</div>';
+            div = div + '<div class="item-icon">';
+            var tour_code = val['tour_package_id'];
+            while (tour_code.length != 6)
+            {
+                tour_code = '0' + tour_code;
+            }
+            div = div + '<div class="pass">รหัสทัวร์&nbsp</div>#' + tour_code;
+            div = div + '</div>';
+            div = div + '</div>';
+            div = div + '</div>';
+            div = div + '<div class="item-price-more">';
+            div = div + '<div class="price">';
+            div = div + 'ราคา';
+            div = div + '<ins>';
+            $.each(tourPeriod, function (keyPrice, valPrice) {
+                if (valPrice['tour_package_id'] === val['tour_package_id']) {
+                    div = div + '<span class="amount">฿' + numberWithCommas(tourPeriod[keyPrice].tour_period_adult_price) + '</span>';
+                    return false;
+                }
+            });
+            div = div + '</div>';
+            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">จองทัวร์นี้</a>';
+            div = div + '</div>';
+            div = div + '</div>';
+            divs = divs + div;
+        });
+        $('#card_area').html(divs);
+        $('#search_tour_pager').show();
+    } else {
+        $("#card_area").empty();
+        var div = "<div class='search-empty'>ขออภัยไม่พบทัวร์ที่ค้นหา</div>";
+        $('#card_area').html(div);
+        $('#search_tour_pager').hide();
+    }
+}

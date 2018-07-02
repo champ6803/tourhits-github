@@ -38,7 +38,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
                 tour_code = '0' + tour_code;
             }
             
-            div = div + '<span class="tag">#' + tour_code + '</span>';
+            div = div + '<span class="tag">TH' + tour_code + '</span>';
             div = div + '</div>';
             div = div + '<span class="clear"></span>';
             div = div + '</div>';
@@ -106,7 +106,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
     } else {
         $('#' + selection).empty();
         var div = "<div class='search-empty'>ขออภัยไม่พบทัวร์ที่ค้นหา</div>";
-        selection.html(div);
+        $('#' + selection).html(div);
         $('#search_tour_pager').hide();
     }
 }

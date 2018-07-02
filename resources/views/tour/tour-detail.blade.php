@@ -226,7 +226,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <h2>{{ $tourPackage->tour_package_name }}</h2>
                     </div>
                     <div class="product-address">
-                        <span>{{ $tourPackage->tour_package_detail}}</span>
+                        <?php echo $tourPackage->tour_package_detail ?>
                     </div>
                     <div class="trips">
                         <div class="item">
@@ -770,7 +770,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <div class="product-slider">
                             @foreach($tourPackageImagesList as $tourPackageImage)
                             <div class="item">
-                                <img src="{{ asset('images/tour/'.$tourPackageImage->tour_image_name)}}" alt="">
+                                <img src="{{ asset('images/tour-images/'.$tourPackageImage->tour_image_name)}}" alt="">
                             </div>
                             @endforeach
                         </div>
@@ -778,7 +778,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             <div class="product-slider-thumb">
                                 @foreach($tourPackageImagesList as $tourPackageImage)
                                 <div class="item">
-                                    <img src="{{ asset('images/tour/'.$tourPackageImage->tour_image_name)}}" alt="">
+                                    <img src="{{ asset('images/tour-images/'.$tourPackageImage->tour_image_name)}}" alt="">
                                 </div>
                                 @endforeach
                             </div>

@@ -54,12 +54,17 @@ function createTable(){
                  for(var row = 0 ; row<data.length ;row++){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
-                    Str=Str+'<td>'+data[row].tour_category_name+'</td>';
-                    Str=Str+'<td> <img src="images/category/'+data[row].tour_category_img+'" style="height:40px;"></td>'; 
+                    Str=Str+'<td>'+data[row].category_name+'</td>';
+                    if(data[row].category_img && data[row].category_img != "-"){
+                        Str=Str+'<td> <img src="images/category/'+data[row].category_img+'" style="height:40px;"></td>'; 
+                    }else{
+                        Str=Str+'<td> - </td>'; 
+                    }
+                    
                     Str=Str+'<td>'+data[row].created_by+'</td>';
-                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCategory('+data[row].tour_category_id+',\''+data[row].tour_category_name+'\')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCategory('+data[row].category_id+',\''+data[row].category_name+'\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
-                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeTourCategory('+data[row].tour_category_id+')">\n\
+                    Str=Str+'<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeTourCategory('+data[row].category_id+')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
                     Str=Str+'</tr>';  
                     rowNo++;
@@ -87,8 +92,8 @@ function editTourCategory(id,tourCategoryName){
 }
 
 function saveTourCategory(){
-    var tour_category_name= $('#tour_category_name').val();
-    var tour_category_picture= $('#tour_category_picture').val();
+    var category_name= $('#tour_category_name').val();
+//    var tour_category_picture= $('#tour_category_picture').val();
     var checkEmpty = tour_category_name.trim();
     if(checkEmpty.length<=0){
         alert('กรุณาระบุชื่อหมวดหมู่')
@@ -98,7 +103,7 @@ function saveTourCategory(){
             type: 'post',
             url: 'saveTourCategory',
             async: false,
-            data: {'tour_category_name': tour_category_name
+            data: {'tour_category_name': category_name
                 ,'tour_category_picture': tour_category_picture},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

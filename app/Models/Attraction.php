@@ -37,6 +37,15 @@ class Attraction extends Model {
         }
     }
     
+    public function getAttractionById($id){
+        try {
+         $attraction = Attraction::where('attraction_id', $id)->first();
+         return $attraction;
+        } catch (Exception $ex) {
+               return $ex;
+        }
+    }
+    
     public function insertAttraction($attraction_name,$attraction_picture){
           try {
             $date = \Carbon\Carbon::now();

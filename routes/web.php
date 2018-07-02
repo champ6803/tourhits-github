@@ -161,9 +161,9 @@ Route::post('searchAllAttraction', 'AdminController@searchAllAttraction');
 
 Route::post('searchAllTag', 'AdminController@searchAllTag');
 
-Route::post('searchAllTag', 'AdminController@searchAllTag');
+Route::post('searchAllAirline', 'AdminController@searchAllAirline');
 
-Route::post('searchAllTag', 'AdminController@searchAllTag');
+Route::post('searchAllRoute', 'AdminController@searchAllRoute');
 
 Route::get('tour-detail2', 'TourDetailController@tour_detail2');
 

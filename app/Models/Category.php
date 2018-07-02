@@ -38,4 +38,13 @@ class Category extends Model {
             return $ex;
         }
     }
+    
+    public function getCategoryByName($input_tour_category_name) {
+        try {
+            $categoryList = Category::where('category_name', $input_tour_category_name)->get();
+            return $categoryList;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
 }

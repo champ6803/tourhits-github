@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <style>
-        fieldset 
+            fieldset 
             {
-		border: 1px solid #ddd !important;
-		margin: 0;
-		xmin-width: 0;
-		padding: 10px;       
-		position: relative;
-		border-radius:4px;
-		background-color:#f5f5f5;
-		padding-left:10px!important;
+                border: 1px solid #ddd !important;
+                margin: 0;
+                xmin-width: 0;
+                padding: 10px;       
+                position: relative;
+                border-radius:4px;
+                background-color:#f5f5f5;
+                padding-left:10px!important;
             }	
         </style>
         <meta charset="utf-8">
@@ -21,8 +21,8 @@
         <meta name="author" content="">
         <!--CSRF Token-->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-<!--        
-        <link rel="icon" href="../images/favicon.ico">-->
+        <!--        
+                <link rel="icon" href="../images/favicon.ico">-->
 
         <title>@yield('page_title')</title>
 
@@ -46,8 +46,10 @@
 
         <!-- bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
-        
+
         <link rel="stylesheet" href="{{ asset('css/lib/bootstrap-table.css')}}">
+        
+        <link rel="stylesheet" href="../assets/select2/dist/css/select2.css" >
 
         <!-- theme style -->
         <link rel="stylesheet" href="css/master_style.css">
@@ -93,18 +95,18 @@
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
 
-                           <!-- <li class="search-box">
-                                <a class="nav-link hidden-sm-down" href="javascript:void(0)"><i class="mdi mdi-magnify"></i></a>
-                                <form class="app-search" style="display: none;">
-                                    <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
-                                </form>
-                            </li>			
+                            <!-- <li class="search-box">
+                                 <a class="nav-link hidden-sm-down" href="javascript:void(0)"><i class="mdi mdi-magnify"></i></a>
+                                 <form class="app-search" style="display: none;">
+                                     <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                                 </form>
+                             </li>			
                             -->
                             <!-- Messages -->
                             <li class="dropdown messages-menu">
-                               <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="mdi mdi-email"></i>
-                                </a>-->
+                                <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                     <i class="mdi mdi-email"></i>
+                                 </a>-->
                                 <ul class="dropdown-menu scale-up">
                                     <li class="header">You have 5 messages</li>
                                     <li>
@@ -416,7 +418,7 @@
                     <!-- sidebar menu -->
                     <ul class="sidebar-menu" data-widget="tree">
                         <li class="nav-devider"></li>
-                        <li class="header nav-small-cap">PERSONAL</li>
+                        <li class="header nav-small-cap">MENU</li>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-clipboard"></i> <span>Dashboard</span>
@@ -561,8 +563,8 @@
                     </ul>
                 </div>
                 &copy; 2018 <a href="https://www.multipurposethemes.com/">Tourhits</a>. All Rights Reserved.
-             -->
-</footer>
+                -->
+            </footer>
             <!-- Control Sidebar -->
             <aside class="control-sidebar control-sidebar-dark">
                 <!-- Create the tabs -->
@@ -789,10 +791,12 @@
 
         <!-- peity -->
         <script src="../assets/vendor_components/jquery.peity/jquery.peity.js"></script>
-        
+
         <script src="{{ asset('js/lib/bootstrap-table.js')}}"></script>
-        
+
         <script src="{{ asset('js/lib/bootstrap-table-editable.js')}}"></script>
+
+        <script type="text/javascript" src="../assets/select2/dist/js/select2.min.js"></script>
 
         <!-- Lion_admin App -->
         <script src="js/template.js"></script>
@@ -802,7 +806,7 @@
 
         <!-- Lion_admin for demo purposes -->
         <script src="js/demo.js"></script>
-        
+
         @yield('footer_scripts')
     </body>
 </html>

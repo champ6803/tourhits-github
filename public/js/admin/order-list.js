@@ -59,7 +59,7 @@ function actionButton(value, row, index) {
     if (row.order_status_detail == 'รอชำระเงิน')
         return ['<button class="btn btn-primary" onclick="order_view(' + row.order_id + ')">Detail</button> &nbsp; <button onclick="order_action(' + row.order_id + ', \'CL\')" class="btn btn-success">Confirm</button> &nbsp; <button onclick="order_action(' + row.order_id + ',\'CA\')" class="btn btn-danger">Cancel</button>'];
     else
-        return ['<button class="btn btn-primary" onclick="order_view(' + row.order_id + ')">Detail</button>'];
+        return ['<button class="btn btn-primary" onclick="order_view(' + row.order_id + ')">Detail</button> &nbsp; <button disabled onclick="order_action(' + row.order_id + ', \'CL\')" class="btn btn-success">Confirm</button> &nbsp; <button disabled onclick="order_action(' + row.order_id + ',\'CA\')" class="btn btn-danger">Cancel</button>'];
 }
 
 function order_action(order_id, status) {

@@ -12,7 +12,21 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Holiday.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/TourController.php</file>
+            <file>file:/D:/Workspace/tourhits-github/public/js/tour/tour-detail.js</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Package.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/FilterController.php</file>
             <file>file:/D:/Workspace/tourhits-github/public/js/tour/tour-confirm.js</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Airline.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Airline.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/AdminController.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Route.php</file>
+            <file>file:/D:/Workspace/tourhits-github/public/js/filter/search-tour.js</file>
+            <file>file:/D:/Workspace/tourhits-github/resources/views/admin/manage-tourlist.blade.php</file>
+            <file>file:/D:/Workspace/tourhits-github/resources/views/home/index.blade.php</file>
+            <file>file:/D:/Workspace/tourhits-github/resources/views/layout/main.blade.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Image.php</file>
         </group>
     </open-files>
 </project-private>

@@ -23,33 +23,38 @@ class Tour_Package extends Model {
     protected $table = 'tour_package';
 
     public function insertTourPackage($tour_package_code, $tour_country, $tour_category, $tour_name
-    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $dateStart, $dateEnd) {
+    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd) {
         try {
-            $id = DB::table('tour_package')->max('tour_package_id');
+            $id_max = DB::table('tour_package')->max('tour_package_id');
             $date = \Carbon\Carbon::now();
-            Tour_Package::insert(
-                    ['tour_package_code' => $tour_package_code
-                        , 'tour_category_id' => $tour_category
-                        , 'tour_country_id' => $tour_country
-                        , 'tour_package_name' => $tour_name
-                        , 'tour_package_detail' => $tour_detail
-                        , 'tour_package_highlight' => $highlight_tour
-                        , 'tour_package_image' => $tourlist_picture
-                        , 'tour_period_day_number' => $day
-                        , 'tour_period_night_number' => $night
-                        , 'tour_package_period_start' => $dateStart
-                        , 'tour_package_period_end' => $dateEnd
-                        , 'created_by' => 'admin'
-                        , 'created_at' => $date
-                        , 'updated_by' => 'admin'
-                        , 'updated_at' => $date]
+            $id = Tour_Package::insertGetId(
+                            ['tour_package_code' => $tour_package_code
+                                , 'tour_category_id' => $tour_category
+                                , 'tour_country_id' => $tour_country
+                                , 'tour_package_name' => $tour_name
+                                , 'tour_package_detail' => $tour_detail
+                                , 'tour_package_highlight' => $highlight_tour
+                                , 'tour_package_image' => ($id_max + 1) . '-' .$tourlist_picture
+                                , 'tour_period_day_number' => $day
+                                , 'tour_period_night_number' => $night
+                                , 'tour_package_period_start' => $dateStart
+                                , 'tour_package_period_end' => $dateEnd
+                                , 'tour_package_pdf' => $tour_package_code . '-' .$pdf
+                                , 'created_by' => 'admin'
+                                , 'created_at' => $date
+                                , 'updated_by' => 'admin'
+                                , 'updated_at' => $date]
             );
 
             if (Input::hasFile('file')) {
                 $file = Input::file('file');
-                $file->move('images/tourlist', $file->getClientOriginalName());
+                $file->move('images/tour', ($id_max + 1) . "-" . $file->getClientOriginalName());
             }
-            return $id + 1;
+            if (Input::hasFile('pdf_file')) {
+                $file_pdf = Input::file('pdf_file');
+                $file_pdf->move('images/pdf', ($id_max + 1) . "-" . $file_pdf->getClientOriginalName());
+            }
+            return $id;
         } catch (Exception $ex) {
             return $ex;
         }
@@ -198,7 +203,7 @@ class Tour_Package extends Model {
                     ->skip($number)->take(4)
                     //->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_picture'))
                     ->get();
-            
+
             return $tourPackageList;
         } catch (\Exception $ex) {
             return $ex;
