@@ -17,6 +17,15 @@
                     <h3 class="box-title">Tour Package</h3>
                     <h6 class="box-subtitle">Add New Package</h6>
                 </div>
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <!-- /.box-header -->
                 <!-- Nav tabs -->
                 <div class="vtabs customvtab">
@@ -35,7 +44,7 @@
                                     <div class="form-horizontal form-element">
                                         <div class="box-body">
                                             <div class="row">
-                                                <div class="col-6">
+<!--                                                <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="inputEmail3" class="col-sm-2 control-label">Category</label>
 
@@ -43,7 +52,7 @@
                                                             <div id="selectTourCategory"></div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div>-->
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="inputEmail3" class="col-sm-2 control-label">Country</label>
@@ -66,7 +75,7 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group row">
-                                                        <label for="tour_name" class="col-sm-2 control-label">Image</label>
+                                                        <label for="file" class="col-sm-2 control-label">Image</label>
 
                                                         <div class="col-sm-10">
                                                             <input class="form-control" type="file" id="file" name="file"> 
@@ -82,16 +91,6 @@
 
                                                         <div class="col-sm-11">
                                                             <textarea type="text" class="form-control tour-main" id="tour_detail" name="tour_detail"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-group row">
-                                                        <label for="highlight_tour" class="col-sm-1 control-label">Highlight</label>
-                                                        <div class="col-sm-11">
-                                                            <textarea type="text" class="form-control tour-main" id="highlight_tour" name="highlight_tour"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -139,6 +138,26 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group row">
+                                                        <label for="main_price" class="col-sm-2 control-label">Price</label>
+
+                                                        <div class="col-sm-10">
+                                                            <input type="number" class="form-control" id="main_price" name="main_price">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group row">
+                                                        <label for="main_special_price" class="col-sm-2 control-label">Special Price</label>
+
+                                                        <div class="col-sm-10">
+                                                            <input type="number" class="form-control" id="main_special_price" name="main_special_price">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group row">
                                                         <label for="tour_package_code" class="col-sm-2 control-label">Tour Code</label>
 
                                                         <div class="col-sm-10">
@@ -148,7 +167,7 @@
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group row">
-                                                        <label for="tour_name" class="col-sm-2 control-label">PDF File</label>
+                                                        <label for="pdf_file" class="col-sm-2 control-label">PDF File</label>
 
                                                         <div class="col-sm-10">
                                                             <input class="form-control" type="file" id="pdf_file" name="pdf_file"> 
@@ -192,7 +211,6 @@
                                                         <div class="form-group row">
                                                             <label for="tour_detail_0" class="col-sm-2 control-label">Attractions 1</label>
 
-<<<<<<< HEAD
                                                             <div class="col-sm-10">
                                                                 <input hidden id="day_name0" name="day_name[]" value="">
                                                                 <select id="attraction_select0" class="form-control js-example-basic-multiple attraction_select" name="attraction_select0[]" multiple="multiple"></select>
@@ -201,66 +219,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-=======
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    </div>
-                </div>
-                <div class="box-body">
-                    <div class="row" style="padding: 7px;" id="divTable">
-                        <div class="col-lg-1"></div>
-                        <table id="dayTable" style="width:85%;">
-                            <thead >
-                                <tr style="background-color:#FF9966; border-radius: 12px;">
-                                    <th style="color: white; font-size: 20px">วันที่</th>
-                                    <th style="color: white; font-size: 20px">package</th>
-                                    <th style="color: white; font-size: 20px">รายละเอียด</th>
-                                </tr>
-                            </thead>
-                            <tbody id="genTable">
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- /.box-body -->
-            </div>
-            
-            <div class="box">
-                <div class="box-header with-border">
-                    <h3 class="box-title">เพิ่มช่วงระยะเวลา</h3>
-
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    </div>
-                </div>
-                <div class="box-body">
-                    <div class="row" style="padding: 7px;" id="divPeriodTable">
-                        <div class="col-lg-1"></div>
-
-                    </div>
-                </div>
-                <!-- /.box-body -->
-            </div>
-            
-             <div class="box">
-                <div class="box-header with-border">
-                    <h3 class="box-title">เพิ่มรูปภาพ</h3>
-
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    </div>
-                </div>
-                <div class="box-body">
-                    <div class="row" style="padding: 7px;" id="divPeriodTable">
-                        <div class="col-lg-1"></div>
-
-                    </div>
-                </div>
-                <!-- /.box-body -->
-            </div>
->>>>>>> a56fad8ea6453b60b17238ad03f58d6a61aa477b
-
-
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -300,10 +258,10 @@
                                             <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group row">
-                                                        <label for="tour_name" class="col-sm-2 control-label">Adult Price</label>
+                                                        <label for="adult_price" class="col-sm-2 control-label">Adult Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="adult_price" name="tour_name">
+                                                            <input type="number" class="form-control" id="adult_price" name="adult_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -318,14 +276,14 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-6">
+<!--                                                <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="alone_price" class="col-sm-2 control-label">Extra Alone Price</label>
                                                         <div class="col-sm-10">
                                                             <input type="number" class="form-control" id="alone_price" name="alone_price">
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div>-->
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="alone_price" class="col-sm-2 control-label">Special Price</label>
@@ -339,7 +297,7 @@
                                                 <div class="col-12">
                                                     <button id="btn_period_add" type="button" class="btn btn-info"> 
                                                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
-                                                        <button id="btn_period_delete" type="button" class="btn btn-info"> 
+                                                    <button id="btn_period_delete" type="button" class="btn btn-info"> 
                                                         <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</button>
                                                 </div>
                                             </div>
@@ -365,9 +323,6 @@
                                                                     Child Price
                                                                 </th>
                                                                 <th align='center'>
-                                                                    Extra Alone Price
-                                                                </th>
-                                                                <th align='center'>
                                                                     Special Price
                                                                 </th>
                                                             </tr>
@@ -384,10 +339,10 @@
                                             </div>
                                         </div>
                                         <!-- /.box-body -->
-<!--                                        <div class="box-footer">
-                                            <button id="btn_period_save" type="button" class="btn btn-info"> 
-                                                <span class="glyphicon glyphicon-plus"></span>&nbsp;Next</button>                                        
-                                        </div>-->
+                                        <!--                                        <div class="box-footer">
+                                                                                    <button id="btn_period_save" type="button" class="btn btn-info"> 
+                                                                                        <span class="glyphicon glyphicon-plus"></span>&nbsp;Next</button>                                        
+                                                                                </div>-->
                                         <!-- /.box-footer -->
                                     </div>
                                 </div>
@@ -604,10 +559,11 @@
                                             </div>
                                         </div>
                                         <!-- /.box-body -->
-                                        <!--                                        <div class="box-footer">
-                                                                                    <button id="btn_period_save" type="button" class="btn btn-info"> 
-                                                                                        Next <span class="glyphicon glyphicon-arrow-right"></span></button>                                        
-                                                                                </div>-->
+                                        <div class="row" style="padding: 7px;" >
+                                            <div class="col-lg-10"></div>
+                                            <button type="submit" class="btn btn-info" id="saveAll"> 
+                                                <span class="glyphicon glyphicon-plus"></span>&nbsp;Save</button>
+                                        </div>
                                         <!-- /.box-footer -->
                                     </div>
                                 </div>
@@ -702,11 +658,7 @@
                             </div>
                              /.box-body 
                         </div>-->
-            <div class="row" style="padding: 7px;" >
-                <div class="col-lg-10"></div>
-                <button type="submit" class="btn btn-info" id="saveAll"> 
-                    <span class="glyphicon glyphicon-plus"></span>&nbsp;Save</button>
-            </div>
+
         </form>
     </section>
 </div>

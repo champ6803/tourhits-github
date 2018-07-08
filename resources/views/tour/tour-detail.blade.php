@@ -809,6 +809,16 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 <h4>วันที่<span class="days"></span>{{$tourPackageDay->tour_package_day_name}}</h4>
                                 <div>
                                     <?php echo $tourPackageDay->tour_package_day_description ?>
+                                    <br>
+                                    @foreach ($tourAttractionDayList as $tourAttractionDay)
+                                    @if($tourAttractionDay->tour_package_day_id == $tourPackageDay->tour_package_day_id)
+                                    <p style="font-size:24px;"><i class="fa fa-image"></i>&nbsp;{{$tourAttractionDay->attraction_name}}</p>
+                                        <img src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
+                                    <br>
+                                    <br>
+                                    @endif
+                                    @endforeach
+
                                 </div>
                                 @endforeach
                             </div>
@@ -1255,9 +1265,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         <span class="d-inline d-sm-none">ราคา</span>
                                         <span class="d-none d-sm-inline">ผู้ใหญ่พักคู่<br> ท่านละ</span>
                                     </th>
-                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กเพิ่มเตียง<br> ท่านละ</th>
-                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
-                                    <th class="align-middle d-none d-sm-table-cell py-4">พักเดี่ยว<br> ท่านละ</th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเพิ่มเตียง<br> ท่านละ</th>
                                     <th class="align-middle d-none d-sm-table-cell py-4"></th>
                                 </tr>
                             </thead>
@@ -1275,12 +1283,6 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     </td>
                                     <td class="align-middle days-from text-sm-center">
                                         ฿{{number_format($tourPackageObj->tour_period_child_price)}}
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        ฿{{number_format($tourPackageObj->tour_period_child_nb_price)}}
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        ฿{{number_format($tourPackageObj->tour_period_alone_price)}}
                                     </td>
                                     <td class="align-middle days-from text-sm-center">
                                         @if($tourPackageObj->tour_period_status == 'Y')
@@ -1383,7 +1385,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </div>
                                 <!--<span>อายุ 11 หรือต่ำกว่า</span>-->
                             </div>
-                            <div class="form-elements form-adult">
+<!--                            <div class="form-elements form-adult">
                                 <label>ผู้ใหญ่ (พักเดี่ยว)</label>
                                 <div class="form-item">
                                     <select id="alone_price" class="awe-select" disabled="">
@@ -1400,7 +1402,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         <option val="10">10</option>
                                     </select>
                                 </div>
-                                <!--<span>อายุ 12 ปีขึ้นไป</span>-->
+                                <span>อายุ 12 ปีขึ้นไป</span>
                             </div>
                             <div class="form-elements form-kids">
                                 <label>เด็ก (ไม่เพิ่มเตียง)</label>
@@ -1419,8 +1421,8 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         <option val="10">10</option>
                                     </select>
                                 </div>
-                                <!--<span>อายุ 11 หรือต่ำกว่า</span>-->
-                            </div>
+                                <span>อายุ 11 หรือต่ำกว่า</span>
+                            </div>-->
                         </div>
                         <div class="price">
                             <em>ประเมินราคา</em>

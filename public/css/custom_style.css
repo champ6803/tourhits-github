@@ -4109,7 +4109,7 @@ Custom BS3
 .tour-cover{
     height: 190px;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     border-radius: 5px 5px 0 0;
 }
 
