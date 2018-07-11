@@ -3,8 +3,8 @@ $(function () {
     renderTourPackageMobile(tourHitsPackageActiveList, tourHitPeriodActive, 'card_tourhits_mobile');
     renderTourPackage(tourHitsPackageList, tourHitPeriod, "card_area2");
     
-    renderTourPackage(tourSalesPackageActiveList,tourSalesPeriodActive, "card_sales" );
-    renderTourPackageMobile(tourSalesPackageActiveList, tourSalesPeriodActive, 'card_sales_mobile');
+    //renderTourPackage(tourSalesPackageActiveList,tourSalesPeriodActive, "card_sales" );
+    //renderTourPackageMobile(tourSalesPackageActiveList, tourSalesPeriodActive, 'card_sales_mobile');
 });
 
 function renderTourPackage(tourPackageList, tourPeriod, selection) {
@@ -14,7 +14,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
         $('#' + selection).empty();
         $.each(obj, function (key, val) {
             var div = '<div class="col-sm-6 col-md-6 col-lg-3" align="center">';
-            div = div + '<div class="thumbnail">';
+            div = div + '<div class="thumbnail card--content">';
             div = div + '<a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">';
             div = div + '<div class="tour-cover lazyloaded" data-bg="../images/tour/' + val['tour_package_image'] + '" style="background-image: url(&quot;../images/tour/' + val['tour_package_image'] + '&quot;);">';
             div = div + '<div class="tour-footer">';
@@ -62,10 +62,6 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
                 }
             });
             div = div + '<hr>';
-            div = div + '<div class="button-card">';
-            div = div + '<a href="' + 'pdf' + '" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>';
-            div = div + '<a href="tour-detail?package=' + val['tour_package_detail_id'] + '" class="btn btn-detail">ดูรายละเอียด</a>';
-            div = div + '</div>';
             div = div + '</div>';
             div = div + '<div id="tab' + val['tour_package_id'] + '2" class="tab-pane">';
             div = div + '<div class="card-highlight">' + val['tour_package_highlight'] + '</div>';
@@ -92,7 +88,6 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             div = div + '</div>';
             div = div + '<ul class="nav nav-tabs">';
             div = div + '<li class="active"><a href="#tab' + val['tour_package_id'] + '1" data-toggle="tab" class="active">แพ็คเกจ</a></li>';
-            div = div + '<li><a href="#tab' + val['tour_package_id'] + '2" data-toggle="tab">ข้อมูล</a></li>';
             div = div + '<li><a href="#tab' + val['tour_package_id'] + '3" data-toggle="tab">ช่วงเวลา</a></li>';
             div = div + '</ul>';
             div = div + '</div>';

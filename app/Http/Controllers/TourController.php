@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use App\Models\Tour_Package;
 use App\Models\Tour_Package_Day;
 use App\Models\Orders;
+use App\Models\Tour_Attraction_Day;
 
 /* * x
  * Description of TourController
@@ -26,6 +27,13 @@ class TourController extends Controller {
         $tourPackage = $tourModel->getTourDetail($tour_package_id);
         $tourPackageList = $tourModel->getTourDetailList($tour_package_id);
         $tourPackageDayList = $tourDayModel->getTourPackageDay($tour_package_id);
+        $array = array();
+        foreach ($tourPackageDayList as $tour) {
+            array_push($array, $tour->tour_package_day_id);
+        }
+        $tourAttractionDayList = Tour_Attraction_Day::whereIn('tour_package_day_id', $array)
+                ->join('attraction', 'attraction.attraction_id', '=', 'tour_attraction_day.attraction_id')
+                ->get();
         $tourPackageImagesList = $tourModel->getTourImages($tour_package_id);
         foreach ($tourPackageList as $tourPackageObj) {
             $newStartDate = date("d-m-Y", strtotime($tourPackageObj->tour_period_start));
@@ -34,7 +42,7 @@ class TourController extends Controller {
             $tourPackageObj->tour_period_end = $newEndDate;
         }
         $page_title = $tourPackage->tour_package_name;
-        return view('tour.tour-detail', compact('tourPackage', 'tourPackageList', 'tourPackageImagesList', 'tourPackageDayList', 'page_title'));
+        return view('tour.tour-detail', compact('tourPackage', 'tourPackageList', 'tourPackageImagesList', 'tourPackageDayList', 'page_title', 'tourAttractionDayList'));
     }
 
     public function tour_confirm($tour_package_id, $tour_period_id) {

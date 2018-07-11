@@ -23,7 +23,7 @@ class Tour_Package extends Model {
     protected $table = 'tour_package';
 
     public function insertTourPackage($tour_package_code, $tour_country, $tour_category, $tour_name
-    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd) {
+    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price) {
         try {
             $id_max = DB::table('tour_package')->max('tour_package_id');
             $date = \Carbon\Carbon::now();
@@ -37,6 +37,8 @@ class Tour_Package extends Model {
                                 , 'tour_package_image' => ($id_max + 1) . '-' .$tourlist_picture
                                 , 'tour_period_day_number' => $day
                                 , 'tour_period_night_number' => $night
+                                , 'tour_package_price' => $price
+                                , 'tour_package_special_price' => $special_price
                                 , 'tour_package_period_start' => $dateStart
                                 , 'tour_package_period_end' => $dateEnd
                                 , 'tour_package_pdf' => $tour_package_code . '-' .$pdf
