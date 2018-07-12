@@ -178,6 +178,14 @@
 
             <div class="filter-page__content">
                 <div id="card_area" class="filter-item-wrapper">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="country">
+                                <img style="float: left; margin-right: 10px;" data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png" alt="ทัวร์เกาหลี" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png">
+                                <h6>ทัวร์ญี่ปุ่น ทั้งหมด 132 แพ็คเกจ</h6>
+                            </div>
+                        </div>            
+                    </div>
                     <!-- ITEM -->
                     <div class="trip-item">
                         <div class="item-media">

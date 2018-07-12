@@ -5075,4 +5075,74 @@ Custom BS3
     
     .filter-page__content .filter-item-wrapper .country{
         padding-bottom: 25px;
+        
     }
+    
+    .filter-page__content .filter-item-wrapper .country img{
+        width: 50px;
+    }
+    
+    .filter-page__content .filter-item-wrapper .country h6{
+        display: inline;
+        font-size: 21px;
+    }
+    
+    .product-tabs__content p{
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+        font-size: 16px;
+    }
+    
+    .call-to-book .btn-call-book {
+        width: 100%;
+        border-radius: 50px;
+        background-color: #fff;
+        border: 1px solid #2A3F54;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    .call-to-book .btn-call-book:hover {
+        background-color: #2A3F54;          
+    }
+    
+    .call-to-book .btn-call-book:hover .awe-icon{
+        border: solid #fff;
+        color: #fff;
+    }
+    
+    .call-to-book .btn-call-book:hover em{
+        color: #fff;
+    }
+    
+    .call-to-book .btn-call-book:hover span{
+        color: #fff;
+    }
+    
+    
+    .call-to-book2 .btn-call-book {
+        width: 80%;
+        border-radius: 50px;
+        background-color: #fff;
+        border: 1px solid #00c500;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    .call-to-book2 .btn-call-book:hover{
+        background-color: #00c500;
+    }
+    
+    .call-to-book2 .btn-call-book:hover .fa-line{
+        color: #fff;
+    }
+       
+    .call-to-book2 .btn-call-book:hover span{
+        color: #fff;
+    }
+    
+    .call-and-line{
+        margin-top: -27px;
+    }
+    

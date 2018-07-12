@@ -606,7 +606,7 @@ span.dropcap {
 {
     .accordion .ui-accordion-header
     {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.5;
     }  
 }
@@ -7616,20 +7616,21 @@ body.single-post .blog-page__content > .post .post-content {
     width: 40px;
     height: 40px;
     line-height: 37px;
-    border: 2px solid #666;
+    border: 2px solid #2A3F54;
     text-align: center;
     font-size: 25px;
-    color: #666;
+    color: #2A3F54;
     border-radius: 50%;
     float: left;
     margin-right: 12px;
     margin-top: 2px;
+    
 }
 .call-to-book em {
     display: block;
     font-size: 13px;
     font-style: normal;
-    color: #ec2424;
+    color: #2A3F54;
     line-height: 1.2em;
     font-weight: 600;
 }
@@ -7637,7 +7638,7 @@ body.single-post .blog-page__content > .post .post-content {
     display: block;
     font-weight: 600;
     font-size: 20px;
-    color: #666;
+    color: #2A3F54;
     line-height: 1.4em;
 }
 
@@ -7646,29 +7647,29 @@ body.single-post .blog-page__content > .post .post-content {
 .call-to-book2 .fab {
     width: 40px;
     height: 40px;
-    line-height: 37px;
-    border: 2px solid #666;
+    line-height: 41px;
+/*    border: 2px solid #00c500;*/
     text-align: center;
-    font-size: 26px;
-    color: #82C91E;
+    font-size: 34px;
+    color: #00c500;
     border-radius: 50%;
     float: left;
-    margin-right: 12px;
-    margin-top: 2px;
+/*    margin-right: 12px;
+    margin-top: 2px;*/
 }
 .call-to-book2 em {
     display: block;
     font-size: 13px;
     font-style: normal;
-    color: #ec2424;
+    color: #00c500;
     line-height: 1.2em;
     font-weight: 600;
 }
 .call-to-book2 span {
     display: block;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 25px;
-    color: #666;
+    color: #00c500;
     line-height: 1.4em;
 }
 
