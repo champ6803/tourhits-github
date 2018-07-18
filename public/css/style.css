@@ -9328,6 +9328,7 @@ select {
         margin-right: 15px;
         margin-bottom: 30px;
         box-shadow: none !important;
+        height: 500px;
     }
 
     .flight-item .item-price-more,
@@ -9904,6 +9905,7 @@ select {
         padding-right: 0 !important;
         padding-bottom: 20px !important;
     }
+    
 }
 @media screen and (max-width: 480px) {
     .blog-heading-content h2 {
@@ -10099,6 +10101,7 @@ select {
     .destination-list__content .destinations-item .item-body .item-footer ul li {
         margin-bottom: 10px;
     }
+
 }
 /* 15.   Revolution slider
 --------------------------------------------------------------------------------*/
