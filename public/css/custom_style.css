@@ -5176,3 +5176,161 @@ Custom BS3
         margin-top: -27px;
     }
     
+    .modal-body .trip-item{
+        margin-bottom: -15px;
+    }
+    
+    .modal-body .trip-item:hover{
+        opacity:1.0;
+        box-shadow:none; 
+    }
+    
+    .modal-body .trip-item .item-body{
+        padding: 0px 5px 5px 10px;
+    }
+    
+    .modal-body .trip-item .item-price-more{
+        margin: 0px 0px;
+        
+    }
+    
+    .modal-body .trip-item .item-body .item-title h2{
+        line-height: 1.2;
+        white-space: normal;
+        font-size: 18px;
+    }
+    
+    .modal-body .trip-item .item-body .hilight i{
+        padding-right: 8px;
+        color: #262626;
+        float: left;
+    }
+    
+    .modal-body .trip-item .item-body .hilight {
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+        color: #8d8d8d;
+        padding-top: 8px;
+        max-height: 100px;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        
+    }   
+    
+    .modal-body .trip-item .item-body .hilight .detail{
+         display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;     
+    }
+    
+    .modal-body .trip-item .item-body .item-list li {
+        color: #666;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .modal-body .trip-item .item-price-more .price .amount{
+        color: #666;
+    }
+    
+    @media screen and (min-width: 1199px) {
+        .call-and-line .modal-dialog{
+            margin: 200px auto;
+        }              
+    }    
+    
+    .call-and-line .modal-header{
+        background-color: #2A3F54;
+    } 
+    
+    .call-and-line .header-line{
+        background-color: #00c500;
+    } 
+    
+    .call-and-line .modal-header .close{
+        color: #fff;
+        margin-top: 0px;
+        font-size: 23px;
+        text-shadow: none;
+    } 
+    
+    .call-and-line .modal-header .modal-title{
+        font-size: 28px;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .call-and-line .modal-body .title{
+        color: #666;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .call-and-line .modal-body .tag{
+        font-size: 35px;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .call-and-line .modal-body .program{
+        white-space: nowrap;
+        font-weight: bold;
+        color: #666;
+        overflow: hidden;
+        font-size: 21px;
+        text-align:left;
+    }
+    
+    .call-and-line .modal-footer .call{
+        font-size: 19px;
+        color: #fff;
+       
+        width: 39%;
+        border-radius: 50px;
+        background-color: #2A3F54;
+        border: 1px solid #2A3F54;
+        opacity: 0.8;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    .call-and-line .modal-footer .call:hover{
+        opacity: 1;
+    }
+    
+    .call-and-line .modal-footer .cancel{
+        font-size: 19px;
+        color: #fff;
+        
+        width: 25%;
+        border-radius: 50px;
+        background-color: #b1b1b1;
+        border: 1px solid #b1b1b1;
+        opacity: 0.8;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+        
+    }
+    
+    .call-and-line .modal-footer .cancel:hover{
+        opacity: 1;
+    }
+    
+    .call-and-line .modal-footer .line{
+        font-size: 19px;
+        color: #fff;
+        width: 39%;
+        border-radius: 50px;
+        background-color: #00c500;
+        border: 1px solid #00c500;
+        opacity: 0.8;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    .call-and-line .modal-footer .line:hover{
+        opacity: 1;
+    }
+    

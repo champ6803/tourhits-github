@@ -1439,14 +1439,56 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <!-- Modal content-->
                         <div class="modal-content">
                           <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
+                            <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
+                            <div class="modal-title">จองผ่านโทรศัพท์</div>
                           </div>
                           <div class="modal-body">
-                            <p>Some text in the modal.</p>
+                            <div class="title">กรุณาแจ้งรหัสทัวร์นี้กับพนักงานของเรา</div>
+                            <div class="title">ถ้าต้องการจะจองทัวร์นี้</div>
+                            <div class="tag">TH000001</div>
+                            <div class="program">ชื่อโปรแกรมทัวร์</div>
+                            <div class="trip-item">
+                                <div class="item-media">
+                                    <div class="image-cover">
+                                        <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
+                                    </div>
+                                    <!--                                        <div class="trip-icon">
+                                                                                <img src="images/trip.jpg" alt="">
+                                                                            </div>-->
+                                </div>
+                                <div class="item-body">
+                                    <div class="hilight">
+                                        <i class="far fa-flag"></i>
+                                        <div class="detail">
+                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <ul>
+                                            <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
+                                            <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
+                                        </ul>
+                                    </div>                                  
+                                </div>
+                                <div class="item-price-more">
+                                    <div class="price">
+                                        ราคา
+                                        <ins>
+                                            <span class="amount">฿12,000</span>
+                                        </ins>
+                                        <!--<del>
+                                                <span class="amount">$200</span>
+                                        </del>-->
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
                           </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <div class="modal-footer" style="text-align:center;">
+                              <button type="button" class="awe-btn cancel" data-dismiss="modal">ยกเลิก</button>
+                              <a href="tel:02-379-1249" class="awe-btn call"><i class="awe-icon awe-icon-phone"></i> โทรหาเรา</a> 
                           </div>
                         </div>
                       </div>
@@ -1465,15 +1507,56 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                           
                         <!-- Modal content-->
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
+                          <div class="modal-header header-line">
+                            <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
+                            <div class="modal-title">จองผ่านทางไลน์</div>
                           </div>
                           <div class="modal-body">
-                            <p>Some text in the modal2.</p>
+                           <div class="title">กรุณาแจ้งรหัสทัวร์นี้กับพนักงานของเรา</div>
+                           <div class="title">ถ้าต้องการจะจองทัวร์นี้</div>
+                            <div class="tag">TH000001</div>
+                            <div class="program">ชื่อโปรแกรมทัวร์</div>
+                            <div class="trip-item">
+                                <div class="item-media">
+                                    <div class="image-cover">
+                                        <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
+                                    </div>
+                                    <!--                                        <div class="trip-icon">
+                                                                                <img src="images/trip.jpg" alt="">
+                                                                            </div>-->
+                                </div>
+                                <div class="item-body">
+                                    <div class="hilight">
+                                        <i class="far fa-flag"></i>
+                                        <div class="detail">
+                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <ul>
+                                            <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
+                                            <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
+                                        </ul>
+                                    </div>                                  
+                                </div>
+                                <div class="item-price-more">
+                                    <div class="price">
+                                        ราคา
+                                        <ins>
+                                            <span class="amount">฿12,000</span>
+                                        </ins>
+                                        <!--<del>
+                                                <span class="amount">$200</span>
+                                        </del>-->
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
                           </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <div class="modal-footer" style="text-align:center;">
+                            <button type="button" class="awe-btn cancel" data-dismiss="modal">ยกเลิก</button>
+                            <a target="_blank" rel="noopener noreferrer" href="http://line.me/ti/p/%40tourhits" class="awe-btn line"><i class="fab fa-line"></i> คุยไลน์</a>
                           </div>
                         </div>
                       </div>
