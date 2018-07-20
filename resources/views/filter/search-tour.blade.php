@@ -178,6 +178,14 @@
 
             <div class="filter-page__content">
                 <div id="card_area" class="filter-item-wrapper">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="country">
+                                <img style="float: left; margin-right: 10px;" data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png" alt="ทัวร์เกาหลี" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png">
+                                <h6>ทัวร์ญี่ปุ่น ทั้งหมด 132 แพ็คเกจ</h6>
+                            </div>
+                        </div>            
+                    </div>
                     <!-- ITEM -->
                     <div class="trip-item">
                         <div class="item-media">
@@ -191,8 +199,14 @@
                         <div class="item-body">
                             <div class="item-title">
                                 <h2>
-                                    <a href="#">ทัวร์ฮ่องกง เกาะลันเตา วัดโป่วหลิน วัดแชกงหมิว นั่งรถรางพีคแทรม ยอดเขาวิคตรอเรีย พีค สวนสนุกดิสนีย์แลนด์เต็มวัน</a>
+                                    <a href="#">ชื่อโปรแกรมทัวร์</a>
                                 </h2>
+                            </div>
+                            <div class="hilight">
+                                <i class="far fa-flag"></i>
+                                <div class="detail">
+                                    ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                </div>
                             </div>
                             <div class="item-list">
                                 <ul>
@@ -230,7 +244,7 @@
                     <div class="trip-item">
                         <div class="item-media">
                             <div class="image-cover">
-                                <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
+                                <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
                             </div>
                             <!--                                        <div class="trip-icon">
                                                                         <img src="images/trip.jpg" alt="">
@@ -239,23 +253,29 @@
                         <div class="item-body">
                             <div class="item-title">
                                 <h2>
-                                    <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
+                                    <a href="#">ชื่อโปรแกรมทัวร์</a>
                                 </h2>
+                            </div>
+                            <div class="hilight">
+                                <i class="far fa-flag"></i>
+                                <div class="detail">
+                                    ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                </div>
                             </div>
                             <div class="item-list">
                                 <ul>
-                                    <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                    <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
                                     <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
                                 </ul>
                             </div>
                             <div class="item-footer">
                                 <div class="item-rate">
                                     <div class="card-airline">
-                                        <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
+                                        <img alt="Tigerair" src="../images/airline/tigerair.png" title="">
                                     </div>
                                 </div>
                                 <div class="item-icon">
-                                    <div class="pass">รหัสทัวร์&nbsp</div>#00002
+                                    <div class="pass">รหัสทัวร์&nbsp</div>#00001
                                 </div>
                             </div>
                         </div>
@@ -263,7 +283,7 @@
                             <div class="price">
                                 ราคา
                                 <ins>
-                                    <span class="amount">฿8,000</span>
+                                    <span class="amount">฿12,000</span>
                                 </ins>
                                 <!--                                            <del>
                                                                                 <span class="amount">$200</span>
@@ -278,7 +298,7 @@
                     <div class="trip-item">
                         <div class="item-media">
                             <div class="image-cover">
-                                <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
+                                <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
                             </div>
                             <!--                                        <div class="trip-icon">
                                                                         <img src="images/trip.jpg" alt="">
@@ -287,23 +307,29 @@
                         <div class="item-body">
                             <div class="item-title">
                                 <h2>
-                                    <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
+                                    <a href="#">ชื่อโปรแกรมทัวร์</a>
                                 </h2>
+                            </div>
+                            <div class="hilight">
+                                <i class="far fa-flag"></i>
+                                <div class="detail">
+                                    ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                </div>
                             </div>
                             <div class="item-list">
                                 <ul>
-                                    <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                    <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
                                     <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
                                 </ul>
                             </div>
                             <div class="item-footer">
                                 <div class="item-rate">
                                     <div class="card-airline">
-                                        <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
+                                        <img alt="Tigerair" src="../images/airline/tigerair.png" title="">
                                     </div>
                                 </div>
                                 <div class="item-icon">
-                                    <div class="pass">รหัสทัวร์&nbsp</div>#00002
+                                    <div class="pass">รหัสทัวร์&nbsp</div>#00001
                                 </div>
                             </div>
                         </div>
@@ -311,7 +337,7 @@
                             <div class="price">
                                 ราคา
                                 <ins>
-                                    <span class="amount">฿8,000</span>
+                                    <span class="amount">฿12,000</span>
                                 </ins>
                                 <!--                                            <del>
                                                                                 <span class="amount">$200</span>
@@ -326,7 +352,7 @@
                     <div class="trip-item">
                         <div class="item-media">
                             <div class="image-cover">
-                                <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
+                                <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
                             </div>
                             <!--                                        <div class="trip-icon">
                                                                         <img src="images/trip.jpg" alt="">
@@ -335,23 +361,29 @@
                         <div class="item-body">
                             <div class="item-title">
                                 <h2>
-                                    <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
+                                    <a href="#">ชื่อโปรแกรมทัวร์</a>
                                 </h2>
+                            </div>
+                            <div class="hilight">
+                                <i class="far fa-flag"></i>
+                                <div class="detail">
+                                    ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                </div>
                             </div>
                             <div class="item-list">
                                 <ul>
-                                    <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                    <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
                                     <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
                                 </ul>
                             </div>
                             <div class="item-footer">
                                 <div class="item-rate">
                                     <div class="card-airline">
-                                        <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
+                                        <img alt="Tigerair" src="../images/airline/tigerair.png" title="">
                                     </div>
                                 </div>
                                 <div class="item-icon">
-                                    <div class="pass">รหัสทัวร์&nbsp</div>#00002
+                                    <div class="pass">รหัสทัวร์&nbsp</div>#00001
                                 </div>
                             </div>
                         </div>
@@ -359,103 +391,7 @@
                             <div class="price">
                                 ราคา
                                 <ins>
-                                    <span class="amount">฿8,000</span>
-                                </ins>
-                                <!--                                            <del>
-                                                                                <span class="amount">$200</span>
-                                                                            </del>-->
-
-                            </div>
-                            <a href="#" class="awe-btn">จองทัวร์นี้</a>
-                        </div>
-                    </div>
-                    <!-- END / ITEM -->
-                    <!-- ITEM -->
-                    <div class="trip-item">
-                        <div class="item-media">
-                            <div class="image-cover">
-                                <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
-                            </div>
-                            <!--                                        <div class="trip-icon">
-                                                                        <img src="images/trip.jpg" alt="">
-                                                                    </div>-->
-                        </div>
-                        <div class="item-body">
-                            <div class="item-title">
-                                <h2>
-                                    <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
-                                </h2>
-                            </div>
-                            <div class="item-list">
-                                <ul>
-                                    <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
-                                    <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
-                                </ul>
-                            </div>
-                            <div class="item-footer">
-                                <div class="item-rate">
-                                    <div class="card-airline">
-                                        <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
-                                    </div>
-                                </div>
-                                <div class="item-icon">
-                                    <div class="pass">รหัสทัวร์&nbsp</div>#00002
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-price-more">
-                            <div class="price">
-                                ราคา
-                                <ins>
-                                    <span class="amount">฿8,000</span>
-                                </ins>
-                                <!--                                            <del>
-                                                                                <span class="amount">$200</span>
-                                                                            </del>-->
-
-                            </div>
-                            <a href="#" class="awe-btn">จองทัวร์นี้</a>
-                        </div>
-                    </div>
-                    <!-- END / ITEM -->
-                    <!-- ITEM -->
-                    <div class="trip-item">
-                        <div class="item-media">
-                            <div class="image-cover">
-                                <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b66e9d835de3873a86d1cec996a1af06&auto=format&fit=crop&w=500&q=60" alt="">
-                            </div>
-                            <!--                                        <div class="trip-icon">
-                                                                        <img src="images/trip.jpg" alt="">
-                                                                    </div>-->
-                        </div>
-                        <div class="item-body">
-                            <div class="item-title">
-                                <h2>
-                                    <a href="#">ปักกิ่ง กำแพงเมืองจีนด่านจีหย่งกวน พระราชวังต้องห้ามกู้กง </a>
-                                </h2>
-                            </div>
-                            <div class="item-list">
-                                <ul>
-                                    <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
-                                    <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
-                                </ul>
-                            </div>
-                            <div class="item-footer">
-                                <div class="item-rate">
-                                    <div class="card-airline">
-                                        <img alt="Tigerair" src="../images/airline/thai_airway.png" title="">
-                                    </div>
-                                </div>
-                                <div class="item-icon">
-                                    <div class="pass">รหัสทัวร์&nbsp</div>#00002
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-price-more">
-                            <div class="price">
-                                ราคา
-                                <ins>
-                                    <span class="amount">฿8,000</span>
+                                    <span class="amount">฿12,000</span>
                                 </ins>
                                 <!--                                            <del>
                                                                                 <span class="amount">$200</span>
