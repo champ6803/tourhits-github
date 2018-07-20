@@ -85,7 +85,7 @@
                         <div class="product-slider">
                             @foreach($tourPackageImagesList as $tourPackageImage)
                             <div class="item">
-                                <img src="{{ asset('images/tour/'.$tourPackageImage->tour_image_name)}}" alt="">
+                                <img src="{{ asset('images/tour-images/'.$tourPackageImage->tour_image_name)}}" alt="">
                             </div>
                             @endforeach
                         </div>
@@ -93,7 +93,7 @@
                             <div class="product-slider-thumb">
                                 @foreach($tourPackageImagesList as $tourPackageImage)
                                 <div class="item">
-                                    <img src="{{ asset('images/tour/'.$tourPackageImage->tour_image_name)}}" alt="">
+                                    <img src="{{ asset('images/tour-images/'.$tourPackageImage->tour_image_name)}}" alt="">
                                 </div>
                                 @endforeach
                             </div>
@@ -107,7 +107,7 @@
                         <h2>{{ $tourPackage->tour_package_name }}</h2>
                     </div>
                     <div class="product-address">
-                        <span>{{ $tourPackage->tour_package_detail}}</span>
+                        <span><?php echo $tourPackage->tour_package_detail ?></span>
                     </div>
                     <div class="trips">
                         <div class="item">
@@ -124,7 +124,7 @@
                         </div>
                         <div class="item">
                             <h6>รหัสทัวร์</h6>
-                            <p><i class="fas fa-barcode" style="padding-right: 10px"></i>#<span id='tour_code'></span></p>
+                            <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
                         </div>
                     </div>
 

@@ -456,7 +456,20 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a  id="tourMenu"  href="{{ url('manage-tourlist')}}">จัดการรายการทัวร์</a></li>
+                                <li><a id="tourMenu"  href="{{ url('manage-tourlist')}}">เพิ่มรายการทัวร์</a></li>
+                                <li><a id="showTourMenu"  href="{{ url('show-tourlist')}}">รายการทัวร์ทั้งหมด</a></li>
+                                <li><a id="showTourCountryMenu"  href="{{ url('show-country-tourlist')}}">รายการทัวร์แต่ละประเทศ</a></li>
+                                <li><a id="statusTourMenu"  href="{{ url('status-tourlist')}}">สถานะแพ็คเกจทัวร์</a></li>
+                            </ul>
+                        </li>
+                        <li id="managetour" class="treeview">
+                            <a href="#">
+                                <i class="fa fa-database"></i> <span>ข้อมูลมาสเตอร์</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
                                 <li><a id="categoryMenu"  href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
                                 <li><a id="tagMenu"  href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
                                 <li><a id="otherMenu"  href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>

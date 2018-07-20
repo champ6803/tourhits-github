@@ -1024,7 +1024,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             </table>-->
                         </div>
                         <div id="tabs-3">
-                            <div id="reviews">
+<!--                            <div id="reviews">
                                 <div class="rating-info">
                                     <div class="average-rating-review good">
                                         <span class="count">7.5</span>
@@ -1250,7 +1250,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         </li>
                                     </ol>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -1265,7 +1265,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         <span class="d-inline d-sm-none">ราคา</span>
                                         <span class="d-none d-sm-inline">ผู้ใหญ่พักคู่<br> ท่านละ</span>
                                     </th>
-                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเพิ่มเตียง<br> ท่านละ</th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
                                     <th class="align-middle d-none d-sm-table-cell py-4"></th>
                                 </tr>
                             </thead>
@@ -1367,7 +1367,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 <!--<span>อายุ 12 ปีขึ้นไป</span>-->
                             </div>
                             <div class="form-elements form-kids">
-                                <label>เด็ก (เพิ่มเตียง)</label>
+                                <label>เด็ก (ไม่เพิ่มเตียง)</label>
                                 <div class="form-item">
                                     <select id="child_price" class="awe-select" disabled="">
                                         <option selected val="0">0</option>
