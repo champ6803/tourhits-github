@@ -1428,8 +1428,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     <div class="call-to-book">
                         <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal">
                                 <i class="awe-icon awe-icon-phone"></i>
-                                <em style="font-size: 15px">โทรสอบถาม/จอง</em>
-                                <span style="font-size: 18px">062 914 2361</span>                       
+                                <span style="font-size: 25px">โทรจอง</span>                       
                         </button>
                     </div> 
                     <!-- Modal -->
@@ -1498,7 +1497,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     <div class="call-to-book2">
                         <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal2">    
                             <i class="fab fa-line"></i>                            
-                            <span style="font-size: 25px">จองผ่านไลน์ @Tourhits</span>
+                            <span style="font-size: 25px">จองผ่านไลน์</span>
                         </button>
                     </div>
                     <!-- Modal -->
