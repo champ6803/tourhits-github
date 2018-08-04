@@ -69,6 +69,96 @@ class AdminController extends Controller {
     public function manage_tourlist() {
         return view('admin.manage-tourlist');
     }
+    
+    public function manage_edit_tourlist(Request $request){
+        $tour_package_id = $request->query('id');
+        $tourPackageDetail = null;
+        if ($tour_package_id != null) {
+            $tourPackage = Tour_Package::where('tour_package.tour_package_id', '=', $tour_package_id)
+                    ->first();
+            $tourPeriodList = Tour_Period::where('tour_period.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            $tourPackageDay = Tour_Package_Day::where('tour_package_day.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            $tourImage = Tour_Image::where('tour_image.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            $tourRoute = Tour_Route::join('route', 'route.route_id', '=', 'tour_route.route_id')
+                    ->where('tour_route.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            $tourAirline = Tour_Airline::join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
+                    ->where('tour_airline.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            $tourTag = Tour_Tag::join('tag', 'tag.tag_id', '=', 'tour_tag.tag_id')
+                    ->where('tour_tag.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            $tourHoliday = Tour_Holiday::join('holiday', 'holiday.holiday_id', '=', 'tour_holiday.holiday_id')
+                    ->where('tour_holiday.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            $tourAttraction = Tour_Attraction::join('attraction', 'attraction.attraction_id', '=', 'tour_attraction.attraction_id')
+                    ->where('tour_attraction.tour_package_id', '=', $tour_package_id)
+                    ->get();
+            $tourAttractionDay = Tour_Package_Day::join('tour_attraction_day', 'tour_attraction_day.tour_package_day_id', '=', 'tour_package_day.tour_package_day_id')
+                    ->join('attraction', 'attraction.attraction_id', '=', 'tour_attraction_day.attraction_id')
+                    ->where('tour_package_day.tour_package_id', '=', $tour_package_id)
+                    ->select('tour_package_day.tour_package_day_id', 'attraction.*')
+                    ->get();
+
+            $arrRoute = [];
+            foreach ($tourRoute as $arr) {
+                array_push($arrRoute, $arr["route_id"]);
+            }
+            $arrAirline = [];
+            foreach ($tourAirline as $arr) {
+                array_push($arrAirline, $arr["airline_id"]);
+            }
+            $arrTag = [];
+            foreach ($tourTag as $arr) {
+                array_push($arrTag, $arr["tag_id"]);
+            }
+            $arrAttraction = [];
+            foreach ($tourAttraction as $arr) {
+                array_push($arrAttraction, $arr["attraction_id"]);
+            }
+            $arrHoliday = [];
+            foreach ($tourHoliday as $arr) {
+                array_push($arrHoliday, $arr["holiday_id"]);
+            }
+
+            $attractionDay = [];
+            foreach ($tourAttractionDay as $arr) {
+                if (!isset($attractionDay[$arr["tour_package_day_id"]])) {
+                    $key = 0;
+                    $attractionDay[$arr["tour_package_day_id"]][$key] = $arr["attraction_id"];
+                    $key++;
+                } else if (isset($attractionDay[$arr["tour_package_day_id"]])) {
+                    $attractionDay[$arr["tour_package_day_id"]][$key] = $arr["attraction_id"];
+                    $key++;
+                }
+            }
+
+            $tourPackage->tour_package_period_start = date("d-m-Y", strtotime($tourPackage->tour_package_period_start));
+            $tourPackage->tour_package_period_end = date("d-m-Y", strtotime($tourPackage->tour_package_period_end));
+
+            foreach ($tourPeriodList as $tourPeriod) {
+                $newStartDate = date("d-m-Y", strtotime($tourPeriod->tour_period_start));
+                $newEndDate = date("d-m-Y", strtotime($tourPeriod->tour_period_end));
+                $tourPeriod->tour_period_start = $newStartDate;
+                $tourPeriod->tour_period_end = $newEndDate;
+            }
+
+            $tourPackageDetail = ['tourPackage' => $tourPackage, 'tourPeriod' => $tourPeriodList, 'tourPackageDay' => $tourPackageDay, 'tourImage' => $tourImage, 'tourRoute' => $arrRoute,
+                'tourAirline' => $arrAirline, 'tourTag' => $arrTag, 'tourHoliday' => $tourHoliday, 'tourAttraction' => $arrAttraction, 'tourAttractionDay' => $tourAttractionDay, 'attractionDay' => $attractionDay];
+        }
+        else{
+            return redirect('order-list');
+        }
+        return view('admin.manage-edit-tourlist', compact('tourPackageDetail'));
+    }
+
+    public function tour_package_list() {
+        $tourPackageList = $this->getTourPackageAll();
+        return view('admin.tour-package-list', compact('tourPackageList'));
+    }
 
     public function checkAdminLogin() {
         session_start();
@@ -429,7 +519,7 @@ class AdminController extends Controller {
         try {
             $input_tour_category_name = $_POST['input_tour_category_name'];
             if ($input_tour_category_name != null) {
-                $tour_category = $categoryModel->getTourCategoryByName($input_tour_category_name);
+                $tour_category = $categoryModel->getCategoryByName($input_tour_category_name);
             } else {
                 $tour_category = $categoryModel->getCategoryAll();
             }
@@ -441,11 +531,11 @@ class AdminController extends Controller {
     }
 
     public function saveTourCategory() {
-        $tourCategoryModel = new Tour_Category();
+        $categoryModel = new Category();
         try {
-            $tour_category_name = $_POST['tour_category_name'];
-            $tour_category_picture = $_FILES['file']['name'];
-            $tourCategoryModel->insertTourCategory($tour_category_name, $tour_category_picture);
+            $category_name = $_POST['tour_category_name'];
+            $category_picture = $_FILES['file']['name'];
+            $categoryModel->insertCategory($category_name, $category_picture);
             echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-category';
@@ -457,10 +547,10 @@ class AdminController extends Controller {
     }
 
     public function deleteTourCategory() {
-        $tourCategoryModel = new Tour_Category();
+        $categoryModel = new Category();
         try {
             $id = $_POST['id'];
-            $tourCategoryModel->removeTourCategory($id);
+            $categoryModel->removeCategory($id);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -469,13 +559,13 @@ class AdminController extends Controller {
     }
 
     public function updateTourCategory() {
-        $tourCategoryModel = new Tour_Category();
+        $categoryModel = new Category();
         try {
 
             $id = $_POST['hidden_update_id'];
-            $update_tour_category_name = $_POST['update_tour_category_name'];
-            $tour_category_picture = $_FILES['file']['name'];
-            $tourCategoryModel->editTourCategory($id, $update_tour_category_name, $tour_category_picture);
+            $update_category_name = $_POST['update_tour_category_name'];
+            $category_picture = $_FILES['file']['name'];
+            $categoryModel->editCategory($id, $update_category_name, $category_picture);
             echo "<script>
              alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-category';
@@ -529,7 +619,6 @@ class AdminController extends Controller {
                     "adult_price" => "required",
                     "child_price" => 'required',
                     "tag_select" => "required",
-                    "holiday_select" => "required",
                     "attraction_select" => "required",
                     "airline_select" => "required",
                     "route_select" => "required",
@@ -559,7 +648,6 @@ class AdminController extends Controller {
                 }
             }
         }
-
         DB::transaction(function () {
             try {
                 $tour_category = null;
@@ -649,7 +737,7 @@ class AdminController extends Controller {
                             $attraction = $_POST[$attractionStr];
                             foreach ($attraction as $key => $value) {
                                 $attraction_name = $attractionModel->getAttractionById($value);
-                                if ($key == 0) {    
+                                if ($key == 0) {
                                     $tourname = $attraction_name->attraction_name;
                                 } else {
                                     $tourname = $tourname . '-' . $attraction_name->attraction_name;
@@ -712,24 +800,212 @@ class AdminController extends Controller {
         });
     }
 
-    public function rules() {
-        $rules = [
-                //  some other rules
-        ];
+    public function updateTourlistAndDay(Request $request) {
+        $tour_package_id = $request->get('tour_package_id');
+        if ($tour_package_id != null) {
+            $validator = Validator::make($request->all(), [
+                        "tour_country" => "required",
+                        "tour_name" => 'required',
+                        "tour_detail" => "required",
+                        "pdf_file" => "required",
+                        "file" => 'required',
+                        "day_tour" => "required",
+                        "night_tour" => "required",
+                        "start_date" => "required",
+                        "end_date" => "required",
+                        "tour_package_code" => 'required',
+                        "tour_detail_0" => "required",
+                        "attraction_select0" => 'required',
+                        "period_start" => "required",
+                        "period_end" => "required",
+                        "adult_price" => "required",
+                        "child_price" => 'required',
+                        "tag_select" => "required",
+                        "attraction_select" => "required",
+                        "airline_select" => "required",
+                        "route_select" => "required",
+                        "file_img" => "required",
+                        "main_price" => "required",
+                        "main_special_price" => "required"
+            ]);
 
-        $nbr = count($this->input('answers')) - 1;
-        foreach (range(0, $nbr) as $index) {
-            $rules['answers.' . $index] = 'required|max:255';
-        }
+            if ($validator->fails()) {
+                return redirect('manage-tourlist')
+                                ->withErrors($validator)
+                                ->withInput();
+            }
+            $day = $_POST['day_tour'];
+            if ($day > 0) {
+                for ($x = 0; $x < $day; $x++) {
+                    $tourdetailStr = 'tour_detail_' . $x;
+                    $attractionStr = 'attraction_select' . $x;
+                    $validatorDetail = Validator::make($request->all(), [
+                                $tourdetailStr => "required",
+                                $attractionStr => "required",
+                    ]);
+                    if ($validatorDetail->fails()) {
+                        return redirect('manage-tourlist')
+                                        ->withErrors($validatorDetail)
+                                        ->withInput();
+                    }
+                }
+            }
 
-        return $rules;
-    }
+            DB::transaction(function () {
+                try {
+                    $tour_category = null;
+                    $tour_country = $_POST['tour_country'];
+                    $tour_name = $_POST['tour_name'];
+                    $tour_detail = $_POST['tour_detail'];
+                    $highlight_tour = null;
+                    $tourlist_picture = $_FILES['file']['name'];
+                    $day = $_POST['day_tour'];
+                    $night = $_POST['night_tour'];
+                    $start_date = $_POST['start_date'];
+                    $end_date = $_POST['end_date'];
+                    $tour_package_code = $_POST['tour_package_code'];
+                    $tourlist_pdf = $_FILES['pdf_file']['name'];
+                    $main_price = $_POST['main_price'];
+                    $main_special_price = $_POST['main_special_price'];
 
-    public function saveTourPackage() {
-        try {
-            
-        } catch (\Exception $ex) {
-            
+                    $holiday_select = null;
+                    if (isset($_POST['holiday_select'])) {
+                        $holiday_select = $_POST['holiday_select'];
+                    }
+                    $tag_select = null;
+                    if (isset($_POST['tag_select'])) {
+                        $tag_select = $_POST['tag_select'];
+                    }
+                    $attraction_select = null;
+                    if (isset($_POST['attraction_select'])) {
+                        $attraction_select = $_POST['attraction_select'];
+                    }
+                    $airline_select = null;
+                    if (isset($_POST['airline_select'])) {
+                        $airline_select = $_POST['airline_select'];
+                    }
+                    $route_select = null;
+                    if (isset($_POST['route_select'])) {
+                        $route_select = $_POST['route_select'];
+                    }
+                    $images = null;
+                    if (isset($_FILES['file_img']['name'])) {
+                        $images = $_FILES['file_img']['name'];
+                    }
+
+                    $dateStart = date('Y-m-d H:i:s', strtotime($start_date));
+                    $dateEnd = date('Y-m-d H:i:s', strtotime($end_date));
+
+
+                    $attractionModel = new Attraction();
+                    $tourPackageModel = new Tour_Package();
+                    $tourPackageDayModel = new Tour_Package_Day();
+                    $tourHolidayModel = new Tour_Holiday();
+                    $tourTagModel = new Tour_Tag();
+                    $tourAttractionModel = new Tour_Attraction();
+                    $tourAirlineModel = new Tour_Airline();
+                    $tourImageModel = new Tour_Image();
+                    $tourRoute = new Tour_Route();
+                    $tourPeriodModel = new Tour_Period();
+                    $id = $tourPackageModel->insertTourPackage($tour_package_code, $tour_country, $tour_category
+                            , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
+                            , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price);
+
+                    if ($id != null && $id != 0) {
+                        $tour_period_start = $_POST['period_start'];
+                        $tour_period_end = $_POST['period_end'];
+                        $tour_period_adult_price = $_POST['adult_price'];
+                        $tour_period_child_price = $_POST['child_price'];
+                        $tour_period_child_nb_price = 0;
+                        $tour_period_alone_price = 0;
+                        $tour_period_adult_special_price = $_POST['special_price'];
+                        $tour_period_child_special_price = 0;
+                        $tour_period_status = 'Y';
+
+                        for ($i = 0; $i < count($tour_period_start); $i++) {
+                            $dateStart = date('Y-m-d H:i:s', strtotime($tour_period_start[$i]));
+                            $dateEnd = date('Y-m-d H:i:s', strtotime($tour_period_end[$i]));
+                            $speriod = $tourPeriodModel->insertTourPeriod($id, $dateStart, $dateEnd, $tour_period_adult_price[$i]
+                                    , $tour_period_child_price[$i], $tour_period_child_nb_price
+                                    , $tour_period_alone_price, $tour_period_adult_special_price[$i]
+                                    , $tour_period_child_special_price, $tour_period_status);
+                        }
+
+                        if ($speriod) {
+                            for ($x = 0; $x < $day; $x++) {
+                                $tourdetailStr = 'tour_detail_' . $x;
+                                $tourname = "";
+                                $tourdetail = $_POST[$tourdetailStr];
+                                $attractionStr = 'attraction_select' . $x;
+                                $attraction = $_POST[$attractionStr];
+                                foreach ($attraction as $key => $value) {
+                                    $attraction_name = $attractionModel->getAttractionById($value);
+                                    if ($key == 0) {
+                                        $tourname = $attraction_name->attraction_name;
+                                    } else {
+                                        $tourname = $tourname . '-' . $attraction_name->attraction_name;
+                                    }
+                                }
+                                $tour_day_id = $tourPackageDayModel->insertTourPackageDay($id, $x + 1, $tourname, $tourdetail);
+                                if ($tour_day_id > 0) {
+                                    foreach ($attraction as $key => $value) {
+                                        $tourPackageDayModel->insertTourAttractionDay($tour_day_id, $value);
+                                    }
+                                }
+                            }
+
+                            if (($airline_select != null) && ($airline_select != '')) {
+                                foreach ($airline_select as $value) {
+                                    $tourAirlineModel->insertTourAirline($id, $value);
+                                }
+                            }
+
+                            if (($holiday_select != null) && ($holiday_select != '')) {
+                                foreach ($holiday_select as $value) {
+                                    $tourHolidayModel->insertTourHoliday($id, $value);
+                                }
+                            }
+
+                            if (($attraction_select != null) && ($attraction_select != '')) {
+                                foreach ($attraction_select as $value) {
+                                    $tourAttractionModel->insertTourAttraction($id, $value);
+                                }
+                            }
+
+                            //$tag_array= explode(",",$tag_select);
+                            if (($tag_select != null) && ($tag_select != '')) {
+                                foreach ($tag_select as $value) {
+                                    $tourTagModel->insertTourTag($id, $value);
+                                }
+                            }
+
+                            if (($route_select != null) && ($route_select != '')) {
+                                foreach ($route_select as $value) {
+                                    $tourRoute->insertTourRoute($id, $value);
+                                }
+                            }
+
+                            if (($images != null) && ($images != '')) {
+                                $tourImageModel->insertTourImage($id, $images);
+                            }
+                        }
+                    }
+
+
+                    echo "<script>
+             alert('บันทึกข้อมูลเรียบร้อย');    
+             window.location.href='manage-tourlist';
+             </script>";
+                } catch (\Exception $e) {
+                    $msg = $e->getMessage();
+                    return dd($msg);
+                }
+            });
+        } else {
+            echo "<script>
+             alert('ไม่สามารถทึกได้');    
+             window.location.href='manage-tourlist';
+             </script>";
         }
     }
 
@@ -796,6 +1072,41 @@ class AdminController extends Controller {
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
+        }
+    }
+
+    public function getTourPackageAll() {
+        $tourModel = new Tour_Package();
+        try {
+            $tourPackageList = $tourModel->getTourPackageAll();
+            return $tourPackageList;
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return $msg;
+        }
+    }
+
+    public function getTourPackageById() {
+        $tourModel = new Tour_Package();
+        try {
+            $tourPackageList = $tourModel->getTourPackageAll();
+            return $tourPackageList;
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return $msg;
+        }
+    }
+
+    public function getTourPackageDetail($tour_package_id) {
+        try {
+            $tourModel = new Tour_Package();
+            $tourDayModel = new Tour_Package_Day();
+            $tourPackage = $tourModel->getTourDetail($tour_package_id);
+            $tourPackageList = $tourModel->getTourDetailList($tour_package_id);
+            $tourPackageDayList = $tourDayModel->getTourPackageDay($tour_package_id);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return $msg;
         }
     }
 

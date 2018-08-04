@@ -360,6 +360,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + '</div>';
             div = div + '</div>';
             div = div + '<div class="item-body">';
+            div = div + '<div class="item-title-header"><h5 style="color:#ea1c24"><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_name + '</a></h5></div>';
             div = div + '<div class="item-title"><h2><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_detail + '</a></h2></div>';
             div = div + '<div class="item-list">';
             div = div + '<ul>';

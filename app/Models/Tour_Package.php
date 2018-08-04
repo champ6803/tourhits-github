@@ -34,14 +34,14 @@ class Tour_Package extends Model {
                                 , 'tour_package_name' => $tour_name
                                 , 'tour_package_detail' => $tour_detail
                                 , 'tour_package_highlight' => $highlight_tour
-                                , 'tour_package_image' => ($id_max + 1) . '-' .$tourlist_picture
+                                , 'tour_package_image' => ($id_max + 1) . '-' . $tourlist_picture
                                 , 'tour_period_day_number' => $day
                                 , 'tour_period_night_number' => $night
                                 , 'tour_package_price' => $price
                                 , 'tour_package_special_price' => $special_price
                                 , 'tour_package_period_start' => $dateStart
                                 , 'tour_package_period_end' => $dateEnd
-                                , 'tour_package_pdf' => $tour_package_code . '-' .$pdf
+                                , 'tour_package_pdf' => $tour_package_code . '-' . $pdf
                                 , 'created_by' => 'admin'
                                 , 'created_at' => $date
                                 , 'updated_by' => 'admin'
@@ -55,6 +55,44 @@ class Tour_Package extends Model {
             if (Input::hasFile('pdf_file')) {
                 $file_pdf = Input::file('pdf_file');
                 $file_pdf->move('images/pdf', ($id_max + 1) . "-" . $file_pdf->getClientOriginalName());
+            }
+            return $id;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function updateTourPackage($tour_package_id, $tour_package_code, $tour_country, $tour_category, $tour_name
+    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price) {
+        try {
+            $date = \Carbon\Carbon::now();
+            Tour_Package::where('tour_package_id', '=', $tour_package_id)
+                    ->update(
+                            ['tour_package_code' => $tour_package_code
+                                , 'tour_category_id' => $tour_category
+                                , 'tour_country_id' => $tour_country
+                                , 'tour_package_name' => $tour_name
+                                , 'tour_package_detail' => $tour_detail
+                                , 'tour_package_highlight' => $highlight_tour
+                                , 'tour_package_image' => ($id_max + 1) . '-' . $tourlist_picture
+                                , 'tour_period_day_number' => $day
+                                , 'tour_period_night_number' => $night
+                                , 'tour_package_price' => $price
+                                , 'tour_package_special_price' => $special_price
+                                , 'tour_package_period_start' => $dateStart
+                                , 'tour_package_period_end' => $dateEnd
+                                , 'tour_package_pdf' => $tour_package_code . '-' . $pdf
+                                , 'updated_by' => 'admin'
+                                , 'updated_at' => $date]
+            );
+
+            if (Input::hasFile('file')) {
+                $file = Input::file('file');
+                $file->move('images/tour', $tour_package_id . "-" . $file->getClientOriginalName());
+            }
+            if (Input::hasFile('pdf_file')) {
+                $file_pdf = Input::file('pdf_file');
+                $file_pdf->move('images/pdf', $tour_package_id . "-" . $file_pdf->getClientOriginalName());
             }
             return $id;
         } catch (Exception $ex) {
@@ -142,13 +180,13 @@ class Tour_Package extends Model {
 
     public function getTourDetail($tour_package_id) {
         try {
-            $tourPackageList = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+            $tourPackage = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                     ->join('tour_airline', 'tour_package.tour_package_id', '=', 'tour_airline.tour_package_id')
                     ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                     ->join('tour_period', 'tour_period.tour_package_id', 'tour_package.tour_package_id')
                     ->where('tour_package.tour_package_id', '=', $tour_package_id)
                     ->first();
-            return $tourPackageList;
+            return $tourPackage;
         } catch (\Exception $e) {
             return $e;
         }
@@ -209,6 +247,27 @@ class Tour_Package extends Model {
             return $tourPackageList;
         } catch (\Exception $ex) {
             return $ex;
+        }
+    }
+
+    public function getTourPackageAll() {
+        try {
+            $tourPackageList = Tour_Package::join('tour_package_day', 'tour_package.tour_package_id', '=', 'tour_package_day.tour_package_id')
+                    ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name,tour_package.tour_package_image'))
+                    ->get();
+            return $tourPackageList;
+        } catch (\Exception $ex) {
+            throw $ex;
+        }
+    }
+
+    public function getTourPackageById($tour_package_id) {
+        try {
+            $tourPackage = Tour_Package::where('tour_package.tour_package_id', '=', $tour_package_id)
+                    ->first();
+            return $tourPackage;
+        } catch (\Exception $ex) {
+            throw $ex;
         }
     }
 

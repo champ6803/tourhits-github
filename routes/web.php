@@ -145,11 +145,15 @@ Route::get('tourhot','TourhotController@tour_hot');
 
 Route::get('manage-tourlist','AdminController@manage_tourlist');
 
+Route::get('manage-edit-tourlist','AdminController@manage_edit_tourlist');
+
 Route::post('searchAllTourCountry', 'AdminController@searchAllTourCountry');
 
 Route::post('searchAllTourCategory', 'AdminController@searchAllTourCategory');
 
 Route::post('saveTourlistAndDay', 'AdminController@saveTourlistAndDay');
+
+Route::post('updateTourlistAndDay', 'AdminController@updateTourlistAndDay');
 
 Route::post('searchAllCategory', 'AdminController@searchAllCategory');
 
@@ -174,3 +178,5 @@ Route::post('getOrderDetailList', 'DashboardController@getOrderDetailList');
 Route::get('auth/login/facebook', 'LoginController@facebookAuthRedirect');
 // facebook call back after login success.
 Route::get('auth/login/facebook/index', 'LoginController@facebookSuccess');
+
+Route::get('tour-package-list', 'AdminController@tour_package_list');

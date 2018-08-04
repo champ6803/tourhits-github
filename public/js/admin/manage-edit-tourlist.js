@@ -82,6 +82,9 @@ $(function () {
             }
         }
     });
+
+    initValues();
+
 });
 
 function runNumber(value, row, index, field) {
@@ -416,6 +419,10 @@ function createTourCountryDropDown() {
 
 function numberFormat(value, row, index, field) {
     return numberWithCommas(parseInt(value));
+}
+
+const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function initValues() {

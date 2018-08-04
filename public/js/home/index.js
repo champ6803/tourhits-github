@@ -1,8 +1,8 @@
 $(function () {
     renderTourPackage(tourHitsPackageActiveList, tourHitPeriodActive, "card_area");
     renderTourPackageMobile(tourHitsPackageActiveList, tourHitPeriodActive, 'card_tourhits_mobile');
-    renderTourPackage(tourHitsPackageList, tourHitPeriod, "card_area2");
-    
+    //renderTourPackage(tourHitsPackageList, tourHitPeriod, "card_area2");
+
     //renderTourPackage(tourSalesPackageActiveList,tourSalesPeriodActive, "card_sales" );
     //renderTourPackageMobile(tourSalesPackageActiveList, tourSalesPeriodActive, 'card_sales_mobile');
 });
@@ -37,7 +37,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             {
                 tour_code = '0' + tour_code;
             }
-            
+
             div = div + '<span class="tag">TH' + tour_code + '</span>';
             div = div + '</div>';
             div = div + '<span class="clear"></span>';
@@ -48,7 +48,13 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             div = div + '<div class="tabbable">';
             div = div + '<div class="tab-content">';
             div = div + '<div id="tab' + val['tour_package_id'] + '1" class="tab-pane active">';
-            div = div + '<div class="card-detail">' + val['tour_package_detail'] + '</div>';
+            //div = div + '<div class="card-detail">' + val['tour_package_detail'] + '</div>';
+            div = div + '<div class="card-detail">'
+            div = div + '<div class="country-name">' + this.tour_country_name + '</div>'
+            div = div + '<div class="city">' + this.tour_package_name + '</div>';
+            div = div + '<div class="hilight"><i class="fa fa-flag"></i><div class="detail">' + this.tour_package_detail + '</div></div>';
+            div = div + '</div>';
+
             div = div + '<hr>';
             var all_as = val["tour_package_period_start"].split("-");
             var all_ae = val["tour_package_period_end"].split("-");
@@ -135,7 +141,7 @@ function renderTourPackageMobile(tourPackageList, tourPeriod, selection) {
             {
                 tour_code = '0' + tour_code;
             }
-            
+
             div = div + '<span class="tag">#' + tour_code + '</span>';
             div = div + '</div>';
             div = div + '<span class="clear"></span>';

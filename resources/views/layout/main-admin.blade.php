@@ -457,7 +457,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a id="tourMenu"  href="{{ url('manage-tourlist')}}">เพิ่มรายการทัวร์</a></li>
-                                <li><a id="showTourMenu"  href="{{ url('show-tourlist')}}">รายการทัวร์ทั้งหมด</a></li>
+                                <li><a id="showTourMenu"  href="{{ url('tour-package-list')}}">รายการทัวร์ทั้งหมด</a></li>
                                 <li><a id="showTourCountryMenu"  href="{{ url('show-country-tourlist')}}">รายการทัวร์แต่ละประเทศ</a></li>
                                 <li><a id="statusTourMenu"  href="{{ url('status-tourlist')}}">สถานะแพ็คเกจทัวร์</a></li>
                             </ul>
@@ -804,6 +804,8 @@
 
         <!-- peity -->
         <script src="../assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+        
+        <script src="{{ asset('js/lib/angular.js')}}"></script>
 
         <script src="{{ asset('js/lib/bootstrap-table.js')}}"></script>
 
@@ -819,7 +821,7 @@
 
         <!-- Lion_admin for demo purposes -->
         <script src="js/demo.js"></script>
-
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         @yield('footer_scripts')
     </body>
 </html>

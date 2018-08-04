@@ -9,13 +9,14 @@
             Tour Package Management
         </h1>
     </section>
-
+    
     <section class="content">
-        <form action="{{ URL::to('saveTourlistAndDay') }}" method="post" enctype="multipart/form-data">  
+        <form action="{{ URL::to('updateTourlistAndDay') }}" method="post" enctype="multipart/form-data">  
+            <input name="tour_package_id" id="tour_package_id" hidden value="">
             <div class="box box-default">
                 <div class="box-header with-border">
                     <h3 class="box-title">Tour Package</h3>
-                    <h6 class="box-subtitle">Add New Package</h6>
+                    <h6 class="box-subtitle">Update Package</h6>
                 </div>
                 @if ($errors->any())
                 <div class="alert alert-danger">
@@ -78,7 +79,8 @@
                                                         <label for="file" class="col-sm-2 control-label">Image</label>
 
                                                         <div id="div_file" class="col-sm-10">
-                                                            <input class="form-control" type="file" id="file" name="file">
+                                                            <img class="hide" id="file_show" height="100px;">
+                                                            <input class="form-control" type="file" id="file" name="file"> 
                                                             <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                         </div>
                                                     </div>
@@ -564,8 +566,8 @@
                                         <!-- /.box-body -->
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <button id="submit_all" type="submit" class="btn btn-info" id="saveAll"> 
-                                                <i class="fa fa-floppy-o"></i>&nbsp;Save</button>
+                                                <button type="submit" class="btn btn-info" id="saveAll"> 
+                                                <i class="fa fa-floppy-o"></i>&nbsp;Update</button>
                                             </div>
                                         </div>
                                         <!-- /.box-footer -->
@@ -579,95 +581,14 @@
                 <!-- /.box-body -->
             </div>
 
-            <!--            <div class="box">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">เพิ่มรายละเอียดวัน package ทัวร์ &nbsp;<red style="color: red;">*</red></h3>
-            
-                                <div class="box-tools pull-right">
-                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <div class="row" style="padding: 7px;" id="divTable">
-                                    <div class="col-lg-1"></div>
-                                    <table id="dayTable" style="width:85%;">
-                                        <thead >
-                                            <tr style="background-color:#FF9966; border-radius: 12px;">
-                                                <th style="color: white; font-size: 20px">วันที่</th>
-                                                <th style="color: white; font-size: 20px">package</th>
-                                                <th style="color: white; font-size: 20px">รายละเอียด</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="genTable">
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                             /.box-body 
-                        </div>-->
-
-            <!--            <div class="box">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">เพิ่มวันหยุด</h3>
-            
-                                <div class="box-tools pull-right">
-                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <div class="row" style="padding: 7px">
-                                    <div class="col-lg-1"></div>
-                                    <select id="holiday_select" class="js-example-basic-multiple" name="holiday_select[]" multiple="multiple" style="width: 800px">
-                                    </select>
-                                </div>
-                            </div>
-                             /.box-body 
-                        </div>
-            
-                        <div class="box">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">เพิ่มสถานที่ท่องเที่ยว</h3>
-            
-                                <div class="box-tools pull-right">
-                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <div class="row" style="padding: 7px">
-                                    <div class="col-lg-1"></div>
-                                    <select id="attraction_select" class="js-example-basic-multiple" name="attraction_select[]" multiple="multiple" style="width: 800px">
-            
-                                    </select>
-                                </div>
-                            </div>
-                             /.box-body 
-                        </div>
-            
-            
-                        <div class="box">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">เพิ่ม Tags</h3>
-            
-                                <div class="box-tools pull-right">
-                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <div class="row" style="padding: 7px">
-                                    <div class="col-lg-1"></div>
-                                    <select id="tag_select" class="js-example-basic-multiple" name="tag_select[]" multiple="multiple" style="width: 800px">
-            
-                                    </select>
-                                </div>
-                            </div>
-                             /.box-body 
-                        </div>-->
-
         </form>
     </section>
 </div>
 
 @stop
-@section('footer_scripts')
-<script type="text/javascript" src="{{asset('js/admin/manage-tour-list.js')}}"></script>
+@section('footer_scripts')  
+<script>
+    var tourPackageDetail = <?php echo json_encode($tourPackageDetail); ?>; 
+</script>
+<script type="text/javascript" src="{{asset('js/admin/manage-edit-tourlist.js')}}"></script>
 @endsection
