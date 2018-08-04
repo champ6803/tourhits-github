@@ -7622,8 +7622,8 @@ body.single-post .blog-page__content > .post .post-content {
     color: #2A3F54;
     border-radius: 50%;
     float: left;
-    margin-right: 12px;
-    margin-top: 2px;
+/*    margin-right: 12px;
+    margin-top: 2px;*/
     
 }
 .call-to-book em {
@@ -7636,7 +7636,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .call-to-book span {
     display: block;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 20px;
     color: #2A3F54;
     line-height: 1.4em;
@@ -7878,7 +7878,7 @@ body.single-post .blog-page__content > .post .post-content {
     position: absolute;
     left: -2px;
     right: -2px;
-    top: 100%;
+    top: 99%;
     -webkit-transform: translateY(2px);
     -moz-transform: translateY(2px);
     -ms-transform: translateY(2px);
@@ -7886,7 +7886,7 @@ body.single-post .blog-page__content > .post .post-content {
     transform: translateY(2px);
 }
 .booking-info .form-submit .add-to-cart {
-    float: left;
+/*    float: left;*/
 }
 .booking-info .form-submit .add-to-cart button {
     font-size: 25px;
@@ -7897,6 +7897,7 @@ body.single-post .blog-page__content > .post .post-content {
     line-height: 46px;
     height: 46px;
     padding: 0 26px;
+    width:100%;
     border-radius: 0 0 5px 5px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;

@@ -179,8 +179,10 @@
 }
 
 .card-detail .country-name{
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+/*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
     color: #8d8d8d;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 .card-detail .city{
@@ -192,8 +194,9 @@
 }
 
 .card-detail .hilight{
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
-    color: #8d8d8d;    
+/*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
+    color: #8d8d8d;
+    font-size: 17px;
 }
 
 .card-detail .hilight i{
@@ -5118,12 +5121,12 @@ Custom BS3
     }
     
     .product-tabs__content p{
-        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
-        font-size: 16px;
+/*        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
+        font-size: 18px;
     }
     
     .call-to-book .btn-call-book {
-        width: 100%;
+        width: 90%;
         border-radius: 50px;
         background-color: #fff;
         border: 1px solid #2A3F54;
@@ -5151,7 +5154,7 @@ Custom BS3
     
     
     .call-to-book2 .btn-call-book {
-        width: 80%;
+        width: 50%;
         border-radius: 50px;
         background-color: #fff;
         border: 1px solid #00c500;
@@ -5173,7 +5176,7 @@ Custom BS3
     }
     
     .call-and-line{
-        margin-top: -27px;
+        margin-top: -40px;
     }
     
     .modal-body .trip-item{
@@ -5207,9 +5210,10 @@ Custom BS3
     }
     
     .modal-body .trip-item .item-body .hilight {
-        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+/*        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
+        font-size: 16px;
         color: #8d8d8d;
-        padding-top: 8px;
+/*        padding-top: 8px;*/
         max-height: 100px;
         overflow : hidden;
         text-overflow: ellipsis;
@@ -5334,3 +5338,41 @@ Custom BS3
         opacity: 1;
     }
     
+    /*Navbar show only xs size*/
+    
+    .navbar-bot {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 5px 0;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .navbar-bot a { 
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 8px 0;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .navbar-bot .box-tel{
+      float: left; 
+      width: 50%;
+      border-right: 1px solid #fff;    
+    }
+    
+    .navbar-bot i{
+      padding-right: 5px;
+    }
+
+    .navbar-bot a:hover {
+
+    }
+
+    .navbar-bot a.active {
+    }

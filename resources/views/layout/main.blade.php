@@ -655,6 +655,15 @@ session_start();
                 </div>
             </footer>
             <!-- END / FOOTER PAGE -->
+            
+            <!-- navbar only xs -->
+            
+            <div class="navbar-bot visible-xs">
+                <div class="box-tel"><a href="tel:02-379-1249"><i class="fas fa-mobile"></i> โทร</a></div>
+                <div class="box-line"><a target="_blank" rel="noopener noreferrer" href="http://line.me/ti/p/%40tourhits"><i class="fab fa-line"></i> ไลน์</a></div>               
+            </div>
+            
+            <!-- END navbar only xs -->
         </div>
         <!-- END / PAGE WRAP -->
                                 <div id="fb-root"></div>
