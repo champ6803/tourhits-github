@@ -8,6 +8,10 @@
         font-size: 20px;
         padding-bottom: 10px;
     }
+       
+    .card-detail::-webkit-scrollbar {
+      display: none;
+    }
     
 </style>
 
