@@ -110,8 +110,8 @@
 /* css for tabs card */
 
 .tab-content {
-    height: 250px;
-    padding:10px;
+    height: 260px;
+    padding:10px 10px 0px 10px;
     /*border:1px solid #ddd;*/
     border-bottom:0px;
 }
@@ -165,6 +165,7 @@
 
 .thumbnail{
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
 }
 
 .thumbnail:hover{
@@ -232,7 +233,7 @@
 .card-airline{
     position: relative;
     width: 150px;
-    height: 42.4px;
+    height: 50px;
     float: left;
     overflow: hidden;
     padding: 0px 10px 0px 0;
@@ -240,17 +241,23 @@
     /*    font-family: sans-serif;*/
 }
 
-.card-airline img{ max-width: 140px; margin-top: 7px; max-height: 35px; position: absolute; left: 0; margin-left: 9px;}
+.card-airline img{ max-width: 140px; margin-top: 9px; max-height: 42px; position: absolute; left: 0; margin-left: 9px;}
 
 .card-price{
-
     padding: 0 0px 0 0; 
     color: #EC2424; 
     text-align: right;
-    font-size: 30px;
+    font-size: 27px;
 /*    font-weight: 900;*/
     margin-bottom: 5px;
+    margin-top: -12px;
     /*    font-family: sans-serif;*/
+}
+
+.card-price-dis{
+    height: 24px;
+    text-align: right;
+    font-size: 18px;
 }
 
 .nav-tabs{
@@ -4749,17 +4756,21 @@ Custom BS3
       min-width: 100%;
       min-height: 200px;
       overflow-x: auto;
-      
+            
     }
 
     .card-xs::-webkit-scrollbar {
       display: none;
     }
+    
     .card--content {
 /*      background-color: #e74c3c;*/
       min-width: 300px;
-      margin: 5px;
+      margin: 5px 50px 5px 5px;
       
+    }
+    .card--content.is-selected {
+       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     }
     
 /*    @media screen and (max-width: 768px) {
@@ -5503,17 +5514,19 @@ https://flickity.metafizzy.co
 
 .flickity-page-dots .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   margin: 0 8px;
-  background: #333;
+  background: transparent;
+  border: 2px solid #262626;
   border-radius: 50%;
-  opacity: 0.25;
+  opacity: 0.5;
   cursor: pointer;
 }
 
 .flickity-page-dots .dot.is-selected {
-  opacity: 1;
+  background: #262626;
+  opacity: 0.7;
 }
 
     
@@ -5534,6 +5547,8 @@ https://flickity.metafizzy.co
       width: 30px;
       height: 30px;
         }
+      .card--content {
+      margin: 5px;  
     }
     
     /* arrow color */
@@ -5555,18 +5570,7 @@ https://flickity.metafizzy.co
     .flickity-page-dots {
       bottom: 0px;
     }
-    /* white circles */
-    .flickity-page-dots .dot {
-      width: 12px;
-      height: 12px;
-      opacity: 1;
-      background: transparent;
-      border: 2px solid #262626;
-    }
-    /* fill-in selected dot */
-    .flickity-page-dots .dot.is-selected {
-      background: #262626;
-    }
+
     
     /* test */
     
@@ -5604,5 +5608,6 @@ https://flickity.metafizzy.co
       /* half-width cells for larger devices */
       .gallery-cell { width: 50%; }
     }
+    
     
     

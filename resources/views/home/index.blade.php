@@ -667,8 +667,11 @@
                                 <hr>
                                 <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                 <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike>฿74,900</strike></div>
+                                    <div class="card-price">฿49,900</div>
+                                </div>
                             </div>                                          
                             <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
                         </div>
@@ -730,71 +733,11 @@
                                 <hr>
                                 <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                 <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
-                            </div>                                          
-                            <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
-                        </div>
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">ข้อมูลแพ็คเกจ</a></li>                                           
-                            <li><a href="#tab2" data-toggle="tab">ช่วงเวลา</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="thumbnail card--content">
-                <a href="{{ url('tour-detail') }}">
-                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
-                        <div class="tour-footer">
-                            <div class="pull-left">
-                                <span class="flag">
-                                    <img width="60%" alt="รูปธงประเทศ" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/2/China.png">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="tour-header">
-                            <div class="pull-right">
-                                <span class="days">
-                                    3 วัน 2 คืน
-                                </span>
-                            </div>
-                            <span class="clear"></span>
-                        </div>
-                        <div class="tour-bottom-right">
-                            <div>
-                                <span class="tag">
-                                    TH000001
-                                </span>
-                            </div>
-                            <span class="clear"></span>                               
-                        </div>
-                    </div>
-                </a>
-                <div class="caption">
-                    <div class="tabbable">
-                        <div class="tab-content">
-                            <div id="tab1" class="tab-pane active">
-                                <div class="card-detail">
-                                    <div class='country-name'>
-                                        ทัวร์ญี่ปุ่น
-                                    </div>
-                                    <div class="city">
-                                        โตเกียว ฮอกไกโด โอซาก้า
-                                    </div>
-                                    <div class="hilight">
-                                        <i class="far fa-flag"></i>
-                                        <div class="detail">
-                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | 
-                                        </div>    
-                                    </div>                                                    
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike></strike></div>
+                                    <div class="card-price">฿49,900</div>
                                 </div>
-
-                                <hr>
-                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
                             </div>                                          
                             <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
                         </div>
@@ -856,8 +799,11 @@
                                 <hr>
                                 <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                 <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike></strike></div>
+                                    <div class="card-price">฿49,900</div>
+                                </div>
                             </div>                                          
                             <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
                         </div>
@@ -868,7 +814,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -919,8 +865,11 @@
                                 <hr>
                                 <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                 <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike></strike></div>
+                                    <div class="card-price">฿49,900</div>
+                                </div>
                             </div>                                          
                             <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
                         </div>
@@ -931,8 +880,74 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="thumbnail card--content">
+                <a href="{{ url('tour-detail') }}">
+                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
+                        <div class="tour-footer">
+                            <div class="pull-left">
+                                <span class="flag">
+                                    <img width="60%" alt="รูปธงประเทศ" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/2/China.png">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tour-header">
+                            <div class="pull-right">
+                                <span class="days">
+                                    3 วัน 2 คืน
+                                </span>
+                            </div>
+                            <span class="clear"></span>
+                        </div>
+                        <div class="tour-bottom-right">
+                            <div>
+                                <span class="tag">
+                                    TH000001
+                                </span>
+                            </div>
+                            <span class="clear"></span>                               
+                        </div>
+                    </div>
+                </a>
+                <div class="caption">
+                    <div class="tabbable">
+                        <div class="tab-content">
+                            <div id="tab1" class="tab-pane active">
+                                <div class="card-detail">
+                                    <div class='country-name'>
+                                        ทัวร์ญี่ปุ่น
+                                    </div>
+                                    <div class="city">
+                                        โตเกียว ฮอกไกโด โอซาก้า
+                                    </div>
+                                    <div class="hilight">
+                                        <i class="far fa-flag"></i>
+                                        <div class="detail">
+                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | 
+                                        </div>    
+                                    </div>                                                    
+                                </div>
 
+                                <hr>
+                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                <hr>
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike></strike></div>
+                                    <div class="card-price">฿49,900</div>
+                                </div>
+                            </div>                                          
+                            <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
+                        </div>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">ข้อมูลแพ็คเกจ</a></li>                                           
+                            <li><a href="#tab2" data-toggle="tab">ช่วงเวลา</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+                 
 
 <!--                    <div id="card_area" class="row">
 
@@ -1046,134 +1061,11 @@
                                 <hr>
                                 <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                 <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
-                            </div>                                          
-                            <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
-                        </div>
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">ข้อมูลแพ็คเกจ</a></li>                                           
-                            <li><a href="#tab2" data-toggle="tab">ช่วงเวลา</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="thumbnail card--content">
-                <a href="{{ url('tour-detail') }}">
-                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
-                        <div class="tour-footer">
-                            <div class="pull-left">
-                                <span class="flag">
-                                    <img width="60%" alt="รูปธงประเทศ" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/2/China.png">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="tour-header">
-                            <div class="pull-right">
-                                <span class="days">
-                                    3 วัน 2 คืน
-                                </span>
-                            </div>
-                            <span class="clear"></span>
-                        </div>
-                        <div class="tour-bottom-right">
-                            <div>
-                                <span class="tag">
-                                    TH000001
-                                </span>
-                            </div>
-                            <span class="clear"></span>                               
-                        </div>
-                    </div>
-                </a>
-                <div class="caption">
-                    <div class="tabbable">
-                        <div class="tab-content">
-                            <div id="tab1" class="tab-pane active">
-                                <div class="card-detail">
-                                    <div class='country-name'>
-                                        ทัวร์ญี่ปุ่น
-                                    </div>
-                                    <div class="city">
-                                        โตเกียว ฮอกไกโด โอซาก้า
-                                    </div>
-                                    <div class="hilight">
-                                        <i class="far fa-flag"></i>
-                                        <div class="detail">
-                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | 
-                                        </div>    
-                                    </div>                                                    
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike>฿74,900</strike></div>
+                                    <div class="card-price">฿49,900</div>
                                 </div>
-
-                                <hr>
-                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
-                            </div>                                          
-                            <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
-                        </div>
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">ข้อมูลแพ็คเกจ</a></li>                                           
-                            <li><a href="#tab2" data-toggle="tab">ช่วงเวลา</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="thumbnail card--content">
-                <a href="{{ url('tour-detail') }}">
-                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
-                        <div class="tour-footer">
-                            <div class="pull-left">
-                                <span class="flag">
-                                    <img width="60%" alt="รูปธงประเทศ" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/2/China.png">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="tour-header">
-                            <div class="pull-right">
-                                <span class="days">
-                                    3 วัน 2 คืน
-                                </span>
-                            </div>
-                            <span class="clear"></span>
-                        </div>
-                        <div class="tour-bottom-right">
-                            <div>
-                                <span class="tag">
-                                    TH000001
-                                </span>
-                            </div>
-                            <span class="clear"></span>                               
-                        </div>
-                    </div>
-                </a>
-                <div class="caption">
-                    <div class="tabbable">
-                        <div class="tab-content">
-                            <div id="tab1" class="tab-pane active">
-                                <div class="card-detail">
-                                    <div class='country-name'>
-                                        ทัวร์ญี่ปุ่น
-                                    </div>
-                                    <div class="city">
-                                        โตเกียว ฮอกไกโด โอซาก้า
-                                    </div>
-                                    <div class="hilight">
-                                        <i class="far fa-flag"></i>
-                                        <div class="detail">
-                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | 
-                                        </div>    
-                                    </div>                                                    
-                                </div>
-
-                                <hr>
-                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
-                                <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
                             </div>                                          
                             <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
                         </div>
@@ -1235,8 +1127,11 @@
                                 <hr>
                                 <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                 <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike>฿74,900</strike></div>
+                                    <div class="card-price">฿49,900</div>
+                                </div>
                             </div>                                          
                             <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
                         </div>
@@ -1247,7 +1142,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -1298,8 +1193,11 @@
                                 <hr>
                                 <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
                                 <hr>
-                                <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
-                                <div class="card-price">฿49,900</div>         
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike>฿74,900</strike></div>
+                                    <div class="card-price">฿49,900</div>
+                                </div>
                             </div>                                          
                             <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
                         </div>
@@ -1310,7 +1208,138 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="thumbnail card--content">
+                <a href="{{ url('tour-detail') }}">
+                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
+                        <div class="tour-footer">
+                            <div class="pull-left">
+                                <span class="flag">
+                                    <img width="60%" alt="รูปธงประเทศ" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/2/China.png">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tour-header">
+                            <div class="pull-right">
+                                <span class="days">
+                                    3 วัน 2 คืน
+                                </span>
+                            </div>
+                            <span class="clear"></span>
+                        </div>
+                        <div class="tour-bottom-right">
+                            <div>
+                                <span class="tag">
+                                    TH000001
+                                </span>
+                            </div>
+                            <span class="clear"></span>                               
+                        </div>
+                    </div>
+                </a>
+                <div class="caption">
+                    <div class="tabbable">
+                        <div class="tab-content">
+                            <div id="tab1" class="tab-pane active">
+                                <div class="card-detail">
+                                    <div class='country-name'>
+                                        ทัวร์ญี่ปุ่น
+                                    </div>
+                                    <div class="city">
+                                        โตเกียว ฮอกไกโด โอซาก้า
+                                    </div>
+                                    <div class="hilight">
+                                        <i class="far fa-flag"></i>
+                                        <div class="detail">
+                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | 
+                                        </div>    
+                                    </div>                                                    
+                                </div>
 
+                                <hr>
+                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                <hr>
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike>฿74,900</strike></div>
+                                    <div class="card-price">฿49,900</div>
+                                </div>
+                            </div>                                          
+                            <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
+                        </div>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">ข้อมูลแพ็คเกจ</a></li>                                           
+                            <li><a href="#tab2" data-toggle="tab">ช่วงเวลา</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="thumbnail card--content">
+                <a href="{{ url('tour-detail') }}">
+                    <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
+                        <div class="tour-footer">
+                            <div class="pull-left">
+                                <span class="flag">
+                                    <img width="60%" alt="รูปธงประเทศ" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/2/China.png">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="tour-header">
+                            <div class="pull-right">
+                                <span class="days">
+                                    3 วัน 2 คืน
+                                </span>
+                            </div>
+                            <span class="clear"></span>
+                        </div>
+                        <div class="tour-bottom-right">
+                            <div>
+                                <span class="tag">
+                                    TH000001
+                                </span>
+                            </div>
+                            <span class="clear"></span>                               
+                        </div>
+                    </div>
+                </a>
+                <div class="caption">
+                    <div class="tabbable">
+                        <div class="tab-content">
+                            <div id="tab1" class="tab-pane active">
+                                <div class="card-detail">
+                                    <div class='country-name'>
+                                        ทัวร์ญี่ปุ่น
+                                    </div>
+                                    <div class="city">
+                                        โตเกียว ฮอกไกโด โอซาก้า
+                                    </div>
+                                    <div class="hilight">
+                                        <i class="far fa-flag"></i>
+                                        <div class="detail">
+                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | 
+                                        </div>    
+                                    </div>                                                    
+                                </div>
+
+                                <hr>
+                                <div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา มิ.ย. - ส.ค.</div>
+                                <hr>
+                                <div class="bar-bottom-card">
+                                    <div class="card-airline"><img alt="การบินไทย" src="../images/airline/thai_airway.png" title="Air Asia X"></div>                                         
+                                    <div class="card-price-dis"><strike>฿74,900</strike></div>
+                                    <div class="card-price">฿49,900</div>
+                                </div>
+                            </div>                                          
+                            <div id="tab2" class="tab-pane">ตารางช่วงเวลา content</div>
+                        </div>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab" class="active">ข้อมูลแพ็คเกจ</a></li>                                           
+                            <li><a href="#tab2" data-toggle="tab">ช่วงเวลา</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="row">
