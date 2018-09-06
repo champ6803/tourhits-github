@@ -1,4 +1,7 @@
 $(function () {
+    $('#managemaster').addClass("active");
+    $('#categoryMenu').addClass("active");
+    
     $('#searchButton').click(function () {
         var input_tour_category_name= $('#input_tour_category_name').val();
         var checkEmpty = input_tour_category_name.trim();
@@ -31,8 +34,6 @@ $(function () {
            $('#updateFile').val('')
     });
     $(document).ready(function() {
-        //ไฮไลต์เมนูที่เข้าอยู่
-        document.getElementById("categoryMenu").style.color = "blue";
         createTable()
         $('#tourCategoryTable').DataTable();
     } );
@@ -49,9 +50,9 @@ function createTable(){
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (data) {
-                if (data != null) {
+                if (data) {
                  var rowNo=1;
-                 for(var row = 0 ; row<data.length ;row++){
+                 for(var row = 0 ; row < data.length ;row++){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].category_name+'</td>';

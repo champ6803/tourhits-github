@@ -1,7 +1,10 @@
 var period_data = [];
 var number = 0;
-var page = "new";
+
 $(function () {
+    $('#managetour').addClass("active");
+    $('#manage_tourlist').addClass("active");
+
     $('.attraction_select').select2({width: '100%'});
     $('#attraction_select').select2({width: '100%'});
     $('#holiday_select').select2({width: '100%'});
@@ -23,27 +26,25 @@ $(function () {
     createAttractionDayDropDown();
     createRouteDropDown();
     $("#start_date").datepicker({
-        format: 'dd-mm-yy',
-        dateFormat: 'yy/mm/dd',
+        format: 'dd/mm/yyyy',
         todayBtn: true
     }).datepicker("setDate", "0");
     $("#end_date").datepicker({
-        format: 'dd-mm-yy',
-        dateFormat: 'yy/mm/dd',
+        format: 'dd/mm/yyyy',
         todayBtn: true
     }).datepicker("setDate", "0");
     $("#period_start").datepicker({
-        format: 'dd-mm-yy',
-        dateFormat: 'yy/mm/dd',
+        format: 'dd/mm/yyyy',
         todayBtn: true
     }).datepicker("setDate", "0");
     $("#period_end").datepicker({
-        format: 'dd-mm-yy',
-        dateFormat: 'yy/mm/dd',
+        format: 'dd/mm/yyyy',
         todayBtn: true
     }).datepicker("setDate", "0");
     //tinymce.init({selector: '.tour-main'});
-    $('.tour-main').wysihtml5();
+
+    CKEDITOR.replace('tour_detail');
+    CKEDITOR.replace('tour_detail_0');
 
     $('#btn_period_add').click(function () {
         var period_start = $('#period_start').val();
@@ -163,17 +164,15 @@ function genTable() {
             divs = divs + '</div>';
             divs = divs + '<hr>';
             row_no++;
-
         }
         $('#day_body').html(divs);
+        for (var i = 0; i < day; i++) {
+            CKEDITOR.replace('tour_detail_' + i);
+        }
         createAttractionDayDropDown();
         $('.attraction_select').select2({width: '100%'});
 //        tinymce.init({selector: '.tour-day'});
-        $('.tour-day').wysihtml5();
-        if (page == "new") {
-            $('.nav-tabs a[href="#detail"]').tab('show');
-        }
-
+        $('.nav-tabs a[href="#detail"]').tab('show');
     } else {
         alert('กรุณาระบุจำนวนวันให้ถูกต้อง')
         $('#saveBtn').prop('disabled', false);
@@ -184,7 +183,6 @@ function genTable() {
 }
 
 function createHolidayDropDown() {
-    var StrDropDown = '';
     $.ajax({
         type: 'post',
         url: 'searchAllHoliday',
@@ -420,7 +418,7 @@ function numberFormat(value, row, index, field) {
 
 function initValues() {
     if (tourPackageDetail) {
-        
+
         if (tourPackageDetail.tourPackage) {
             $('#tour_country').val(tourPackageDetail.tourPackage.tour_country_id);
             $('#tour_name').val(tourPackageDetail.tourPackage.tour_package_name);
@@ -437,7 +435,7 @@ function initValues() {
             $("#file_show").attr("src", src);
             $("#file_show").removeClass('hide');
             $("#pdf_show").html(tourPackageDetail.tourPackage.tour_package_pdf);
-            
+
 
             //$('#div_file').html('<div class="row"><div class="col-xs-8"><img height="100px;" src="images/tour/tour6.jpg"></div><div class="col-xs-4"><input class="form-control" type="file" id="file" name="file"><input type="hidden" value="{{ csrf_token() }}" name="_token"></div></div>');
         }

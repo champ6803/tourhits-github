@@ -24,6 +24,8 @@
         width: 100% !important;
     }
 </style>
+
+<!-- HERO -->
 <section class="hero-section">
     <div id="slider-revolution">
         <ul>
@@ -153,9 +155,7 @@
             <div class="section-title" margin-top: 30px;>
                  <h1>Tourhits.co (ทัวร์ฮิต) ศูนย์รวมทัวร์คุณภาพทั่วโลก</h1>
             </div>
-
             <div class="row">
-
                 <div class="col-md-10 col-md-offset-1 tabs-flagall">                                                  
                     <div class="product-tabs tabs">
                         <ul>
@@ -172,7 +172,6 @@
                                 <a href="#tabs-4">ทัวร์ทวีปอื่นๆ</a>
                             </li>
                         </ul>
-
                         <div class="all-flag-content">
                             <div id="tabs-1">
                                 <div class="flag-tab1">                                        
@@ -601,6 +600,7 @@
 </div>    
 </section>
 <!-- END / MASONRY -->
+
 <!-- แพ๊คยอดนิยม -->
 <section class="package-hit-section">
     <div class="container">
@@ -999,16 +999,17 @@
 <!-- แพ๊คลดราคา -->
 <section class="package-hit-section">
     <div class="container">
-        <div class="package-hit-title">
-            <div class="section-title">
-                <h1><i class="fas fa-fire" style='color: #EC2424;'></i>&nbsp;แพ็คเกจลดราคา</h1>
-                <div class="line-gradient"></div>
-            </div>
-            <div class='section-descripion hidden-xs'>
-                ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
+        <div class="row">
+            <div class="col-md-12 package-hit-title">
+                <div class="section-title">
+                    <h1><i class="fas fa-fire" style='color: #EC2424;'></i>&nbsp;แพ็คเกจลดราคา</h1>
+                    <div class="line-gradient"></div>
+                </div>
+                <div class='section-descripion hidden-xs'>
+                    ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
+                </div>
             </div>
         </div>
-
         <!--        หน้าจอเวอชั่น mobile/pc-->
         <div class="card-xs js-flickity" data-flickity='{ "freeScroll": true, "wrapAround": true, "autoPlay": true }'>
             <div class="thumbnail card--content">
@@ -1348,7 +1349,6 @@
     </div>
 </section>
 
-
 <!-- ลูกค้าที่ไว้วางใจ -->
 <section class="package-hit-section">
     <div class="container">
@@ -1395,8 +1395,6 @@
     });
    
 </script>
-
-<script type="text/javascript" src="{{ asset('js/home/index.js') }}"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
+<script type="text/javascript" src="{{ asset('js/home/index.js') }}"></script>
 @endsection

@@ -41,7 +41,7 @@ class Tour_Package extends Model {
                                 , 'tour_package_special_price' => $special_price
                                 , 'tour_package_period_start' => $dateStart
                                 , 'tour_package_period_end' => $dateEnd
-                                , 'tour_package_pdf' => $tour_package_code . '-' . $pdf
+                                , 'tour_package_pdf' => ($id_max + 1) . '-' . $pdf
                                 , 'created_by' => 'admin'
                                 , 'created_at' => $date
                                 , 'updated_by' => 'admin'
@@ -265,6 +265,16 @@ class Tour_Package extends Model {
         try {
             $tourPackage = Tour_Package::where('tour_package.tour_package_id', '=', $tour_package_id)
                     ->first();
+            return $tourPackage;
+        } catch (\Exception $ex) {
+            throw $ex;
+        }
+    }
+    
+    public function getTourPackegeByTourCountryId($tourCountryId) {
+        try {
+            $tourPackage = Tour_Package::where('tour_package.tour_country_id', '=', $tourCountryId)
+                    ->get();
             return $tourPackage;
         } catch (\Exception $ex) {
             throw $ex;

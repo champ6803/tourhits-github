@@ -23,7 +23,7 @@ class HomeController extends Controller {
     public function index() {
         $cate = new Category();
         $tourList = new Tour_Package();
-        $categoryList = $cate->getCategoryIndex();
+        $categoryList = $cate->getCategoryGenaral();
         $tourHitsPackageActiveList = $tourList->getTourPackageByCategory(100000, 0); //แพ็คเกจยอดนิยม
         $tourHitsPackageList = $tourList->getTourPackageByCategory(100000, 4);
         $tourSalesPackageActiveList = $tourList->getTourPackageByCategory(100001, 0); //แพ็คเกจยอดนิยม

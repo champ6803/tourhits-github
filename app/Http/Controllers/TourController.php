@@ -12,6 +12,7 @@ use App\Models\Tour_Package;
 use App\Models\Tour_Package_Day;
 use App\Models\Orders;
 use App\Models\Tour_Attraction_Day;
+use Illuminate\Support\Facades\Response;
 
 /* * x
  * Description of TourController
@@ -97,6 +98,19 @@ class TourController extends Controller {
         } catch (\Exception $ex) {
             return response($ex);
         }
+    }
+
+    public function getDownload($tour_package_id) {
+        $tourModel = new Tour_Package();
+        $tourPackage = $tourModel->getTourDetail($tour_package_id);
+        $pdf_name = $tourPackage->tour_package_pdf;
+        $file = "./images/pdf/" . $pdf_name;
+
+        $headers = array(
+            'Content-Type: application/pdf',
+        );
+
+        return Response::download($file, $pdf_name, $headers);
     }
 
 }

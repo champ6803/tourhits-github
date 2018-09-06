@@ -1,4 +1,7 @@
 $(function () {
+    $('#dashboard_main').addClass("active");
+    $('#order_list').addClass("active");
+    
     $('#order_table').bootstrapTable({
         search: true,
         pagination: true,
@@ -49,10 +52,6 @@ function loadOrderList(data) {
 
 function numberFormat(value, row, index, field) {
     return numberWithCommas(parseInt(value));
-}
-
-const numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function actionButton(value, row, index) {
