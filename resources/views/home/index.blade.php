@@ -616,7 +616,7 @@
             </div>
         </div>
         <!--        หน้าจอเวอชั่น mobile/pc-->        
-        <div class="card-xs js-flickity" data-flickity='{ "freeScroll": true, "wrapAround": true, "autoPlay": true }'>
+        <div id="card_area" class="card-xs js-flickity" data-flickity='{ "freeScroll": true, "wrapAround": true, "autoPlay": true }'>
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -748,7 +748,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -814,7 +814,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -880,7 +880,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -947,18 +947,6 @@
                 </div>
             </div>
         </div>
-                 
-
-<!--                    <div id="card_area" class="row">
-
-                    </div>
-                <div class="item">
-                    <div id="card_area2" class="row">
-
-                    </div>
-                </div>-->
-
-
         <a href="#" class="btn btn-nextpage">แพ็คเกจทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a> 
     </div>
 </section>
@@ -1077,7 +1065,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -1143,7 +1131,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -1209,7 +1197,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -1275,7 +1263,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
                     <div class="tour-cover lazyloaded" data-bg="../images/card/tour1.jpg" style="background-image: url(https://images.unsplash.com/photo-1509715367195-b9a491f63d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=748af9c34a5ed35a9c2c7ec49fea677c&auto=format&fit=crop&w=500&q=60);">
@@ -1342,7 +1330,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row">
             <a href="#" class="btn btn-nextpage">แพ็คเกจทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a>
         </div>
@@ -1372,15 +1360,6 @@
 
         </div>
     </div>
-<!--    <div class="container">
-        <div class="gallery js-flickity" data-flickity='{ "wrapAround": true }'>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-        </div>    
-    </div>    -->
 </section>
 
 @stop
@@ -1393,7 +1372,7 @@
     $(function () {
         $('#indx').addClass('menu-active');
     });
-   
+
 </script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="{{ asset('js/home/index.js') }}"></script>

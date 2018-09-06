@@ -4761,7 +4761,7 @@ Custom BS3
 }
 
 .card-xs {
-    display: none;
+    /*display: none;*/
     min-width: 100%;
     min-height: 200px;
     overflow-x: auto;

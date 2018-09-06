@@ -428,7 +428,7 @@ if (!isset($_SESSION['a_user'])) {
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="pages/app/app-chat.html">จัดการแบนเนอร์</a></li>
-                                <li><a href="{{ url('manage-front-country')}}">จัดการประเทศ</a></li>
+                                <li id="manage_front_country"><a href="{{ url('manage-front-country')}}">จัดการประเทศ</a></li>
                                 <li id="manage_front_category"><a href="{{ url('manage-front-category') }}">จัดการหมวดหมู่หน้าบ้าน</a></li>
                                 <li><a href="pages/app/app-ticket.html">จัดการสปอนเซอร์</a></li>
                                 <li><a href="pages/app/calendar.html">จัดการรีวิว</a></li>
@@ -808,8 +808,7 @@ if (!isset($_SESSION['a_user'])) {
         <!-- Lion_admin App -->
         <script src="js/template.js"></script>
 
-        <!-- Lion_admin dashboard demo (This is only for demo purposes) -->
-        <script src="js/pages/dashboard.js"></script>
+
 
         <!-- Lion_admin for demo purposes -->
         <script src="js/demo.js"></script>

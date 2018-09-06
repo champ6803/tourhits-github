@@ -39,7 +39,6 @@
                 <th>ชื่อประเทศ</th>
                 <th>ชื่อทัวร์ประเทศ</th>
                 <th>รายละเอียด</th>
-                <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
                 <th>ลบ</th>
@@ -53,7 +52,6 @@
                 <th>ชื่อประเทศ</th>
                 <th>ชื่อทัวร์ประเทศ</th>
                 <th>รายละเอียด</th>
-                <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
                 <th>ลบ</th>
@@ -80,15 +78,15 @@
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อประเทศ:</label>
             <div id="selectCountry"></div>
-            </br> 
+            <br> 
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
             <input type="text" class="form-control" id="tour_country_name" name="tour_country_name" maxlength="100" required="required">
-            </br> 
+            <br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
             <input type="text" class="form-control" id="tour_country_detail" name="tour_country_detail">
-            </br>
+<!--            <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
-            <input class="form-control" type="file" id="file" name="file">
+            <input class="form-control" type="file" id="file" name="file">-->
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
           </div>
 
@@ -117,16 +115,16 @@
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อประเทศ:</label>
             <div id="selectCountryEdit"></div>
-            </br> 
+            <br> 
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
             <input type="text" class="form-control" id="update_tour_country_name" name="update_tour_country_name" maxlength="100" >
             <input type="hidden" class="form-control" id="hidden_update_id" name="hidden_update_id">
-            </br> 
+            <br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
             <input type="text" class="form-control" id="update_tour_country_detail" name="update_tour_country_detail">
-            <br>
+<!--            <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
-            <input class="form-control" type="file" id="updateFile" name="file">
+            <input class="form-control" type="file" id="updateFile" name="file">-->
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
           </div>
       </div>

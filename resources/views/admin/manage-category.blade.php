@@ -71,7 +71,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="{{ URL::to('saveTourCategory') }}" method="post" enctype="multipart/form-data">
+      <form action="{{ URL::to('saveCategory') }}" method="post" enctype="multipart/form-data">
       <div class="modal-body">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อหมวดหมู่:</label>
@@ -101,7 +101,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-       <form action="{{ URL::to('updateTourCategory') }}" method="post" enctype="multipart/form-data">
+       <form action="{{ URL::to('updateCategory') }}" method="post" enctype="multipart/form-data">
         <div class="modal-body">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อหมวดหมู่:</label>
@@ -137,7 +137,7 @@
       </div>
         <div class="modal-footer" style="text-align: center">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="deleteClose">ยกเลิก</button>
-        <button type="button" class="btn btn-primary" onclick="deleteTourCategory()">ตกลง</button>
+        <button type="button" class="btn btn-primary" onclick="deleteCategory()">ตกลง</button>
       </div>
     </div>
   </div>

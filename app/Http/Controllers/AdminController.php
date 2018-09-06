@@ -516,11 +516,11 @@ class AdminController extends Controller {
     public function searchCategory() {
         $categoryModel = new Category();
         try {
-            $input_tour_category_name = $_POST['category_name'];
-            if ($input_tour_category_name != null) {
+            $input_tour_category_name = $_POST['input_tour_category_name'];
+            if ($input_tour_category_name != null && $input_tour_category_name != "") {
                 $tour_category = $categoryModel->getCategoryByName($input_tour_category_name);
             } else {
-                $tour_category = $categoryModel->getCategoryByName();
+                $tour_category = $categoryModel->getCategoryGenaral();
             }
             return response($tour_category);
         } catch (\Exception $e) {
@@ -529,7 +529,7 @@ class AdminController extends Controller {
         }
     }
 
-    public function saveTourCategory() {
+    public function saveCategory() {
         $categoryModel = new Category();
         try {
             $category_name = $_POST['tour_category_name'];
@@ -545,7 +545,7 @@ class AdminController extends Controller {
         }
     }
 
-    public function deleteTourCategory() {
+    public function deleteCategory() {
         $categoryModel = new Category();
         try {
             $id = $_POST['id'];
@@ -557,7 +557,7 @@ class AdminController extends Controller {
         }
     }
 
-    public function updateTourCategory() {
+    public function updateCategory() {
         $categoryModel = new Category();
         try {
 

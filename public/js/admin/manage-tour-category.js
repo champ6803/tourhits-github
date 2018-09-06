@@ -43,7 +43,7 @@ function createTable(){
     var Str = '';
             $.ajax({
             type: 'post',
-            url: 'searchTourCategory',
+            url: 'searchCategory',
             async: false,
             data: {'input_tour_category_name': null},
             headers: {
@@ -102,7 +102,7 @@ function saveTourCategory(){
     }
     $.ajax({
             type: 'post',
-            url: 'saveTourCategory',
+            url: 'saveCategory',
             async: false,
             data: {'tour_category_name': category_name
                 ,'tour_category_picture': tour_category_picture},
@@ -143,7 +143,7 @@ function findTourCategoryByName(tourCategoryName){
             var input_tour_category_name= $('#input_tour_category_name').val();
             $.ajax({
             type: 'post',
-            url: 'searchTourCategory',
+            url: 'searchCategory',
             async: false,
             data: {'input_tour_category_name': input_tour_category_name},
             headers: {
@@ -184,7 +184,7 @@ function deleteTourCategory(){
     var id= $('#hidden_remove_id').val();
             $.ajax({
             type: 'post',
-            url: 'deleteTourCategory',
+            url: 'deleteCategory',
             async: false,
             data: {'id': id},
             headers: {
@@ -205,14 +205,13 @@ function deleteTourCategory(){
         });
 }
 
-
-function updateTourCategory(){
+function updateCategory(){
     var id= $('#hidden_update_id').val();
     var update_tour_category_name= $('#update_tour_category_name').val();
     var tour_category_picture= $('#update_tour_category_picture').val();
             $.ajax({
             type: 'post',
-            url: 'updateTourCategory',
+            url: 'updateCategory',
             async: false,
             data: {'id': id,'update_tour_category_name': update_tour_category_name,
                 'tour_category_picture': tour_category_picture},
@@ -233,6 +232,3 @@ function updateTourCategory(){
             }
         });
 }
-
-
-

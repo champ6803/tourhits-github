@@ -75,10 +75,10 @@ class ManageFrontController extends Controller {
         try {
             $id = $_POST['hidden_update_id'];
             $update_tour_country_name = $_POST['update_tour_country_name'];
-            $tour_country_img = $_FILES['file']['name'];
+            //$tour_country_img = $_FILES['file']['name'];
             $country_id = $_POST['countryEdit'];
             $tour_country_detail = $_POST['update_tour_country_detail'];
-            $tourCountryModel->editTourCountry($id, $update_tour_country_name, $tour_country_img
+            $tourCountryModel->editTourCountry($id, $update_tour_country_name, null
                     , $country_id, $tour_country_detail);
             echo "<script>
                         alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
@@ -97,9 +97,9 @@ class ManageFrontController extends Controller {
             $tour_country_name = $_POST['tour_country_name'];
             $country_id = $_POST['country'];
             $tour_country_detail = $_POST['tour_country_detail'];
-            $tour_country_img = $_FILES['file']['name'];
+            //$tour_country_img = $_FILES['file']['name'];
             $tourCountryModel->insertTourCountry($tour_country_name, $country_id
-                    , $tour_country_detail, $tour_country_img);
+                    , $tour_country_detail, null);
             echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-front-country';

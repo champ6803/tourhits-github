@@ -74,7 +74,8 @@ class Category extends Model {
             $date = \Carbon\Carbon::now();
             Category::insert(
                     ['category_name' => $category_name
-                        , 'category_img' => $category_picture
+                        , 'category_type' => 'G'
+                        , 'category_img' => ($id_max + 1) . "-" . $category_picture
                         , 'category_block' => 1
                         , 'created_by' => 'admin'
                         , 'created_at' => $date
@@ -102,7 +103,7 @@ class Category extends Model {
     public function editCategory($id, $update_category_name, $category_picture) {
         try {
             $date = \Carbon\Carbon::now();
-            if (null == $tour_category_picture) {
+            if (null == $category_picture) {
                 \DB::table('category')
                         ->where('category_id', $id)
                         ->update(['category_name' => $update_category_name
@@ -112,12 +113,12 @@ class Category extends Model {
                 \DB::table('category')
                         ->where('category_id', $id)
                         ->update(['category_name' => $update_category_name
-                            , 'category_img' => $category_picture
+                            , 'category_img' => $id . "-" . $category_picture
                             , 'updated_at' => $date
                             , 'updated_by' => 'admin']);
                 if (Input::hasFile('file')) {
                     $file = Input::file('file');
-                    $file->move('images/category', ($id_max + 1) . "-" . $file->getClientOriginalName());
+                    $file->move('images/category', ($id) . "-" . $file->getClientOriginalName());
                 }
             }
         } catch (Exception $ex) {

@@ -43,6 +43,8 @@ $(function () {
                 formatter: actionButton
             }]
     });
+    
+    
     loadOrderList(orderList);
 });
 

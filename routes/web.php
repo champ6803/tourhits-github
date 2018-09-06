@@ -190,3 +190,13 @@ Route::post('saveTourCategory', 'ManageFrontController@saveTourCategory');
 Route::post('updateTourCategory', 'ManageFrontController@updateTourCategory');
 
 Route::post('removeTourCategory', 'ManageFrontController@removeTourCategory');
+
+// category manage //
+
+Route::post('searchCategory', 'AdminController@searchCategory');
+
+Route::post('saveCategory', 'AdminController@saveCategory');
+
+Route::post('deleteCategory', 'AdminController@deleteCategory');
+
+Route::post('updateCategory', 'AdminController@updateCategory');
