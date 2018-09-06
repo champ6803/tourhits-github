@@ -110,13 +110,8 @@
 /* css for tabs card */
 
 .tab-content {
-<<<<<<< HEAD
-    height: 280px;
-    padding:10px;
-=======
     height: 260px;
     padding:10px 10px 0px 10px;
->>>>>>> 52d7bfc833a45515ed5bcf0896a7da66b4ca0632
     /*border:1px solid #ddd;*/
     border-bottom:0px;
 }
@@ -252,34 +247,29 @@
     padding: 0 0px 0 0; 
     color: #EC2424; 
     text-align: right;
-<<<<<<< HEAD
-    font-size: 30px;
-    /*    font-weight: 900;*/
-=======
     font-size: 27px;
 /*    font-weight: 900;*/
->>>>>>> 52d7bfc833a45515ed5bcf0896a7da66b4ca0632
     margin-bottom: 5px;
     margin-top: -12px;
     /*    font-family: sans-serif;*/
 }
 
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 .card-special-price{
     text-decoration: line-through;
     padding: 0 0px 0 0; 
     color: #262626; 
     text-align: right;
     font-size: 20px;
-    /*    font-weight: 900;*/
-    /*margin-bottom: 5px;*/
-    /*    font-family: sans-serif;*/
-=======
+        font-weight: 900;
+    margin-bottom: 5px;
+        font-family: sans-serif;
+=======*/
 .card-price-dis{
     height: 24px;
     text-align: right;
     font-size: 18px;
->>>>>>> 52d7bfc833a45515ed5bcf0896a7da66b4ca0632
+    
 }
 
 .nav-tabs{
@@ -4028,10 +4018,10 @@ Custom BS3
 }
 .jumbo-docs {
     background: #ecf0f1;
-    color:;
+    /*color:;*/
 }
 .jumbo-docs-well {
-    background:;
+    /*background:;*/
 }
 .jumbo-singledoc {
     background: #34495e;
@@ -4055,10 +4045,7 @@ Custom BS3
 .fc-state-default {
     background-color: #fff;
     background-image: none;
-    background-image: none;
-    background-image: none;
-    background-image: none background-image: none;
-    background-repeat:none;
+    background-repeat: none;
     border-color: #ccc;
     border-color: #ccc;
     color: #333;
@@ -4078,7 +4065,7 @@ Custom BS3
     background-color: #428bca;
     /* changed BACKGROUND color */
 }
-.fc-event: hover {
+.fc-event:hover {
     border: 1px solid #357ebd;
     /* changed BORDER color */
     background-color: #357ebd;
@@ -4797,9 +4784,6 @@ Custom BS3
     }
 
     .card-xs {
-<<<<<<< HEAD
-        display: flex;
-=======
 /*      display: flex;*/
       min-width: 100%;
       min-height: 200px;
@@ -4916,7 +4900,6 @@ Custom BS3
     .tour-local-wrapper .swiper-button-next {
         right: 0;
         left: auto;
->>>>>>> 52d7bfc833a45515ed5bcf0896a7da66b4ca0632
     }
 }
 
@@ -5522,10 +5505,6 @@ Custom BS3
 
 }
 
-<<<<<<< HEAD
-.navbar-bot a.active {
-}
-=======
     .navbar-bot a.active {
     }
     
@@ -5749,7 +5728,4 @@ https://flickity.metafizzy.co
       /* half-width cells for larger devices */
       .gallery-cell { width: 50%; }
     }
-    
-    
-    
->>>>>>> 52d7bfc833a45515ed5bcf0896a7da66b4ca0632
+  

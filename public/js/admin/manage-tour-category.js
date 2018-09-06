@@ -50,9 +50,9 @@ function createTable(){
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (data) {
-                if (data != null) {
+                if (data) {
                  var rowNo=1;
-                 for(var row = 0 ; row<data.length ;row++){
+                 for(var row = 0 ; row < data.length ;row++){
                     Str=Str+'<tr>';
                     Str=Str+'<td>'+rowNo+'</td>';
                     Str=Str+'<td>'+data[row].category_name+'</td>';

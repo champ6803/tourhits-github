@@ -513,7 +513,7 @@ class AdminController extends Controller {
         }
     }
 
-    public function searchTourCategory() {
+    public function searchCategory() {
         $categoryModel = new Category();
         try {
             $input_tour_category_name = $_POST['category_name'];

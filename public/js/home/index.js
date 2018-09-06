@@ -1,6 +1,6 @@
 $(function () {
-    renderTourPackage(tourHitsPackageActiveList, tourHitPeriodActive, "card_area");
-    renderTourPackageMobile(tourHitsPackageActiveList, tourHitPeriodActive, 'card_tourhits_mobile');
+    //renderTourPackage(tourHitsPackageActiveList, tourHitPeriodActive, "card_area");
+    //renderTourPackageMobile(tourHitsPackageActiveList, tourHitPeriodActive, 'card_tourhits_mobile');
     //renderTourPackage(tourHitsPackageList, tourHitPeriod, "card_area2");
 
     //renderTourPackage(tourSalesPackageActiveList,tourSalesPeriodActive, "card_sales" );
