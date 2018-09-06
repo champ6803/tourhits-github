@@ -12,6 +12,7 @@
          max-width: 280px;
          overflow:hidden;  
     }  
+
    
 </style>
     <!-- BREADCRUMB -->
