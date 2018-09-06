@@ -247,11 +247,11 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         </div>
                         <div class="item">
                             <h6><i class="fas fa-share-alt" style="padding-right: 10px"></i>แชร์</h6>
-                            <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
+                            <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook"></i> Facebook</a></p>
                         </div>
                         <div class="item">
                             <h6><i class="fas fa-download" style="padding-right: 10px"></i>ดาวน์โหลด</h6>
-                            <p><a href="#"><i class="fas fa-file-pdf"></i>&nbsp;PDF</a></p>
+                            <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="fas fa-file-pdf"></i>&nbsp;PDF</a></p>
 
                         </div>
                     </div>
@@ -798,9 +798,9 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <li>
                             <a href="#tabs-2">เงื่อนไขโปรแกรมทัวร์</a>
                         </li>
-                        <li>
-                            <a href="#tabs-3">Review &amp; Rating</a>
-                        </li>
+                        <!--                        <li>
+                                                    <a href="#tabs-3">Review &amp; Rating</a>
+                                                </li>-->
                     </ul>
                     <div class="product-tabs__content">
                         <div id="tabs-1">
@@ -813,7 +813,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     @foreach ($tourAttractionDayList as $tourAttractionDay)
                                     @if($tourAttractionDay->tour_package_day_id == $tourPackageDay->tour_package_day_id)
                                     <p style="font-size:24px;"><i class="fa fa-image"></i>&nbsp;{{$tourAttractionDay->attraction_name}}</p>
-                                        <img src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
+                                    <img src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                                     <br>
                                     <br>
                                     @endif
@@ -1023,235 +1023,235 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </tbody>
                             </table>-->
                         </div>
-                        <div id="tabs-3">
-<!--                            <div id="reviews">
-                                <div class="rating-info">
-                                    <div class="average-rating-review good">
-                                        <span class="count">7.5</span>
-                                        <em>Average rating</em>
-                                        <span>Good</span>
-                                    </div>
-                                    <ul class="rating-review">
-                                        <li>
-                                            <em>Facility</em>
-                                            <span>7.5</span>
-                                        </li>
-                                        <li>
-                                            <em>Human</em>
-                                            <span>9.0</span>
-                                        </li>
-                                        <li>
-                                            <em>Service</em>
-                                            <span>9.5</span>
-                                        </li>
-                                        <li>
-                                            <em>Interesting</em>
-                                            <span>8.7</span>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="write-review">Write a review</a>
-                                </div>
-                                <div id="add_review">
-                                    <h3 class="comment-reply-title">Add a review</h3>
-                                    <form>
-                                        <div class="comment-form-author">
-                                            <label for="author">Name <span class="required">*</span></label>
-                                            <input id="author" type="text">
-                                        </div>
-                                        <div class="comment-form-email">
-                                            <label for="email">Email <span class="required">*</span></label>
-                                            <input id="email" type="text">
-                                        </div>
-                                        <div class="comment-form-rating">
-                                            <h4>Your Rating</h4>
-                                            <div class="comment-form-rating__content">
-                                                <div class="item facility">
-                                                    <label>Facility</label>
-                                                    <select class="awe-select">
-                                                        <option>5.0</option>
-                                                        <option>6.5</option>
-                                                        <option>7.5</option>
-                                                        <option>8.5</option>
-                                                        <option>9.0</option>
-                                                        <option>10</option>
-                                                    </select>
-                                                </div>
-                                                <div class="item human">
-                                                    <label>Human</label>
-                                                    <select class="awe-select">
-                                                        <option>5.0</option>
-                                                        <option>6.5</option>
-                                                        <option>7.5</option>
-                                                        <option>8.5</option>
-                                                        <option>9.0</option>
-                                                        <option>10</option>
-                                                    </select>
-                                                </div>
-                                                <div class="item service">
-                                                    <label>Service</label>
-                                                    <select class="awe-select">
-                                                        <option>5.0</option>
-                                                        <option>6.5</option>
-                                                        <option>7.5</option>
-                                                        <option>8.5</option>
-                                                        <option>9.0</option>
-                                                        <option>10</option>
-                                                    </select>
-                                                </div>
-                                                <div class="item interesting">
-                                                    <label>Interesting</label>
-                                                    <select class="awe-select">
-                                                        <option>5.0</option>
-                                                        <option>6.5</option>
-                                                        <option>7.5</option>
-                                                        <option>8.5</option>
-                                                        <option>9.0</option>
-                                                        <option>10</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-form-comment">
-                                            <label for="comment">Your Review</label>
-                                            <textarea id="comment"></textarea>
-                                        </div>
-                                        <div class="form-submit">
-                                            <input type="submit" class="submit" value="Submit">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div id="comments">
-                                    <ol class="commentlist">
-                                        <li>
-                                            <div class="comment-box">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('images/img/demo-thumb.jpg')}}" alt="">
-                                                </div>
-                                                <div class="comment-body">
-                                                    <p class="meta">
-                                                        <strong>Nguyen Gallahendahry</strong>
-                                                        <span class="time">December 10, 2012</span>
-                                                    </p>
-                                                    <div class="description">
-                                                        <p>Takes me back to my youth. I love the design of this soda machine. A bit pricy though..!</p>
-                                                    </div>
-
-                                                    <div class="rating-info">
-                                                        <div class="average-rating-review good">
-                                                            <span class="count">7.5</span>
-                                                            <em>Average rating</em>
-                                                            <span>Good</span>
-                                                        </div>
-                                                        <ul class="rating-review">
-                                                            <li>
-                                                                <em>Facility</em>
-                                                                <span>7.5</span>
-                                                            </li>
-                                                            <li>
-                                                                <em>Human</em>
-                                                                <span>9.0</span>
-                                                            </li>
-                                                            <li>
-                                                                <em>Service</em>
-                                                                <span>9.5</span>
-                                                            </li>
-                                                            <li>
-                                                                <em>Interesting</em>
-                                                                <span>8.7</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="comment-box">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('images/img/demo-thumb.jpg')}}" alt="">
-                                                </div>
-                                                <div class="comment-body">
-                                                    <p class="meta">
-                                                        <strong>James Bond not 007</strong>
-                                                        <span class="time">December 10, 2012</span>
-                                                    </p>
-                                                    <div class="description">
-                                                        <p>Takes me back to my youth. I love the design of this soda machine. A bit pricy though..!</p>
-                                                    </div>
-
-                                                    <div class="rating-info">
-                                                        <div class="average-rating-review good">
-                                                            <span class="count">7.5</span>
-                                                            <em>Average rating</em>
-                                                            <span>Good</span>
-                                                        </div>
-                                                        <ul class="rating-review">
-                                                            <li>
-                                                                <em>Facility</em>
-                                                                <span>7.5</span>
-                                                            </li>
-                                                            <li>
-                                                                <em>Human</em>
-                                                                <span>9.0</span>
-                                                            </li>
-                                                            <li>
-                                                                <em>Service</em>
-                                                                <span>9.5</span>
-                                                            </li>
-                                                            <li>
-                                                                <em>Interesting</em>
-                                                                <span>8.7</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="comment-box">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('images/img/demo-thumb.jpg') }}" alt="">
-                                                </div>
-                                                <div class="comment-body">
-                                                    <p class="meta">
-                                                        <strong>Bratt not Pitt</strong>
-                                                        <span class="time">December 10, 2012</span>
-                                                    </p>
-                                                    <div class="description">
-                                                        <p>Takes me back to my youth. I love the design of this soda machine. A bit pricy though..!</p>
-                                                    </div>
-
-                                                    <div class="rating-info">
-                                                        <div class="average-rating-review fine">
-                                                            <span class="count">5.0</span>
-                                                            <em>Average rating</em>
-                                                            <span>Fine</span>
-                                                        </div>
-                                                        <ul class="rating-review">
-                                                            <li>
-                                                                <em>Facility</em>
-                                                                <span>7.5</span>
-                                                            </li>
-                                                            <li>
-                                                                <em>Human</em>
-                                                                <span>9.0</span>
-                                                            </li>
-                                                            <li>
-                                                                <em>Service</em>
-                                                                <span>9.5</span>
-                                                            </li>
-                                                            <li>
-                                                                <em>Interesting</em>
-                                                                <span>8.7</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>-->
-                        </div>
+                        <!--                        <div id="tabs-3">
+                                                                                <div id="reviews">
+                                                                                    <div class="rating-info">
+                                                                                        <div class="average-rating-review good">
+                                                                                            <span class="count">7.5</span>
+                                                                                            <em>Average rating</em>
+                                                                                            <span>Good</span>
+                                                                                        </div>
+                                                                                        <ul class="rating-review">
+                                                                                            <li>
+                                                                                                <em>Facility</em>
+                                                                                                <span>7.5</span>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <em>Human</em>
+                                                                                                <span>9.0</span>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <em>Service</em>
+                                                                                                <span>9.5</span>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <em>Interesting</em>
+                                                                                                <span>8.7</span>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                        <a href="#" class="write-review">Write a review</a>
+                                                                                    </div>
+                                                                                    <div id="add_review">
+                                                                                        <h3 class="comment-reply-title">Add a review</h3>
+                                                                                        <form>
+                                                                                            <div class="comment-form-author">
+                                                                                                <label for="author">Name <span class="required">*</span></label>
+                                                                                                <input id="author" type="text">
+                                                                                            </div>
+                                                                                            <div class="comment-form-email">
+                                                                                                <label for="email">Email <span class="required">*</span></label>
+                                                                                                <input id="email" type="text">
+                                                                                            </div>
+                                                                                            <div class="comment-form-rating">
+                                                                                                <h4>Your Rating</h4>
+                                                                                                <div class="comment-form-rating__content">
+                                                                                                    <div class="item facility">
+                                                                                                        <label>Facility</label>
+                                                                                                        <select class="awe-select">
+                                                                                                            <option>5.0</option>
+                                                                                                            <option>6.5</option>
+                                                                                                            <option>7.5</option>
+                                                                                                            <option>8.5</option>
+                                                                                                            <option>9.0</option>
+                                                                                                            <option>10</option>
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                    <div class="item human">
+                                                                                                        <label>Human</label>
+                                                                                                        <select class="awe-select">
+                                                                                                            <option>5.0</option>
+                                                                                                            <option>6.5</option>
+                                                                                                            <option>7.5</option>
+                                                                                                            <option>8.5</option>
+                                                                                                            <option>9.0</option>
+                                                                                                            <option>10</option>
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                    <div class="item service">
+                                                                                                        <label>Service</label>
+                                                                                                        <select class="awe-select">
+                                                                                                            <option>5.0</option>
+                                                                                                            <option>6.5</option>
+                                                                                                            <option>7.5</option>
+                                                                                                            <option>8.5</option>
+                                                                                                            <option>9.0</option>
+                                                                                                            <option>10</option>
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                    <div class="item interesting">
+                                                                                                        <label>Interesting</label>
+                                                                                                        <select class="awe-select">
+                                                                                                            <option>5.0</option>
+                                                                                                            <option>6.5</option>
+                                                                                                            <option>7.5</option>
+                                                                                                            <option>8.5</option>
+                                                                                                            <option>9.0</option>
+                                                                                                            <option>10</option>
+                                                                                                        </select>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="comment-form-comment">
+                                                                                                <label for="comment">Your Review</label>
+                                                                                                <textarea id="comment"></textarea>
+                                                                                            </div>
+                                                                                            <div class="form-submit">
+                                                                                                <input type="submit" class="submit" value="Submit">
+                                                                                            </div>
+                                                                                        </form>
+                                                                                    </div>
+                                                                                    <div id="comments">
+                                                                                        <ol class="commentlist">
+                                                                                            <li>
+                                                                                                <div class="comment-box">
+                                                                                                    <div class="avatar">
+                                                                                                        <img src="{{ asset('images/img/demo-thumb.jpg')}}" alt="">
+                                                                                                    </div>
+                                                                                                    <div class="comment-body">
+                                                                                                        <p class="meta">
+                                                                                                            <strong>Nguyen Gallahendahry</strong>
+                                                                                                            <span class="time">December 10, 2012</span>
+                                                                                                        </p>
+                                                                                                        <div class="description">
+                                                                                                            <p>Takes me back to my youth. I love the design of this soda machine. A bit pricy though..!</p>
+                                                                                                        </div>
+                                                    
+                                                                                                        <div class="rating-info">
+                                                                                                            <div class="average-rating-review good">
+                                                                                                                <span class="count">7.5</span>
+                                                                                                                <em>Average rating</em>
+                                                                                                                <span>Good</span>
+                                                                                                            </div>
+                                                                                                            <ul class="rating-review">
+                                                                                                                <li>
+                                                                                                                    <em>Facility</em>
+                                                                                                                    <span>7.5</span>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <em>Human</em>
+                                                                                                                    <span>9.0</span>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <em>Service</em>
+                                                                                                                    <span>9.5</span>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <em>Interesting</em>
+                                                                                                                    <span>8.7</span>
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <div class="comment-box">
+                                                                                                    <div class="avatar">
+                                                                                                        <img src="{{ asset('images/img/demo-thumb.jpg')}}" alt="">
+                                                                                                    </div>
+                                                                                                    <div class="comment-body">
+                                                                                                        <p class="meta">
+                                                                                                            <strong>James Bond not 007</strong>
+                                                                                                            <span class="time">December 10, 2012</span>
+                                                                                                        </p>
+                                                                                                        <div class="description">
+                                                                                                            <p>Takes me back to my youth. I love the design of this soda machine. A bit pricy though..!</p>
+                                                                                                        </div>
+                                                    
+                                                                                                        <div class="rating-info">
+                                                                                                            <div class="average-rating-review good">
+                                                                                                                <span class="count">7.5</span>
+                                                                                                                <em>Average rating</em>
+                                                                                                                <span>Good</span>
+                                                                                                            </div>
+                                                                                                            <ul class="rating-review">
+                                                                                                                <li>
+                                                                                                                    <em>Facility</em>
+                                                                                                                    <span>7.5</span>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <em>Human</em>
+                                                                                                                    <span>9.0</span>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <em>Service</em>
+                                                                                                                    <span>9.5</span>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <em>Interesting</em>
+                                                                                                                    <span>8.7</span>
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <div class="comment-box">
+                                                                                                    <div class="avatar">
+                                                                                                        <img src="{{ asset('images/img/demo-thumb.jpg') }}" alt="">
+                                                                                                    </div>
+                                                                                                    <div class="comment-body">
+                                                                                                        <p class="meta">
+                                                                                                            <strong>Bratt not Pitt</strong>
+                                                                                                            <span class="time">December 10, 2012</span>
+                                                                                                        </p>
+                                                                                                        <div class="description">
+                                                                                                            <p>Takes me back to my youth. I love the design of this soda machine. A bit pricy though..!</p>
+                                                                                                        </div>
+                                                    
+                                                                                                        <div class="rating-info">
+                                                                                                            <div class="average-rating-review fine">
+                                                                                                                <span class="count">5.0</span>
+                                                                                                                <em>Average rating</em>
+                                                                                                                <span>Fine</span>
+                                                                                                            </div>
+                                                                                                            <ul class="rating-review">
+                                                                                                                <li>
+                                                                                                                    <em>Facility</em>
+                                                                                                                    <span>7.5</span>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <em>Human</em>
+                                                                                                                    <span>9.0</span>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <em>Service</em>
+                                                                                                                    <span>9.5</span>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <em>Interesting</em>
+                                                                                                                    <span>8.7</span>
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </li>
+                                                                                        </ol>
+                                                                                    </div>
+                                                                                </div>
+                                                </div>-->
                     </div>
                 </div>
                 <div class="period-table-bottom">
@@ -1266,6 +1266,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         <span class="d-none d-sm-inline">ผู้ใหญ่พักคู่<br> ท่านละ</span>
                                     </th>
                                     <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4">ราคาพิเศษ<br> ท่านละ</th>
                                     <th class="align-middle d-none d-sm-table-cell py-4"></th>
                                 </tr>
                             </thead>
@@ -1278,11 +1279,28 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <td class="align-middle days-from text-sm-center">
                                         {{$tourPackageObj->tour_period_end}}
                                     </td>
+                                    @if($tourPackageObj->tour_period_adult_special_price != 0)
+                                    <td style="text-decoration: line-through;" class="align-middle days-from text-sm-center">
+                                        ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
+                                    </td>
+                                    <td style="text-decoration: line-through;" class="align-middle days-from text-sm-center">
+                                        ฿{{number_format($tourPackageObj->tour_period_child_price)}}
+                                    </td>
+                                    @else
                                     <td class="align-middle days-from text-sm-center">
                                         ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
                                     </td>
                                     <td class="align-middle days-from text-sm-center">
                                         ฿{{number_format($tourPackageObj->tour_period_child_price)}}
+                                    </td>
+                                    @endif
+
+                                    <td class="align-middle days-from text-sm-center">
+                                        @if($tourPackageObj->tour_period_adult_special_price != 0)
+                                        ฿{{number_format($tourPackageObj->tour_period_adult_special_price)}}
+                                        @else
+                                        -
+                                        @endif
                                     </td>
                                     <td class="align-middle days-from text-sm-center">
                                         @if($tourPackageObj->tour_period_status == 'Y')
@@ -1299,7 +1317,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     </div>
                     <div class="row">
                         <div class="pdf-download btn btn-rounded">
-                            <a id="" href="">ดาวน์โหลดเอกสารทัวร์นี้ (PDF)</a>
+                            <a id="" href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}">ดาวน์โหลดเอกสารทัวร์นี้ (PDF)</a>
                         </div>
                     </div> 
                 </div>
@@ -1372,44 +1390,44 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </div>
                                 <!--<span>อายุ 11 หรือต่ำกว่า</span>-->
                             </div>
-<!--                            <div class="form-elements form-adult">
-                                <label>ผู้ใหญ่ (พักเดี่ยว)</label>
-                                <div class="form-item">
-                                    <select id="alone_price" class="awe-select" disabled="">
-                                        <option selected val="0">0</option>
-                                        <option val="1">1</option>
-                                        <option val="2">2</option>
-                                        <option val="3">3</option>
-                                        <option val="4">4</option>
-                                        <option val="5">5</option>
-                                        <option val="6">6</option>
-                                        <option val="7">7</option>
-                                        <option val="8">8</option>
-                                        <option val="9">9</option>
-                                        <option val="10">10</option>
-                                    </select>
-                                </div>
-                                <span>อายุ 12 ปีขึ้นไป</span>
-                            </div>
-                            <div class="form-elements form-kids">
-                                <label>เด็ก (ไม่เพิ่มเตียง)</label>
-                                <div class="form-item">
-                                    <select id="child_nb_price" class="awe-select" disabled="">
-                                        <option selected val="0">0</option>
-                                        <option val="1">1</option>
-                                        <option val="2">2</option>
-                                        <option val="3">3</option>
-                                        <option val="4">4</option>
-                                        <option val="5">5</option>
-                                        <option val="6">6</option>
-                                        <option val="7">7</option>
-                                        <option val="8">8</option>
-                                        <option val="9">9</option>
-                                        <option val="10">10</option>
-                                    </select>
-                                </div>
-                                <span>อายุ 11 หรือต่ำกว่า</span>
-                            </div>-->
+                            <!--                            <div class="form-elements form-adult">
+                                                            <label>ผู้ใหญ่ (พักเดี่ยว)</label>
+                                                            <div class="form-item">
+                                                                <select id="alone_price" class="awe-select" disabled="">
+                                                                    <option selected val="0">0</option>
+                                                                    <option val="1">1</option>
+                                                                    <option val="2">2</option>
+                                                                    <option val="3">3</option>
+                                                                    <option val="4">4</option>
+                                                                    <option val="5">5</option>
+                                                                    <option val="6">6</option>
+                                                                    <option val="7">7</option>
+                                                                    <option val="8">8</option>
+                                                                    <option val="9">9</option>
+                                                                    <option val="10">10</option>
+                                                                </select>
+                                                            </div>
+                                                            <span>อายุ 12 ปีขึ้นไป</span>
+                                                        </div>
+                                                        <div class="form-elements form-kids">
+                                                            <label>เด็ก (ไม่เพิ่มเตียง)</label>
+                                                            <div class="form-item">
+                                                                <select id="child_nb_price" class="awe-select" disabled="">
+                                                                    <option selected val="0">0</option>
+                                                                    <option val="1">1</option>
+                                                                    <option val="2">2</option>
+                                                                    <option val="3">3</option>
+                                                                    <option val="4">4</option>
+                                                                    <option val="5">5</option>
+                                                                    <option val="6">6</option>
+                                                                    <option val="7">7</option>
+                                                                    <option val="8">8</option>
+                                                                    <option val="9">9</option>
+                                                                    <option val="10">10</option>
+                                                                </select>
+                                                            </div>
+                                                            <span>อายุ 11 หรือต่ำกว่า</span>
+                                                        </div>-->
                         </div>
                         <div class="price">
                             <em>ประเมินราคา</em>
@@ -1423,148 +1441,148 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             </div>
                         </div>
                     </div>
-                <!-- Trigger the modal with a button -->
-                <div class="call-and-line">
-                    <div class="call-to-book">
-                        <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal">
+                    <!-- Trigger the modal with a button -->
+                    <div class="call-and-line">
+                        <div class="call-to-book">
+                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal">
                                 <i class="awe-icon awe-icon-phone"></i>
                                 <span style="font-size: 25px">โทรจอง</span>                       
-                        </button>
-                    </div> 
-                    <!-- Modal -->
-                    <div id="myModal" class="modal fade" role="dialog">
-                      <div class="modal-dialog">
+                            </button>
+                        </div> 
+                        <!-- Modal -->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
-                            <div class="modal-title">จองผ่านโทรศัพท์</div>
-                          </div>
-                          <div class="modal-body">
-                            <div class="title">กรุณาแจ้งรหัสทัวร์นี้กับพนักงานของเรา</div>
-                            <div class="title">ถ้าต้องการจะจองทัวร์นี้</div>
-                            <div class="tag">TH000001</div>
-                            <div class="program">ชื่อโปรแกรมทัวร์</div>
-                            <div class="trip-item">
-                                <div class="item-media">
-                                    <div class="image-cover">
-                                        <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
+                                        <div class="modal-title">จองผ่านโทรศัพท์</div>
                                     </div>
-                                    <!--                                        <div class="trip-icon">
-                                                                                <img src="images/trip.jpg" alt="">
-                                                                            </div>-->
-                                </div>
-                                <div class="item-body">
-                                    <div class="hilight">
-                                        <i class="far fa-flag"></i>
-                                        <div class="detail">
-                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                    <div class="modal-body">
+                                        <div class="title">กรุณาแจ้งรหัสทัวร์นี้กับพนักงานของเรา</div>
+                                        <div class="title">ถ้าต้องการจะจองทัวร์นี้</div>
+                                        <div class="tag">TH000001</div>
+                                        <div class="program">ชื่อโปรแกรมทัวร์</div>
+                                        <div class="trip-item">
+                                            <div class="item-media">
+                                                <div class="image-cover">
+                                                    <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
+                                                </div>
+                                                <!--                                        <div class="trip-icon">
+                                                                                            <img src="images/trip.jpg" alt="">
+                                                                                        </div>-->
+                                            </div>
+                                            <div class="item-body">
+                                                <div class="hilight">
+                                                    <i class="far fa-flag"></i>
+                                                    <div class="detail">
+                                                        ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                                    </div>
+                                                </div>
+                                                <div class="item-list">
+                                                    <ul>
+                                                        <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
+                                                        <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
+                                                    </ul>
+                                                </div>                                  
+                                            </div>
+                                            <div class="item-price-more">
+                                                <div class="price">
+                                                    ราคา
+                                                    <ins>
+                                                        <span class="amount">฿12,000</span>
+                                                    </ins>
+                                                    <!--<del>
+                                                            <span class="amount">$200</span>
+                                                    </del>-->
+
+                                                </div>
+
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="item-list">
-                                        <ul>
-                                            <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
-                                            <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
-                                        </ul>
-                                    </div>                                  
-                                </div>
-                                <div class="item-price-more">
-                                    <div class="price">
-                                        ราคา
-                                        <ins>
-                                            <span class="amount">฿12,000</span>
-                                        </ins>
-                                        <!--<del>
-                                                <span class="amount">$200</span>
-                                        </del>-->
 
                                     </div>
-                                    
+                                    <div class="modal-footer" style="text-align:center;">
+                                        <button type="button" class="awe-btn cancel" data-dismiss="modal">ยกเลิก</button>
+                                        <a href="tel:02-379-1249" class="awe-btn call"><i class="awe-icon awe-icon-phone"></i> โทรหาเรา</a> 
+                                    </div>
                                 </div>
                             </div>
-                            
-                          </div>
-                          <div class="modal-footer" style="text-align:center;">
-                              <button type="button" class="awe-btn cancel" data-dismiss="modal">ยกเลิก</button>
-                              <a href="tel:02-379-1249" class="awe-btn call"><i class="awe-icon awe-icon-phone"></i> โทรหาเรา</a> 
-                          </div>
                         </div>
-                      </div>
-                    </div>
-                    
-                    <!-- Trigger the modal with a button -->
-                    <div class="call-to-book2">
-                        <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal2">    
-                            <i class="fab fa-line"></i>                            
-                            <span style="font-size: 25px">จองผ่านไลน์</span>
-                        </button>
-                    </div>
-                    <!-- Modal -->
-                    <div id="myModal2" class="modal fade" role="dialog">
-                      <div class="modal-dialog">
-                          
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-header header-line">
-                            <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
-                            <div class="modal-title">จองผ่านทางไลน์</div>
-                          </div>
-                          <div class="modal-body">
-                           <div class="title">กรุณาแจ้งรหัสทัวร์นี้กับพนักงานของเรา</div>
-                           <div class="title">ถ้าต้องการจะจองทัวร์นี้</div>
-                            <div class="tag">TH000001</div>
-                            <div class="program">ชื่อโปรแกรมทัวร์</div>
-                            <div class="trip-item">
-                                <div class="item-media">
-                                    <div class="image-cover">
-                                        <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
+
+                        <!-- Trigger the modal with a button -->
+                        <div class="call-to-book2">
+                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal2">    
+                                <i class="fab fa-line"></i>                            
+                                <span style="font-size: 25px">จองผ่านไลน์</span>
+                            </button>
+                        </div>
+                        <!-- Modal -->
+                        <div id="myModal2" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header header-line">
+                                        <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
+                                        <div class="modal-title">จองผ่านทางไลน์</div>
                                     </div>
-                                    <!--                                        <div class="trip-icon">
-                                                                                <img src="images/trip.jpg" alt="">
-                                                                            </div>-->
-                                </div>
-                                <div class="item-body">
-                                    <div class="hilight">
-                                        <i class="far fa-flag"></i>
-                                        <div class="detail">
-                                            ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                    <div class="modal-body">
+                                        <div class="title">กรุณาแจ้งรหัสทัวร์นี้กับพนักงานของเรา</div>
+                                        <div class="title">ถ้าต้องการจะจองทัวร์นี้</div>
+                                        <div class="tag">TH000001</div>
+                                        <div class="program">ชื่อโปรแกรมทัวร์</div>
+                                        <div class="trip-item">
+                                            <div class="item-media">
+                                                <div class="image-cover">
+                                                    <img src="https://images.unsplash.com/photo-1515569125-d5bfe76b8efc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=16576be7bfdd968382c6db561f1db63d&auto=format&fit=crop&w=500&q=60" alt="">
+                                                </div>
+                                                <!--                                        <div class="trip-icon">
+                                                                                            <img src="images/trip.jpg" alt="">
+                                                                                        </div>-->
+                                            </div>
+                                            <div class="item-body">
+                                                <div class="hilight">
+                                                    <i class="far fa-flag"></i>
+                                                    <div class="detail">
+                                                        ล่องเรือมังกร | ยอดเขาบานาฮิลล์ | Ba Na Hills | หมู่บ้านแกะสลักหินอ่อน | วัดหลินอึ้ง | สวนดอกไม้เมืองหนาว | กระเช้าไฟฟ้าเคเบิลคาร์ | รถรางเวียดนาม | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4 | ทดสอบบรรทัดที่ 4
+                                                    </div>
+                                                </div>
+                                                <div class="item-list">
+                                                    <ul>
+                                                        <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
+                                                        <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
+                                                    </ul>
+                                                </div>                                  
+                                            </div>
+                                            <div class="item-price-more">
+                                                <div class="price">
+                                                    ราคา
+                                                    <ins>
+                                                        <span class="amount">฿12,000</span>
+                                                    </ins>
+                                                    <!--<del>
+                                                            <span class="amount">$200</span>
+                                                    </del>-->
+
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="item-list">
-                                        <ul>
-                                            <li><i class="far fa-clock"></i> 2 วัน 1 คืน</li>
-                                            <li><i class="far fa-calendar"></i> ช่วงเวลา เม.ย. - ส.ค.</li>
-                                        </ul>
-                                    </div>                                  
-                                </div>
-                                <div class="item-price-more">
-                                    <div class="price">
-                                        ราคา
-                                        <ins>
-                                            <span class="amount">฿12,000</span>
-                                        </ins>
-                                        <!--<del>
-                                                <span class="amount">$200</span>
-                                        </del>-->
-
+                                    <div class="modal-footer" style="text-align:center;">
+                                        <button type="button" class="awe-btn cancel" data-dismiss="modal">ยกเลิก</button>
+                                        <a target="_blank" rel="noopener noreferrer" href="http://line.me/ti/p/%40tourhits" class="awe-btn line"><i class="fab fa-line"></i> คุยไลน์</a>
                                     </div>
-                                    
                                 </div>
                             </div>
-                          </div>
-                          <div class="modal-footer" style="text-align:center;">
-                            <button type="button" class="awe-btn cancel" data-dismiss="modal">ยกเลิก</button>
-                            <a target="_blank" rel="noopener noreferrer" href="http://line.me/ti/p/%40tourhits" class="awe-btn line"><i class="fab fa-line"></i> คุยไลน์</a>
-                          </div>
                         </div>
-                      </div>
+                        <!--End Trigger the modal with a button -->                 
                     </div>
-                <!--End Trigger the modal with a button -->                 
                 </div>
             </div>
         </div>
-    </div>
 </section>
 
 <!--period-table    -->

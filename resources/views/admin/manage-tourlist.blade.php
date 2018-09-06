@@ -1,7 +1,6 @@
 @extends('layout.main-admin')
 @section('page_title','Admin Management')
 @section('main-content')
-<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -520,7 +519,7 @@
                                                         <label for="attraction_select" class="col-sm-2 control-label">Attraction</label>
 
                                                         <div class="col-sm-10">
-                                                            <select id="attraction_select" class="form-control js-example-basic-multiple"name="attraction_select[]" multiple="multiple">
+                                                            <select id="attraction_select" class="form-control js-example-basic-multiple" name="attraction_select[]" multiple="multiple">
                                                             </select>
                                                         </div>
                                                     </div>
@@ -666,7 +665,6 @@
         </form>
     </section>
 </div>
-
 @stop
 @section('footer_scripts')
 <script type="text/javascript" src="{{asset('js/admin/manage-tour-list.js')}}"></script>

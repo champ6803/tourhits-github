@@ -2,6 +2,9 @@ var period_data = [];
 var number = 0;
 var page = "new";
 $(function () {
+    $('#managetour').addClass("active");
+    $('#tour_package_list').addClass("active");
+    
     $('.attraction_select').select2({width: '100%'});
     $('#attraction_select').select2({width: '100%'});
     $('#holiday_select').select2({width: '100%'});
@@ -421,13 +424,9 @@ function numberFormat(value, row, index, field) {
     return numberWithCommas(parseInt(value));
 }
 
-const numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 function initValues() {
     if (tourPackageDetail) {
-        
+
         if (tourPackageDetail.tourPackage) {
             $('#tour_country').val(tourPackageDetail.tourPackage.tour_country_id);
             $('#tour_name').val(tourPackageDetail.tourPackage.tour_package_name);
@@ -444,7 +443,7 @@ function initValues() {
             $("#file_show").attr("src", src);
             $("#file_show").removeClass('hide');
             $("#pdf_show").html(tourPackageDetail.tourPackage.tour_package_pdf);
-            
+
 
             //$('#div_file').html('<div class="row"><div class="col-xs-8"><img height="100px;" src="images/tour/tour6.jpg"></div><div class="col-xs-4"><input class="form-control" type="file" id="file" name="file"><input type="hidden" value="{{ csrf_token() }}" name="_token"></div></div>');
         }
@@ -464,6 +463,14 @@ function initValues() {
                 table = table + "<td align='right'>" + numberWithCommas(this.tour_period_adult_special_price) + '<input type="hidden" name="special_price[]" value="' + this.tour_period_adult_special_price + '" /></td>';
                 table = table + "</tr>";
                 $('#period_body').append(table);
+            });
+        }
+        if (tourPackageDetail.tourImage) {
+            var o = tourPackageDetail.tourImage;
+            $.each(o, function (key, val) {
+                var src = "images/tour-images/" + this.tour_image_name;
+                $("#file" + (key + 1) + "_show").attr("src", src);
+                $("#file" + (key + 1) + "_show").removeClass('hide');
             });
         }
         if (tourPackageDetail.tourPackageDay && tourPackageDetail.tourPackageDay.length > 0) {

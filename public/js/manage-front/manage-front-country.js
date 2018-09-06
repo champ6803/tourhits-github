@@ -317,6 +317,3 @@ function updateTourCountry(){
             }
         });
 }
-
-
-

@@ -1,7 +1,7 @@
 @extends('layout.main-admin')
 @section('page_title','Admin Management')
 @section('main-content')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -139,8 +139,6 @@
   </div>
 </div>
  
- 
- 
  <!-- remove modal -->
  <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -163,8 +161,4 @@
 @stop
 @section('footer_scripts')
 <script type="text/javascript" src="../js/manage-front/manage-front-country.js"></script>
-<script src='https://code.jquery.com/jquery-1.12.4.js'></script>
-<script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
- 
 @endsection

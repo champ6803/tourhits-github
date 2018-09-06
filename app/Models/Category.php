@@ -22,7 +22,7 @@ class Category extends Model {
 
     public function getCategoryIndex() {
         try {
-            $CategoryList = Category::where('category_id', '<', 9999)
+            $CategoryList = Category::where('category_type', '=', 'I')
                     ->get();
             return $CategoryList;
         } catch (\Exception $ex) {
@@ -33,6 +33,26 @@ class Category extends Model {
     public function getCategoryAll() {
         try {
             $categoryList = Category::all();
+            return $categoryList;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function getCategoryGenaral() {
+        try {
+            $categoryList = Category::where('category_type', '=', 'G')
+                    ->get();
+            return $categoryList;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function getCategoryByCategoryType($categoryType) {
+        try {
+            $categoryList = Category::where('category_type', '=', $categoryType)
+                    ->get();
             return $categoryList;
         } catch (Exception $ex) {
             return $ex;

@@ -858,7 +858,7 @@
 </section>
 
 <!-- แพ๊คลดราคา -->
-<section class="package-hit-section">
+<!--<section class="package-hit-section">
     <div class="container">
         <div class="package-hit-title">
             <div class="section-title">
@@ -870,7 +870,7 @@
             </div>
         </div>
 
-        <!--        หน้าจอเวอชั่น mobile-->
+                หน้าจอเวอชั่น mobile
         <div class="card-xs">
             <div class="thumbnail card--content">
                 <a href="{{ url('tour-detail') }}">
@@ -1067,7 +1067,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <!-- Controls -->
+                 Controls 
                 <div class="controls pull-right hidden-xs">
                     <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-2"
                        data-slide="prev"></a><a class="right fa fa-chevron-right btn btn-primary" href="#carousel-2"
@@ -1076,7 +1076,7 @@
             </div>
         </div>
         <div id="carousel-2" class="carousel slide hidden-xs" data-ride="carousel" style="padding-top:10px;">
-            <!-- Wrapper for slides -->
+             Wrapper for slides 
             <div class="carousel-inner">
                 <div class="item active">
                     <div class="row">
@@ -1610,7 +1610,7 @@
             <a href="#" class="btn btn-nextpage">แพ็คเกจทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
-</section>
+</section>-->
 
 
 <!-- ลูกค้าที่ไว้วางใจ -->

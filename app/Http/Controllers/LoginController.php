@@ -16,6 +16,7 @@ use App\Models\User;
 use App\Models\Customer;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 
 /**
  * Description of LoginController
@@ -37,19 +38,25 @@ class LoginController {
 
     public function login(Request $request) {
         $data = $request->all();
+        $email = $data['email'];
+        $password = $data['password'];
+        $role = $data['role'];
         $validator = Validator::make($request->all(), [
                     'email' => 'required|email|max:255',
                     'password' => 'required|min:6'
         ]);
         if ($validator->fails()) {
-            return redirect('login')
-                            ->withErrors($validator)
-                            ->withInput();
+            if ($role == "A") {
+                return redirect('admin')
+                                ->withErrors($validator)
+                                ->withInput();
+            } else {
+                return redirect('login')
+                                ->withErrors($validator)
+                                ->withInput();
+            }
         }
         try {
-            $email = $data['email'];
-            $password = $data['password'];
-            $role = $data['role'];
             $checkLogin = User::where(['email' => $email, 'password' => $password])->first();
             if ($checkLogin != null && $checkLogin->count() > 0) {
                 session_start();
@@ -65,6 +72,7 @@ class LoginController {
                 } else if ($checkLogin->role == 'A') {
                     $admin = Admin::where(['user_id' => $checkLogin->user_id])->first();
                     $_SESSION['a_user'] = $checkLogin->email;
+//                    dd($_SESSION['a_user']);
                     $_SESSION['role'] = $checkLogin->role;
                     $_SESSION['admin_id'] = $admin->admin_id;
                     //$_SESSION['admin_name'] = $admin->admin_fname . ' ' . $admin->admin_fname;
@@ -100,4 +108,5 @@ class LoginController {
             dd($user); // print value debug.
         }
     }
+
 }

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['a_user'])) {
+    header("location: /admin");
+    exit(0);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -48,14 +55,17 @@
         <link rel="stylesheet" href="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
 
         <link rel="stylesheet" href="{{ asset('css/lib/bootstrap-table.css')}}">
-        
+
         <link rel="stylesheet" href="../assets/select2/dist/css/select2.css" >
 
         <!-- theme style -->
         <link rel="stylesheet" href="css/master_style.css">
 
         <!-- Lion_admin skins -->
-        <link rel="stylesheet" href="css/skins/_all-skins.css">
+        <link rel="stylesheet" href="{{ asset('css/skins/_all-skins.css') }}">
+
+        <!-- CSS LIBRARY -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/datatables.css') }}">
 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -70,10 +80,10 @@
 
     <body class="hold-transition skin-blue-light sidebar-mini">
         <div class="wrapper">
-
             <header class="main-header">
                 <!-- Logo -->
                 <a href="index.html" class="logo">
+
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <b class="logo-mini">
                         <span class="light-logo"><img src="../images/logo-light.png" alt="logo"></span>
@@ -353,34 +363,11 @@
                                 </a>
                                 <ul class="dropdown-menu scale-up">
                                     <!-- User image -->
-                                    <li class="user-header">
-                                        <img src="../images/logo.png" style="background-color: #fff" class="float-left rounded-circle" alt="User Image">
-
-                                        <p>
-                                            Romi Roy
-                                            <small class="mb-5">jb@gmail.com</small>
-                                            <a href="#" class="btn btn-danger btn-sm btn-rounded">View Profile</a>
-                                        </p>
-                                    </li>
                                     <!-- Menu Body -->
                                     <li class="user-body">
                                         <div class="row no-gutters">
                                             <div class="col-12 text-left">
-                                                <a href="#"><i class="ion ion-person"></i> My Profile</a>
-                                            </div>
-                                            <div class="col-12 text-left">
-                                                <a href="#"><i class="ion ion-email-unread"></i> Inbox</a>
-                                            </div>
-                                            <div class="col-12 text-left">
-                                                <a href="#"><i class="ion ion-settings"></i> Setting</a>
-                                            </div>
-                                            <div role="separator" class="divider col-12"></div>
-                                            <div class="col-12 text-left">
-                                                <a href="#"><i class="ti-settings"></i> Account Setting</a>
-                                            </div>
-                                            <div role="separator" class="divider col-12"></div>
-                                            <div class="col-12 text-left">
-                                                <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+                                                <a href="{{url('logout')}}"><i class="fa fa-power-off"></i> Logout</a>
                                             </div>				
                                         </div>
                                         <!-- /.row -->
@@ -419,7 +406,7 @@
                     <ul class="sidebar-menu" data-widget="tree">
                         <li class="nav-devider"></li>
                         <li class="header nav-small-cap">MENU</li>
-                        <li class="treeview">
+                        <li id="dashboard_main" class="treeview">
                             <a href="#">
                                 <i class="fa fa-clipboard"></i> <span>Dashboard</span>
                                 <span class="pull-right-container">
@@ -428,10 +415,10 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="{{ url('/order-list')}}">Dashboard</a></li>
-                                <li><a href="{{ url('/order-list')}}">รายการการจอง</a></li>
+                                <li id="order_list"><a href="{{ url('/order-list')}}">รายการการจอง</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li id="manage_front" class="treeview">
                             <a href="#">
                                 <i class="fa fa-pencil-square"></i>
                                 <span>จัดการหน้าเว็บ</span>
@@ -440,29 +427,29 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/app/app-chat.html">Banner</a></li>
-                                <li><a href="{{ url('manage-front-country')}}">ประเทศ</a></li>
-                                <li><a href="pages/app/app-contact.html">ทัวร์แนะนำ</a></li>
-                                <li><a href="pages/app/app-ticket.html">สปอนเซอร์</a></li>
-                                <li><a href="pages/app/calendar.html">รีวิว</a></li>
-                                <li><a href="{{ url('profile')}}">การติดต่อ</a></li>
+                                <li><a href="pages/app/app-chat.html">จัดการแบนเนอร์</a></li>
+                                <li><a href="{{ url('manage-front-country')}}">จัดการประเทศ</a></li>
+                                <li id="manage_front_category"><a href="{{ url('manage-front-category') }}">จัดการหมวดหมู่หน้าบ้าน</a></li>
+                                <li><a href="pages/app/app-ticket.html">จัดการสปอนเซอร์</a></li>
+                                <li><a href="pages/app/calendar.html">จัดการรีวิว</a></li>
+                                <li><a href="{{ url('profile')}}">จัดการการติดต่อ</a></li>
                             </ul>
                         </li>
                         <li id="managetour" class="treeview">
                             <a href="#">
-                                <i class="fa fa-database"></i> <span>จัดการทัวร์</span>
+                                <i class="fa fa-database"></i> <span>จัดการรายการทัวร์</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a id="tourMenu"  href="{{ url('manage-tourlist')}}">เพิ่มรายการทัวร์</a></li>
-                                <li><a id="showTourMenu"  href="{{ url('tour-package-list')}}">รายการทัวร์ทั้งหมด</a></li>
-                                <li><a id="showTourCountryMenu"  href="{{ url('show-country-tourlist')}}">รายการทัวร์แต่ละประเทศ</a></li>
-                                <li><a id="statusTourMenu"  href="{{ url('status-tourlist')}}">สถานะแพ็คเกจทัวร์</a></li>
+                                <li id="manage_tourlist"><a href="{{ url('manage-tourlist')}}">เพิ่มรายการทัวร์</a></li>
+                                <li id="tour_package_list"><a href="{{ url('tour-package-list')}}">รายการทัวร์ทั้งหมด</a></li>
+                                <li id="showTourCountryMenu"><a href="{{ url('show-country-tourlist')}}">รายการทัวร์แต่ละประเทศ</a></li>
+                                <li id="statusTourMenu"><a href="{{ url('status-tourlist')}}">สถานะแพ็คเกจทัวร์</a></li>
                             </ul>
                         </li>
-                        <li id="managetour" class="treeview">
+                        <li id="managemaster" class="treeview">
                             <a href="#">
                                 <i class="fa fa-database"></i> <span>ข้อมูลมาสเตอร์</span>
                                 <span class="pull-right-container">
@@ -470,7 +457,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a id="categoryMenu"  href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
+                                <li id="categoryMenu"><a href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
                                 <li><a id="tagMenu"  href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
                                 <li><a id="otherMenu"  href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
                                 <li><a id="attractionMenu"  href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
@@ -793,6 +780,9 @@
         <!-- datepicker -->
         <script src="../assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
 
+        <!-- CK Editor -->
+        <script src="../../../assets/vendor_components/ckeditor/ckeditor.js"></script>
+
         <!-- Bootstrap WYSIHTML5 -->
         <script src="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
 
@@ -804,7 +794,9 @@
 
         <!-- peity -->
         <script src="../assets/vendor_components/jquery.peity/jquery.peity.js"></script>
-        
+
+        <script src="{{ asset('js/lib/datatables.js')}}"></script>
+
         <script src="{{ asset('js/lib/angular.js')}}"></script>
 
         <script src="{{ asset('js/lib/bootstrap-table.js')}}"></script>

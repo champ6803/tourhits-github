@@ -69,8 +69,8 @@ class AdminController extends Controller {
     public function manage_tourlist() {
         return view('admin.manage-tourlist');
     }
-    
-    public function manage_edit_tourlist(Request $request){
+
+    public function manage_edit_tourlist(Request $request) {
         $tour_package_id = $request->query('id');
         $tourPackageDetail = null;
         if ($tour_package_id != null) {
@@ -148,8 +148,7 @@ class AdminController extends Controller {
 
             $tourPackageDetail = ['tourPackage' => $tourPackage, 'tourPeriod' => $tourPeriodList, 'tourPackageDay' => $tourPackageDay, 'tourImage' => $tourImage, 'tourRoute' => $arrRoute,
                 'tourAirline' => $arrAirline, 'tourTag' => $arrTag, 'tourHoliday' => $tourHoliday, 'tourAttraction' => $arrAttraction, 'tourAttractionDay' => $tourAttractionDay, 'attractionDay' => $attractionDay];
-        }
-        else{
+        } else {
             return redirect('order-list');
         }
         return view('admin.manage-edit-tourlist', compact('tourPackageDetail'));
@@ -517,11 +516,11 @@ class AdminController extends Controller {
     public function searchTourCategory() {
         $categoryModel = new Category();
         try {
-            $input_tour_category_name = $_POST['input_tour_category_name'];
+            $input_tour_category_name = $_POST['category_name'];
             if ($input_tour_category_name != null) {
                 $tour_category = $categoryModel->getCategoryByName($input_tour_category_name);
             } else {
-                $tour_category = $categoryModel->getCategoryAll();
+                $tour_category = $categoryModel->getCategoryByName();
             }
             return response($tour_category);
         } catch (\Exception $e) {
@@ -690,9 +689,10 @@ class AdminController extends Controller {
                     $images = $_FILES['file_img']['name'];
                 }
 
+                $start_date = str_replace('/', '-', $start_date);
                 $dateStart = date('Y-m-d H:i:s', strtotime($start_date));
+                $end_date = str_replace('/', '-', $end_date);
                 $dateEnd = date('Y-m-d H:i:s', strtotime($end_date));
-
 
                 $attractionModel = new Attraction();
                 $tourPackageModel = new Tour_Package();
@@ -720,7 +720,9 @@ class AdminController extends Controller {
                     $tour_period_status = 'Y';
 
                     for ($i = 0; $i < count($tour_period_start); $i++) {
+                        $tour_period_start[$i] = str_replace('/', '-', $tour_period_start[$i]);
                         $dateStart = date('Y-m-d H:i:s', strtotime($tour_period_start[$i]));
+                        $tour_period_end[$i] = str_replace('/', '-', $tour_period_end[$i]);
                         $dateEnd = date('Y-m-d H:i:s', strtotime($tour_period_end[$i]));
                         $speriod = $tourPeriodModel->insertTourPeriod($id, $dateStart, $dateEnd, $tour_period_adult_price[$i]
                                 , $tour_period_child_price[$i], $tour_period_child_nb_price
@@ -1012,7 +1014,7 @@ class AdminController extends Controller {
     public function searchAllCategory() {
         $categoryModel = new Category();
         try {
-            $category = $categoryModel->getCategoryAll();
+            $category = $categoryModel->getCategoryGenaral();
             return response($category);
         } catch (\Exception $e) {
             $msg = $e->getMessage();

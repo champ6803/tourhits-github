@@ -95,14 +95,6 @@ Route::post('updateOther', 'AdminController@updateOther');
 
 Route::get('manage-category', 'AdminController@manage_category');
 
-Route::post('searchTourCategory', 'AdminController@searchTourCategory');
-
-Route::post('saveTourCategory', 'AdminController@saveTourCategory');
-
-Route::post('deleteTourCategory', 'AdminController@deleteTourCategory');
-
-Route::post('updateTourCategory', 'AdminController@updateTourCategory');
-
 Route::post('search-tour/getTourPackage', 'FilterController@getTourPackage');
 
 Route::post('getTourPackage', 'FilterController@getTourPackage');
@@ -180,3 +172,21 @@ Route::get('auth/login/facebook', 'LoginController@facebookAuthRedirect');
 Route::get('auth/login/facebook/index', 'LoginController@facebookSuccess');
 
 Route::get('tour-package-list', 'AdminController@tour_package_list');
+
+Route::get('/download_pdf/{tour_pakage_id}', 'TourController@getDownload');
+
+Route::get('tour-package-list', 'AdminController@tour_package_list');
+
+Route::get('manage-front-category', 'ManageFrontController@manage_front_category');
+
+Route::post('searchTourCategory', 'ManageFrontController@searchTourCategory');
+
+Route::post('searchTourPackegeByTourCountryId', 'ManageFrontController@searchTourPackegeByTourCountryId');
+
+Route::post('searchCategoryByCategoryType', 'ManageFrontController@searchCategoryByCategoryType');
+
+Route::post('saveTourCategory', 'ManageFrontController@saveTourCategory');
+
+Route::post('updateTourCategory', 'ManageFrontController@updateTourCategory');
+
+Route::post('removeTourCategory', 'ManageFrontController@removeTourCategory');

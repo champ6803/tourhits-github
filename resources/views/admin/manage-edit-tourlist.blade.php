@@ -362,9 +362,9 @@
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="file1" class="col-sm-2 control-label">Image 1</label>
-
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file1_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file1" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -377,6 +377,7 @@
 
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file2_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file2" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -391,6 +392,7 @@
 
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file3_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file3" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -403,6 +405,7 @@
 
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file4_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file4" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -417,6 +420,7 @@
 
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file5_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file5" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -429,6 +433,7 @@
 
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file6_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file6" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -443,6 +448,7 @@
 
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file7_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file7" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -455,6 +461,7 @@
 
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file8_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file8" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -469,6 +476,7 @@
 
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file9_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file9" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -481,6 +489,7 @@
 
                                                         <div class="col-sm-10">
                                                             <div class="col-sm-10">
+                                                                <img class="hide" id="file10_show" height="100px;">
                                                                 <input class="form-control" type="file" id="file10" name="file_img[]"> 
                                                                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                             </div>
@@ -568,6 +577,8 @@
                                             <div class="col-lg-12">
                                                 <button type="submit" class="btn btn-info" id="saveAll"> 
                                                 <i class="fa fa-floppy-o"></i>&nbsp;Update</button>
+                                                <button type="submit" class="btn btn-info" id="saveAll"> 
+                                                <i class="fa fa-trash-o"></i>&nbsp;Delete</button>
                                             </div>
                                         </div>
                                         <!-- /.box-footer -->

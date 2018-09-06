@@ -1,4 +1,7 @@
 $(function () {
+    $('#managemaster').addClass("active");
+    $('#categoryMenu').addClass("active");
+    
     $('#searchButton').click(function () {
         var input_tour_category_name= $('#input_tour_category_name').val();
         var checkEmpty = input_tour_category_name.trim();
@@ -31,8 +34,6 @@ $(function () {
            $('#updateFile').val('')
     });
     $(document).ready(function() {
-        //ไฮไลต์เมนูที่เข้าอยู่
-        document.getElementById("categoryMenu").style.color = "blue";
         createTable()
         $('#tourCategoryTable').DataTable();
     } );
