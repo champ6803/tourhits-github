@@ -1046,11 +1046,4 @@ $(document).ready(function() {
 <script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
- 
-<!--  jQuery 1.7+  -->
-<script src="jquery-1.9.1.min.js"></script>
- 
-<!-- Include js plugin -->
-<script src="assets/owl-carousel/owl.carousel.js"></script>
-
 @endsection
