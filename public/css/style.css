@@ -9527,9 +9527,17 @@ select {
         padding-right: 0 !important;
         margin-bottom: 0;
     }
+    
+    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-actions {
+        
+    }
+    
+    .masonry-section-demo .container-country .section-title h1{
+        font-size:19px;
+    }
 
     .awe-search-tabs__content .ui-tabs-panel .form-actions {
-        margin-top: 20px !important;
+/*        margin-top: 20px !important;*/
     }
 
     .awe-masonry .awe-masonry__item {
