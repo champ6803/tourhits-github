@@ -25,6 +25,7 @@ $(function () {
     createAttractionDropDown();
     createAttractionDayDropDown();
     createRouteDropDown();
+    createConditionsDropDown();
     $("#start_date").datepicker({
         format: 'dd/mm/yyyy',
         todayBtn: true
@@ -411,6 +412,36 @@ function createTourCountryDropDown() {
     });
 
 }
+
+function createConditionsDropDown() {
+    var StrDropDown = '';
+    $.ajax({
+        type: 'post',
+        url: 'getConditionsList',
+        async: false,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            if (data != null) {
+                StrDropDown = '<select class="form-control" id="conditions_id" name="conditions_id">';
+                StrDropDown = StrDropDown + "<option value='0'> - Select - </option>";
+                for (var row = 0; row < data.length; row++) {
+                    StrDropDown = StrDropDown + "<option value=" + data[row].conditions_id + ">" + data[row].conditions_name + "</option>";
+                }
+                StrDropDown = StrDropDown + '</select>';
+                document.getElementById("selectConditioins").innerHTML = StrDropDown;
+            } else {
+                alert('select fail');s
+            }
+        },
+        error: function (data) {
+            alert('error');
+        }
+    });
+
+}
+
 
 function numberFormat(value, row, index, field) {
     return numberWithCommas(parseInt(value));

@@ -18,21 +18,51 @@ use Illuminate\Database\Eloquent\Model;
 class Tour_Holiday extends Model {
 
     protected $table = 'tour_holiday';
-    
-        public function insertTourHoliday($id,$holiday_id){
-          try {
+
+    public function insertTourHoliday($id, $holiday_id) {
+        try {
             $date = \Carbon\Carbon::now();
             Tour_Holiday::insert(
-            [ 'holiday_id' => $holiday_id
-             ,'tour_package_id' => $id
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date]
+                    ['holiday_id' => $holiday_id
+                        , 'tour_package_id' => $id
+                        , 'created_by' => 'admin'
+                        , 'created_at' => $date
+                        , 'updated_by' => 'admin'
+                        , 'updated_at' => $date]
             );
-          } catch (Exception $ex) {
-               return $ex;
-          }
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function updateTourHoliday($id, $holiday_id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            $tourHolidayList = Tour_Holiday::where('tour_package_id', $id)
+                    ->where('holiday_id', $holiday_id)
+                    ->get();
+            if ($tourHolidayList != null && count($tourHolidayList) > 0) {
+                Tour_Holiday::where('tour_package_id', $id)
+                        ->where('holiday_id', $holiday_id)
+                        ->update(
+                                ['holiday_id' => $holiday_id
+                                    , 'tour_package_id' => $id
+                                    , 'updated_by' => 'admin'
+                                    , 'updated_at' => $date]
+                );
+            } else {
+                Tour_Holiday::insert(
+                        ['holiday_id' => $holiday_id
+                            , 'tour_package_id' => $id
+                            , 'created_by' => 'admin'
+                            , 'created_at' => $date
+                            , 'updated_by' => 'admin'
+                            , 'updated_at' => $date]
+                );
+            }
+        } catch (Exception $ex) {
+            return $ex;
+        }
     }
 
 }

@@ -18,20 +18,51 @@ use Illuminate\Database\Eloquent\Model;
 class Tour_Tag extends Model {
 
     protected $table = 'tour_tag';
-    
-        public function insertTourTag($id,$tag_id){
-          try {
+
+    public function insertTourTag($id, $tag_id) {
+        try {
             $date = \Carbon\Carbon::now();
             Tour_Tag::insert(
-            [ 'tag_id' => $tag_id
-             ,'tour_package_id' => $id
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date]
+                    ['tag_id' => $tag_id
+                        , 'tour_package_id' => $id
+                        , 'created_by' => 'admin'
+                        , 'created_at' => $date
+                        , 'updated_by' => 'admin'
+                        , 'updated_at' => $date]
             );
-          } catch (Exception $ex) {
-               return $ex;
-          }
+        } catch (Exception $ex) {
+            return $ex;
+        }
     }
+
+    public function updateTourTag($id, $tag_id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            $tourTagList = Tour_Tag::where('tour_package_id', $id)
+                    ->where('tag_id', $tag_id)
+                    ->get();
+            if ($tourTagList != null && count($tourTagList) > 0) {
+                Tour_Tag::where('tag_id', $tag_id)
+                        ->where('tour_package_id', $id)
+                        ->update(
+                                ['tag_id' => $tag_id
+                                    , 'tour_package_id' => $id
+                                    , 'updated_by' => 'admin'
+                                    , 'updated_at' => $date]
+                );
+            } else {
+                Tour_Tag::insert(
+                        ['tag_id' => $tag_id
+                            , 'tour_package_id' => $id
+                            , 'created_by' => 'admin'
+                            , 'created_at' => $date
+                            , 'updated_by' => 'admin'
+                            , 'updated_at' => $date]
+                );
+            }
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
 }

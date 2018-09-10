@@ -1,5 +1,6 @@
 $(function () {
-    renderTourPackage(tourHitsPackageActiveList, tourHitPeriodActive, "card_area");
+    renderTourPackage(tourHitsPackageActiveList, tourHitPeriodActive, "card_area_hit");
+    renderTourPackage(tourSalesPackageActiveList, tourSalesPeriodActive, "card_area_sale");
 });
 
 function renderTourPackage(tourPackageList, tourPeriod, selection) {
@@ -58,7 +59,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             div = div + '<div class="bar-bottom-card">';
             div = div + '<div class="card-airline"><img alt="' + this.airline_name + '" src="../images/airline/' + val['airline_picture'] + '" title="การบินไทย"></div>';
             if (this.tour_package_special_price > 0) {
-                div = div + '<div class="card-price-dis"><strike>' + numberWithCommas(this.tour_package_special_price) + '฿</strike></div>' + '<div class="card-price">' + numberWithCommas(this.tour_package_special_price) + '฿</div>';
+                div = div + '<div class="card-price-dis"><strike>' + numberWithCommas(this.tour_package_price) + '฿</strike></div>' + '<div class="card-price">' + numberWithCommas(this.tour_package_special_price) + '฿</div>';
             } else {
                 div = div + '<div class="card-price-dis"><strike></strike></div>' + '<div class="card-price">' + numberWithCommas(this.tour_package_price) + '฿</div>';
             }
@@ -70,7 +71,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             div = div + '<div id="tab' + val['tour_package_id'] + '3" class="tab-pane">';
             div = div + '<div class="card-period">'
             div = div + '<table class="table table-bordered">';
-            div = div + '<tr class="info"><th style="text-align:center">ช่วงเวลา</th><th style="text-align:center">ราคา</th></tr>'
+            div = div + '<tr class="info"><th style="text-align:center">ช่วงเวลา</th><th style="text-align:center">ราคา</th><th style="text-align:center">ราคาพิเศษ</th></tr>'
             $.each(tourPeriod, function (keyPrice, valPrice) {
                 if (valPrice['tour_package_id'] === val['tour_package_id']) {
                     var as = valPrice["tour_period_start"].split("-");
@@ -80,7 +81,13 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
                     var date = as2[0] + " " + setCTMonthString(as[1]) + " - " + ae2[0] + " " + setCTMonthString(ae[1]) + " " + ae[0];
 
                     div = div + '<tr><td>' + date + '</td>';
-                    div = div + '<td style="text-align:right">' + numberWithCommas(valPrice['tour_period_adult_price']) + '฿</td></tr>';
+                    if(this.tour_period_adult_special_price > 0){
+                        div = div + '<td style="text-align:right"><strike>' + numberWithCommas(valPrice['tour_period_adult_price']) + '฿</strike></td>';
+                        div = div + '<td style="text-align:right">' + numberWithCommas(valPrice['tour_period_adult_special_price']) + '฿</td></tr>';
+                    } else {
+                        div = div + '<td style="text-align:right">' + numberWithCommas(valPrice['tour_period_adult_price']) + '฿</td>';
+                        div = div + '<td style="text-align:right"> - </td></tr>';
+                    }
                 }
             });
             div = div + '</table>';
@@ -101,7 +108,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
         $('#search_tour_pager').show();
     } else {
         $('#' + selection).empty();
-        var div = "<div class='search-empty'>ขออภัยไม่พบทัวร์ที่ค้นหา</div>";
+        var div = "<div class='search-empty'>ขออภัยไม่พบทัวร์</div>";
         $('#' + selection).html(div);
         $('#search_tour_pager').hide();
     }

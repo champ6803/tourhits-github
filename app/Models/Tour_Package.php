@@ -17,12 +17,25 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input as Input;
 use App\Models\Tour_Period;
+use App\Models\Tour_Airline;
+use App\Models\Tour_Attraction;
+use App\Models\Tour_Attraction_Day;
+use App\Models\Tour_Holiday;
+use App\Models\Tour_Category;
+use App\Models\Tour_Image;
+use App\Models\Tour_Package_Day;
+use App\Models\Tour_Route;
+use App\Models\Tour_Tag;
 
 class Tour_Package extends Model {
 
     protected $table = 'tour_package';
 
-    public function insertTourPackage($tour_package_code, $tour_country, $tour_category, $tour_name
+    function IsNullOrEmptyString($str) {
+        return (!isset($str) || trim($str) === '');
+    }
+
+    public function insertTourPackage($tour_package_code, $tour_country, $conditions_id, $tour_category, $tour_name
     , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price) {
         try {
             $id_max = DB::table('tour_package')->max('tour_package_id');
@@ -31,6 +44,7 @@ class Tour_Package extends Model {
                             ['tour_package_code' => $tour_package_code
                                 , 'tour_category_id' => $tour_category
                                 , 'tour_country_id' => $tour_country
+                                , 'conditions_id' => $conditions_id
                                 , 'tour_package_name' => $tour_name
                                 , 'tour_package_detail' => $tour_detail
                                 , 'tour_package_highlight' => $highlight_tour
@@ -62,39 +76,105 @@ class Tour_Package extends Model {
         }
     }
 
-    public function updateTourPackage($tour_package_id, $tour_package_code, $tour_country, $tour_category, $tour_name
+    public function updateTourPackage($tour_package_id, $tour_package_code, $tour_country, $conditions_id, $tour_category, $tour_name
     , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price) {
         try {
             $date = \Carbon\Carbon::now();
-            Tour_Package::where('tour_package_id', '=', $tour_package_id)
-                    ->update(
-                            ['tour_package_code' => $tour_package_code
-                                , 'tour_category_id' => $tour_category
-                                , 'tour_country_id' => $tour_country
-                                , 'tour_package_name' => $tour_name
-                                , 'tour_package_detail' => $tour_detail
-                                , 'tour_package_highlight' => $highlight_tour
-                                , 'tour_package_image' => ($id_max + 1) . '-' . $tourlist_picture
-                                , 'tour_period_day_number' => $day
-                                , 'tour_period_night_number' => $night
-                                , 'tour_package_price' => $price
-                                , 'tour_package_special_price' => $special_price
-                                , 'tour_package_period_start' => $dateStart
-                                , 'tour_package_period_end' => $dateEnd
-                                , 'tour_package_pdf' => $tour_package_code . '-' . $pdf
-                                , 'updated_by' => 'admin'
-                                , 'updated_at' => $date]
-            );
-
-            if (Input::hasFile('file')) {
-                $file = Input::file('file');
-                $file->move('images/tour', $tour_package_id . "-" . $file->getClientOriginalName());
+            if ($this->IsNullOrEmptyString($tourlist_picture)) {
+                Tour_Package::where('tour_package_id', '=', $tour_package_id)
+                        ->update(
+                                ['tour_package_code' => $tour_package_code
+                                    , 'tour_category_id' => $tour_category
+                                    , 'tour_country_id' => $tour_country
+                                    , 'conditions_id' => $conditions_id
+                                    , 'tour_package_name' => $tour_name
+                                    , 'tour_package_detail' => $tour_detail
+                                    , 'tour_package_highlight' => $highlight_tour
+                                    , 'tour_period_day_number' => $day
+                                    , 'tour_period_night_number' => $night
+                                    , 'tour_package_price' => $price
+                                    , 'tour_package_special_price' => $special_price
+                                    , 'tour_package_period_start' => $dateStart
+                                    , 'tour_package_period_end' => $dateEnd
+                                    , 'tour_package_pdf' => $tour_package_id . '-' . $pdf
+                                    , 'updated_by' => 'admin'
+                                    , 'updated_at' => $date]
+                );
+                if (Input::hasFile('pdf_file')) {
+                    $file_pdf = Input::file('pdf_file');
+                    $file_pdf->move('images/pdf', $tour_package_id . "-" . $file_pdf->getClientOriginalName());
+                }
+            } else if ($this->IsNullOrEmptyString($pdf)) {
+                Tour_Package::where('tour_package_id', '=', $tour_package_id)
+                        ->update(
+                                ['tour_package_code' => $tour_package_code
+                                    , 'tour_category_id' => $tour_category
+                                    , 'tour_country_id' => $tour_country
+                                    , 'conditions_id' => $conditions_id
+                                    , 'tour_package_name' => $tour_name
+                                    , 'tour_package_detail' => $tour_detail
+                                    , 'tour_package_highlight' => $highlight_tour
+                                    , 'tour_package_image' => $tour_package_id . '-' . $tourlist_picture
+                                    , 'tour_period_day_number' => $day
+                                    , 'tour_period_night_number' => $night
+                                    , 'tour_package_price' => $price
+                                    , 'tour_package_special_price' => $special_price
+                                    , 'tour_package_period_start' => $dateStart
+                                    , 'tour_package_period_end' => $dateEnd
+                                    , 'updated_by' => 'admin'
+                                    , 'updated_at' => $date]
+                );
+                if (Input::hasFile('file')) {
+                    $file = Input::file('file');
+                    $file->move('images/tour', $tour_package_id . "-" . $file->getClientOriginalName());
+                }
+            } else if ($this->IsNullOrEmptyString($pdf) && $this->IsNullOrEmptyString($tourlist_picture)) {
+                Tour_Package::where('tour_package_id', '=', $tour_package_id)
+                        ->update(
+                                ['tour_package_code' => $tour_package_code
+                                    , 'tour_category_id' => $tour_category
+                                    , 'tour_country_id' => $tour_country
+                                    , 'tour_package_name' => $tour_name
+                                    , 'tour_package_detail' => $tour_detail
+                                    , 'tour_package_highlight' => $highlight_tour
+                                    , 'tour_period_day_number' => $day
+                                    , 'tour_period_night_number' => $night
+                                    , 'tour_package_price' => $price
+                                    , 'tour_package_special_price' => $special_price
+                                    , 'tour_package_period_start' => $dateStart
+                                    , 'tour_package_period_end' => $dateEnd
+                                    , 'updated_by' => 'admin'
+                                    , 'updated_at' => $date]
+                );
+            } else {
+                Tour_Package::where('tour_package_id', '=', $tour_package_id)
+                        ->update(
+                                ['tour_package_code' => $tour_package_code
+                                    , 'tour_category_id' => $tour_category
+                                    , 'tour_country_id' => $tour_country
+                                    , 'tour_package_name' => $tour_name
+                                    , 'tour_package_detail' => $tour_detail
+                                    , 'tour_package_highlight' => $highlight_tour
+                                    , 'tour_package_image' => $tour_package_id . '-' . $tourlist_picture
+                                    , 'tour_period_day_number' => $day
+                                    , 'tour_period_night_number' => $night
+                                    , 'tour_package_price' => $price
+                                    , 'tour_package_special_price' => $special_price
+                                    , 'tour_package_period_start' => $dateStart
+                                    , 'tour_package_period_end' => $dateEnd
+                                    , 'tour_package_pdf' => $tour_package_id . '-' . $pdf
+                                    , 'updated_by' => 'admin'
+                                    , 'updated_at' => $date]
+                );
+                if (Input::hasFile('file')) {
+                    $file = Input::file('file');
+                    $file->move('images/tour', $tour_package_id . "-" . $file->getClientOriginalName());
+                }
+                if (Input::hasFile('pdf_file')) {
+                    $file_pdf = Input::file('pdf_file');
+                    $file_pdf->move('images/pdf', $tour_package_id . "-" . $file_pdf->getClientOriginalName());
+                }
             }
-            if (Input::hasFile('pdf_file')) {
-                $file_pdf = Input::file('pdf_file');
-                $file_pdf->move('images/pdf', $tour_package_id . "-" . $file_pdf->getClientOriginalName());
-            }
-            return $id;
         } catch (Exception $ex) {
             return $ex;
         }
@@ -184,6 +264,7 @@ class Tour_Package extends Model {
                     ->join('tour_airline', 'tour_package.tour_package_id', '=', 'tour_airline.tour_package_id')
                     ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                     ->join('tour_period', 'tour_period.tour_package_id', 'tour_package.tour_package_id')
+                    ->join('conditions', 'tour_package.conditions_id', 'conditions.conditions_id')
                     ->where('tour_package.tour_package_id', '=', $tour_package_id)
                     ->first();
             return $tourPackage;
@@ -240,7 +321,7 @@ class Tour_Package extends Model {
                     ->join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
                     ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                     ->where('tour_category.category_id', $cate_id)
-                    ->skip($number)->take(4)
+//                    ->skip($number)->take(4)
                     //->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_picture'))
                     ->get();
 
@@ -253,7 +334,8 @@ class Tour_Package extends Model {
     public function getTourPackageAll() {
         try {
             $tourPackageList = Tour_Package::join('tour_package_day', 'tour_package.tour_package_id', '=', 'tour_package_day.tour_package_id')
-                    ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name,tour_package.tour_package_image'))
+                    ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                    ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.*,tour_country.tour_country_name'))
                     ->get();
             return $tourPackageList;
         } catch (\Exception $ex) {
@@ -270,7 +352,7 @@ class Tour_Package extends Model {
             throw $ex;
         }
     }
-    
+
     public function getTourPackegeByTourCountryId($tourCountryId) {
         try {
             $tourPackage = Tour_Package::where('tour_package.tour_country_id', '=', $tourCountryId)
@@ -278,6 +360,30 @@ class Tour_Package extends Model {
             return $tourPackage;
         } catch (\Exception $ex) {
             throw $ex;
+        }
+    }
+
+    public function removeTourPackageById($id) {
+        try {
+            DB::transaction(function ()use($id) {
+                Tour_Package::where('tour_package_id', $id)->delete();
+                Tour_Airline::where('tour_package_id', $id)->delete();
+                Tour_Attraction::where('tour_package_id', $id)->delete();
+                Tour_Holiday::where('tour_package_id', $id)->delete();
+                Tour_Category::where('tour_package_id', $id)->delete();
+                Tour_Image::where('tour_package_id', $id)->delete();
+                $tourPackageDayList = Tour_Package_Day::where('tour_package_id', $id)->get();
+                foreach ($tourPackageDayList as $tourPackageDay) {
+                    Tour_Attraction_Day::where('tour_package_day_id', $tourPackageDay->tour_package_day_id)->delete();
+                }
+                Tour_Package_Day::where('tour_package_id', $id)->delete();
+                Tour_Period::where('tour_package_id', $id)->delete();
+                Tour_Route::where('tour_package_id', $id)->delete();
+                Tour_Tag::where('tour_package_id', $id)->delete();
+            });
+            return true;
+        } catch (Exception $ex) {
+            return $ex;
         }
     }
 

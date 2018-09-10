@@ -6,7 +6,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            จัดการหน้าเว็ป
+            จัดการหน้าเว็บ
         </h1>
     </section>
     <section class="content">

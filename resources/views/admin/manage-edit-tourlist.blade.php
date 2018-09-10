@@ -9,10 +9,13 @@
             Tour Package Management
         </h1>
     </section>
-    
+
     <section class="content">
         <form action="{{ URL::to('updateTourlistAndDay') }}" method="post" enctype="multipart/form-data">  
             <input name="tour_package_id" id="tour_package_id" hidden value="">
+            <input name="tour_package_day_id" id="tour_package_day_id" hidden value="">
+            <input name="tour_period_id" id="tour_period_id" hidden value="">
+            <input name="tour_image_id" id="tour_image_id" hidden value="">
             <div class="box box-default">
                 <div class="box-header with-border">
                     <h3 class="box-title">Tour Package</h3>
@@ -32,9 +35,9 @@
                 <div class="vtabs customvtab">
                     <ul class="nav nav-tabs tabs-vertical" role="tablist">
                         <li class="nav-item"> <a class="nav-link active show" data-toggle="tab" href="#main" role="tab" aria-expanded="true" aria-selected="true"><span class="hidden-sm-up"><i class="ion-home"></i></span> <span class="hidden-xs-down">Main</span> </a> </li>
-                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#detail" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">Detail</span></a> </li>
+                        <li class="nav-item"> <a class="nav-link" onclick="genTable()" data-toggle="tab" href="#detail" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">Detail</span></a> </li>
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#periods" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Periods</span></a> </li>
-                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#images" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Images</span></a> </li>
+                        <!--<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#images" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Images</span></a> </li>-->
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#tags" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Tags</span></a> </li>
                     </ul>
                     <!-- Tab panes -->
@@ -45,15 +48,15 @@
                                     <div class="form-horizontal form-element">
                                         <div class="box-body">
                                             <div class="row">
-<!--                                                <div class="col-6">
-                                                    <div class="form-group row">
-                                                        <label for="inputEmail3" class="col-sm-2 control-label">Category</label>
-
-                                                        <div class="col-sm-10">
-                                                            <div id="selectTourCategory"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
+                                                <!--                                                <div class="col-6">
+                                                                                                    <div class="form-group row">
+                                                                                                        <label for="inputEmail3" class="col-sm-2 control-label">Category</label>
+                                                
+                                                                                                        <div class="col-sm-10">
+                                                                                                            <div id="selectTourCategory"></div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>-->
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="inputEmail3" class="col-sm-2 control-label">Country</label>
@@ -183,12 +186,12 @@
                                             </div>
                                         </div>
                                         <!-- /.box-body -->
-                                        <div class="box-footer">
-                                            <button id="saveBtn" type="button" class="btn btn-info" onclick="genTable();"> 
-                                                <span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
-<!--                                            <button type="button" id="clearButton" class="btn btn-danger" onclick="clearGenTable();">
-                                                <span class="glyphicon glyphicon-erase" ></span>&nbsp;Clear</button>                                            -->
-                                        </div>
+                                        <!--                                        <div class="box-footer">
+                                                                                    <button id="saveBtn" type="button" class="btn btn-info" onclick="genTable();"> 
+                                                                                        <span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
+                                                                                    <button type="button" id="clearButton" class="btn btn-danger" onclick="clearGenTable();">
+                                                                                        <span class="glyphicon glyphicon-erase" ></span>&nbsp;Clear</button>                                            
+                                                                                </div>-->
                                         <!-- /.box-footer -->
                                     </div>
                                 </div>
@@ -281,14 +284,14 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-<!--                                                <div class="col-6">
-                                                    <div class="form-group row">
-                                                        <label for="alone_price" class="col-sm-2 control-label">Extra Alone Price</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="alone_price" name="alone_price">
-                                                        </div>
-                                                    </div>
-                                                </div>-->
+                                                <!--                                                <div class="col-6">
+                                                                                                    <div class="form-group row">
+                                                                                                        <label for="alone_price" class="col-sm-2 control-label">Extra Alone Price</label>
+                                                                                                        <div class="col-sm-10">
+                                                                                                            <input type="number" class="form-control" id="alone_price" name="alone_price">
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>-->
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="alone_price" class="col-sm-2 control-label">Special Price</label>
@@ -576,9 +579,9 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <button type="submit" class="btn btn-info" id="saveAll"> 
-                                                <i class="fa fa-floppy-o"></i>&nbsp;Update</button>
-                                                <button type="submit" class="btn btn-info" id="saveAll"> 
-                                                <i class="fa fa-trash-o"></i>&nbsp;Delete</button>
+                                                    <i class="fa fa-floppy-o"></i>&nbsp;Update</button>
+                                                <button type="button" id="btn_delete" class="btn btn-info"> 
+                                                    <i class="fa fa-trash-o"></i>&nbsp;Delete</button>
                                             </div>
                                         </div>
                                         <!-- /.box-footer -->
@@ -596,10 +599,29 @@
     </section>
 </div>
 
+<!-- remove modal -->
+<div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ต้องการลบข้อมูลแพ็คเกจใช่หรือไม่?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <input type="hidden" class="form-control" id="hidden_remove_id">
+                </button>
+            </div>
+            <div class="modal-footer" style="text-align: center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="deleteClose">ยกเลิก</button>
+                <button type="button" class="btn btn-primary" onclick="deleteTourPackage()">ตกลง</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @stop
 @section('footer_scripts')  
 <script>
-    var tourPackageDetail = <?php echo json_encode($tourPackageDetail); ?>; 
+    var tourPackageDetail = <?php echo json_encode($tourPackageDetail); ?>;
 </script>
 <script type="text/javascript" src="{{asset('js/admin/manage-edit-tourlist.js')}}"></script>
 @endsection

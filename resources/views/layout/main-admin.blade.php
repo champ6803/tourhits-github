@@ -458,6 +458,7 @@ if (!isset($_SESSION['a_user'])) {
                             </a>
                             <ul class="treeview-menu">
                                 <li id="categoryMenu"><a href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
+                                <li id="conditionsMenu"><a href="{{ url('manage-conditions')}}">จัดการเงื่อนไข</a></li>
                                 <li><a id="tagMenu"  href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
                                 <li><a id="otherMenu"  href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
                                 <li><a id="attractionMenu"  href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
@@ -758,7 +759,7 @@ if (!isset($_SESSION['a_user'])) {
         <script src="../assets/vendor_components/jquery/dist/jquery.js"></script>
 
         <!-- popper -->
-        <script src="../assets/vendor_components/popper/dist/popper.min.js"></script>
+        <!--<script src="../assets/vendor_components/popper/dist/popper.min.js"></script>-->
 
         <!-- Bootstrap 4.0-->
         <script src="../assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>

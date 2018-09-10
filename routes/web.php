@@ -133,11 +133,11 @@ Route::get('tourhot', 'TourhotController@tour_hot');
 
 Route::post('orders', 'TourController@orders');
 
-Route::get('tourhot','TourhotController@tour_hot');
+Route::get('tourhot', 'TourhotController@tour_hot');
 
-Route::get('manage-tourlist','AdminController@manage_tourlist');
+Route::get('manage-tourlist', 'AdminController@manage_tourlist');
 
-Route::get('manage-edit-tourlist','AdminController@manage_edit_tourlist');
+Route::get('manage-edit-tourlist', 'AdminController@manage_edit_tourlist');
 
 Route::post('searchAllTourCountry', 'AdminController@searchAllTourCountry');
 
@@ -200,3 +200,17 @@ Route::post('saveCategory', 'AdminController@saveCategory');
 Route::post('deleteCategory', 'AdminController@deleteCategory');
 
 Route::post('updateCategory', 'AdminController@updateCategory');
+
+Route::post('deleteTourPackage', 'AdminController@deleteTourPackage');
+
+Route::get('manage-conditions', 'MasterController@manage_conditions');
+
+Route::get('manage-conditions-action', 'MasterController@manage_conditions_action');
+
+Route::post('getConditionsById', 'MasterController@getConditionsById');
+
+Route::post('getConditionsList', 'MasterController@getConditionsList');
+
+Route::post('removeConditions', 'MasterController@removeConditions');
+
+Route::post('saveConditions', 'MasterController@saveConditions');

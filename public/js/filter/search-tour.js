@@ -290,13 +290,14 @@ function renderTourPackage(tourPackageList, tourPeriod) {
             var all_ae = val["tour_package_period_end"].split("-");
             div = div + '<div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</div>';
             div = div + '<hr>';
-            div = div + '<div class="card-airline"><img alt="' + this.airline_name + '" src="../images/airline/' + val['airline_picture'] + '" title="การบินไทย"></div>';
-            $.each(tourPeriod, function (keyPrice, valPrice) {
-                if (valPrice['tour_package_id'] === val['tour_package_id']) {
-                    div = div + '<div class="card-price">' + numberWithCommas(tourPeriod[keyPrice].tour_period_adult_price) + '฿</div>';
-                    return false;
-                }
-            });
+            div = div + '<div class="card-airline"><img alt="' + this.airline_name + '" src="../images/airline/' + val['airline_picture'] + '" title="' + this.airline_name + '"></div>';
+            div = div + '<div class="card-price">' + numberWithCommas(this.tour_package_special_price) + '฿</div>';
+//            $.each(tourPeriod, function (keyPrice, valPrice) {
+//                if (valPrice['tour_package_id'] === val['tour_package_id']) {
+//                    
+//                    return false;
+//                }
+//            });
             div = div + '<hr>';
             div = div + '<div class="button-card">';
             div = div + '<a href="' + 'pdf' + '" class="btn btn-pdf"><i class="fas fa-cloud-download-alt"></i>&nbsp;PDF</a>';
@@ -349,7 +350,7 @@ function renderTourPackage(tourPackageList, tourPeriod) {
 
 function renderTourCard(tourPackageList, tourPeriod) {
     var obj = tourPackageList;
-    if (obj) {
+    if (obj != null && obj.length > 0) {
         var divs = "";
         $("#card_area").empty();
         $.each(obj, function (key, val) {
@@ -390,12 +391,13 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + '<div class="price">';
             div = div + 'ราคา';
             div = div + '<ins>';
-            $.each(tourPeriod, function (keyPrice, valPrice) {
-                if (valPrice['tour_package_id'] === val['tour_package_id']) {
-                    div = div + '<span class="amount">฿' + numberWithCommas(tourPeriod[keyPrice].tour_period_adult_price) + '</span>';
-                    return false;
-                }
-            });
+            div = div + '<span class="amount">฿' + numberWithCommas(this.tour_package_special_price) + '</span>';
+//            $.each(tourPeriod, function (keyPrice, valPrice) {
+//                if (valPrice['tour_package_id'] === val['tour_package_id']) {
+//                    div = div + '<span class="amount">฿' + numberWithCommas(tourPeriod[keyPrice].tour_period_adult_price) + '</span>';
+//                    return false;
+//                }
+//            });
             div = div + '</div>';
             div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">จองทัวร์นี้</a>';
             div = div + '</div>';

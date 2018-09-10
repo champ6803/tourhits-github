@@ -34,14 +34,6 @@ class HomeController extends Controller {
         $tourHitPeriodActive = Tour_Period::whereIn('tour_package_id', $arrayHitActive)
                 ->get();
 
-        $arrayHit = array();
-        foreach ($tourHitsPackageList as $tour) {
-            array_push($arrayHit, $tour->tour_package_id);
-        }
-        $tourHitPeriod = Tour_Period::whereIn('tour_package_id', $arrayHit)
-                ->get();
-
-
         $arraySalesActive = array();
         foreach ($tourSalesPackageActiveList as $tour) {
             array_push($arraySalesActive, $tour->tour_package_id);
@@ -49,7 +41,7 @@ class HomeController extends Controller {
         $tourSalesPeriodActive = Tour_Period::whereIn('tour_package_id', $arraySalesActive)
                 ->get();
 
-        return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourHitsPackageList', 'tourSalesPackageActiveList', 'tourHitPeriodActive', 'tourHitPeriod', 'tourSalesPeriodActive'));
+        return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourSalesPackageActiveList', 'tourHitPeriodActive', 'tourSalesPeriodActive'));
     }
 
 }
