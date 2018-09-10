@@ -4774,7 +4774,7 @@ Custom BS3
 .card--content {
     /*      background-color: #e74c3c;*/
     min-width: 300px;
-    margin: 5px;
+    margin: 5px 50px 5px 5px;
 
 }
 
@@ -4798,10 +4798,10 @@ Custom BS3
     .card--content {
 /*      background-color: #e74c3c;*/
       min-width: 300px;
-      margin: 5px 50px 5px 5px;
+     
       
     }
-    
+}    
 /*    @media screen and (max-width: 768px) {
         .card-body-xs {
             display: flex;
@@ -4811,7 +4811,7 @@ Custom BS3
             display: flex;
         }
     }*/
-    
+
     /* หน้าเสริจ */
     
     .tour-local-wrapper{
@@ -4901,7 +4901,7 @@ Custom BS3
         right: 0;
         left: auto;
     }
-}
+
 
 /* หน้าเสริจ */
 
@@ -5028,8 +5028,9 @@ Custom BS3
 }
 
 .tour-local-wrapper .swiper-button-prev{
-    top: 0;
-    left: 0;
+    font-size: 17px;
+    top: 8px;
+    left: 11px;
     /*        height: 30px;*/
     right: auto;
     background: none;
@@ -5041,8 +5042,9 @@ Custom BS3
 }
 
 .tour-local-wrapper .swiper-button-next{
-
-    top: 0;
+    font-size: 17px;
+    top: 8px;
+    right: 11px;
 
     /*      height: 30px;*/
 
@@ -5093,7 +5095,10 @@ Custom BS3
     padding: 0px 10px;
     border-radius: 8px;
     font-size: 15px;
+}
 
+.page-sidebar .tour-local-nav>.local-nav-item>a:hover{
+    opacity:0.7;
 }
 
 .right-bar .media-left{
@@ -5172,6 +5177,14 @@ Custom BS3
 .filter-page__content .trip-item .item-body{
     padding: 5px 10px 5px 10px;
 
+}
+
+.filter-page__content .country h6{
+    line-height: 1.5;
+}
+
+.filter-page__content .country{
+    padding-top: 33px;
 }
 
 .trip-item .item-price-more .price{
@@ -5253,7 +5266,7 @@ Custom BS3
 
 .product-tabs__content p{
     /*        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .call-to-book .btn-call-book {
@@ -5726,6 +5739,9 @@ https://flickity.metafizzy.co
 
     @media screen and ( min-width: 768px ) {
       /* half-width cells for larger devices */
-      .gallery-cell { width: 50%; }
+      .gallery-cell { width: 50%; } 
     }
-  
+    
+
+
+ 

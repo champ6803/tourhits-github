@@ -9353,7 +9353,7 @@ select {
     .attraction-item .item-media,
     .hotel-item .item-media {
         float: none;
-        width: 100%;
+        width: 95%;
     }
 
     .flight-item .item-price-more:after,

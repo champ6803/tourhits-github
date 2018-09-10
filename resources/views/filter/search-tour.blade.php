@@ -1,6 +1,7 @@
 @extends('layout.main')
 @section('page_title','Search Tour')
 @section('main-content')
+
 <style type="text/css">
     .filter-tabcard .nav-tabs {  width: 50%; margin-left:auto; margin-right: auto; } 
     .filter-tabcard .nav-tabs > li.active > a, .filter-tabcard .nav-tabs > li.active > a:focus, .filter-tabcard .nav-tabs > li.active > a:hover {color: #fff; background: #EC2424; border: none; box-shadow: 0 0px 5px rgba(112, 112, 112, 0.3); transform: scale(1.005); } <!--กด-->
@@ -93,6 +94,8 @@
         cursor: pointer;
         color: black;
     }
+    
+    .card-airline img { max-height: 34px; }
 
 </style>
 
@@ -100,6 +103,49 @@
     .page-sidebar .sidebar-title{
         border-top-color: #ea1c24;
     }
+    
+#owl-demo .tag-item{
+    background: #d7d7d7;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #d7d7d7;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+/*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);*/
+}
+
+#owl-demo .tag-item:hover{
+   background-color: #363636;
+   opacity: 0.8;
+   
+}
+
+#owl-demo .tag-item:hover a{
+   color : #fff; 
+}
+
+#owl-demo .owl-item{
+  width: auto;  
+}
+
+#owl-demo .tag-item a{
+    color : #363636;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px 10px;
+    line-height: 2;   
+}
+
+@media screen and ( max-width: 768px ) {
+      #owl-demo .tag-item>a {font-size: 15px;}
+    }
+    
 
 </style>
 
@@ -128,53 +174,40 @@
                     </select>
                 </div>
             </div>
-        </div>       
-
+        </div>
+        
+    
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12 tour-local-wrapper">
+                        
+                        
+                        <div id="owl-demo" class="tag-container owl-carousel owl-theme">
+                                
+                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นราคาถูก</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์โตเกียว</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์วันปีใหม่ญี่ปุ่น</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์ญุ่ปุ่น ตุลาคม</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น การบินไทย</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ตุลาคม</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น การบินไทย</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์โตเกียว</a></div>
+                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a></div>
+                                 
+                        </div>
+                        <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
+                        <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
+    
+            </div>                           
+            </div> 
+        </div>
+        
         <!--                    กลาง-->
         <div class="col-md-6 col-md-push-3">                       
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="swiper-container tour-local-wrapper local-nav swiper-container-horizontal swiper-container-free-mode">
-                        <div class="swiper-wrapper tour-local-nav" style="transform: translate3d(0px, 0px, 0px);">
-                            <div class="swiper-slide local-nav-item swiper-slide-active" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่นราคาถูก</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item swiper-slide-next" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์โตเกียว</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
-                            </div>                                   
-                        </div>
-                        <div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
-                        <div class="swiper-button-prev swiper-button-disabled"><i class="fa fa-angle-left"></i></div>
-                    </div>
-                </div>                           
-            </div>
+            
 
             <div class="filter-page__content">
                 <div class="row">
@@ -232,9 +265,9 @@
                                 <ins>
                                     <span class="amount">฿12,000</span>
                                 </ins>
-                                <!--                                            <del>
-                                                                                <span class="amount">$200</span>
-                                                                            </del>-->
+                                <del>
+                                    <span class="amount">$200</span>
+                                </del>
 
                             </div>
                             <a href="#" class="awe-btn">จองทัวร์นี้</a>
@@ -286,9 +319,9 @@
                                 <ins>
                                     <span class="amount">฿12,000</span>
                                 </ins>
-                                <!--                                            <del>
-                                                                                <span class="amount">$200</span>
-                                                                            </del>-->
+                                <del>
+                                    <span class="amount">$200</span>
+                                </del>
 
                             </div>
                             <a href="#" class="awe-btn">จองทัวร์นี้</a>
@@ -340,9 +373,9 @@
                                 <ins>
                                     <span class="amount">฿12,000</span>
                                 </ins>
-                                <!--                                            <del>
-                                                                                <span class="amount">$200</span>
-                                                                            </del>-->
+                                <del>
+                                    <span class="amount">$200</span>
+                                </del>
 
                             </div>
                             <a href="#" class="awe-btn">จองทัวร์นี้</a>
@@ -394,9 +427,9 @@
                                 <ins>
                                     <span class="amount">฿12,000</span>
                                 </ins>
-                                <!--                                            <del>
-                                                                                <span class="amount">$200</span>
-                                                                            </del>-->
+                                <del>
+                                    <span class="amount">$200</span>
+                                </del>
 
                             </div>
                             <a href="#" class="awe-btn">จองทัวร์นี้</a>
@@ -976,7 +1009,41 @@
 @stop
 
 @section('footer_scripts')
-
+<script>
+$(document).ready(function() {
+ 
+  var owl = $("#owl-demo");
+ 
+  owl.owlCarousel({
+      items : 5, //5 items above 1000px browser width
+      autoWidth:true,
+      loop:true,
+      autoPlay : 4500,
+      stopOnHover : true,
+      margin:5,
+      transitionStyle:"fade",
+      itemsTablet: [768,4],
+      itemsMobile : [479,2]
+  
+  });
+ 
+  // Custom Navigation Events
+  $(".next").click(function(){
+    owl.trigger('owl.next');
+  })
+  $(".prev").click(function(){
+    owl.trigger('owl.prev');
+  })
+  $(".play").click(function(){
+    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+  })
+  $(".stop").click(function(){
+    owl.trigger('owl.stop');
+  })
+ 
+});
+</script>
 <script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 @endsection
