@@ -527,8 +527,8 @@ span.dropcap {
 
 /* Fix background cover safari */
 .fix-background-ios {
-    -webkit-background-size: auto 150%  !important;
-    background-attachment: scroll  !important;
+/*    -webkit-background-size: auto 150%  !important;
+    background-attachment: scroll  !important;*/
 }
 
 .price-slider {
