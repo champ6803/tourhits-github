@@ -1,4 +1,5 @@
 $(function () {
+    $('#indx').addClass('menu-active');
     $('#date_picker').daterangepicker({
         "autoApply": true,
         "opens": "center",

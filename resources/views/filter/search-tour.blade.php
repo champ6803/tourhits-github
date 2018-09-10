@@ -165,7 +165,7 @@
 
 <section class="filter-page">
     <div class="container">
-        <div class="row">
+<!--        <div class="row">
             <div class="col-md-12">
                 <div class="page-top">
                     <select class="awe-select">
@@ -174,7 +174,7 @@
                     </select>
                 </div>
             </div>
-        </div>
+        </div>-->
         
     
         <div class="container">
