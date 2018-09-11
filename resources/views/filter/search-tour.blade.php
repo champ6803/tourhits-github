@@ -130,9 +130,6 @@
    color : #fff; 
 }
 
-#owl-demo .owl-item{
-  width: auto;  
-}
 
 #owl-demo .tag-item a{
     color : #363636;

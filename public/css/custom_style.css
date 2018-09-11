@@ -187,7 +187,7 @@
 }
 
 .card-detail .city{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: #262626;
     padding-top: 3px;
@@ -225,7 +225,7 @@
 .card-time{
     padding: 3px 0;
     color: #262626;
-    font-size: 25px;
+    font-size: 23px;
     text-align: left;
     margin-left: 9px;
 }
@@ -4288,11 +4288,8 @@ Custom BS3
 
 .hothits-country-name{
     font-size: 18px;
-
     padding: 13px;
-
     color: #fff;
-
     margin: 0;
     line-height: 1;
     text-shadow: 0 0 8px rgba(0,0,0,.3);
@@ -4300,7 +4297,6 @@ Custom BS3
     display: block;
     background-color: rgba(55,35,35,.3);
     transition: background-color .15s ease-in-out;
-
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -4308,6 +4304,7 @@ Custom BS3
     font-weight: 500;
 
 }
+
 
 .hothits-cover-img a:hover{
     color: #fff;
