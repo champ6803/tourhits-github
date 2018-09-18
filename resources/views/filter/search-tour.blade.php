@@ -114,9 +114,9 @@
     text-align: center;
     margin: 10px;
     border: 1px solid #d7d7d7;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 /*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);*/
 }
 
@@ -138,16 +138,56 @@
     padding: 5px 10px;
     line-height: 2;   
 }
+.filter-page__content .trip-item .item-body .item-title h2 a:hove{color: #b5292e;}
+.filter-box {display: none;}
+.filter-box .searchtoggle {display: none;}
 
 @media screen and ( max-width: 768px ) {
       #owl-demo .tag-item>a {font-size: 15px;}
+      
+      .filter-page__content .country h6{font-size: 15px; line-height: 1;}
+      .filter-page__content .country img{height: 31px;} 
+
     }
+    
+@media screen and ( max-width: 958px ) {
+    
+    .filter-box {
+        position: absolute;
+        top: -57px;
+        right: 30px;
+        white-space: nowrap;
+        display: inline-block;
+        z-index: 9;
+        }
+      .filter-box .searchtoggle {
+        display: inline;
+        padding: 0px 6px;
+        width: 60px;
+        height: 78px;
+        line-height: 78px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #f65525;
+        text-align: center;
+        border-left: 2px solid #D4D4D4;
+        border-right: 2px solid #D4D4D4;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        }
+        
+      .page-sidebar .filter-tittle  {display: none;}
+      .page-sidebar .left-bar3    {display: none;}
+    }   
+    
+    
     
 
 </style>
-
-
-
 
 <!-- HEADING PAGE -->
 <section class="awe-parallax category-heading-section-demo">
@@ -213,7 +253,13 @@
                             <img style="float: left; margin-right: 10px;" data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png" alt="ทัวร์เกาหลี" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png">
                             <h6>ทัวร์ญี่ปุ่น ทั้งหมด 132 แพ็คเกจ</h6>
                         </div>
-                    </div>            
+                    </div>
+                    <div class="col-md-12">
+                        <!-- FILTER BOX -->
+                        <div class="filter-box">
+                            <span class="searchtoggle"><i class="fas fa-filter"></i> คัดกรอง</span>
+                        </div> 
+                    </div>
                 </div>
                 <br>
                 <div id="card_area" class="filter-item-wrapper">
@@ -566,11 +612,11 @@
                     </div>
                 </div>    
 
-                <div class="sidebar-title">
+                <div class="sidebar-title hidden-xs filter-tittle">
                     <h3><i class="fas fa-filter"></i> คัดกรอง :</h3>      
                 </div>         
 
-                <div class="left-bar3">
+                <div class="left-bar3 mobile-version hidden-xs">
                     <div class="box-content">
                         <div class="filter-bar">    
                             <div class="filter-price">
@@ -1019,7 +1065,7 @@ $(document).ready(function() {
       stopOnHover : true,
       margin:5,
       transitionStyle:"fade",
-      itemsTablet: [768,4],
+      itemsTablet: [768,3],
       itemsMobile : [479,2]
   
   });
