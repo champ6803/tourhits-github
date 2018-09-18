@@ -313,7 +313,7 @@
                                 </del>
 
                             </div>
-                            <a href="#" class="awe-btn">จองทัวร์นี้</a>
+                            <a href="#" class="awe-btn">ดูเพิ่มเติม</a>
                         </div>
                     </div>
                     <!-- END / ITEM -->
@@ -367,7 +367,7 @@
                                 </del>
 
                             </div>
-                            <a href="#" class="awe-btn">จองทัวร์นี้</a>
+                            <a href="#" class="awe-btn">ดูเพิ่มเติม</a>
                         </div>
                     </div>
                     <!-- END / ITEM -->
@@ -421,7 +421,7 @@
                                 </del>
 
                             </div>
-                            <a href="#" class="awe-btn">จองทัวร์นี้</a>
+                            <a href="#" class="awe-btn">ดูเพิ่มเติม</a>
                         </div>
                     </div>
                     <!-- END / ITEM -->
@@ -475,7 +475,7 @@
                                 </del>
 
                             </div>
-                            <a href="#" class="awe-btn">จองทัวร์นี้</a>
+                            <a href="#" class="awe-btn">ดูเพิ่มเติม</a>
                         </div>
                     </div>
                     <!-- END / ITEM -->
