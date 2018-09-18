@@ -141,6 +141,7 @@
 .filter-page__content .trip-item .item-body .item-title h2 a:hove{color: #b5292e;}
 .filter-box {display: none;}
 .filter-box .searchtoggle {display: none;}
+.trip-item:hover .item-body .item-title h2 a{color: #b5292e;}
 
 @media screen and ( max-width: 768px ) {
       #owl-demo .tag-item>a {font-size: 15px;}
