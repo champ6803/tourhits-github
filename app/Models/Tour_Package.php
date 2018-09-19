@@ -80,7 +80,7 @@ class Tour_Package extends Model {
     , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price) {
         try {
             $date = \Carbon\Carbon::now();
-            if ($this->IsNullOrEmptyString($tourlist_picture)) {
+            if ($this->IsNullOrEmptyString($tourlist_picture) && !$this->IsNullOrEmptyString($pdf)) {
                 Tour_Package::where('tour_package_id', '=', $tour_package_id)
                         ->update(
                                 ['tour_package_code' => $tour_package_code
@@ -98,13 +98,10 @@ class Tour_Package extends Model {
                                     , 'tour_package_period_end' => $dateEnd
                                     , 'tour_package_pdf' => $tour_package_id . '-' . $pdf
                                     , 'updated_by' => 'admin'
-                                    , 'updated_at' => $date]
+                                    , 'updated_at' => $date]    
                 );
-                if (Input::hasFile('pdf_file')) {
-                    $file_pdf = Input::file('pdf_file');
-                    $file_pdf->move('images/pdf', $tour_package_id . "-" . $file_pdf->getClientOriginalName());
-                }
-            } else if ($this->IsNullOrEmptyString($pdf)) {
+                
+            } else if ($this->IsNullOrEmptyString($pdf) && !$this->IsNullOrEmptyString($tourlist_picture)) {
                 Tour_Package::where('tour_package_id', '=', $tour_package_id)
                         ->update(
                                 ['tour_package_code' => $tour_package_code

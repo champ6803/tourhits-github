@@ -1373,6 +1373,7 @@
         $('#indx').addClass('menu-active');
     });
 
+    var rootPath = '{{asset("/images/")}}';
 </script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="{{ asset('js/home/index.js') }}"></script>

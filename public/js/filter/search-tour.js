@@ -162,6 +162,8 @@ function getTourPackage() {
                 if (data != null) {
 //                    renderTourPackage(data.tourPackageList, data.tourPeriod);
                     renderTourCard(data.tourPackageList, data.tourPeriod);
+                    $('#package_country').html(data.tourPackageList[0].tour_country_name + " ทั้งหมด " + data.tourPackageList.length + " แพ็คเกจ");
+                    $("#package_country_image").attr("src", "../images/flags/" + data.tourPackageList[0].country_code.toLowerCase() + ".png");
                     $("#search_tour_pager").empty();
                     $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
                 } else {
@@ -391,8 +393,19 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + '<div class="item-price-more">';
             div = div + '<div class="price">';
             div = div + 'ราคา';
-            div = div + '<ins>';
-            div = div + '<span class="amount">฿' + numberWithCommas(this.tour_package_special_price) + '</span>';
+            if (this.tour_package_special_price > 0) {
+                div = div + '<ins>';
+                div = div + '<span class="amount">฿' + numberWithCommas(this.tour_package_special_price) + '</span>';
+                div = div + '</ins>';
+                div = div + '<del>';
+                div = div + '<span class="amount">฿' + numberWithCommas(this.tour_package_price) + '</span>';
+                div = div + '</del>'
+            } else {
+                div = div + '<ins>';
+                div = div + '<span class="amount">฿' + numberWithCommas(this.tour_package_price) + '</span>';
+                div = div + '</ins>';
+            }
+
 //            $.each(tourPeriod, function (keyPrice, valPrice) {
 //                if (valPrice['tour_package_id'] === val['tour_package_id']) {
 //                    div = div + '<span class="amount">฿' + numberWithCommas(tourPeriod[keyPrice].tour_period_adult_price) + '</span>';

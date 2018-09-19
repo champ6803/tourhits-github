@@ -1,6 +1,7 @@
 var period_data = [];
 var number = 0;
 var page = "new";
+var click_gen = false;
 $(function () {
     $('#managetour').addClass("active");
     $('#tour_package_list').addClass("active");
@@ -25,6 +26,7 @@ $(function () {
     createAttractionDropDown();
     createAttractionDayDropDown();
     createRouteDropDown();
+    createConditionsDropDown();
     $("#start_date").datepicker({
         format: 'dd/mm/yyyy',
         todayBtn: true
@@ -449,6 +451,35 @@ function createTourCountryDropDown() {
     });
 }
 
+function createConditionsDropDown() {
+    var StrDropDown = '';
+    $.ajax({
+        type: 'post',
+        url: 'getConditionsList',
+        async: false,
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            if (data != null) {
+                StrDropDown = '<select class="form-control" id="conditions_id" name="conditions_id">';
+                StrDropDown = StrDropDown + "<option value='0'> - Select - </option>";
+                for (var row = 0; row < data.length; row++) {
+                    StrDropDown = StrDropDown + "<option value=" + data[row].conditions_id + ">" + data[row].conditions_name + "</option>";
+                }
+                StrDropDown = StrDropDown + '</select>';
+                document.getElementById("selectConditioins").innerHTML = StrDropDown;
+            } else {
+                alert('select fail');s
+            }
+        },
+        error: function (data) {
+            alert('error');
+        }
+    });
+
+}
+
 function numberFormat(value, row, index, field) {
     return numberWithCommas(parseInt(value));
 }
@@ -483,6 +514,7 @@ function initValues() {
         if (tourPackageDetail.tourPackage) {
             $('#tour_package_id').val(tourPackageDetail.tourPackage.tour_package_id);
             $('#tour_country').val(tourPackageDetail.tourPackage.tour_country_id);
+            $('#conditions_id').val(tourPackageDetail.tourPackage.conditions_id);
             $('#tour_name').val(tourPackageDetail.tourPackage.tour_package_name);
             //$('#file').val(tourPackageDetail.tourPackage.tour_package_image);
             $('#tour_detail').val(tourPackageDetail.tourPackage.tour_package_detail);
@@ -497,6 +529,7 @@ function initValues() {
             $("#file_show").attr("src", src);
             $("#file_show").removeClass('hide');
             $("#pdf_show").html(tourPackageDetail.tourPackage.tour_package_pdf);
+            $("#pdf_hidden").val(tourPackageDetail.tourPackage.tour_package_pdf);
 
 
             //$('#div_file').html('<div class="row"><div class="col-xs-8"><img height="100px;" src="images/tour/tour6.jpg"></div><div class="col-xs-4"><input class="form-control" type="file" id="file" name="file"><input type="hidden" value="{{ csrf_token() }}" name="_token"></div></div>');

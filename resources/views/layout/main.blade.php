@@ -457,7 +457,8 @@ session_start();
 
                         </nav>
                         <!-- END / NAVIGATION -->
-
+                        
+                           
                         <!-- SEARCH BOX -->
                         <div class="search-box">
                             <span class="searchtoggle"><i class="fas fa-user"></i></span>

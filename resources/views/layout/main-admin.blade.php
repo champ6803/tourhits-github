@@ -461,7 +461,7 @@ if (!isset($_SESSION['a_user'])) {
                                 <li id="conditionsMenu"><a href="{{ url('manage-conditions')}}">จัดการเงื่อนไข</a></li>
                                 <li><a id="tagMenu"  href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
                                 <li><a id="otherMenu"  href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
-                                <li><a id="attractionMenu"  href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
+                                <li id="attractionMenu"><a href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
                                 <li><a id="airlineMenu"  href="{{ url('manage-airline')}}">จัดการสายการบิน</a></li>
                                 <li><a id="routeMenu"  href="{{ url('manage-route')}}">จัดการเส้นทาง</a></li>
                                 <li><a id="holidayMenu"  href="{{ url('manage-holiday')}}">จัดการวันหยุด</a></li>

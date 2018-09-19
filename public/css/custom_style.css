@@ -187,7 +187,7 @@
 }
 
 .card-detail .city{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: #262626;
     padding-top: 3px;
@@ -225,7 +225,7 @@
 .card-time{
     padding: 3px 0;
     color: #262626;
-    font-size: 25px;
+    font-size: 23px;
     text-align: left;
     margin-left: 9px;
 }
@@ -645,12 +645,12 @@ hr {
 }
 
 .filter-bar .option{
-    font-size: 20px;
+    font-size: 21px;
     margin-top: -17px;
 }
 
 .filter-bar .option-all{
-    font-size: 20px;
+    font-size: 21px;
     margin-top: 0px;
     font-weight: bold;
 
@@ -4288,11 +4288,8 @@ Custom BS3
 
 .hothits-country-name{
     font-size: 18px;
-
     padding: 13px;
-
     color: #fff;
-
     margin: 0;
     line-height: 1;
     text-shadow: 0 0 8px rgba(0,0,0,.3);
@@ -4300,7 +4297,6 @@ Custom BS3
     display: block;
     background-color: rgba(55,35,35,.3);
     transition: background-color .15s ease-in-out;
-
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -4308,6 +4304,7 @@ Custom BS3
     font-weight: 500;
 
 }
+
 
 .hothits-cover-img a:hover{
     color: #fff;
@@ -5079,7 +5076,13 @@ Custom BS3
 }
 
 .tour-left-bar-item .price{
-    font-size: 15px
+    font-size: 19px;
+    color: #ea1c24;
+}
+
+.tour-left-bar-item .peroid{
+    font-size: 19px;
+    font-weight: bold;
 }
 
 .page-sidebar .swiper-wrapper{
@@ -5094,7 +5097,9 @@ Custom BS3
 .page-sidebar .tour-local-nav>.local-nav-item>a{
     padding: 0px 10px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 17px;
+    color: #333;
+    font-weight: bold;
 }
 
 .page-sidebar .tour-local-nav>.local-nav-item>a:hover{
@@ -5102,7 +5107,7 @@ Custom BS3
 }
 
 .right-bar .media-left{
-    width: 40%;
+    width: 50%;
 }
 
 .right-bar .media-heading{
@@ -5110,23 +5115,32 @@ Custom BS3
 }
 
 .filter-page__content .trip-item{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .filter-page__content .trip-item:hover{
-    box-shadow: 0 0 0 2px #ea1c24;
+/*    box-shadow: 0 0 0 2px #cdc7ec;*/
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+
 }
 
 .filter-page__content .trip-item .item-body .item-title h2 a{
-    line-height: 1.2;
+    line-height: 1.4;
     white-space: normal;
-    font-size: 18px;
+    font-size: 19px;
+    color: #b5292e;
 }
 
 .filter-page__content .trip-item .item-body .hilight {
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+/*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
     color: #8d8d8d;
-    padding-top: 8px;
+    padding-top:2px;
     max-height: 100px;
     overflow : hidden;
     text-overflow: ellipsis;
@@ -5143,10 +5157,22 @@ Custom BS3
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+    font-weight: bold;
 }
 
-@media screen and (max-width: 425px){
+.filter-page__content .trip-item .item-title{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 52px;
+}
+
+
+@media screen and (max-width: 464px){
 
     .filter-page__content .trip-item .hilight .detail{        
         -webkit-line-clamp: 3;     
@@ -5192,7 +5218,7 @@ Custom BS3
 }
 
 .trip-item .item-price-more a{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     color: #ea1c24;
 }
