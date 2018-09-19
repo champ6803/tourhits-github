@@ -18,11 +18,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Attraction extends Model {
 
-    protected $table = 'attraction';
+    protected $table = 'attraction';    
 
     public function getAttractionAll() {
         try {
-            $attractionList = Attraction::all();
+            $attractionList = Attraction::Leftjoin('country', 'attraction.country_id', 'country.country_id')
+                    ->select('attraction.*', 'country.country_name')
+                    ->get();
             return $attractionList;
         } catch (Exception $ex) {
             return $ex;
@@ -31,7 +33,8 @@ class Attraction extends Model {
 
     public function getAttractionByName($input_attraction_name) {
         try {
-            $attractionList = Attraction::where('attraction_name', $input_attraction_name)->get();
+            $attractionList = Attraction::join('country', 'attraction.country_id', 'country.country_id')
+                    ->where('attraction_name', $input_attraction_name)->get();
             return $attractionList;
         } catch (Exception $ex) {
             return $ex;

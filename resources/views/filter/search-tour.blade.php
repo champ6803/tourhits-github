@@ -94,7 +94,7 @@
         cursor: pointer;
         color: black;
     }
-    
+
     .card-airline img { max-height: 34px; }
 
 </style>
@@ -103,91 +103,87 @@
     .page-sidebar .sidebar-title{
         border-top-color: #ea1c24;
     }
-    
-#owl-demo .tag-item{
-    background: #d7d7d7;
-    width: auto;
-    margin-right: 10px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    text-align: center;
-    margin: 10px;
-    border: 1px solid #d7d7d7;
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-/*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);*/
-}
 
-#owl-demo .tag-item:hover{
-   background-color: #363636;
-   opacity: 0.8;
-   
-}
+    #owl-demo .tag-item{
+        background: #d7d7d7;
+        width: auto;
+        margin-right: 10px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        text-align: center;
+        margin: 10px;
+        border: 1px solid #d7d7d7;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+        /*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);*/
+    }
 
-#owl-demo .tag-item:hover a{
-   color : #fff; 
-}
-
-
-#owl-demo .tag-item a{
-    color : #363636;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 5px 10px;
-    line-height: 2;   
-}
-.filter-page__content .trip-item .item-body .item-title h2 a:hove{color: #b5292e;}
-.filter-box {display: none;}
-.filter-box .searchtoggle {display: none;}
-.trip-item:hover .item-body .item-title h2 a{color: #b5292e;}
-
-@media screen and ( max-width: 768px ) {
-      #owl-demo .tag-item>a {font-size: 15px;}
-      
-      .filter-page__content .country h6{font-size: 15px; line-height: 1;}
-      .filter-page__content .country img{height: 31px;} 
+    #owl-demo .tag-item:hover{
+        background-color: #363636;
+        opacity: 0.8;
 
     }
-    
-@media screen and ( max-width: 958px ) {
-    
-    .filter-box {
-        position: absolute;
-        top: -57px;
-        right: 30px;
-        white-space: nowrap;
-        display: inline-block;
-        z-index: 9;
-        }
-      .filter-box .searchtoggle {
-        display: inline;
-        padding: 0px 6px;
-        width: 60px;
-        height: 78px;
-        line-height: 78px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #f65525;
-        text-align: center;
-        border-left: 2px solid #D4D4D4;
-        border-right: 2px solid #D4D4D4;
-        cursor: pointer;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        }
-        
-      .page-sidebar .filter-tittle  {display: none;}
-      .page-sidebar .left-bar3    {display: none;}
-    }   
-    
-    
-    
 
+    #owl-demo .tag-item:hover a{
+        color : #fff; 
+    }
+
+
+    #owl-demo .tag-item a{
+        color : #363636;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 5px 10px;
+        line-height: 2;   
+    }
+    .filter-page__content .trip-item .item-body .item-title h2 a:hove{color: #b5292e;}
+    .filter-box {display: none;}
+    .filter-box .searchtoggle {display: none;}
+    .trip-item:hover .item-body .item-title h2 a{color: #b5292e;}
+
+    @media screen and ( max-width: 768px ) {
+        #owl-demo .tag-item>a {font-size: 15px;}
+
+        .filter-page__content .country h6{font-size: 15px; line-height: 1;}
+        .filter-page__content .country img{height: 31px;} 
+
+    }
+
+    @media screen and ( max-width: 958px ) {
+
+        .filter-box {
+            position: absolute;
+            top: -57px;
+            right: 30px;
+            white-space: nowrap;
+            display: inline-block;
+            z-index: 9;
+        }
+        .filter-box .searchtoggle {
+            display: inline;
+            padding: 0px 6px;
+            width: 60px;
+            height: 78px;
+            line-height: 78px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #f65525;
+            text-align: center;
+            border-left: 2px solid #D4D4D4;
+            border-right: 2px solid #D4D4D4;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .page-sidebar .filter-tittle  {display: none;}
+        .page-sidebar .left-bar3    {display: none;}
+    }   
 </style>
 
 <!-- HEADING PAGE -->
@@ -203,56 +199,54 @@
 
 <section class="filter-page">
     <div class="container">
-<!--        <div class="row">
-            <div class="col-md-12">
-                <div class="page-top">
-                    <select class="awe-select">
-                        <option>Best Match</option>
-                        <option>Best Rate</option>
-                    </select>
-                </div>
-            </div>
-        </div>-->
-        
-    
+        <!--        <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-top">
+                            <select class="awe-select">
+                                <option>Best Match</option>
+                                <option>Best Rate</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>-->
+
+
         <div class="container">
             <div class="row">
-            <div class="col-md-12 tour-local-wrapper">
-                        
-                        
-                        <div id="owl-demo" class="tag-container owl-carousel owl-theme">
-                                
-                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นราคาถูก</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์โตเกียว</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์วันปีใหม่ญี่ปุ่น</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์ญุ่ปุ่น ตุลาคม</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น การบินไทย</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ตุลาคม</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น การบินไทย</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์โตเกียว</a></div>
-                                 <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a></div>
-                                 
-                        </div>
-                        <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
-                        <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
-    
-            </div>                           
+                <div class="col-md-12 tour-local-wrapper">
+
+
+                    <div id="owl-demo" class="tag-container owl-carousel owl-theme">
+
+                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นราคาถูก</a></div>
+                        <div class="tag-item"><a href="">ทัวร์โตเกียว</a></div>
+                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a></div>
+                        <div class="tag-item"><a href="">ทัวร์วันปีใหม่ญี่ปุ่น</a></div>
+                        <div class="tag-item"><a href="">ทัวร์ญุ่ปุ่น ตุลาคม</a></div>
+                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น การบินไทย</a></div>
+                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a></div>
+                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ตุลาคม</a></div>
+                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น การบินไทย</a></div>
+                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a></div>
+                        <div class="tag-item"><a href="">ทัวร์โตเกียว</a></div>
+                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a></div>
+
+                    </div>
+                    <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
+                    <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
+
+                </div>                           
             </div> 
         </div>
-        
+
         <!--                    กลาง-->
         <div class="col-md-6 col-md-push-3">                       
-            
-
             <div class="filter-page__content">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="country">
-                            <img style="float: left; margin-right: 10px;" data-src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png" alt="ทัวร์เกาหลี" class=" lazyloaded" src="https://d4ulp9jtgcw4i.cloudfront.net/uploads/region_collection/flag/6/Korea_-South.png">
-                            <h6>ทัวร์ญี่ปุ่น ทั้งหมด 132 แพ็คเกจ</h6>
+                            <img id="package_country_image" style="float: left; height: 47px; margin-right: 10px; border:#ea1c24 solid 1px;" class="lazyloaded">
+                            <h6 id="package_country"></h6>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -1046,46 +1040,42 @@
 
     </div>
 </section>
-
-
-
-
 @stop
 
 @section('footer_scripts')
 <script>
-$(document).ready(function() {
- 
-  var owl = $("#owl-demo");
- 
-  owl.owlCarousel({
-      items : 5, //5 items above 1000px browser width
-      autoWidth:true,
-      loop:true,
-      autoPlay : 4500,
-      stopOnHover : true,
-      margin:5,
-      transitionStyle:"fade",
-      itemsTablet: [768,3],
-      itemsMobile : [479,2]
-  
-  });
- 
-  // Custom Navigation Events
-  $(".next").click(function(){
-    owl.trigger('owl.next');
-  })
-  $(".prev").click(function(){
-    owl.trigger('owl.prev');
-  })
-  $(".play").click(function(){
-    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-  })
-  $(".stop").click(function(){
-    owl.trigger('owl.stop');
-  })
- 
-});
+    $(document).ready(function () {
+
+        var owl = $("#owl-demo");
+
+        owl.owlCarousel({
+            items: 5, //5 items above 1000px browser width
+            autoWidth: true,
+            loop: true,
+            autoPlay: 4500,
+            stopOnHover: true,
+            margin: 5,
+            transitionStyle: "fade",
+            itemsTablet: [768, 3],
+            itemsMobile: [479, 2]
+
+        });
+
+        // Custom Navigation Events
+        $(".next").click(function () {
+            owl.trigger('owl.next');
+        })
+        $(".prev").click(function () {
+            owl.trigger('owl.prev');
+        })
+        $(".play").click(function () {
+            owl.trigger('owl.play', 1000); //owl.play event accept autoPlay speed as second parameter
+        })
+        $(".stop").click(function () {
+            owl.trigger('owl.stop');
+        })
+
+    });
 </script>
 <script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

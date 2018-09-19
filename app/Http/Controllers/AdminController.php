@@ -855,6 +855,7 @@ class AdminController extends Controller {
                     $tour_category = null;
                     $tour_country = $_POST['tour_country'];
                     $tour_name = $_POST['tour_name'];
+                    $conditions_id = $_POST['conditions_id'];
                     $tour_detail = $_POST['tour_detail'];
                     $highlight_tour = null;
                     $tourlist_picture = $_FILES['file']['name'];

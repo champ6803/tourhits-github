@@ -12,11 +12,11 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             var div = '<div class="col-sm-6 col-md-6 col-lg-3" align="center">';
             div = div + '<div class="thumbnail card--content">';
             div = div + '<a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">';
-            div = div + '<div class="tour-cover lazyloaded" data-bg="../images/tour/' + val['tour_package_image'] + '" style="background-image: url(&quot;../images/tour/' + val['tour_package_image'] + '&quot;);">';
+            div = div + '<div class="tour-cover lazyloaded" data-bg="'+ rootPath + '/tour/' + val['tour_package_image'] + '" style="background-image: url(&quot;' + rootPath + '/tour/' + val['tour_package_image'] + '&quot;);">';
             div = div + '<div class="tour-footer">';
             div = div + '<div class="pull-left">';
             div = div + '<span class="flag">';
-            div = div + '<img class="flag-small" alt="" src="../images/flags/' + val['country_code'] + '.png">';
+            div = div + '<img class="flag-small" alt="" src="' + rootPath + '/flags/' + val['country_code'] + '.png">';
             div = div + '</span>';
             div = div + '</div>';
             div = div + '</div>';
@@ -57,7 +57,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             div = div + '<div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</div>';
             div = div + '<hr>';
             div = div + '<div class="bar-bottom-card">';
-            div = div + '<div class="card-airline"><img alt="' + this.airline_name + '" src="../images/airline/' + val['airline_picture'] + '" title="การบินไทย"></div>';
+            div = div + '<div class="card-airline"><img alt="' + this.airline_name + '" src="' + rootPath + '/airline/' + val['airline_picture'] + '" title="การบินไทย"></div>';
             if (this.tour_package_special_price > 0) {
                 div = div + '<div class="card-price-dis"><strike>' + numberWithCommas(this.tour_package_price) + '฿</strike></div>' + '<div class="card-price">' + numberWithCommas(this.tour_package_special_price) + '฿</div>';
             } else {
