@@ -72,6 +72,7 @@
 .country-link img{
     height: 35px;
     float: left;
+    border-radius: 5px;
 }
 
 .country-link h5 {
@@ -4722,10 +4723,13 @@ Custom BS3
 }
 
 .cat-asian .country-link h5 {
-    width: 50%;
+    width: 60%;
     line-height: 25px;
     font-size: 17px;
+    font-weight: bold;
     overflow: hidden;
+    color: black;
+    padding-left: 1px;
 }
 
 .cat-asian .country-link img {
@@ -4734,7 +4738,7 @@ Custom BS3
 
 .sub-menu .pagtour-head{
     padding-left: 20px;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 @media screen and (max-width: 1200px) {
