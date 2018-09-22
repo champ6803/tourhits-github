@@ -303,11 +303,19 @@ class AdminController extends Controller {
         try {
             $attraction_name = $_POST['attraction_name'];
             $attraction_picture = $_FILES['file']['name'];
-            $attractionModel->insertAttraction($attraction_name, $attraction_picture);
-            echo "<script>
+            $country_id = $_POST['country_select'];
+            if (!$this->IsNullOrEmptyString($attraction_name) && !$this->IsNullOrEmptyString($attraction_picture) && !$this->IsNullOrEmptyString($country_id)) {
+                $attractionModel->insertAttraction($country_id, $attraction_name, $attraction_picture);
+                echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-attraction';
              </script>";
+            } else {
+                echo "<script>
+             alert('ไม่สามารถบันทึกข้อมูลได้');
+             window.location.href='manage-attraction';
+             </script>";
+            }
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
@@ -332,7 +340,8 @@ class AdminController extends Controller {
             $id = $_POST['hidden_update_id'];
             $update_attraction_name = $_POST['update_attraction_name'];
             $attraction_picture = $_FILES['file']['name'];
-            $attractionModel->editAttraction($id, $update_attraction_name, $attraction_picture);
+            $country_id = $_POST['update_country_select'];
+            $attractionModel->editAttraction($id, $country_id, $update_attraction_name, $attraction_picture);
             echo "<script>
              alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-attraction';

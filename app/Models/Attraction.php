@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Attraction extends Model {
 
-    protected $table = 'attraction';    
+    protected $table = 'attraction';
 
     public function getAttractionAll() {
         try {
@@ -34,7 +34,8 @@ class Attraction extends Model {
     public function getAttractionByName($input_attraction_name) {
         try {
             $attractionList = Attraction::join('country', 'attraction.country_id', 'country.country_id')
-                    ->where('attraction_name', $input_attraction_name)->get();
+                            ->select('attraction.*', 'country.country_name')
+                            ->where('attraction_name', $input_attraction_name)->get();
             return $attractionList;
         } catch (Exception $ex) {
             return $ex;
@@ -43,18 +44,21 @@ class Attraction extends Model {
 
     public function getAttractionById($id) {
         try {
-            $attraction = Attraction::where('attraction_id', $id)->first();
+            $attraction = Attraction::join('country', 'attraction.country_id', 'country.country_id')
+                            ->select('attraction.*', 'country.country_name')
+                            ->where('attraction_id', $id)->first();
             return $attraction;
         } catch (Exception $ex) {
             return $ex;
         }
     }
 
-    public function insertAttraction($attraction_name, $attraction_picture) {
+    public function insertAttraction($country_id, $attraction_name, $attraction_picture) {
         try {
             $date = \Carbon\Carbon::now();
             \DB::table('attraction')->insert(
-                    ['attraction_name' => $attraction_name
+                    ['country_id' => $country_id
+                        , 'attraction_name' => $attraction_name
                         , 'created_by' => 'admin'
                         , 'created_at' => $date
                         , 'updated_by' => 'admin'
@@ -78,19 +82,21 @@ class Attraction extends Model {
         }
     }
 
-    public function editAttraction($id, $update_attraction_name, $attraction_picture) {
+    public function editAttraction($id, $country_id, $update_attraction_name, $attraction_picture) {
         try {
             $date = \Carbon\Carbon::now();
             if (null == $attraction_picture) {
                 \DB::table('attraction')
                         ->where('attraction_id', $id)
-                        ->update(['attraction_name' => $update_attraction_name
+                        ->update(['country_id' => $country_id
+                            , 'attraction_name' => $update_attraction_name
                             , 'updated_at' => $date
                             , 'updated_by' => 'admin']);
             } else {
                 \DB::table('attraction')
                         ->where('attraction_id', $id)
-                        ->update(['attraction_name' => $update_attraction_name
+                        ->update(['country_id' => $country_id
+                            , 'attraction_name' => $update_attraction_name
                             , 'attraction_picture' => $attraction_picture
                             , 'updated_at' => $date
                             , 'updated_by' => 'admin']);

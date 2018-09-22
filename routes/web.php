@@ -214,3 +214,7 @@ Route::post('getConditionsList', 'MasterController@getConditionsList');
 Route::post('removeConditions', 'MasterController@removeConditions');
 
 Route::post('saveConditions', 'MasterController@saveConditions');
+
+// Attraction Manage //
+
+Route::get('getCountry', 'MasterController@getCountry');

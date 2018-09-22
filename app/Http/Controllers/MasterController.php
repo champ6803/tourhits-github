@@ -116,7 +116,7 @@ class MasterController extends Controller {
 // ไม่ได้ใช้
     public function getCountry() {
         try {
-            $country = Country::all();
+            $countryList = Country::all();
             return response($countryList);
         } catch (\Exception $e) {
             $msg = $e->getMessage();

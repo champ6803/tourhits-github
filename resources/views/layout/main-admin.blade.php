@@ -459,12 +459,12 @@ if (!isset($_SESSION['a_user'])) {
                             <ul class="treeview-menu">
                                 <li id="categoryMenu"><a href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
                                 <li id="conditionsMenu"><a href="{{ url('manage-conditions')}}">จัดการเงื่อนไข</a></li>
-                                <li><a id="tagMenu"  href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
-                                <li><a id="otherMenu"  href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
+                                <li id="tagMenu"><a href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
+                                <li id="otherMenu"><a href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
                                 <li id="attractionMenu"><a href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
-                                <li><a id="airlineMenu"  href="{{ url('manage-airline')}}">จัดการสายการบิน</a></li>
-                                <li><a id="routeMenu"  href="{{ url('manage-route')}}">จัดการเส้นทาง</a></li>
-                                <li><a id="holidayMenu"  href="{{ url('manage-holiday')}}">จัดการวันหยุด</a></li>
+                                <li id="airlineMenu"><a href="{{ url('manage-airline')}}">จัดการสายการบิน</a></li>
+                                <li id="routeMenu"><a href="{{ url('manage-route')}}">จัดการเส้นทาง</a></li>
+                                <li id="holidayMenu"><a href="{{ url('manage-holiday')}}">จัดการวันหยุด</a></li>
                             </ul>
                         </li>
                         <li class="treeview">

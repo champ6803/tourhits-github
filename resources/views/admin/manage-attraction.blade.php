@@ -1,7 +1,6 @@
 @extends('layout.main-admin')
 @section('page_title','Admin Management')
 @section('main-content')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -23,10 +22,10 @@
                 </div>
             </div>
             <div class="col-lg-4" style="text-align: left">
-             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#attractionModal"> 
+             <button type="button" class="btn btn-info" id="btn_add_attraction"> 
                     <span class="glyphicon glyphicon-plus"></span>&nbsp;เพิ่มสถานที่ท่องเที่ยว</button>&nbsp;&nbsp;
-              <button type="button" id="clearButton" class="btn btn-danger">
-             <span class="glyphicon glyphicon-erase"></span>&nbsp;ล้างเงื่อนไข</button> 
+              <a class="btn btn-danger" href="../manage-attraction">
+             <span class="glyphicon glyphicon-erase"></span>&nbsp;ล้างเงื่อนไข</a> 
             </div>
         </div>  </fieldset>
         </form> <br> <br>
@@ -79,6 +78,10 @@
             <label for="recipient-name" class="col-form-label">ชื่อสถานที่ท่องเที่ยว:</label>
             <input type="text" class="form-control" id="attraction_name" name="attraction_name" required="required">
             <br>
+            <label for="recipient-name" class="col-form-label">ทัวร์ประเทศ:</label>
+            <select type="text" class="form-control" id="country_select"name="country_select" required="required">               
+            </select>
+            <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
             <input class="form-control" type="file" id="file" name="file">
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
@@ -109,6 +112,10 @@
             <label for="recipient-name" class="col-form-label">ชื่อสถานที่ท่องเที่ยว:</label>
             <input type="text" class="form-control" id="update_attraction_name" name="update_attraction_name">
             <input type="hidden" class="form-control" id="hidden_update_id" name="hidden_update_id">
+            <br>
+            <label for="recipient-name" class="col-form-label">ทัวร์ประเทศ:</label>
+            <select type="text" class="form-control" id="update_country_select" name="update_country_select" required="required">               
+            </select>
             <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
             <input class="form-control" type="file" id="updateFile" name="file">
@@ -147,9 +154,5 @@
 
 @stop
 @section('footer_scripts')
-<script type="text/javascript" src="../js/admin/manage-attraction.js"></script>
-<script src='https://code.jquery.com/jquery-1.12.4.js'></script>
-<script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
- 
+<script type="text/javascript" src="{{asset('js/admin/manage-attraction.js')}}"></script>
 @endsection

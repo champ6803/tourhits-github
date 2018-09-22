@@ -77,7 +77,8 @@
       <div class="modal-body">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อประเทศ:</label>
-            <div id="selectCountry"></div>
+            <select id="country_select" name="country"></select>
+            <!--<div id="selectCountry"></div>-->
             <br> 
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
             <input type="text" class="form-control" id="tour_country_name" name="tour_country_name" maxlength="100" required="required">
@@ -114,7 +115,8 @@
       <div class="modal-body">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อประเทศ:</label>
-            <div id="selectCountryEdit"></div>
+            <select id="update_country_select" name="countryEdit"></select>
+            <!--<div id="selectCountryEdit"></div>-->
             <br> 
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
             <input type="text" class="form-control" id="update_tour_country_name" name="update_tour_country_name" maxlength="100" >

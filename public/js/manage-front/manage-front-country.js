@@ -2,6 +2,8 @@ $(function () {
     $('#manage_front_country').addClass("active");
     $('#manage_front').addClass("active");
 
+    $('#country_select').select2({width: '100%', dropdownParent: $("#tourCountryModal")});
+    $('#update_country_select').select2({width: '100%', dropdownParent: $("#editModal")});
 
     $('#upload').on('click', function () {
         var file_data = $('#sortpicture').prop('files')[0];
@@ -54,19 +56,18 @@ $(function () {
         document.getElementById("countryEdit").selectedIndex = "0";
         $('#file').val('');
     });
-    $(document).ready(function () {
-        createCountryDropDown();
-        createCountryDropDownEdit();
-        createTable();
-        $('#tourCountryTable').DataTable();
-    });
+
+    createCountryDropDown('country_select');
+    createTable();
+    $('#tourCountryTable').DataTable();
+
 });
 
-function createCountryDropDown() {
-    var StrDropDown = '';
+function createCountryDropDown(selector) {
+    $('#' + selector).html($('<option></option>').val("").html("-- กรุณาเลือก --"));
     $.ajax({
-        type: 'post',
-        url: 'searchAllCountry',
+        type: 'get',
+        url: 'getCountry',
         async: false,
         data: null,
         headers: {
@@ -74,12 +75,9 @@ function createCountryDropDown() {
         },
         success: function (data) {
             if (data != null) {
-                StrDropDown = '<select class="form-control" id="country" name="country">';
-                for (var row = 0; row < data.length; row++) {
-                    StrDropDown = StrDropDown + "<option value=" + data[row].country_id + ">" + data[row].country_name + "</option>";
-                }
-                StrDropDown = StrDropDown + '</select>';
-                document.getElementById("selectCountry").innerHTML = StrDropDown;
+                $.each(data, function () {
+                    $('#' + selector).append($('<option></option>').val(this.country_id).html(this.country_name));
+                });
             } else {
                 alert('select fail');
             }
@@ -88,8 +86,36 @@ function createCountryDropDown() {
             alert('error');
         }
     });
-
 }
+
+//function createCountryDropDown() {
+//    var StrDropDown = '';
+//    $.ajax({
+//        type: 'post',
+//        url: 'searchAllCountry',
+//        async: false,
+//        data: null,
+//        headers: {
+//            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//        },
+//        success: function (data) {
+//            if (data != null) {
+//                StrDropDown = '<select class="form-control" id="country" name="country">';
+//                for (var row = 0; row < data.length; row++) {
+//                    StrDropDown = StrDropDown + "<option value=" + data[row].country_id + ">" + data[row].country_name + "</option>";
+//                }
+//                StrDropDown = StrDropDown + '</select>';
+//                document.getElementById("selectCountry").innerHTML = StrDropDown;
+//            } else {
+//                alert('select fail');
+//            }
+//        },
+//        error: function (data) {
+//            alert('error');
+//        }
+//    });
+//
+//}
 
 function createCountryDropDownEdit() {
     var StrDropDown = '';
@@ -165,10 +191,11 @@ function removeTourCountry(id) {
     // $('#removeModal').modal('show'); 
 }
 function editTourCountry(id, tourCountryName, tourCountryDetail, countryId) {
+    createCountryDropDown('update_country_select');
     $('#hidden_update_id').val(id);
     $('#update_tour_country_name').val(tourCountryName);
     $('#update_tour_country_detail').val(tourCountryDetail);
-    $('#countryEdit').val(countryId);
+    $('#update_country_select').val(countryId);
     // $('#editModal').modal('hide'); 
 }
 

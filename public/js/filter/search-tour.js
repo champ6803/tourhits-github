@@ -1,5 +1,6 @@
 $(function () {
     $('#indx').addClass('menu-active');
+    $('#package_country_image').hide();
     $('#date_picker').daterangepicker({
         "autoApply": true,
         "opens": "center",
@@ -249,7 +250,8 @@ function checkboxChecked() {
 
 function renderTourPackage(tourPackageList, tourPeriod) {
     var obj = tourPackageList;
-    if (obj != '') {
+    if (obj) {
+        
         var divs = "";
         $("#card_area").empty();
         $.each(obj, function (key, val) {
@@ -354,6 +356,7 @@ function renderTourPackage(tourPackageList, tourPeriod) {
 function renderTourCard(tourPackageList, tourPeriod) {
     var obj = tourPackageList;
     if (obj != null && obj.length > 0) {
+        $('#package_country_image').show();
         var divs = "";
         $("#card_area").empty();
         $.each(obj, function (key, val) {

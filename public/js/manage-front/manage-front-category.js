@@ -94,6 +94,7 @@ function createTable(param) {
 }
 
 function createTourCountryDropDown(selector) {
+    $('#' + selector).html($('<option></option>').val("").html("-- กรุณาเลือก --"));
     $.ajax({
         type: 'post',
         url: 'searchAllTourCountry',
