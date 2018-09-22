@@ -159,19 +159,19 @@
             white-space: nowrap;
             display: inline-block;
             float: right;
-            padding: 10px 16px 0px 0px;
+            padding: 7px 15px 0px 0px;
         }
         .filter-box .searchtoggle {
             display: inline;
             padding: 0px 6px;
-            width: 60px;
-            height: 78px;
+/*            width: 60px;
+            height: 78px;*/
             font-size: 19px;
             font-weight: bold;
-            color: #f65525;
+            color: #363636;
             text-align: center;
-            border-left: 2px solid #D4D4D4;
-            border-right: 2px solid #D4D4D4;
+            border-left: 1px solid #D4D4D4;
+            border-right: 1px solid #D4D4D4;
             cursor: pointer;
             -webkit-transition: all 0.3s ease;
             -moz-transition: all 0.3s ease;
