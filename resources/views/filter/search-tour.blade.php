@@ -155,20 +155,18 @@
     @media screen and ( max-width: 958px ) {
 
         .filter-box {
-            position: absolute;
-            top: -57px;
-            right: 30px;
+            position: relative;
             white-space: nowrap;
             display: inline-block;
-            z-index: 9;
+            float: right;
+            padding: 10px 16px 0px 0px;
         }
         .filter-box .searchtoggle {
             display: inline;
             padding: 0px 6px;
             width: 60px;
             height: 78px;
-            line-height: 78px;
-            font-size: 16px;
+            font-size: 19px;
             font-weight: bold;
             color: #f65525;
             text-align: center;
@@ -249,14 +247,16 @@
                             <img id="package_country_image" style="float: left; margin-right: 10px; border:#d7d7d7 solid 1px; border-radius: 8px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);" class="lazyloaded" src="../images/flags/Japan.png">
                             <h6 id="package_country">ทัวร์ญี่ปุ่น ทั้งหมด 333 แพ็คเกจ</h6>
                         </div>
-                    </div>
-                    <div class="col-md-12">
+                    </div>                    
+                </div>
+                <div class="row">
+                <div class="col-md-12">
                         <!-- FILTER BOX -->
                         <div class="filter-box">
                             <span class="searchtoggle"><i class="fas fa-filter"></i> คัดกรอง</span>
                         </div> 
-                    </div>
                 </div>
+                </div>    
                 <br>
                 <div id="card_area" class="filter-item-wrapper">
                     <!-- ITEM -->

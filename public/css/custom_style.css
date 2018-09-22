@@ -4816,8 +4816,8 @@ Custom BS3
     /* หน้าเสริจ */
     
     .tour-local-wrapper{
-        height: 50px;
-        margin-bottom: 10px;
+/*        height: 50px;
+        margin-bottom: 10px;*/
     }
     
     .swiper-container, .swiper-slide{
