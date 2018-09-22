@@ -145,11 +145,13 @@
     .filter-page__content .country img{height: 47px;} 
 
     @media screen and ( max-width: 768px ) {
-        #owl-demo .tag-item>a {font-size: 15px;}
-
+        #owl-demo .tag-item>a {font-size: 12px;}
+        .owl-theme .owl-controls .owl-page{zoom:0.5;}
         .filter-page__content .country h6{font-size: 15px; line-height: 1;}
         .filter-page__content .country img{height: 34px;} 
-
+        .tour-local-wrapper .swiper-button-next{font-size: 14px;}
+        .tour-local-wrapper .swiper-button-prev{font-size: 14px;}
+        
     }
 
     @media screen and ( max-width: 958px ) {
@@ -209,9 +211,9 @@
                     </div>
                 </div>-->
 
-
+        <div class="row">
         <div class="container">
-            <div class="row">
+            
                 <div class="col-md-12 tour-local-wrapper">
 
 
@@ -253,7 +255,7 @@
                 <div class="col-md-12">
                         <!-- FILTER BOX -->
                         <div class="filter-box">
-                            <span class="searchtoggle"><i class="fas fa-filter"></i> คัดกรอง</span>
+                            <span class="searchtoggle">คัดกรอง <i class="fas fa-filter" style="font-size: 15px"></i></span>
                         </div> 
                 </div>
                 </div>    
