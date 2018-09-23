@@ -138,10 +138,10 @@
         padding: 5px 10px;
         line-height: 2;   
     }
-    .filter-page__content .trip-item .item-body .item-title h2 a:hove{color: #b5292e;}
+    .filter-page__content .trip-item .item-body .item-title h2 a:hove{color: #c33132;}
     .filter-box {display: none;}
     .filter-box .searchtoggle {display: none;}
-    .trip-item:hover .item-body .item-title h2 a{color: #b5292e;}
+    .trip-item:hover .item-body .item-title h2 a{color: #c33132;}
     .filter-page__content .country img{height: 47px;} 
 
     @media screen and ( max-width: 768px ) {
@@ -150,13 +150,7 @@
         .filter-page__content .country h6{font-size: 15px; line-height: 1;}
         .filter-page__content .country img{height: 34px;} 
         .tour-local-wrapper .swiper-button-next{font-size: 14px;}
-        .tour-local-wrapper .swiper-button-prev{font-size: 14px;}
-        
-        .filterModal .modal-body .filter-bar .option{font-size: 17px; line-height: 2.3;}
-        .filterModal .modal-body .filter-bar .slider.slider-horizontal{width: 100%;}
-        .filterModal .modal-header .close{margin-top: 4px;}
-        .filterModal .modal-body .filter-bar .filter-header-text{font-size: 19px;}
-        .filterModal .modal-body .filter-bar .filter-route{padding: 3px 0 13px 0;}
+        .tour-local-wrapper .swiper-button-prev{font-size: 14px;}   
     }
 
     @media screen and ( max-width: 958px ) {
@@ -186,9 +180,24 @@
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
         }
-
         .page-sidebar .filter-tittle  {display: none;}
         .page-sidebar .left-bar3    {display: none;}
+        
+        .filterModal .modal-body .filter-bar .option{font-size: 17px; line-height: 2.3;}
+        .filterModal .modal-body .filter-bar .slider.slider-horizontal{width: 100%;}
+        .filterModal .modal-header .close{margin-top: 4px;}
+        .filterModal .modal-body .filter-bar .filter-header-text{font-size: 19px;}
+        .filterModal .modal-body .filter-bar .filter-route{padding: 3px 0 13px 0;}
+        .filterModal .filter-bar{padding-bottom:0px;}
+        .modal-footer .cancel{
+            font-size: 21px;
+            color: #fff;
+            width: 50%;
+            border-radius: 50px;
+            background-color: #c33132;
+            border: 1px solid #c33132;
+            opacity: 0.8;
+        }
     }
     
     .modal.in .modal-dialog{margin-top: 100px;}
@@ -637,8 +646,8 @@
                             </div>
                            </div>    
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <div class="modal-footer" style="text-align:center;">
+                        <button type="button" class="awe-btn cancel" data-dismiss="modal">เสร็จสิ้น</button>
                       </div>
                     </div>
 

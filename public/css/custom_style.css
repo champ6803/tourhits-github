@@ -101,11 +101,12 @@
 
 .package-hit-title .section-title {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 14px;
 }
 .package-hit-title .section-descripion {
-    font-size: 21px;
-    padding: 0 0 40px;
+    font-size: 22px;
+    padding: 0 0 15px 0px;
+    color: gray;
 }
 
 /* css for tabs card */
@@ -188,7 +189,7 @@
 }
 
 .card-detail .city{
-    font-size: 22px;
+    font-size: 19px;
     font-weight: bold;
     color: #262626;
     padding-top: 3px;
@@ -197,14 +198,16 @@
 
 .card-detail .hilight{
     /*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
-    color: #8d8d8d;
+/*    color: #8d8d8d;*/
+    color:gray;
     font-size: 17px;
+    font-weight: bold;
 }
 
 .card-detail .hilight i{
     float: left;
     padding-right: 8px;
-    color: #262626;
+    color: #c33132;
 }
 
 .card-detail .hilight .detail{
@@ -801,7 +804,7 @@ hr {
 }
 
 #priceSlider .slider-selection {
-    background: #d68813;
+    background: #c33132;
 }
 
 /* green 4/1/18 */
@@ -4176,12 +4179,14 @@ Custom BS3
 .tour-header .days{
     padding: 3px 10px 3px 10px;
     color: #fff;
-    font-size: 20px;
+    font-size: 19px;
     border-radius: 0px;
     position: absolute;
     left: 0;
-    background: rgba(55, 56, 58, .8);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    background: rgba(195, 49, 50, 0.8);
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+/*    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);*/
 }
 
 .tour-bottom-right{
@@ -4196,10 +4201,11 @@ Custom BS3
 .tour-bottom-right .tag{
     padding: 3px 5px 3px 5px;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 4px;
     position: absolute;
-    left: 0;
+    left: 10px;
+    top: 6px;
     background: rgba(55, 56, 58, .8);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -4242,8 +4248,8 @@ Custom BS3
 
 .line-gradient{
     height: 1.5px;
-    background: #EC1C24; /* For browsers that do not support gradients */
-    background: linear-gradient(to right, #D0171F, #EC1C24, #F58A1F, #FFDB00  ); /* Standard syntax (must be last) */
+    background: #f7edee; /* For browsers that do not support gradients */
+/*    background: linear-gradient(to right, #D0171F, #EC1C24, #F58A1F, #FFDB00  );  Standard syntax (must be last) */
 }
 
 /* หน้าสถานที่ยอดนิยม */
@@ -5681,14 +5687,14 @@ https://flickity.metafizzy.co
   height: 12px;
   margin: 0 8px;
   background: transparent;
-  border: 2px solid black;
+  border: 2px solid #c33132;
   border-radius: 50%;
   opacity: 1;
   cursor: pointer;
 }
 
 .flickity-page-dots .dot.is-selected {
-  background: black;
+  background: #c33132;
   opacity: 1;
 }
 

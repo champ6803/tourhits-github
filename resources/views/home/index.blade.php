@@ -23,6 +23,11 @@
     .hothits-item{
         width: 100% !important;
     }
+    
+    @media screen and ( max-width: 958px ) {
+        .package-hit-title h1{font-size: 27px;}
+        .package-hit-title .section-descripion{font-size: 19px;}
+    }
 </style>
 
 <!-- HERO -->
@@ -637,7 +642,7 @@
         <div class="row">
             <div class="col-md-12 package-hit-title">
                 <div class="section-title">
-                    <h1><i class="fas fa-fire" style='color: #EC2424;'></i>&nbsp;แพ็คเกจยอดนิยม</h1>
+                    <h1><i class="fas fa-map-marker" style='color: #c33132;'></i>&nbsp;แพ็คเกจยอดนิยม</h1>
                     <div class="line-gradient"></div>
                 </div>
                 <div class='section-descripion hidden-xs'>
@@ -986,7 +991,7 @@
     <div class="container">
         <div class="package-hit-title">
             <div class="section-title">
-                <h1><i class="fas fa-align-justify" style='color: #EC2424;'></i>&nbsp;เราคัดสรรมาให้จากกว่า 200 ทัวร์</h1>
+                <h1><i class="" style='color: #c33132;'></i>&nbsp;เราคัดสรรมาให้จากกว่า 200 ทัวร์</h1>
                 <div class="line-gradient"></div>
             </div>
             <div class='section-descripion hidden-xs'>
@@ -1020,7 +1025,7 @@
         <div class="row">
             <div class="col-md-12 package-hit-title">
                 <div class="section-title">
-                    <h1><i class="fas fa-fire" style='color: #EC2424;'></i>&nbsp;แพ็คเกจลดราคา</h1>
+                    <h1><i class="fas fa-fire" style='color: #c33132;'></i>&nbsp;แพ็คเกจลดราคา</h1>
                     <div class="line-gradient"></div>
                 </div>
                 <div class='section-descripion hidden-xs'>
@@ -1372,7 +1377,7 @@
     <div class="container">
         <div class="package-hit-title">
             <div class="section-title">
-                <h1><i class="fas fa-heart" style='color: #EC2424;'></i>&nbsp;ลูกค้าที่ไว้วางใจกับเรา</h1>
+                <h1><i class="fas fa-hands-helping" style='color: #c33132;'></i>&nbsp;ลูกค้าที่ไว้วางใจกับเรา</h1>
                 <div class="line-gradient"></div>
             </div>
 
