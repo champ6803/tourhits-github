@@ -16,7 +16,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             div = div + '<div class="tour-footer">';
             div = div + '<div class="pull-left">';
             div = div + '<span class="flag">';
-            div = div + '<img class="flag-small" alt="" src="' + rootPath + '/flags/' + val['country_code'] + '.png">';
+            div = div + '<img class="flag-small" alt="" src="' + rootPath + '/flags/' + this.country_code.toLowerCase() + '.png">';
             div = div + '</span>';
             div = div + '</div>';
             div = div + '</div>';
