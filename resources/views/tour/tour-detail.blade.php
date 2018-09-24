@@ -853,7 +853,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 @endforeach
                             </div>
 
-                            <a class="embed" href="http://www.tourhitsthai.com/images/pdf/1-1-1535694894.pdf"></a> 
+                            <a class="embed" href="{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}"></a>
 
                         </div>
                         <div id="tabs-2">
@@ -1224,7 +1224,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                                 </div>-->
                         @else
                         <div id="tabs-1">
-                            <a class="embed" href="http://www.tourhitsthai.com/images/pdf/1-1-1535694894.pdf"></a> 
+                            <a class="embed" href="{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}"></a>
                         </div>
                         @endif
 

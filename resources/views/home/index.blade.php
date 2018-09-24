@@ -41,13 +41,11 @@
 <section class="hero-section">
     <div id="slider-revolution">
         <ul>
-<<<<<<< HEAD
 <!--            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 1">
                 <img src="images/bg/indexbanner1.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
-=======
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 1">
                 <img src="https://images.unsplash.com/photo-1523978591478-c753949ff840?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjI0MX0&s=436a11a0fee324bde54ffd8d515c3ab1&auto=format&fit=crop&w=1950&q=100" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
->>>>>>> dfa81639ac12719fd129638d2b83065cd2ef535d
+
 
 
                                 <div class="tp-caption sfb fadeout slider-caption slider-caption-2" data-x="center" data-y="100" data-speed="700" data-start="1500" data-easing="easeOutBack">
@@ -87,19 +85,15 @@
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="images/bg/indexbanner3.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
-<<<<<<< HEAD
 <!--            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="images/bg/indexbanner4.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>-->
-=======
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="https://images.unsplash.com/photo-1488747279002-c8523379faaa?ixlib=rb-0.3.5&s=a124c4f3f4267c7261399f21ee9eedf9&auto=format&fit=crop&w=1950&q=80" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="https://images.unsplash.com/photo-1530634082454-f57b7d567b25?ixlib=rb-0.3.5&s=30d7d0e59a26e87ddac4a77965945b88&auto=format&fit=crop&w=1950&q=80" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
->>>>>>> dfa81639ac12719fd129638d2b83065cd2ef535d
-
         </ul>
     </div>
 </section>
