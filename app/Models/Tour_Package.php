@@ -36,7 +36,7 @@ class Tour_Package extends Model {
     }
 
     public function insertTourPackage($tour_package_code, $tour_country, $conditions_id, $tour_category, $tour_name
-    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price) {
+    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price, $quick_tour) {
         try {
             $id_max = DB::table('tour_package')->max('tour_package_id');
             $date = \Carbon\Carbon::now();
@@ -56,6 +56,7 @@ class Tour_Package extends Model {
                                 , 'tour_package_period_start' => $dateStart
                                 , 'tour_package_period_end' => $dateEnd
                                 , 'tour_package_pdf' => ($id_max + 1) . '-' . $pdf
+                                , 'is_quick_tour' => $quick_tour
                                 , 'created_by' => 'admin'
                                 , 'created_at' => $date
                                 , 'updated_by' => 'admin'
@@ -98,9 +99,8 @@ class Tour_Package extends Model {
                                     , 'tour_package_period_end' => $dateEnd
                                     , 'tour_package_pdf' => $tour_package_id . '-' . $pdf
                                     , 'updated_by' => 'admin'
-                                    , 'updated_at' => $date]    
+                                    , 'updated_at' => $date]
                 );
-                
             } else if ($this->IsNullOrEmptyString($pdf) && !$this->IsNullOrEmptyString($tourlist_picture)) {
                 Tour_Package::where('tour_package_id', '=', $tour_package_id)
                         ->update(

@@ -9,7 +9,7 @@
     .tabs .ui-tabs-nav{
         overflow-y: hidden;
         overflow-x: scroll;
-        display: -webkit-box;    
+        /*display: -webkit-box;*/    
     }
 
     .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {    
@@ -29,19 +29,19 @@
 <section class="hero-section">
     <div id="slider-revolution">
         <ul>
-            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 1">
+<!--            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 1">
                 <img src="images/bg/indexbanner1.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
 
 
-                <!--                <div class="tp-caption sfb fadeout slider-caption slider-caption-2" data-x="center" data-y="100" data-speed="700" data-start="1500" data-easing="easeOutBack">
+                                <div class="tp-caption sfb fadeout slider-caption slider-caption-2" data-x="center" data-y="100" data-speed="700" data-start="1500" data-easing="easeOutBack">
                                     แหล่งรวมทัวร์ทั่วโลก
-                                </div>-->
+                                </div>
 
 
-                <!--                <div class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">Top discount Paris Hotels</div>
+                                <div class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">Top discount Paris Hotels</div>
                 
-                                <a href="#" class="tp-caption sfb fadeout awe-btn awe-btn-style3 awe-btn-slider" data-x="center" data-y="380" data-easing="easeOutBack" data-speed="700" data-start="2200">Book now</a>-->
-            </li> 
+                                <a href="#" class="tp-caption sfb fadeout awe-btn awe-btn-style3 awe-btn-slider" data-x="center" data-y="380" data-easing="easeOutBack" data-speed="700" data-start="2200">Book now</a>
+            </li> -->
 
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="images/bg/indexbanner2.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
@@ -70,9 +70,9 @@
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="images/bg/indexbanner3.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
-            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
+<!--            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="images/bg/indexbanner4.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
-            </li>
+            </li>-->
 
         </ul>
     </div>
@@ -97,7 +97,7 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <i class="awe-icon awe-icon-marker-1"></i>
-                                    <input type="text" value="สถานที่ท่องเที่ยว , ประเทศ ที่ต้องการค้นหา">
+                                    <input class="form-control" type="text" value="สถานที่ท่องเที่ยว , ประเทศ ที่ต้องการค้นหา">
                                 </div>
                             </div>
                             <!--                            <div class="form-elements">
@@ -111,20 +111,20 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <i class="awe-icon awe-icon-calendar"></i>
-                                    <input type="text" class="awe-calendar" value="เริ่มต้น">
+                                    <input type="text" class="form-control awe-calendar" value="เริ่มต้น">
                                 </div>
                             </div>
                             <div class="form-elements">
                                 <div class="form-item">
                                     <i class="awe-icon awe-icon-calendar"></i>
-                                    <input type="text" class="awe-calendar" value="สิ้นสุด">
+                                    <input type="text" class="form-control awe-calendar" value="สิ้นสุด">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-elements">
                                 <div class="form-item">
-                                    <select>
+                                    <select class="form-control">
                                         <option val="0">จำนวนวัน</option>
                                         <option val="1">1</option>
                                         <option val="2">2</option>
@@ -138,7 +138,7 @@
                             </div>
                         </div>
                         <div class="form-actions">
-                            <input type="submit" value="ค้นหา">
+                            <input class="form-control" type="submit" value="ค้นหา">
                         </div>
                     </form>
                 </div>
@@ -381,6 +381,11 @@
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์สแกนดิเนเวีย?country=ทัวร์สแกนดิเนเวีย')}}">
                                                     <img data-src="../images/flags/scandinavia.png" alt="ทัวร์สแกนดิเนเวีย" class=" lazyloaded" src="../images/flags/scandinavia.png" style="border-radius: 4px;">
                                                     <h5>ทัวร์สแกนดิเนเวีย</h5>
+                                                </a>
+                                            </div>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ฮ่องกง-มาเก๊า?country=ทัวร์ฮ่องกง-มาเก๊า')}}">
+                                                    <img data-src="../images/flags/hkm.png" alt="ทัวร์ฮ่องกง-มาเก๊า" class=" lazyloaded" src="../images/flags/hkm.png">
+                                                    <h5>ทัวร์ฮ่องกง-มาเก๊า</h5>
                                                 </a>
                                             </div>
                                         </div>

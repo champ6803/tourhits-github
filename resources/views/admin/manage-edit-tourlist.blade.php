@@ -538,12 +538,22 @@
                                                     </div>
                                                 </div>
 
+                                                <!--                                                <div class="col-6">
+                                                                                                    <div class="form-group row">
+                                                                                                        <label for="attraction_select" class="col-sm-2 control-label">Attraction</label>
+                                                
+                                                                                                        <div class="col-sm-10">
+                                                                                                            <select id="attraction_select" class="form-control js-example-basic-multiple"name="attraction_select[]" multiple="multiple">
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>-->
                                                 <div class="col-6">
                                                     <div class="form-group row">
-                                                        <label for="attraction_select" class="col-sm-2 control-label">Attraction</label>
+                                                        <label for="airline_select" class="col-sm-2 control-label">Airline</label>
 
                                                         <div class="col-sm-10">
-                                                            <select id="attraction_select" class="form-control js-example-basic-multiple"name="attraction_select[]" multiple="multiple">
+                                                            <select id="airline_select" class="form-control js-example-basic-multiple" name="airline_select[]" multiple="multiple">
                                                             </select>
                                                         </div>
                                                     </div>
@@ -560,18 +570,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-6">
-                                                    <div class="form-group row">
-                                                        <label for="airline_select" class="col-sm-2 control-label">Airline</label>
-
-                                                        <div class="col-sm-10">
-                                                            <select id="airline_select" class="form-control js-example-basic-multiple" name="airline_select[]" multiple="multiple">
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="holiday_select" class="col-sm-2 control-label">Route</label>

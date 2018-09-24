@@ -30,6 +30,19 @@ class Attraction extends Model {
             return $ex;
         }
     }
+    
+    public function getAttractionByTourCountryId($tour_country_id) {
+        try {
+            $attractionList = Attraction::Leftjoin('country', 'attraction.country_id', 'country.country_id')
+                    ->join('tour_country', 'country.country_id', 'tour_country.country_id')
+                    ->where('tour_country.tour_country_id', $tour_country_id)
+                    ->select('attraction.*', 'country.country_name')
+                    ->get();
+            return $attractionList;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
 
     public function getAttractionByName($input_attraction_name) {
         try {

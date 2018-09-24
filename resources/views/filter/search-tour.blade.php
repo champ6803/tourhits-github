@@ -247,7 +247,7 @@
                     <div class="col-md-12">
                         <div class="country">
                             <img id="package_country_image" style="float: left; margin-right: 10px; border:#d7d7d7 solid 1px; border-radius: 8px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);" class="lazyloaded" src="../images/flags/Japan.png">
-                            <h6 id="package_country">ทัวร์ญี่ปุ่น ทั้งหมด 333 แพ็คเกจ</h6>
+                            <h6 id="package_country"></h6>
                         </div>
                     </div>
                     <div class="col-md-12">

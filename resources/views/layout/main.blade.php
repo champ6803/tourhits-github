@@ -2,7 +2,7 @@
 <?php
 session_start();
 ?>
-<html lang="en">
+<html lang="en" style="zoom: 80%;">
     <head>
         <meta charset="utf-8">
 
@@ -100,12 +100,12 @@ session_start();
                                         <div class="row">
                                             <div class="col-xs-6 col-md-6">
                                                 <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ญี่ปุ่น?country=1')}}">
-                                                    <img data-src="../images/flags/Japan.png" alt="ทัวร์ญี่ปุ่น" class=" lazyloaded" src="../images/flags/Japan.png">
+                                                    <img data-src="../images/flags/Japan.png" alt="ทัวร์ญี่ปุ่น" class=" lazyloaded" src="{{ asset('/images/flags/Japan.png') }}">
                                                     <h5>ญี่ปุ่น</h5></a>
                                                 </div></div>
                                             <div class="col-xs-6 col-md-6">
                                                 <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์จีน?country=2')}}">
-                                                    <img data-src="../images/flags/China.png" alt="ทัวร์จีน" class=" lazyloaded" src="../images/flags/China.png">
+                                                    <img data-src="../images/flags/China.png" alt="ทัวร์จีน" class=" lazyloaded" src="{{ asset('/images/flags/China.png')}}">
                                                     <h5>จีน</h5></a>
                                                 </div>
                                             </div>
@@ -713,6 +713,7 @@ session_start();
         <script type="text/javascript" src="{{ asset('js/lib/moment.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/AutoNumeric.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/lib/jquery.gdocsviewer.min.js') }}"></script>
         <script type="text/javascript">
             $(function () {
                 $('.underline-link').removeClass('menu-active');

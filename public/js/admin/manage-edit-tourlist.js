@@ -23,8 +23,6 @@ $(function () {
     createHolidayDropDown();
     createAirlineDropDown();
     createTagDropDown();
-    createAttractionDropDown();
-    createAttractionDayDropDown();
     createRouteDropDown();
     createConditionsDropDown();
     $("#start_date").datepicker({
@@ -144,9 +142,10 @@ function inputDisabled() {
 function genTable(param) {
     if (tourPackageDetail) {
         var day = tourPackageDetail.tourPackage.tour_period_day_number;
+        var tour_country = tourPackageDetail.tourPackage.tour_country_id;
         var divs = "";
         var row_no = 1;
-        if ((day > 0)) {
+        if ((day > 0) && tour_country) {
             for (var i = 0; i < day; i++) {
                 divs = divs + '<div class="row">';
                 divs = divs + '<div class="col-12">';
@@ -178,7 +177,7 @@ function genTable(param) {
                 }
             }
 
-            createAttractionDayDropDown();
+            createAttractionDayDropDown(tour_country);
             $('.attraction_select').select2({width: '100%'});
 //        tinymce.init({selector: '.tour-day'});
 //        $('.tour-day').wysihtml5({
@@ -245,28 +244,30 @@ function createHolidayDropDown() {
 
 }
 
-function createAttractionDayDropDown() {
-    $.ajax({
-        type: 'post',
-        url: 'searchAllAttraction',
-        async: false,
-        data: null,
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        success: function (data) {
-            if (data != null) {
-                $.each(data, function () {
-                    $('.attraction_select').append($('<option></option>').val(this.attraction_id).html(this.attraction_name));
-                });
-            } else {
-                alert('select fail');
+function createAttractionDayDropDown(tour_country_id) {
+    if (tour_country_id) {
+        $.ajax({
+            type: 'post',
+            url: 'getAttractionByTourCountryId',
+            async: false,
+            data: {'tour_country_id': tour_country_id},
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (data) {
+                if (data != null) {
+                    $.each(data, function () {
+                        $('.attraction_select').append($('<option></option>').val(this.attraction_id).html(this.attraction_name));
+                    });
+                } else {
+                    alert('select fail');
+                }
+            },
+            error: function (data) {
+                alert('error');
             }
-        },
-        error: function (data) {
-            alert('error');
-        }
-    });
+        });
+    }
 }
 
 function createAttractionDropDown() {

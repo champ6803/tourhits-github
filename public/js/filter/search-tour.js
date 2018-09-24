@@ -389,7 +389,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
             {
                 tour_code = '0' + tour_code;
             }
-            div = div + '<div class="pass">รหัสทัวร์&nbsp</div>#' + tour_code;
+            div = div + '<div class="pass">รหัสทัวร์&nbsp</div>TH' + tour_code;
             div = div + '</div>';
             div = div + '</div>';
             div = div + '</div>';

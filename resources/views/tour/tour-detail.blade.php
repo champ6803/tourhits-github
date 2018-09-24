@@ -100,6 +100,9 @@
 
 </style>
 <style>
+    iframe{
+        overflow:hidden !important;
+    }
     .table-style .today {background: #2A3F54; color: #ffffff;}
     /*    .table-style th:nth-of-type(7),td:nth-of-type(7) {color: blue;}
         .table-style th:nth-of-type(1),td:nth-of-type(1) {color: red;}*/
@@ -243,7 +246,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         </div>
                         <div class="item">
                             <h6>รหัสทัวร์</h6>
-                            <p><i class="fas fa-barcode" style="padding-right: 10px"></i>#<span id='tour_code'></span></p>
+                            <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
                         </div>
                         <div class="item">
                             <h6><i class="fas fa-share-alt" style="padding-right: 10px"></i>แชร์</h6>
@@ -255,9 +258,6 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
                         </div>
                     </div>
-                    <br>
-                    <br>
-                    <br>
                     <div class="row">
                         <div class="col-md-12">
                             <table class="table table-bordered table-style table-responsive">
@@ -767,6 +767,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             <div class="col-md-6">
                 <div class="product-detail__gallery">
                     <div class="product-slider-wrapper">
+                        @if(!$tourPackage->is_quick_tour)
                         <div class="product-slider">
                             <!--                            @foreach($tourPackageImagesList as $tourPackageImage)
                                                         <div class="item">
@@ -792,6 +793,20 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 @endforeach
                             </div>
                         </div>
+                        @else
+                        <div class="product-slider">
+                            <div class="item">
+                                <img src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
+                            </div>
+                        </div>
+                        <div class="product-slider-thumb-row">
+                            <div class="product-slider-thumb">
+                                <div class="item">
+                                    <img src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -801,17 +816,24 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             <div class="col-md-9">
                 <div class="product-tabs tabs">
                     <ul>
+                        @if(!$tourPackage->is_quick_tour)
                         <li>
                             <a href="#tabs-1">แผนการท่องเที่ยว</a>
                         </li>
                         <li>
                             <a href="#tabs-2">เงื่อนไขโปรแกรมทัวร์</a>
                         </li>
+                        @else
+                        <li>
+                            <a href="#tabs-1">แผนการท่องเที่ยว</a>
+                        </li>
+                        @endif
                         <!--                        <li>
                                                     <a href="#tabs-3">Review &amp; Rating</a>
                                                 </li>-->
                     </ul>
                     <div class="product-tabs__content">
+                        @if(!$tourPackage->is_quick_tour)
                         <div id="tabs-1">
                             <div class="trip-schedule-accordion accordion">
                                 @foreach ($tourPackageDayList as $tourPackageDay)
@@ -827,10 +849,12 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <br>
                                     @endif
                                     @endforeach
-
                                 </div>
                                 @endforeach
                             </div>
+
+                            <a class="embed" href="http://www.tourhitsthai.com/images/pdf/1-1-1535694894.pdf"></a> 
+
                         </div>
                         <div id="tabs-2">
                             <div class="trip-schedule-accordion accordion">
@@ -1198,6 +1222,12 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                                                                     </div>
                                                                                 </div>
                                                 </div>-->
+                        @else
+                        <div id="tabs-1">
+                            <a class="embed" href="http://www.tourhitsthai.com/images/pdf/1-1-1535694894.pdf"></a> 
+                        </div>
+                        @endif
+
                     </div>
                 </div>
                 <div class="period-table-bottom">

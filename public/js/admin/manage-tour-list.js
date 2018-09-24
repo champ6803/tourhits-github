@@ -1,5 +1,6 @@
 var period_data = [];
 var number = 0;
+var quick_tour = false;
 
 $(function () {
     $('#managetour').addClass("active");
@@ -11,6 +12,14 @@ $(function () {
     $('#tag_select').select2({width: '100%'});
     $('#airline_select').select2({width: '100%'});
     $('#route_select').select2({width: '100%'});
+    $('#quick_tour').val(false);
+
+    // set numeric
+    $('#main_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0'});
+    $('#main_special_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0'});
+    $('#adult_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0', aSign: ' ฿', pSign: 's'});
+    $('#child_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0', aSign: ' ฿', pSign: 's'});
+    $('#special_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0', aSign: ' ฿', pSign: 's'});
 
     $("#divTable").fadeOut("fast");
     $('#saveAll').prop('disabled', true);
@@ -23,7 +32,6 @@ $(function () {
     createAirlineDropDown();
     createTagDropDown();
     createAttractionDropDown();
-    createAttractionDayDropDown();
     createRouteDropDown();
     createConditionsDropDown();
     $("#start_date").datepicker({
@@ -50,9 +58,9 @@ $(function () {
     $('#btn_period_add').click(function () {
         var period_start = $('#period_start').val();
         var period_end = $('#period_end').val();
-        var adult_price = $('#adult_price').val();
-        var child_price = $('#child_price').val();
-        var special_price = $('#special_price').val();
+        var adult_price = $('#adult_price').autoNumeric('get');
+        var child_price = $('#child_price').autoNumeric('get');
+        var special_price = $('#special_price').autoNumeric('get');
         if (period_start && period_end && adult_price && child_price && special_price) {
             if (number == 0) {
                 $('#period_body').empty();
@@ -83,6 +91,12 @@ $(function () {
                 $('#period_body').html(tb);
             }
         }
+    });
+
+    $('#saveQuickBtn').click(function () {
+        quick_tour = true;
+        $('#quick_tour').val(true);
+        $('.nav-tabs a[href="#periods"]').tab('show');
     });
 });
 
@@ -138,10 +152,13 @@ function inputDisabled() {
 
 function genTable() {
 //    $('#saveBtn').prop('disabled', true);
+    quick_tour = false;
+    $('#quick_tour').val(false);
     var day = $('#day_tour').val();
+    var tour_country = $('#tour_country').val();
     var divs = "";
     var row_no = 1;
-    if ((day > 0)) {
+    if ((day > 0) && tour_country) {
         for (var i = 0; i < day; i++) {
             divs = divs + '<div class="row">';
             divs = divs + '<div class="col-12">';
@@ -170,12 +187,12 @@ function genTable() {
         for (var i = 0; i < day; i++) {
             CKEDITOR.replace('tour_detail_' + i);
         }
-        createAttractionDayDropDown();
+        createAttractionDayDropDown(tour_country);
         $('.attraction_select').select2({width: '100%'});
 //        tinymce.init({selector: '.tour-day'});
         $('.nav-tabs a[href="#detail"]').tab('show');
     } else {
-        alert('กรุณาระบุจำนวนวันให้ถูกต้อง')
+        alert('กรุณาระบุจำนวนวันและกรอกข้อมูลให้ถูกต้อง')
         $('#saveBtn').prop('disabled', false);
         return false;
     }
@@ -206,28 +223,30 @@ function createHolidayDropDown() {
 
 }
 
-function createAttractionDayDropDown() {
-    $.ajax({
-        type: 'post',
-        url: 'searchAllAttraction',
-        async: false,
-        data: null,
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        success: function (data) {
-            if (data != null) {
-                $.each(data, function () {
-                    $('.attraction_select').append($('<option></option>').val(this.attraction_id).html(this.attraction_name));
-                });
-            } else {
-                alert('select fail');
+function createAttractionDayDropDown(tour_country_id) {
+    if (tour_country_id) {
+        $.ajax({
+            type: 'post',
+            url: 'getAttractionByTourCountryId',
+            async: false,
+            data: {'tour_country_id': tour_country_id},
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (data) {
+                if (data != null) {
+                    $.each(data, function () {
+                        $('.attraction_select').append($('<option></option>').val(this.attraction_id).html(this.attraction_name));
+                    });
+                } else {
+                    alert('select fail');
+                }
+            },
+            error: function (data) {
+                alert('error');
             }
-        },
-        error: function (data) {
-            alert('error');
-        }
-    });
+        });
+    }
 }
 
 function createAttractionDropDown() {
@@ -432,7 +451,8 @@ function createConditionsDropDown() {
                 StrDropDown = StrDropDown + '</select>';
                 document.getElementById("selectConditioins").innerHTML = StrDropDown;
             } else {
-                alert('select fail');s
+                alert('select fail');
+                s
             }
         },
         error: function (data) {
@@ -442,90 +462,6 @@ function createConditionsDropDown() {
 
 }
 
-
 function numberFormat(value, row, index, field) {
     return numberWithCommas(parseInt(value));
-}
-
-function initValues() {
-    if (tourPackageDetail) {
-
-        if (tourPackageDetail.tourPackage) {
-            $('#tour_country').val(tourPackageDetail.tourPackage.tour_country_id);
-            $('#tour_name').val(tourPackageDetail.tourPackage.tour_package_name);
-            //$('#file').val(tourPackageDetail.tourPackage.tour_package_image);
-            $('#tour_detail').val(tourPackageDetail.tourPackage.tour_package_detail);
-            $('#day_tour').val(tourPackageDetail.tourPackage.tour_period_day_number);
-            $('#night_tour').val(tourPackageDetail.tourPackage.tour_period_night_number);
-            $('#start_date').val(tourPackageDetail.tourPackage.tour_package_period_start);
-            $('#end_date').val(tourPackageDetail.tourPackage.tour_package_period_end);
-            $('#main_price').val(tourPackageDetail.tourPackage.tour_package_price);
-            $('#main_special_price').val(tourPackageDetail.tourPackage.tour_package_special_price);
-            $('#tour_package_code').val(tourPackageDetail.tourPackage.tour_package_code);
-            var src = "images/tour/" + tourPackageDetail.tourPackage.tour_package_image;
-            $("#file_show").attr("src", src);
-            $("#file_show").removeClass('hide');
-            $("#pdf_show").html(tourPackageDetail.tourPackage.tour_package_pdf);
-
-
-            //$('#div_file').html('<div class="row"><div class="col-xs-8"><img height="100px;" src="images/tour/tour6.jpg"></div><div class="col-xs-4"><input class="form-control" type="file" id="file" name="file"><input type="hidden" value="{{ csrf_token() }}" name="_token"></div></div>');
-        }
-        if (tourPackageDetail.tourPeriod && tourPackageDetail.tourPeriod.length > 0) {
-            var o = tourPackageDetail.tourPeriod;
-            $.each(o, function () {
-                if (number == 0) {
-                    $('#period_body').empty();
-                }
-                number++;
-                var table = "<tr>";
-                table = table + "<td>" + number + '<input type="hidden" class="run_number" value="' + number + '" /></td>';
-                table = table + "<td>" + this.tour_period_start + '<input type="hidden" name="period_start[]" value="' + this.tour_period_start + '" /></td>';
-                table = table + "<td>" + this.tour_period_end + '<input type="hidden" name="period_end[]" value="' + this.tour_period_end + '" /></td>';
-                table = table + "<td align='right'>" + numberWithCommas(this.tour_period_adult_price) + '<input type="hidden" name="adult_price[]" value="' + this.tour_period_adult_price + '" /></td>';
-                table = table + "<td align='right'>" + numberWithCommas(this.tour_period_child_price) + '<input type="hidden" name="child_price[]" value="' + this.tour_period_child_price + '" /></td>';
-                table = table + "<td align='right'>" + numberWithCommas(this.tour_period_adult_special_price) + '<input type="hidden" name="special_price[]" value="' + this.tour_period_adult_special_price + '" /></td>';
-                table = table + "</tr>";
-                $('#period_body').append(table);
-            });
-        }
-        if (tourPackageDetail.tourPackageDay && tourPackageDetail.tourPackageDay.length > 0) {
-            page = "edit";
-            genTable();
-            var m = tourPackageDetail.tourPackageDay;
-            $.each(m, function (key, val) {
-                var tour_day_id = this.tour_package_day_id;
-                $('#tour_detail_' + key).val(this.tour_package_day_description);
-                $.each(tourPackageDetail.attractionDay, function (_key, _val) {
-                    if (_key == tour_day_id) {
-                        $("#attraction_select" + key).select2('val', [_val]);
-                    }
-                });
-            });
-        }
-        if (tourPackageDetail.tourTag && tourPackageDetail.tourTag.length > 0) {
-            var o = tourPackageDetail.tourTag;
-            $('#tag_select').select2('val', o);
-        }
-
-        if (tourPackageDetail.tourRoute && tourPackageDetail.tourRoute.length > 0) {
-            var o = tourPackageDetail.tourRoute;
-            $('#route_select').select2('val', o);
-        }
-
-        if (tourPackageDetail.tourAirline && tourPackageDetail.tourAirline.length > 0) {
-            var o = tourPackageDetail.tourAirline;
-            $('#airline_select').select2('val', o);
-        }
-
-        if (tourPackageDetail.tourHoliday && tourPackageDetail.tourHoliday.length > 0) {
-            var o = tourPackageDetail.tourHoliday;
-            $('#holiday_select').select2('val', o);
-        }
-
-        if (tourPackageDetail.tourAttraction && tourPackageDetail.tourAttraction.length > 0) {
-            var o = tourPackageDetail.tourAttraction;
-            $('#attraction_select').select2('val', o);
-        }
-
-    }
 }
