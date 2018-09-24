@@ -24,8 +24,16 @@
 }
 
 .search-container{
-    max-width: 900px;
+    max-width: 1346px;
 }
+
+.search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{
+        background-color: rgba(249, 166, 124, 0.8); 
+        padding-top: 9px; 
+        font-size: 31px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
 
 .destination-grid-content .row{
     display: inline;

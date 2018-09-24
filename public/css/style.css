@@ -1663,7 +1663,7 @@ span.dropcap {
 .awe-search-tabs__content .ui-tabs-panel input {
 /*    border: 1px solid #d4d4d4;*/
     font-weight: 400;
-    color: #757575;
+    color: #666;
     height: 60px;
     line-height: 36px;
     width: 100%;
@@ -1674,7 +1674,7 @@ span.dropcap {
     cursor: pointer;
     border-radius: 4px;
     background-color: #fff;
-    font-size: 24px;
+    font-size: 26px;
 }
 .awe-search-tabs__content .ui-tabs-panel form:after {
     content: '';
@@ -1726,10 +1726,10 @@ span.dropcap {
     background-color: #fff;
     line-height: 34px;
     text-align: right;
-    top: 1px;
-    right: 1px;
+    top: 13px;
+    right: 11px;
     padding-right: 12px;
-    font-size: 16px;
+    font-size: 22px;
     color: #666;
     pointer-events: none;
 }
@@ -1798,7 +1798,11 @@ span.dropcap {
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
-    border-radius: 0;
+/*    border-radius: 0;*/
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);
 }
 .awe-search-tabs-2 .ui-tabs-nav {
     margin-bottom: 0;
