@@ -110,7 +110,7 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <i class="awe-icon awe-icon-marker-1"></i>
-                                    <input class="form-control" type="text" value="สถานที่ท่องเที่ยว , ประเทศ ที่ต้องการค้นหา">
+                                    <input class="form-control" type="text" value="สถานที่ท่องเที่ยว, ประเทศ">
                                 </div>
                             </div>
                             <!--                            <div class="form-elements">

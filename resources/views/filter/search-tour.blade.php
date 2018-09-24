@@ -200,6 +200,8 @@
         }
     }
     
+    
+    
     .modal.in .modal-dialog{margin-top: 100px;}
 </style>
 

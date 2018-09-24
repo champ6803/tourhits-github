@@ -1075,7 +1075,7 @@ span.dropcap {
     display: block;
     font-family: supermarket, sans-serif;
     /*font-weight: 600;*/
-    font-size: 21px;
+    font-size: 27px;
     color: #515050;
     line-height: 78px;
 }
@@ -1271,7 +1271,7 @@ span.dropcap {
     width: 60px;
     height: 78px;
     line-height: 78px;
-    font-size: 14px;
+    font-size: 20px;
     color: #67728A;
     text-align: center;
     border-left: 1px solid #D4D4D4;
@@ -1316,7 +1316,7 @@ span.dropcap {
     /*width: 20%;*/
     height: 50px;
     line-height: 50px;
-    font-size: 21px;
+    font-size: 24px;
     /*  font-weight: 700;*/
     padding: 0 50px;
     background-color: #fff;
@@ -1661,12 +1661,20 @@ span.dropcap {
 }
 .awe-search-tabs__content .ui-tabs-panel select,
 .awe-search-tabs__content .ui-tabs-panel input {
-    border: 1px solid #d4d4d4;
+/*    border: 1px solid #d4d4d4;*/
     font-weight: 400;
-    color: #68738A;
-    height: 36px;
+    color: #757575;
+    height: 60px;
     line-height: 36px;
     width: 100%;
+    
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);
+    border: none;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 24px;
 }
 .awe-search-tabs__content .ui-tabs-panel form:after {
     content: '';
@@ -1784,7 +1792,8 @@ span.dropcap {
 }
 .awe-search-tabs-2 .awe-search-tabs__content {
     background: none;
-    background-color: rgba(0, 0, 0, 0.8);
+/*    background-color: rgba(0, 0, 0, 0.8);*/
+    background-color: rgba(249, 166, 124, 0.8);
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -9333,7 +9342,7 @@ select {
     }
     
     .filter-page__content .trip-item{
-        height: 529px;
+/*        height: 529px;*/
     }
     
     .call-and-line .trip-item{
