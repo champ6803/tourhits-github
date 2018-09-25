@@ -106,8 +106,9 @@ class FilterController extends Controller {
                     ->join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
                     ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                     ->where('tour_country.tour_country_name', $country)
+                    ->orderBy('tour_package.tour_package_price', 'asc')
                     ->get();
-            $array = array();
+            $array = array();   
             foreach ($tourPackageList as $tour) {
                 array_push($array, $tour->tour_package_id);
             }

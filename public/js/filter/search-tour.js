@@ -1,6 +1,7 @@
 $(function () {
     $('#indx').addClass('menu-active');
     $('#package_country_image').hide();
+    $('#sorting').hide();
     $('#date_picker').daterangepicker({
         "autoApply": true,
         "opens": "center",
@@ -32,9 +33,22 @@ var slider = new Slider('#price', {
     range: true,
     value: [0, 80000]
 });
+
+var sliderMobile = new Slider('#price_mobile', {
+    min: 0,
+    max: 100000,
+    range: true,
+    value: [0, 80000]
+});
+
 slider.on("slide", function (sliderValue) {
     document.getElementById("price_from").textContent = numberWithCommas(sliderValue[0]);
     document.getElementById("price_to").textContent = numberWithCommas(sliderValue[1]);
+});
+
+sliderMobile.on("slide", function (sliderValue) {
+    document.getElementById("price_mobile_from").textContent = numberWithCommas(sliderValue[0]);
+    document.getElementById("price_mobile_to").textContent = numberWithCommas(sliderValue[1]);
 });
 
 function expandCheckboxRoute() {
@@ -357,6 +371,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
     var obj = tourPackageList;
     if (obj != null && obj.length > 0) {
         $('#package_country_image').show();
+        $('#sorting').show();
         var divs = "";
         $("#card_area").empty();
         $.each(obj, function (key, val) {
