@@ -24,17 +24,25 @@
         width: 100% !important;
     }
     
+    .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
+    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
+    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
+    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input{border-radius: 4px; background-color: #44484a; box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); font-size: 30px; transition: all 1s ease;}
+    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input:hover{background-color: #373a3c; box-shadow: 0 0px 5px 0px rgba(0,0,0,.8);}
+    
     @media screen and ( max-width: 958px ) {
         .package-hit-title h1{font-size: 27px;}
         .package-hit-title .section-descripion{font-size: 19px;}
         .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
+        
+        .awe-search-tabs__content .ui-tabs-panel input{font-size: 19px; font-weight: bold;}
+        .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input{font-size: 23px;}
+        .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 23px;}
     }
     
-    .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
-    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
-    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input{border-radius: 4px; background-color: #44484a; box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); font-size: 34px; transition: all 1s ease;}
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input:hover{background-color: #373a3c; box-shadow: 0 0px 5px 0px rgba(0,0,0,.8);}
+    
+    
+    
     
     .item { width: 25%; }
     .item.w2 { width: 50%; }

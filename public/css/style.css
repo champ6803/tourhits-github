@@ -1674,7 +1674,7 @@ span.dropcap {
     cursor: pointer;
     border-radius: 4px;
     background-color: #fff;
-    font-size: 26px;
+    font-size: 23px;
 }
 .awe-search-tabs__content .ui-tabs-panel form:after {
     content: '';
@@ -9481,7 +9481,7 @@ select {
         margin-right: 15px;
     }
     
-    .awe-search-tabs__content .ui-tabs-panel .days select{font-size: 20px; font-weight: bold; }
+    .awe-search-tabs__content .ui-tabs-panel .days select{font-size: 19px; font-weight: bold; }
     
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2) {
 /*        width: 30%;*/
