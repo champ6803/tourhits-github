@@ -30,7 +30,7 @@
 .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{
         background-color: rgba(249, 166, 124, 0.8); 
         padding-top: 9px; 
-        font-size: 31px;
+        font-size: 26px;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
@@ -5310,7 +5310,7 @@ Custom BS3
 
 .product-tabs__content p{
     /*        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
-    font-size: 17px;
+    font-size: 19px;
 }
 
 .call-to-book .btn-call-book {
@@ -5680,7 +5680,7 @@ https://flickity.metafizzy.co
 /*  position: absolute;*/
   width: 100%;
   bottom: -25px;
-  padding: 0;
+  padding: 4px 0px;
   margin: 0;
   list-style: none;
   text-align: center;

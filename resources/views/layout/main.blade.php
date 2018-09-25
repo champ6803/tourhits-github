@@ -37,6 +37,8 @@ session_start();
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/custom_style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/demo.css') }}">
+       
+
 
         <!-- CSS COLOR -->
         <link id="colorreplace" rel="stylesheet" type="text/css" href="{{ asset('css/colors/blue.css')}}">
