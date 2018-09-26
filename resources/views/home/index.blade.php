@@ -53,6 +53,9 @@
 <section class="hero-section">
     <div id="slider-revolution">
         <ul>
+            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
+                <img src="images/bg/indexbanner3.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+            </li>
 <!--            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 1">
                 <img src="images/bg/indexbanner1.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 1">
@@ -94,9 +97,7 @@
                                             <div href="#" class="tp-caption lfr fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2000">Take you to every corner of the world</div>
                         </li> -->
 
-            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
-                <img src="images/bg/indexbanner3.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
-            </li>
+            
 <!--            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
                 <img src="images/bg/indexbanner4.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>-->
