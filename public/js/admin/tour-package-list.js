@@ -7,7 +7,7 @@ $(function () {
     $('#tour_package_table').bootstrapTable({
         search: true,
         pagination: true,
-        pageSize: 10,
+        pageSize: 100,
         columns: [{
                 field: 'tour_package_id',
                 align: 'center',

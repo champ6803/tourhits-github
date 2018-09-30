@@ -330,7 +330,7 @@ class Tour_Package extends Model {
 
     public function getTourPackageAll() {
         try {
-            $tourPackageList = Tour_Package::join('tour_package_day', 'tour_package.tour_package_id', '=', 'tour_package_day.tour_package_id')
+            $tourPackageList = Tour_Package::leftJoin('tour_package_day', 'tour_package.tour_package_id', '=', 'tour_package_day.tour_package_id')
                     ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                     ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.*,tour_country.tour_country_name'))
                     ->get();

@@ -639,7 +639,6 @@ class AdminController extends Controller {
                                 ->withErrors($validator)
                                 ->withInput();
             }
-            
         } else {
             $validator = Validator::make($request->all(), [
                         "tour_country" => "required",
@@ -847,51 +846,67 @@ class AdminController extends Controller {
     public function updateTourlistAndDay(Request $request) {
         $tour_package_id = $request->get('tour_package_id');
         if ($tour_package_id != null) {
-            $validator = Validator::make($request->all(), [
-                        "tour_country" => "required",
-                        "conditions_id" => "required",
-                        "tour_name" => 'required',
-                        "tour_detail" => "required",
-                        "day_tour" => "required",
-                        "night_tour" => "required",
-                        "start_date" => "required",
-                        "end_date" => "required",
-                        "tour_package_code" => 'required',
-                        "tour_detail_0" => "required",
-                        "period_start" => "required",
-                        "period_end" => "required",
-                        "adult_price" => "required",
-                        "child_price" => 'required',
-                        "tag_select" => "required",
-                        "airline_select" => "required",
-                        "route_select" => "required",
-                        "main_price" => "required",
-                        "main_special_price" => "required"
-            ]);
+            $quick_tour = ($_POST['quick_tour'] === 'true');
+            if ($quick_tour) {
+                $validator = Validator::make($request->all(), [
+                            "tour_country" => "required",
+                            "conditions_id" => "required",
+                            "tour_name" => 'required',
+                            "tour_detail" => "required",
+                            "day_tour" => "required",
+                            "night_tour" => "required",
+                            "start_date" => "required",
+                            "end_date" => "required",
+                            "tour_package_code" => 'required',
+                            "period_start" => "required",
+                            "period_end" => "required",
+                            "adult_price" => "required",
+                            "child_price" => 'required',
+                            "tag_select" => "required",
+                            "airline_select" => "required",
+                            "route_select" => "required",
+                            "main_price" => "required",
+                            "main_special_price" => "required"
+                ]);
 
-            if ($validator->fails()) {
-                return redirect('manage-edit-tourlist?id=' . $tour_package_id)
-                                ->withErrors($validator)
-                                ->withInput();
+                if ($validator->fails()) {
+                    return redirect('manage-edit-tourlist?id=' . $tour_package_id)
+                                    ->withErrors($validator)
+                                    ->withInput();
+                }
+            } else {
+                $validator = Validator::make($request->all(), [
+                            "tour_country" => "required",
+                            "conditions_id" => "required",
+                            "tour_name" => 'required',
+                            "tour_detail" => "required",
+                            "day_tour" => "required",
+                            "night_tour" => "required",
+                            "start_date" => "required",
+                            "end_date" => "required",
+                            "tour_package_code" => 'required',
+                            "tour_detail_0" => "required",
+                            "period_start" => "required",
+                            "period_end" => "required",
+                            "adult_price" => "required",
+                            "child_price" => 'required',
+                            "tag_select" => "required",
+                            "airline_select" => "required",
+                            "route_select" => "required",
+                            "main_price" => "required",
+                            "main_special_price" => "required"
+                ]);
+
+                if ($validator->fails()) {
+                    return redirect('manage-edit-tourlist?id=' . $tour_package_id)
+                                    ->withErrors($validator)
+                                    ->withInput();
+                }
             }
-//            $day = $_POST['day_tour'];
-//            if ($day > 0) {
-//                for ($x = 0; $x < $day; $x++) {
-//                    $tourdetailStr = 'tour_detail_' . $x;
-//                    $attractionStr = 'attraction_select' . $x;
-//                    $validatorDetail = Validator::make($request->all(), [
-//                                $tourdetailStr => "required",
-//                                $attractionStr => "required",
-//                    ]);
-//                    if ($validatorDetail->fails()) {
-//                        return redirect('manage-edit-tourlist?id='.$tour_package_id)
-//                                        ->withErrors($validatorDetail)
-//                                        ->withInput();
-//                    }
-//                }
-//            }
+            
             DB::transaction(function () {
                 try {
+                    $quick_tour = ($_POST['quick_tour'] === 'true');
                     $tour_package_id = $_POST['tour_package_id'];
                     $tour_package_day_id = $_POST['tour_package_day_id'];
                     $tour_period_id = $_POST['tour_period_id'];
@@ -979,7 +994,7 @@ class AdminController extends Controller {
                                     , $tour_period_child_special_price, $tour_period_status);
                         }
 
-                        if ($speriod) {
+                        if ($speriod && !$quick_tour) {
                             for ($x = 0; $x < $day; $x++) {
                                 $tourname = "";
                                 $tourdetailStr = 'tour_detail_' . $x;

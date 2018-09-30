@@ -43,6 +43,7 @@ class FilterController extends Controller {
             $tags = json_decode(request()->get('_tags'));
             $attraction = json_decode(request()->get('_attraction'));
             $others = json_decode(request()->get('_others'));
+            
 //            if (count($route) > 0 && empty($start_date) && empty($end_date) && !(count($month) > 0) && !(count($days) > 0) && !(count($airline) > 0) && !(count($tags) > 0) && !(count($attraction) > 0) && !(count($others) > 0)) {
 //                $tourPackageList = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
 //                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')

@@ -2,10 +2,11 @@ var period_data = [];
 var number = 0;
 var page = "new";
 var click_gen = false;
+var isQuickTour = false;
 $(function () {
     $('#managetour').addClass("active");
     $('#tour_package_list').addClass("active");
-
+    $('#quick_tour').val(false);
     $('.attraction_select').select2({width: '100%'});
     $('#attraction_select').select2({width: '100%'});
     $('#holiday_select').select2({width: '100%'});
@@ -86,7 +87,6 @@ $(function () {
         $('#removeModal').modal();
     });
     initValues();
-
 });
 
 function runNumber(value, row, index, field) {
@@ -471,7 +471,8 @@ function createConditionsDropDown() {
                 StrDropDown = StrDropDown + '</select>';
                 document.getElementById("selectConditioins").innerHTML = StrDropDown;
             } else {
-                alert('select fail');s
+                alert('select fail');
+                s
             }
         },
         error: function (data) {
@@ -512,6 +513,15 @@ function deleteTourPackage() {
 
 function initValues() {
     if (tourPackageDetail) {
+        isQuickTour = tourPackageDetail.tourPackage.is_quick_tour;
+        if (isQuickTour) {
+            $('#detail_li').addClass('hide');
+            $('#detail').addClass('hide');
+            $('#saveAllInfo').hide();
+            $('#saveAll').prop('disabled', false);
+            $('#quick_tour').val(true);
+        }
+
         if (tourPackageDetail.tourPackage) {
             $('#tour_package_id').val(tourPackageDetail.tourPackage.tour_package_id);
             $('#tour_country').val(tourPackageDetail.tourPackage.tour_country_id);
@@ -603,6 +613,10 @@ function initValues() {
             var o = tourPackageDetail.tourAttraction;
             $('#attraction_select').select2('val', o);
         }
+        // set status tour
 
+    } else {
+        alert("error");
+        window.location.href = "/tour-package-list";
     }
 }

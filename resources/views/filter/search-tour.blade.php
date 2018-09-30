@@ -1381,7 +1381,7 @@
         <div class="col-md-3">
             <div class="page-sidebar">
                 <div class="sidebar-title hidden-xs">
-                    <h3>ไฮไลท์ยอดนิยม :</h3>
+                    <h3>สถานที่ยอดนิยม :</h3>
                 </div>
                 <div class="right-bar">
                     <div class="box-content hidden-xs">
