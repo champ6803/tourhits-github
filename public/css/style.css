@@ -1074,8 +1074,8 @@ span.dropcap {
 .awe-navigation .menu-list li a {
     display: block;
     font-family: supermarket, sans-serif;
-    /*font-weight: 600;*/
-    font-size: 27px;
+    font-weight: 600;
+    font-size: 19px;
     color: #515050;
     line-height: 78px;
 }
