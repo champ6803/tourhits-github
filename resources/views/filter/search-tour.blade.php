@@ -153,7 +153,15 @@
         .tour-local-wrapper .swiper-button-prev{font-size: 14px;}   
     }
 
-    @media screen and ( max-width: 958px ) {
+    @media (min-width: 1200px) {
+        .container {width: 1400px;}
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .container {width: 1200px;}
+    }
+
+    @media screen and ( max-width: 991px ) {
 
         .filter-box {
             position: relative;
@@ -276,9 +284,9 @@
                         </div> 
                     </div>
                     <!-- Modal -->
-                    <div class="modal fade filterModal" id="filterModal" role="dialog">
+<!--                    <div class="modal fade filterModal" id="filterModal" role="dialog">
                         <div class="modal-dialog">
-                            <!-- Modal content-->
+                             Modal content
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
@@ -344,7 +352,7 @@
                                                     <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
                                                     <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                                                 </div>
-                                                <!--            เว้นไว้ใส่ปฎิทิน-->
+                                                            เว้นไว้ใส่ปฎิทิน
                                                 <div id="filter-date">
                                                     <div class="option-all">
                                                         <label for="holiday_all" class="label-cbx">
@@ -643,7 +651,7 @@
                                             </div>
 
 
-                                            <!--                            end filter-bar-->                                                                           
+                                                                        end filter-bar                                                                           
                                         </div>
                                     </div>    
                                 </div>
@@ -653,7 +661,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div>-->
 
                 </div>    
                 <br>
@@ -1018,8 +1026,8 @@
                                 <div class='filter-header'>
                                     <span class='filter-header-text'><i class="fas fa-exchange-alt"></i> กำหนดช่วงราคา</span>
                                 </div>     
-                                <div class="textpricesm"><span id="price_mobile_from">0</span> ถึง <span id="price_mobile_to">80,000</span> บาท</div>
-                                <input id="price_mobile" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
+                                <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to">80,000</span> บาท</div>
+                                <input id="price" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
                             </div>
 
                             <hr>
@@ -1474,7 +1482,8 @@
         $(".stop").click(function () {
             owl.trigger('owl.stop');
         })
-
+        var test = <?php echo json_encode($dayList); ?>;
+        console.log(test);
     });
 </script>
 <script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
