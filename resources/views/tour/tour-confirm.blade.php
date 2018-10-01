@@ -24,8 +24,8 @@
     }
 
     .product-detail .trips .item p{
-        font-size: 21px;
-        color: #515050;
+        font-size: 19px;
+        color: #fff;
         margin-bottom: 0;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -58,7 +58,12 @@
     .table > thead > tr > th, .table > thead > tr > td {
         border: 0;
     }
-
+    
+    .product-detail__info .product-title h2 {
+    color: #c33132;
+    display: inline;
+    font-size:19px;
+    }
 </style>
 <!-- BREADCRUMB -->
 <section>
@@ -110,19 +115,19 @@
                         <span><?php echo $tourPackage->tour_package_detail ?></span>
                     </div>
                     <div class="trips">
-                        <div class="item">
+                        <div class="item warp-text">
                             <h6>สายการบิน</h6>
                             <p><i class="fas fa-plane" style="padding-right: 10px"></i>{{ $tourPackage->airline_name }}</p>
                         </div>
-                        <div class="item">
+                        <div class="item warp-text">
                             <h6>ระยะเวลา</h6>
                             <p><i class="far fa-clock" style="padding-right: 10px"></i>{{$tourPackage->tour_period_day_number}} วัน {{$tourPackage->tour_period_night_number}} คืน</p>
                         </div>
-                        <div class="item">
+                        <div class="time-xs item warp-text">
                             <h6>ช่วงเวลา</h6>
                             <p><i class="far fa-calendar-minus" style="padding-right: 10px"></i><span id='period_month'></span></p>
                         </div>
-                        <div class="item">
+                        <div class="item warp-text">
                             <h6>รหัสทัวร์</h6>
                             <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
                         </div>

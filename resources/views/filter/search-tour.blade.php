@@ -153,7 +153,15 @@
         .tour-local-wrapper .swiper-button-prev{font-size: 14px;}   
     }
 
-    @media screen and ( max-width: 958px ) {
+    @media (min-width: 1200px) {
+        .container {width: 1400px;}
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .container {width: 1200px;}
+    }
+
+    @media screen and ( max-width: 991px ) {
 
         .filter-box {
             position: relative;

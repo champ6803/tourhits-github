@@ -5313,14 +5313,20 @@ Custom BS3
     font-size: 19px;
 }
 
+.detail-sidebar .booking-info h3 i{
+    color:#339af0;
+}
+
 .call-to-book .btn-call-book {
     width: 90%;
     border-radius: 50px;
-    background-color: #fff;
+    background-color: #f7f7f7;
     border: 1px solid #2A3F54;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
+    -webkit-box-shadow: 0 0px 10px 0 rgba(0,0,0,.2);
+    box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.2);
 }
 
 .call-to-book .btn-call-book:hover {
@@ -5344,11 +5350,13 @@ Custom BS3
 .call-to-book2 .btn-call-book {
     width: 50%;
     border-radius: 50px;
-    background-color: #fff;
+    background-color: #f7f7f7;
     border: 1px solid #00c500;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
+    -webkit-box-shadow: 0 0px 10px 0 rgba(0,0,0,.2);
+    box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.2);
 }
 
 .call-to-book2 .btn-call-book:hover{
