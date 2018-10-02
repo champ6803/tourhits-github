@@ -244,7 +244,7 @@
 
 .card-airline{
     position: relative;
-    width: 150px;
+    width: 130.page-top .awe-select-wrapper .awe-selectpx;
     height: 50px;
     float: left;
     overflow: hidden;
@@ -253,7 +253,7 @@
     /*    font-family: sans-serif;*/
 }
 
-.card-airline img{ max-width: 140px; margin-top: 9px; max-height: 42px; position: absolute; left: 0; margin-left: 9px;}
+.card-airline img{ max-width: 130px; margin-top: 9px; max-height: 42px; position: absolute; left: 0; margin-left: 9px;}
 
 .card-price{
     padding: 0 0px 0 0; 
@@ -5688,7 +5688,7 @@ https://flickity.metafizzy.co
 /*  position: absolute;*/
   width: 100%;
   bottom: -25px;
-  padding: 4px 0px;
+  padding: 13px 0px;
   margin: 0;
   list-style: none;
   text-align: center;
@@ -5699,9 +5699,9 @@ https://flickity.metafizzy.co
 
 .flickity-page-dots .dot {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 8px;
+  width: 13px;
+  height: 13px;
+  margin: 0px 8px;
   background: transparent;
   border: 2px solid #c33132;
   border-radius: 50%;
