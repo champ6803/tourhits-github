@@ -36,7 +36,7 @@ class Tour_Package extends Model {
     }
 
     public function insertTourPackage($tour_package_code, $tour_country, $conditions_id, $tour_category, $tour_name
-    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price) {
+    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price, $quick_tour) {
         try {
             $id_max = DB::table('tour_package')->max('tour_package_id');
             $date = \Carbon\Carbon::now();
@@ -56,6 +56,7 @@ class Tour_Package extends Model {
                                 , 'tour_package_period_start' => $dateStart
                                 , 'tour_package_period_end' => $dateEnd
                                 , 'tour_package_pdf' => ($id_max + 1) . '-' . $pdf
+                                , 'is_quick_tour' => $quick_tour
                                 , 'created_by' => 'admin'
                                 , 'created_at' => $date
                                 , 'updated_by' => 'admin'
@@ -98,9 +99,8 @@ class Tour_Package extends Model {
                                     , 'tour_package_period_end' => $dateEnd
                                     , 'tour_package_pdf' => $tour_package_id . '-' . $pdf
                                     , 'updated_by' => 'admin'
-                                    , 'updated_at' => $date]    
+                                    , 'updated_at' => $date]
                 );
-                
             } else if ($this->IsNullOrEmptyString($pdf) && !$this->IsNullOrEmptyString($tourlist_picture)) {
                 Tour_Package::where('tour_package_id', '=', $tour_package_id)
                         ->update(
@@ -230,11 +230,15 @@ class Tour_Package extends Model {
 
     public function getFilterDay($country) {
         try {
-            return Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
-                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                            ->select(DB::raw('COUNT(*) as sum, DATEDIFF(tour_period.tour_period_end,tour_period.tour_period_start) + 1 AS duration'))
-                            ->groupBy('duration')
-                            ->where('tour_country.tour_country_name', $country)
+//            return Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
+//                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+//                            ->select(DB::raw('COUNT(*) as sum, DATEDIFF(tour_period.tour_period_end,tour_period.tour_period_start) + 1 AS duration'))
+//                            ->groupBy('duration')
+//                            ->where('tour_country.tour_country_name', $country)
+//                            ->get();
+            return Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                            ->select(DB::raw('COUNT(*) as sum, tour_package.tour_period_day_number as duration'))
+                            ->groupBy('tour_package.tour_period_day_number')
                             ->get();
         } catch (\Exception $e) {
             return $e;
@@ -330,7 +334,7 @@ class Tour_Package extends Model {
 
     public function getTourPackageAll() {
         try {
-            $tourPackageList = Tour_Package::join('tour_package_day', 'tour_package.tour_package_id', '=', 'tour_package_day.tour_package_id')
+            $tourPackageList = Tour_Package::leftJoin('tour_package_day', 'tour_package.tour_package_id', '=', 'tour_package_day.tour_package_id')
                     ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                     ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.*,tour_country.tour_country_name'))
                     ->get();

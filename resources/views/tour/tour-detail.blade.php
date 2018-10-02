@@ -5,6 +5,8 @@
     body {
         counter-reset: count;
     }
+    
+    .product-detail{background-color: #F7F7F7;}
 
     .trip-schedule-accordion .days{    
         counter-increment: count;
@@ -92,18 +94,86 @@
     }
 
     .product-detail__info .product-title h2{
-        color: #EC2424;
-        display: inline;}
-
-
+        color: #c33132;
+        display: inline;
+        font-size: 23px;
+    }
+    
+    
+    .call-to-book span, .call-to-book2 span{     
+        font-size: 19px;
+        font-weight: bold;
+        line-height: 1.9;
+    }
+    
+    .modal-content{-webkit-box-shadow:  0 4px 10px 0 rgba(0,0,0,.12);box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);}
+    .table{margin-top: 10px;}
+    
+    .product-detail .right{
+        float: right;
+        padding-bottom: 10px;
+        margin-top: -24px;
+    }
+       
+    .product-detail .download-pdf p a{
+        padding-right: 17px;
+        color: #fff;
+        font-size: 19px;
+        font-weight: bold;       
+        border: 1px solid #38c49c;
+        background-color: #38c49c;
+        padding: 3px 14px 3px 14px;
+        border-radius: 20px;   
+    }
+    
+    .product-detail .download-pdf p a:hover{
+        background-color: #6fbd50;
+        border: 1px solid #6fbd50;
+        -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.3); 
+        box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
+    }
+    
+    .product-detail .facebook{padding-left: 10px; padding-right: 14px;}
+    .product-detail .facebook p a{
+        color: #fff;
+        font-size: 19px;
+        border: 1px solid #4dabf7;
+        background-color: #4dabf7;
+        border-radius: 8px;
+        padding: 4px 21px 4px 10px;
+    }
+    .product-detail .facebook p a:hover{
+        background-color: #2475b6;
+        border: 1px solid #2475b6;
+        -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.3); 
+        box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
+    }
+        
+    @media (min-width: 1200px) {
+        .container {width: 1400px;}
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .container {width: 1200px;}
+        
+    }
+    
+    @media (max-width: 425px) {
+        .product-detail__info .trips .time-xs{width: 100%;}     
+    }
 
 
 </style>
 <style>
-    .table-style .today {background: #2A3F54; color: #ffffff;}
+    iframe{
+        overflow:hidden !important;
+    }
+    .table-style .today {background: #c33132; color: #ffffff;}
     /*    .table-style th:nth-of-type(7),td:nth-of-type(7) {color: blue;}
         .table-style th:nth-of-type(1),td:nth-of-type(1) {color: red;}*/
-    .table-style tr:first-child th{background-color:#d30000; text-align:center; text-transform: uppercase; border-color:#d30000;}
+    .table-style tr:first-child th{background-color: #c33132; text-align:center; text-transform: uppercase; border-color: #c33132; font-size: 26px; font-weight: normal;}
+    .table-bordered > tbody > tr > th{font-size: 21px; background-color: white; color: #c33132;}
+    .table-bordered > tbody > tr > td{font-size: 19px; font-weight: bold;}
 </style>
 <?php
 // Set your timezone!!
@@ -219,8 +289,16 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
 <section class="product-detail">
     <div class="container">
+        <div class="row">         
+                <div class="right facebook">
+                    <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
+                </div>
+                <div class="right download-pdf">
+                    <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="fas fa-file-pdf"></i>&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
+                </div>
+        </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="product-detail__info">
                     <div class="product-title">
                         <h2>{{ $tourPackage->tour_package_name }}</h2>
@@ -229,23 +307,24 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <?php echo $tourPackage->tour_package_detail ?>
                     </div>
                     <div class="trips">
-                        <div class="item">
+                        <div class="item warp-text">
                             <h6>สายการบิน</h6>
                             <p><i class="fas fa-plane" style="padding-right: 10px"></i>{{ $tourPackage->airline_name }}</p>
                         </div>
-                        <div class="item">
+                        <div class="item warp-text">
                             <h6>ระยะเวลา</h6>
                             <p><i class="far fa-clock" style="padding-right: 10px"></i>{{$tourPackage->tour_period_day_number}} วัน {{$tourPackage->tour_period_night_number}} คืน</p>
                         </div>
-                        <div class="item">
+                        <div class="time-xs item warp-text">
                             <h6>ช่วงเวลา</h6>
                             <p><i class="far fa-calendar-minus" style="padding-right: 10px"></i><span id='period_month'></span></p>
                         </div>
-                        <div class="item">
+                        <div class="item warp-text">
                             <h6>รหัสทัวร์</h6>
-                            <p><i class="fas fa-barcode" style="padding-right: 10px"></i>#<span id='tour_code'></span></p>
+                            <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
                         </div>
-                        <div class="item">
+                                               
+<!--                        <div class="item">
                             <h6><i class="fas fa-share-alt" style="padding-right: 10px"></i>แชร์</h6>
                             <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook"></i> Facebook</a></p>
                         </div>
@@ -253,11 +332,8 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             <h6><i class="fas fa-download" style="padding-right: 10px"></i>ดาวน์โหลด</h6>
                             <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="fas fa-file-pdf"></i>&nbsp;PDF</a></p>
 
-                        </div>
+                        </div>-->
                     </div>
-                    <br>
-                    <br>
-                    <br>
                     <div class="row">
                         <div class="col-md-12">
                             <table class="table table-bordered table-style table-responsive">
@@ -764,9 +840,10 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="product-detail__gallery">
                     <div class="product-slider-wrapper">
+                        @if(!$tourPackage->is_quick_tour)
                         <div class="product-slider">
                             <!--                            @foreach($tourPackageImagesList as $tourPackageImage)
                                                         <div class="item">
@@ -792,6 +869,20 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 @endforeach
                             </div>
                         </div>
+                        @else
+                        <div class="product-slider">
+                            <div class="item">
+                                <img src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
+                            </div>
+                        </div>
+                        <div class="product-slider-thumb-row">
+                            <div class="product-slider-thumb">
+                                <div class="item">
+                                    <img src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -801,17 +892,24 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             <div class="col-md-9">
                 <div class="product-tabs tabs">
                     <ul>
+                        @if(!$tourPackage->is_quick_tour)
                         <li>
                             <a href="#tabs-1">แผนการท่องเที่ยว</a>
                         </li>
                         <li>
                             <a href="#tabs-2">เงื่อนไขโปรแกรมทัวร์</a>
                         </li>
+                        @else
+                        <li>
+                            <a href="#tabs-1">แผนการท่องเที่ยว</a>
+                        </li>
+                        @endif
                         <!--                        <li>
                                                     <a href="#tabs-3">Review &amp; Rating</a>
                                                 </li>-->
                     </ul>
                     <div class="product-tabs__content">
+                        @if(!$tourPackage->is_quick_tour)
                         <div id="tabs-1">
                             <div class="trip-schedule-accordion accordion">
                                 @foreach ($tourPackageDayList as $tourPackageDay)
@@ -827,10 +925,12 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <br>
                                     @endif
                                     @endforeach
-
                                 </div>
                                 @endforeach
                             </div>
+
+                            <a class="embed" href="{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}"></a>
+
                         </div>
                         <div id="tabs-2">
                             <div class="trip-schedule-accordion accordion">
@@ -1198,6 +1298,12 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                                                                     </div>
                                                                                 </div>
                                                 </div>-->
+                        @else
+                        <div id="tabs-1">
+                            <a class="embed" href="{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}"></a>
+                        </div>
+                        @endif
+
                     </div>
                 </div>
                 <div class="period-table-bottom">
@@ -1272,7 +1378,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             <div class="col-md-3">
                 <div class="detail-sidebar">                    
                     <div class="booking-info">
-                        <h3>- จองทัวร์นี้ -</h3>
+                        <h3><i class="fas fa-check-circle"></i> จองทัวร์นี้</h3>
                         <div class="form-select-date">
                             <div class="form-elements">
                                 <label>เลือกช่วงเวลาเดินทาง</label>
@@ -1392,7 +1498,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <div class="call-to-book">
                             <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal">
                                 <i class="awe-icon awe-icon-phone"></i>
-                                <span style="font-size: 25px">โทรจอง</span>                       
+                                <span>โทรจอง</span>                       
                             </button>
                         </div> 
                         <!-- Modal -->
@@ -1461,7 +1567,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <div class="call-to-book2">
                             <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal2">    
                                 <i class="fab fa-line"></i>                            
-                                <span style="font-size: 25px">จองผ่านไลน์</span>
+                                <span>จองผ่านไลน์</span>
                             </button>
                         </div>
                         <!-- Modal -->
@@ -1529,6 +1635,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                 </div>
             </div>
         </div>
+    </div>    
 </section>
 
 <!--period-table    -->

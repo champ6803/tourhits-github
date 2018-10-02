@@ -38,11 +38,12 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div class="tab-pane active show" id="main" role="tabpanel" aria-expanded="true">
+                            <input hidden id="quick_tour" name="quick_tour" value="false">
                             <div class='row'>
                                 <div class='col-12'>
                                     <div class="form-horizontal form-element">
                                         <div class="box-body">
-                                            <div class="row">
+                                            <div class="row"> 
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="inputEmail3" class="col-sm-2 control-label">Country</label>
@@ -138,7 +139,7 @@
                                                         <label for="main_price" class="col-sm-2 control-label">Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="main_price" name="main_price">
+                                                            <input type="text" class="form-control" id="main_price" name="main_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -147,7 +148,7 @@
                                                         <label for="main_special_price" class="col-sm-2 control-label">Special Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="main_special_price" name="main_special_price">
+                                                            <input type="text" class="form-control" id="main_special_price" name="main_special_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -180,7 +181,9 @@
                                         <!-- /.box-body -->
                                         <div class="box-footer">
                                             <button id="saveBtn" type="button" class="btn btn-info" onclick="genTable();"> 
-                                                <span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
+                                                <i class="fa fa-plus"></i>&nbsp;Add Tour Package</button>
+                                            <button style="float: right" id="saveQuickBtn" type="button" class="btn btn-danger"> 
+                                                <i class="fa fa-plus-circle"></i>&nbsp;Add Quick Tour Package</button>
                                             <!--                                            <button type="button" id="clearButton" class="btn btn-danger" onclick="clearGenTable();">
                                                                                             <span class="glyphicon glyphicon-erase" ></span>&nbsp;Clear</button>                                            -->
                                         </div>
@@ -261,7 +264,7 @@
                                                         <label for="adult_price" class="col-sm-2 control-label">Adult Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="adult_price" name="adult_price">
+                                                            <input type="text" class="form-control" id="adult_price" name="adult_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -270,7 +273,7 @@
                                                         <label for="child_price" class="col-sm-2 control-label">Child Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="child_price" name="child_price">
+                                                            <input type="text" class="form-control" id="child_price" name="child_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -288,7 +291,7 @@
                                                     <div class="form-group row">
                                                         <label for="alone_price" class="col-sm-2 control-label">Special Price</label>
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="special_price" name="special_price">
+                                                            <input type="text" class="form-control" id="special_price" name="special_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -512,12 +515,22 @@
                                                     </div>
                                                 </div>
 
+                                                <!--                                                <div class="col-6">
+                                                                                                    <div class="form-group row">
+                                                                                                        <label for="attraction_select" class="col-sm-2 control-label">Attraction</label>
+                                                
+                                                                                                        <div class="col-sm-10">
+                                                                                                            <select id="attraction_select" class="form-control js-example-basic-multiple" name="attraction_select[]" multiple="multiple">
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>-->
                                                 <div class="col-6">
                                                     <div class="form-group row">
-                                                        <label for="attraction_select" class="col-sm-2 control-label">Attraction</label>
+                                                        <label for="airline_select" class="col-sm-2 control-label">Airline</label>
 
                                                         <div class="col-sm-10">
-                                                            <select id="attraction_select" class="form-control js-example-basic-multiple" name="attraction_select[]" multiple="multiple">
+                                                            <select id="airline_select" class="form-control js-example-basic-multiple" name="airline_select[]" multiple="multiple">
                                                             </select>
                                                         </div>
                                                     </div>
@@ -534,18 +547,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-6">
-                                                    <div class="form-group row">
-                                                        <label for="airline_select" class="col-sm-2 control-label">Airline</label>
-
-                                                        <div class="col-sm-10">
-                                                            <select id="airline_select" class="form-control js-example-basic-multiple" name="airline_select[]" multiple="multiple">
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="holiday_select" class="col-sm-2 control-label">Route</label>

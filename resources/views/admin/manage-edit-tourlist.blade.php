@@ -11,7 +11,8 @@
     </section>
 
     <section class="content">
-        <form action="{{ URL::to('updateTourlistAndDay') }}" method="post" enctype="multipart/form-data">  
+        <form action="{{ URL::to('updateTourlistAndDay') }}" method="post" enctype="multipart/form-data">
+            <input hidden id="quick_tour" name="quick_tour" value="false">
             <input name="tour_package_id" id="tour_package_id" hidden value="">
             <input name="tour_package_day_id" id="tour_package_day_id" hidden value="">
             <input name="tour_period_id" id="tour_period_id" hidden value="">
@@ -35,7 +36,7 @@
                 <div class="vtabs customvtab">
                     <ul class="nav nav-tabs tabs-vertical" role="tablist">
                         <li class="nav-item"> <a class="nav-link active show" data-toggle="tab" href="#main" role="tab" aria-expanded="true" aria-selected="true"><span class="hidden-sm-up"><i class="ion-home"></i></span> <span class="hidden-xs-down">Main</span> </a> </li>
-                        <li class="nav-item"> <a class="nav-link" onclick="genTable()" data-toggle="tab" href="#detail" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">Detail</span></a> </li>
+                        <li id="detail_li" class="nav-item"> <a class="nav-link" onclick="genTable()" data-toggle="tab" href="#detail" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">Detail</span></a> </li>
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#periods" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Periods</span></a> </li>
                         <!--<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#images" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Images</span></a> </li>-->
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#tags" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Tags</span></a> </li>
@@ -538,12 +539,22 @@
                                                     </div>
                                                 </div>
 
+                                                <!--                                                <div class="col-6">
+                                                                                                    <div class="form-group row">
+                                                                                                        <label for="attraction_select" class="col-sm-2 control-label">Attraction</label>
+                                                
+                                                                                                        <div class="col-sm-10">
+                                                                                                            <select id="attraction_select" class="form-control js-example-basic-multiple"name="attraction_select[]" multiple="multiple">
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>-->
                                                 <div class="col-6">
                                                     <div class="form-group row">
-                                                        <label for="attraction_select" class="col-sm-2 control-label">Attraction</label>
+                                                        <label for="airline_select" class="col-sm-2 control-label">Airline</label>
 
                                                         <div class="col-sm-10">
-                                                            <select id="attraction_select" class="form-control js-example-basic-multiple"name="attraction_select[]" multiple="multiple">
+                                                            <select id="airline_select" class="form-control js-example-basic-multiple" name="airline_select[]" multiple="multiple">
                                                             </select>
                                                         </div>
                                                     </div>
@@ -560,18 +571,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-6">
-                                                    <div class="form-group row">
-                                                        <label for="airline_select" class="col-sm-2 control-label">Airline</label>
-
-                                                        <div class="col-sm-10">
-                                                            <select id="airline_select" class="form-control js-example-basic-multiple" name="airline_select[]" multiple="multiple">
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="holiday_select" class="col-sm-2 control-label">Route</label>
@@ -593,7 +592,7 @@
                                                     <i class="fa fa-trash-o"></i>&nbsp;Delete</button>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div id="saveAllInfo" class="row">
                                             <div class="col-12">
                                                 <span>กรุณาตรวจสอบ Detail ก่อนทุกครั้ง</span>
                                             </div>

@@ -1,6 +1,7 @@
 $(function () {
     $('#indx').addClass('menu-active');
     $('#package_country_image').hide();
+    $('#sorting').hide();
     $('#date_picker').daterangepicker({
         "autoApply": true,
         "opens": "center",
@@ -14,16 +15,18 @@ $(function () {
     });
     $('#date_picker').val("");
 
-    expandCheckboxRoute();
-    expandCheckboxAirline();
-    expandCheckboxHoliday();
-    expandCheckboxMonth();
-    expandCheckboxDates();
+
 
     $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
 
     getTourPackage(); // init package tour card
     checkboxChecked();
+
+    expandCheckboxRoute();
+    expandCheckboxAirline();
+    expandCheckboxHoliday();
+    expandCheckboxMonth();
+    expandCheckboxDates();
 });
 
 var slider = new Slider('#price', {
@@ -32,10 +35,23 @@ var slider = new Slider('#price', {
     range: true,
     value: [0, 80000]
 });
+
+//var sliderMobile = new Slider('#price_mobile', {
+//    min: 0,
+//    max: 100000,
+//    range: true,
+//    value: [0, 80000]
+//});
+
 slider.on("slide", function (sliderValue) {
     document.getElementById("price_from").textContent = numberWithCommas(sliderValue[0]);
     document.getElementById("price_to").textContent = numberWithCommas(sliderValue[1]);
 });
+
+//sliderMobile.on("slide", function (sliderValue) {
+//    document.getElementById("price_mobile_from").textContent = numberWithCommas(sliderValue[0]);
+//    document.getElementById("price_mobile_to").textContent = numberWithCommas(sliderValue[1]);
+//});
 
 function expandCheckboxRoute() {
     var size_li = $("#filter-route .option").size();
@@ -44,13 +60,16 @@ function expandCheckboxRoute() {
         $("#expandToggleRoute").hide();
     }
     $('#filter-route .option:lt(' + x + ')').show();
+
     $('#loadMoreRoute').click(function () {
         if (x === 5) {
-            x = (x + 10 <= size_li) ? x + 5 : size_li;
+//            x = (x + 10 <= size_li) ? x + 5 : size_li;
+            x = size_li;
             $("#loadMoreRoute").html("ดูน้อยลง&nbsp;<i class='fas fa-caret-up'></i>");
             $('#filter-route .option:lt(' + x + ')').show();
         } else if (x > 5) {
-            x = (x - 5 <= 5) ? 5 : x - 5;
+//            x = (x - 5 <= 5) ? 5 : x - 5;'
+            x = 5;
             $("#loadMoreRoute").html("ดูเพิ่มเติม&nbsp;<i class='fas fa-caret-down'></i>");
             $('#filter-route .option').not(':lt(' + x + ')').hide();
         }
@@ -63,14 +82,24 @@ function expandCheckboxAirline() {
     if (size_li <= 5) {
         $("#expandToggleAirline").hide();
     }
-    $('#filter-airline .option:lt(' + x + ')').show();
+    //$('#filter-airline .option:lt(' + x + ')').show();
+    $('#filter-airline .option').each(function (key, val) {
+        var num = key;
+        if (parseInt(num) > 4) {
+            $(this).hide();
+        }
+
+    });
+
     $('#loadMoreAirline').click(function () {
         if (x === 5) {
-            x = (x + 10 <= size_li) ? x + 5 : size_li;
+//            x = (x + 10 <= size_li) ? x + 5 : size_li;
+            x = size_li;
             $("#loadMoreAirline").html("ดูน้อยลง&nbsp;<i class='fas fa-caret-up'></i>");
             $('#filter-airline .option:lt(' + x + ')').show();
         } else if (x > 5) {
-            x = (x - 5 <= 5) ? 5 : x - 5;
+//            x = (x - 5 <= 5) ? 5 : x - 5;
+            x = 5;
             $("#loadMoreAirline").html("ดูเพิ่มเติม&nbsp;<i class='fas fa-caret-down'></i>");
             $('#filter-airline .option').not(':lt(' + x + ')').hide();
         }
@@ -83,14 +112,24 @@ function expandCheckboxHoliday() {
     if (size_li <= 5) {
         $("#expandToggleHoliday").hide();
     }
-    $('#filter-holiday .option:lt(' + x + ')').show();
+//    $('#filter-date .option:lt(' + x + ')').show();
+
+    $('#filter-date .option').each(function (key, val) {
+        var num = key;
+        if (parseInt(num) > 4) {
+            $(this).hide();
+        }
+
+    });
     $('#loadMoreHoliday').click(function () {
         if (x === 5) {
-            x = (x + 10 <= size_li) ? x + 5 : size_li;
+//            x = (x + 10 <= size_li) ? x + 5 : size_li;
+            x = size_li;
             $("#loadMoreHoliday").html("ดูน้อยลง&nbsp;<i class='fas fa-caret-up'></i>");
             $('#filter-date .option:lt(' + x + ')').show();
         } else if (x > 5) {
-            x = (x - 5 <= 5) ? 5 : x - 5;
+//            x = (x - 5 <= 5) ? 5 : x - 5;
+            x = 5;
             $("#loadMoreHoliday").html("ดูเพิ่มเติม&nbsp;<i class='fas fa-caret-down'></i>");
             $('#filter-date .option').not(':lt(' + x + ')').hide();
         }
@@ -103,14 +142,23 @@ function expandCheckboxMonth() {
     if (size_li <= 5) {
         $("#expandToggleMonth").hide();
     }
-    $('#filter-month .option:lt(' + x + ')').show();
+//    $('#filter-month .option:lt(' + x + ')').show();
+    $('#filter-month .option').each(function (key, val) {
+        var num = key;
+        if (parseInt(num) > 4) {
+            $(this).hide();
+        }
+
+    });
     $('#loadMoreMonth').click(function () {
         if (x === 5) {
-            x = (x + 10 <= size_li) ? x + 5 : size_li;
+//            x = (x + 10 <= size_li) ? x + 5 : size_li;
+            x = size_li;
             $("#loadMoreMonth").html("ดูน้อยลง&nbsp;<i class='fas fa-caret-up'></i>");
             $('#filter-month .option:lt(' + x + ')').show();
         } else if (x > 5) {
-            x = (x - 5 <= 5) ? 5 : x - 5;
+//            x = (x - 5 <= 5) ? 5 : x - 5;
+            x = 5;
             $("#loadMoreMonth").html("ดูเพิ่มเติม&nbsp;<i class='fas fa-caret-down'></i>");
             $('#filter-month .option').not(':lt(' + x + ')').hide();
         }
@@ -123,14 +171,23 @@ function expandCheckboxDates() {
     if (size_li <= 5) {
         $("#expandToggleDates").hide();
     }
-    $('#filter-countdate .option:lt(' + x + ')').show();
+//    $('#filter-countdate .option:lt(' + x + ')').show();
+    $('#filter-countdate .option').each(function (key, val) {
+        var num = key;
+        if (parseInt(num) > 4) {
+            $(this).hide();
+        }
+
+    });
     $('#loadMoreDates').click(function () {
         if (x === 5) {
-            x = (x + 10 <= size_li) ? x + 5 : size_li;
+//            x = (x + 10 <= size_li) ? x + 5 : size_li;
+            x = size_li;
             $("#loadMoreDates").html("ดูน้อยลง&nbsp;<i class='fas fa-caret-up'></i>");
             $('#filter-countdate .option:lt(' + x + ')').show();
         } else if (x > 5) {
-            x = (x - 5 <= 5) ? 5 : x - 5;
+//            x = (x - 5 <= 5) ? 5 : x - 5;
+            x = 5;
             $("#loadMoreDates").html("ดูเพิ่มเติม&nbsp;<i class='fas fa-caret-down'></i>");
             $('#filter-countdate .option').not(':lt(' + x + ')').hide();
         }
@@ -164,7 +221,7 @@ function getTourPackage() {
 //                    renderTourPackage(data.tourPackageList, data.tourPeriod);
                     renderTourCard(data.tourPackageList, data.tourPeriod);
                     $('#package_country').html(data.tourPackageList[0].tour_country_name + " ทั้งหมด " + data.tourPackageList.length + " แพ็คเกจ");
-                    $("#package_country_image").attr("src", "../images/flags/" + data.tourPackageList[0].country_code.toLowerCase() + ".png");
+                    $("#package_country_image").attr("src", "../images/fg/" + data.tourPackageList[0].country_code.toUpperCase() + ".png");
                     $("#search_tour_pager").empty();
                     $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
                 } else {
@@ -251,7 +308,7 @@ function checkboxChecked() {
 function renderTourPackage(tourPackageList, tourPeriod) {
     var obj = tourPackageList;
     if (obj) {
-        
+
         var divs = "";
         $("#card_area").empty();
         $.each(obj, function (key, val) {
@@ -357,6 +414,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
     var obj = tourPackageList;
     if (obj != null && obj.length > 0) {
         $('#package_country_image').show();
+        $('#sorting').show();
         var divs = "";
         $("#card_area").empty();
         $.each(obj, function (key, val) {
@@ -389,7 +447,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
             {
                 tour_code = '0' + tour_code;
             }
-            div = div + '<div class="pass">รหัสทัวร์&nbsp</div>#' + tour_code;
+            div = div + '<div class="pass">รหัสทัวร์&nbsp</div>TH' + tour_code;
             div = div + '</div>';
             div = div + '</div>';
             div = div + '</div>';

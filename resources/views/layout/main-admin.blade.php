@@ -6,7 +6,7 @@ if (!isset($_SESSION['a_user'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="zoom: 80%">
     <head>
         <style>
             fieldset 
@@ -803,6 +803,8 @@ if (!isset($_SESSION['a_user'])) {
         <script src="{{ asset('js/lib/bootstrap-table.js')}}"></script>
 
         <script src="{{ asset('js/lib/bootstrap-table-editable.js')}}"></script>
+        
+        <script type="text/javascript" src="{{ asset('js/lib/AutoNumeric.js') }}"></script>
 
         <script type="text/javascript" src="../assets/select2/dist/js/select2.min.js"></script>
 
