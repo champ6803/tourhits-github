@@ -230,11 +230,15 @@ class Tour_Package extends Model {
 
     public function getFilterDay($country) {
         try {
-            return Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
-                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                            ->select(DB::raw('COUNT(*) as sum, DATEDIFF(tour_period.tour_period_end,tour_period.tour_period_start) + 1 AS duration'))
-                            ->groupBy('duration')
-                            ->where('tour_country.tour_country_name', $country)
+//            return Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
+//                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+//                            ->select(DB::raw('COUNT(*) as sum, DATEDIFF(tour_period.tour_period_end,tour_period.tour_period_start) + 1 AS duration'))
+//                            ->groupBy('duration')
+//                            ->where('tour_country.tour_country_name', $country)
+//                            ->get();
+            return Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                            ->select(DB::raw('COUNT(*) as sum, tour_package.tour_period_day_number as duration'))
+                            ->groupBy('tour_package.tour_period_day_number')
                             ->get();
         } catch (\Exception $e) {
             return $e;

@@ -2786,7 +2786,8 @@ span.dropcap {
     background-color: #1E1E1F;
     padding-top: 60px;
     font-size: 13px;
-    color: #EDEDED;
+    color: #ffffff;
+    /*color: #EDEDED;*/
     font-family: supermarket;
 }
 #footer-page .widget {
