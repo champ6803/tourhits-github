@@ -28,12 +28,12 @@
 }
 
 .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{
-        background-color: rgba(249, 166, 124, 0.8); 
-        padding-top: 9px; 
-        font-size: 26px;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
+    background-color: rgba(249, 166, 124, 0.8); 
+    padding-top: 9px; 
+    font-size: 26px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 
 .destination-grid-content .row{
     display: inline;
@@ -67,6 +67,19 @@
 
 }
 
+.sponsor-footer ul{
+    text-align: center;
+    list-style-type: none;
+    list-style-position: outside;
+    padding-left: 0;
+}
+
+.sponsor-footer ul li{
+    display: inline-block !important;
+    margin: 0 5px;
+    text-align: -webkit-match-parent;
+}
+
 .country-link {
     border-radius: 8px;
     display: block;
@@ -80,7 +93,7 @@
 .country-link img{
     height: 35px;
     float: left;
-    
+
 }
 
 .country-link h5 {
@@ -206,7 +219,7 @@
 
 .card-detail .hilight{
     /*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
-/*    color: #8d8d8d;*/
+    /*    color: #8d8d8d;*/
     color:gray;
     font-size: 17px;
     font-weight: bold;
@@ -260,7 +273,7 @@
     color: #EC2424; 
     text-align: right;
     font-size: 27px;
-/*    font-weight: 900;*/
+    /*    font-weight: 900;*/
     margin-bottom: 5px;
     margin-top: -12px;
     /*    font-family: sans-serif;*/
@@ -281,7 +294,7 @@
     height: 24px;
     text-align: right;
     font-size: 18px;
-    
+
 }
 
 .nav-tabs{
@@ -4194,7 +4207,7 @@ Custom BS3
     background: rgba(195, 49, 50, 0.8);
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
-/*    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);*/
+    /*    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);*/
 }
 
 .tour-bottom-right{
@@ -4257,7 +4270,7 @@ Custom BS3
 .line-gradient{
     height: 1.5px;
     background: #f7edee; /* For browsers that do not support gradients */
-/*    background: linear-gradient(to right, #D0171F, #EC1C24, #F58A1F, #FFDB00  );  Standard syntax (must be last) */
+    /*    background: linear-gradient(to right, #D0171F, #EC1C24, #F58A1F, #FFDB00  );  Standard syntax (must be last) */
 }
 
 /* หน้าสถานที่ยอดนิยม */
@@ -4799,22 +4812,22 @@ Custom BS3
     }
 
     .card-xs {
-/*      display: flex;*/
-      min-width: 100%;
-      min-height: 200px;
-      overflow-x: auto;
-            
+        /*      display: flex;*/
+        min-width: 100%;
+        min-height: 200px;
+        overflow-x: auto;
+
     }
 
     .card-xs::-webkit-scrollbar {
-      display: none;
+        display: none;
     }
-    
+
     .card--content {
-/*      background-color: #e74c3c;*/
-      min-width: 300px;
-     
-      
+        /*      background-color: #e74c3c;*/
+        min-width: 300px;
+
+
     }
 }    
 /*    @media screen and (max-width: 768px) {
@@ -4827,95 +4840,95 @@ Custom BS3
         }
     }*/
 
-    /* หน้าเสริจ */
-    
-    .tour-local-wrapper{
-/*        height: 50px;
-        margin-bottom: 10px;*/
-    }
-    
-    .swiper-container, .swiper-slide{
-        width: 100%;
-    }
-    
-    .swiper-container{
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-        -o-backface-visibility: hidden;
-        backface-visibility: hidden;
-        z-index: 1;
-        margin-top: 30px;
-    }
-    
-    .swiper-container-free-mode>.swiper-wrapper{
-        -webkit-transition-timing-function: ease-out;
-        -moz-transition-timing-function: ease-out;
-        -ms-transition-timing-function: ease-out;
-        -o-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-        margin: 0 auto;
-    }
-    
-    .tour-local-nav{
-        margin-left: -15px;
-        margin-right: -15px;
-        list-style-type: none;
-        white-space: nowrap;
-        padding: 0;
-        margin-bottom: 15px;
-        height: 50px;
-    }
-    
-    .tour-local-nav>.local-nav-item>a{
-        background: #d7d7d7;
-        color: #363636;
-        padding: 0px 18px;
-        display: inline-block;
-        line-height: 30px;
-        border-radius: 15px;
-        font-size: 17px;
-        -webkit-transition: all .3s ease;
-        -o-transition: all .3s ease;
-        transition: all .3s ease;
-    }
-    
-    .tour-local-nav>.local-nav-item{
-        display: inline-block;
-        width: auto;
-        margin-right: 15px;
-        height: 30px;
-        margin-top: 0px;
-    }
-    
-    .swiper-slide{
-       -webkit-flex-shrink: 0;
-        -ms-flex: 0 0 auto;
-        flex-shrink: 0;
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-    
-    .swiper-slide{
-        float: left;
-    }
-    
-    .swiper-container-free-mode .swiper-button-next, .swiper-container-free-mode .swiper-button-prev{
-        opacity: 1 !important;
-    }
-    
-    .tour-local-wrapper .swiper-button-next {
-        right: 0;
-        left: auto;
-    }
+/* หน้าเสริจ */
+
+.tour-local-wrapper{
+    /*        height: 50px;
+            margin-bottom: 10px;*/
+}
+
+.swiper-container, .swiper-slide{
+    width: 100%;
+}
+
+.swiper-container{
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 1;
+    margin-top: 30px;
+}
+
+.swiper-container-free-mode>.swiper-wrapper{
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    margin: 0 auto;
+}
+
+.tour-local-nav{
+    margin-left: -15px;
+    margin-right: -15px;
+    list-style-type: none;
+    white-space: nowrap;
+    padding: 0;
+    margin-bottom: 15px;
+    height: 50px;
+}
+
+.tour-local-nav>.local-nav-item>a{
+    background: #d7d7d7;
+    color: #363636;
+    padding: 0px 18px;
+    display: inline-block;
+    line-height: 30px;
+    border-radius: 15px;
+    font-size: 17px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.tour-local-nav>.local-nav-item{
+    display: inline-block;
+    width: auto;
+    margin-right: 15px;
+    height: 30px;
+    margin-top: 0px;
+}
+
+.swiper-slide{
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-slide{
+    float: left;
+}
+
+.swiper-container-free-mode .swiper-button-next, .swiper-container-free-mode .swiper-button-prev{
+    opacity: 1 !important;
+}
+
+.tour-local-wrapper .swiper-button-next {
+    right: 0;
+    left: auto;
+}
 
 
 /* หน้าเสริจ */
@@ -5143,7 +5156,7 @@ Custom BS3
 }
 
 .filter-page__content .trip-item:hover{
-/*    box-shadow: 0 0 0 2px #cdc7ec;*/
+    /*    box-shadow: 0 0 0 2px #cdc7ec;*/
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 
 }
@@ -5156,7 +5169,7 @@ Custom BS3
 }
 
 .filter-page__content .trip-item .item-body .hilight {
-/*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
+    /*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
     color: #8d8d8d;
     padding-top:2px;
     max-height: 100px;
@@ -5570,230 +5583,229 @@ Custom BS3
 
 }
 
-    .navbar-bot a.active {
-    }
-    
+.navbar-bot a.active {
+}
+
 /*! Flickity v2.1.2
 https://flickity.metafizzy.co
 ---------------------------------------------- */
 
 .flickity-enabled {
-  position: relative;
+    position: relative;
 }
 
 .flickity-enabled:focus { outline: none; }
 
 .flickity-viewport {
-  overflow: hidden;
-  position: relative;
-  height: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
 }
 
 .flickity-slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 /* draggable */
 
 .flickity-enabled.is-draggable {
-  -webkit-tap-highlight-color: transparent;
-          tap-highlight-color: transparent;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .flickity-enabled.is-draggable .flickity-viewport {
-  cursor: move;
-  cursor: -webkit-grab;
-  cursor: grab;
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
 }
 
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
 }
 
 /* ---- flickity-button ---- */
 
 .flickity-button {
-  position: absolute;
-  background: hsla(0, 0%, 100%, 0.75);
-  border: none;
-  color: #333;
+    position: absolute;
+    background: hsla(0, 0%, 100%, 0.75);
+    border: none;
+    color: #333;
 }
 
 .flickity-button:hover {
-  background: white;
-  cursor: pointer;
+    background: white;
+    cursor: pointer;
 }
 
 .flickity-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px #19F;
+    outline: none;
+    box-shadow: 0 0 0 5px #19F;
 }
 
 .flickity-button:active {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 .flickity-button:disabled {
-  opacity: 0.3;
-  cursor: auto;
-  /* prevent disabled button from capturing pointer up event. #716 */
-  pointer-events: none;
+    opacity: 0.3;
+    cursor: auto;
+    /* prevent disabled button from capturing pointer up event. #716 */
+    pointer-events: none;
 }
 
 .flickity-button-icon {
-  fill: #333;
+    fill: #333;
 }
 
 /* ---- previous/next buttons ---- */
 
 .flickity-prev-next-button {
-  top: 41%;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  /* vertically center */
-  transform: translateY(-50%);
+    top: 41%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    /* vertically center */
+    transform: translateY(-50%);
 }
 
 .flickity-prev-next-button.previous { left: 10px; }
 .flickity-prev-next-button.next { right: 10px; }
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
-  left: auto;
-  right: 10px;
+    left: auto;
+    right: 10px;
 }
 .flickity-rtl .flickity-prev-next-button.next {
-  right: auto;
-  left: 10px;
+    right: auto;
+    left: 10px;
 }
 
 .flickity-prev-next-button .flickity-button-icon {
-  position: absolute;
-  left: 20%;
-  top: 20%;
-  width: 60%;
-  height: 60%;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
 }
 
 /* ---- page dots ---- */
 
 .flickity-page-dots {
-/*  position: absolute;*/
-  width: 100%;
-  bottom: -25px;
-  padding: 4px 0px;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-  line-height: 4;
+    /*  position: absolute;*/
+    width: 100%;
+    bottom: -25px;
+    padding: 4px 0px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 4;
 }
 
 .flickity-rtl .flickity-page-dots { direction: rtl; }
 
 .flickity-page-dots .dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 8px;
-  background: transparent;
-  border: 2px solid #c33132;
-  border-radius: 50%;
-  opacity: 1;
-  cursor: pointer;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px;
+    background: transparent;
+    border: 2px solid #c33132;
+    border-radius: 50%;
+    opacity: 1;
+    cursor: pointer;
 }
 
 .flickity-page-dots .dot.is-selected {
-  background: #c33132;
-  opacity: 1;
+    background: #c33132;
+    opacity: 1;
 }
 
-    
-    /* การ์ดหน้าแรก พวกปุ่ม Next จุดล่าง  */
-    
-    /* big buttons, no circle */
+
+/* การ์ดหน้าแรก พวกปุ่ม Next จุดล่าง  */
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+    width: 50px;
+    height: 50px;
+    /*      background: transparent;*/
+    background: #f1ededd4;
+    opacity: 0.8;
+}
+
+@media screen and ( max-width: 1000px ) {
+    /* half-width cells for larger devices */
     .flickity-prev-next-button {
-      width: 50px;
-      height: 50px;
-/*      background: transparent;*/
-      background: #f1ededd4;
-      opacity: 0.8;
+        width: 30px;
+        height: 30px;
     }
-    
-    @media screen and ( max-width: 1000px ) {
-      /* half-width cells for larger devices */
-      .flickity-prev-next-button {
-      width: 30px;
-      height: 30px;
-        }
-      .card--content {
-      margin: 5px;  
+    .card--content {
+        margin: 5px;  
     }
-    
+
     /* arrow color */
     .flickity-prev-next-button .arrow {
-      fill: #262626;
+        fill: #262626;
     }
     .flickity-prev-next-button.no-svg {
-      color: white;
+        color: white;
     }
     .flickity-prev-next-button:hover {
-      background: transparent;
+        background: transparent;
     }
     /* hide disabled button */
     .flickity-prev-next-button:disabled {
-      display: none;
+        display: none;
     }
 
     /* position dots in gallery */
     .flickity-page-dots {
-      bottom: 0px;
+        bottom: 0px;
     }
 
-    
+
     /* test */
-    
+
     .gallery {
-      background: #EEE;
+        background: #EEE;
     }
 
     .gallery-cell {
-      width: 100%;
-      height: 200px;
-      margin-right: 10px;
-      background: #8C8;
-      counter-increment: gallery-cell;
+        width: 100%;
+        height: 200px;
+        margin-right: 10px;
+        background: #8C8;
+        counter-increment: gallery-cell;
     }
-    
+
     .gallery-cell.is-selected {
-/*        background: #ED2;*/
+        /*        background: #ED2;*/
     }
-    
+
     /* cell number */
     .gallery-cell:before {
-      display: block;
-      text-align: center;
-      content: counter(gallery-cell);
-      line-height: 200px;
-      font-size: 80px;
-      color: white;
+        display: block;
+        text-align: center;
+        content: counter(gallery-cell);
+        line-height: 200px;
+        font-size: 80px;
+        color: white;
     }
-    
+
     .gallery-cell {
         width: 100%;
     }
 
     @media screen and ( min-width: 768px ) {
-      /* half-width cells for larger devices */
-      .gallery-cell { width: 50%; } 
+        /* half-width cells for larger devices */
+        .gallery-cell { width: 50%; } 
     }
-    
 
 
- 
+
