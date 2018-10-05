@@ -6259,9 +6259,10 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .cart-content .cart-table tbody td {
     font-weight: 100;
-    font-size: 21px;
+    font-size: 19px;
     color: #515050;
     padding: 0 0 10px 0;
+    font-weight: bold;
 }
 .cart-content .cart-table tbody td.product-remove {
     width: 12.6%;
@@ -6275,15 +6276,18 @@ body.single-post .blog-page__content > .post .post-content {
     color: #FF6666;
 }
 .cart-content .cart-table tbody td.product-name {
-    width: 30%;
+    width: 35%;
 /*    padding-right: 20px;*/
 }
-.cart-content .cart-table tbody td.product-price, .cart-content .cart-table tbody td.product-quantity {
-/*    width: 23%;*/
+.cart-content .cart-table tbody td.product-price{
+    width: 20%;
 /*    padding-right: 20px;*/
+}
+.cart-content .cart-table tbody td.product-quantity {
+    width: 25%;   
 }
 .cart-content .cart-table tbody td.product-subtotal {
-    width: 33.4%;
+    width: 30%;
 }
 .cart-content .cart-table tbody td .quantity {
     position: relative;
@@ -6311,13 +6315,13 @@ body.single-post .blog-page__content > .post .post-content {
     .container .checkout-page__content {
     padding: 10px;}
     
-    .cart-content .cart-table tbody td.product-price .amount{
-    display: none;}
+/*    .cart-content .cart-table tbody td.product-price .amount{
+    display: none;}*/
 } 
 
 @media screen and (max-width: 425px) {
-    .cart-content .cart-table tbody td.product-price .amount{
-    display: none;}
+/*    .cart-content .cart-table tbody td.product-price .amount{
+    display: none;}*/
     
     .cart-table th.product-name{
      width:30%; }
@@ -6348,18 +6352,23 @@ body.single-post .blog-page__content > .post .post-content {
     color: #0091ea;
 }
 .cart-content .cart-table tbody td .quantity .minus {
-    top: 0;
+    top: 5px;
+    margin-left: 108px;
+}
+.cart-content .cart-table tbody td .quantity i{
+    font-size: 20px;
 }
 .cart-content .cart-table tbody td .quantity .plus {
-    bottom: 0;
+    top: 5px;
 }
 .cart-content .cart-table tbody td .quantity .qty {
     font-size: 20px;
-    color: #A5A5A5;
+    color: #c33132;
     line-height: 0px;
-    height: 26px;
-    max-width: 100px;
+    height: 30px;
+    max-width: 113px;
     border: 0;
+    text-align: center;
 }
 
 .cart-footer .cart-subtotal {
@@ -6709,6 +6718,7 @@ body.single-post .blog-page__content > .post .post-content {
     margin-top: 20px;
     margin-left: -15px;
     margin-right: -15px;
+    padding-bottom: 10px;
 }
 .product-detail__info .trips .item {
     padding: 0px 15px;

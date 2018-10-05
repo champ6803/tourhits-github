@@ -237,13 +237,22 @@
 
 .card-detail .hilight .detail p{
     display: inline;
-    line-height: 1.3;
+    line-height: 1;
 }
 
 .card-detail .hilight .detail p:after{
     content: " | ";
     
 }
+
+    .product-detail__info .product-address p{      
+        display: inline;
+    }
+    
+    .product-detail__info .product-address p:after{
+        content: " | ";
+        color: #8d8d8d;      
+    }
 
 .card-highlight{
     font-size: 18px;
