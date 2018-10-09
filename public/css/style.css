@@ -6748,12 +6748,13 @@ body.single-post .blog-page__content > .post .post-content {
 }
 
 .product-detail__info .trips .warp-text p{
-    display: inline-block;
+/*    display: inline-block;*/
     color: #fff;
     border: 1px solid #495057;
     background-color: #495057;
     padding: 3px 14px 3px 14px;
     border-radius: 20px;
+    line-height: 1.5;
 }
 
 .product-detail__info .trips .item p .fa,
@@ -7778,15 +7779,15 @@ body.single-post .blog-page__content > .post .post-content {
 .booking-info input, .booking-info select {
     background-color: #eee;
     height: 42px;
-    line-height: 36px;
+    line-height: 16px;
     width: 100%;
     padding: 0 10px;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: bold;
 }
 .booking-info .awe-icon, .booking-info .fa {
-    height: 34px;
-    line-height: 34px;
+    height: 40px;
+    line-height: 40px;
     top: 1px;
     right: 1px;
     background-color: #eee;
@@ -7839,17 +7840,18 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .booking-info .form-select-date .form-item .awe-icon, .booking-info .form-select-date .form-item .fa {
     position: absolute;
-    width: 27px;
-    height: 21px;
+    width: 30px;
+    height: 37px;
     background-color: #eee;
-    line-height: 30px;
+/*    line-height: 30px;*/
     text-align: right;
     top: 3px;
     right: 2px;
     padding-right: 12px;
-    font-size: 18px;
+    font-size: 20px;
     color: #666;
     pointer-events: none;
+    line-height: 1.8;
 }
 .booking-info .add-room-type {
     padding: 5px 0;
@@ -7945,7 +7947,8 @@ body.single-post .blog-page__content > .post .post-content {
     background-color: #c33132;
     border: 0;
     cursor: pointer;
-    line-height: 46px;
+/*    line-height: 46px;*/
+    line-height: 1.5;
     height: 46px;
     padding: 0 26px;
     width:100%;

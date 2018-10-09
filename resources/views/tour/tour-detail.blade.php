@@ -124,7 +124,8 @@
         border: 1px solid #38c49c;
         background-color: #38c49c;
         padding: 3px 14px 3px 14px;
-        border-radius: 20px;   
+        border-radius: 20px; 
+        line-height: 1.5;
     }
     
     .product-detail .download-pdf p a:hover{
@@ -143,6 +144,7 @@
         background-color: #4dabf7;
         border-radius: 8px;
         padding: 4px 21px 4px 10px;
+        line-height: 1.5;
     }
     .product-detail .facebook p a:hover{
         background-color: #2475b6;
