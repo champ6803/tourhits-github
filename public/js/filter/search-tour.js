@@ -425,8 +425,14 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + '</div>';
             div = div + '</div>';
             div = div + '<div class="item-body">';
-            div = div + '<div class="item-title-header"><h5 style="color:#ea1c24"><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_name + '</a></h5></div>';
-            div = div + '<div class="item-title"><h2><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_detail + '</a></h2></div>';
+            //div = div + '<div class="item-title"><h5 style="color:#ea1c24"><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_name + '</a></h5></div>';
+            div = div + '<div class="item-title"><h2><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_name + '</a></h2></div>';
+            div = div + '<div class="hilight">';
+            div = div + '<i class="far fa-flag"></i>';
+            div = div + '<div class="detail">';
+            div = div + this.tour_package_detail;
+            div = div + '</div>';
+            div = div + '</div>';
             div = div + '<div class="item-list">';
             div = div + '<ul>';
             div = div + '<li><i class="far fa-clock"></i> ' + this.tour_period_day_number + ' วัน ' + this.tour_period_night_number + ' คืน</li>';
@@ -474,7 +480,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
 //                }
 //            });
             div = div + '</div>';
-            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">จองทัวร์นี้</a>';
+            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">ดูเพิ่มเติม</a>';
             div = div + '</div>';
             div = div + '</div>';
             divs = divs + div;
