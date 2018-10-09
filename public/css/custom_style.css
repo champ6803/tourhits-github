@@ -276,7 +276,7 @@
 
 .card-airline{
     position: relative;
-    width: 130.page-top .awe-select-wrapper .awe-selectpx;
+    width: 130px;
     height: 50px;
     float: left;
     overflow: hidden;
@@ -5181,7 +5181,7 @@ Custom BS3
 }
 
 .filter-page__content .trip-item .item-body .item-title h2 a{
-    line-height: 1.4;
+    line-height: 1;
     white-space: normal;
     font-size: 19px;
     color: #b5292e;
@@ -5190,7 +5190,7 @@ Custom BS3
 .filter-page__content .trip-item .item-body .hilight {
     /*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
     color: #8d8d8d;
-    padding-top:2px;
+    padding-top:10px;
     max-height: 100px;
     overflow : hidden;
     text-overflow: ellipsis;
@@ -5208,9 +5208,21 @@ Custom BS3
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     font-size: 16px;
-    line-height: 1.4;
+    
     color: #333;
     font-weight: bold;
+}
+
+.filter-page__content .trip-item .hilight .detail p{
+    display: inline;
+    line-height: 1;
+/*    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;*/
+}
+
+.filter-page__content .trip-item .hilight .detail p:after{
+    content: " | "; 
+    color: #8d8d8d;
 }
 
 .filter-page__content .trip-item .item-title{
@@ -5218,7 +5230,8 @@ Custom BS3
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    max-height: 52px;
+    max-height: 46px;
+    padding-top: 5px;
 }
 
 
@@ -5301,6 +5314,8 @@ Custom BS3
         position: absolute;              
         right: 0;
         top: -23px;
+        line-height: 1.6;
+        padding-top: 8px;
     }
 
     .trip-item .item-body .item-footer .item-icon .pass{

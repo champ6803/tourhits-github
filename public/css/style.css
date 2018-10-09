@@ -9382,9 +9382,9 @@ select {
         
     }
     
-    .filter-page__content .trip-item{
-/*        height: 529px;*/
-    }
+/*    .filter-page__content .trip-item{
+        height: 529px;
+    }*/
     
     .call-and-line .trip-item{
         width: auto;

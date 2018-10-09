@@ -159,6 +159,7 @@
     
     @media (min-width: 992px) and (max-width: 1199px) {
         .container {width: 1200px;}
+        .trip-item{height: 488px;}
     }
 
     @media screen and ( max-width: 991px ) {

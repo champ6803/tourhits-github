@@ -155,7 +155,6 @@
     
     @media (min-width: 992px) and (max-width: 1199px) {
         .container {width: 1200px;}
-        
     }
     
     @media (max-width: 425px) {
