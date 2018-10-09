@@ -170,6 +170,7 @@
             display: inline-block;
             float: right;
             padding: 7px 15px 0px 0px;
+            margin-top: 10px;
         }
         .filter-box .searchtoggle {
             display: inline;
