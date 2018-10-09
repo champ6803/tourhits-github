@@ -6748,6 +6748,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 
 .product-detail__info .trips .warp-text p{
+    display: inline-block;
     color: #fff;
     border: 1px solid #495057;
     background-color: #495057;
@@ -7776,7 +7777,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .booking-info input, .booking-info select {
     background-color: #eee;
-    height: 36px;
+    height: 42px;
     line-height: 36px;
     width: 100%;
     padding: 0 10px;

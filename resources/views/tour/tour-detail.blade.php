@@ -116,6 +116,7 @@
     }
        
     .product-detail .download-pdf p a{
+        display: inline-block;
         padding-right: 17px;
         color: #fff;
         font-size: 19px;
@@ -135,6 +136,7 @@
     
     .product-detail .facebook{padding-left: 10px; padding-right: 14px;}
     .product-detail .facebook p a{
+        display: inline-block;
         color: #fff;
         font-size: 19px;
         border: 1px solid #4dabf7;
@@ -1311,7 +1313,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                             <thead class="thead-light">
                                 <tr>
-                                    <th colspan="2" class="align-middle py-4">กำหนดการดินทาง</th>
+                                    <th colspan="2" class="align-middle py-4">กำหนดการเดินทาง</th>
                                     <th class="align-middle py-4">
                                         <span class="d-inline d-sm-none">ราคา</span>
                                         <span class="d-none d-sm-inline">ผู้ใหญ่พักคู่<br> ท่านละ</span>

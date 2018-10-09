@@ -27,7 +27,7 @@
     .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input{border-radius: 4px; background-color: #44484a; box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); font-size: 30px; transition: all 1s ease;}
+    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input{display: inline-block; border-radius: 4px; background-color: #44484a; box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); font-size: 26px; transition: all 1s ease;}
     .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input:hover{background-color: #373a3c; box-shadow: 0 0px 5px 0px rgba(0,0,0,.8);}
 
     @media screen and ( max-width: 958px ) {

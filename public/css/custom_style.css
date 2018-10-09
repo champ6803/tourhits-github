@@ -204,6 +204,7 @@
 
 .card-detail .country-name{
     /*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
+    padding-top: 8px;
     color: #8d8d8d;
     font-weight: bold;
     font-size: 17px;
@@ -269,7 +270,8 @@
 .card-time{
     padding: 3px 0;
     color: #262626;
-    font-size: 23px;
+    font-size: 19px;
+    font-weight: bold;
     text-align: left;
     margin-left: 9px;
 }
@@ -4770,7 +4772,7 @@ Custom BS3
 
 .cat-asian .country-link h5 {
     width: 60%;
-    line-height: 25px;
+    line-height: 35px;
     font-size: 17px;
     font-weight: bold;
     overflow: hidden;
