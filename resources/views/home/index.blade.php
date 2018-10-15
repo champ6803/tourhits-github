@@ -147,17 +147,11 @@
                         </div>
                         <div class="form-group">
                             <div class="form-elements">
-                                <div class="form-item start-date">
-                                    <i class="far fa-calendar-check awe-icon"></i>
+                                <div class="form-item">
+                                    <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
+                                    <!--<i class="far fa-calendar-check awe-icon"></i>-->
 <!--                                    <i class="awe-icon awe-icon-calendar"></i>-->
-                                    <input type="text" class="form-control awe-calendar" value="เริ่มต้น">
-                                </div>
-                            </div>
-                            <div class="form-elements">
-                                <div class="form-item end-date">
-                                    <i class="far fa-calendar-times awe-icon"></i>
-<!--                                    <i class="awe-icon awe-icon-calendar"></i>-->
-                                    <input type="text" class="form-control awe-calendar" value="สิ้นสุด">
+                                    <!--<input type="text" class="form-control awe-calendar" value="เริ่มต้น">-->
                                 </div>
                             </div>
                         </div>

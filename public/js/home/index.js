@@ -2,6 +2,13 @@ $(function () {
     $('#home').addClass('menu-active');
     renderTourPackage(tourHitsPackageActiveList, tourHitPeriodActive, "card_area_hit");
     renderTourPackage(tourSalesPackageActiveList, tourSalesPeriodActive, "card_area_sale");
+    $('#date_picker').daterangepicker({
+        "autoApply": true,
+        "opens": "center",
+        locale: {
+            "format": 'DD/MM/YYYY',
+        }
+    });
 });
 
 function renderTourPackage(tourPackageList, tourPeriod, selection) {

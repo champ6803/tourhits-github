@@ -244,17 +244,17 @@
 
 .card-detail .hilight .detail p:after{
     content: " | ";
-    
+
 }
 
-    .product-detail__info .product-address p{      
-        display: inline;
-    }
-    
-    .product-detail__info .product-address p:after{
-        content: " | ";
-        color: #8d8d8d;      
-    }
+.product-detail__info .product-address p{      
+    display: inline;
+}
+
+.product-detail__info .product-address p:after{
+    content: " | ";
+    color: #8d8d8d;      
+}
 
 .card-highlight{
     font-size: 18px;
@@ -5211,7 +5211,7 @@ Custom BS3
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     font-size: 16px;
-    
+
     color: #333;
     font-weight: bold;
 }
@@ -5219,8 +5219,8 @@ Custom BS3
 .filter-page__content .trip-item .hilight .detail p{
     display: inline;
     line-height: 1;
-/*    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;*/
+    /*    -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;*/
 }
 
 .filter-page__content .trip-item .hilight .detail p:after{
@@ -5234,7 +5234,7 @@ Custom BS3
     -webkit-box-orient: vertical;
     overflow: hidden;
     max-height: 46px;
-/*    padding-top: 11px;*/
+    /*    padding-top: 11px;*/
     margin-top: 11px;
 }
 
@@ -5591,7 +5591,7 @@ Custom BS3
 
 .navbar-bot {
     overflow: hidden;
-/*    background-color: #333;*/
+    /*    background-color: #333;*/
     background: linear-gradient(to right, #cb1313, #3e977f) no-repeat;
     opacity: 0.98;
     position: fixed;
@@ -5740,29 +5740,29 @@ https://flickity.metafizzy.co
 /* ---- page dots ---- */
 
 .flickity-page-dots {
-/*  position: absolute;*/
-  width: 100%;
-  bottom: -25px;
-  padding: 13px 0px;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-  line-height: 4;
+    /*  position: absolute;*/
+    width: 100%;
+    bottom: -25px;
+    padding: 13px 0px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 4;
 
 }
 
 .flickity-rtl .flickity-page-dots { direction: rtl; }
 
 .flickity-page-dots .dot {
-  display: inline-block;
-  width: 13px;
-  height: 13px;
-  margin: 0px 8px;
-  background: transparent;
-  border: 2px solid #c33132;
-  border-radius: 50%;
-  opacity: 1;
-  cursor: pointer;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin: 0px 8px;
+    background: transparent;
+    border: 2px solid #c33132;
+    border-radius: 50%;
+    opacity: 1;
+    cursor: pointer;
 }
 
 .flickity-page-dots .dot.is-selected {
@@ -5861,4 +5861,8 @@ https://flickity.metafizzy.co
 
 .searchtoggle i {
     color: #f15f3c;
+}
+
+.daterangepicker.dropdown-menu {
+    z-index:9999;
 }
