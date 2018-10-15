@@ -156,7 +156,7 @@
     @media (min-width: 1200px) {
         .container {width: 1400px;}
     }
-    
+
     @media (min-width: 992px) and (max-width: 1199px) {
         .container {width: 1200px;}
         .trip-item{height: 488px;}
@@ -225,14 +225,11 @@
 </section>
 <!-- END / HEADING PAGE -->
 
-
 <section class="filter-page">
     <div class="container">
         <div class="container">
             <div class="row">   
                 <div class="col-md-12 tour-local-wrapper">
-
-
                     <div id="owl-demo" class="tag-container owl-carousel owl-theme">
 
                         <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นราคาถูก</a></div>
@@ -256,9 +253,14 @@
             </div> 
         </div>
 
-        <!--                    กลาง-->
-        <div class="col-md-6 col-md-push-3">                       
-            <div class="filter-page__content">
+        <!--กลาง-->
+        <div class="col-md-6 col-md-push-3">
+            <div id="loading" class="row">
+                <div class="col-md-12 text-center">
+                    <img style="padding-top:100px" src="../images/search-loading.gif">
+                </div>
+            </div>
+            <div class="filter-page__content card_show">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="country">
@@ -267,13 +269,13 @@
                         </div>
                     </div>                    
                 </div>
-                
-                <div id="sorting" class="row">
+
+                <div id="sorting" class="row card_show">
                     <div class="col-md-12">
                         <div class="page-top">
                             <select class="awe-select">
                                 <option>ราคาถูกที่สุด</option>
-                                <option>นิยมที่สุด</option>
+                                
                             </select>
                         </div>
                     </div>
@@ -286,388 +288,389 @@
                         </div> 
                     </div>
                     <!-- Modal -->
-<!--                    <div class="modal fade filterModal" id="filterModal" role="dialog">
-                        <div class="modal-dialog">
-                             Modal content
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
-                                    <h4 class="modal-title"><i class="fas fa-filter"></i> คัดกรอง</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="box-content">
-                                        <div class="filter-bar">    
-                                            <div class="filter-price">
-                                                <div class='filter-header'>
-                                                    <span class='filter-header-text'><i class="fas fa-exchange-alt"></i> กำหนดช่วงราคา</span>
-                                                </div>     
-                                                <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to">80,000</span> บาท</div>
-                                                <input id="price" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
+                    <!--                    <div class="modal fade filterModal" id="filterModal" role="dialog">
+                                            <div class="modal-dialog">
+                                                 Modal content
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
+                                                        <h4 class="modal-title"><i class="fas fa-filter"></i> คัดกรอง</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="box-content">
+                                                            <div class="filter-bar">    
+                                                                <div class="filter-price">
+                                                                    <div class='filter-header'>
+                                                                        <span class='filter-header-text'><i class="fas fa-exchange-alt"></i> กำหนดช่วงราคา</span>
+                                                                    </div>     
+                                                                    <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to">80,000</span> บาท</div>
+                                                                    <input id="price" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
+                                                                </div>
+                    
+                                                                <hr>
+                    
+                                                                <div class="filter-route">
+                                                                    <div class='filter-header'>
+                                                                        <span class='filter-header-text'><i class="far fa-map"></i> เส้นทาง</span>
+                                                                    </div>
+                                                                    <div id="filter-route">
+                                                                        <div class="option-all">
+                                                                            <label for="route_all" class="label-cbx">
+                                                                                <input id="route_all" type="checkbox" class="invisible" checked>
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span>แสดงทั้งหมด</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        @foreach ($routeList as $route)
+                                                                        <div class="option">
+                                                                            <label for="route_{{ $route->r_id }}" class="label-cbx">
+                                                                                <input id="route_{{$route->r_id }}" value="{{ $route->r_name }}" type="checkbox" class="route_checkbox invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">{{ $route->r_name }}</span>
+                                                                                <span class="count">({{$route->r_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                        </div>
+                                                                        @endforeach
+                                                                        <div id="expandToggleRoute" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreRoute">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>                                                                                      
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <hr>
+                    
+                                                                <div class="filter-date">
+                                                                    <div class='filter-header'>
+                                                                        <span class='filter-header-text'><i class="far fa-calendar-alt"></i> วันเดินทาง ไป-กลับ</span>
+                                                                    </div>
+                                                                    <div class='filter-pickdate'>
+                                                                        <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
+                                                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                                                    </div>
+                                                                                เว้นไว้ใส่ปฎิทิน
+                                                                    <div id="filter-date">
+                                                                        <div class="option-all">
+                                                                            <label for="holiday_all" class="label-cbx">
+                                                                                <input id="holiday_all" type="checkbox" class="invisible" checked>
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span>แสดงทั้งหมด</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        @foreach ($holidayList as $holiday)
+                                                                        <div class="option">
+                                                                            <label for="holiday_{{ $holiday->holiday_id }}" class="label-cbx">
+                                                                                <input id="holiday_{{ $holiday->holiday_id }}" value="{{ $holiday->start_date }}||{{ $holiday->end_date }}" type="checkbox" class="holiday_checkbox invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">{{ $holiday->holiday_name }}</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                        </div>
+                                                                        @endforeach
+                    
+                                                                    </div>
+                                                                    <div id="expandToggleHoliday" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreHoliday">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
+                                                                </div>
+                    
+                                                                <hr>
+                    
+                                                                <div class="filter-month">
+                                                                    <div class='filter-header'>
+                                                                        <span class='filter-header-text'><i class="far fa-calendar-check"></i> เดือน</span>
+                                                                    </div>
+                                                                    <div id="filter-month">
+                                                                        <div class="option-all">
+                                                                            <label for="month_all" class="label-cbx">
+                                                                                <input id="month_all" type="checkbox" class="invisible" checked>
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span>แสดงทั้งหมด</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        @foreach ($monthList as $month)
+                                                                        <div class="option">
+                                                                            @if ($month->m_month === 1)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">มกราคม</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 2)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">กุมภาพันธ์</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 3)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">มีนาคม</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 4)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">เมษายน</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 5)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">พฤษภาคม</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 6)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">มิถุนายน</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 7)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">กรกฎาคม</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 8)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">สิงหาคม</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 9)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">กันยายน</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 10)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">ตุลาคม</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 11)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">พฤศจิกายน</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @elseif ($month->m_month === 12)
+                                                                            <label for="month_{{ $month->m_month }}" class="label-cbx">
+                                                                                <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">ธันวาคม</span>
+                                                                                <span class="count">({{$month->m_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                            @endif
+                                                                        </div>
+                                                                        @endforeach
+                    
+                                                                    </div>
+                                                                    <div id="expandToggleMonth" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreMonth">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
+                                                                </div>
+                    
+                                                                <hr>
+                    
+                                                                <div class="filter-countdate">
+                                                                    <div class='filter-header'>
+                                                                        <span class='filter-header-text'><i class="far fa-clock"></i> จำนวนวัน</span>
+                                                                    </div>
+                                                                    <div id="filter-countdate">
+                                                                        <div class="option-all">
+                                                                            <label for="day_all" class="label-cbx">
+                                                                                <input id="day_all" type="checkbox" class="invisible" checked>
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span>แสดงทั้งหมด</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        @foreach ($dayList as $day)
+                                                                        <div class="option">
+                                                                            <label for="day_{{ $day->duration }}" class="label-cbx">
+                                                                                <input id="day_{{ $day->duration }}" type="checkbox" class="invisible days_checkbox">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">{{ $day->duration }} วัน</span>
+                                                                                <span class="count">({{$day->sum}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                        </div>
+                                                                        @endforeach
+                                                                    </div>
+                                                                    <div id="expandToggleDates" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreDates">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
+                                                                </div>
+                    
+                                                                <hr>
+                    
+                                                                <div class="filter-airline">
+                                                                    <div class='filter-header'>
+                                                                        <span class='filter-header-text'><i class="far fa-paper-plane"></i> สายการบิน</span>
+                                                                    </div>
+                                                                    <div id="filter-airline">
+                                                                        <div class="option-all">
+                                                                            <label for="airline_all" class="label-cbx">
+                                                                                <input id="airline_all" type="checkbox" class="invisible" checked>
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span>แสดงทั้งหมด</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        @foreach ($airlineList as $airline)
+                                                                        <div class="option">
+                                                                            <label for="airline_{{ $airline->a_id }}" class="label-cbx">
+                                                                                <input id="airline_{{ $airline->a_id }}" type="checkbox" class="invisible airline_checkbox">
+                                                                                <div class="checkbox">
+                                                                                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                                    <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                                                                    <polyline points="4 11 8 15 16 6"></polyline>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="name">{{ $airline->a_name }}</span>
+                                                                                <span class="count">({{$airline->a_num}})</span>
+                                                                                <span class="clear"></span>
+                                                                            </label>
+                                                                        </div>
+                                                                        @endforeach
+                    
+                                                                    </div>
+                                                                    <div id="expandToggleAirline" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreAirline">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
+                                                                </div>
+                    
+                    
+                                                                                            end filter-bar                                                                           
+                                                            </div>
+                                                        </div>    
+                                                    </div>
+                                                    <div class="modal-footer" style="text-align:center;">
+                                                        <button type="button" class="awe-btn cancel" data-dismiss="modal">เสร็จสิ้น</button>
+                                                    </div>
+                                                </div>
+                    
                                             </div>
-
-                                            <hr>
-
-                                            <div class="filter-route">
-                                                <div class='filter-header'>
-                                                    <span class='filter-header-text'><i class="far fa-map"></i> เส้นทาง</span>
-                                                </div>
-                                                <div id="filter-route">
-                                                    <div class="option-all">
-                                                        <label for="route_all" class="label-cbx">
-                                                            <input id="route_all" type="checkbox" class="invisible" checked>
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span>แสดงทั้งหมด</span>
-                                                        </label>
-                                                    </div>
-                                                    @foreach ($routeList as $route)
-                                                    <div class="option">
-                                                        <label for="route_{{ $route->r_id }}" class="label-cbx">
-                                                            <input id="route_{{$route->r_id }}" value="{{ $route->r_name }}" type="checkbox" class="route_checkbox invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">{{ $route->r_name }}</span>
-                                                            <span class="count">({{$route->r_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                    </div>
-                                                    @endforeach
-                                                    <div id="expandToggleRoute" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreRoute">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>                                                                                      
-                                                </div>
-                                            </div>
-
-                                            <hr>
-
-                                            <div class="filter-date">
-                                                <div class='filter-header'>
-                                                    <span class='filter-header-text'><i class="far fa-calendar-alt"></i> วันเดินทาง ไป-กลับ</span>
-                                                </div>
-                                                <div class='filter-pickdate'>
-                                                    <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
-                                                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                                                </div>
-                                                            เว้นไว้ใส่ปฎิทิน
-                                                <div id="filter-date">
-                                                    <div class="option-all">
-                                                        <label for="holiday_all" class="label-cbx">
-                                                            <input id="holiday_all" type="checkbox" class="invisible" checked>
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span>แสดงทั้งหมด</span>
-                                                        </label>
-                                                    </div>
-                                                    @foreach ($holidayList as $holiday)
-                                                    <div class="option">
-                                                        <label for="holiday_{{ $holiday->holiday_id }}" class="label-cbx">
-                                                            <input id="holiday_{{ $holiday->holiday_id }}" value="{{ $holiday->start_date }}||{{ $holiday->end_date }}" type="checkbox" class="holiday_checkbox invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">{{ $holiday->holiday_name }}</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                    </div>
-                                                    @endforeach
-
-                                                </div>
-                                                <div id="expandToggleHoliday" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreHoliday">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
-                                            </div>
-
-                                            <hr>
-
-                                            <div class="filter-month">
-                                                <div class='filter-header'>
-                                                    <span class='filter-header-text'><i class="far fa-calendar-check"></i> เดือน</span>
-                                                </div>
-                                                <div id="filter-month">
-                                                    <div class="option-all">
-                                                        <label for="month_all" class="label-cbx">
-                                                            <input id="month_all" type="checkbox" class="invisible" checked>
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span>แสดงทั้งหมด</span>
-                                                        </label>
-                                                    </div>
-                                                    @foreach ($monthList as $month)
-                                                    <div class="option">
-                                                        @if ($month->m_month === 1)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">มกราคม</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 2)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">กุมภาพันธ์</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 3)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">มีนาคม</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 4)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">เมษายน</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 5)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">พฤษภาคม</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 6)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">มิถุนายน</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 7)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">กรกฎาคม</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 8)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">สิงหาคม</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 9)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">กันยายน</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 10)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">ตุลาคม</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 11)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">พฤศจิกายน</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @elseif ($month->m_month === 12)
-                                                        <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">ธันวาคม</span>
-                                                            <span class="count">({{$month->m_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                        @endif
-                                                    </div>
-                                                    @endforeach
-
-                                                </div>
-                                                <div id="expandToggleMonth" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreMonth">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
-                                            </div>
-
-                                            <hr>
-
-                                            <div class="filter-countdate">
-                                                <div class='filter-header'>
-                                                    <span class='filter-header-text'><i class="far fa-clock"></i> จำนวนวัน</span>
-                                                </div>
-                                                <div id="filter-countdate">
-                                                    <div class="option-all">
-                                                        <label for="day_all" class="label-cbx">
-                                                            <input id="day_all" type="checkbox" class="invisible" checked>
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span>แสดงทั้งหมด</span>
-                                                        </label>
-                                                    </div>
-                                                    @foreach ($dayList as $day)
-                                                    <div class="option">
-                                                        <label for="day_{{ $day->duration }}" class="label-cbx">
-                                                            <input id="day_{{ $day->duration }}" type="checkbox" class="invisible days_checkbox">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">{{ $day->duration }} วัน</span>
-                                                            <span class="count">({{$day->sum}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                    </div>
-                                                    @endforeach
-                                                </div>
-                                                <div id="expandToggleDates" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreDates">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
-                                            </div>
-
-                                            <hr>
-
-                                            <div class="filter-airline">
-                                                <div class='filter-header'>
-                                                    <span class='filter-header-text'><i class="far fa-paper-plane"></i> สายการบิน</span>
-                                                </div>
-                                                <div id="filter-airline">
-                                                    <div class="option-all">
-                                                        <label for="airline_all" class="label-cbx">
-                                                            <input id="airline_all" type="checkbox" class="invisible" checked>
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span>แสดงทั้งหมด</span>
-                                                        </label>
-                                                    </div>
-                                                    @foreach ($airlineList as $airline)
-                                                    <div class="option">
-                                                        <label for="airline_{{ $airline->a_id }}" class="label-cbx">
-                                                            <input id="airline_{{ $airline->a_id }}" type="checkbox" class="invisible airline_checkbox">
-                                                            <div class="checkbox">
-                                                                <svg width="20px" height="20px" viewBox="0 0 20 20">
-                                                                <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                                                <polyline points="4 11 8 15 16 6"></polyline>
-                                                                </svg>
-                                                            </div>
-                                                            <span class="name">{{ $airline->a_name }}</span>
-                                                            <span class="count">({{$airline->a_num}})</span>
-                                                            <span class="clear"></span>
-                                                        </label>
-                                                    </div>
-                                                    @endforeach
-
-                                                </div>
-                                                <div id="expandToggleAirline" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreAirline">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
-                                            </div>
-
-
-                                                                        end filter-bar                                                                           
-                                        </div>
-                                    </div>    
-                                </div>
-                                <div class="modal-footer" style="text-align:center;">
-                                    <button type="button" class="awe-btn cancel" data-dismiss="modal">เสร็จสิ้น</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>-->
+                                        </div>-->
 
                 </div>    
                 <br>
-                <div id="card_area" class="filter-item-wrapper">
+
+                <div id="card_area" class="card_show filter-item-wrapper">
                     <!-- ITEM -->
                     <div class="trip-item">
                         <div class="item-media">
@@ -897,7 +900,7 @@
                                     <a href="#" class="pagination-next"><i class="fa fa-caret-right"></i></a>
                                 </div>-->
 
-                <div class="row">
+                <div class="row card_show">
                     <div class="col-md-12">
                         <ul class="pagination" id="search_tour_pager"></ul>
                     </div>
@@ -909,126 +912,32 @@
         <!--                    bar ซ้าย-->
         <div class="col-md-3 col-md-pull-6">
             <div class="page-sidebar">
-                <div class="sidebar-title hidden-xs">
-                    <h3>ทัวร์ขายดี :</h3>
-                    <!--                                <div class="clear-filter">
-                                                        <a href="#">Clear all</a>
-                                                    </div>-->
-                </div>
-                <div class="left-bar1">
-                    <div class="box-content hidden-xs">
-                        <div class="tour-left-bar-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="" title="">
-                                        <img class="media-object lazy" src="https://images.unsplash.com/photo-1519882189396-71f93cb4714b?ixlib=rb-0.3.5&s=0b977d67f187eec17eb555555ef59a6d&auto=format&fit=crop&w=500&q=60" 
-                                             alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="media-heading">
-                                        <a href="" title="">ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการ...</a>
-                                    </h6>
-                                    <div class="peroid">เริ่มเดินทาง 21 มิ.ย. 61</div>
-                                    <div class="price"><span>14,900</span> บาท</div>
-                                </div>                                        
-                            </div>
-                        </div>
-
-                        <div class="tour-left-bar-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="" title="">
-                                        <img class="media-object lazy" src="{{ asset('images/tour/1-tour6.jpg')}}" 
-                                             alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="media-heading">
-                                        <a href="" title="">ทัวร์ญี่ปุ่น ออนเซน ภูเขาไฟฟูจิ ชมดอกไม้บาน...</a>
-                                    </h6>
-                                    <div class="peroid">เริ่มเดินทาง 10 ต.ค. 61</div>
-                                    <div class="price"><span>20,900</span> บาท</div>
-                                </div>                                        
-                            </div>
-                        </div>
-
-                        <div class="tour-left-bar-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="" title="">
-                                        <img class="media-object lazy" src="{{ asset('images/tour/1-tour1.jpg')}}" 
-                                             alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="media-heading">
-                                        <a href="" title="">ทัวร์ญี่ปุ่น วัดฟุกุสึ เที่ยวชมซากุระบาน...</a>
-                                    </h6>
-                                    <div class="peroid">เริ่มเดินทาง 30 ธ.ค. 61</div>
-                                    <div class="price"><span>48,000</span> บาท</div>
-                                </div>                                        
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="sidebar-title hidden-xs">
-                    <h3>ทัวร์แนะนำ :</h3>         
-                </div>
-                <div class="left-bar2">
-                    <div class="box-content hidden-xs">
-                        <div class="swiper-wrapper tour-local-nav" style="transform: translate3d(0px, 0px, 0px);">
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่นราคาถูก</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์โตเกียว</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
-                            </div>                                   
-                        </div> 
-                    </div>
-                </div>    
-
                 <div class="sidebar-title hidden-xs filter-tittle">
                     <h3><i class="fas fa-filter"></i> คัดกรอง :</h3>      
                 </div>         
 
                 <div class="left-bar3 mobile-version hidden-xs">
                     <div class="box-content">
-                        <div class="filter-bar">    
+                        <div class="filter-bar">
+                            <div class="filter-text">
+                                <div class='filter-header'>
+                                    <span class='filter-header-text'><i class="fa fa-comments"></i> ค้นหา</span>
+                                </div>
+                                <div class="input-group">
+                                    <input id="search_text" type="text" class="form-control" placeholder="ค้าหาชื่อแพ็คเกจทัวร์">
+                                    <span class="input-group-btn">
+                                        <button id="search_btn" class="btn btn-danger" type="button" style="height: 40px;"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <hr>
+
                             <div class="filter-price">
                                 <div class='filter-header'>
                                     <span class='filter-header-text'><i class="fas fa-exchange-alt"></i> กำหนดช่วงราคา</span>
                                 </div>     
-                                <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to">80,000</span> บาท</div>
+                                <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to"></span> บาท</div>
                                 <input id="price" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
                             </div>
 
@@ -1079,7 +988,7 @@
                                 </div>
                                 <div class='filter-pickdate'>
                                     <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
-                                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    <i id="clear_calendar" class="fa fa-calendar-times"></i>
                                 </div>
                                 <!--            เว้นไว้ใส่ปฎิทิน-->
                                 <div id="filter-date">
@@ -1151,7 +1060,7 @@
                                         </label>
                                         @elseif ($month->m_month === 2)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1164,7 +1073,7 @@
                                         </label>
                                         @elseif ($month->m_month === 3)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1177,7 +1086,7 @@
                                         </label>
                                         @elseif ($month->m_month === 4)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1190,7 +1099,7 @@
                                         </label>
                                         @elseif ($month->m_month === 5)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1203,7 +1112,7 @@
                                         </label>
                                         @elseif ($month->m_month === 6)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1216,7 +1125,7 @@
                                         </label>
                                         @elseif ($month->m_month === 7)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1229,7 +1138,7 @@
                                         </label>
                                         @elseif ($month->m_month === 8)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1242,7 +1151,7 @@
                                         </label>
                                         @elseif ($month->m_month === 9)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1255,7 +1164,7 @@
                                         </label>
                                         @elseif ($month->m_month === 10)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1268,7 +1177,7 @@
                                         </label>
                                         @elseif ($month->m_month === 11)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1281,7 +1190,7 @@
                                         </label>
                                         @elseif ($month->m_month === 12)
                                         <label for="month_{{ $month->m_month }}" class="label-cbx">
-                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible">
+                                            <input id="month_{{ $month->m_month }}" value="{{ $month->m_month }}" type="checkbox" class="invisible month_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1322,7 +1231,7 @@
                                     @foreach ($dayList as $day)
                                     <div class="option">
                                         <label for="day_{{ $day->duration }}" class="label-cbx">
-                                            <input id="day_{{ $day->duration }}" type="checkbox" class="invisible days_checkbox">
+                                            <input id="day_{{ $day->duration }}" value="{{ $day->duration }}" type="checkbox" class="invisible days_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1361,7 +1270,7 @@
                                     @foreach ($airlineList as $airline)
                                     <div class="option">
                                         <label for="airline_{{ $airline->a_id }}" class="label-cbx">
-                                            <input id="airline_{{ $airline->a_id }}" type="checkbox" class="invisible airline_checkbox">
+                                            <input id="airline_{{ $airline->a_id }}" value="{{ $airline->a_name }}" type="checkbox" class="invisible airline_checkbox">
                                             <div class="checkbox">
                                                 <svg width="20px" height="20px" viewBox="0 0 20 20">
                                                 <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
@@ -1384,6 +1293,112 @@
                         </div>
                     </div> 
                 </div>
+
+                <!--                <div class="sidebar-title hidden-xs">
+                                    <h3>ทัวร์ขายดี :</h3>
+                                </div>
+                                <div class="left-bar1">
+                                    <div class="box-content hidden-xs">
+                                        <div class="tour-left-bar-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="" title="">
+                                                        <img class="media-object lazy" src="https://images.unsplash.com/photo-1519882189396-71f93cb4714b?ixlib=rb-0.3.5&s=0b977d67f187eec17eb555555ef59a6d&auto=format&fit=crop&w=500&q=60" 
+                                                             alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">
+                                                        <a href="" title="">ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการ...</a>
+                                                    </h6>
+                                                    <div class="peroid">เริ่มเดินทาง 21 มิ.ย. 61</div>
+                                                    <div class="price"><span>14,900</span> บาท</div>
+                                                </div>                                        
+                                            </div>
+                                        </div>
+                
+                                        <div class="tour-left-bar-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="" title="">
+                                                        <img class="media-object lazy" src="{{ asset('images/tour/1-tour6.jpg')}}" 
+                                                             alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">
+                                                        <a href="" title="">ทัวร์ญี่ปุ่น ออนเซน ภูเขาไฟฟูจิ ชมดอกไม้บาน...</a>
+                                                    </h6>
+                                                    <div class="peroid">เริ่มเดินทาง 10 ต.ค. 61</div>
+                                                    <div class="price"><span>20,900</span> บาท</div>
+                                                </div>                                        
+                                            </div>
+                                        </div>
+                
+                                        <div class="tour-left-bar-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="" title="">
+                                                        <img class="media-object lazy" src="{{ asset('images/tour/1-tour1.jpg')}}" 
+                                                             alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">
+                                                        <a href="" title="">ทัวร์ญี่ปุ่น วัดฟุกุสึ เที่ยวชมซากุระบาน...</a>
+                                                    </h6>
+                                                    <div class="peroid">เริ่มเดินทาง 30 ธ.ค. 61</div>
+                                                    <div class="price"><span>48,000</span> บาท</div>
+                                                </div>                                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+
+                <div class="sidebar-title hidden-xs">
+                    <h3>ทัวร์แนะนำ :</h3>         
+                </div>
+                <div class="left-bar2">
+                    <div class="box-content hidden-xs">
+                        <div class="swiper-wrapper tour-local-nav" style="transform: translate3d(0px, 0px, 0px);">
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่นราคาถูก</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์โตเกียว</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
+                            </div>                                   
+                        </div> 
+                    </div>
+                </div>    
+
+
             </div>
         </div>
 
@@ -1487,8 +1502,8 @@
         var test = <?php echo json_encode($dayList); ?>;
         console.log(test);
     });
+    var price_most = <?php echo json_encode($price_most); ?>;
 </script>
 <script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
 @endsection

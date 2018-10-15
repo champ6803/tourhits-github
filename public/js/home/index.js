@@ -1,4 +1,5 @@
 $(function () {
+    $('#home').addClass('menu-active');
     renderTourPackage(tourHitsPackageActiveList, tourHitPeriodActive, "card_area_hit");
     renderTourPackage(tourSalesPackageActiveList, tourSalesPeriodActive, "card_area_sale");
 });
@@ -12,7 +13,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             var div = '<div class="col-sm-6 col-md-6 col-lg-3" align="center">';
             div = div + '<div class="thumbnail card--content">';
             div = div + '<a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">';
-            div = div + '<div class="tour-cover lazyloaded" data-bg="'+ rootPath + '/tour/' + val['tour_package_image'] + '" style="background-image: url(&quot;' + rootPath + '/tour/' + val['tour_package_image'] + '&quot;);">';
+            div = div + '<div class="tour-cover lazyloaded" data-bg="' + rootPath + '/tour/' + val['tour_package_image'] + '" style="background-image: url(&quot;' + rootPath + '/tour/' + val['tour_package_image'] + '&quot;);">';
             div = div + '<div class="tour-footer">';
             div = div + '<div class="pull-left">';
             div = div + '<span class="flag">';
@@ -81,7 +82,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
                     var date = as2[0] + " " + setCTMonthString(as[1]) + " - " + ae2[0] + " " + setCTMonthString(ae[1]) + " " + ae[0];
 
                     div = div + '<tr><td>' + date + '</td>';
-                    if(this.tour_period_adult_special_price > 0){
+                    if (this.tour_period_adult_special_price > 0) {
                         div = div + '<td style="text-align:right"><strike>' + numberWithCommas(valPrice['tour_period_adult_price']) + '฿</strike></td>';
                         div = div + '<td style="text-align:right">' + numberWithCommas(valPrice['tour_period_adult_special_price']) + '฿</td></tr>';
                     } else {

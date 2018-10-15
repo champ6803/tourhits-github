@@ -91,8 +91,12 @@ session_start();
                         <nav class="navigation awe-navigation" data-responsive="1200">
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
-                                    <a>แพ็คเกจทัวร์</a>
-                                    <hr id="indx" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <a href="{{ url('/')}}"><i class="fa fa-home"></i>&nbsp;หน้าแรก</a>
+                                    <hr id="home" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a><i class="fa fa-folder"></i>&nbsp;แพ็คเกจทัวร์</a>
+                                    <hr id="package_tour" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                     <ul class="col-md-12 sub-menu">
                                         <div class="col-md-4 cat-asian cat-line">
                                             <!--                                        เอเชีย-->
@@ -101,12 +105,12 @@ session_start();
                                             </div>
                                             <div class="row">
                                                 <div class="col-xs-6 col-md-6">
-                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ญี่ปุ่น?country=1')}}">
+                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์ญี่ปุ่น?country=ทัวร์ญี่ปุ่น')}}">
                                                             <img data-src="../images/flags/Japan.png" alt="ทัวร์ญี่ปุ่น" class=" lazyloaded" src="{{ asset('/images/flags/Japan.png') }}">
                                                             <h5>ญี่ปุ่น</h5></a>
                                                     </div></div>
                                                 <div class="col-xs-6 col-md-6">
-                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์จีน?country=2')}}">
+                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์จีน?country=ทัวร์จีน')}}">
                                                             <img data-src="../images/flags/China.png" alt="ทัวร์จีน" class=" lazyloaded" src="{{ asset('/images/flags/China.png')}}">
                                                             <h5>จีน</h5></a>
                                                     </div>
@@ -459,23 +463,24 @@ session_start();
                                                                         <hr id="indx" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">-->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('tourhot')}}">ทัวร์มาแรง</a>
+                                    <a href="{{ url('tourhot')}}"><i class="fa fa-star"></i>&nbsp;ทัวร์มาแรง</a>
                                     <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('hothits') }}">สถานที่ยอดฮิต</a>
+                                    <a href="{{ url('hothits') }}"><i class="fa fa-map-marker"></i>&nbsp;สถานที่ยอดฮิต</a>
                                     <hr id="hothits" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('about') }}">เกี่ยวกับเรา</a>
+                                    <a href="{{ url('about') }}"><i class="fa fa-info"></i>&nbsp;เกี่ยวกับเรา</a>
                                     <hr id="about" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('contact') }}">ติดต่อเรา</a>
+                                    <a href="{{ url('contact') }}"><i class="fa fa-phone-square"></i>&nbsp;ติดต่อเรา</a>
                                     <hr id="contact" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('blog') }}">บทความ</a>
+                                    <a><i class="fa fa-square"></i>&nbsp;บทความ</a>
+                                    <!--<a href="{{ url('blog') }}">บทความ</a>-->
                                     <hr id="blog" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <!--                                <li class="menu-item-has-children">
@@ -491,16 +496,15 @@ session_start();
                         <!-- SEARCH BOX -->
                         <div class="search-box">
                             <span class="searchtoggle"><i class="fas fa-user"></i></span>
-
                             <form class="form-search">
                                 <div class="form-item">
                                     @if(!isset($_SESSION['m_user']))
                                     <input type="hidden" name="_token" id="m_user" value="">
-                                    <div>
-                                        <a href="{{ url('login')}}">เข้าสู่ระบบ</a>
+                                    <div class="sub-item">
+                                        <a href="{{ url('login')}}"><i class="fa fa-unlock-alt"></i>&nbsp;เข้าสู่ระบบ</a>
                                     </div>
-                                    <div>
-                                        <a href="{{ url('register')}}">สมัครสมาชิก</a>
+                                    <div class="sub-item">
+                                        <a href="{{ url('register')}}"><i class="fa fa-user-plus"></i>&nbsp;สมัครสมาชิก</a>
                                     </div>
                                     @else
                                     <?php

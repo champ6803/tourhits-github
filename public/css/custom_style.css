@@ -4429,7 +4429,7 @@ Custom BS3
 .search-empty{
     margin-top: 100px;
     text-align: center;
-
+    font-size: 30px;
 }
 
 .register-section .panel-register{
@@ -5849,8 +5849,16 @@ https://flickity.metafizzy.co
         /* half-width cells for larger devices */
         .gallery-cell { width: 50%; } 
     }
-    
+}
 
+.menu-item-has-children i {
+    color: #f15f3c;
+}
 
+.sub-item i {
+    color: #f15f3c;
+}
 
-
+.searchtoggle i {
+    color: #f15f3c;
+}

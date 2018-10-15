@@ -208,7 +208,7 @@ class Tour_Package extends Model {
     public function getFilterHoliday() {
         try {
             $date = \Carbon\Carbon::now();
-            return Holiday::where('start_date', '<=', $date)
+            return Holiday::where('start_date', '>=', $date)
                             ->get();
         } catch (\Exception $e) {
             return $e;
@@ -217,11 +217,12 @@ class Tour_Package extends Model {
 
     public function getFilterMonth($country) {
         try {
-            return Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
-                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                            ->select(DB::raw('COUNT(*) as m_num, month(tour_period.tour_period_start) as m_month'))
+            $date = \Carbon\Carbon::now();
+            return Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                            ->select(DB::raw('COUNT(*) as m_num, month(tour_package.tour_package_period_start) as m_month'))
                             ->groupBy('m_month')
                             ->where('tour_country.tour_country_name', $country)
+                            ->where('tour_package.tour_package_period_start', '>=', $date)
                             ->get();
         } catch (\Exception $e) {
             return $e;
@@ -239,6 +240,7 @@ class Tour_Package extends Model {
             return Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                             ->select(DB::raw('COUNT(*) as sum, tour_package.tour_period_day_number as duration'))
                             ->groupBy('tour_package.tour_period_day_number')
+                            ->where('tour_country.tour_country_name', $country)
                             ->get();
         } catch (\Exception $e) {
             return $e;
@@ -339,6 +341,15 @@ class Tour_Package extends Model {
                     ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.*,tour_country.tour_country_name'))
                     ->get();
             return $tourPackageList;
+        } catch (\Exception $ex) {
+            throw $ex;
+        }
+    }
+    
+    public function getMostPrice() {
+        try {
+            $price = Tour_Package::max('tour_package_price');
+            return $price;
         } catch (\Exception $ex) {
             throw $ex;
         }

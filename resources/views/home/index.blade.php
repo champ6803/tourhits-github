@@ -1659,10 +1659,6 @@
     var tourHitPeriodActive = <?php echo json_encode($tourHitPeriodActive); ?>;
     var tourSalesPackageActiveList = <?php echo json_encode($tourSalesPackageActiveList); ?>;
     var tourSalesPeriodActive = <?php echo json_encode($tourSalesPeriodActive); ?>;
-    $(function () {
-        $('#indx').addClass('menu-active');
-    });
-
     var rootPath = '{{asset("/images/")}}';
 </script>
 
