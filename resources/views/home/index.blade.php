@@ -135,7 +135,7 @@
                                 <div class="form-item">
                                     <i class="fas fa-search awe-icon"></i>
 <!--                                    <i class="awe-icon awe-icon-marker-1"></i>-->
-                                    <input class="form-control" type="text" value="สถานที่ท่องเที่ยว, ประเทศ">
+                                    <input class="form-control" type="text" value="ชื่อแพ็คเกจทัวร์ รหัสทัวร์">
                                 </div>
                             </div>
                             <!--                            <div class="form-elements">
@@ -144,6 +144,21 @@
                                                                 <input type="text" value="Ankara, Turkey">
                                                             </div>
                                                         </div>-->
+                        </div>
+                        <div class="form-group">
+                            <div class="form-elements">
+                                <div class="form-item">
+                                    <select class="form-control">
+                                        <option val="ทัวร์ญี่ปุ่น">ญี่ปุ่น</option>
+                                        <option val="ทัวร์จีน">จีน</option>
+                                        <option val="3">3</option>
+                                        <option val="4">4</option>
+                                        <option val="5">5</option>
+                                        <option val="6">6</option>
+                                        <option val="7">7</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="form-elements">
@@ -159,14 +174,13 @@
                             <div class="form-elements days">
                                 <div class="form-item">
                                     <select class="form-control">
-                                        <option val="0">จำนวนวัน</option>
-                                        <option val="1">1</option>
-                                        <option val="2">2</option>
-                                        <option val="3">3</option>
-                                        <option val="4">4</option>
-                                        <option val="5">5</option>
-                                        <option val="6">6</option>
-                                        <option val="7">7</option>
+                                        <option val="1">1 วัน</option>
+                                        <option selected val="2">2 วัน</option>
+                                        <option val="3">3 วัน</option>
+                                        <option val="4">4 วัน</option>
+                                        <option val="5">5 วัน</option>
+                                        <option val="6">6 วัน</option>
+                                        <option val="7">7 วัน</option>
                                     </select>
                                 </div>
                             </div>
