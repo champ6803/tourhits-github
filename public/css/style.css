@@ -1642,8 +1642,8 @@ span.dropcap {
 
 .awe-search-tabs__content {
     background: #fff;
-    padding: 20px;
-    margin-bottom: -2px;
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 20px;
 }
 .awe-search-tabs__content .ui-tabs-panel {
     padding: 0;
@@ -1664,17 +1664,18 @@ span.dropcap {
 .awe-search-tabs__content .ui-tabs-panel select,
 .awe-search-tabs__content .ui-tabs-panel input {
 /*    border: 1px solid #d4d4d4;*/
+    display: inline-block;
     font-weight: 400;
     color: #666;
     height: 60px;
-    line-height: 36px;
+    line-height: 1.6;
     width: 100%;
     
     box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);
     border: none;
     text-overflow: ellipsis;
     cursor: pointer;
-    border-radius: 4px;
+/*    border-radius: 4px;*/
     background-color: #fff;
     font-size: 23px;
 }
@@ -1691,12 +1692,12 @@ span.dropcap {
     padding-right: 64px;
 }
 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2) {
-    width: 36.5%;
-    padding-right: 100px;
+/*    width: 36.5%;
+    padding-right: 100px;*/
 }
 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2) .form-elements {
-    width: 50%;
-    float: left;
+/*    width: 50%;
+    float: left;*/
 }
 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2) .form-elements:nth-child(odd) {
     padding-right: 15px;
@@ -1744,7 +1745,7 @@ span.dropcap {
     right: 1px;
 }
 .awe-search-tabs__content .ui-tabs-panel .form-actions {
-    width: 12.2%;
+    width: 32%;
     float: left;
     margin-top: 55px;
 }
@@ -1795,7 +1796,9 @@ span.dropcap {
 .awe-search-tabs-2 .awe-search-tabs__content {
     background: none;
 /*    background-color: rgba(0, 0, 0, 0.8);*/
-    background-color: rgba(249, 166, 124, 0.8);
+    background-color: rgba(249, 166, 124, 1);
+/*    background-color: rgba(227, 220, 221, 0.88);*/
+/*    background-color: rgba(249, 166, 124, 0);*/
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -1841,18 +1844,19 @@ span.dropcap {
     margin: 0;
 }
 .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) {
-    width: 40%;
-    padding-right: 0;
+    width: 80%;
+    padding-right: 11px;
 }
 .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements {
-    /*width: calc(50% - 30px);*/
-    width: 90%;
+/*    width: calc(50% - 30px);*/
+    width: 100%;
     float: left;
-    margin-right: 100px;
+    margin-right: 5px;
 }
 .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2) {
-    width: 30%;
-    padding-right: 18px;
+    width: 20%;
+/*    padding-right: 18px;*/
+/*    padding-right: 10px!important;*/
 }
 .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2) .form-elements:nth-child(odd) {
     padding-right: 1px;
@@ -1861,9 +1865,15 @@ span.dropcap {
     padding-left: 1px;
 }
 .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(3) {
-    width: 16.5%;
-    padding-right: 18px;
+    width: 50%;
+    padding-right: 11px;
 }
+
+.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(4) {
+    width: 15%;
+    margin-right: 22px;
+}
+
 .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel.search-hotel .form-group:nth-child(1) {
     padding-right: 30px;
 }
@@ -9351,7 +9361,7 @@ select {
     }
 
     .awe-search-tabs__content .ui-tabs-panel .form-actions {
-        width: 17.4%;
+        width: 36.4%;
     }
 
     .awe-search-tabs-2 {
@@ -9514,8 +9524,8 @@ select {
 
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) {
 /*        width: 38%;*/
-        width: 102%;
-        padding-right: 0;
+        width: 70%;
+        padding-right: 11px;
     }
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements {
 /*        width: calc(50% - 15px);*/
@@ -9526,7 +9536,7 @@ select {
     
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2) {
 /*        width: 30%;*/
-        width: 50%;
+        width: 30%;
         padding-right: 10px;
     }
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2) .form-elements:nth-child(odd) {
@@ -9537,9 +9547,14 @@ select {
     }
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(3) {
 /*        width: 14%;*/
-        width: 25%;
+        width: 45%;
         padding-right: 10px;
-        padding-bottom: 12px;
+        
+    }
+    
+    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(4){
+    width: 15%;
+    margin-right: 22px;
     }
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel.search-hotel .form-group:nth-child(1) {
         padding-right: 30px;

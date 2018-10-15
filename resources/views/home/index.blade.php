@@ -23,12 +23,12 @@
     .hothits-item{
         width: 100% !important;
     }
-
+    .search-box-index input{border-radius: 50px;}
     .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input{display: inline-block; border-radius: 4px; background-color: #44484a; box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); font-size: 26px; transition: all 1s ease;}
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input:hover{background-color: #373a3c; box-shadow: 0 0px 5px 0px rgba(0,0,0,.8);}
+    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search {display:block; border-radius: 4px; background-color: #488bf8; box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); font-size: 26px; color: #fff ; padding: 11px 8px; transition: all .5s ease;}
+    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search:hover{opacity: 0.8;}
 
     @media screen and ( max-width: 958px ) {
         .package-hit-title h1{font-size: 27px;}
@@ -36,7 +36,7 @@
         .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
 
         .awe-search-tabs__content .ui-tabs-panel input{font-size: 19px; font-weight: bold;}
-        .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search input{font-size: 23px;}
+        .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 23px; width:100%;}
         .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 23px;}
     }
 
@@ -132,7 +132,7 @@
                     <form>
                         <div class="form-group">
                             <div class="form-elements">
-                                <div class="form-item">
+                                <div class="form-item search-box-index">
                                     <i class="fas fa-search awe-icon"></i>
 <!--                                    <i class="awe-icon awe-icon-marker-1"></i>-->
                                     <input id="search_text" class="form-control" type="text" placeholder="ชื่อแพ็คเกจทัวร์ รหัสทัวร์" value="">
@@ -185,8 +185,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-actions btn-search">
-                            <a id="search_tour" class="btn btn-default" >ค้นหา</a>
+                        <div class="form-actions">
+                            <a id="search_tour" class="btn btn-search">ค้นหา</a>
                         </div>
                     </form>
                 </div>
