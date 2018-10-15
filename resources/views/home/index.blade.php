@@ -135,7 +135,7 @@
                                 <div class="form-item">
                                     <i class="fas fa-search awe-icon"></i>
 <!--                                    <i class="awe-icon awe-icon-marker-1"></i>-->
-                                    <input class="form-control" type="text" value="ชื่อแพ็คเกจทัวร์ รหัสทัวร์">
+                                    <input id="search_text" class="form-control" type="text" placeholder="ชื่อแพ็คเกจทัวร์ รหัสทัวร์" value="">
                                 </div>
                             </div>
                             <!--                            <div class="form-elements">
@@ -148,14 +148,14 @@
                         <div class="form-group">
                             <div class="form-elements">
                                 <div class="form-item">
-                                    <select class="form-control">
-                                        <option val="ทัวร์ญี่ปุ่น">ญี่ปุ่น</option>
-                                        <option val="ทัวร์จีน">จีน</option>
-                                        <option val="3">3</option>
-                                        <option val="4">4</option>
-                                        <option val="5">5</option>
-                                        <option val="6">6</option>
-                                        <option val="7">7</option>
+                                    <select id="country_dropdown" class="form-control">
+                                        <option value="ทัวร์ญี่ปุ่น">ญี่ปุ่น</option>
+                                        <option value="ทัวร์จีน">จีน</option>
+                                        <option value="ทัวร์เกาหลี">เกาหลี</option>
+                                        <option value="ทัวร์เวียดนาม">เวียดนาม</option>
+                                        <option value="ทัวร์ยุโรป">ยุโรป</option>
+                                        <option value="ทัวร์พม่า">พม่า</option>
+                                        <option value="ทัวร์ฮ่องกง">ฮ่องกง</option>
                                     </select>
                                 </div>
                             </div>
@@ -173,20 +173,20 @@
                         <div class="form-group">
                             <div class="form-elements days">
                                 <div class="form-item">
-                                    <select class="form-control">
-                                        <option val="1">1 วัน</option>
-                                        <option selected val="2">2 วัน</option>
-                                        <option val="3">3 วัน</option>
-                                        <option val="4">4 วัน</option>
-                                        <option val="5">5 วัน</option>
-                                        <option val="6">6 วัน</option>
-                                        <option val="7">7 วัน</option>
+                                    <select id="days_dropdown" class="form-control">
+                                        <option value="1">1 วัน</option>
+                                        <option selected value="2">2 วัน</option>
+                                        <option value="3">3 วัน</option>
+                                        <option value="4">4 วัน</option>
+                                        <option value="5">5 วัน</option>
+                                        <option value="6">6 วัน</option>
+                                        <option value="7">7 วัน</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="form-actions btn-search">
-                            <input class="form-control" type="submit" value="ค้นหา">
+                            <a id="search_tour" class="btn btn-default" >ค้นหา</a>
                         </div>
                     </form>
                 </div>

@@ -9,6 +9,19 @@ $(function () {
             "format": 'DD/MM/YYYY',
         }
     });
+
+    $('#search_tour').click(function () {
+        var search = $('#search_text').val();
+        var country_dropdown = $('#country_dropdown').val();
+        var date_picker = $('#date_picker').val();
+        var date_split = date_picker.split(" - ");
+        var date_period = date_split[0] + "," + date_split[1];
+        var days_dropdown = $('#days_dropdown option:selected').val();
+        var url = "search-tour/" + country_dropdown + "/?country=" + country_dropdown + "?date_picker=" + date_period + "?search=" + search + "?days_dropdown=" + days_dropdown;
+        //window.location.href = "search-tour";
+        location.href = "/search-tour";
+        //window.open("search-tour");
+    });
 });
 
 function renderTourPackage(tourPackageList, tourPeriod, selection) {
