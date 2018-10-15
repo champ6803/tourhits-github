@@ -1,8 +1,5 @@
 $(function () {
     $('#package_tour').addClass('menu-active');
-    $('#package_country_image').hide();
-    $('#sorting').hide();
-    $('#loading').hide();
     $('#date_picker').daterangepicker({
         "autoApply": true,
         "opens": "center",
@@ -56,7 +53,7 @@ $(function () {
         end_date = "";
         getTourPackage();
     });
-    $('#price_to').text(numberWithCommas(price_most - 2000));
+    $('#price_to').text(numberWithCommas(50000));
 });
 
 var search_text = "";
@@ -356,7 +353,7 @@ function checkboxChecked() {
             $('#loading').show();
             $('.card_show').hide();
             ary_month = [];
-            $('.month_checkbox').prop('checked', false);
+            $('.days_checkbox').prop('checked', false);
             getTourPackage();
         }
     });

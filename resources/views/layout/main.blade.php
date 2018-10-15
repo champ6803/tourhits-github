@@ -60,7 +60,7 @@ session_start();
         <!-- PAGE WRAP -->
         <div id="page-wrap">
             <!-- PRELOADER -->
-            <div class="preloader"></div>
+            <!--<div class="preloader"></div>-->
             <!-- END / PRELOADER -->
 
             @if(!isset($_SESSION['role']))
