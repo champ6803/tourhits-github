@@ -17,8 +17,24 @@ $(function () {
 
     $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
 
+    search_text = getUrlParameter('search') == undefined ? "" : getUrlParameter('search');
+    start_date = getUrlParameter('start_date') == undefined ? "" : getUrlParameter('start_date');
+    end_date = getUrlParameter('end_date') == undefined ? "" : getUrlParameter('end_date');
+    var days_no = getUrlParameter('days') == undefined ? [] : getUrlParameter('days');
+    ary_days = days_no == "" ? [] : [days_no];
     getTourPackage(); // init package tour card
     checkboxChecked();
+
+    if (ary_days.length > 0) {
+        $('#day_all').prop('checked', false);
+        $('#day_' + days_no).prop('checked', true);
+    }
+    if (start_date && end_date) {
+        $('#date_picker').val(changeFormateDate(start_date) + " - " + changeFormateDate(end_date));
+    }
+    if (search_text) {
+        $('#search_text').val(search_text);
+    }
 
     expandCheckboxRoute();
     expandCheckboxAirline();
@@ -54,6 +70,9 @@ $(function () {
         getTourPackage();
     });
     $('#price_to').text(numberWithCommas(50000));
+
+
+
 });
 
 var search_text = "";
@@ -243,8 +262,8 @@ function getTourPackage() {
                 '_tags': JSON.stringify(ary_tags),
                 '_attraction': JSON.stringify(ary_attraction),
                 '_others': JSON.stringify(ary_others),
-                '_price_from': price_from,
-                '_price_to': price_to
+                '_price_from': "",
+                '_price_to': ""
             },
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -352,7 +371,7 @@ function checkboxChecked() {
         if ($('#day_all').is(':checked')) {
             $('#loading').show();
             $('.card_show').hide();
-            ary_month = [];
+            ary_days = [];
             $('.days_checkbox').prop('checked', false);
             getTourPackage();
         }

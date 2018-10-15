@@ -319,7 +319,7 @@ class FilterController extends Controller {
                 }
                 $tourPeriod = Tour_Period::whereIn('tour_package_id', $array)
                         ->get();
-                // กรีณีมาจากหน้าแรก
+                // กรีณีมาจากหน้าแรก 1
             } else if (!count($route) > 0 && !empty($start_date) && !empty($end_date) && !count($month) > 0 && (count($days) > 0) && !(count($airline) > 0) && !(count($tags) > 0) && !(count($attraction) > 0) && !(count($others) > 0) && !empty($search_text)) {
                 $tourPackageList = Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
                         ->join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
@@ -336,6 +336,28 @@ class FilterController extends Controller {
                             $query->where('tour_package.tour_package_id', 'like', '%' . $search_text . '%')
                             ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
                         })
+                        ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_name'))
+                        ->orderBy('tour_package.tour_package_price', 'asc')
+                        ->get();
+                $array = array();
+                foreach ($tourPackageList as $tour) {
+                    array_push($array, $tour->tour_package_id);
+                }
+                $tourPeriod = Tour_Period::whereIn('tour_package_id', $array)
+                        ->get();
+                // กรีณีมาจากหน้าแรก 2
+            } else if (!count($route) > 0 && !empty($start_date) && !empty($end_date) && !count($month) > 0 && (count($days) > 0) && !(count($airline) > 0) && !(count($tags) > 0) && !(count($attraction) > 0) && !(count($others) > 0) && empty($search_text)) {
+                $tourPackageList = Tour_Package::join('tour_period', 'tour_period.tour_package_id', '=', 'tour_package.tour_package_id')
+                        ->join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
+                        ->join('route', 'route.route_id', '=', 'tour_route.route_id')
+                        ->join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
+                        ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
+                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                        ->join('country', 'country.country_id', '=', 'tour_country.country_id')
+                        ->where('tour_country.tour_country_name', $country)
+                        ->where('tour_period.tour_period_start', '>=', $start_date)
+                        ->where('tour_period.tour_period_end', '<=', $end_date)
+                        ->whereIn('tour_package.tour_period_day_number', $days)
                         ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_name'))
                         ->orderBy('tour_package.tour_package_price', 'asc')
                         ->get();
