@@ -117,7 +117,7 @@
 <!-- END / HERO SECTION -->
 
 <!-- SEARCH TABS -->
-<!--<section>
+<section>
     <div class="container search-container">
         <div class="awe-search-tabs-2 tabs">            
             <ul>
@@ -193,7 +193,7 @@
             </div>
         </div>
     </div>
-</section>-->
+</section>
 <!-- END / SEARCH TABS -->
 
 <!-- MASONRY -->
