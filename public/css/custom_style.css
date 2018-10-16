@@ -157,6 +157,7 @@
 
 .nav-tabs > li > a {
     /*    padding-top: 20px;*/
+    font-family: 'Kanit', sans-serif;
     padding-bottom: 8px;
     color: #9B9999;
     /*line-height: 20px;*/
@@ -205,9 +206,10 @@
 
 .card-detail .country-name{
     /*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
+    font-family: 'Kanit', sans-serif;
     padding-top: 8px;
     color: #8d8d8d;
-    font-weight: bold;
+/*    font-weight: bold;*/
     font-size: 17px;
 }
 
@@ -223,9 +225,10 @@
 .card-detail .hilight{
     /*    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
     /*    color: #8d8d8d;*/
+    font-family: 'Kanit', sans-serif;
     color:gray;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 15px;
+
 }
 
 .card-detail .hilight i{
@@ -5853,7 +5856,7 @@ https://flickity.metafizzy.co
 }
 
 .menu-item-has-children i {
-    color: #f15f3c;
+    color: #ed5565;
 }
 
 .sub-item i {
@@ -5861,7 +5864,7 @@ https://flickity.metafizzy.co
 }
 
 .searchtoggle i {
-    color: #f15f3c;
+    color: #ed5565;
 }
 
 .daterangepicker.dropdown-menu {
