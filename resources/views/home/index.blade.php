@@ -138,12 +138,6 @@
                                     <input id="search_text" class="form-control" type="text" placeholder="ชื่อแพ็คเกจทัวร์ รหัสทัวร์" value="">
                                 </div>
                             </div>
-                                                        <div class="form-elements">
-                                                            <div class="form-item">
-                                                                <i class="awe-icon awe-icon-marker-1"></i>
-                                                                <input type="text" value="Ankara, Turkey">
-                                                            </div>
-                                                        </div>
                         </div>
                         <div class="form-group">
                             <div class="form-elements">
@@ -166,7 +160,6 @@
                                     <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
                                     <i class="far fa-calendar-check awe-icon"></i>
                                     <i class="awe-icon awe-icon-calendar"></i>
-                                    <input type="text" class="form-control awe-calendar" value="เริ่มต้น">
                                 </div>
                             </div>
                         </div>
