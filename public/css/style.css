@@ -9549,12 +9549,14 @@ select {
 /*        width: 14%;*/
         width: 45%;
         padding-right: 10px;
-        
+        padding-bottom: 10px;
     }
     
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(4){
     width: 15%;
     margin-right: 22px;
+            padding-bottom: 10px;
+
     }
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel.search-hotel .form-group:nth-child(1) {
         padding-right: 30px;
