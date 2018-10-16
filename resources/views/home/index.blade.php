@@ -24,6 +24,7 @@
         width: 100% !important;
     }
     
+    
     .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
@@ -134,7 +135,7 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <i class="fas fa-search awe-icon"></i>
-                                    <i class="awe-icon awe-icon-marker-1"></i>
+                                    <i class="fas fa-search awe-icon"></i>
                                     <input id="search_text" class="form-control" type="text" placeholder="ชื่อแพ็คเกจทัวร์ รหัสทัวร์" value="">
                                 </div>
                             </div>
@@ -159,7 +160,7 @@
                                 <div class="form-item">
                                     <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
                                     <i class="far fa-calendar-check awe-icon"></i>
-                                    <i class="awe-icon awe-icon-calendar"></i>
+<!--                                    <i class="awe-icon awe-icon-calendar"></i>-->
                                 </div>
                             </div>
                         </div>
