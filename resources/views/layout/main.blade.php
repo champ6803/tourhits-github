@@ -95,7 +95,7 @@ session_start();
                                     <hr id="home" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a><i class="fa fa-folder"></i>&nbsp;แพ็คเกจทัวร์</a>
+                                    <a><i class="fas fa-globe-americas"></i>&nbsp;แพ็คเกจทัวร์</a>
                                     <hr id="package_tour" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                     <ul class="col-md-12 sub-menu">
                                         <div class="col-md-4 cat-asian cat-line">
@@ -471,15 +471,15 @@ session_start();
                                     <hr id="hothits" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('about') }}"><i class="fa fa-info"></i>&nbsp;เกี่ยวกับเรา</a>
+                                    <a href="{{ url('about') }}">เกี่ยวกับเรา</a>
                                     <hr id="about" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('contact') }}"><i class="fa fa-phone-square"></i>&nbsp;ติดต่อเรา</a>
+                                    <a href="{{ url('contact') }}">ติดต่อเรา</a>
                                     <hr id="contact" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a><i class="fa fa-square"></i>&nbsp;บทความ</a>
+                                    <a>บทความ</a>
                                     <!--<a href="{{ url('blog') }}">บทความ</a>-->
                                     <hr id="blog" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
