@@ -23,7 +23,7 @@
     .hothits-item{
         width: 100% !important;
     }
-    .search-box-index input{border-radius: 50px;}
+    
     .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
@@ -132,7 +132,7 @@
                     <form>
                         <div class="form-group">
                             <div class="form-elements">
-                                <div class="form-item search-box-index">
+                                <div class="form-item">
                                     <i class="fas fa-search awe-icon"></i>
 <!--                                    <i class="awe-icon awe-icon-marker-1"></i>-->
                                     <input id="search_text" class="form-control" type="text" placeholder="ชื่อแพ็คเกจทัวร์ รหัสทัวร์" value="">
