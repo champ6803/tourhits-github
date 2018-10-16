@@ -1,5 +1,5 @@
 $(function () {
-    $('#indx').addClass('menu-active');
+    $('#package_tour').addClass('menu-active');
     var as = tour_package_period_start.split("-");
     var ae = tour_package_period_end.split("-");
     var ae2 = ae[2].split(' ');

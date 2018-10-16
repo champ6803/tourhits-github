@@ -8,20 +8,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tour_Category;
 use App\Models\Tour_Package;
+use App\Models\Category;
 use App\Models\Tour_Period;
 
 /**
  * Description of HomeController
  *
- * @author green
+ * @author champ
  */
-class HothitsController extends Controller {
+class TourHitController extends Controller {
 
-    public function hot_hits() {
-        return view('tour.hothits');
-    }
-    
     public function tour_hit() {
         $tourList = new Tour_Package();
         $tourHitsPackageActiveList = $tourList->getTourPackageByCategory(100002, 0); //แพ็คเกจยอดนิยม

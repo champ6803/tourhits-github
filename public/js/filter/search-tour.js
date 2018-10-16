@@ -272,7 +272,7 @@ function getTourPackage() {
                 renderTourCard(data.tourPackageList, data.tourPeriod);
                 if (data != null && data.tourPackageList.length > 0) {
                     $('#package_country').html(data.tourPackageList[0].tour_country_name + " ทั้งหมด " + data.tourPackageList.length + " แพ็คเกจ");
-                    $("#package_country_image").attr("src", "../images/fg/" + data.tourPackageList[0].country_code.toUpperCase() + ".png");
+                    $("#package_country_image").attr("src", "../images/fg/" + data.tourPackageList[0].country_code.toLowerCase() + ".png");
                     $("#search_tour_pager").empty();
                     $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
                     $('.card_show').show();

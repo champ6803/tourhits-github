@@ -107,6 +107,8 @@ Route::get('contact', 'ContactController@contact_us');
 
 Route::get('hothits', 'HothitsController@hot_hits');
 
+Route::get('tourhit', 'HothitsController@tour_hit');
+
 Route::get('logout', 'LoginController@logout');
 
 Route::get('manage-front-country', 'ManageFrontController@manage_front_country');
@@ -129,11 +131,7 @@ Route::get('profile', 'ManageFrontController@profile');
 
 Route::post('searchCompanyByCompanyCode', 'ManageFrontController@searchCompanyByCompanyCode');
 
-Route::get('tourhot', 'TourhotController@tour_hot');
-
 Route::post('orders', 'TourController@orders');
-
-Route::get('tourhot', 'TourhotController@tour_hot');
 
 Route::get('manage-tourlist', 'AdminController@manage_tourlist');
 

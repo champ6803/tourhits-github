@@ -1139,7 +1139,7 @@
                                     </div>
                                 </div>-->
 
-                <div class="sidebar-title hidden-xs">
+<!--                <div class="sidebar-title hidden-xs">
                     <h3>ทัวร์แนะนำ :</h3>         
                 </div>
                 <div class="left-bar2">
@@ -1180,7 +1180,7 @@
                             </div>                                   
                         </div> 
                     </div>
-                </div>    
+                </div>    -->
 
 
             </div>

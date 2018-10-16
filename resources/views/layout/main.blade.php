@@ -140,7 +140,7 @@ session_start();
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-6 col-md-6">
-                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์เกาหลี?country=ทัวร์เกาหลี')}}">
+                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์เกาหลีใต้?country=ทัวร์เกาหลีใต้')}}">
                                                             <img data-src="../images/flags/South_Korea.png" alt="ทัวร์เกาหลี" class=" lazyloaded" src="{{ asset('/images/flags/South_Korea.png')}}">
                                                             <h5>เกาหลี</h5>
                                                         </a>
@@ -463,11 +463,11 @@ session_start();
                                                                         <hr id="indx" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">-->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('tourhot')}}"><i class="fa fa-star"></i>&nbsp;ทัวร์มาแรง</a>
+                                    <a href="{{ url('tourhit') }}"><i class="fa fa-star"></i>&nbsp;ทัวร์ฮิต</a>
                                     <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('hothits') }}"><i class="fa fa-map-marker"></i>&nbsp;สถานที่ยอดฮิต</a>
+                                    <a><i class="fa fa-map-marker"></i>&nbsp;สถานที่ยอดฮิต</a>
                                     <hr id="hothits" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
