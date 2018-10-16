@@ -117,7 +117,7 @@
 <!-- END / HERO SECTION -->
 
 <!-- SEARCH TABS -->
-<section>
+<!--<section>
     <div class="container search-container">
         <div class="awe-search-tabs-2 tabs">            
             <ul>
@@ -134,16 +134,16 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <i class="fas fa-search awe-icon"></i>
-<!--                                    <i class="awe-icon awe-icon-marker-1"></i>-->
+                                    <i class="awe-icon awe-icon-marker-1"></i>
                                     <input id="search_text" class="form-control" type="text" placeholder="ชื่อแพ็คเกจทัวร์ รหัสทัวร์" value="">
                                 </div>
                             </div>
-                            <!--                            <div class="form-elements">
+                                                        <div class="form-elements">
                                                             <div class="form-item">
                                                                 <i class="awe-icon awe-icon-marker-1"></i>
                                                                 <input type="text" value="Ankara, Turkey">
                                                             </div>
-                                                        </div>-->
+                                                        </div>
                         </div>
                         <div class="form-group">
                             <div class="form-elements">
@@ -164,9 +164,9 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
-                                    <!--<i class="far fa-calendar-check awe-icon"></i>-->
-<!--                                    <i class="awe-icon awe-icon-calendar"></i>-->
-                                    <!--<input type="text" class="form-control awe-calendar" value="เริ่มต้น">-->
+                                    <i class="far fa-calendar-check awe-icon"></i>
+                                    <i class="awe-icon awe-icon-calendar"></i>
+                                    <input type="text" class="form-control awe-calendar" value="เริ่มต้น">
                                 </div>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- END / SEARCH TABS -->
 
 <!-- MASONRY -->
@@ -266,7 +266,7 @@
                                                     <h5>ทัวร์มัลดีฟส์</h5>
                                                 </a>
                                             </div>
-                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์เกาหลี?country=ทัวร์เกาหลี')}}">
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('search-tour/ทัวร์เกาหลีใต้?country=ทัวร์เกาหลีใต้')}}">
                                                     <img data-src="../images/flags/South_Korea.png" alt="ทัวร์เกาหลี" class=" lazyloaded" src="../images/flags/South_Korea.png">
                                                     <h5>ทัวร์เกาหลี</h5>
                                                 </a>
