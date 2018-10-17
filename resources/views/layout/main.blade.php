@@ -563,48 +563,48 @@ session_start();
 
             <footer id="footer-page">
                 <div class="container">
-                    <div class="row">
-                        <!-- WIDGET -->
-                        <div class="col-md-3">
-
-                            <div class="foot-location-head">
-                                บริษัท ทัวร์ฮิตส์ จำกัด<br>
-
-                            </div>
-                            <div class="foot-location-detail"> 
-                                เลขที่ 300/76 โครงการพรีเมี่ยมเพลส 6<br>
-                                ถนนนวมินทร์ แขวงนวมินทร์<br> 
-                                เขตบึงกุ่ม กรุงเทพฯ 10240<br>                               
-                                โทร: 0-2379-1249<br>
-                                Fax: 0-2379-1966-7<br>
-                                E-mail:<a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;"> tourhits@gmail.com</a><br>
-
+                        <!-- WIDGET ซ้าย -->
+                        <div class="col-md-6 col-xs-12">
+                            <div class="row">
+                                <div class="footer-one">
+                                    <div class="col-xs-4 box-border"><a href="#">หน้าหลัก</a></div>
+                                    <div class="col-xs-4 box-border"><a href="">เกี่ยวกับเรา</a></div>
+                                    <div class="col-xs-4 box-border"><a href="">ติดต่อเรา</a></div>
+                                </div>
                             </div>    
-
-                            <!--                            <div class="widget widget_contact_info">
-                                                            <div class="widget_background">
-                                                                <div class="widget_background__half">
-                                                                    <div class="bg"></div>
-                                                                </div>
-                                                                <div class="widget_background__half">
-                                                                    <div class="bg"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="logo">
-                                                                <img src="images/logo.png" alt="">
-                                                            </div>
-                                                            <div class="widget_content">
-                                                                <p>25 California Avenue, Santa Monica, California. USA</p>
-                                                                <p>+1-888-8765-1234</p>
-                                                                <a href="#">contact@gofar.com</a>
-                                                            </div>
-                                                        </div>-->
+                            <div class="row">
+                                <div class="foot-location-head">บริษัท ทัวร์ฮิตส์ จำกัด</div>
+                            </div>
+                            <div class="row">
+                                <div class="foot-location-detail"> 
+                                    <p>เลขที่ 300/76 โครงการพรีเมี่ยมเพลส
+                                    <p>ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กรุงเทพฯ 10240</p>                           
+                                    <p>โทร: 0-2379-1249 Fax: 0-2379-1966-7</p>
+                                    <p>E-mail:<a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;"> tourhits@gmail.com</a></p>
+                                </div> 
+                            </div>
+                            <div class="row">
+                                
+                            </div>   
+                            <div class="row">
+                                <div class="fb-page" data-href="https://www.facebook.com/page.tourhits" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/page.tourhits" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/page.tourhits">Tourhits</a></blockquote></div>
+                            </div>
                         </div>
-                        <!-- END / WIDGET -->
 
-                        <!-- WIDGET -->
-                        <div class="col-md-6 text-center">
-                            <div class="sponsor-footer">
+                    <!-- WIDGET ขวา -->
+                    <div class="col-md-6 hidden-xs">
+                            <div class="footer-two">
+                                <div class="col-md-12">แพ็คเกจทัวร์ ทั้งหมด</div>
+                            </div>    
+                         
+                    </div>
+                </div>
+            </footer>
+            <footer id="footer-page-bottom">
+                <div class="container">
+                <div class="col-xs-12">
+                        <div class="verification-footer">
+                            <div class="sponsor-footer hidden-xs">
                                 <ul>
                                     <li>
                                         <a href="http://www.atta.or.th/" target="_blank" rel="nofollow noopener" title="Association of Thai Travel Agents License No. 03593"><img class="lazy" src="https://cdn.mushroomtravel.com/assets/images/footer/footer-icon-01.jpg" alt="Association of Thai Travel Agents License No. 03593" style="display: inline-block;"></a>
@@ -616,87 +616,14 @@ session_start();
                                     </li>
                                 </ul>
                             </div>
-                            <!--<h6 style="color:#FFFFFF;"><i class="fas fa-registered"></i> เลขที่ใบอนุญาต 11/09305</h6>-->
-                            <br>
-                            <h6 style="color:#FFFFFF;">ใบอนุญาตการท่องเที่ยวแห่งประเทศไทย เลขที่ 11/09305 <br>สมาชิกสมาคมไทยธุรกิจการท่องเที่ยว เลขที่ 012345 <br>e-Commerce No. 01234567890 <br>สงวนลิขสิทธิ์ 2561 Tourhits.co</h6>
+                            <div class="row">
+                                <div class="col-md-4">ใบอนุญาตการท่องเที่ยวแห่งประเทศไทย เลขที่ 11/09305</div>
+                                <div class="col-md-4 hidden-xs boxx">สมาชิกสมาคมไทยธุรกิจการท่องเที่ยว เลขที่ 012345</div>
+                                <div class="col-md-4 hidden-xs boxx">e-Commerce No.01234567890</div>
+                            </div>    
+                            <p>สงวนลิขสิทธิ์ 2561 Tourhits.co | 2018 Tourhits All rights reserved.</p>  
                         </div>
-                        <!-- END / WIDGET -->
-
-<!--                         WIDGET 
-                        <div class="col-md-2">
-
-
-                            <div class="widget widget_categories">
-                                                                                                <h3>Categiries</h3>
-                                                                                                <ul>
-                                                                                                    <li><a href="#">Countries</a></li>
-                                                                                                    <li><a href="#">Regions</a></li>
-                                                                                                    <li><a href="#">Cities</a></li>
-                                                                                                    <li><a href="#">Districts</a></li>
-                                                                                                    <li><a href="#">Countries</a></li>
-                                                                                                    <li><a href="#">Airports</a></li>
-                                                                                                    <li><a href="#">Hotels</a></li>
-                                                                                                    <li><a href="#">Places of interest</a></li>
-                                                                                                </ul>
-                            </div>
-                        </div>
-                         END / WIDGET 
-
-                         WIDGET 
-                        <div class="col-md-2">
-                            <div class="widget widget_recent_entries">
-                                                                <h3>Recent Blog</h3>
-                                                                <ul>
-                                                                    <li><a href="#">Countries</a></li>
-                                                                    <li><a href="#">Regions</a></li>
-                                                                    <li><a href="#">Cities</a></li>
-                                                                    <li><a href="#">Districts</a></li>
-                                                                    <li><a href="#">Countries</a></li>
-                                                                    <li><a href="#">Airports</a></li>
-                                                                    <li><a href="#">Hotels</a></li>
-                                                                    <li><a href="#">Places of interest</a></li>
-                                                                </ul>
-                            </div>
-                        </div>
-                         END / WIDGET -->
-
-                        <!-- WIDGET -->
-                        <div class="col-md-3">
-                            <!-- facebook -->
-                            <div class="row facebook">
-                                <div class="fb-page" 
-                                     data-href="https://www.facebook.com/page.tourhits"
-                                     data-width="349" 
-                                     data-hide-cover="false"
-                                     data-show-facepile="false"></div>         
-                            </div>
-                            <div class="contact"
-                                 <h3 style="color:#FFFFFF;">ติดต่อเรา<br>
-                                    <i class="fas fa-mobile-alt"></i> 062 914 2361<br>
-                                    <i class="fab fa-facebook-square"></i>
-                                    <i class="fab fa-line"></i>
-                                    <i class="fab fa-youtube-square"></i>
-
-                            </div>
-
-                            <div class="widget widget_follow_us">
-                                <div class="widget_content">
-        <!--                                    <p>Test</p>
-                                    <span class="phone">099-099-000</span>
-                                    <div class="awe-social">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                    </div>-->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END / WIDGET -->
-                    </div>
-                    <div class="copyright">
-
-
-                        <p>2018 Tourhits All rights reserved.</p>
-                    </div>
+                </div>
                 </div>
             </footer>
             <!-- END / FOOTER PAGE -->
@@ -746,6 +673,14 @@ fjs.parentNode.insertBefore(js, fjs);
         <!--footer scripts-->
         @yield('footer_scripts')
         <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <!-- REVOLUTION DEMO -->
         <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.revolution.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.tools.min.js') }}"></script>
@@ -825,5 +760,6 @@ fjs.parentNode.insertBefore(js, fjs);
                 });
             }
         </script>
+        
     </body>
 </html>

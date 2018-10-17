@@ -5009,7 +5009,8 @@ a.badge:focus {
   }
 }
 .thumbnail {
-  width: 300px;
+/*  width: 300px; original*/
+    width: 325px;
 /*  height: 498.9px;*/    
   display: block;
   padding: 0px;

@@ -72,7 +72,7 @@
     text-align: center;
     list-style-type: none;
     list-style-position: outside;
-    padding-left: 0;
+    padding-left: 0px;
 }
 
 .sponsor-footer ul li{
@@ -80,7 +80,7 @@
     margin: 0 5px;
     text-align: -webkit-match-parent;
 }
-
+.sponsor-footer ul li img{width: 80%;}
 .country-link {
     border-radius: 8px;
     display: block;
@@ -150,7 +150,7 @@
     background-color: #DFDFDF;
     margin-bottom:0;
     margin-top:-1px;
-    width: calc(100% / 3);
+    width: calc(100% / 2);
     text-align: center;
     border-top: 1px solid #ddd;
 }
@@ -198,7 +198,7 @@
 }
 
 .card-detail{   
-    height: 150px;
+    height: 160px;
     overflow: auto;
     text-align: left;
     line-height: 1.3;
@@ -227,7 +227,7 @@
     /*    color: #8d8d8d;*/
     font-family: 'Kanit', sans-serif;
     color:gray;
-    font-size: 15px;
+    font-size: 16px;
 
 }
 
@@ -275,11 +275,13 @@
 .card-time{
     padding: 3px 0;
     color: #262626;
-    font-size: 19px;
+    font-size: 21px;
     font-weight: bold;
     text-align: left;
     margin-left: 9px;
 }
+
+.card-time i{ color: #c33132; font-size: 21;}
 
 .card-airline{
     position: relative;
@@ -320,11 +322,12 @@
     height: 24px;
     text-align: right;
     font-size: 18px;
+    font-weight: bold;
 
 }
 
 .nav-tabs{
-    width: 450px;
+    width: 325px;
 }
 
 
@@ -549,7 +552,6 @@ hr {
 
 #footer-page .col-md-2{
     text-align: center;
-
 }
 
 .flag-small{
@@ -4251,7 +4253,7 @@ Custom BS3
     font-size: 16px;
     border-radius: 4px;
     position: absolute;
-    left: 0px;
+    left: 30px;
     top: 6px;
     background: rgba(55, 56, 58, .8);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -4341,6 +4343,7 @@ Custom BS3
 }
 
 .hothits-country-name{
+    font-family: 'Kanit', sans-serif;
     font-size: 18px;
     padding: 13px;
     color: #fff;
@@ -4354,9 +4357,6 @@ Custom BS3
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
-    font-weight: 500;
-
 }
 
 
@@ -4385,7 +4385,10 @@ Custom BS3
 .register-content .form-group .form-control{
     background-color: #ffffff;
     border: 0px;
-    font-size: 17px;   
+    font-size: 15px;
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.6;
+    display: inline-block;   
 }  
 
 .btn-lr{
@@ -4718,19 +4721,26 @@ Custom BS3
 
 /* footer page */
 .foot-location-head{
+    font-family: 'Kanit', sans-serif;
     text-align: left;
-    font-size: 23px;
-    font-weight: 300;
-    padding-bottom: 15px;
-    margin-left: 8px;
-    margin-top:8px;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 30px 15px 15px 15px;
 }
 .foot-location-detail{
+    font-family: 'Kanit', sans-serif;
     text-align: left;
-    font-size: 21px;
-    line-height: 1.4;
-    margin-left: 8px;
+    font-size: 17px;
+    padding: 5px 15px 10px 15px;
 }
+.foot-location-detail a{
+    color: #fff;
+}
+
+.foot-location-detail p{
+    line-height: 1;
+}
+.sponsor-footer ul{padding-bottom: 10px;}
 
 /* sub-menu แพคเกจทัวร์ */
 
@@ -5248,6 +5258,10 @@ Custom BS3
     .filter-page__content .trip-item .hilight .detail{        
         -webkit-line-clamp: 3;     
     }
+    .footer-one .box-border{font-size: 20px;}
+    .foot-location-head{text-align: center;}
+    .foot-location-detail{text-align: center;}
+    #footer-page-bottom{height: 213px;}
 }
 
 .filter-page__content .trip-item .item-body .item-list li{
@@ -5869,4 +5883,50 @@ https://flickity.metafizzy.co
 
 .daterangepicker.dropdown-menu {
     z-index:9999;
+}
+
+.footer-one{padding-bottom: 20px; }
+.footer-one .box-border{
+    font-family: 'Kanit', sans-serif;
+    font-size:23px;
+    text-align: center;
+    border-right: 1px solid;
+    color: #fff;
+}
+.footer-one .box-border a{color: #fff;}
+.footer-one .box-border:last-child{border-right: 0;}
+
+#footer-page-bottom .verification-footer .boxx{border-left: 1px solid;}
+#footer-page-bottom .verification-footer {
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 17px;
+    padding: 0px 15px 10px 15px;
+    margin-top:10px;
+    color: #fff;
+}
+
+#footer-page-bottom .verification-footer .boxx:first-child{border-left: 0;}
+#footer-page-bottom .verification-footer p{margin-top: 20px; font-size: 15px;}
+
+.fb-page, 
+.fb-page span, 
+.fb-page span iframe[style] { 
+    width: 100% !important; 
+    height: 180px!important;
+    padding-left: 5px;
+}
+
+.footer-two{
+    font-family: 'Kanit', sans-serif;
+    text-align: left;
+    font-size: 30px;
+    line-height: 1;
+    color: #fff;
+}
+#footer-page{padding-bottom: 60px;}
+#footer-page-bottom{
+    width: 100%;
+    padding: 20px 0;
+    background-color: #222;
 }

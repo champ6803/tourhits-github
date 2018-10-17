@@ -76,7 +76,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             div = div + '<hr>';
             var all_as = val["tour_package_period_start"].split("-");
             var all_ae = val["tour_package_period_end"].split("-");
-            div = div + '<div class="card-time"><i class="fas fa-calendar-alt"></i>&nbsp;ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</div>';
+            div = div + '<div class="card-time"><i class="far fa-calendar-check"></i>&nbsp;ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</div>';
             div = div + '<hr>';
             div = div + '<div class="bar-bottom-card">';
             div = div + '<div class="card-airline"><img alt="' + this.airline_name + '" src="' + rootPath + '/airline/' + val['airline_picture'] + '" title="การบินไทย"></div>';

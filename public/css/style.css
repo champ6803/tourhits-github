@@ -2793,7 +2793,7 @@ span.dropcap {
 /* 4.   Footer
 --------------------------------------------------------------------------------*/
 #footer-page {
-    background-color: #1E1E1F;
+    background-color: #29292a;
     padding-top: 60px;
     font-size: 13px;
     color: #ffffff;
@@ -6744,6 +6744,8 @@ body.single-post .blog-page__content > .post .post-content {
     margin-top: 0;
     margin-bottom: 5px;
     padding-left: 7px;
+    display: inline-block;
+    line-height: 1.6;
 }
 .product-detail__info .trips .item p {
     font-size: 19px;
@@ -10197,6 +10199,8 @@ select {
     .destination-list__content .destinations-item .item-body .item-footer ul li {
         margin-bottom: 10px;
     }
+    
+    
 
 }
 /* 15.   Revolution slider
