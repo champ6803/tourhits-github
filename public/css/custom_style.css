@@ -5930,3 +5930,32 @@ https://flickity.metafizzy.co
     padding: 20px 0;
     background-color: #222;
 }
+
+#footer-page .package-country-footer{
+    margin-top: 60px;
+    padding-left: 30px;
+}
+
+#footer-page .package-country-footer .name-country-footer a{
+    font-family: 'Kanit', sans-serif;
+    float: left;
+    display: inline-block;
+    font-size: 17px;
+    text-align: left;
+    padding: 1px 0;
+    color: #fff;
+}
+
+#footer-page .package-country-footer .continent-name{
+   font-family: 'Kanit', sans-serif; 
+   width: 100%;
+   text-align: left;
+   font-size: 21px;
+   color: #fff;
+}
+
+@media (min-width: 992px) and (max-width: 1360px){
+    #footer-page .container {
+        width: 1100px!important;
+    }
+}
