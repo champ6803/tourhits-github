@@ -168,10 +168,11 @@
                             <div class="form-elements days">
                                 <div class="form-item">
                                     <select id="days_dropdown" class="form-control">
+                                        <option selected value="">วัน</option>
                                         <option value="1">1 วัน</option>
                                         <option value="2">2 วัน</option>
                                         <option value="3">3 วัน</option>
-                                        <option selected value="4">4 วัน</option>
+                                        <option value="4">4 วัน</option>
                                         <option value="5">5 วัน</option>
                                         <option value="6">6 วัน</option>
                                         <option value="7">7 วัน</option>
