@@ -13,6 +13,8 @@ $(function () {
         end_date = end.format('YYYY-MM-DD');
     });
 
+    $('#date_picker').val("");
+
     $('#search_tour').click(function () {
         var search = $('#search_text').val();
         var country_dropdown = $('#country_dropdown').val();
@@ -21,8 +23,10 @@ $(function () {
         window.location.href = url;
     });
 });
-var start_date = getDateNow();
-var end_date = getDateNow();
+var start_date = "";
+var end_date = "";
+//var start_date = getDateNow();
+//var end_date = getDateNow();
 
 
 function renderTourPackage(tourPackageList, tourPeriod, selection) {
@@ -51,7 +55,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             div = div + '<div class="tour-bottom-right">';
             div = div + '<div class="pull-right">';
             var tour_code = val['tour_package_id'];
-            while (tour_code.length != 6)
+            while (tour_code.length != 4)
             {
                 tour_code = '0' + tour_code;
             }
