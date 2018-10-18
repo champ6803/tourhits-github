@@ -65,7 +65,7 @@
     display: inline;
     font-size:19px;
     }
-    
+    .cart-content .cart-table tbody td .quantity .minus:hover{color:#c33132;}
     @media (max-width: 425px) {
         .product-detail__info .trips .time-xs{width: 100%;}     
     }
