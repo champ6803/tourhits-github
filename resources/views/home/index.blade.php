@@ -40,11 +40,6 @@
         .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 23px; width:100%;}
         .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 23px;}
     }
-
-
-
-
-
     .item { width: 25%; }
     .item.w2 { width: 50%; }
 
@@ -1425,13 +1420,12 @@
             </div>
             <div class="awe-masonry item-9" style="position: relative; height: 877.5px;">
                 <!-- GALLERY ITEM -->
-                <div class="awe-masonry__item" style="position: absolute; left: 0px; top: 0px;">
+                <div class="first-item-image awe-masonry__item" style="position: absolute; left: 0px; top: 0px;">
                     <a>
                         <div class="image-wrap image-cover">
                             <img src="../images/sponsor/spon1.jpg" alt="" style="height: 100%; width: auto;">
                         </div>
-                    </a>
-
+                    </a>      
                 </div>
                 <!-- END / GALLERY ITEM -->
                 <!-- GALLERY ITEM -->

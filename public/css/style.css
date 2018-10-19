@@ -9940,10 +9940,14 @@ select {
         width: 100%;
         padding: 0 !important;
     }
-
+    
     .awe-masonry .awe-masonry__item {
-        width: 100% !important;
+        width: 25%!important;     
     }
+       
+/*    .awe-masonry .top-image-item{
+         width: 100%!important;
+    }*/
 
     .post-footer > div {
         width: 100%;
@@ -10009,6 +10013,10 @@ select {
     
 }
 @media screen and (max-width: 480px) {
+    .awe-masonry .awe-masonry__item:nth-child(5){
+        width: 100%!important;
+    }
+    
     .blog-heading-content h2 {
         font-size: 20px;
     }
