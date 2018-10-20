@@ -100,8 +100,11 @@
 </style>
 
 <style>
+    .page-sidebar{background-color: #f6f6f6;padding-bottom: 10px;}
+    
     .page-sidebar .sidebar-title{
         border-top-color: #ea1c24;
+        text-align: center;
     }
 
     #owl-demo .tag-item{
@@ -697,7 +700,7 @@
         <div class="col-md-3 col-md-pull-6">
             <div class="page-sidebar">
                 <div class="sidebar-title hidden-xs filter-tittle">
-                    <h3><i class="fas fa-filter"></i> คัดกรอง :</h3>      
+                    <h3><i class="fas fa-filter"></i> คัดกรอง</h3>      
                 </div>         
 
                 <div class="left-bar3 mobile-version hidden-xs">
@@ -1190,7 +1193,7 @@
         <div class="col-md-3">
             <div class="page-sidebar">
                 <div class="sidebar-title hidden-xs">
-                    <h3>สถานที่ยอดนิยม :</h3>
+                    <h3><i class="fas fa-map-pin"></i> กิจกรรมนิยม</h3>
                 </div>
                 <div class="right-bar">
                     <div class="box-content hidden-xs">

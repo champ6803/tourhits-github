@@ -104,6 +104,7 @@
         font-size: 19px;
         font-weight: bold;
         line-height: 1.9;
+        padding-top: 2px;
     }
     
     .modal-content{-webkit-box-shadow:  0 4px 10px 0 rgba(0,0,0,.12);box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);}
@@ -125,7 +126,7 @@
         background-color: #38c49c;
         padding: 3px 14px 3px 14px;
         border-radius: 20px; 
-        line-height: 1.5;
+        line-height: 1.6;
     }
     
     .product-detail .download-pdf p a:hover{
@@ -144,7 +145,9 @@
         background-color: #4dabf7;
         border-radius: 8px;
         padding: 4px 21px 4px 10px;
-        line-height: 1.5;
+/*        line-height: 1.5;*/
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
     .product-detail .facebook p a:hover{
         background-color: #2475b6;
@@ -176,7 +179,7 @@
         .table-style th:nth-of-type(1),td:nth-of-type(1) {color: red;}*/
     .table-style tr:first-child th{background-color: #c33132; text-align:center; text-transform: uppercase; border-color: #c33132; font-size: 26px; font-weight: normal;}
     .table-bordered > tbody > tr > th{font-size: 21px; background-color: white; color: #c33132;}
-    .table-bordered > tbody > tr > td{font-size: 19px; font-weight: bold;}
+    .table-bordered > tbody > tr > td{font-size: 17px; font-weight: bold;}
 </style>
 <?php
 // Set your timezone!!
@@ -1317,12 +1320,21 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 <tr>
                                     <th colspan="2" class="align-middle py-4">กำหนดการเดินทาง</th>
                                     <th class="align-middle py-4">
-                                        <span class="d-inline d-sm-none">ราคา</span>
+                                        <span class="d-inline d-sm-none">พักคู่<br> ท่านละ</span>
                                         <span class="d-none d-sm-inline">ผู้ใหญ่พักคู่<br> ท่านละ</span>
                                     </th>
-                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
+                                    <th class="align-middle py-4">
+                                        <span class="d-inline d-sm-none">เด็ก<br> ท่านละ</span>
+                                        <span class="d-none d-sm-inline">เด็กไม่เพิ่มเตียง<br> ท่านละ</span>
+                                    </th>
+                                    <th class="align-middle py-4">
+                                        <span class="d-inline d-sm-none">ราคาพิเศษ</span>
+                                        <span class="d-none d-sm-inline">ราคาพิเศษ<br> ท่านละ</span>
+                                    </th>
+                                    <th class="align-middle py-4"></th>
+<!--                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
                                     <th class="align-middle d-none d-sm-table-cell py-4">ราคาพิเศษ<br> ท่านละ</th>
-                                    <th class="align-middle d-none d-sm-table-cell py-4"></th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4"></th>-->
                                 </tr>
                             </thead>
                             <tbody>

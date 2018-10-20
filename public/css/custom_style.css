@@ -254,6 +254,7 @@
 
 .product-detail__info .product-address p{      
     display: inline;
+    line-height: 1;
 }
 
 .product-detail__info .product-address p:after{
@@ -600,7 +601,7 @@ hr {
 .filter-bar{
 
     color: #222;
-    background-color: #fff;
+    background-color: #f6f6f6;
     /*    box-shadow: 0px 0 7px rgba(29, 29, 29, 0.5);*/
 
     padding: 0px 25px 0px 20px;
@@ -614,6 +615,8 @@ hr {
 }
 .expand-toggle a{
     color: #ACACFF !important;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
 }
 
 
@@ -700,14 +703,19 @@ hr {
 }
 
 .filter-bar .option{
-    font-size: 21px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
     margin-top: -17px;
+    line-height: 2.4;
+    
 }
 
 .filter-bar .option-all{
-    font-size: 21px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
     margin-top: 0px;
     font-weight: bold;
+    line-height: 2.4;
 
 }
 
@@ -4580,6 +4588,7 @@ Custom BS3
     }
     .periods-table-detail .thead-light .py-4 .d-sm-none{
         display: inline;
+        font-size: 19px;
     }
 
 }
@@ -5129,6 +5138,7 @@ Custom BS3
 
 .tour-left-bar-item{
     margin-bottom: 20px;
+    padding-left: 10px;
 }
 .tour-left-bar-item .media-left{
     width: 30%;
@@ -5366,6 +5376,7 @@ Custom BS3
 .pdf-download a{
     font-size: 18px;
     font-weight: bold;
+    line-height: 1.6;
 }
 
 .filter-page__content .filter-item-wrapper .country{
