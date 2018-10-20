@@ -15,7 +15,7 @@ $(function () {
     });
     $('#date_picker').val("");
 
-    $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
+   // $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
 
     search_text = getUrlParameter('search') == undefined ? "" : getUrlParameter('search');
     start_date = getUrlParameter('start_date') == undefined ? "" : getUrlParameter('start_date');
@@ -71,7 +71,22 @@ $(function () {
     });
     $('#price_to').text(numberWithCommas(50000));
 
-
+//$('#card_area').endlessScroll({
+//            pagesToKeep: 10,
+//            fireOnce: false,
+//            insertBefore: "#list div:first",
+//            insertAfter: "#list div:last",
+//            content: function (i, p) {
+//                console.log(i, p)
+//                return '<li>' + p + '</li>'
+//            },
+//            ceaseFire: function (i) {
+//                if (i >= 10) {
+//                    return true;
+//                }
+//            },
+//            intervalFrequency: 5
+//        });
 
 });
 
@@ -274,7 +289,7 @@ function getTourPackage() {
                     $('#package_country').html(data.tourPackageList[0].tour_country_name + " ทั้งหมด " + data.tourPackageList.length + " แพ็คเกจ");
                     $("#package_country_image").attr("src", "../images/fg/" + data.tourPackageList[0].country_code.toLowerCase() + ".png");
                     $("#search_tour_pager").empty();
-                    $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
+                    //$('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
                     $('.card_show').show();
                     $('#loading').hide();
                 }
@@ -419,7 +434,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
         var divs = "";
         $("#card_area").empty();
         $.each(obj, function (key, val) {
-            var div = '<div class="trip-item">';
+            var div = '<li class="trip-item">';
             div = div + '<div class="item-media">';
             div = div + '<div class="image-cover">';
             div = div + '<img src="../images/tour/' + this.tour_package_image + '" alt="">';
@@ -483,7 +498,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + '</div>';
             div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">ดูเพิ่มเติม</a>';
             div = div + '</div>';
-            div = div + '</div>';
+            div = div + '</li>';
             divs = divs + div;
         });
         $('#card_area').html(divs);

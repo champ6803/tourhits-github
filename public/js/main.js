@@ -1,4 +1,12 @@
-
+$(function(){
+   $(window).endlessScroll({
+		inflowPixels: 300,
+		callback: function() {
+			var $img = $('#images li:nth-last-child(5)').clone();
+			$('#images').append($img);
+		}
+	}); 
+});
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
             sURLVariables = sPageURL.split('&'),

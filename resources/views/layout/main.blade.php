@@ -693,6 +693,7 @@ session_start();
         </div>
         <!-- END / PAGE WRAP -->
         <div id="fb-root"></div>
+        
         <script>(function (d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
 if (d.getElementById(id))
@@ -717,6 +718,8 @@ fjs.parentNode.insertBefore(js, fjs);
         <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/AutoNumeric.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/lib/jquery.gdocsviewer.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/lib/qqq.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/lib/jquery.endless-scroll.js') }}"></script>
         <script type="text/javascript">
             $(function () {
                 $('.underline-link').removeClass('menu-active');

@@ -23,8 +23,8 @@
     .hothits-item{
         width: 100% !important;
     }
-    
-    
+
+
     .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
@@ -52,6 +52,8 @@
         width:100% !important;
         box-shadow: none !important;
     }
+    
+    
 </style>
 
 <!-- HERO -->
@@ -1647,24 +1649,25 @@
             </div>
         </div>
     </div>
-</section>
+    
 
+</section>
 @stop
 @section('footer_scripts')
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('#Carousel').carousel({
-            interval: 3000
-        })
-    });
-    var tourHitsPackageActiveList = <?php echo json_encode($tourHitsPackageActiveList); ?>;
-    var tourHitPeriodActive = <?php echo json_encode($tourHitPeriodActive); ?>;
-    var tourSalesPackageActiveList = <?php echo json_encode($tourSalesPackageActiveList); ?>;
-    var tourSalesPeriodActive = <?php echo json_encode($tourSalesPeriodActive); ?>;
-    var rootPath = '{{asset("/images/")}}';
+$(document).ready(function () {
+    $('#Carousel').carousel({
+        interval: 3000
+    })
+});
+var tourHitsPackageActiveList = <?php echo json_encode($tourHitsPackageActiveList); ?>;
+var tourHitPeriodActive = <?php echo json_encode($tourHitPeriodActive); ?>;
+var tourSalesPackageActiveList = <?php echo json_encode($tourSalesPackageActiveList); ?>;
+var tourSalesPeriodActive = <?php echo json_encode($tourSalesPeriodActive); ?>;
+var rootPath = '{{asset("/images/")}}';
 </script>
 
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="{{ asset('js/home/index.js') }}"></script>
 @endsection
