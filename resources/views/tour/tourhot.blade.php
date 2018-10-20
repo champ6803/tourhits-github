@@ -33,19 +33,6 @@
         padding-bottom: 8px;
         top: 0px;
     }
-
-
-    * { margin: auto; }
-    body { margin: 20px 0; background: #abc; color: #111; font-family: Helvetica, Arial, Verdana, 'Lucida Grande', sans-serif; }
-    h1, h3, p { text-align: center; }
-    div.example { padding: 20px; margin: 10px auto; background: #bcd; width: 750px; }
-    div.example h3 { margin-bottom: 10px; }
-    ul, ol { padding: 0; }
-    #list { width: 900px; height: 500px; overflow-y: scroll; }
-    #images { width: 600px; height: 550px; overflow-x: hidden; text-align: center; list-style: none; }
-    .endless_scroll_loader { position: fixed; top: 10px; right: 20px; }
-
-
 </style>
 
 <!--<section class="hothits-section">
