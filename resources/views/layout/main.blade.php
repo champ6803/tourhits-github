@@ -79,12 +79,35 @@ session_start();
 
             <!-- HEADER PAGE -->
             <header id="header-page">
+                <div class="main-header hidden-xs hidden-sm">
+                    <div class="container">
+                        <div class="col-md-3">
+                            <span class="cer-logo"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/09305</span>               
+                        </div>
+
+                        <div class="col-md-9">
+                            
+                            <div class="work-time-line">
+                                <a href="http://line.me/ti/p/%40tourhits" target="_blank" rel="noopener noreferrer" class="" data-line-link=""><img src="{{ asset('/images/logo-line.png')}}"> @Tourhits</a>        
+                            </div>
+                            <div class="work-time-tel">
+                                <span><i class="fas fa-phone"></i> 02-379-1249</span>
+                            </div>                
+                            <div class="work-time2">
+                                <span class="line-1">จ-ศ. เวลา 09.00-18.00 น.</span>
+                                <span class="line-2">วันเสาร์ เวลา 09.00-16.00 น.</span>
+                            </div>
+                            <div class="work-time1">
+                                <span class="main-text-time">เวลาทำการ |</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
                 <div class="header-page__inner">
                     <div class="container">
                         <!-- LOGO -->
                         <div class="logo">
                             <a href="/"><img src="{{ asset('/images/logo.png')}}" alt=""></a>
-                            <span class="cer-logo" style="font-size: 10px; color: #515050; font-weight: 900;"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/09305</span>
                         </div>
 
                         <!-- END / LOGO -->
