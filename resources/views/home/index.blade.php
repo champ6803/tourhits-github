@@ -32,7 +32,8 @@
     .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search:hover{opacity: 0.8;}
 
     @media screen and ( max-width: 958px ) {
-        .package-hit-title h1{font-size: 27px;}
+        .package-hit-title h1{font-size: 23px;}
+        .package-hit-title .see-more span{font-size: 14px; line-height: 33px;}
         .package-hit-title .section-descripion{font-size: 19px;}
         .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
 
@@ -631,12 +632,14 @@
         <div class="row">
             <div class="col-md-12 package-hit-title">
                 <div class="section-title">
-                    <h1><i class="fas fa-map-marker" style='color: #c33132;'></i>&nbsp;แพ็คเกจยอดนิยม</h1>
-                    <div class="line-gradient"></div>
+                    <h1><i class="fas fa-map-marker" style='color: #c33132;'></i>&nbsp;แพ็คเกจยอดนิยม</h1>              
                 </div>
-                <div class='section-descripion hidden-xs'>
+                <div class="see-more">
+                    <a href="#" ><span>ดูทั้งหมด <i class="fas fa-arrow-circle-right"></i></span></a>
+                </div>
+<!--                <div class='section-descripion hidden-xs'>
                     ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
-                </div>
+                </div>-->
             </div>
         </div>
         <!--        หน้าจอเวอชั่น mobile/pc-->        
@@ -971,7 +974,7 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="btn btn-nextpage">แพ็คเกจทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a> 
+       
     </div>
 </section>
 
@@ -979,13 +982,13 @@
 <section class="package-hit-section">
     <div class="container">
         <div class="package-hit-title">
-            <div class="section-title">
-                <h1><i class="" style='color: #c33132;'></i>&nbsp;เราคัดสรรมาให้จากกว่า 200 ทัวร์</h1>
-                <div class="line-gradient"></div>
+            <div class="section-title" style="width:100%;">
+                <h1><i class="" style='color: #c33132;'></i>เราคัดสรรมาให้จากกว่า 200 ทัวร์</h1>              
             </div>
-            <div class='section-descripion hidden-xs'>
+        </div>    
+<!--            <div class='section-descripion hidden-xs'>
                 ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
-            </div>
+            </div>-->
             <div class="row">
                 @foreach($categoryList as $category)
                 <div class="col-sm-4 col-xs-6 col-md-3">
@@ -1005,7 +1008,7 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    
 </section>
 
 <!-- แพ๊คลดราคา -->
@@ -1015,11 +1018,13 @@
             <div class="col-md-12 package-hit-title">
                 <div class="section-title">
                     <h1><i class="fas fa-fire" style='color: #c33132;'></i>&nbsp;แพ็คเกจลดราคา</h1>
-                    <div class="line-gradient"></div>
                 </div>
-                <div class='section-descripion hidden-xs'>
+                <div class="see-more">
+                    <a href="#" ><span>ดูทั้งหมด <i class="fas fa-arrow-circle-right"></i></span></a>
+                </div>
+<!--                <div class='section-descripion hidden-xs'>
                     ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
-                </div>
+                </div>-->
             </div>
         </div>
         <!--        หน้าจอเวอชั่น mobile/pc-->
@@ -1356,7 +1361,7 @@
         </div>
 
         <div class="row">
-            <a href="#" class="btn btn-nextpage">แพ็คเกจทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a>
+<!--            <a href="#" class="btn btn-nextpage">แพ็คเกจทั้งหมด&nbsp;<i class="fas fa-arrow-circle-right"></i></a>-->
         </div>
     </div>
 </section>
@@ -1365,10 +1370,11 @@
 <section class="package-hit-section">
     <div class="container">
         <div class="package-hit-title">
-            <div class="section-title">
+            <div class="section-title" style="float:none;">
                 <h1><i class="fas fa-hands-helping" style='color: #c33132;'></i>&nbsp;ลูกค้าที่ไว้วางใจกับเรา</h1>
-                <div class="line-gradient"></div>
+<!--                <div class="line-gradient"></div>-->
             </div>
+        </div>    
             <div class="awe-masonry item-9" style="position: relative; height: 877.5px;">
                 <!-- GALLERY ITEM -->
                 <div class="first-item-image awe-masonry__item" style="position: absolute; left: 0px; top: 0px;">
@@ -1452,7 +1458,7 @@
                 </div>
                 <!-- END / GALLERY ITEM -->            
 
-            </div>            
+            </div>   
 
 
             <!--            <div class="openGallery-board">
