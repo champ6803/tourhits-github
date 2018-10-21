@@ -48,13 +48,19 @@ class FilterController extends Controller {
             $price_from = request()->get('_price_from');
             $price_to = request()->get('_price_to');
 
+            if (strlen($search_text) > 2) {
+                $search_text_sub = substr($search_text, 0, 2);
+                if (strcasecmp($search_text_sub, 'th') == 0) {
+                    $search_text = substr($search_text, 2);
+                }
+            }
+
             $_take = request()->get('_take');
             $_page_num = request()->get('_page_num');
 
             $take = (int) $_take;
             $page_num = (int) $_page_num;
             $skip = ($page_num - 1) * $take;
-
 
             if (!(count($route) > 0) && empty($start_date) && empty($end_date) && !(count($month) > 0) && !(count($days) > 0) && !(count($airline) > 0) && !(count($tags) > 0) && !(count($attraction) > 0) && !(count($others) > 0) && !empty($search_text)) {
                 $query = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
