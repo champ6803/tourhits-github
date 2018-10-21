@@ -23,7 +23,8 @@ session_start();
 
         <!-- CSS LIBRARY -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/bootstrap.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome-all.css') }}">
+        <!--<link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome-all.css') }}">-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/awe-booking-font.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/owl.carousel.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/jquery-ui.css') }}">
