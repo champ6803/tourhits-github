@@ -29,9 +29,10 @@
 
 .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{
  background-color: rgba(249, 166, 124, 1);
+ background-color: rgb(237, 85, 101);
 /*    background-color: rgba(227, 220, 221, 0.88);*/
     padding-top: 9px; 
-    font-size: 33px;
+    font-size: 28px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -45,11 +46,11 @@
 }
 
 .destination-grid-content .flag{
-
-    min-width: 247.5px;
+    max-width: 225px;
+/*    min-width: 247.5px;*/
     /*    max-width: 320px;*/
     margin-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 0px;
     padding-right: 10px;
 }
 
@@ -94,17 +95,20 @@
 .country-link img{
     height: 35px;
     float: left;
+    padding-right: 10px;
 
 }
 
 .country-link h5 {
-    width: 70%;
+/*    width: 70%;*/
     font-weight: bold;
-    line-height: 1.6;
-    font-size: 23px;
+    line-height: 36px;
+    font-size: 20px;
     color: #444;
     float: left;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .panel-default > .panel-heading{
@@ -4301,8 +4305,13 @@ Custom BS3
 }
 
 .cer-logo {
-    margin-left: -10px;    
-    display: inline-grid;        
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;    
+    display: inline; 
+    color: black;
+    line-height: 60px;
+    float: left;
+    min-width: 192px;
 }
 
 .line-gradient{
@@ -4798,7 +4807,7 @@ Custom BS3
 
 .cat-asian .country-link h5 {
     width: 60%;
-    line-height: 1.6;
+    line-height: 36px;
     display: inline-block;
     font-size: 17px;
     font-weight: bold;
@@ -5972,4 +5981,66 @@ https://flickity.metafizzy.co
     #footer-page .container {
         width: 1100px!important;
     }
+}
+
+
+#header-page .main-header{
+    font-family: 'Kanit', sans-serif;
+    height: 60px;
+    background-color: #f0f2f3;
+    color: black;
+}
+
+#header-page .work-time1{
+    display: block;
+    position: relative;
+    height: 100%;
+    float: right;
+    padding-left: 10px;
+}
+#header-page .work-time1 .main-text-time{
+    line-height: 60px;
+    height: 100%;
+    font-size:19px;
+    overflow: hidden;
+    display: inline;
+}
+
+#header-page .work-time2{
+    height: 100%;
+    font-size: 16px;
+    float: right;
+    padding-left: 10px;
+    
+}
+
+#header-page .work-time2 .line-1{display: block; padding-top: 8px; text-align: right;}
+#header-page .work-time2 .line-2{display: block;}
+
+#header-page .work-time-line{
+    display: block;
+    position: relative;
+    line-height: 60px;
+    height: 100%;
+    float: right;
+}
+
+#header-page .work-time-line img{
+    height: 45px;
+}
+
+#header-page .work-time-line a{
+    padding-left: 20px;
+    font-size: 21px;
+    color: #000;
+    font-family: 'supermarket', sans-serif;
+}
+#header-page .work-time-tel{float: right;}
+#header-page .work-time-tel span{
+    padding-left: 20px;
+    font-size: 21px;
+    color: #ed5565;
+    font-family: 'supermarket', sans-serif;    
+    font-weight: bold;
+    line-height: 60px;
 }
