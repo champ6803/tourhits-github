@@ -19,7 +19,8 @@ $(function () {
         var search = $('#search_text').val();
         var country_dropdown = $('#country_dropdown').val();
         var days_dropdown = $('#days_dropdown option:selected').val();
-        var url = "search-tour/" + country_dropdown + "?country=" + country_dropdown + "&start_date=" + start_date + "&end_date=" + end_date + "&search=" + search + "&days=" + days_dropdown;
+        var country_id = findCountryId(country_dropdown);
+        var url = "tour/" + country_dropdown + "?country=" + country_id + "&start_date=" + start_date + "&end_date=" + end_date + "&search=" + search + "&days=" + days_dropdown;
         window.location.href = url;
     });
 });
@@ -27,6 +28,26 @@ var start_date = "";
 var end_date = "";
 //var start_date = getDateNow();
 //var end_date = getDateNow();
+
+function findCountryId(o) {
+    var id = "";
+    if (o) {
+        if (o == "japan") {
+            id = 2;
+        } else if (o == "china") {
+            id = 7;
+        } else if (o == "europe") {
+            id = 11;
+        } else if (o == "hongkong") {
+            id = 0;
+        } else if (o == "myanmar") {
+            id = 12;
+        } else if (o == "korea") {
+            id = 3;
+        }
+    }
+    return id;
+}
 
 
 function renderTourPackage(tourPackageList, tourPeriod, selection) {
