@@ -1075,7 +1075,7 @@ span.dropcap {
     display: block;
     font-family: supermarket, sans-serif;
     font-weight: 600;
-    font-size: 19px;
+    font-size: 17px;
     color: #000;
     line-height: 78px;
 }
@@ -1540,7 +1540,7 @@ span.dropcap {
 .tabs .ui-tabs-nav li .ui-tabs-anchor {
     position: relative;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 21px;
     color: #444;
     padding: 0;
     border-bottom: 3px solid transparent;
@@ -6376,12 +6376,22 @@ body.single-post .blog-page__content > .post .post-content {
          
     }
     
+    .country-link{
+        padding: 10px 0px 10px 10px!important;
+        height: 50px!important;
+    }
+    .country-link img{
+        height: 28px!important;
+        padding-right: 5px!important;
+        
+    }
     .country-link h5{
-        font-size: 17px!important;  
+        font-size: 15px!important;  
         white-space: nowrap;
-        width: 50%;
+        width: 51%;
         overflow: hidden;
         text-overflow: ellipsis;
+        line-height: 36px!important;
     }    
 }
 

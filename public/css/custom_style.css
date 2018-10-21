@@ -46,7 +46,7 @@
 }
 
 .destination-grid-content .flag{
-    max-width: 225px;
+    max-width: 207px;
 /*    min-width: 247.5px;*/
     /*    max-width: 320px;*/
     margin-bottom: 10px;
@@ -103,12 +103,17 @@
 /*    width: 70%;*/
     font-weight: bold;
     line-height: 36px;
-    font-size: 20px;
+    font-size: 17px;
     color: #444;
     float: left;
     margin: 0 0 0 0px;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.package-hit-title h1 {
+    font-size: 30px;
+    margin: 0 0 0 0;
 }
 
 .panel-default > .panel-heading{
@@ -128,6 +133,22 @@
 .package-hit-title .section-title {
     text-align: left;
     margin-bottom: 14px;
+    display: inline-block;
+    float: left;
+    padding-right: 20px;
+}
+
+.package-hit-title .see-more{
+    float: left;
+    height: 45px;
+    margin-top: 2px;
+}
+.package-hit-title .see-more span{
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    color: #ed5565;
+    line-height: 45px;
 }
 .package-hit-title .section-descripion {
     font-size: 21px;
@@ -4306,7 +4327,7 @@ Custom BS3
 
 .cer-logo {
     font-family: 'Kanit', sans-serif;
-    font-size: 16px;    
+    font-size: 14px;    
     display: inline; 
     color: black;
     line-height: 60px;
@@ -4743,14 +4764,14 @@ Custom BS3
 .foot-location-head{
     font-family: 'Kanit', sans-serif;
     text-align: left;
-    font-size: 25px;
+    font-size: 21px;
     font-weight: 600;
     padding: 30px 15px 15px 15px;
 }
 .foot-location-detail{
     font-family: 'Kanit', sans-serif;
     text-align: left;
-    font-size: 17px;
+    font-size: 15px;
     padding: 5px 15px 10px 15px;
 }
 .foot-location-detail a{
@@ -5280,7 +5301,7 @@ Custom BS3
     .filter-page__content .trip-item .hilight .detail{        
         -webkit-line-clamp: 3;     
     }
-    .footer-one .box-border{font-size: 20px;}
+    .footer-one .box-border{font-size: 14px!important;}
     .foot-location-head{text-align: center;}
     .foot-location-detail{text-align: center;}
     #footer-page-bottom{height: 213px;}
@@ -5911,7 +5932,7 @@ https://flickity.metafizzy.co
 .footer-one{padding-bottom: 20px; }
 .footer-one .box-border{
     font-family: 'Kanit', sans-serif;
-    font-size:23px;
+    font-size:17px;
     text-align: center;
     border-right: 1px solid;
     color: #fff;
@@ -5963,7 +5984,7 @@ https://flickity.metafizzy.co
     font-family: 'Kanit', sans-serif;
     float: left;
     display: inline-block;
-    font-size: 17px;
+    font-size: 14px;
     text-align: left;
     padding: 1px 0;
     color: #fff;
@@ -6001,20 +6022,20 @@ https://flickity.metafizzy.co
 #header-page .work-time1 .main-text-time{
     line-height: 60px;
     height: 100%;
-    font-size:19px;
+    font-size:15px;
     overflow: hidden;
     display: inline;
 }
 
 #header-page .work-time2{
     height: 100%;
-    font-size: 16px;
+    font-size: 13px;
     float: right;
     padding-left: 10px;
     
 }
 
-#header-page .work-time2 .line-1{display: block; padding-top: 8px; text-align: right;}
+#header-page .work-time2 .line-1{display: block; padding-top: 12px; text-align: right;}
 #header-page .work-time2 .line-2{display: block;}
 
 #header-page .work-time-line{
@@ -6038,7 +6059,7 @@ https://flickity.metafizzy.co
 #header-page .work-time-tel{float: right;}
 #header-page .work-time-tel span{
     padding-left: 20px;
-    font-size: 21px;
+    font-size: 19px;
     color: #ed5565;
     font-family: 'supermarket', sans-serif;    
     font-weight: bold;
