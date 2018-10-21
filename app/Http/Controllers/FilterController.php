@@ -48,6 +48,14 @@ class FilterController extends Controller {
             $price_from = request()->get('_price_from');
             $price_to = request()->get('_price_to');
 
+            $_take = request()->get('_take');
+            $_page_num = request()->get('_page_num');
+
+            $take = (int) $_take;
+            $page_num = (int) $_page_num;
+            $skip = ($page_num - 1) * $take;
+
+
             if (!(count($route) > 0) && empty($start_date) && empty($end_date) && !(count($month) > 0) && !(count($days) > 0) && !(count($airline) > 0) && !(count($tags) > 0) && !(count($attraction) > 0) && !(count($others) > 0) && !empty($search_text)) {
                 $tourPackageList = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
                         ->join('route', 'route.route_id', '=', 'tour_route.route_id')
@@ -368,13 +376,17 @@ class FilterController extends Controller {
                 $tourPeriod = Tour_Period::whereIn('tour_package_id', $array)
                         ->get();
             } else {
-                $tourPackageList = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                $query = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                         ->join('country', 'country.country_id', '=', 'tour_country.country_id')
                         ->join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
                         ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                         ->where('tour_country.tour_country_name', $country)
-                        ->orderBy('tour_package.tour_package_price', 'asc')
+                        ->orderBy('tour_package.tour_package_price', 'asc');
+                $totalRecord = $query->count();
+                $tourPackageList = $query->skip($skip)
+                        ->take($take)
                         ->get();
+
                 $array = array();
                 foreach ($tourPackageList as $tour) {
                     array_push($array, $tour->tour_package_id);
@@ -383,7 +395,7 @@ class FilterController extends Controller {
                         ->get();
             }
 
-            return response()->json(array('tourPackageList' => $tourPackageList, 'tourPeriod' => $tourPeriod));
+            return response()->json(array('tourPackageList' => $tourPackageList, 'tourPeriod' => $tourPeriod, 'totalRecord' => $totalRecord));
         } catch (\Exception $e) {
             return response($e->getMessage());
         }
