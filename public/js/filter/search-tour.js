@@ -11,18 +11,18 @@ $(function () {
         $('.card_show').hide();
         start_date = start.format('YYYY-MM-DD');
         end_date = end.format('YYYY-MM-DD');
-        getTourPackage();
+        getTourPackage(page_num);
     });
     $('#date_picker').val("");
-
-   // $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
 
     search_text = getUrlParameter('search') == undefined ? "" : getUrlParameter('search');
     start_date = getUrlParameter('start_date') == undefined ? "" : getUrlParameter('start_date');
     end_date = getUrlParameter('end_date') == undefined ? "" : getUrlParameter('end_date');
     var days_no = getUrlParameter('days') == undefined ? [] : getUrlParameter('days');
     ary_days = days_no == "" ? [] : [days_no];
-    getTourPackage(); // init package tour card
+    
+    var page_num = 1; // default page number
+    getTourPackage(page_num); // init package tour card
     checkboxChecked();
 
     if (ary_days.length > 0) {
@@ -46,7 +46,7 @@ $(function () {
         $('#loading').show();
         $('.card_show').hide();
         search_text = $('#search_text').val();
-        getTourPackage();
+        getTourPackage(page_num);
     });
 
     $('#search_text').keypress(function (e) {
@@ -56,7 +56,7 @@ $(function () {
             $('#loading').show();
             $('.card_show').hide();
             search_text = $('#search_text').val();
-            getTourPackage();
+            getTourPackage(page_num);
             return false;
         }
     });
@@ -67,7 +67,7 @@ $(function () {
         $('.card_show').hide();
         start_date = "";
         end_date = "";
-        getTourPackage();
+        getTourPackage(page_num);
     });
     $('#price_to').text(numberWithCommas(50000));
 
@@ -258,8 +258,9 @@ function expandCheckboxDates() {
     });
 }
 
-function getTourPackage() {
+function getTourPackage(page_num) {
     var country = getUrlParameter('country');
+    var take = 7;
     if (country != "" && country != null) {
         $.ajax({
             type: 'post',
@@ -278,7 +279,9 @@ function getTourPackage() {
                 '_attraction': JSON.stringify(ary_attraction),
                 '_others': JSON.stringify(ary_others),
                 '_price_from': "",
-                '_price_to': ""
+                '_price_to': "",
+                '_page_num': page_num,
+                '_take': take
             },
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -286,10 +289,14 @@ function getTourPackage() {
             success: function (data) {
                 renderTourCard(data.tourPackageList, data.tourPeriod);
                 if (data != null && data.tourPackageList.length > 0) {
-                    $('#package_country').html(data.tourPackageList[0].tour_country_name + " ทั้งหมด " + data.tourPackageList.length + " แพ็คเกจ");
+                    var total_record = parseInt(data.totalRecord);
+
+                    $('#package_country').html(data.tourPackageList[0].tour_country_name + " ทั้งหมด " + total_record + " แพ็คเกจ");
                     $("#package_country_image").attr("src", "../images/fg/" + data.tourPackageList[0].country_code.toLowerCase() + ".png");
+                    
                     $("#search_tour_pager").empty();
-                    //$('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
+                    $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, pageNum: page_num, perPage: take, totalRecord: total_record});
+                    
                     $('.card_show').show();
                     $('#loading').hide();
                 }
@@ -322,7 +329,7 @@ function checkboxChecked() {
             $('.card_show').hide();
             ary_route = [];
             $('.route_checkbox').prop('checked', false);
-            getTourPackage();
+            getTourPackage(1);
         }
     });
 
@@ -334,7 +341,7 @@ function checkboxChecked() {
             ary_route[i] = $(this).val();
         });
         $('#route_all').prop('checked', false); // Unchecks it
-        getTourPackage();
+        getTourPackage(1);
     });
 
     $('#holiday_all').on('change', function (evt) {
@@ -344,7 +351,7 @@ function checkboxChecked() {
             start_date = "";
             end_date = "";
             $('.holiday_checkbox').prop('checked', false);
-            getTourPackage();
+            getTourPackage(1);
         }
     });
 
@@ -358,7 +365,7 @@ function checkboxChecked() {
         });
         $('#holiday_all').prop('checked', false); // Unchecks it
         $('.holiday_checkbox').not(this).prop('checked', false);
-        getTourPackage();
+        getTourPackage(1);
     });
 
     $('#month_all').on('change', function (evt) {
@@ -367,7 +374,7 @@ function checkboxChecked() {
             $('.card_show').hide();
             ary_month = [];
             $('.month_checkbox').prop('checked', false);
-            getTourPackage();
+            getTourPackage(1);
         }
     });
 
@@ -379,7 +386,7 @@ function checkboxChecked() {
             ary_month[i] = $(this).val();
         });
         $('#month_all').prop('checked', false); // Unchecks it
-        getTourPackage();
+        getTourPackage(1);
     });
 
     $('#day_all').on('change', function (evt) {
@@ -388,7 +395,7 @@ function checkboxChecked() {
             $('.card_show').hide();
             ary_days = [];
             $('.days_checkbox').prop('checked', false);
-            getTourPackage();
+            getTourPackage(1);
         }
     });
 
@@ -400,7 +407,7 @@ function checkboxChecked() {
             ary_days[i] = $(this).val();
         });
         $('#day_all').prop('checked', false); // Unchecks it
-        getTourPackage();
+        getTourPackage(1);
     });
 
     $('#airline_all').on('change', function (evt) {
@@ -409,7 +416,7 @@ function checkboxChecked() {
             $('.card_show').hide();
             ary_airline = [];
             $('.airline_checkbox').prop('checked', false);
-            getTourPackage();
+            getTourPackage(1);
         }
     });
 
@@ -421,7 +428,7 @@ function checkboxChecked() {
             ary_airline[i] = $(this).val();
         });
         $('#airline_all').prop('checked', false); // Unchecks it
-        getTourPackage();
+        getTourPackage(1);
     });
 }
 
@@ -505,7 +512,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
         $('#search_tour_pager').show();
     } else {
         $('.card_show').show();
-        $('#loading').show();
+        $('#loading').hide();
         $('#package_country').hide();
         $('#package_country_image').hide();
         $('#sorting').hide();

@@ -164,10 +164,11 @@ function createTable() {
                     Str = Str + '<td>' + rowNo + '</td>';
                     Str = Str + '<td>' + data[row].country_name + '</td>';
                     Str = Str + '<td>' + data[row].tour_country_name + '</td>';
+                    Str = Str + '<td>' + data[row].tour_country_url + '</td>';
                     Str = Str + '<td>' + data[row].tour_country_detail + '</td>';
 //                    Str=Str+'<td> <img src="images/tourCountry/'+data[row].tour_country_img+'" style="height:40px;"></td>'; 
                     Str = Str + '<td>' + data[row].created_by + '</td>';
-                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCountry(' + data[row].tour_country_id + ',\'' + data[row].tour_country_name + '\',\'' + data[row].tour_country_detail + '\',\'' + data[row].country_id + '\')">\n\
+                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCountry(' + data[row].tour_country_id + ',\'' + data[row].tour_country_name + '\',\'' + data[row].tour_country_detail + '\',\'' + data[row].country_id+ '\',\'' + data[row].tour_country_url + '\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
                     Str = Str + '<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeTourCountry(' + data[row].tour_country_id + ')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
@@ -190,10 +191,11 @@ function removeTourCountry(id) {
     $('#hidden_remove_id').val(id);
     // $('#removeModal').modal('show'); 
 }
-function editTourCountry(id, tourCountryName, tourCountryDetail, countryId) {
+function editTourCountry(id, tourCountryName, tourCountryDetail, countryId, tourCountryUrl) {
     createCountryDropDown('update_country_select');
     $('#hidden_update_id').val(id);
     $('#update_tour_country_name').val(tourCountryName);
+    $('#update_tour_country_url').val(tourCountryUrl);
     $('#update_tour_country_detail').val(tourCountryDetail);
     $('#update_country_select').val(countryId);
     // $('#editModal').modal('hide'); 
@@ -207,6 +209,7 @@ function saveTourCountry() {
         return false;
     }
     var country_id = $('#country').val();
+    var tour_country_url = $('#tour_country_url').val();
     var tour_country_detail = $('#tour_country_detail').val();
     var tour_country_img = $('#tour_country_picture').val();
 
@@ -215,7 +218,7 @@ function saveTourCountry() {
         url: 'saveTourCountry',
         async: false,
         data: {'tour_country_name': tour_country_name, 'country_id': country_id
-            , 'tour_country_detail': tour_country_detail, 'tour_country_img': tour_country_img},
+            , 'tour_country_detail': tour_country_detail, 'tour_country_img': tour_country_img, 'tour_country_url': tour_country_url},
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
@@ -267,10 +270,11 @@ function findTourCountryByName(input_tour_country_name) {
                     Str = Str + '<td>' + rowNo + '</td>';
                     Str = Str + '<td>' + data[row].country_name + '</td>';
                     Str = Str + '<td>' + data[row].tour_country_name + '</td>';
+                    Str = Str + '<td>' + data[row].tour_country_url + '</td>';
                     Str = Str + '<td>' + data[row].tour_country_detail + '</td>';
                     Str = Str + '<td> <img src="images/tourCountry/' + data[row].tour_country_img + '" style="height:40px;"></td>';
                     Str = Str + '<td>' + data[row].created_by + '</td>';
-                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCountry(' + data[row].tour_country_id + ',\'' + data[row].tour_country_name + '\',\'' + data[row].tour_country_detail + '\',\'' + data[row].country_id + '\')">\n\
+                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTourCountry(' + data[row].tour_country_id + ',\'' + data[row].tour_country_name + '\',\'' + data[row].tour_country_detail + '\',\'' + data[row].country_id+ '\',\'' + data[row].tour_country_url + '\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
                     Str = Str + '<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeTourCountry(' + data[row].tour_country_id + ')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
@@ -319,6 +323,7 @@ function updateTourCountry() {
     var id = $('#hidden_update_id').val();
     var update_tour_country_name = $('#update_tour_country_name').val();
     var country_id = $('#countryEdit').val();
+    var tour_country_url = $('#update_tour_country_url').val();
     var tour_country_detail = $('#update_tour_country_detail').val();
     var tour_country_img = $('#update_tour_country_picture').val();
 
@@ -328,7 +333,7 @@ function updateTourCountry() {
         async: false,
         data: {'id': id, 'update_tour_country_name': update_tour_country_name
             , 'country_id': country_id, 'tour_country_detail': tour_country_detail
-            , 'tour_country_img': tour_country_img},
+            , 'tour_country_img': tour_country_img, 'tour_country_url': tour_country_url},
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },

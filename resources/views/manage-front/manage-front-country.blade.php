@@ -38,6 +38,7 @@
                 <th>ลำดับที่</th>
                 <th>ชื่อประเทศ</th>
                 <th>ชื่อทัวร์ประเทศ</th>
+                <th>URL</th>
                 <th>รายละเอียด</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
@@ -51,6 +52,7 @@
                 <th>ลำดับที่</th>
                 <th>ชื่อประเทศ</th>
                 <th>ชื่อทัวร์ประเทศ</th>
+                <th>URL</th>
                 <th>รายละเอียด</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
@@ -82,6 +84,9 @@
             <br> 
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
             <input type="text" class="form-control" id="tour_country_name" name="tour_country_name" maxlength="100" required="required">
+            <br> 
+            <label for="recipient-name" class="col-form-label">URL:</label>
+            <input type="text" class="form-control" id="tour_country_url" name="tour_country_url" maxlength="100" required="required">
             <br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
             <input type="text" class="form-control" id="tour_country_detail" name="tour_country_detail">
@@ -121,6 +126,9 @@
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
             <input type="text" class="form-control" id="update_tour_country_name" name="update_tour_country_name" maxlength="100" >
             <input type="hidden" class="form-control" id="hidden_update_id" name="hidden_update_id">
+            <br> 
+            <label for="recipient-name" class="col-form-label">URL:</label>
+            <input type="text" class="form-control" id="update_tour_country_url" name="update_tour_country_url" maxlength="100" required="required">
             <br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
             <input type="text" class="form-control" id="update_tour_country_detail" name="update_tour_country_detail">

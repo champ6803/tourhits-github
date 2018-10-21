@@ -25,7 +25,7 @@ Route::post('getDistrict', 'MasterController@getDistrict');
 
 Route::post('getSubdistrict', 'MasterController@getSubdistrict');
 
-Route::get('search-tour/{country_id}', 'FilterController@search_tour');
+Route::get('tour/{country_url}', 'FilterController@search_tour');
 
 //Route::get('adminlogin','LoginController@adminLogin');
 
@@ -95,7 +95,7 @@ Route::post('updateOther', 'AdminController@updateOther');
 
 Route::get('manage-category', 'AdminController@manage_category');
 
-Route::post('search-tour/getTourPackage', 'FilterController@getTourPackage');
+Route::post('tour/getTourPackage', 'FilterController@getTourPackage');
 
 Route::post('getTourPackage', 'FilterController@getTourPackage');
 
