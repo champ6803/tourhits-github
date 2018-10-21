@@ -119,7 +119,7 @@ session_start();
                                     <hr id="home" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a><i class="fas fa-globe-americas"></i>&nbsp;แพ็คเกจทัวร์</a>
+                                    <a><i class="fas fa-globe-africa"></i>&nbsp;แพ็คเกจทัวร์</a>
                                     <hr id="package_tour" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                     <ul class="col-md-12 sub-menu">
                                         <div class="col-md-4 cat-asian cat-line">
