@@ -65,4 +65,14 @@ class Tour_Airline extends Model {
         }
     }
 
+    public function removeTourAirline($id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            Tour_Airline::where('tour_package_id', $id)
+                    ->delete();
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
 }

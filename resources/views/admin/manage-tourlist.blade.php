@@ -308,7 +308,7 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <table class="table table-bordered" id="period_table">
-                                                        <thead>
+                                                        <thead class="text-center">
                                                             <tr>
                                                                 <th align='center'>
                                                                     No.
@@ -327,6 +327,9 @@
                                                                 </th>
                                                                 <th align='center'>
                                                                     Special Price
+                                                                </th>
+                                                                <th align='center'>
+                                                                    Action
                                                                 </th>
                                                             </tr>
                                                         </thead>
@@ -662,6 +665,45 @@
                         </div>-->
 
         </form>
+
+        <!--edit Modal -->
+        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">แก้ไขข้อมูลทัวร์ประเทศ</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label id="label_update_no" for="recipient-name" class="col-form-label"></label>
+                                <input type="hidden" id="hidden_update_no" name="hidden_update_no">
+                                <br>
+                                <label for="recipient-name" class="col-form-label">Period Start:</label>
+                                <input type="text" class="form-control" id="update_period_start" name="update_period_start" maxlength="100" required="required">
+                                <br> 
+                                <label for="recipient-name" class="col-form-label">Period End:</label>
+                                <input type="text" class="form-control" id="update_period_end" name="update_period_end" maxlength="100" required="required">
+                                <br> 
+                                <label for="recipient-name" class="col-form-label">Adult Price:</label>
+                                <input type="text" class="form-control" id="update_adult_price" name="update_adult_price" maxlength="100" required="required">
+                                <br> 
+                                <label for="recipient-name" class="col-form-label">Child Price:</label>
+                                <input type="text" class="form-control" id="update_child_price" name="update_child_price">
+                                <br> 
+                                <label for="recipient-name" class="col-form-label">Special Price:</label>
+                                <input type="text" class="form-control" id="update_special_price" name="update_special_price">
+                            </div>
+                        </div>
+                        <div class="modal-footer" style="text-align: right ; width: 100%">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+                            <button type="button" id="btn_edit_period" name="button" class="btn btn-primary">แก้ไข</button>
+                        </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 @stop

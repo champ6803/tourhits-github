@@ -591,27 +591,27 @@ function initValues() {
         }
         if (tourPackageDetail.tourTag && tourPackageDetail.tourTag.length > 0) {
             var o = tourPackageDetail.tourTag;
-            $('#tag_select').select2('val', o);
+            $('#tag_select').select2('val', [o]);
         }
 
         if (tourPackageDetail.tourRoute && tourPackageDetail.tourRoute.length > 0) {
             var o = tourPackageDetail.tourRoute;
-            $('#route_select').select2('val', o);
+            $('#route_select').select2('val', [o]);
         }
 
         if (tourPackageDetail.tourAirline && tourPackageDetail.tourAirline.length > 0) {
             var o = tourPackageDetail.tourAirline;
-            $('#airline_select').select2('val', o);
+            $('#airline_select').select2('val', [o]);
         }
 
         if (tourPackageDetail.tourHoliday && tourPackageDetail.tourHoliday.length > 0) {
             var o = tourPackageDetail.tourHoliday;
-            $('#holiday_select').select2('val', o);
+            $('#holiday_select').select2('val', [o]);
         }
 
         if (tourPackageDetail.tourAttraction && tourPackageDetail.tourAttraction.length > 0) {
             var o = tourPackageDetail.tourAttraction;
-            $('#attraction_select').select2('val', o);
+            $('#attraction_select').select2('val', [o]);
         }
         // set status tour
 

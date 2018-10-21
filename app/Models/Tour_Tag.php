@@ -50,16 +50,25 @@ class Tour_Tag extends Model {
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );
-            } else {
-                Tour_Tag::insert(
-                        ['tag_id' => $tag_id
-                            , 'tour_package_id' => $id
-                            , 'created_by' => 'admin'
-                            , 'created_at' => $date
-                            , 'updated_by' => 'admin'
-                            , 'updated_at' => $date]
-                );
             }
+            Tour_Tag::insert(
+                    ['tag_id' => $tag_id
+                        , 'tour_package_id' => $id
+                        , 'created_by' => 'admin'
+                        , 'created_at' => $date
+                        , 'updated_by' => 'admin'
+                        , 'updated_at' => $date]
+            );
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function removeTourTag($id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            Tour_Tag::where('tour_package_id', $id)
+                    ->delete();
         } catch (Exception $ex) {
             return $ex;
         }

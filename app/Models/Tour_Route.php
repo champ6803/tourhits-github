@@ -65,4 +65,14 @@ class Tour_Route extends Model {
         }
     }
 
+    public function removeTourRoute($id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            $tourRouteList = Tour_Route::where('tour_package_id', $id)
+                    ->delete();
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
 }

@@ -36,21 +36,47 @@ $(function () {
     createConditionsDropDown();
     $("#start_date").datepicker({
         format: 'dd/mm/yyyy',
-        todayBtn: true
+        todayBtn: true,
+        autoclose: true
     }).datepicker("setDate", "0");
+
+    $("#start_date").change(function () {
+        $("#end_date").datepicker("setDate", this.value);
+    });
+
     $("#end_date").datepicker({
         format: 'dd/mm/yyyy',
-        todayBtn: true
+        todayBtn: true,
+        autoclose: true
     }).datepicker("setDate", "0");
+
     $("#period_start").datepicker({
         format: 'dd/mm/yyyy',
-        todayBtn: true
+        todayBtn: true,
+        autoclose: true
     }).datepicker("setDate", "0");
+
+    $("#period_start").change(function () {
+        $("#period_end").datepicker("setDate", this.value);
+    });
+
     $("#period_end").datepicker({
         format: 'dd/mm/yyyy',
-        todayBtn: true
+        todayBtn: true,
+        autoclose: true
     }).datepicker("setDate", "0");
     //tinymce.init({selector: '.tour-main'});
+
+    $('#update_period_start').datepicker({
+        format: 'dd/mm/yyyy',
+        todayBtn: true,
+        autoclose: true
+    });
+    $('#update_period_end').datepicker({
+        format: 'dd/mm/yyyy',
+        todayBtn: true,
+        autoclose: true
+    });
 
     CKEDITOR.replace('tour_detail');
     CKEDITOR.replace('tour_detail_0');
@@ -67,12 +93,13 @@ $(function () {
             }
             number++;
             var table = "<tr>";
-            table = table + "<td>" + number + '<input type="hidden" class="run_number" value="' + number + '" /></td>';
-            table = table + "<td>" + period_start + '<input type="hidden" name="period_start[]" value="' + period_start + '" /></td>';
-            table = table + "<td>" + period_end + '<input type="hidden" name="period_end[]" value="' + period_end + '" /></td>';
-            table = table + "<td align='right'>" + numberWithCommas(adult_price) + '<input type="hidden" name="adult_price[]" value="' + adult_price + '" /></td>';
-            table = table + "<td align='right'>" + numberWithCommas(child_price) + '<input type="hidden" name="child_price[]" value="' + child_price + '" /></td>';
-            table = table + "<td align='right'>" + numberWithCommas(special_price) + '<input type="hidden" name="special_price[]" value="' + special_price + '" /></td>';
+            table = table + "<td>" + number + '<input id="no_' + number + '" type="hidden" class="run_number" value="' + number + '" /></td>';
+            table = table + "<td>" + period_start + '<input id="period_start_' + number + '" type="hidden" name="period_start[]" value="' + period_start + '" /></td>';
+            table = table + "<td>" + period_end + '<input id="period_end_' + number + '" type="hidden" name="period_end[]" value="' + period_end + '" /></td>';
+            table = table + "<td align='right'>" + numberWithCommas(adult_price) + '<input id="adult_price_' + number + '" type="hidden" name="adult_price[]" value="' + adult_price + '" /></td>';
+            table = table + "<td align='right'>" + numberWithCommas(child_price) + '<input id="child_price_' + number + '" type="hidden" name="child_price[]" value="' + child_price + '" /></td>';
+            table = table + "<td align='right'>" + numberWithCommas(special_price) + '<input id="special_price_' + number + '" type="hidden" name="special_price[]" value="' + special_price + '" /></td>';
+            table = table + "<td align='center'><button type='button' class='btn btn-primary btn-xs' onclick='editPeriod(" + number + ")'><i class='fa fa-pencil-square'></i></button>&nbsp;<button type='button' class='btn btn-danger btn-xs' onclick='deletePeriod(" + number + ")'><i class='fa fa-trash'></i></button></td>";
             table = table + "</tr>";
             $('#period_body').append(table);
         }
@@ -98,7 +125,59 @@ $(function () {
         $('#quick_tour').val(true);
         $('.nav-tabs a[href="#periods"]').tab('show');
     });
+
+    $('#btn_edit_period').click(function () {
+        var num = $('#hidden_update_no').val();
+        if (num) {
+            var r_number = (parseInt(num) - 1);
+            console.log($('#period_body > tr').eq(r_number))
+            var tr = $('#period_body > tr').eq(r_number);
+            var children = tr.children();
+            var period_start = $('#update_period_start').val();
+            var period_end = $('#update_period_end').val();
+            var adult_price = $('#update_adult_price').val();
+            var child_price = $('#update_child_price').val();
+            var special_price = $('#update_special_price').val();
+            
+            children.eq(1).html(period_start + '<input id="period_start_' + num + '" type="hidden" name="period_start[]" value="' + period_start + '" /></td>');
+            children.eq(2).html(period_end + '<input id="period_end_' + num + '" type="hidden" name="period_end[]" value="' + period_end + '" /></td>');
+            children.eq(3).html(numberWithCommas(adult_price) + '<input id="adult_price_' + num + '" type="hidden" name="adult_price[]" value="' + adult_price + '" /></td>');
+            children.eq(4).html(numberWithCommas(child_price) + '<input id="child_price_' + num + '" type="hidden" name="child_price[]" value="' + child_price + '" /></td>');
+            children.eq(5).html(numberWithCommas(special_price) + '<input id="special_price_' + num + '" type="hidden" name="special_price[]" value="' + special_price + '" /></td>');
+
+            $('#editModal').modal('hide');
+        } else {
+            alert("no number");
+        }
+    });
 });
+
+function editPeriod(num) {
+    if (num) {
+        var period_start = $('#period_start_' + num).val();
+        var period_end = $('#period_end_' + num).val();
+        var adult_price = $('#adult_price_' + num).val();
+        var child_price = $('#child_price_' + num).val();
+        var special_price = $('#special_price_' + num).val();
+
+        $('#label_update_no').html("No : " + num);
+        $('#hidden_update_no').val(num);
+        $('#update_period_start').datepicker("setDate", period_start);
+        $('#update_period_end').datepicker("setDate", period_end);
+        $('#update_adult_price').val(adult_price);
+        $('#update_child_price').val(child_price);
+        $('#update_special_price').val(special_price);
+
+        $('#editModal').modal();
+    }
+}
+
+function deletePeriod(num) {
+    if (num) {
+        var r_number = (parseInt(num) - 1);
+        $('#period_body > tr').eq(r_number).remove();
+    }
+}
 
 function runNumber(value, row, index, field) {
     return parseInt(index) + 1;

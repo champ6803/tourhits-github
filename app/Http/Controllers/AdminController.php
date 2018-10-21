@@ -903,7 +903,7 @@ class AdminController extends Controller {
                                     ->withInput();
                 }
             }
-            
+
             DB::transaction(function () {
                 try {
                     $quick_tour = ($_POST['quick_tour'] === 'true');
@@ -1021,18 +1021,21 @@ class AdminController extends Controller {
                                     }
                                 }
                             }
+                        }
 
-                            if (($airline_select != null) && ($airline_select != '')) {
-                                foreach ($airline_select as $value) {
-                                    $tourAirlineModel->updateTourAirline($tour_package_id, $value);
-                                }
+                        if (($airline_select != null) && ($airline_select != '')) {
+                            $tourAirlineModel->removeTourAirline($tour_package_id);
+                            foreach ($airline_select as $value) {
+                                $tourAirlineModel->updateTourAirline($tour_package_id, $value);
                             }
+                        }
 
-                            if (($holiday_select != null) && ($holiday_select != '')) {
-                                foreach ($holiday_select as $value) {
-                                    $tourHolidayModel->updateTourHoliday($tour_package_id, $value);
-                                }
+                        if (($holiday_select != null) && ($holiday_select != '')) {
+                            $tourHolidayModel->removeTourHoliday($tour_package_id);
+                            foreach ($holiday_select as $value) {
+                                $tourHolidayModel->updateTourHoliday($tour_package_id, $value);
                             }
+                        }
 
 //                            if (($attraction_select != null) && ($attraction_select != '')) {
 //                                foreach ($attraction_select as $value) {
@@ -1040,17 +1043,19 @@ class AdminController extends Controller {
 //                                }
 //                            }
 
-                            if (($tag_select != null) && ($tag_select != '')) {
-                                foreach ($tag_select as $value) {
-                                    $tourTagModel->updateTourTag($tour_package_id, $value);
-                                }
+                        if (($tag_select != null) && ($tag_select != '')) {
+                            $tourTagModel->removeTourTag($tour_package_id);
+                            foreach ($tag_select as $value) {
+                                $tourTagModel->updateTourTag($tour_package_id, $value);
                             }
+                        }
 
-                            if (($route_select != null) && ($route_select != '')) {
-                                foreach ($route_select as $value) {
-                                    $tourRoute->updateTourRoute($tour_package_id, $value);
-                                }
+                        if (($route_select != null) && ($route_select != '')) {
+                            $tourRoute->removeTourRoute($tour_package_id);
+                            foreach ($route_select as $value) {
+                                $tourRoute->updateTourRoute($tour_package_id, $value);
                             }
+                        }
 
 //                            $arr_tour_image_id = explode(",", $tour_image_id);
 //                            if (($images != null) && ($images != '')) {
@@ -1058,7 +1063,6 @@ class AdminController extends Controller {
 //                                    $tourImageModel->updateTourImage($arr_tour_image_id[$key], $tour_package_id, $images);
 //                                }
 //                            }
-                        }
                     }
 
 

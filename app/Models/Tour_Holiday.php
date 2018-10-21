@@ -64,5 +64,15 @@ class Tour_Holiday extends Model {
             return $ex;
         }
     }
+    
+    public function removeTourHoliday($id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            $tourHolidayList = Tour_Holiday::where('tour_package_id', $id)
+                    ->delete();
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
 
 }
