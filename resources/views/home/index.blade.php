@@ -90,13 +90,13 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <select id="country_dropdown" class="form-control">
-                                        <option value="ทัวร์ญี่ปุ่น">ญี่ปุ่น</option>
-                                        <option value="ทัวร์จีน">จีน</option>
-                                        <option value="ทัวร์เกาหลี">เกาหลี</option>
-                                        <option value="ทัวร์เวียดนาม">เวียดนาม</option>
-                                        <option value="ทัวร์ยุโรป">ยุโรป</option>
-                                        <option value="ทัวร์พม่า">พม่า</option>
-                                        <option value="ทัวร์ฮ่องกง">ฮ่องกง</option>
+                                        <option value="japan">ญี่ปุ่น</option>
+                                        <option value="china">จีน</option>
+                                        <option value="korea">เกาหลี</option>
+                                        <option value="vietnam">เวียดนาม</option>
+                                        <option value="europe">ยุโรป</option>
+                                        <option value="myanmar">พม่า</option>
+                                        <option value="hongkong">ฮ่องกง</option>
                                     </select>
                                 </div>
                             </div>
