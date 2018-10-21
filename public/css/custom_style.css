@@ -5197,7 +5197,7 @@ Custom BS3
 
 .page-sidebar .swiper-wrapper{
     display: inline-block;
-    margin-left: 2px;
+    margin-left: 10px;
 }
 
 .page-sidebar .tour-local-nav>.local-nav-item{

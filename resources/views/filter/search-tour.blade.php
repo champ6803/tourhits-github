@@ -1142,48 +1142,7 @@
                                     </div>
                                 </div>-->
 
-<!--                <div class="sidebar-title hidden-xs">
-                    <h3>ทัวร์แนะนำ :</h3>         
-                </div>
-                <div class="left-bar2">
-                    <div class="box-content hidden-xs">
-                        <div class="swiper-wrapper tour-local-nav" style="transform: translate3d(0px, 0px, 0px);">
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่นราคาถูก</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์โตเกียว</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
-                            </div>                                   
-                        </div> 
-                    </div>
-                </div>    -->
+
 
 
             </div>
@@ -1247,6 +1206,49 @@
 
                     </div>    
                 </div>
+                
+                <div class="sidebar-title hidden-xs">
+                    <h3><i class="fa fa-check-circle" aria-hidden="true"></i> ทัวร์แนะนำ</h3>         
+                </div>
+                <div class="left-bar2">
+                    <div class="box-content hidden-xs">
+                        <div class="swiper-wrapper tour-local-nav" style="transform: translate3d(0px, 0px, 0px);">
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่นราคาถูก</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์โตเกียว</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
+                            </div>
+                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
+                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
+                            </div>                                   
+                        </div> 
+                    </div>
+                </div>    
             </div>
         </div>
 
