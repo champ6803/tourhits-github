@@ -183,7 +183,7 @@
                                             </div>
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/eue?country=26')}}">
                                                     <img style="border-radius: 4px;" data-src="../images/flags/eu.png" alt="ทัวร์ยุโรปตะวันออก" class=" lazyloaded" src="../images/flags/eu.png">
-                                                    <h5 style="font-size: 14px;">ทัวร์ยุโรปตะวันออก</h5>
+                                                    <h5>ทัวร์ยุโรปตะวันออก</h5>
                                                 </a>
                                             </div>
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/hongkong?country=0')}}">

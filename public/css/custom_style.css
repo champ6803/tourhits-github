@@ -46,7 +46,7 @@
 }
 
 .destination-grid-content .flag{
-    max-width: 225px;
+    max-width: 207px;
 /*    min-width: 247.5px;*/
     /*    max-width: 320px;*/
     margin-bottom: 10px;
@@ -103,12 +103,16 @@
 /*    width: 70%;*/
     font-weight: bold;
     line-height: 36px;
-    font-size: 20px;
+    font-size: 17px;
     color: #444;
     float: left;
     margin: 0 0 0 0px;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.package-hit-title h1 {
+    font-size: 30px;
 }
 
 .panel-default > .panel-heading{
@@ -4306,7 +4310,7 @@ Custom BS3
 
 .cer-logo {
     font-family: 'Kanit', sans-serif;
-    font-size: 16px;    
+    font-size: 14px;    
     display: inline; 
     color: black;
     line-height: 60px;
@@ -6001,20 +6005,20 @@ https://flickity.metafizzy.co
 #header-page .work-time1 .main-text-time{
     line-height: 60px;
     height: 100%;
-    font-size:19px;
+    font-size:15px;
     overflow: hidden;
     display: inline;
 }
 
 #header-page .work-time2{
     height: 100%;
-    font-size: 16px;
+    font-size: 13px;
     float: right;
     padding-left: 10px;
     
 }
 
-#header-page .work-time2 .line-1{display: block; padding-top: 8px; text-align: right;}
+#header-page .work-time2 .line-1{display: block; padding-top: 12px; text-align: right;}
 #header-page .work-time2 .line-2{display: block;}
 
 #header-page .work-time-line{
@@ -6038,7 +6042,7 @@ https://flickity.metafizzy.co
 #header-page .work-time-tel{float: right;}
 #header-page .work-time-tel span{
     padding-left: 20px;
-    font-size: 21px;
+    font-size: 19px;
     color: #ed5565;
     font-family: 'supermarket', sans-serif;    
     font-weight: bold;
