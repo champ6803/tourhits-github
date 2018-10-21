@@ -25,24 +25,32 @@ $.fn.pageMe = function (opts) {
     var numPages = Math.ceil(numItems / perPage);
     var curr = parseInt(settings.pageNum) - 1;
     var pg = curr;
-    var last_num = curr + 5;
-    pager.data("curr", curr);
+    var last_num = curr + 3;
     console.log(pager.children());
 
     if (settings.showPrevNext) {
         $('<li><a href="#" class="prev_link back"><i class="fas fa-chevron-circle-left"></i> หน้าก่อน</a></li>').appendTo(pager);
     }
 
+    if (curr > 1) {
+        $('<li><a href="#" class="page_link p">' + (1) + '</a></li>').appendTo(pager);
+        $('<li><a href="javascript:void(0)">' + " ... " + '</a></li>').appendTo(pager);
+    }
     while (numPages > pg && (settings.hidePageNumbers == false)) {
         if (pg < last_num) {
-            $('<li><a href="javascript:void(0)" class="page_link p">' + (pg + 1) + '</a></li>').appendTo(pager);
+            $('<li><a href="#" class="page_link p">' + (pg + 1) + '</a></li>').appendTo(pager);
         } else if (pg == numPages - 1) {
-            $('<li><a href="javascript:void(0)" class="page_link p">' + (pg + 1) + '</a></li>').appendTo(pager);
+            $('<li><a href="#" class="page_link p">' + (pg + 1) + '</a></li>').appendTo(pager);
         } else if (pg == last_num) {
             $('<li><a href="javascript:void(0)">' + " ... " + '</a></li>').appendTo(pager);
         }
         pg++;
     }
+
+    pager.data("curr", curr);
+    pager.children().removeClass("active");
+    pager.children().eq((curr > 1 ? 3 : 1)).addClass("active");
+
 
 //    for (var i = 0; i < numPages; i++) {
 //        if (i < last_num) {
@@ -105,9 +113,7 @@ $.fn.pageMe = function (opts) {
         pager.find('.next_link').hide();
     }
 
-    pager.data("curr", curr);
-    pager.children().removeClass("active");
-    pager.children().eq(1).addClass("active");
+
 
     function goTo(page) {
         getTourPackage(parseInt(page) + 1);

@@ -2,7 +2,7 @@
 <?php
 session_start();
 ?>
-<html lang="en" style="zoom: 80%;">
+<html lang="en">
     <head>
         <meta charset="utf-8">
 
