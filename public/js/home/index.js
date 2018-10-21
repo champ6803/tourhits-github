@@ -37,7 +37,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
         $.each(obj, function (key, val) {
             var div = '<div class="col-sm-6 col-md-6 col-lg-3" align="center">';
             div = div + '<div class="thumbnail card--content">';
-            div = div + '<a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">';
+            div = div + '<a href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">';
             div = div + '<div class="tour-cover lazyloaded" data-bg="' + rootPath + '/tour/' + val['tour_package_image'] + '" style="background-image: url(&quot;' + rootPath + '/tour/' + val['tour_package_image'] + '&quot;);">';
             div = div + '<div class="tour-footer">';
             div = div + '<div class="pull-left">';

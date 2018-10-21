@@ -274,7 +274,7 @@ function getTourPackage(page_num) {
                 '_end_date': end_date,
                 '_month': JSON.stringify(ary_month),
                 '_days': JSON.stringify(ary_days),
-                '_airline': JSON.stringify(ary_airline),
+                '_airline': JSON.stringify(ary_airline),    
                 '_tags': JSON.stringify(ary_tags),
                 '_attraction': JSON.stringify(ary_attraction),
                 '_others': JSON.stringify(ary_others),
@@ -449,7 +449,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + '</div>';
             div = div + '<div class="item-body">';
             //div = div + '<div class="item-title"><h5 style="color:#ea1c24"><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_name + '</a></h5></div>';
-            div = div + '<div class="item-title"><h2><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_name + '</a></h2></div>';
+            div = div + '<div class="item-title"><h2><a href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">' + this.tour_package_name + '</a></h2></div>';
             div = div + '<div class="hilight">';
             div = div + '<i class="far fa-flag"></i>';
             div = div + '<div class="detail">';
