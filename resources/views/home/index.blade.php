@@ -718,7 +718,7 @@
 <!--                <div class="line-gradient"></div>-->
             </div>
         </div>    
-            <div class="awe-masonry item-9" style="position: relative; height: 877.5px;">
+        <div class="awe-masonry item-9" style="position: relative; height: 877.5px;">
                 <!-- GALLERY ITEM -->
                 <div class="first-item-image awe-masonry__item" style="position: absolute; left: 0px; top: 0px;">
                     <a>
@@ -801,7 +801,7 @@
                 </div>
                 <!-- END / GALLERY ITEM -->            
 
-            </div>   
+        </div>   
 
 
             <!--            <div class="openGallery-board">
@@ -890,7 +890,6 @@
                             <img width="250px;" src="../images/sponsor/pizza.jpg">
                         </div>-->
 
-        </div>
 
         <div id="Carousel" class="carousel slide">
 
@@ -940,9 +939,8 @@
 
             </div>
         </div>
-    </div>
+        </div>
     
-
 </section>
 @stop
 @section('footer_scripts')
