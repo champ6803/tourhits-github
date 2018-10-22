@@ -5313,6 +5313,14 @@ Custom BS3
     margin-top: 11px;
 }
 
+.filter-page__content .page-top span{
+    float: right;
+    font-size: 17px;
+    padding-right: 10px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
 
 @media screen and (max-width: 464px){
 
@@ -5338,7 +5346,7 @@ Custom BS3
 .trip-item .item-body .item-footer .item-icon{
     font-size: 19px;
     text-align: right;
-    color: #b1b1b1;
+    color: black;
     margin-top: 9px;
     font-weight: bold;
 }

@@ -285,9 +285,9 @@
                     <div class="col-md-12">
                         <div class="page-top">
                             <select class="awe-select">
-                                <option>ราคาถูกที่สุด</option>
-                                
+                                <option>ราคาถูกที่สุด</option> 
                             </select>
+                            <div class="sort-name hidden-xs"><span>เรียงตาม :</span></div>                           
                         </div>
                     </div>
                 </div>
