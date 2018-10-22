@@ -5186,7 +5186,7 @@ Custom BS3
 
 .tour-left-bar-item{
     margin-bottom: 20px;
-    padding-left: 10px;
+    padding: 0 10px 0 10px;
 }
 .tour-left-bar-item .media-left{
     width: 30%;

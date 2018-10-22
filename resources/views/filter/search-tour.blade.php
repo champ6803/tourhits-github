@@ -161,9 +161,11 @@
         .container {width: 1200px;}
     }
 
-    @media (min-width: 992px) and (max-width: 1199px) {
-        .container {width: 1200px;}
+    @media (min-width: 992px) and (max-width: 1024px){
+        .container {width: 992px;}
         .trip-item{height: 488px;}
+        .sidebar-3{display: none;}               
+        
     }
 
     @media screen and ( max-width: 991px ) {
@@ -776,7 +778,7 @@
                                 </div>
                                 <div class='filter-pickdate'>
                                     <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
-                                    <i id="clear_calendar" class="fa fa-calendar-times"></i>
+                                    <i class="far fa-calendar-check"></i>
                                 </div>
                                 <!--            เว้นไว้ใส่ปฎิทิน-->
                                 <div id="filter-date">
@@ -1151,7 +1153,7 @@
 
         <!--                    bar ขวา-->
         <div class="col-md-3">
-            <div class="page-sidebar">
+            <div class="page-sidebar sidebar-3">
                 <div class="sidebar-title hidden-xs">
                     <h3><i class="far fa-star"></i> กิจกรรมยอดนิยม</h3>
                 </div>
@@ -1271,6 +1273,7 @@
             stopOnHover: true,
             margin: 5,
             transitionStyle: "fade",
+            itemsDesktop: [1199,4],
             itemsTablet: [768, 3],
             itemsMobile: [479, 2]
 
