@@ -106,6 +106,8 @@
         border-top-color: #d7d7d7;
         text-align: center;
     }
+    
+    .trip-item .item-price-more .price .amount{color:black;}
 
     #owl-demo .tag-item{
         display: block;
@@ -147,6 +149,9 @@
     .filter-box .searchtoggle {display: none;}
     .trip-item:hover .item-body .item-title h2 a{color: #c33132;}
     .filter-page__content .country img{height: 47px;} 
+    
+    .filter-page__content .trip-item:hover .price .amount{color:#c33132;}
+    .filter-page__content .trip-item:hover .price{color:black;}
 
     @media screen and ( max-width: 768px ) {
         #owl-demo .tag-item>a {font-size: 12px;}

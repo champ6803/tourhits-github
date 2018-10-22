@@ -4846,7 +4846,7 @@ Custom BS3
 
 .cat-asian .country-link h5 {
     width: 60%;
-    line-height: 36px;
+    line-height: 25px;
     display: inline-block;
     font-size: 17px;
     font-weight: bold;
@@ -5244,7 +5244,7 @@ Custom BS3
 
 .filter-page__content .trip-item{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+/*    border-radius: 8px;*/
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
@@ -5254,7 +5254,7 @@ Custom BS3
 
 .filter-page__content .trip-item:hover{
     /*    box-shadow: 0 0 0 2px #cdc7ec;*/
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -5362,16 +5362,19 @@ Custom BS3
 
 .trip-item .item-price-more .price{
     font-size: 18px;
+    color: #969696;
 }
 
 .trip-item .item-price-more a{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: #ea1c24;
 }
 
 .trip-item .item-price-more .awe-btn{
     border: 1px solid #ea1c24;
+
+    border-radius: 4px;
 }
 
 .trip-item .item-price-more .awe-btn:hover{
