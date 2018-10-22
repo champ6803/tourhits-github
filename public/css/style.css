@@ -1693,7 +1693,8 @@ span.dropcap {
     cursor: pointer;
 /*    border-radius: 4px;*/
     background-color: #fff;
-    font-size: 23px;
+    font-size: 19px;
+    font-weight: bold;
 }
 .awe-search-tabs__content .ui-tabs-panel form:after {
     content: '';
@@ -5343,7 +5344,7 @@ body.single-post .blog-page__content > .post .post-content {
 
 .page-sidebar {
     margin-top: 37px;
-    margin-bottom: 84px;
+    margin-bottom: 95px;
 }
 .page-sidebar .sidebar-title {
     position: relative;

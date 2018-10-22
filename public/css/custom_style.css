@@ -616,18 +616,24 @@ hr {
 }
 
 .filter-header-text {   
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 /* padding ใน filter bar */
 .filter-price, .filter-route, .filter-date, .filter-month, .filter-countdate, .filter-airline{
-    padding: 10px 0 30px 0;
+    padding: 10px 0 25px 0;
 }
 
+.filter-date .filter-pickdate input{
+    font-family: 'Kanit', sans-serif;
+    font-size: 13px;
+}
 
-
-
+.filter-bar .input-group input{
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+}
 
 .filter-bar hr{
     height: 20px;
@@ -741,18 +747,18 @@ hr {
 
 .filter-bar .option{
     font-family: 'Kanit', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     margin-top: -17px;
-    line-height: 2.4;
+    line-height: 43px;
     
 }
 
 .filter-bar .option-all{
     font-family: 'Kanit', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 0px;
     font-weight: bold;
-    line-height: 2.4;
+    line-height: 40px;
 
 }
 
@@ -5219,7 +5225,7 @@ Custom BS3
 .page-sidebar .tour-local-nav>.local-nav-item>a{
     padding: 0px 10px;
     border-radius: 8px;
-    font-size: 17px;
+    font-size: 15px;
     color: #333;
     font-weight: bold;
 }
@@ -5233,7 +5239,7 @@ Custom BS3
 }
 
 .right-bar .media-heading{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .filter-page__content .trip-item{
@@ -6077,3 +6083,5 @@ https://flickity.metafizzy.co
     font-weight: bold;
     line-height: 60px;
 }
+
+.page-sidebar .sidebar-title h3{font-size: 21px;}

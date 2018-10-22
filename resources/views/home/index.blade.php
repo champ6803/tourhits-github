@@ -36,9 +36,10 @@
         .package-hit-title .section-descripion{font-size: 19px;}
         .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
 
-        .awe-search-tabs__content .ui-tabs-panel input{font-size: 19px; font-weight: bold;}
+        .awe-search-tabs__content .ui-tabs-panel input{font-size: 16px; font-weight: bold;}
         .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 23px; width:100%;}
         .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 23px;}
+        .awe-search-tabs__content .ui-tabs-panel select{font-size: 16px;}
     }
     .item { width: 25%; }
     .item.w2 { width: 50%; }

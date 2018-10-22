@@ -100,14 +100,15 @@
 </style>
 
 <style>
-    .page-sidebar{background-color: #f6f6f6;padding-bottom: 10px;}
+    .page-sidebar{background-color: #f6f6f6;}
     
     .page-sidebar .sidebar-title{
-        border-top-color: #ea1c24;
+        border-top-color: #d7d7d7;
         text-align: center;
     }
 
     #owl-demo .tag-item{
+        display: block;
         background: #d7d7d7;
         width: auto;
         margin-right: 10px;
@@ -136,7 +137,7 @@
 
     #owl-demo .tag-item a{
         color : #363636;
-        font-size: 17px;
+        font-size: 15px;
         font-weight: bold;
         padding: 5px 10px;
         line-height: 2;   
@@ -156,8 +157,8 @@
         .tour-local-wrapper .swiper-button-prev{font-size: 14px;}   
     }
 
-    @media (min-width: 1200px) {
-        .container {width: 1400px;}
+    @media (min-width: 1200px) and (max-width: 1360px) {
+        .container {width: 1200px;}
     }
 
     @media (min-width: 992px) and (max-width: 1199px) {
@@ -711,7 +712,7 @@
                                     <span class='filter-header-text'><i class="fa fa-comments"></i> ค้นหา</span>
                                 </div>
                                 <div class="input-group">
-                                    <input id="search_text" type="text" class="form-control" placeholder="ค้าหาชื่อแพ็คเกจทัวร์">
+                                    <input id="search_text" type="text" class="form-control" placeholder="ค้นหาชื่อแพ็คเกจทัวร์">
                                     <span class="input-group-btn">
                                         <button id="search_btn" class="btn btn-danger" type="button" style="height: 40px;"><i class="fa fa-search"></i></button>
                                     </span>
@@ -1152,7 +1153,7 @@
         <div class="col-md-3">
             <div class="page-sidebar">
                 <div class="sidebar-title hidden-xs">
-                    <h3><i class="fas fa-map-pin"></i> กิจกรรมนิยม</h3>
+                    <h3><i class="far fa-star"></i> กิจกรรมยอดนิยม</h3>
                 </div>
                 <div class="right-bar">
                     <div class="box-content hidden-xs">
@@ -1263,7 +1264,7 @@
         var owl = $("#owl-demo");
 
         owl.owlCarousel({
-            items: 5, //5 items above 1000px browser width
+            items: 7, //5 items above 1000px browser width
             autoWidth: true,
             loop: true,
             autoPlay: 4500,
