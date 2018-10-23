@@ -97,16 +97,19 @@
 
     .card-airline img { max-height: 34px; }
 
+    .slider.slider-horizontal .slider-selection {
+        background: #428041;
+    }
 </style>
 
 <style>
     .page-sidebar{background-color: #f6f6f6;}
-    
+
     .page-sidebar .sidebar-title{
         border-top-color: #d7d7d7;
         text-align: center;
     }
-    
+
     .trip-item .item-price-more .price .amount{color:black;}
 
     #owl-demo .tag-item{
@@ -149,7 +152,7 @@
     .filter-box .searchtoggle {display: none;}
     .trip-item:hover .item-body .item-title h2 a{color: #c33132;}
     .filter-page__content .country img{height: 47px;} 
-    
+
     .filter-page__content .trip-item:hover .price .amount{color:#c33132;}
     .filter-page__content .trip-item:hover .price{color:black;}
 
@@ -170,7 +173,7 @@
         .container {width: 992px;}
         .trip-item{height: 488px;}
         .sidebar-3{display: none;}               
-        
+
     }
 
     @media screen and ( max-width: 991px ) {
@@ -714,13 +717,14 @@
                 <div class="left-bar3 mobile-version hidden-xs">
                     <div class="box-content">
                         <div class="filter-bar">
-                            <div class="filter-text">
-                                <div class="input-group">
-                                    <input id="search_text" type="text" class="form-control" placeholder="ค้นหาชื่อแพ็คเกจทัวร์">
-                                    <span class="input-group-btn">
-                                        <button id="search_btn" class="btn btn-danger" type="button" style="height: 40px;"><i class="fa fa-search"></i></button>
-                                    </span>
-                                </div>
+                            <div class="filter-text text-center">
+                                <input id="search_text" type="text" class="form-control" placeholder="ค้นหาชื่อแพ็คเกจทัวร์">
+                            </div>
+
+                            <hr>
+
+                            <div class="filter-text text-center" style="margin-bottom: 10px;">
+                                <button id="search_btn" class="btn btn-danger" type="button" style="height: 40px; width: 120px; border-radius: 20px;"><i class="fa fa-search"></i></button>
                             </div>
 
                             <hr>
@@ -730,7 +734,7 @@
                                     <span class='filter-header-text'><i class="fas fa-exchange-alt"></i> กำหนดช่วงราคา</span>
                                 </div>     
                                 <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to"></span> บาท</div>
-                                <input id="price" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
+                                <input id="price" type="text" class="span2" data-slider-step="5">
                             </div>
 
                             <hr>
@@ -1211,7 +1215,7 @@
 
                     </div>    
                 </div>
-                
+
                 <div class="sidebar-title hidden-xs">
                     <h3><i class="fa fa-check-circle" aria-hidden="true"></i> ทัวร์แนะนำ</h3>         
                 </div>
@@ -1275,7 +1279,7 @@
             stopOnHover: true,
             margin: 5,
             transitionStyle: "fade",
-            itemsDesktop: [1199,4],
+            itemsDesktop: [1199, 4],
             itemsTablet: [768, 3],
             itemsMobile: [479, 2]
 

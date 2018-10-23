@@ -20,7 +20,7 @@ $(function () {
     end_date = getUrlParameter('end_date') == undefined ? "" : getUrlParameter('end_date');
     var days_no = getUrlParameter('days') == undefined ? [] : getUrlParameter('days');
     ary_days = days_no == "" ? [] : [days_no];
-    
+
     var page_num = 1; // default page number
     getTourPackage(page_num); // init package tour card
     checkboxChecked();
@@ -69,7 +69,20 @@ $(function () {
         end_date = "";
         getTourPackage(page_num);
     });
-    $('#price_to').text(numberWithCommas(50000));
+    $('#price_to').text(numberWithCommas(price_most - 5000));
+
+    $('#price').slider({
+        min: 0,
+        max: price_most,
+        value: [0, (price_most - 5000)]
+    });
+
+    $('#price').slider().on('slide', function (sliderValue) {
+        document.getElementById("price_from").textContent = numberWithCommas(sliderValue.value[0]);
+        document.getElementById("price_to").textContent = numberWithCommas(sliderValue.value[1]);
+        price_from = sliderValue.value[0];
+        price_to = sliderValue.value[1];
+    });
 
 //$('#card_area').endlessScroll({
 //            pagesToKeep: 10,
@@ -91,12 +104,12 @@ $(function () {
 });
 
 var search_text = "";
-var slider = new Slider('#price', {
-    min: 0,
-    max: price_most,
-    range: true,
-    value: [0, 50000]
-});
+//var slider = new Slider('#price', {
+//    min: 0,
+//    max: price_most,
+//    range: true,
+//    value: [0, 50000]
+//});
 
 //var sliderMobile = new Slider('#price_mobile', {
 //    min: 0,
@@ -105,12 +118,12 @@ var slider = new Slider('#price', {
 //    value: [0, 80000]
 //});
 
-slider.on("slide", function (sliderValue) {
-    document.getElementById("price_from").textContent = numberWithCommas(sliderValue[0]);
-    document.getElementById("price_to").textContent = numberWithCommas(sliderValue[1]);
-    price_from = sliderValue[0];
-    price_to = sliderValue[1];
-});
+//slider.on("slide", function (sliderValue) {
+//    document.getElementById("price_from").textContent = numberWithCommas(sliderValue[0]);
+//    document.getElementById("price_to").textContent = numberWithCommas(sliderValue[1]);
+//    price_from = sliderValue[0];
+//    price_to = sliderValue[1];
+//});
 
 //sliderMobile.on("slide", function (sliderValue) {
 //    document.getElementById("price_mobile_from").textContent = numberWithCommas(sliderValue[0]);
@@ -274,7 +287,7 @@ function getTourPackage(page_num) {
                 '_end_date': end_date,
                 '_month': JSON.stringify(ary_month),
                 '_days': JSON.stringify(ary_days),
-                '_airline': JSON.stringify(ary_airline),    
+                '_airline': JSON.stringify(ary_airline),
                 '_tags': JSON.stringify(ary_tags),
                 '_attraction': JSON.stringify(ary_attraction),
                 '_others': JSON.stringify(ary_others),
@@ -293,10 +306,10 @@ function getTourPackage(page_num) {
 
                     $('#package_country').html(data.tourPackageList[0].tour_country_name + " ทั้งหมด " + total_record + " แพ็คเกจ");
                     $("#package_country_image").attr("src", "../images/fg/" + data.tourPackageList[0].country_code.toLowerCase() + ".png");
-                    
+
                     $("#search_tour_pager").empty();
                     $('#card_area').pageMe({pagerSelector: '#search_tour_pager', showPrevNext: true, hidePageNumbers: false, pageNum: page_num, perPage: take, totalRecord: total_record});
-                    
+
                     $('.card_show').show();
                     $('#loading').hide();
                 }

@@ -28,7 +28,7 @@ session_start();
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/awe-booking-font.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/owl.carousel.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/jquery-ui.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/bootstrap-slider.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/slider.css') }}">
         <link rel="stylesheet" type="text/css" media="all" href="{{ asset('css/lib/daterangepicker.css') }}" />
 
         <!-- REVOLUTION DEMO -->
