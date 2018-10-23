@@ -57,7 +57,7 @@
     <div id="slider-revolution">
         <ul>
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
-                <img src="images/bg/indexbanner3.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                <img src="images/bg/banner.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
         </ul>
     </div>
@@ -68,7 +68,7 @@
 <section>
     <div class="container search-container">
         <div class="awe-search-tabs-2 tabs">            
-            <ul>
+            <ul hidden="">
                 <li>
                     <a href="#awe-search-tabs-1">
                         ค้นหาทัวร์
@@ -115,7 +115,7 @@
                             <div class="form-elements days">
                                 <div class="form-item">
                                     <select id="days_dropdown" class="form-control">
-                                        <option selected value="">วัน</option>
+                                        <option selected value="">จำนวนวัน</option>
                                         <option value="1">1 วัน</option>
                                         <option value="2">2 วัน</option>
                                         <option value="3">3 วัน</option>
