@@ -103,7 +103,9 @@
 </style>
 
 <style>
-    .page-sidebar{background-color: #f6f6f6;}
+    .filter-page{ background-color: #f6f6f6;}
+    .filter-item-wrapper{list-style-type: none;}
+    .page-sidebar{background-color: #fff;    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);}
 
     .page-sidebar .sidebar-title{
         border-top-color: #d7d7d7;
@@ -162,7 +164,10 @@
         .filter-page__content .country h6{font-size: 15px; line-height: 1;}
         .filter-page__content .country img{height: 34px;} 
         .tour-local-wrapper .swiper-button-next{font-size: 14px;}
-        .tour-local-wrapper .swiper-button-prev{font-size: 14px;}   
+        .tour-local-wrapper .swiper-button-prev{font-size: 14px;}
+        .filter-page__content .country{padding-top: 0px;}
+        .filter-page__content .page-top{padding-top: 0px;}
+        .filter-page{ background-color: #fff;}
     }
 
     @media (min-width: 1200px) and (max-width: 1360px) {
@@ -172,7 +177,8 @@
     @media (min-width: 992px) and (max-width: 1024px){
         .container {width: 992px;}
         .trip-item{height: 488px;}
-        .sidebar-3{display: none;}               
+        .sidebar-3{display: none;} 
+        .sort-name{display: none;}
 
     }
 
@@ -242,6 +248,12 @@
 <section class="filter-page">
     <div class="container">
         <div class="container">
+            <div class=""
+            <div class="row">
+                    <div class="col-md-12">
+                        
+                    </div>                    
+            </div>
             <div class="row">   
                 <div class="col-md-12 tour-local-wrapper">
                     <div id="owl-demo" class="tag-container owl-carousel owl-theme">
@@ -276,16 +288,26 @@
             </div>
             <div hidden class="filter-page__content card_show">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="country">
                             <img id="package_country_image" style="float: left; margin-right: 10px; border:#d7d7d7 solid 1px; border-radius: 8px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);" class="lazyloaded">
                             <h6 id="package_country"></h6>
                         </div>
-                    </div>                    
+                    </div>
+                    <div id="sorting" class="row card_show">
+                    <div class="col-md-6">
+                        <div class="page-top">
+                            <select class="awe-select">
+                                <option>ราคาถูกที่สุด</option> 
+                            </select>
+                            <div class="sort-name hidden-xs hidden-sm"><span>เรียงตาม :</span></div>                           
+                        </div>
+                    </div>
+                </div>                    
                 </div>
 
-                <div id="sorting" class="row card_show">
-                    <div class="col-md-12">
+<!--                <div id="sorting" class="row card_show">
+                    <div class="col-md-6">
                         <div class="page-top">
                             <select class="awe-select">
                                 <option>ราคาถูกที่สุด</option> 
@@ -293,7 +315,7 @@
                             <div class="sort-name hidden-xs"><span>เรียงตาม :</span></div>                           
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="row">
                     <div class="col-md-12">
                         <!-- FILTER BOX -->
@@ -1275,8 +1297,9 @@
             items: 7, //5 items above 1000px browser width
             autoWidth: true,
             loop: true,
-            autoPlay: 4500,
+            autoPlay: 6000,
             stopOnHover: true,
+            pagination: false,
             margin: 5,
             transitionStyle: "fade",
             itemsDesktop: [1199, 4],

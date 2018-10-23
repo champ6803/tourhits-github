@@ -644,7 +644,8 @@ hr {
 .filter-bar{
 
     color: #222;
-    background-color: #f6f6f6;
+/*    background-color: #f6f6f6;*/
+    background-color: #fff;
     /*    box-shadow: 0px 0 7px rgba(29, 29, 29, 0.5);*/
 
     padding: 0px 25px 0px 20px;
@@ -5032,6 +5033,7 @@ Custom BS3
 .tour-local-wrapper{
     height: 50px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .swiper-container, .swiper-slide{
@@ -5244,12 +5246,16 @@ Custom BS3
 
 .filter-page__content .trip-item{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-/*    border-radius: 8px;*/
+    padding: 5px 0 0 5px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0px;
 }
 
 .filter-page__content .trip-item:hover{
@@ -5313,6 +5319,7 @@ Custom BS3
     margin-top: 11px;
 }
 
+.filter-page__content .page-top{padding-top: 33px;}
 .filter-page__content .page-top span{
     float: right;
     font-size: 17px;
