@@ -252,9 +252,24 @@ class Tour_Package extends Model {
             return Tour_Package::join('tour_tag', 'tour_tag.tour_package_id', '=', 'tour_package.tour_package_id')
                             ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                             ->join('tag', 'tag.tag_id', '=', 'tour_tag.tag_id')
-                            ->select(DB::raw('COUNT(*) as t_num, tag.tag_id as t_id, tag.tag_name as t_name'))
-                            ->groupBy('t_id', 't_name')
+                            ->select(DB::raw('COUNT(*) as t_num, tag.tag_id as t_id, tag.tag_name as t_name, tour_country.tour_country_id as tour_country_id, tour_country.tour_country_url as tour_country_url'))
+                            ->groupBy('t_id', 't_name', 'tour_country_id', 'tour_country_url')
                             ->where('tour_country.tour_country_url', $country)
+                            ->get();
+        } catch (\Exception $e) {
+            return $e;
+        }
+    }
+
+    public function getFilterAttraction($country) {
+        try {
+            return Tour_Package::join('tour_attraction', 'tour_attraction.tour_package_id', '=', 'tour_package.tour_package_id')
+                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                            ->join('attraction', 'attraction.attraction_id', '=', 'tour_attraction.attraction_id')
+                            ->select(DB::raw('COUNT(*) as a_num, attraction.attraction_id as a_id, attraction.attraction_name as a_name, tour_country.tour_country_id as tour_country_id, tour_country.tour_country_url as tour_country_url, attraction.attraction_picture as attraction_picture'))
+                            ->groupBy('a_id', 'a_name', 'tour_country_id', 'tour_country_url', 'attraction_picture')
+                            ->where('tour_country.tour_country_url', $country)
+                            ->take(3)
                             ->get();
         } catch (\Exception $e) {
             return $e;
@@ -345,7 +360,7 @@ class Tour_Package extends Model {
             throw $ex;
         }
     }
-    
+
     public function getMostPrice($country) {
         try {
             $price = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')

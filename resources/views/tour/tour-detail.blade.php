@@ -5,7 +5,7 @@
     body {
         counter-reset: count;
     }
-    
+
     .product-detail{background-color: #F7F7F7;}
 
     .trip-schedule-accordion .days{    
@@ -98,24 +98,24 @@
         display: inline;
         font-size: 25px;
     }
-    
-    
+
+
     .call-to-book span, .call-to-book2 span{     
         font-size: 19px;
         font-weight: bold;
         line-height: 1.9;
         padding-top: 2px;
     }
-    
+
     .modal-content{-webkit-box-shadow:  0 4px 10px 0 rgba(0,0,0,.12);box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);}
     .table{margin-top: 10px;}
-    
+
     .product-detail .right{
         float: right;
         padding-bottom: 10px;
         margin-top: -24px;
     }
-       
+
     .product-detail .download-pdf p a{
         display: inline-block;
         padding-right: 17px;
@@ -128,14 +128,14 @@
         border-radius: 20px; 
         line-height: 1.6;
     }
-    
+
     .product-detail .download-pdf p a:hover{
         background-color: #6fbd50;
         border: 1px solid #6fbd50;
         -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.3); 
         box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
     }
-    
+
     .product-detail .facebook{padding-left: 10px; padding-right: 14px;}
     .product-detail .facebook p a{
         display: inline-block;
@@ -145,7 +145,7 @@
         background-color: #4dabf7;
         border-radius: 8px;
         padding: 4px 21px 4px 10px;
-/*        line-height: 1.5;*/
+        /*        line-height: 1.5;*/
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
@@ -155,15 +155,15 @@
         -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.3); 
         box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
     }
-        
+
     @media (min-width: 1200px) {
         .container {width: 1400px;}
     }
-    
+
     @media (min-width: 992px) and (max-width: 1199px) {
         .container {width: 1200px;}
     }
-    
+
     @media (max-width: 425px) {
         .product-detail__info .trips .time-xs{width: 100%;}     
     }
@@ -296,12 +296,12 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 <section class="product-detail">
     <div class="container">
         <div class="row">         
-                <div class="right facebook">
-                    <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
-                </div>
-                <div class="right download-pdf">
-                    <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="fas fa-file-pdf"></i>&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
-                </div>
+            <div class="right facebook">
+                <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
+            </div>
+            <div class="right download-pdf">
+                <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="fas fa-file-pdf"></i>&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-7">
@@ -329,16 +329,16 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             <h6>รหัสทัวร์</h6>
                             <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
                         </div>
-                                               
-<!--                        <div class="item">
-                            <h6><i class="fas fa-share-alt" style="padding-right: 10px"></i>แชร์</h6>
-                            <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook"></i> Facebook</a></p>
-                        </div>
-                        <div class="item">
-                            <h6><i class="fas fa-download" style="padding-right: 10px"></i>ดาวน์โหลด</h6>
-                            <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="fas fa-file-pdf"></i>&nbsp;PDF</a></p>
 
-                        </div>-->
+                        <!--                        <div class="item">
+                                                    <h6><i class="fas fa-share-alt" style="padding-right: 10px"></i>แชร์</h6>
+                                                    <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook"></i> Facebook</a></p>
+                                                </div>
+                                                <div class="item">
+                                                    <h6><i class="fas fa-download" style="padding-right: 10px"></i>ดาวน์โหลด</h6>
+                                                    <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="fas fa-file-pdf"></i>&nbsp;PDF</a></p>
+                        
+                                                </div>-->
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -859,17 +859,17 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             @foreach ($tourPackageDayList as $tourPackageDay)
                             @foreach ($tourAttractionDayList as $tourAttractionDay)
                             <div class="item">
-                                <img src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
+                                <img class="img-item" src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                             </div>
                             @endforeach
                             @endforeach
                         </div>
-                        <div class="product-slider-thumb-row">
+                        <div class="hide product-slider-thumb-row">
                             <div class="product-slider-thumb">
                                 @foreach ($tourPackageDayList as $tourPackageDay)
                                 @foreach ($tourAttractionDayList as $tourAttractionDay)
                                 <div class="item">
-                                    <img src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
+                                    <img class="img-item" src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                                 </div>
                                 @endforeach
                                 @endforeach
@@ -878,13 +878,13 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         @else
                         <div class="product-slider">
                             <div class="item">
-                                <img src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
+                                <img class="img-item" src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
                             </div>
                         </div>
-                        <div class="product-slider-thumb-row">
+                        <div class="hide product-slider-thumb-row">
                             <div class="product-slider-thumb">
                                 <div class="item">
-                                    <img src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
+                                    <img class="img-item" src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
                                 </div>
                             </div>
                         </div>
@@ -934,9 +934,6 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </div>
                                 @endforeach
                             </div>
-
-                            <a class="embed" href="{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}"></a>
-
                         </div>
                         <div id="tabs-2">
                             <div class="trip-schedule-accordion accordion">

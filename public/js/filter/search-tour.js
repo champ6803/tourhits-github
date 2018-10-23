@@ -69,6 +69,7 @@ $(function () {
         end_date = "";
         getTourPackage(page_num);
     });
+    
     $('#price_to').text(numberWithCommas(price_most - 5000));
 
     $('#price').slider({
