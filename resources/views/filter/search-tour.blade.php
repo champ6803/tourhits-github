@@ -257,20 +257,9 @@
             <div class="row">   
                 <div class="col-md-12 tour-local-wrapper">
                     <div id="owl-demo" class="tag-container owl-carousel owl-theme">
-
-                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นราคาถูก</a></div>
-                        <div class="tag-item"><a href="">ทัวร์โตเกียว</a></div>
-                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a></div>
-                        <div class="tag-item"><a href="">ทัวร์วันปีใหม่ญี่ปุ่น</a></div>
-                        <div class="tag-item"><a href="">ทัวร์ญุ่ปุ่น ตุลาคม</a></div>
-                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น การบินไทย</a></div>
-                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a></div>
-                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ตุลาคม</a></div>
-                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น การบินไทย</a></div>
-                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a></div>
-                        <div class="tag-item"><a href="">ทัวร์โตเกียว</a></div>
-                        <div class="tag-item"><a href="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a></div>
-
+                        @foreach ($tagList as $tag)
+                        <div class="tag-item"><a href="{{url('/tour/'.$tag->tour_country_url.'?country='.$tag->tour_country_id.'&tag='.$tag->t_id)}}">{{$tag->t_name}}</a></div>
+                        @endforeach
                     </div>
                     <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
                     <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
@@ -806,7 +795,7 @@
                                 </div>
                                 <div class='filter-pickdate'>
                                     <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
-                                    <i class="far fa-calendar-check"></i>
+                                    <i id="clear_calendar" class="far fa-calendar-times"></i>
                                 </div>
                                 <!--            เว้นไว้ใส่ปฎิทิน-->
                                 <div id="filter-date">
@@ -1187,96 +1176,39 @@
                 </div>
                 <div class="right-bar">
                     <div class="box-content hidden-xs">
+                        @foreach ($attractionList as $attraction)
+                        
+
                         <div class="tour-left-bar-item">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="" title="">
-                                        <img class="media-object lazy" src="https://images.unsplash.com/photo-1516464488897-e67174edf7e7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=05e319452c7a94849374b80813bcf118&auto=format&fit=crop&w=500&q=60" 
+                                    <a href="{{url('/tour/'.$attraction->tour_country_url.'?country='.$attraction->tour_country_id.'&attraction='.$attraction->a_id)}}" title="{{$attraction->a_name}}">
+                                        <img class="media-object lazy" src="{{ asset('/images/attraction/'.$attraction->attraction_picture) }}" 
                                              alt="" style="display: inline-block;">
                                     </a>
                                 </div>
                                 <div class="media-body">
                                     <h6 class="media-heading">
-                                        <a href="" title="">ออนเซน (48)</a>
+                                        <a href="{{url('/tour/'.$attraction->tour_country_url.'?country='.$attraction->tour_country_id.'&attraction='.$attraction->a_id)}}" title="">{{$attraction->a_name}} ({{$attraction->a_num}})</a>
                                     </h6>
                                 </div>                                        
                             </div>
                         </div>
-
-                        <div class="tour-left-bar-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="" title="">
-                                        <img class="media-object lazy" src="https://images.unsplash.com/photo-1511543865714-5a5a5ce51a94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af1dad982f43aeb20daf60a966268317&auto=format&fit=crop&w=500&q=60" 
-                                             alt="" style="display: inline-block;">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="media-heading">
-                                        <a href="" title="">ขาปูยักษ์ (31)</a>
-                                    </h6>
-                                </div>                                        
-                            </div>
-                        </div>
-
-                        <div class="tour-left-bar-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="" title="">
-                                        <img class="media-object lazy" src="https://images.unsplash.com/photo-1527650285468-3301061c3a5d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e19ffc9b9bb4dbfa12f57c6830944198&auto=format&fit=crop&w=500&q=60" 
-                                             alt="" style="display: inline-block;">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="media-heading">
-                                        <a href="" title="">ภูเขาไฟฟูจิ (40)</a>
-                                    </h6>
-                                </div>                                        
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>    
                 </div>
 
                 <div class="sidebar-title hidden-xs">
-                    <h3><i class="fa fa-check-circle" aria-hidden="true"></i> ทัวร์แนะนำ</h3>         
+                    <h3><i class="fa fa-tags"></i> Tags</h3>         
                 </div>
                 <div class="left-bar2">
                     <div class="box-content hidden-xs">
                         <div class="swiper-wrapper tour-local-nav" style="transform: translate3d(0px, 0px, 0px);">
+                            @foreach ($tagList as $tag)
                             <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่นราคาถูก</a>
+                                <a href="{{url('/tour/'.$tag->tour_country_url.'?country='.$tag->tour_country_id.'&tag='.$tag->t_id)}}" title="" class="">{{$tag->t_name}}</a>
                             </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์โตเกียว</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่นฟุกุโอกะ</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์วันปีใหม่ญี่ปุ่น</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญุ่ปุ่น ตุลาคม</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น การบินไทย</a>
-                            </div>
-                            <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="" title="" class="">ทัวร์ญี่ปุ่น ฤดูใบไม้ผลิ</a>
-                            </div>                                   
+                            @endforeach                                
                         </div> 
                     </div>
                 </div>    

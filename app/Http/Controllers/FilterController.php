@@ -29,7 +29,8 @@ class FilterController extends Controller {
         $monthList = $tourModel->getFilterMonth($country);
         $dayList = $tourModel->getFilterDay($country);
         $tagList = $tourModel->getFilterTag($country);
-        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList', 'price_most'));
+        $attractionList = $tourModel->getFilterAttraction($country);
+        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList', 'price_most', 'attractionList'));
     }
 
     public function getTourPackage() {
