@@ -715,9 +715,6 @@
                     <div class="box-content">
                         <div class="filter-bar">
                             <div class="filter-text">
-                                <div class='filter-header'>
-                                    <span class='filter-header-text'><i class="fa fa-comments"></i> ค้นหา</span>
-                                </div>
                                 <div class="input-group">
                                     <input id="search_text" type="text" class="form-control" placeholder="ค้นหาชื่อแพ็คเกจทัวร์">
                                     <span class="input-group-btn">

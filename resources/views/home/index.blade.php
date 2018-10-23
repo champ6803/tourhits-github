@@ -83,7 +83,7 @@
                                 <div class="form-item">
                                     <i class="fas fa-search awe-icon"></i>
                                     <i class="fas fa-search awe-icon"></i>
-                                    <input id="search_text" class="form-control" type="text" placeholder="ชื่อแพ็คเกจทัวร์ รหัสทัวร์" value="">
+                                    <input id="search_text" class="form-control" type="text" placeholder="ค้นหาชื่อแพ็คเกจทัวร์" value="">
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                         <div class="form-group">
                             <div class="form-elements">
                                 <div class="form-item">
-                                    <input type="text" id="date_picker" placeholder="กรุณาเลือกวันเดินทาง ไป - กลับ" class="form-control">
+                                    <input type="text" id="date_picker" placeholder="วันเดินทาง ไป - กลับ" class="form-control">
                                     <i class="far fa-calendar-check awe-icon"></i>
 <!--                                    <i class="awe-icon awe-icon-calendar"></i>-->
                                 </div>

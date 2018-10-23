@@ -1820,10 +1820,10 @@ span.dropcap {
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
-/*    border-radius: 0;*/
-    border-top-right-radius: 8px;
+    border-radius: 8px;
+/*    border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px;*/
     box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);
 }
 .awe-search-tabs-2 .ui-tabs-nav {

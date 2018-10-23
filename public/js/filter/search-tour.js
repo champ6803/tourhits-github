@@ -485,14 +485,14 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + 'ราคา';
             if (this.tour_package_special_price > 0) {
                 div = div + '<ins>';
-                div = div + '<span class="amount">฿' + numberWithCommas(this.tour_package_special_price) + '</span>';
+                div = div + '<span class="amount">' + numberWithCommas(this.tour_package_special_price) + '฿</span>';
                 div = div + '</ins>';
                 div = div + '<del>';
-                div = div + '<span class="amount">฿' + numberWithCommas(this.tour_package_price) + '</span>';
+                div = div + '<span class="amount">' + numberWithCommas(this.tour_package_price) + '฿</span>';
                 div = div + '</del>'
             } else {
                 div = div + '<ins>';
-                div = div + '<span class="amount">฿' + numberWithCommas(this.tour_package_price) + '</span>';
+                div = div + '<span class="amount">' + numberWithCommas(this.tour_package_price) + '฿</span>';
                 div = div + '</ins>';
             }
 
