@@ -304,8 +304,9 @@ function getTourPackage(page_num) {
                 renderTourCard(data.tourPackageList, data.tourPeriod);
                 if (data != null && data.tourPackageList.length > 0) {
                     var total_record = parseInt(data.totalRecord);
-
-                    $('#package_country').html(data.tourPackageList[0].tour_country_name + " ทั้งหมด " + total_record + " แพ็คเกจ");
+                    $('#package_country2').html(data.tourPackageList[0].tour_country_name);
+                    $('#package_country').html(" ทั้งหมด " + total_record + " แพ็คเกจ");
+                    
                     $("#package_country_image").attr("src", "../images/fg/" + data.tourPackageList[0].country_code.toLowerCase() + ".png");
 
                     $("#search_tour_pager").empty();
@@ -517,7 +518,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
 //                }
 //            });
             div = div + '</div>';
-            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">ดูเพิ่มเติม</a>';
+            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">รายละเอียด</a>';
             div = div + '</div>';
             div = div + '</li>';
             divs = divs + div;

@@ -103,9 +103,10 @@
 </style>
 
 <style>
+    .category-heading-content.category-heading-content__2{padding-top: 180px;}
     .filter-page{ background-color: #f6f6f6;}
     .filter-item-wrapper{list-style-type: none;}
-    .page-sidebar{background-color: #fff;    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);}
+    .page-sidebar{background-color: #fff; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-top: 0px;}
 
     .page-sidebar .sidebar-title{
         border-top-color: #d7d7d7;
@@ -153,44 +154,61 @@
     .filter-box {display: none;}
     .filter-box .searchtoggle {display: none;}
     .trip-item:hover .item-body .item-title h2 a{color: #c33132;}
-    .filter-page__content .country img{height: 47px;} 
+    .filter-page__content .country img{height: 55px;} 
 
     .filter-page__content .trip-item:hover .price .amount{color:#c33132;}
     .filter-page__content .trip-item:hover .price{color:black;}
-
+    .head-all-card .card_show{background-color: #f6f6f6; padding-bottom: 10px;}
+    
+    
     @media screen and ( max-width: 768px ) {
         #owl-demo .tag-item>a {font-size: 12px;}
         .owl-theme .owl-controls .owl-page{zoom:0.5;}
-        .filter-page__content .country h6{font-size: 15px; line-height: 1;}
+        .filter-page__content .country h6{font-size: 15px; line-height: 34px;}
+        .filter-page__content .country span{font-size: 22px; line-height: 34px;}
         .filter-page__content .country img{height: 34px;} 
-        .tour-local-wrapper .swiper-button-next{font-size: 14px;}
-        .tour-local-wrapper .swiper-button-prev{font-size: 14px;}
-        .filter-page__content .country{padding-top: 0px;}
-        .filter-page__content .page-top{padding-top: 0px;}
+        .tour-local-wrapper .swiper-button-next{font-size: 17px;height: 46px;line-height: 46px;width: 40px;}
+        .tour-local-wrapper .swiper-button-prev{font-size: 17px;height: 46px;line-height: 46px;width: 40px;}
+        .filter-page__content .country{}
+        
         .filter-page{ background-color: #fff;}
+        .filter-page .filter-page-mid{margin-top: 0px;}
+        .category-heading-content .category-heading-content__2{padding-top: 50px;}
+        .filter-box {bottom:85px!important;}
+    }
+    
+    @media screen and ( max-width: 767px ) {
+        .filter-page__content .page-top{padding-top: 0px;}
+        .filter-box {bottom:114px!important;}
     }
 
-    @media (min-width: 1200px) and (max-width: 1360px) {
-        .container {width: 1200px;}
+    @media (min-width: 1024px) and (max-width: 1399px) {
+        .container {width: 100%;}
     }
 
     @media (min-width: 992px) and (max-width: 1024px){
-        .container {width: 992px;}
-        .trip-item{height: 488px;}
+        .container {width: 100%;}
+        .trip-item{height: 525px;}
         .sidebar-3{display: none;} 
         .sort-name{display: none;}
+        
+        .filter-page-left .col-md-pull-6{right: 70%;} 
+        .filter-page-left .col-md-3{width: 30%;}
+        .filter-page-mid .col-md-push-3 {left: 30%;}
+        .filter-page-mid .col-md-6 {width: 70%;}
 
     }
 
     @media screen and ( max-width: 991px ) {
 
         .filter-box {
-            position: relative;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
             white-space: nowrap;
             display: inline-block;
-            float: right;
             padding: 7px 15px 0px 0px;
-            margin-top: 10px;
+            
         }
         .filter-box .searchtoggle {
             display: inline;
@@ -229,10 +247,75 @@
             opacity: 0.8;
         }
     }
-
-
-
     .modal.in .modal-dialog{margin-top: 100px;}
+    
+    
+    .filter-page .filter-page-left .search-box-new{
+        position: relative;
+        display: inline-block;
+        
+/*        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);*/
+        background: #34495e;
+        border-radius: 40px;
+        height: 60px;
+        padding: 10px;
+    }
+    
+    .filter-page .filter-page-left .search-btn-new {    
+        font-size: 18px;
+        color: #fff;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #34495e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      
+      .filter-page .filter-page-left .search-box-new .search-text-new {
+        font-family: 'Kanit', sans-serif;
+        border: none;
+        background: none;
+        outline: none;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+        padding: 0!important;
+      }
+  
+      .filter-page .filter-page-left .sidebar-title span{
+          font-size: 20px;
+          font-weight: bold;
+          padding-left: 5px;
+          transition: 0.1s;
+          color: #ed5565;
+      }
+      
+      .filter-page .filter-page-left .search-box-new:hover > .search-text-new {
+        width: 200px;
+        transition: 0.8s;
+      }
+      
+      .filter-page .filter-page-left .search-box-new:hover > .search-btn-new {
+        color: #ed5565;
+        background: white;
+      }
+      
+      .filter-page .filter-page-left .search-box-new:hover > span{
+          display: none;
+          transition: 10s;
+      }
+
+      
+    
 </style>
 
 <!-- HEADING PAGE -->
@@ -247,15 +330,10 @@
 
 <section class="filter-page">
     <div class="container">
-        <div class="container">
-            <div class=""
-            <div class="row">
-                    <div class="col-md-12">
-                        
-                    </div>                    
-            </div>
+            
             <div class="row">   
                 <div class="col-md-12 tour-local-wrapper">
+                   
                     <div id="owl-demo" class="tag-container owl-carousel owl-theme">
                         @foreach ($tagList as $tag)
                         <div class="tag-item"><a href="{{url('/tour/'.$tag->tour_country_url.'?country='.$tag->tour_country_id.'&tag='.$tag->t_id)}}">{{$tag->t_name}}</a></div>
@@ -263,28 +341,31 @@
                     </div>
                     <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
                     <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
+                </div>    
+            </div>                               
 
-                </div>                           
-            </div> 
-        </div>
 
         <!--กลาง-->
-        <div class="col-md-6 col-md-push-3">
+        <div class="filter-page-mid">
+        <div class="col-md-6 col-md-push-3 page-mid-bg">
             <div id="loading" class="row">
                 <div class="col-md-12 text-center">
                     <img style="padding-top:100px" src="../images/search-loading.gif">
                 </div>
             </div>
             <div hidden class="filter-page__content card_show">
+                <div class="head-all-card">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <div class="country">
                             <img id="package_country_image" style="float: left; margin-right: 10px; border:#d7d7d7 solid 1px; border-radius: 8px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);" class="lazyloaded">
+                            <span id="package_country2"></span>
                             <h6 id="package_country"></h6>
+                            
                         </div>
                     </div>
                     <div id="sorting" class="row card_show">
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <div class="page-top">
                             <select class="awe-select">
                                 <option>ราคาถูกที่สุด</option> 
@@ -294,6 +375,7 @@
                     </div>
                 </div>                    
                 </div>
+                </div>    
 
 <!--                <div id="sorting" class="row card_show">
                     <div class="col-md-6">
@@ -306,10 +388,10 @@
                     </div>
                 </div>-->
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-xs-12">
                         <!-- FILTER BOX -->
                         <div class="filter-box">
-                            <span class="searchtoggle" data-toggle="modal" data-target="#filterModal">คัดกรอง <i class="fas fa-filter" style="font-size: 15px"></i></span>
+                            <span class="searchtoggle" data-toggle="modal" data-target="#filterModal"><i class="fas fa-sliders-h" style="font-size: 15px"></i> คัดกรอง</span>
                         </div> 
                     </div>
                     <!-- Modal -->
@@ -696,6 +778,7 @@
                 <br>
 
                 <div id="card_area" class="card_show filter-item-wrapper">
+                    
                 </div>
 
 
@@ -717,18 +800,32 @@
                 <!-- END / PAGINATION -->
             </div>
         </div>
-
+        </div>
         <!--                    bar ซ้าย-->
+        <div class="filter-page-left">
         <div class="col-md-3 col-md-pull-6">
+            
             <div class="page-sidebar">
+
                 <div class="sidebar-title hidden-xs filter-tittle">
+                    
+                    <div class="search-box-new">
+                    <input id="search_text" type="text" name="search" placeholder="ค้นหาชื่อแพ็คเกจทัวร์" class="search-text-new"/>
+                    <a id="search_btn" class="search-btn-new">
+                      <i class="fa fa-search"></i>
+                    </a>
+                    <span><i class="fas fa-align-left"></i></span>
+                    </div>
+                    
+                    
+                    <hr style="margin-top:18px; border-style: hidden;">
                     <h3><i class="fas fa-filter"></i> คัดกรอง</h3>      
                 </div>         
 
                 <div class="left-bar3 mobile-version hidden-xs">
                     <div class="box-content">
                         <div class="filter-bar">
-                            <div class="filter-text text-center">
+<!--                            <div class="filter-text text-center">
                                 <input id="search_text" type="text" class="form-control" placeholder="ค้นหาชื่อแพ็คเกจทัวร์">
                             </div>
 
@@ -738,7 +835,7 @@
                                 <button id="search_btn" class="btn btn-danger" type="button" style="height: 40px; width: 120px; border-radius: 20px;"><i class="fa fa-search"></i></button>
                             </div>
 
-                            <hr>
+                            <hr>-->
 
                             <div class="filter-price">
                                 <div class='filter-header'>
@@ -1167,15 +1264,15 @@
 
             </div>
         </div>
-
+        </div>
         <!--                    bar ขวา-->
-        <div class="col-md-3">
+        <div class="col-md-3 hidden-sm hidden-xs">
             <div class="page-sidebar sidebar-3">
-                <div class="sidebar-title hidden-xs">
+                <div class="sidebar-title">
                     <h3><i class="far fa-star"></i> กิจกรรมยอดนิยม</h3>
                 </div>
                 <div class="right-bar">
-                    <div class="box-content hidden-xs">
+                    <div class="box-content">
                         @foreach ($attractionList as $attraction)
                         
 
@@ -1198,11 +1295,11 @@
                     </div>    
                 </div>
 
-                <div class="sidebar-title hidden-xs">
+                <div class="sidebar-title">
                     <h3><i class="fa fa-tags"></i> Tags</h3>         
                 </div>
                 <div class="left-bar2">
-                    <div class="box-content hidden-xs">
+                    <div class="box-content">
                         <div class="swiper-wrapper tour-local-nav" style="transform: translate3d(0px, 0px, 0px);">
                             @foreach ($tagList as $tag)
                             <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
@@ -1226,7 +1323,7 @@
         var owl = $("#owl-demo");
 
         owl.owlCarousel({
-            items: 7, //5 items above 1000px browser width
+            items: 6, //5 items above 1000px browser width
             autoWidth: true,
             loop: true,
             autoPlay: 6000,
