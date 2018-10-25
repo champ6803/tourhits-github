@@ -95,21 +95,21 @@
         color: black;
     }
 
-    .card-airline img { max-height: 34px; }
-
     .slider.slider-horizontal .slider-selection {
-        background: #428041;
+        background: #5e758c;
     }
 </style>
 
 <style>
+    .slider .slider-horizontal .slider-handle{background-color: #fff!important;}
     .category-heading-content.category-heading-content__2{padding-top: 180px;}
-    .filter-page{ background-color: #f6f6f6;}
+    .filter-page{ background-color: #f6f6f6; margin-bottom: 0px;}
     .filter-item-wrapper{list-style-type: none;}
     .page-sidebar{background-color: #fff; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-top: 0px;}
 
     .page-sidebar .sidebar-title{
-        border-top-color: #d7d7d7;
+/*        border-top-color: #d7d7d7;*/
+        border-top-color: #ea6a78;
         text-align: center;
     }
 
@@ -160,7 +160,6 @@
     .filter-page__content .trip-item:hover .price{color:black;}
     .head-all-card .card_show{background-color: #f6f6f6; padding-bottom: 10px;}
     
-    
     @media screen and ( max-width: 768px ) {
         #owl-demo .tag-item>a {font-size: 12px;}
         .owl-theme .owl-controls .owl-page{zoom:0.5;}
@@ -198,7 +197,18 @@
         .filter-page-mid .col-md-6 {width: 70%;}
 
     }
-
+    @media screen and ( max-width: 1199px ) {
+        .trip-item .item-media .bot-img-detail{
+            margin-top: -40px;
+            background-color: rgba(58,53,53,0.8);
+        }
+        .filter-page__content .trip-item .item-body .item-title h2 a{padding-left: 0px;}
+        .filter-page__content .trip-item .item-body .hilight i{display: none;}
+        .card-airline{padding: 5px 0px 0px 5px;}
+        .trip-item{margin-bottom: 0px;}
+        .trip-item .item-price-more .awe-btn{margin-right: 10px;}          
+    }
+    
     @media screen and ( max-width: 991px ) {
 
         .filter-box {
@@ -313,6 +323,8 @@
           display: none;
           transition: 10s;
       }
+      
+      .awe-btn:focus{background-color: transparent;}
 
       
     
@@ -355,27 +367,133 @@
             </div>
             <div hidden class="filter-page__content card_show">
                 <div class="head-all-card">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="country">
-                            <img id="package_country_image" style="float: left; margin-right: 10px; border:#d7d7d7 solid 1px; border-radius: 8px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);" class="lazyloaded">
-                            <span id="package_country2"></span>
-                            <h6 id="package_country"></h6>
-                            
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="country">
+                                <img id="package_country_image" style="float: left; margin-right: 10px; border:#d7d7d7 solid 1px; border-radius: 8px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);" class="lazyloaded">
+                                <span id="package_country2"></span>
+                                <h6 id="package_country"></h6>
+
+                            </div>
                         </div>
-                    </div>
-                    <div id="sorting" class="row card_show">
-                    <div class="col-sm-6">
-                        <div class="page-top">
-                            <select class="awe-select">
-                                <option>ราคาถูกที่สุด</option> 
-                            </select>
-                            <div class="sort-name hidden-xs hidden-sm"><span>เรียงตาม :</span></div>                           
+                        <div id="sorting" class="row card_show">
+                        <div class="col-sm-6">
+                            <div class="page-top">
+                                <select class="awe-select">
+                                    <option>ราคาถูกที่สุด</option> 
+                                </select>
+                                <div class="sort-name hidden-xs hidden-sm"><span>เรียงตาม :</span></div>                           
+                            </div>
                         </div>
+                    </div>                    
                     </div>
-                </div>                    
                 </div>
-                </div>    
+                
+<!--                เทส Card-->
+<!--            <div class="row">
+                <div id="card_area" class="card_show filter-item-wrapper">
+                        
+                    <li class="trip-item">
+                        <div class="item-media">
+                            <div class="image-cover">
+                                <img src="../images/tour/208-Oshino Hakkai.jpg" alt="">
+                            </div>
+                            <div class="bot-img-detail">
+                                <div class="tag-day-and-period">
+                                    <span>5</span>
+                                    <span>วัน</span>
+                                    <span>3</span>
+                                    <span>คืน</span>
+                                    <span>ก.ย. - ต.ค.</span>
+                                </div>
+                                <div class="tag-tour-num">
+                                    <span>รหัส</span>
+                                    <span>TH034</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-body">
+                            <div class="item-title">
+                                <h2><a href="/tour-detail/japan/208/THG15-XW-JP-1-29SEP18">Test ระบบการ์ด</a></h2>
+                            </div>
+                            <div class="hilight">
+                                <i class="far fa-flag"></i>
+                                <div class="detail">
+                                    <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น (อาบน้ำแร่)</p>
+                                    <p>ภูเขาไฟฟูจิ ชั้น 5 - พิพิธภัณฑ์แผ่นดินไหว – ศาลเจ้าคิตะงุจิฮองงุ ฟูจิ</p>
+                                    <p>ชงชาแบบญี่ปุ่น – โอไดบะ-วัดนาริตะ</p>
+                                </div>
+                            </div>
+                            <div class="item-list">
+                                <ul>
+                                    <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                    <li><i class="far fa-calendar"></i> ช่วงเวลา ก.ย. - ต.ค.</li>
+                                </ul>
+                            </div>
+                            <div class="item-footer">
+                                <div class="item-rate">
+                                    <div class="card-airline">
+                                        <img alt="NokScoot" src="../images/airline/NokScoot.png" title=""></div>
+                                </div>
+                                <div class="item-icon">
+                                    <div class="pass">รหัสทัวร์&nbsp;</div>
+                                    TH208
+                                </div>
+                                    
+                            </div>
+                                
+                        </div>
+                        <div class="item-price-more">
+                            <div class="price">ราคา<ins><span class="amount">16,888฿</span></ins>
+                            </div>
+                            <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/208/NRT44 TOKYO FUJI โปรกระแทกใจ 5D3N ">รายละเอียด</a>
+                        </div>
+                    </li>
+                    
+                    <li class="trip-item">
+                        <div class="item-media">
+                            <div class="image-cover">
+                                <img src="../images/tour/208-Oshino Hakkai.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item-body">
+                            <div class="item-title"><h2><a href="/tour-detail/japan/208/THG15-XW-JP-1-29SEP18">Test ระบบการ์ด2</a></h2>
+                            </div>
+                            <div class="hilight">
+                                <i class="far fa-flag"></i>
+                                <div class="detail">
+                                    <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น (อาบน้ำแร่)</p>
+                                    <p>ภูเขาไฟฟูจิ ชั้น 5 - พิพิธภัณฑ์แผ่นดินไหว – ศาลเจ้าคิตะงุจิฮองงุ ฟูจิ</p>
+                                    <p>ชงชาแบบญี่ปุ่น – โอไดบะ-วัดนาริตะ</p>
+                                </div>
+                            </div>
+                            <div class="item-list">
+                                <ul><li><i class="far fa-clock"></i> 5 วัน 3 คืน</li><li><i class="far fa-calendar"></i> ช่วงเวลา ก.ย. - ต.ค.</li></ul>
+                            </div>
+                            <div class="item-footer">
+                                <div class="item-rate">
+                                    <div class="card-airline">
+                                        <img alt="NokScoot" src="../images/airline/NokScoot.png" title=""></div>
+                                </div>
+                                <div class="item-icon">
+                                    <div class="pass">รหัสทัวร์&nbsp;</div>
+                                    TH208
+                                </div>
+                                    
+                            </div>
+                                
+                        </div>
+                        <div class="item-price-more">
+                            <div class="price">ราคา<ins><span class="amount">16,888฿</span></ins>
+                            </div>
+                            <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/208/NRT44 TOKYO FUJI โปรกระแทกใจ 5D3N ">รายละเอียด</a>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>-->
+<!--       end         เทส Card-->
+                
 
 <!--                <div id="sorting" class="row card_show">
                     <div class="col-md-6">
@@ -778,7 +896,7 @@
                 <br>
 
                 <div id="card_area" class="card_show filter-item-wrapper">
-                    
+
                 </div>
 
 
