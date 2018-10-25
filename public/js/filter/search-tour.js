@@ -461,38 +461,58 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + '<div class="image-cover">';
             div = div + '<img src="../images/tour/' + this.tour_package_image + '" alt="">';
             div = div + '</div>';
+                     
+            div = div + '<div class="bot-img-detail">';
+            div = div + '<div class="tag-day-and-period">';
+            var all_as = val["tour_package_period_start"].split("-");
+            var all_ae = val["tour_package_period_end"].split("-");
+            div = div + '<span>' + this.tour_period_day_number + ' </span>';
+            div = div + '<span>วัน</span>';
+            div = div + '<span> ' + this.tour_period_night_number + ' </span>';
+            div = div + '<span>คืน</span>';
+            div = div + '<span>' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</span>';
             div = div + '</div>';
+            div = div + '<div class="tag-tour-num">';
+            var tour_code = val['tour_package_id'];
+            div = div + '<span>รหัส</span>';
+            div = div + '<span> TH' + tour_code + '</span>';
+            div = div + '</div>';
+            
+            div = div + '</div>';
+            div = div + '</div>';
+            
+            
             div = div + '<div class="item-body">';
             //div = div + '<div class="item-title"><h5 style="color:#ea1c24"><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_name + '</a></h5></div>';
             div = div + '<div class="item-title"><h2><a href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">' + this.tour_package_name + '</a></h2></div>';
             div = div + '<div class="hilight">';
-            div = div + '<i class="far fa-flag"></i>';
+            div = div + '<i class="fas fa-quote-left"></i>';
             div = div + '<div class="detail">';
             div = div + this.tour_package_detail;
             div = div + '</div>';
             div = div + '</div>';
-            div = div + '<div class="item-list">';
-            div = div + '<ul>';
-            div = div + '<li><i class="far fa-clock"></i> ' + this.tour_period_day_number + ' วัน ' + this.tour_period_night_number + ' คืน</li>';
-            var all_as = val["tour_package_period_start"].split("-");
-            var all_ae = val["tour_package_period_end"].split("-");
-            div = div + '<li><i class="far fa-calendar"></i> ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</li>';
-            div = div + '</ul>';
-            div = div + '</div>';
+//            div = div + '<div class="item-list">';
+//            div = div + '<ul>';
+//            div = div + '<li><i class="far fa-clock"></i> ' + this.tour_period_day_number + ' วัน ' + this.tour_period_night_number + ' คืน</li>';
+//            var all_as = val["tour_package_period_start"].split("-");
+//            var all_ae = val["tour_package_period_end"].split("-");
+//            div = div + '<li><i class="far fa-calendar"></i> ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</li>';
+//            div = div + '</ul>';
+//            div = div + '</div>';
             div = div + '<div class="item-footer">';
             div = div + '<div class="item-rate">';
             div = div + '<div class="card-airline">';
             div = div + '<img alt="' + this.airline_name + '" src="../images/airline/' + this.airline_picture + '" title="">';
             div = div + '</div>';
             div = div + '</div>';
-            div = div + '<div class="item-icon">';
-            var tour_code = val['tour_package_id'];
-//            while (tour_code.length != 6)
-//            {
-//                tour_code = '0' + tour_code;
-//            }
-            div = div + '<div class="pass">รหัสทัวร์&nbsp</div>TH' + tour_code;
-            div = div + '</div>';
+//            div = div + '<div class="item-icon">';
+//            var tour_code = val['tour_package_id'];
+////            while (tour_code.length != 6)
+////            {
+////                tour_code = '0' + tour_code;
+////            }
+//            div = div + '<div class="pass">รหัสทัวร์&nbsp</div>TH' + tour_code;
+//            div = div + '</div>';
             div = div + '</div>';
             div = div + '</div>';
             div = div + '<div class="item-price-more">';
