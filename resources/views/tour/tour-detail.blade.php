@@ -94,9 +94,9 @@
     }
 
     .product-detail__info .product-title h2{
-        color: #c33132;
+        color: #b5292e;
         display: inline;
-        font-size: 25px;
+        font-size: 23px;
     }
 
 
@@ -112,7 +112,6 @@
 
     .product-detail .right{
         float: right;
-        padding-bottom: 10px;
         margin-top: -24px;
     }
 
@@ -120,18 +119,19 @@
         display: inline-block;
         padding-right: 17px;
         color: #fff;
-        font-size: 19px;
-        font-weight: bold;       
-        border: 1px solid #38c49c;
-        background-color: #38c49c;
+        font-size: 17px;    
+        border: 1px solid #ed5565;
+        background-color: #ed5565;
         padding: 3px 14px 3px 14px;
-        border-radius: 20px; 
-        line-height: 1.6;
+        border-radius: 40px; 
+        line-height: 30px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .product-detail .download-pdf p a:hover{
-        background-color: #6fbd50;
-        border: 1px solid #6fbd50;
+        background-color: #c33132;
+        border: 1px solid #c33132;
         -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.3); 
         box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
     }
@@ -140,12 +140,12 @@
     .product-detail .facebook p a{
         display: inline-block;
         color: #fff;
-        font-size: 19px;
+        font-size: 17px;
         border: 1px solid #4dabf7;
         background-color: #4dabf7;
         border-radius: 8px;
         padding: 4px 21px 4px 10px;
-        /*        line-height: 1.5;*/
+        line-height: 30px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
@@ -157,11 +157,16 @@
     }
 
     @media (min-width: 1200px) {
-        .container {width: 1400px;}
+        .container { 
+            width: 100%;
+            padding: 0 3%;}
     }
 
     @media (min-width: 992px) and (max-width: 1199px) {
-        .container {width: 1200px;}
+        .container {
+            width: 100%;
+            padding: 0 3%;
+        }
     }
 
     @media (max-width: 425px) {
@@ -177,8 +182,8 @@
     .table-style .today {background: #c33132; color: #ffffff;}
     /*    .table-style th:nth-of-type(7),td:nth-of-type(7) {color: blue;}
         .table-style th:nth-of-type(1),td:nth-of-type(1) {color: red;}*/
-    .table-style tr:first-child th{background-color: #c33132; text-align:center; text-transform: uppercase; border-color: #c33132; font-size: 26px; font-weight: normal;}
-    .table-bordered > tbody > tr > th{font-size: 21px; background-color: white; color: #c33132;}
+    .table-style tr:first-child th{background-color: #c33132; text-align:center; text-transform: uppercase; border-color: #c33132; font-size: 22px; font-weight: normal;}
+    .table-bordered > tbody > tr > th{font-size: 19px; background-color: white; color: #c33132;}
     .table-bordered > tbody > tr > td{font-size: 17px; font-weight: bold;}
 </style>
 <?php
@@ -315,7 +320,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     <div class="trips">
                         <div class="item warp-text">
                             <h6>สายการบิน</h6>
-                            <p><i class="fas fa-plane" style="padding-right: 10px"></i>{{ $tourPackage->airline_name }}</p>
+                            <p><i class="fab fa-telegram-plane" style="padding-right: 10px"></i>{{ $tourPackage->airline_name }}</p>
                         </div>
                         <div class="item warp-text">
                             <h6>ระยะเวลา</h6>
@@ -348,14 +353,23 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <th colspan="3" style="color:#ffffff;"> <?php echo $html_title; ?></th>
                                     <th colspan="2"><a style="color: #ffffff;" href="?ym=<?php echo $next; ?>"><i class="fa fa-chevron-right"></i></a></th>
                                 </tr>
-                                <tr>
-                                    <th>อา</th>
-                                    <th>จ</th>
-                                    <th>อ</th>
-                                    <th>พ</th>
-                                    <th>พฤ</th>
-                                    <th>ศ</th>
-                                    <th>ส</th>
+                                <tr class="hidden-xs">
+                                    <th>อาทิตย์</th>
+                                    <th>จันทร์</th>
+                                    <th>อังคาร</th>
+                                    <th>พุธ</th>
+                                    <th>พฤหัส</th>
+                                    <th>ศุกร์</th>
+                                    <th>เสาร์</th>
+                                </tr>
+                                <tr class="visible-xs">
+                                    <th>อา.</th>
+                                    <th>จ.</th>
+                                    <th>อ.</th>
+                                    <th>พ.</th>
+                                    <th>พฤ.</th>
+                                    <th>ศ.</th>
+                                    <th>ส.</th>
                                 </tr>
                                 <?php
                                 foreach ($weeks as $week) {
