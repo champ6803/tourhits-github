@@ -156,7 +156,7 @@
         box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
     }
 
-    @media (min-width: 1200px) {
+/*    @media (min-width: 1200px) {
         .container { 
             width: 100%;
             padding: 0 3%;}
@@ -171,7 +171,7 @@
 
     @media (max-width: 425px) {
         .product-detail__info .trips .time-xs{width: 100%;}     
-    }
+    }*/
 
 
 </style>
