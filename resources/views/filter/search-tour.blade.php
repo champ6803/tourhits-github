@@ -106,11 +106,7 @@
     .filter-page{ background-color: #f6f6f6; margin-bottom: 0px;}
     .filter-item-wrapper{list-style-type: none;}
     .page-sidebar{background-color: #fff; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-top: 0px;}
-    .card-airline{ 
-        width: 100%;
-        padding: 0px 0px 0px 20px;
-    }
-    .card-airline img{ max-height: 44px;}
+
     .page-sidebar .sidebar-title{
 /*        border-top-color: #d7d7d7;*/
         border-top-color: #ea6a78;
@@ -137,8 +133,7 @@
     }
 
     #owl-demo .tag-item:hover{
-        border-color: #34495e;
-        background-color: #34495e;
+        background-color: #363636;
         opacity: 0.8;
 
     }
@@ -189,10 +184,10 @@
     @media (min-width: 1024px) and (max-width: 1399px) {
         .container {width: 100%;}
     }
-    @media (min-width: 700px) and (max-width: 1024px){.trip-item{height: 525px;}}
+
     @media (min-width: 992px) and (max-width: 1024px){
         .container {width: 100%;}
-        
+        .trip-item{height: 525px;}
         .sidebar-3{display: none;} 
         .sort-name{display: none;}
         

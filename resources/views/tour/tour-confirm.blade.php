@@ -25,8 +25,7 @@
     }
 
     .product-detail .trips .item p{
-        font-size: 13px;
-        line-height: 30px;
+        font-size: 19px;
         color: #fff;
         margin-bottom: 0;
         text-overflow: ellipsis;
@@ -38,7 +37,7 @@
     .cart-footer .cart-subtotal .subtotal {color: #EC2424;}
 
     .checkout-page__content #payment .place-order input {background-color: #EC2424; }
-    .checkout-page__sidebar ul li a {background-color: #34495e; }
+    .checkout-page__sidebar ul li a {background-color: #333333; }
     .checkout-page__sidebar ul li:hover a {color: #F6A95B;}
     .checkout-page__sidebar ul li a p {margin-left: 100px; }
     .checkout-page__sidebar ul li a h5 {font-weight: 300;}
@@ -48,7 +47,7 @@
     .checkout-page__content .contact-form{
         margin-left: 0px;
         margin-right: 0px;}
-    .checkout-page__content .contact-form .form-item { padding: 5px 10px;}
+    .checkout-page__content .contact-form .form-item { padding: 5px;}
 
     .panel {
         border: 0;
@@ -173,14 +172,14 @@
                         <li>
                             <a>
                                 <div class="fix-img" style="float:left;"><img src="{{asset('images/airplane.png')}}" alt=""></div>
-                                <h5 style="color:#C1BDBD; font-family: 'Kanit', sans-serif;">วันเดินทางไป</h5>
+                                <h5 style="color:#C1BDBD;">วันเดินทางไป</h5>
                                 <p id='txt_tour_period_start'></p>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <div class="fix-img" style="float:left;"><img src="{{asset('images/luggage.png')}}" alt=""></div>
-                                <h5 style="color:#C1BDBD; font-family: 'Kanit', sans-serif;">วันเดินทางกลับ</h5>
+                                <h5 style="color:#C1BDBD">วันเดินทางกลับ</h5>
                                 <p id='txt_tour_period_end'></p>
                             </a>
                         </li>
@@ -208,10 +207,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="tlr">                                                
-                                    <td class="product-name tab-adult-pair">
-                                        <span>ผู้ใหญ่</span>
-                                        <span>(พัก2-3คน)</span>
+                                <tr>                                                
+                                    <td class="product-name">
+                                        <span>ผู้ใหญ่ (พัก2-3คน)</span>
                                     </td>
                                     <td class="product-price">
                                         <span id="two_price"></span> ฿
@@ -232,9 +230,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="product-name tab-adult-single">
-                                        <span>ผู้ใหญ่</span>
-                                        <span>(พักเดี่ยว)</span>
+                                    <td class="product-name">
+                                        <span>ผู้ใหญ่ (พักเดี่ยว)</span>
                                     </td>
                                     <td class="product-price">
                                         <span id="one_price"></span> ฿
@@ -291,11 +288,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="tlr">
+                                <tr>
 
-                                    <td class="product-name tab-kid-1">
-                                        <span>เด็ก</span>
-                                        <span>(เพิ่มเตียง)</span>
+                                    <td class="product-name">
+                                        <span>เด็ก (เพิ่มเตียง)</span>
                                     </td>
                                     <td class="product-price">
                                         <span id='child_two_price' class="amount"></span> ฿
@@ -317,9 +313,8 @@
                                 </tr>
                                 <tr>
 
-                                    <td class="product-name tab-kid-2">
-                                        <span>เด็ก</span>
-                                         <span>(ไม่เพิ่มเตียง)</span>
+                                    <td class="product-name">
+                                        <span>เด็ก (ไม่เพิ่มเตียง)</span>
                                     </td>
                                     <td class="product-price">
                                         <span id='child_one_price' class="amount"></span> ฿
@@ -424,22 +419,22 @@
                             <div id="collapse1" class="panel-collapse">
                                 <div class="contact-form">
                                     <span><h4 style="color:#ec2424; display: inline; line-height: 1.6;"> ข้อมูลผู้จองสำหรับติดต่อกลับ (ที่อยู่อื่น)</h4></span><br>
-                                    <em style="font-size: 18px; font-weight: bold;">กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
+                                    <em style="font-size: 18px;">กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
                                     <div class="confirm-form">
                                         <div class="form-item">
-                                            <input id='cus_name' type="text" value="" name="name" placeholder=" ชื่อของคุณ">
+                                            <input id='cus_name' type="text" value="" name="name" placeholder=" ชื่อของคุณ *">
                                         </div>
                                         <div class="form-item">
                                             <input id='cus_email' type="email" value="" name="email" placeholder="อีเมล์ของคุณ">
                                         </div>
                                         <div class="form-item">
-                                            <input id='line_id' type="text" value="" name="line_id" placeholder=" Line (ถ้ามี)">
+                                            <input id='line_id' type="text" value="" name="line_id" placeholder=" Line *">
                                         </div>
                                         <div class="form-item">
-                                            <input id='phone' type="number" value="" name="phone" maxlength="10" placeholder="เบอร์โทรศัพท์">
+                                            <input id='phone' type="number" value="" name="phone" maxlength="10" placeholder="เบอร์โทรศัพท์ *">
                                         </div>
                                         <div class="form-textarea-wrapper">
-                                            <textarea id='remark' name="message">หมายเหตุ (ถ้ามี)</textarea>
+                                            <textarea id='remark' name="message">หมายเหตุ</textarea>
                                         </div>
                                     </div> 
                                 </div>

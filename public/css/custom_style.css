@@ -251,7 +251,7 @@
 .card-detail .hilight:before{
     position: absolute;
     height: 30px;
-    bottom: 143px;
+    bottom: 137px;
     left: 20px;
     right: 0;
     width: 300px;
@@ -289,28 +289,14 @@
 
 }
 
-.product-detail__info .product-address p{
-    font-family: 'Kanit', sans-serif;
+.product-detail__info .product-address p{      
     display: inline;
     line-height: 1;
-    
-}
-
-.product-detail__info .product-address p:first-child:before{
-    font-family: "Font Awesome 5 Free";
-    content: "\f005 ";
-    color: #ed5565;
-    font-size: 15px;
-    padding-right: 5px;
 }
 
 .product-detail__info .product-address p:after{
     content: " | ";
     color: #8d8d8d;      
-}
-
-.product-detail__info .product-address p:last-child:after{
-    content: "";   
 }
 
 .card-highlight{
@@ -339,18 +325,18 @@
 
 .card-airline{
     position: relative;
-    width: 130px;
+    width: 100%;
     height: 50px;
     float: left;
     overflow: hidden;
-    padding: 10px 0px 0px 0px;
+    padding: 5px 0px 0px 20px;
     /*    margin-bottom: 5px;*/
     /*    font-family: sans-serif;*/
 }
 
 .card-airline img{ 
     max-width: 130px; 
-    max-height: 35px; 
+    max-height: 44px; 
     position: relative; 
     left: 0; 
 }
@@ -4607,9 +4593,9 @@ Custom BS3
 
 .periods-table-detail .table .thead-light th{
     color: #fff;
-    background-color: #c33132;
-    border-color: #c33132;
-    font-size: 21px;
+    background-color: #d30000;
+    border-color: #d30000;
+    font-size: 23px;
     font-weight: 300;
 }
 
@@ -5465,7 +5451,7 @@ Custom BS3
     }
 
     .trip-item .item-body .item-footer .card-airline{
-        width: 100%;
+        width: 110px;
     }
 
 }
@@ -6223,55 +6209,3 @@ https://flickity.metafizzy.co
 }
 
 .awe-btn:focus{background-color: transparent;}
-
-.product-detail__info .trips i{color: #ea6a78;}
-
-.checkout-page__content .cart-content .tab-adult-pair span:nth-child(1){
-    display: inline-block;
-    width: 100%;
-    color: #8d8d8d;
-}
-
-.checkout-page__content .cart-content .tab-adult-pair span:nth-child(2){
-    font-size: 17px;
-    color: black;    
-}
-
-.checkout-page__content .cart-content .tab-adult-single span:nth-child(1){
-    display: inline-block;
-    width: 100%;
-    color: #8d8d8d;
-    padding-top: 3px;
-}
-
-.checkout-page__content .cart-content .tab-adult-single span:nth-child(2){
-    font-size: 17px;
-    color: black;    
-}
-
-.checkout-page__content .cart-content .tab-kid-1 span:nth-child(1){
-    display: inline-block;
-    width: 100%;
-    color: #8d8d8d;  
-}
-
-.checkout-page__content .cart-content .tab-kid-1 span:nth-child(2){
-    font-size: 17px;
-    color: black;
-}
-
-.checkout-page__content .cart-content .tab-kid-2 span:nth-child(1){
-    display: inline-block;
-    width: 100%;
-    color: #8d8d8d;
-    padding-top: 3px;
-}
-
-.checkout-page__content .cart-content .tab-kid-2 span:nth-child(2){
-    font-size: 17px;
-    color: black;
-}
-
-.checkout-page__content .cart-content .cart-table tbody .tlr{
-    border-bottom: 1px dashed #fdf5f5;
-}

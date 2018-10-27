@@ -6687,10 +6687,10 @@ body.single-post .blog-page__content > .post .post-content {
     margin-left: 10px;
 }
 .product-detail__info .product-address {
-    font-size: 16px;
-    color: #8d8d8d; 
+    font-size: 19px;
+    color: #262626 ;
     margin-bottom: 7px;
-/*    font-weight: bold;*/
+    font-weight: bold;
 }
 .product-detail__info .product-email .fa {
     color: #0091ea;
@@ -6781,7 +6781,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .product-detail__info .trips {
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: -15px;
     margin-right: -15px;
     padding-bottom: 10px;
@@ -6804,8 +6804,7 @@ body.single-post .blog-page__content > .post .post-content {
     line-height: 1.6;
 }
 .product-detail__info .trips .item p {
-    font-family: 'Kanit', sans-serif;
-    font-size: 15px;
+    font-size: 19px;
 /*    color: #515050;*/
 /*    margin-bottom: 0;*/
     text-overflow: ellipsis;
@@ -6817,13 +6816,13 @@ body.single-post .blog-page__content > .post .post-content {
 }
 
 .product-detail__info .trips .warp-text p{
-/*    display: inline-block;*/    
+/*    display: inline-block;*/
     color: #fff;
-    border: 1px solid #34495e;
-    background-color: #34495e;
+    border: 1px solid #495057;
+    background-color: #495057;
     padding: 3px 14px 3px 14px;
     border-radius: 20px;
-    line-height: 30px;
+    line-height: 1.6;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
@@ -8013,13 +8012,13 @@ body.single-post .blog-page__content > .post .post-content {
 /*    float: left;*/
 }
 .booking-info .form-submit .add-to-cart button {
-    font-size: 23px;
+    font-size: 25px;
     color: #FCF2E5;
     background-color: #c33132;
     border: 0;
     cursor: pointer;
-    line-height: 46px;
-/*    line-height: 1.5;*/
+/*    line-height: 46px;*/
+    line-height: 1.5;
     height: 46px;
     padding: 0 26px;
     width:100%;
@@ -10420,7 +10419,6 @@ select {
     border: 1px solid #eee;
     background-color: #eee;
     font-size: 19px;
-    font-weight: bold;
 }
 .confirm-form .form-textarea-wrapper {
     width: 100%;
@@ -10432,7 +10430,6 @@ select {
     border: 1px solid #eee;
     background-color: #eee;
     font-size: 19px;
-    padding-left: 15px;
 }
 .confirm-form .form-captcha {
     position: relative;
