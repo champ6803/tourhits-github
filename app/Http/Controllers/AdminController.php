@@ -23,7 +23,8 @@ use App\Models\Category;
 use App\Models\Tour_Holiday;
 use App\Models\Tour_Tag;
 use App\Models\Tour_Attraction;
-
+use App\Models\Tour_Period;
+use App\Models\Tour_Image;
 /**
  * Description of AdminController
  *
@@ -501,6 +502,54 @@ class AdminController extends Controller {
             $msg = $e->getMessage();
             return response($msg);
         }
+    }
+    public function saveTourPeriod() {
+         $tourPeriodModel = new Tour_Period();
+         try {
+             
+           $tour_period_start = $_POST['tour_period_start'];
+           $tour_period_end = $_POST['tour_period_end'];
+           $tour_period_adult_price = $_POST['tour_period_adult_price'];
+           $tour_period_child_price = $_POST['tour_period_child_price'];
+           $tour_period_child_nb_price = $_POST['tour_period_child_nb_price'];
+           $tour_period_alone_price = $_POST['tour_period_alone_price'];
+           $tour_period_adult_special_price = $_POST['tour_period_adult_special_price'];
+           $tour_period_child_special_price = $_POST['tour_period_child_special_price'];
+           $tour_period_status = $_POST['tour_period_status'];
+           
+           $dateStart = str_replace('/', '-', $tour_period_start);
+           $dateEnd = str_replace('/', '-', $tour_period_end);
+           
+           $tourPeriodModel->insertTourPeriod($dateStart, $dateEnd, $tour_period_adult_price
+                    , $tour_period_child_price, $tour_period_child_nb_price
+                    , $tour_period_alone_price, $tour_period_adult_special_price
+                    , $tour_period_child_special_price, $tour_period_status);
+           
+            echo "<script>
+             alert('บันทึกข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-tourlist';
+             </script>";
+          
+         } catch (Exception $ex) {
+
+         }
+
+    }
+    
+    public function saveTourImage() {
+       $tourImageModel = new Tour_Image();
+        try {
+            
+            $tour_image_name = $_FILES['file']['name'];    
+            $tourImageModel->insertTourImage($tour_image_name);
+            
+            echo "<script>
+             alert('บันทึกข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-tourlist';
+             </script>";
+         } catch (Exception $ex) {
+
+         }
     }
 
     public function saveTourlistAndDay() {
