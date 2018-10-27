@@ -108,13 +108,17 @@
     .page-sidebar{background-color: #fff; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-top: 0px;}
     .card-airline{ 
         width: 100%;
-        padding: 0px 0px 0px 20px;
+        padding: 6px 0px 0px 20px;
     }
     .card-airline img{ max-height: 44px;}
     .page-sidebar .sidebar-title{
 /*        border-top-color: #d7d7d7;*/
         border-top-color: #ea6a78;
         text-align: center;
+    }
+    
+    .trip-item .item-price-more{
+        padding: 0 20px;
     }
 
     .trip-item .item-price-more .price .amount{color:black;}
@@ -176,7 +180,7 @@
         .filter-page__content .country{}
         
         .filter-page{ background-color: #fff;}
-        .filter-page .filter-page-mid{margin-top: 0px;}
+        .filter-page .filter-page-mid{margin-top: 0px; background-color: black;}
         .category-heading-content .category-heading-content__2{padding-top: 50px;}
         .filter-box {bottom:85px!important;}
     }
@@ -203,10 +207,7 @@
 
     }
     @media screen and ( max-width: 1199px ) {
-        .trip-item .item-media .bot-img-detail{
-            margin-top: -40px;
-            background-color: rgba(58,53,53,0.8);
-        }
+        
         .filter-page__content .trip-item .item-body .item-title h2 a{padding-left: 0px;}
         .filter-page__content .trip-item .item-body .hilight i{display: none;}
         .card-airline{padding: 5px 0px 0px 5px;}
@@ -215,7 +216,48 @@
     }
     
     @media screen and ( max-width: 991px ) {
-
+        
+        .trip-item .item-media .bot-img-detail{
+            margin-top: -40px;
+            background-color: rgba(58,53,53,0.8);
+        }
+        
+        .trip-item .item-media{
+            width: 100%;
+            border-radius: 0px;
+        }
+        
+        .filter-page .filter-page-mid .page-mid-bg{
+            background-color: #f6f6f6;
+        }
+        
+        .filter-page__content .trip-item{
+            padding: 0;
+            border-radius: 0;
+            margin-top: 20px;
+        }
+        
+        .filter-page__content .trip-item:first-child{
+            margin-top: 0px;
+        }
+        
+        .head-all-card .card_show{
+            background: none;
+        }
+        
+        .filter-page__content .trip-item .item-body .hilight{
+            padding-top: 5px;
+        }
+        
+        .filter-page__content .trip-item .hilight .detail{
+            font-size: 15px;
+            overflow: hidden;
+        }
+        
+        .filter-page__content .trip-item .item-body .item-title h2 a{
+            font-size: 16px;
+        }
+        
         .filter-box {
             position: absolute;
             bottom: 60px;

@@ -49,7 +49,11 @@
         box-shadow: none !important;
     }
     
-    
+    .awe-search-tabs__content .ui-tabs-panel input{
+        font-size: 19px;
+        font-weight: bold;
+    }
+
 </style>
 
 <!-- HERO -->
@@ -91,6 +95,7 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <select id="country_dropdown" class="form-control">
+                                        <option value="">เลือกประเทศ</option>
                                         <option value="japan">ญี่ปุ่น</option>
                                         <option value="china">จีน</option>
                                         <option value="korea">เกาหลี</option>

@@ -53,19 +53,24 @@ $(function () {
                 sortable: true,
                 formatter: dateFormate
             }, {
-                field: 'updated_at',
+                field: 'updated_date',
                 title: 'Update',
                 align: 'center',
                 sortable: true
+            }, {
+                field: 'actiion',
+                title: 'Action',
+                align: 'center',
+                formatter: actionButton
             }]
     });
 
     loadTourPackageList(package_list);
 
-    $('#tour_package_table').on('click-row.bs.table', function (row, $element, field) {
-        window.location.href = "./manage-edit-tourlist?id=" + $element.tour_package_id;
-        console.log($element);
-    });
+//    $('#tour_package_table').on('click-row.bs.table', function (row, $element, field) {
+//        window.location.href = "./manage-edit-tourlist?id=" + $element.tour_package_id;
+//        console.log($element);
+//    });
 });
 
 function loadTourPackageList(data) {
@@ -87,4 +92,38 @@ function pad(str, max) {
 
 function padZero(value, row, index) {
     return "TH" + pad(value, 6);
+}
+
+function actionButton(value, row, index) {
+    return ['<button class="btn btn-primary btn-sm" onclick="editPackage(' + row.tour_package_id + ')"><i class="fa fa-pencil"></i></button> &nbsp; <button class="btn btn-danger btn-sm" onclick="deletePackage(' + row.tour_package_id + ')"><i class="fa fa-trash"></i></button>'];
+}
+
+function editPackage(tour_package_id) {
+    window.location.href = "./manage-edit-tourlist?id=" + tour_package_id;
+}
+
+function deletePackage(tour_package_id) {
+    var con = confirm("คุณต้องการลบหรือไม่ ?");
+    if (tour_package_id && con) {
+        $.ajax({
+            type: 'post',
+            url: 'deleteTourPackage',
+            async: false,
+            data: {tour_package_id: tour_package_id},
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (data) {
+                if (data == 'success') {
+                    alert('ลบข้อมูลเรียบร้อยแล้ว');
+                    window.location.href = "tour-package-list";
+                } else {
+                    alert('ไม่สามารถลบข้อมูลได้');
+                }
+            },
+            error: function (data) {
+                alert('error');
+            }
+        });
+    }
 }

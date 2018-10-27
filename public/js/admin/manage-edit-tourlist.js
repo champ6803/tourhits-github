@@ -539,7 +539,7 @@ function initValues() {
             var src = "images/tour/" + tourPackageDetail.tourPackage.tour_package_image;
             $("#file_show").attr("src", src);
             $("#file_show").removeClass('hide');
-            $("#pdf_show").html(tourPackageDetail.tourPackage.tour_package_pdf);
+            //$("#pdf_show").html(tourPackageDetail.tourPackage.tour_package_pdf);
             $("#pdf_hidden").val(tourPackageDetail.tourPackage.tour_package_pdf);
 
 

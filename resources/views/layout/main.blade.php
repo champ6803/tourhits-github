@@ -708,10 +708,37 @@ session_start();
 
             <!-- navbar only xs -->
 
-            <div class="navbar-bot visible-xs">
-                <div class="box-tel"><a href="tel:02-379-1249"><i class="fas fa-mobile"></i> โทร</a></div>
-                <div class="box-line"><a target="_blank" rel="noopener noreferrer" href="http://line.me/ti/p/%40tourhits"><i class="fab fa-line"></i> ไลน์</a></div>               
+            <div class="navbar-bot visible-xs">               
+                <div class="box-line bx">
+                    <a target="_blank" rel="noopener noreferrer" href="http://line.me/ti/p/%40tourhits">
+                        <div class="line-img-box img-bx">
+                            <img alt="" src="http://localhost:8000/images/icon/line.png" title="">
+                        </div>    
+                            <span>ไลน์หาเรา</span>
+                         
+                    </a>
+                </div>     
+                
+                <div class="box-fb bx">
+                    <a href="">
+                    <div class="tel-img-box img-bx">
+                        <img alt="" src="http://localhost:8000/images/icon/messenger.png" title="">
+                    </div>    
+                        <span>Messenger</span>
+                    </a> 
+                </div>
+                
+                <div class="box-tel bx">  
+                    <a href="tel:02-379-1249">
+                        <div class="tel-img-box img-bx">
+                            <img alt="" src="http://localhost:8000/images/icon/chat.png" title="">
+                        </div>    
+                            <span>โทรหาเรา</span>    
+                    </a>
+                </div>
             </div>
+            
+        </div>
 
             <!-- END navbar only xs -->
         </div>
