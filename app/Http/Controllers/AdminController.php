@@ -638,7 +638,6 @@ class AdminController extends Controller {
                 return redirect()->back()
                                 ->withErrors($validator)
                                 ->withInput();
-                
             }
         } else {
             $validator = Validator::make($request->all(), [
@@ -668,7 +667,7 @@ class AdminController extends Controller {
             ]);
 
             if ($validator->fails()) {
-                return redirect('manage-tourlist')
+                return redirect()->back()
                                 ->withErrors($validator)
                                 ->withInput();
             }
@@ -682,7 +681,7 @@ class AdminController extends Controller {
                                 $attractionStr => "required",
                     ]);
                     if ($validatorDetail->fails()) {
-                        return redirect('manage-tourlist')
+                        return redirect()->back()
                                         ->withErrors($validatorDetail)
                                         ->withInput();
                     }
@@ -839,7 +838,7 @@ class AdminController extends Controller {
              </script>";
             } catch (\Exception $e) {
                 $msg = $e->getMessage();
-                return dd($msg);
+                dd($msg);
             }
         });
     }

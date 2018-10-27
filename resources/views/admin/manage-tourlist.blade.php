@@ -48,10 +48,10 @@
                                                     <div class="form-group row">
                                                         <label for="inputEmail3" class="col-sm-2 control-label">Country</label>
                                                         <div class="col-sm-10">
-                                                             <select id="tour_country" name="tour_country_id" class="form-control">
+                                                             <select id="tour_country" name="tour_country" class="form-control">
                                                                 <option value=""> -- กรุณาระบุประเทศ -- </option>
                                                             </select>
-                                                            <input hidden id="tour_country_hidden" value="{{old('tour_country_id')}}">
+                                                            <input hidden id="tour_country_hidden" value="{{old('tour_country')}}">
                                                             <div id="selectTourCountry"></div>
                                                             
                                                         </div>
