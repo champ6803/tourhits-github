@@ -1,5 +1,6 @@
 $(function () {
-    $('#indx').addClass('menu-active');
+    $('#package_tour').addClass('menu-active');
+
     var as = tour_package_period_start.split("-");
     var ae = tour_package_period_end.split("-");
     var ae2 = ae[2].split(' ');
@@ -78,12 +79,19 @@ $(function () {
         sum_appraise_alone = sum_appraise_alone * parseInt(value);
         $('#appraise').html('฿' + numberWithCommas(sum_appraise_adult + sum_appraise_child + sum_appraise_alone + sum_appraise_child_nb));
     });
+    $('a.embed').gdocsViewer({width: 1020, height: 1300});
+
+    setInterval(function () {
+        $('.product-slider-thumb-row').removeClass("hide");
+    }, 2000);
 });
 
-function redirect(){
-    if(tour_period != 0 && ($('#adult_price').val() != 0 || $('#child_price').val() != 0 || $('#alone_price').val() != 0 || $('#child_nb_price').val() != 0)){
+
+
+function redirect() {
+    if (tour_period != 0 && ($('#adult_price').val() != 0 || $('#child_price').val() != 0 || $('#alone_price').val() != 0 || $('#child_nb_price').val() != 0)) {
         window.open('/tour-confirm/' + tour_package_id + '/' + tour_period + '?two_qty=' + two_qty + '&one_qty=' + one_qty + '&child_one_qty=' + child_one_qty + '&child_nb_qty=' + child_nb_qty, '_blank');
-    }else{
+    } else {
         alert('กรุณาเลือกช่วงเวลาและจำนวนคน');
     }
 }

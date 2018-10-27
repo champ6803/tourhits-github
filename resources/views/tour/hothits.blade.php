@@ -11,7 +11,29 @@
     .center-crop {
          max-width: 280px;
          overflow:hidden;  
-    }  
+    } 
+    
+    .tour-local-wrapper{
+        background-color: #f1f1f1;
+        height: 64px;
+    }
+    
+    .tour-local-wrapper .swiper-button-next{
+            font-size: 21px;
+            right: 15px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            top: 0px;
+    }
+    
+    .tour-local-wrapper .swiper-button-prev{
+        font-size: 21px;
+        left: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        top: 0px;
+    }
+
    
 </style>
     <!-- BREADCRUMB -->
@@ -28,10 +50,11 @@
         </section>-->
         <!-- BREADCRUMB -->
 
-        <section class="hothits-section">
-            <div class="container-hothits">
-         
-                <div class="hothits-cover-all">
+<section class="hothits-section">
+    <div class="row">
+        <div class="col-md-12 tour-local-wrapper">
+            <div id="owl-topbar" class="owl-carousel owl-theme">
+                    
                     <div class="hothits-cover" style="margin-left:16px;">
                         <div class="hothits-cover-img" style="background-image: url(&quot;https://images.unsplash.com/photo-1466051764869-02218eeb1fa5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=678d990346bef090dde43652de0731ee&auto=format&fit=crop&w=500&q=60;);" data-reactid="">
                             <a class="hothits-country-name" title="" href="" data-reactid="">ญี่ปุ่น</a>
@@ -231,7 +254,7 @@
                     </div>
                     
                     <div class="hothits-cover">
-                        <div class="hothits-cover-img" style="background-image: url(&quot;;);" data-reactid="">
+                        <div class="hothits-cover-img" style="background-image: url(&quot;https://images.unsplash.com/photo-1504469233511-1a19ead30d33?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a251900ecb0110fde8dd273f9a6817d5&auto=format&fit=crop&w=500&q=60;);" data-reactid="">
                             <a class="hothits-country-name" title="" href="" data-reactid="">บรูไน</a>
                         </div>                                     
                     </div>
@@ -258,15 +281,13 @@
                         <div class="hothits-cover-img" style="background-image: url(&quot;https://images.unsplash.com/photo-1481014472607-f71254019973?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3ef224b7a523caa5d3d836eba7fb884a&auto=format&fit=crop&w=500&q=60;);" data-reactid="">
                             <a class="hothits-country-name" title="" href="" data-reactid="">อังกฤษ</a>
                         </div>                                     
-                    </div>
-
-                </div>
-                
+                    </div>    
             </div>
-            
-            
-            
-        </section>
+                <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
+                <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>   
+        </div>                           
+    </div> 
+</section>
 
         <section class="detail-section" style="padding: 30px 0;">
             <div class="container">
@@ -1065,27 +1086,42 @@
             </div>
         </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @stop
+@section('footer_scripts')
+<script>
+$(document).ready(function() {
+ 
+  var owl = $("#owl-topbar");
+ 
+  owl.owlCarousel({
+      items : 14, //5 items above 1000px browser width
+      autoWidth:true,
+      loop:true,
+      pagination:false,
+      autoPlay : 6000,
+      stopOnHover : true,
+      margin:5,
+      transitionStyle:"fade",
+      itemsTablet: [768,4],
+      itemsMobile : [479,2]
+  
+  });
+ 
+  // Custom Navigation Events
+  $(".next").click(function(){
+    owl.trigger('owl.next');
+  })
+  $(".prev").click(function(){
+    owl.trigger('owl.prev');
+  })
+  $(".play").click(function(){
+    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+  })
+  $(".stop").click(function(){
+    owl.trigger('owl.stop');
+  })
+ 
+});
+</script>
+
+@endsection

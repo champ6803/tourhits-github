@@ -25,7 +25,7 @@ Route::post('getDistrict', 'MasterController@getDistrict');
 
 Route::post('getSubdistrict', 'MasterController@getSubdistrict');
 
-Route::get('search-tour/{country_id}', 'FilterController@search_tour');
+Route::get('tour/{country_url}', 'FilterController@search_tour');
 
 //Route::get('adminlogin','LoginController@adminLogin');
 
@@ -95,15 +95,7 @@ Route::post('updateOther', 'AdminController@updateOther');
 
 Route::get('manage-category', 'AdminController@manage_category');
 
-Route::post('searchTourCategory', 'AdminController@searchTourCategory');
-
-Route::post('saveTourCategory', 'AdminController@saveTourCategory');
-
-Route::post('deleteTourCategory', 'AdminController@deleteTourCategory');
-
-Route::post('updateTourCategory', 'AdminController@updateTourCategory');
-
-Route::post('search-tour/getTourPackage', 'FilterController@getTourPackage');
+Route::post('tour/getTourPackage', 'FilterController@getTourPackage');
 
 Route::post('getTourPackage', 'FilterController@getTourPackage');
 
@@ -114,6 +106,8 @@ Route::get('tour-confirm/{tour_pakage_id}/{tour_period_id}', 'TourController@tou
 Route::get('contact', 'ContactController@contact_us');
 
 Route::get('hothits', 'HothitsController@hot_hits');
+
+Route::get('tourhit', 'HothitsController@tour_hit');
 
 Route::get('logout', 'LoginController@logout');
 
@@ -137,19 +131,19 @@ Route::get('profile', 'ManageFrontController@profile');
 
 Route::post('searchCompanyByCompanyCode', 'ManageFrontController@searchCompanyByCompanyCode');
 
-Route::get('tourhot', 'TourhotController@tour_hot');
-
 Route::post('orders', 'TourController@orders');
 
-Route::get('tourhot','TourhotController@tour_hot');
+Route::get('manage-tourlist', 'AdminController@manage_tourlist');
 
-Route::get('manage-tourlist','AdminController@manage_tourlist');
+Route::get('manage-edit-tourlist', 'AdminController@manage_edit_tourlist');
 
 Route::post('searchAllTourCountry', 'AdminController@searchAllTourCountry');
 
 Route::post('searchAllTourCategory', 'AdminController@searchAllTourCategory');
 
 Route::post('saveTourlistAndDay', 'AdminController@saveTourlistAndDay');
+
+Route::post('updateTourlistAndDay', 'AdminController@updateTourlistAndDay');
 
 Route::post('searchAllCategory', 'AdminController@searchAllCategory');
 
@@ -161,9 +155,9 @@ Route::post('searchAllAttraction', 'AdminController@searchAllAttraction');
 
 Route::post('searchAllTag', 'AdminController@searchAllTag');
 
-Route::post('searchAllTag', 'AdminController@searchAllTag');
+Route::post('searchAllAirline', 'AdminController@searchAllAirline');
 
-Route::post('searchAllTag', 'AdminController@searchAllTag');
+Route::post('searchAllRoute', 'AdminController@searchAllRoute');
 
 Route::get('tour-detail2', 'TourDetailController@tour_detail2');
 
@@ -174,3 +168,53 @@ Route::post('getOrderDetailList', 'DashboardController@getOrderDetailList');
 Route::get('auth/login/facebook', 'LoginController@facebookAuthRedirect');
 // facebook call back after login success.
 Route::get('auth/login/facebook/index', 'LoginController@facebookSuccess');
+
+Route::get('tour-package-list', 'AdminController@tour_package_list');
+
+Route::get('/download_pdf/{tour_pakage_id}', 'TourController@getDownload');
+
+Route::get('tour-package-list', 'AdminController@tour_package_list');
+
+Route::get('manage-front-category', 'ManageFrontController@manage_front_category');
+
+Route::post('searchTourCategory', 'ManageFrontController@searchTourCategory');
+
+Route::post('searchTourPackegeByTourCountryId', 'ManageFrontController@searchTourPackegeByTourCountryId');
+
+Route::post('searchCategoryByCategoryType', 'ManageFrontController@searchCategoryByCategoryType');
+
+Route::post('saveTourCategory', 'ManageFrontController@saveTourCategory');
+
+Route::post('updateTourCategory', 'ManageFrontController@updateTourCategory');
+
+Route::post('removeTourCategory', 'ManageFrontController@removeTourCategory');
+
+// category manage //
+
+Route::post('searchCategory', 'AdminController@searchCategory');
+
+Route::post('saveCategory', 'AdminController@saveCategory');
+
+Route::post('deleteCategory', 'AdminController@deleteCategory');
+
+Route::post('updateCategory', 'AdminController@updateCategory');
+
+Route::post('deleteTourPackage', 'AdminController@deleteTourPackage');
+
+Route::get('manage-conditions', 'MasterController@manage_conditions');
+
+Route::get('manage-conditions-action', 'MasterController@manage_conditions_action');
+
+Route::post('getConditionsById', 'MasterController@getConditionsById');
+
+Route::post('getConditionsList', 'MasterController@getConditionsList');
+
+Route::post('removeConditions', 'MasterController@removeConditions');
+
+Route::post('saveConditions', 'MasterController@saveConditions');
+
+// Attraction Manage //
+
+Route::get('getCountry', 'MasterController@getCountry');
+
+Route::post('getAttractionByTourCountryId', 'AdminController@getAttractionByTourCountryId');

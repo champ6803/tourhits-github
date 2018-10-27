@@ -14,6 +14,7 @@ namespace App\Models;
  * @author Champ
  */
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Tour_Package;
 
 class Tour_Period extends Model {
 
@@ -42,6 +43,64 @@ class Tour_Period extends Model {
                         , 'updated_by' => 'admin'
                         , 'updated_at' => $date]
             );
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function insertTourPeriod($id, $tour_period_start, $tour_period_end
+    , $tour_period_adult_price, $tour_period_child_price, $tour_period_child_nb_price
+    , $tour_period_alone_price, $tour_period_adult_special_price
+    , $tour_period_child_special_price, $tour_period_status) {
+        try {
+//            $id = DB::table('tour_package')->max('tour_package_id');
+            $date = \Carbon\Carbon::now();
+            Tour_Period::insert(
+                    ['tour_package_id' => $id
+                        , 'tour_period_start' => $tour_period_start
+                        , 'tour_period_end' => $tour_period_end
+                        , 'tour_period_adult_price' => $tour_period_adult_price
+                        , 'tour_period_child_price' => $tour_period_child_price
+                        , 'tour_period_child_nb_price' => $tour_period_child_nb_price
+                        , 'tour_period_alone_price' => $tour_period_alone_price
+                        , 'tour_period_adult_special_price' => $tour_period_adult_special_price
+                        , 'tour_period_child_special_price' => $tour_period_child_special_price
+                        , 'tour_period_status' => $tour_period_status
+                        , 'created_by' => 'admin'
+                        , 'created_at' => $date
+                        , 'updated_by' => 'admin'
+                        , 'updated_at' => $date]
+            );
+            return true;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function updateTourPeriod($tour_period_id, $tour_package_id, $tour_period_start, $tour_period_end
+    , $tour_period_adult_price, $tour_period_child_price, $tour_period_child_nb_price
+    , $tour_period_alone_price, $tour_period_adult_special_price
+    , $tour_period_child_special_price, $tour_period_status) {
+        try {
+            $date = \Carbon\Carbon::now();
+            Tour_Period::where('tour_period.tour_period_id', '=', $tour_period_id)
+                    ->update(
+                            ['tour_package_id' => $tour_package_id
+                                , 'tour_period_start' => $tour_period_start
+                                , 'tour_period_end' => $tour_period_end
+                                , 'tour_period_adult_price' => $tour_period_adult_price
+                                , 'tour_period_child_price' => $tour_period_child_price
+                                , 'tour_period_child_nb_price' => $tour_period_child_nb_price
+                                , 'tour_period_alone_price' => $tour_period_alone_price
+                                , 'tour_period_adult_special_price' => $tour_period_adult_special_price
+                                , 'tour_period_child_special_price' => $tour_period_child_special_price
+                                , 'tour_period_status' => $tour_period_status
+                                , 'created_by' => 'admin'
+                                , 'created_at' => $date
+                                , 'updated_by' => 'admin'
+                                , 'updated_at' => $date]
+            );
+            return true;
         } catch (Exception $ex) {
             return $ex;
         }

@@ -1,12 +1,12 @@
 @extends('layout.main-admin')
 @section('page_title','Admin Management')
 @section('main-content')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            จัดการหน้าเว็ป
+            จัดการหน้าเว็บ
         </h1>
     </section>
     <section class="content">
@@ -38,8 +38,8 @@
                 <th>ลำดับที่</th>
                 <th>ชื่อประเทศ</th>
                 <th>ชื่อทัวร์ประเทศ</th>
+                <th>URL</th>
                 <th>รายละเอียด</th>
-                <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
                 <th>ลบ</th>
@@ -52,8 +52,8 @@
                 <th>ลำดับที่</th>
                 <th>ชื่อประเทศ</th>
                 <th>ชื่อทัวร์ประเทศ</th>
+                <th>URL</th>
                 <th>รายละเอียด</th>
-                <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
                 <th>แก้ไข</th>
                 <th>ลบ</th>
@@ -79,16 +79,20 @@
       <div class="modal-body">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อประเทศ:</label>
-            <div id="selectCountry"></div>
-            </br> 
+            <select id="country_select" name="country"></select>
+            <!--<div id="selectCountry"></div>-->
+            <br> 
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
             <input type="text" class="form-control" id="tour_country_name" name="tour_country_name" maxlength="100" required="required">
-            </br> 
+            <br> 
+            <label for="recipient-name" class="col-form-label">URL:</label>
+            <input type="text" class="form-control" id="tour_country_url" name="tour_country_url" maxlength="100" required="required">
+            <br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
             <input type="text" class="form-control" id="tour_country_detail" name="tour_country_detail">
-            </br>
+<!--            <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
-            <input class="form-control" type="file" id="file" name="file">
+            <input class="form-control" type="file" id="file" name="file">-->
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
           </div>
 
@@ -116,17 +120,21 @@
       <div class="modal-body">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อประเทศ:</label>
-            <div id="selectCountryEdit"></div>
-            </br> 
+            <select id="update_country_select" name="countryEdit"></select>
+            <!--<div id="selectCountryEdit"></div>-->
+            <br> 
             <label for="recipient-name" class="col-form-label">ชื่อทัวร์ประเทศ:</label>
             <input type="text" class="form-control" id="update_tour_country_name" name="update_tour_country_name" maxlength="100" >
             <input type="hidden" class="form-control" id="hidden_update_id" name="hidden_update_id">
-            </br> 
+            <br> 
+            <label for="recipient-name" class="col-form-label">URL:</label>
+            <input type="text" class="form-control" id="update_tour_country_url" name="update_tour_country_url" maxlength="100" required="required">
+            <br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
             <input type="text" class="form-control" id="update_tour_country_detail" name="update_tour_country_detail">
-            <br>
+<!--            <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
-            <input class="form-control" type="file" id="updateFile" name="file">
+            <input class="form-control" type="file" id="updateFile" name="file">-->
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
           </div>
       </div>
@@ -138,8 +146,6 @@
     </div>
   </div>
 </div>
- 
- 
  
  <!-- remove modal -->
  <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -163,8 +169,4 @@
 @stop
 @section('footer_scripts')
 <script type="text/javascript" src="../js/manage-front/manage-front-country.js"></script>
-<script src='https://code.jquery.com/jquery-1.12.4.js'></script>
-<script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
- 
 @endsection

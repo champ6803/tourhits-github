@@ -29,6 +29,31 @@ class Tour_Category extends Model {
         }
     }
 
+    public function getTourCategoryDetailAll() {
+        try {
+            $tourCategoryDetailList = Tour_Category::join('category', 'category.category_id', '=', 'tour_category.category_id')
+                    ->join('tour_package', 'tour_package.tour_package_id', '=', 'tour_category.tour_package_id')
+                    ->select('tour_package.tour_package_id', 'tour_package.tour_package_name', 'tour_package.tour_country_id', 'category.*', 'tour_category.*')
+                    ->get();
+            return $tourCategoryDetailList;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function getTourCategoryDetailByName($categoryName) {
+        try {
+            $tourCategoryDetailList = Tour_Category::join('category', 'category.category_id', '=', 'tour_category.category_id')
+                    ->join('tour_package', 'tour_package.tour_package_id', '=', 'tour_category.tour_package_id')
+                    ->where('category.category_name', $categoryName)
+                    ->select('tour_package.tour_package_id', 'tour_package.tour_package_name', 'tour_package.tour_country_id', 'category.*', 'tour_category.*')
+                    ->get();
+            return $tourCategoryDetailList;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
     public function getTourCategoryByName($input_tour_category_name) {
         try {
             $tourCategoryList = Tour_Category::where('tour_category_name', $input_tour_category_name)->get();
@@ -38,22 +63,18 @@ class Tour_Category extends Model {
         }
     }
 
-    public function insertTourCategory($tour_category_name, $tour_category_picture) {
+    public function insertTourCategory($category_id, $tour_package_id, $user) {
         try {
             $date = \Carbon\Carbon::now();
             Tour_Category::insert(
-                    ['tour_category_name' => $tour_category_name
-                        , 'created_by' => 'admin'
+                    ['category_id' => $category_id
+                        , 'tour_package_id' => $tour_package_id
+                        , 'created_by' => $user
                         , 'created_at' => $date
-                        , 'updated_by' => 'admin'
+                        , 'updated_by' => $user
                         , 'updated_at' => $date
-                        , 'tour_category_img' => $tour_category_picture
-                        , 'tour_category_block' => 1]
+                    ]
             );
-            if (Input::hasFile('file')) {
-                $file = Input::file('file');
-                $file->move('images/category', $file->getClientOriginalName());
-            }
         } catch (Exception $ex) {
             return $ex;
         }
@@ -67,40 +88,29 @@ class Tour_Category extends Model {
         }
     }
 
-    public function editTourCategory($id, $update_tour_category_name, $tour_category_picture) {
+    public function editTourCategory($tour_category_id, $category_id, $tour_package_id, $user) {
         try {
             $date = \Carbon\Carbon::now();
-            if (null == $tour_category_picture) {
-                \DB::table('tour_category')
-                        ->where('tour_category_id', $id)
-                        ->update(['tour_category_name' => $update_tour_category_name
-                            , 'updated_at' => $date
-                            , 'updated_by' => 'admin']);
-            } else {
-                \DB::table('tour_category')
-                        ->where('tour_category_id', $id)
-                        ->update(['tour_category_name' => $update_tour_category_name
-                            , 'tour_category_img' => $tour_category_picture
-                            , 'updated_at' => $date
-                            , 'updated_by' => 'admin']);
-                if (Input::hasFile('file')) {
-                    $file = Input::file('file');
-                    $file->move('images/category', $file->getClientOriginalName());
-                }
-            }
+            Tour_Category::where('tour_category_id', $tour_category_id)
+                    ->update(['category_id' => $category_id
+                        , 'tour_package_id' => $tour_package_id
+                        , 'updated_by' => $user
+                        , 'updated_at' => $date
+            ]);
         } catch (Exception $ex) {
             return $ex;
         }
     }
 
-    public function getTourCategoryIndex(){
-        try{
-            $tourCategoryList = Tour_Category::where('tour_category_id','<>', 1)
-                    ->where('tour_category_id','<>', 2)
+    public function getTourCategoryIndex() {
+        try {
+            $tourCategoryList = Tour_Category::where('tour_category_id', '<>', 1)
+                    ->where('tour_category_id', '<>', 2)
                     ->get();
             return $tourCategoryList;
-        } catch(\Exception $ex){
+        } catch (\Exception $ex) {
             return $ex;
         }
     }
+
 }

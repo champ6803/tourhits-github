@@ -15,6 +15,7 @@ namespace App\Models;
  */
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use App\Models\Tour_Attraction_Day;
 
 class Tour_Package_Day extends Model {
 
@@ -29,24 +30,101 @@ class Tour_Package_Day extends Model {
             return $ex;
         }
     }
-    
-    public function insertTourPackageDay($id,$day,$tourname,$tourdetail){
-          try {
-            $date = \Carbon\Carbon::now();
-            Tour_Package_Day::insert(
-            [ 'tour_package_id' => $id
-             ,'tour_package_day' => $day
-             ,'tour_package_day_name' => $tourname
-             ,'tour_package_day_description' => $tourdetail
-             , 'created_by' => 'admin'
-             , 'created_at' => $date
-             , 'updated_by' => 'admin'        
-             , 'updated_at' => $date]
-            );
-          } catch (Exception $ex) {
-               return $ex;
-          }
+
+    public function getTourAttractionDay($tour_package_day_id) {
+        try {
+            $tourAttractionDayList = Tour_Attraction_Day::where('tour_attraction_day.tour_package_day_id', '=', $tour_package_day_id)
+                    ->join('attraction', 'attraction.attraction_id', '=', 'tour_attraction_day.attraction_id')
+                    ->get();
+
+            return $tourAttractionDayList;
+        } catch (\Exception $ex) {
+            return $ex;
+        }
     }
-    
+
+    public function insertTourPackageDay($id, $day, $tourname, $tourdetail) {
+        try {
+            $date = \Carbon\Carbon::now();
+            $tour_day_id = Tour_Package_Day::insertGetId(
+                            ['tour_package_id' => $id
+                                , 'tour_package_day' => $day
+                                , 'tour_package_day_name' => $tourname
+                                , 'tour_package_day_description' => $tourdetail
+                                , 'created_by' => 'admin'
+                                , 'created_at' => $date
+                                , 'updated_by' => 'admin'
+                                , 'updated_at' => $date]
+            );
+            return $tour_day_id;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function updateTourPackageDay($tour_package_day_id, $tour_package_id, $day, $tourname, $tourdetail) {
+        try {
+            $date = \Carbon\Carbon::now();
+            $tour_day_id = Tour_Package_Day::where('tour_package_day_id', $tour_package_day_id)
+                    ->update(['tour_package_id' => $tour_package_id
+                , 'tour_package_day' => $day
+                , 'tour_package_day_name' => $tourname
+                , 'tour_package_day_description' => $tourdetail
+                , 'created_by' => 'admin'
+                , 'created_at' => $date
+                , 'updated_by' => 'admin'
+                , 'updated_at' => $date]
+            );
+            return true;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function insertTourAttractionDay($day_id, $attraction_id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            Tour_Attraction_Day::insert([
+                'tour_package_day_id' => $day_id
+                , 'attraction_id' => $attraction_id
+                , 'created_by' => 'admin'
+                , 'created_at' => $date
+                , 'updated_by' => 'admin'
+                , 'updated_at' => $date
+            ]);
+        } catch (\Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function updateTourAttractionDay($day_id, $attraction_id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            $tourAttractionDayList = Tour_Attraction_Day::where('tour_package_day_id', $day_id)
+                    ->where('attraction_id', $attraction_id)
+                    ->get();
+            if ($tourAttractionDayList != null && count($tourAttractionDayList) > 0) {
+                Tour_Attraction_Day::where('tour_package_id', $day_id)
+                        ->where('attraction_id', $attraction_id)
+                        ->update([
+                            'tour_package_day_id' => $day_id
+                            , 'attraction_id' => $attraction_id
+                            , 'updated_by' => 'admin'
+                            , 'updated_at' => $date
+                ]);
+            } else {
+                Tour_Attraction_Day::insert([
+                    'tour_package_day_id' => $day_id
+                    , 'attraction_id' => $attraction_id
+                    , 'created_by' => 'admin'
+                    , 'created_at' => $date
+                    , 'updated_by' => 'admin'
+                    , 'updated_at' => $date
+                ]);
+            }
+        } catch (\Exception $ex) {
+            return $ex;
+        }
+    }
 
 }

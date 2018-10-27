@@ -1,17 +1,24 @@
+<?php
+session_start();
+if (!isset($_SESSION['a_user'])) {
+    header("location: /admin");
+    exit(0);
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="zoom: 80%">
     <head>
         <style>
-        fieldset 
+            fieldset 
             {
-		border: 1px solid #ddd !important;
-		margin: 0;
-		xmin-width: 0;
-		padding: 10px;       
-		position: relative;
-		border-radius:4px;
-		background-color:#f5f5f5;
-		padding-left:10px!important;
+                border: 1px solid #ddd !important;
+                margin: 0;
+                xmin-width: 0;
+                padding: 10px;       
+                position: relative;
+                border-radius:4px;
+                background-color:#f5f5f5;
+                padding-left:10px!important;
             }	
         </style>
         <meta charset="utf-8">
@@ -21,8 +28,8 @@
         <meta name="author" content="">
         <!--CSRF Token-->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-<!--        
-        <link rel="icon" href="../images/favicon.ico">-->
+        <!--        
+                <link rel="icon" href="../images/favicon.ico">-->
 
         <title>@yield('page_title')</title>
 
@@ -46,14 +53,19 @@
 
         <!-- bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
-        
+
         <link rel="stylesheet" href="{{ asset('css/lib/bootstrap-table.css')}}">
+
+        <link rel="stylesheet" href="../assets/select2/dist/css/select2.css" >
 
         <!-- theme style -->
         <link rel="stylesheet" href="css/master_style.css">
 
         <!-- Lion_admin skins -->
-        <link rel="stylesheet" href="css/skins/_all-skins.css">
+        <link rel="stylesheet" href="{{ asset('css/skins/_all-skins.css') }}">
+
+        <!-- CSS LIBRARY -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/datatables.css') }}">
 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -68,10 +80,10 @@
 
     <body class="hold-transition skin-blue-light sidebar-mini">
         <div class="wrapper">
-
             <header class="main-header">
                 <!-- Logo -->
                 <a href="index.html" class="logo">
+
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <b class="logo-mini">
                         <span class="light-logo"><img src="../images/logo-light.png" alt="logo"></span>
@@ -93,18 +105,18 @@
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
 
-                           <!-- <li class="search-box">
-                                <a class="nav-link hidden-sm-down" href="javascript:void(0)"><i class="mdi mdi-magnify"></i></a>
-                                <form class="app-search" style="display: none;">
-                                    <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
-                                </form>
-                            </li>			
+                            <!-- <li class="search-box">
+                                 <a class="nav-link hidden-sm-down" href="javascript:void(0)"><i class="mdi mdi-magnify"></i></a>
+                                 <form class="app-search" style="display: none;">
+                                     <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                                 </form>
+                             </li>			
                             -->
                             <!-- Messages -->
                             <li class="dropdown messages-menu">
-                               <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="mdi mdi-email"></i>
-                                </a>-->
+                                <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                     <i class="mdi mdi-email"></i>
+                                 </a>-->
                                 <ul class="dropdown-menu scale-up">
                                     <li class="header">You have 5 messages</li>
                                     <li>
@@ -351,34 +363,11 @@
                                 </a>
                                 <ul class="dropdown-menu scale-up">
                                     <!-- User image -->
-                                    <li class="user-header">
-                                        <img src="../images/logo.png" style="background-color: #fff" class="float-left rounded-circle" alt="User Image">
-
-                                        <p>
-                                            Romi Roy
-                                            <small class="mb-5">jb@gmail.com</small>
-                                            <a href="#" class="btn btn-danger btn-sm btn-rounded">View Profile</a>
-                                        </p>
-                                    </li>
                                     <!-- Menu Body -->
                                     <li class="user-body">
                                         <div class="row no-gutters">
                                             <div class="col-12 text-left">
-                                                <a href="#"><i class="ion ion-person"></i> My Profile</a>
-                                            </div>
-                                            <div class="col-12 text-left">
-                                                <a href="#"><i class="ion ion-email-unread"></i> Inbox</a>
-                                            </div>
-                                            <div class="col-12 text-left">
-                                                <a href="#"><i class="ion ion-settings"></i> Setting</a>
-                                            </div>
-                                            <div role="separator" class="divider col-12"></div>
-                                            <div class="col-12 text-left">
-                                                <a href="#"><i class="ti-settings"></i> Account Setting</a>
-                                            </div>
-                                            <div role="separator" class="divider col-12"></div>
-                                            <div class="col-12 text-left">
-                                                <a href="#"><i class="fa fa-power-off"></i> Logout</a>
+                                                <a href="{{url('logout')}}"><i class="fa fa-power-off"></i> Logout</a>
                                             </div>				
                                         </div>
                                         <!-- /.row -->
@@ -416,8 +405,8 @@
                     <!-- sidebar menu -->
                     <ul class="sidebar-menu" data-widget="tree">
                         <li class="nav-devider"></li>
-                        <li class="header nav-small-cap">PERSONAL</li>
-                        <li class="treeview">
+                        <li class="header nav-small-cap">MENU</li>
+                        <li id="dashboard_main" class="treeview">
                             <a href="#">
                                 <i class="fa fa-clipboard"></i> <span>Dashboard</span>
                                 <span class="pull-right-container">
@@ -426,10 +415,10 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="{{ url('/order-list')}}">Dashboard</a></li>
-                                <li><a href="{{ url('/order-list')}}">รายการการจอง</a></li>
+                                <li id="order_list"><a href="{{ url('/order-list')}}">รายการการจอง</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li id="manage_front" class="treeview">
                             <a href="#">
                                 <i class="fa fa-pencil-square"></i>
                                 <span>จัดการหน้าเว็บ</span>
@@ -438,30 +427,44 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/app/app-chat.html">Banner</a></li>
-                                <li><a href="{{ url('manage-front-country')}}">ประเทศ</a></li>
-                                <li><a href="pages/app/app-contact.html">ทัวร์แนะนำ</a></li>
-                                <li><a href="pages/app/app-ticket.html">สปอนเซอร์</a></li>
-                                <li><a href="pages/app/calendar.html">รีวิว</a></li>
-                                <li><a href="{{ url('profile')}}">การติดต่อ</a></li>
+                                <li><a href="pages/app/app-chat.html">จัดการแบนเนอร์</a></li>
+                                <li id="manage_front_country"><a href="{{ url('manage-front-country')}}">จัดการประเทศ</a></li>
+                                <li id="manage_front_category"><a href="{{ url('manage-front-category') }}">จัดการหมวดหมู่หน้าบ้าน</a></li>
+                                <li><a href="pages/app/app-ticket.html">จัดการสปอนเซอร์</a></li>
+                                <li><a href="pages/app/calendar.html">จัดการรีวิว</a></li>
+                                <li><a href="{{ url('profile')}}">จัดการการติดต่อ</a></li>
                             </ul>
                         </li>
                         <li id="managetour" class="treeview">
                             <a href="#">
-                                <i class="fa fa-database"></i> <span>จัดการทัวร์</span>
+                                <i class="fa fa-database"></i> <span>จัดการรายการทัวร์</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-right pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a  id="tourMenu"  href="{{ url('manage-tourlist')}}">จัดการรายการทัวร์</a></li>
-                                <li><a id="categoryMenu"  href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
-                                <li><a id="tagMenu"  href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
-                                <li><a id="otherMenu"  href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
-                                <li><a id="attractionMenu"  href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
-                                <li><a id="airlineMenu"  href="{{ url('manage-airline')}}">จัดการสายการบิน</a></li>
-                                <li><a id="routeMenu"  href="{{ url('manage-route')}}">จัดการเส้นทาง</a></li>
-                                <li><a id="holidayMenu"  href="{{ url('manage-holiday')}}">จัดการวันหยุด</a></li>
+                                <li id="manage_tourlist"><a href="{{ url('manage-tourlist')}}">เพิ่มรายการทัวร์</a></li>
+                                <li id="tour_package_list"><a href="{{ url('tour-package-list')}}">รายการทัวร์ทั้งหมด</a></li>
+                                <li id="showTourCountryMenu"><a href="{{ url('show-country-tourlist')}}">รายการทัวร์แต่ละประเทศ</a></li>
+                                <li id="statusTourMenu"><a href="{{ url('status-tourlist')}}">สถานะแพ็คเกจทัวร์</a></li>
+                            </ul>
+                        </li>
+                        <li id="managemaster" class="treeview">
+                            <a href="#">
+                                <i class="fa fa-database"></i> <span>ข้อมูลมาสเตอร์</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-right pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li id="categoryMenu"><a href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
+                                <li id="conditionsMenu"><a href="{{ url('manage-conditions')}}">จัดการเงื่อนไข</a></li>
+                                <li id="tagMenu"><a href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
+                                <li id="otherMenu"><a href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
+                                <li id="attractionMenu"><a href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>
+                                <li id="airlineMenu"><a href="{{ url('manage-airline')}}">จัดการสายการบิน</a></li>
+                                <li id="routeMenu"><a href="{{ url('manage-route')}}">จัดการเส้นทาง</a></li>
+                                <li id="holidayMenu"><a href="{{ url('manage-holiday')}}">จัดการวันหยุด</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -561,8 +564,8 @@
                     </ul>
                 </div>
                 &copy; 2018 <a href="https://www.multipurposethemes.com/">Tourhits</a>. All Rights Reserved.
-             -->
-</footer>
+                -->
+            </footer>
             <!-- Control Sidebar -->
             <aside class="control-sidebar control-sidebar-dark">
                 <!-- Create the tabs -->
@@ -756,7 +759,7 @@
         <script src="../assets/vendor_components/jquery/dist/jquery.js"></script>
 
         <!-- popper -->
-        <script src="../assets/vendor_components/popper/dist/popper.min.js"></script>
+        <!--<script src="../assets/vendor_components/popper/dist/popper.min.js"></script>-->
 
         <!-- Bootstrap 4.0-->
         <script src="../assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -778,6 +781,9 @@
         <!-- datepicker -->
         <script src="../assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
 
+        <!-- CK Editor -->
+        <script src="../../../assets/vendor_components/ckeditor/ckeditor.js"></script>
+
         <!-- Bootstrap WYSIHTML5 -->
         <script src="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
 
@@ -789,20 +795,27 @@
 
         <!-- peity -->
         <script src="../assets/vendor_components/jquery.peity/jquery.peity.js"></script>
-        
+
+        <script src="{{ asset('js/lib/datatables.js')}}"></script>
+
+        <script src="{{ asset('js/lib/angular.js')}}"></script>
+
         <script src="{{ asset('js/lib/bootstrap-table.js')}}"></script>
-        
+
         <script src="{{ asset('js/lib/bootstrap-table-editable.js')}}"></script>
+        
+        <script type="text/javascript" src="{{ asset('js/lib/AutoNumeric.js') }}"></script>
+
+        <script type="text/javascript" src="../assets/select2/dist/js/select2.min.js"></script>
 
         <!-- Lion_admin App -->
         <script src="js/template.js"></script>
 
-        <!-- Lion_admin dashboard demo (This is only for demo purposes) -->
-        <script src="js/pages/dashboard.js"></script>
+
 
         <!-- Lion_admin for demo purposes -->
         <script src="js/demo.js"></script>
-        
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         @yield('footer_scripts')
     </body>
 </html>

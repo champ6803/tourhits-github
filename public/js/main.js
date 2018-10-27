@@ -1,4 +1,6 @@
-
+$(function(){
+    
+});
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
             sURLVariables = sPageURL.split('&'),
@@ -13,6 +15,29 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+
+function getDateNow() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+    return yyyy + '-' + mm + '-' + dd;
+}
+
+function changeFormateDate(date) {
+    var date_split = date.split("-");
+    var dd =  date_split[2];
+    var mm = date_split[1];
+    var yyyy = date_split[0];
+    return dd + '/' + mm + '/' + yyyy;
+}
 
 function setMonthString(month) {
     var monthString = "";
@@ -102,7 +127,7 @@ function setCTMonthString(month) {
 }
 
 const numberWithCommas = (x) => {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 const removeCommas = (x) => {

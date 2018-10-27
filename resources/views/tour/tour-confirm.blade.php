@@ -1,6 +1,7 @@
 @extends('layout.main')
 @section('page_title','รายละเอียดการจอง')
 @section('main-content')
+
 <style>
 
     .product-detail{
@@ -24,8 +25,9 @@
     }
 
     .product-detail .trips .item p{
-        font-size: 21px;
-        color: #515050;
+        font-size: 13px;
+        line-height: 30px;
+        color: #fff;
         margin-bottom: 0;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -36,7 +38,7 @@
     .cart-footer .cart-subtotal .subtotal {color: #EC2424;}
 
     .checkout-page__content #payment .place-order input {background-color: #EC2424; }
-    .checkout-page__sidebar ul li a {background-color: #333333; }
+    .checkout-page__sidebar ul li a {background-color: #34495e; }
     .checkout-page__sidebar ul li:hover a {color: #F6A95B;}
     .checkout-page__sidebar ul li a p {margin-left: 100px; }
     .checkout-page__sidebar ul li a h5 {font-weight: 300;}
@@ -46,7 +48,7 @@
     .checkout-page__content .contact-form{
         margin-left: 0px;
         margin-right: 0px;}
-    .checkout-page__content .contact-form .form-item { padding: 5px;}
+    .checkout-page__content .contact-form .form-item { padding: 5px 10px;}
 
     .panel {
         border: 0;
@@ -58,7 +60,16 @@
     .table > thead > tr > th, .table > thead > tr > td {
         border: 0;
     }
-
+    
+    .product-detail__info .product-title h2 {
+    color: #c33132;
+    display: inline;
+    font-size:19px;
+    }
+    .cart-content .cart-table tbody td .quantity .minus:hover{color:#c33132;}
+    @media (max-width: 425px) {
+        .product-detail__info .trips .time-xs{width: 100%;}     
+    }
 </style>
 <!-- BREADCRUMB -->
 <section>
@@ -85,7 +96,7 @@
                         <div class="product-slider">
                             @foreach($tourPackageImagesList as $tourPackageImage)
                             <div class="item">
-                                <img src="{{ asset('images/tour/'.$tourPackageImage->tour_image_name)}}" alt="">
+                                <img src="{{ asset('images/tour-images/'.$tourPackageImage->tour_image_name)}}" alt="">
                             </div>
                             @endforeach
                         </div>
@@ -93,7 +104,7 @@
                             <div class="product-slider-thumb">
                                 @foreach($tourPackageImagesList as $tourPackageImage)
                                 <div class="item">
-                                    <img src="{{ asset('images/tour/'.$tourPackageImage->tour_image_name)}}" alt="">
+                                    <img src="{{ asset('images/tour-images/'.$tourPackageImage->tour_image_name)}}" alt="">
                                 </div>
                                 @endforeach
                             </div>
@@ -107,24 +118,24 @@
                         <h2>{{ $tourPackage->tour_package_name }}</h2>
                     </div>
                     <div class="product-address">
-                        <span>{{ $tourPackage->tour_package_detail}}</span>
+                        <span><?php echo $tourPackage->tour_package_detail ?></span>
                     </div>
                     <div class="trips">
-                        <div class="item">
+                        <div class="item warp-text">
                             <h6>สายการบิน</h6>
                             <p><i class="fas fa-plane" style="padding-right: 10px"></i>{{ $tourPackage->airline_name }}</p>
                         </div>
-                        <div class="item">
+                        <div class="item warp-text">
                             <h6>ระยะเวลา</h6>
                             <p><i class="far fa-clock" style="padding-right: 10px"></i>{{$tourPackage->tour_period_day_number}} วัน {{$tourPackage->tour_period_night_number}} คืน</p>
                         </div>
-                        <div class="item">
+                        <div class="time-xs item warp-text">
                             <h6>ช่วงเวลา</h6>
                             <p><i class="far fa-calendar-minus" style="padding-right: 10px"></i><span id='period_month'></span></p>
                         </div>
-                        <div class="item">
+                        <div class="item warp-text">
                             <h6>รหัสทัวร์</h6>
-                            <p><i class="fas fa-barcode" style="padding-right: 10px"></i>#<span id='tour_code'></span></p>
+                            <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
                         </div>
                     </div>
 
@@ -162,14 +173,14 @@
                         <li>
                             <a>
                                 <div class="fix-img" style="float:left;"><img src="{{asset('images/airplane.png')}}" alt=""></div>
-                                <h5 style="color:#C1BDBD;">วันเดินทางไป</h5>
+                                <h5 style="color:#C1BDBD; font-family: 'Kanit', sans-serif;">วันเดินทางไป</h5>
                                 <p id='txt_tour_period_start'></p>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <div class="fix-img" style="float:left;"><img src="{{asset('images/luggage.png')}}" alt=""></div>
-                                <h5 style="color:#C1BDBD">วันเดินทางกลับ</h5>
+                                <h5 style="color:#C1BDBD; font-family: 'Kanit', sans-serif;">วันเดินทางกลับ</h5>
                                 <p id='txt_tour_period_end'></p>
                             </a>
                         </li>
@@ -193,13 +204,14 @@
                                     <th class="product-name" colspan="3" style="color: #EC2424"><i class="fas fa-male"></i> <i class="fas fa-female"></i> ผู้ใหญ่ (บาท/ท่าน)</th>
 <!--                                            <th class="product-price"></th>
                                     <th class="product-quantity"></th>-->
-                                    <th class="product-subtotal" style="color: #EC2424"><span id='adult_total_amount' class='adult_total_amount'></span> ฿</th>
+                                    <th class="product-subtotal hidden-xs" style="color: #EC2424"><span id='adult_total_amount' class='adult_total_amount'></span> ฿</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>                                                
-                                    <td class="product-name">
-                                        <span>พักคู่</span>
+                                <tr class="tlr">                                                
+                                    <td class="product-name tab-adult-pair">
+                                        <span>ผู้ใหญ่</span>
+                                        <span>(พัก2-3คน)</span>
                                     </td>
                                     <td class="product-price">
                                         <span id="two_price"></span> ฿
@@ -207,21 +219,22 @@
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
                                             <button type="button" class="minus two_minus">
-                                                <i class="fa fa-caret-up"></i>
+                                                <i class="fas fa-plus-circle"></i>
                                             </button>
                                             <input type="number" id='two_qty' class="qty" value="0">
                                             <button type="button" class="plus two_plus">
-                                                <i class="fa fa-caret-down"></i>
+                                                <i class="fas fa-minus-circle"></i>
                                             </button>
                                         </div>
                                     </td>
-                                    <td class="product-subtotal">
+                                    <td class="product-subtotal hidden-xs">
                                         <span class="adult-subtotal" id="two_amount"></span> ฿
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="product-name">
-                                        <span>พักเดี่ยว</span>
+                                    <td class="product-name tab-adult-single">
+                                        <span>ผู้ใหญ่</span>
+                                        <span>(พักเดี่ยว)</span>
                                     </td>
                                     <td class="product-price">
                                         <span id="one_price"></span> ฿
@@ -229,21 +242,21 @@
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
                                             <button type="button" class="minus one_minus">
-                                                <i class="fa fa-caret-up"></i>
+                                                <i class="fas fa-plus-circle"></i>
                                             </button>
                                             <input type="number" id='one_qty' class="qty" value="0">
                                             <button type="button" class="plus one_plus">
-                                                <i class="fa fa-caret-down"></i>
+                                                <i class="fas fa-minus-circle"></i>
                                             </button>
                                         </div>
                                     </td>
-                                    <td class="product-subtotal">
+                                    <td class="product-subtotal hidden-xs">
                                         <span class="adult-subtotal" id="one_amount"></span> ฿
                                     </td>
                                 </tr>
                                 <tr>
 
-                                    <td class="product-name">
+<!--                                    <td class="product-name">
                                         <span>พักสาม</span>
                                     </td>
                                     <td class="product-price">
@@ -262,7 +275,7 @@
                                     </td>
                                     <td class="product-subtotal">
                                         <span class="adult-subtotal" id="three_amount"></span> ฿
-                                    </td>
+                                    </td>-->
                                 </tr>
                             </tbody>
                         </table>
@@ -274,14 +287,15 @@
                                     <th class="product-name" colspan="3" style="color: #EC2424"><i class="fas fa-child"></i> เด็ก (บาท/ท่าน)</th>
 <!--                                                <th class="product-price"></th>
                                     <th class="product-quantity"></th>-->
-                                    <th class="product-subtotal" style="color: #EC2424"><span id='child_total_amount' class='child_total_amount'></span> ฿</th>
+                                    <th class="product-subtotal hidden-xs" style="color: #EC2424"><span id='child_total_amount' class='child_total_amount'></span> ฿</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="tlr">
 
-                                    <td class="product-name">
-                                        <span>พักคู่</span>
+                                    <td class="product-name tab-kid-1">
+                                        <span>เด็ก</span>
+                                        <span>(เพิ่มเตียง)</span>
                                     </td>
                                     <td class="product-price">
                                         <span id='child_two_price' class="amount"></span> ฿
@@ -289,22 +303,23 @@
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
                                             <button id='child_two_minus' type="button" class="minus">
-                                                <i class="fa fa-caret-up"></i>
+                                                <i class="fas fa-plus-circle"></i>
                                             </button>
                                             <input type="number" id='child_two_qty' class="qty" value="0">
                                             <button id='child_two_plus' type="button" class="plus">
-                                                <i class="fa fa-caret-down"></i>
+                                                <i class="fas fa-minus-circle"></i>
                                             </button>
                                         </div>
                                     </td>
-                                    <td class="product-subtotal">
+                                    <td class="product-subtotal hidden-xs">
                                         <span id='child_two_amount' class="child-subtotal"></span> ฿
                                     </td>
                                 </tr>
                                 <tr>
 
-                                    <td class="product-name">
-                                        <span>มีเตียง</span>
+                                    <td class="product-name tab-kid-2">
+                                        <span>เด็ก</span>
+                                         <span>(ไม่เพิ่มเตียง)</span>
                                     </td>
                                     <td class="product-price">
                                         <span id='child_one_price' class="amount"></span> ฿
@@ -312,20 +327,20 @@
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
                                             <button id='child_one_minus' type="button" class="minus">
-                                                <i class="fa fa-caret-up"></i>
+                                                <i class="fas fa-plus-circle"></i>
                                             </button>
                                             <input type="number" id='child_one_qty' class="qty" value="0">
                                             <button id='child_one_plus' type="button" class="plus">
-                                                <i class="fa fa-caret-down"></i>
+                                                <i class="fas fa-minus-circle"></i>
                                             </button>
                                         </div>
                                     </td>
-                                    <td class="product-subtotal">
+                                    <td class="product-subtotal hidden-xs">
                                         <span id='child_one_amount' class="child-subtotal"></span> ฿
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="product-name">
+<!--                                    <td class="product-name">
                                         <span>ไม่มีเตียง</span>
                                     </td>
                                     <td class="product-price">
@@ -344,7 +359,7 @@
                                     </td>
                                     <td class="product-subtotal">
                                         <span id='child_nb_amount' class="child-subtotal"></span> ฿
-                                    </td>
+                                    </td>-->
                                 </tr>
                             </tbody>
                         </table>
@@ -409,22 +424,22 @@
                             <div id="collapse1" class="panel-collapse">
                                 <div class="contact-form">
                                     <span><h4 style="color:#ec2424; display: inline; line-height: 1.6;"> ข้อมูลผู้จองสำหรับติดต่อกลับ (ที่อยู่อื่น)</h4></span><br>
-                                    <em>กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
+                                    <em style="font-size: 18px; font-weight: bold;">กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
                                     <div class="confirm-form">
                                         <div class="form-item">
-                                            <input id='cus_name' type="text" value="" name="name" placeholder=" ชื่อของคุณ *">
+                                            <input id='cus_name' type="text" value="" name="name" placeholder=" ชื่อของคุณ">
                                         </div>
                                         <div class="form-item">
                                             <input id='cus_email' type="email" value="" name="email" placeholder="อีเมล์ของคุณ">
                                         </div>
                                         <div class="form-item">
-                                            <input id='line_id' type="text" value="" name="line_id" placeholder=" Line *">
+                                            <input id='line_id' type="text" value="" name="line_id" placeholder=" Line (ถ้ามี)">
                                         </div>
                                         <div class="form-item">
-                                            <input id='phone' type="number" value="" name="phone" maxlength="10" placeholder="เบอร์โทรศัพท์ *">
+                                            <input id='phone' type="number" value="" name="phone" maxlength="10" placeholder="เบอร์โทรศัพท์">
                                         </div>
                                         <div class="form-textarea-wrapper">
-                                            <textarea id='remark' name="message">หมายเหตุ</textarea>
+                                            <textarea id='remark' name="message">หมายเหตุ (ถ้ามี)</textarea>
                                         </div>
                                     </div> 
                                 </div>
