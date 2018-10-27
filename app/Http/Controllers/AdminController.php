@@ -635,9 +635,10 @@ class AdminController extends Controller {
             ]);
 
             if ($validator->fails()) {
-                return redirect('manage-tourlist')
+                return redirect()->back()
                                 ->withErrors($validator)
                                 ->withInput();
+                
             }
         } else {
             $validator = Validator::make($request->all(), [

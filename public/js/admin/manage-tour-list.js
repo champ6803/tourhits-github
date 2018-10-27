@@ -138,7 +138,7 @@ $(function () {
             var adult_price = $('#update_adult_price').val();
             var child_price = $('#update_child_price').val();
             var special_price = $('#update_special_price').val();
-            
+
             children.eq(1).html(period_start + '<input id="period_start_' + num + '" type="hidden" name="period_start[]" value="' + period_start + '" /></td>');
             children.eq(2).html(period_end + '<input id="period_end_' + num + '" type="hidden" name="period_end[]" value="' + period_end + '" /></td>');
             children.eq(3).html(numberWithCommas(adult_price) + '<input id="adult_price_' + num + '" type="hidden" name="adult_price[]" value="' + adult_price + '" /></td>');
@@ -150,6 +150,8 @@ $(function () {
             alert("no number");
         }
     });
+
+
 });
 
 function editPeriod(num) {
@@ -493,13 +495,14 @@ function createTourCountryDropDown() {
         },
         success: function (data) {
             if (data != null) {
-                StrDropDown = '<select class="form-control" id="tour_country" name="tour_country">';
-                StrDropDown = StrDropDown + "<option value='0'> - Select - </option>";
-                for (var row = 0; row < data.length; row++) {
-                    StrDropDown = StrDropDown + "<option value=" + data[row].tour_country_id + ">" + data[row].tour_country_name + "</option>";
+                 $.each(data, function () {
+                    $('#tour_country').append($('<option></option>').val(this.tour_country_id).html(this.tour_country_name));
+                });
+
+                if ($('#tour_country_hidden').val()) {
+                     $('#tour_country').val($('#tour_country_hidden').val());
                 }
-                StrDropDown = StrDropDown + '</select>';
-                document.getElementById("selectTourCountry").innerHTML = StrDropDown;
+                
             } else {
                 alert('select fail');
             }
@@ -522,16 +525,15 @@ function createConditionsDropDown() {
         },
         success: function (data) {
             if (data != null) {
-                StrDropDown = '<select class="form-control" id="conditions_id" name="conditions_id">';
-                StrDropDown = StrDropDown + "<option value='0'> - Select - </option>";
-                for (var row = 0; row < data.length; row++) {
-                    StrDropDown = StrDropDown + "<option value=" + data[row].conditions_id + ">" + data[row].conditions_name + "</option>";
+                $.each(data, function () {
+                    $('#conditions_select').append($('<option></option>').val(this.conditions_id).html(this.conditions_name));
+                });
+
+                if ($('#conditions_hidden').val()) {
+                     $('#conditions_select').val($('#conditions_hidden').val());
                 }
-                StrDropDown = StrDropDown + '</select>';
-                document.getElementById("selectConditioins").innerHTML = StrDropDown;
             } else {
                 alert('select fail');
-                s
             }
         },
         error: function (data) {

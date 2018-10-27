@@ -431,7 +431,7 @@ if (!isset($_SESSION['a_user'])) {
                                 <li id="manage_front_country"><a href="{{ url('manage-front-country')}}">จัดการประเทศ</a></li>
                                 <li id="manage_front_category"><a href="{{ url('manage-front-category') }}">จัดการหมวดหมู่หน้าบ้าน</a></li>
                                 <li><a href="pages/app/app-ticket.html">จัดการสปอนเซอร์</a></li>
-                                <li><a href="pages/app/calendar.html">จัดการรีวิว</a></li>
+                                <li id="manage_front_review"><a href="{{ url('manage-front-review') }}">จัดการรีวิว</a></li>
                                 <li><a href="{{ url('profile')}}">จัดการการติดต่อ</a></li>
                             </ul>
                         </li>

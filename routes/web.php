@@ -218,3 +218,9 @@ Route::post('saveConditions', 'MasterController@saveConditions');
 Route::get('getCountry', 'MasterController@getCountry');
 
 Route::post('getAttractionByTourCountryId', 'AdminController@getAttractionByTourCountryId');
+
+Route::get('manage-front-review', 'ManageFrontController@manage_front_review');
+
+Route::post('saveReview', 'ManageFrontController@saveReview');
+
+Route::post('searchReview', 'ManageFrontController@searchReview');
