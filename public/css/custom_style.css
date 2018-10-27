@@ -5731,40 +5731,48 @@ Custom BS3
 .navbar-bot {
     overflow: hidden;
     /*    background-color: #333;*/
-    background: linear-gradient(to right, #cb1313, #3e977f) no-repeat;
+    background: #fff;
     opacity: 0.98;
+    height: 50px;
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 5px 0;
+    padding: 5px 5px;
     box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
 }
 
-.navbar-bot a { 
-    display: block;
-    color: #f2f2f2;
+.navbar-bot span{
     text-align: center;
-    padding: 8px 0;
-    text-decoration: none;
-    font-size: 17px;
+    font-size: 14px;
+    display: block;
+    color: #8d8d8d;
 }
 
-.navbar-bot .box-tel{
-    float: left; 
-    width: 50%;
-    border-right: 1px solid #fff;    
+.navbar-bot .bx{
+    width: calc(100%/3);
+    display: block;
+    float: left;
+    margin-top: -2px;    
 }
 
-.navbar-bot i{
-    padding-right: 5px;
+.navbar-bot .bx .img-bx{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33.33%;   
+}
+.navbar-bot .bx .img-bx img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25px;
+    
 }
 
-.navbar-bot a:hover {
-
-}
-
-.navbar-bot a.active {
+.navbar-bot .bx:nth-child(1),.navbar-bot .bx:nth-child(2){
+    border-right: 1px solid;
+    border-color: #efe8e8;
 }
 
 /*! Flickity v2.1.2

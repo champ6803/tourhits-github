@@ -7,7 +7,7 @@
             <div class="col-md-6">
                 <div class="">
                     <!--<div data-latlong="13.7986948,100.6484321"></div>-->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1937.3355103034582!2d100.64843205024845!3d13.798694785765278!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x623ec46dd9d0000f!2sTour+Express+Center+Co.%2CLtd.!5e0!3m2!1sen!2sth!4v1523219948967" width="100%" height="800" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.676895007023!2d100.64626601483099!3d13.798341090317356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d63697f9a80a9%3A0x89aec0139885f7db!2sTourhits+Co.%2CLtd.!5e0!3m2!1sth!2sth!4v1540654946507" width="100%" height="800" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 
             </div>
             <div class="col-md-6">
