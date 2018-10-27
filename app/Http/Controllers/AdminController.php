@@ -1174,6 +1174,13 @@ class AdminController extends Controller {
         $tourModel = new Tour_Package();
         try {
             $tourPackageList = $tourModel->getTourPackageAll();
+            foreach ($tourPackageList as $tourPackageObj) {
+                $newStartDate = date("d-m-Y", strtotime($tourPackageObj->tour_package_period_start));
+                $newEndDate = date("d-m-Y", strtotime($tourPackageObj->tour_package_period_end));
+                $tourPackageObj->tour_package_period_start = $newStartDate;
+                $tourPackageObj->tour_package_period_end = $newEndDate;
+            }
+
             return $tourPackageList;
         } catch (\Exception $e) {
             $msg = $e->getMessage();
