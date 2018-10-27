@@ -6332,7 +6332,7 @@ body.single-post .blog-page__content > .post .post-content {
 }*/
 
 @media screen and (max-width: 660px) {
-    
+
     .cart-table th.product-name{
      width:50%; }
     
@@ -6393,7 +6393,16 @@ body.single-post .blog-page__content > .post .post-content {
         overflow: hidden;
         text-overflow: ellipsis;
         line-height: 36px!important;
-    }    
+    }  
+    
+    #BtnBtt{
+        bottom: 60px!important;
+        font-size: 19px!important;
+        padding: 5px!important;
+        right: 18px!important;
+        opacity: 0.9!important;
+    }
+    
 }
 
 /*@media screen and (max-width: 425px) {

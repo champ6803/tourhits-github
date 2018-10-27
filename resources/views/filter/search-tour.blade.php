@@ -148,7 +148,7 @@
     }
 
     #owl-demo .tag-item:hover a{
-        color : #fff; 
+        color : #Fff; 
     }
 
 
