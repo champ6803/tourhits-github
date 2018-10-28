@@ -94,5 +94,5 @@ function actionButton(value, row, index) {
 }
 
 function viewPeriod(tour_package_id){
-    window.location.href = "../status-period?tour_package_id=" + tour_package_id;
+    window.open(base_path + "/status-period?tour_package_id=" + tour_package_id);
 }

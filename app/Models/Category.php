@@ -48,6 +48,16 @@ class Category extends Model {
             return $ex;
         }
     }
+    
+    public function getCategoryById($id) {
+        try {
+            $category = Category::where('category_id', '=', $id)
+                    ->first();
+            return $category;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
 
     public function getCategoryByCategoryType($categoryType) {
         try {

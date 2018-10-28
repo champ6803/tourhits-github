@@ -68,8 +68,8 @@ $(function () {
     loadTourPackageList(period_list);
 
     $('#status_period_select').change(function () {
-        alert(this.value);
-        console.log(JSON.parse(this.value));
+        o = JSON.parse(this.value);
+        updateTourPeriodStatus(o);
     });
 });
 
@@ -96,19 +96,19 @@ function padZero(value, row, index) {
 
 function statusFormat(value, row, index) {
     if (row.tour_period_status == "Y") {
-        return ['<select id="status_period_select" class="form-control"><option value="{foo:&quot;bar&quot;,one:&quot;two&quot;}" selected>ว่าง</option><option value="{foo:&quot;bar&quot;,one:&quot;two&quot;}">เต็ม</option></select>'];
+        return ["<select id='status_period_select' class='form-control'><option value='{\"tour_period_id\":\"" + row.tour_period_id + "\",\"tour_period_status\":\"Y\"}' selected >ว่าง</option><option value='{\"tour_period_id\":\"" + row.tour_period_id + "\",\"tour_period_status\":\"N\"}'>เต็ม</option></select>"];
     } else {
-        return ['<select id="status_period_select" class="form-control"><option value="{foo:\"bar\",one:\"two\"}">ว่าง</option><option selected value="{foo:\"bar\",one:\"two\"}">เต็ม</option></select>'];
+        return ["<select id='status_period_select' class='form-control'><option value='{\"tour_period_id\":\"" + row.tour_period_id + "\",\"tour_period_status\":\"Y\"}' >ว่าง</option><option value='{\"tour_period_id\":\"" + row.tour_period_id + "\",\"tour_period_status\":\"N\"}'selected >เต็ม</option></select>"];
     }
 }
 
-function updateTourPeriodStatus(tour_period_id) {
-    if (tour_period_id) {
+function updateTourPeriodStatus(o) {
+    if (o.tour_period_id && o.tour_period_status) {
         $.ajax({
             type: 'post',
             url: 'updateTourPeriodStatus',
             async: false,
-            data: {tour_period_id: tour_period_id},
+            data: {tour_period_id: o.tour_period_id, tour_period_status: o.tour_period_status},
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },

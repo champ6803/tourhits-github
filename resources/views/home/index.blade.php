@@ -96,7 +96,7 @@
                                 <div class="form-item">
                                     <select id="country_dropdown" class="form-control">
                                         <option value="">เลือกประเทศ</option>
-                                        <option value="japan">ญี่ปุ่น</option>
+                                        <option selected value="japan">ญี่ปุ่น</option>
                                         <option value="china">จีน</option>
                                         <option value="korea">เกาหลี</option>
                                         <option value="vietnam">เวียดนาม</option>
@@ -670,7 +670,7 @@
                 @foreach($categoryList as $category)
                 <div class="col-sm-4 col-xs-6 col-md-3">
                     <div class="select-item">
-                        <a href="{{url('tourCategory?tour_cate='. $category->category_id)}}">
+                        <a href="{{url('tourhit?category_id='. $category->category_id)}}">
                             <div class="select-img lazyloaded">
                                 <div class="center-crop"> 
                                     <img src="images/category/{{ $category->category_img }}" alt="">

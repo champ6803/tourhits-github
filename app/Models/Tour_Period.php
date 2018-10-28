@@ -94,7 +94,7 @@ class Tour_Period extends Model {
             $date = \Carbon\Carbon::now();
             Tour_Period::where('tour_period.tour_period_id', '=', $tour_period_id)
                     ->update(
-                            ['tour_package_id' => $tour_package_id
+                            ['tour_period_id' => $tour_period_id
                                 , 'tour_period_status' => $tour_period_status
                                 , 'created_by' => 'admin'
                                 , 'created_at' => $date

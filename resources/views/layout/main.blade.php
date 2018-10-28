@@ -489,7 +489,7 @@ session_start();
                                                                         <hr id="indx" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">-->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('tourhit') }}"><i class="fa fa-star"></i>&nbsp;ทัวร์ฮิต</a>
+                                    <a href="{{ url('tourhit?category_id=100002') }}"><i class="fa fa-star"></i>&nbsp;ทัวร์ฮิต</a>
                                     <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">

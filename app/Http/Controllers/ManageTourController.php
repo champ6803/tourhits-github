@@ -75,7 +75,7 @@ class ManageTourController extends Controller {
             $tour_period_id = $request->get('tour_period_id');
             $tour_period_status = $request->get('tour_period_status');
             $result = $tourModel->updateTourPeriodStatus($tour_period_id, $tour_period_status);
-            if ($result) {
+            if ($result == true) {
                 return response('success');
             }
             return response('fail');

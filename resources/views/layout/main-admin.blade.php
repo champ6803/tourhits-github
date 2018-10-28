@@ -445,7 +445,7 @@ if (!isset($_SESSION['a_user'])) {
                             <ul class="treeview-menu">
                                 <li id="manage_tourlist"><a href="{{ url('manage-tourlist')}}">เพิ่มรายการทัวร์</a></li>
                                 <li id="tour_package_list"><a href="{{ url('tour-package-list')}}">รายการทัวร์ทั้งหมด</a></li>
-                                <li id="showTourCountryMenu"><a href="{{ url('show-country-tourlist')}}">รายการทัวร์แต่ละประเทศ</a></li>
+                                <!--<li id="showTourCountryMenu"><a href="{{ url('show-country-tourlist')}}">รายการทัวร์แต่ละประเทศ</a></li>-->
                                 <li id="status_package"><a href="{{ url('status-package')}}">สถานะแพ็คเกจทัวร์</a></li>
                             </ul>
                         </li>
@@ -810,8 +810,10 @@ if (!isset($_SESSION['a_user'])) {
 
         <!-- Lion_admin App -->
         <script src="js/template.js"></script>
-
-
+        
+        <script type="text/javascript">
+            var base_path = "{{ url('/') }}";
+        </script>
 
         <!-- Lion_admin for demo purposes -->
         <script src="js/demo.js"></script>
