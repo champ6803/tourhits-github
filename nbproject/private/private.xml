@@ -3,7 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Workspace/tourhits-github/resources/views/filter/search-tour.blade.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/TourController.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Package.php</file>
+            <file>file:/D:/Workspace/tourhits-github/resources/views/manage-tour/status-period.blade.php</file>
+            <file>file:/D:/Workspace/tourhits-github/public/js/manage-tour/status-package.js</file>
+            <file>file:/D:/Workspace/tourhits-github/public/js/manage-tour/status-period.js</file>
+            <file>file:/D:/Workspace/tourhits-github/routes/web.php</file>
+            <file>file:/D:/Workspace/tourhits-github/public/js/admin/tour-package-list.js</file>
+            <file>file:/D:/Workspace/tourhits-github/public/js/admin/manage-edit-tourlist.js</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/AdminController.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Models/Tour_Period.php</file>
+            <file>file:/D:/Workspace/tourhits-github/resources/views/layout/main-admin.blade.php</file>
+            <file>file:/D:/Workspace/tourhits-github/resources/views/manage-tour/status-package.blade.php</file>
+            <file>file:/D:/Workspace/tourhits-github/app/Http/Controllers/ManageTourController.php</file>
         </group>
     </open-files>
 </project-private>

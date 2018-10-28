@@ -1,15 +1,17 @@
 @extends('layout.main-admin')
 @section('page_title','Admin Management')
 @section('main-content')
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            จัดการทัวร์
+            Tour Period
         </h1>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><i class="fa fa-database"></i> จัดการทัวร์</a></li>
-            <li class="breadcrumb-item active">รายการทัวร์ทั้งหมด</li>
+            <li class="breadcrumb-item"><a href="#"><i class="fa fa-database"></i> จัดการรายการทัวร์</a></li>
+            <li class="breadcrumb-item">สถานะแพ็คเกจ</li>
+            <li class="breadcrumb-item active">สถานะตามระยะเวลา</li>
         </ol>
     </section>
 
@@ -20,7 +22,7 @@
                 <!-- AREA CHART -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h3 class="box-title">รายการทัวร์ทั้งหมด</h3>
+                        <h3 class="box-title">สถานะตามระยะเวลา</h3>
 
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -29,9 +31,7 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <table class="table" id="tour_package_table">
-                                    
-                                </table>
+                                <table class="table" id="tour_period_table"></table>
                             </div>
                         </div>
                     </div>
@@ -67,8 +67,8 @@
 
 @section('footer_scripts')
 <script>
-    var tourPackageList = <?php echo json_encode($tourPackageList); ?>;
+    var tourPeriodList = <?php echo json_encode($tourPeriodList); ?>;
 </script>
 
-<script type="text/javascript" src="{{asset('js/admin/tour-package-list.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/manage-tour/status-period.js')}}"></script>
 @endsection

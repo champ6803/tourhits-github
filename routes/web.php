@@ -218,3 +218,9 @@ Route::post('saveConditions', 'MasterController@saveConditions');
 Route::get('getCountry', 'MasterController@getCountry');
 
 Route::post('getAttractionByTourCountryId', 'AdminController@getAttractionByTourCountryId');
+
+Route::get('status-package', 'ManageTourController@status_package');
+
+Route::get('status-period', 'ManageTourController@status_period');
+
+Route::get('updateTourPeriodStatus', 'ManageTourController@updateTourPeriodStatus');
