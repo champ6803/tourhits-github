@@ -337,17 +337,40 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             <h6>รหัสทัวร์</h6>
                             <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
                         </div>
-
-                        <!--                        <div class="item">
-                                                    <h6><i class="fas fa-share-alt" style="padding-right: 10px"></i>แชร์</h6>
-                                                    <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook"></i> Facebook</a></p>
-                                                </div>
-                                                <div class="item">
-                                                    <h6><i class="fas fa-download" style="padding-right: 10px"></i>ดาวน์โหลด</h6>
-                                                    <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="fas fa-file-pdf"></i>&nbsp;PDF</a></p>
-                        
-                                                </div>-->
                     </div>
+<!--                    กิน เที่ยว ช๊อป-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="Top3-detail">
+                                <div class="col-md-4">
+                                    <div class="travel ex">
+                                        <div class="heading"><img src="{{ asset('/images/icon/thirteen.png')}}"><span>เที่ยว</span></div>
+                                        <div class="detail">
+                                            วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5 พิพิธภัณฑ์แผ่นดินไหว-ชงชาแบบญี่ปุ่น - หมู่บ้านอิยาชิโนะ ซาโตะ อิออน นาริตะ มอลล์-วัดนาริตะ
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="eat ex">
+                                        <div class="heading"><img src="{{ asset('/images/icon/sausages.png')}}"><span>กิน</span></div>
+                                        <div class="detail">
+                                            บุฟเฟ่ต์ขาปูยักษ์
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="shopping ex">
+                                        <div class="heading"><img src="{{ asset('/images/icon/shopping-bag.png')}}"><span>ช้อป</span></div>
+                                        <div class="detail">
+                                            ตลาดเช้าทาคายาม่า-มิตซุยเอ้าท์เล็ตโอยาเบะ-อิออนมอลล์
+                                        </div>
+                                    </div> 
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+<!--                    ปฎิทิน-->
                     <div class="row">
                         <div class="col-md-12">
                             <table class="table table-bordered table-style table-responsive">

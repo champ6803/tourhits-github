@@ -290,7 +290,9 @@
 }
 
 .product-detail__info .product-address p{
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
     display: inline;
     line-height: 1;
     
@@ -5314,6 +5316,7 @@ Custom BS3
     -webkit-box-orient: vertical;
     font-size: 16px;
     color: #333;
+    overflow: hidden;
 }
 
 .filter-page__content .trip-item .hilight .detail p{
@@ -6305,4 +6308,29 @@ https://flickity.metafizzy.co
 
 #BtnBtt:hover {
     background-color: #ea6a78; /* Add a dark-grey background on hover */
+}
+
+.Top3-detail .ex{
+    margin-top: 10px;
+}
+
+.Top3-detail .ex .heading img{
+    width: 45px;
+}
+
+.Top3-detail .ex .heading span{
+    font-size: 21px;
+    padding-left: 14px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+}
+
+.Top3-detail .detail{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-top: 7px;
 }

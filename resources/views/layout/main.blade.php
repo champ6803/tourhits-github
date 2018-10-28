@@ -19,7 +19,8 @@ session_start();
         <link href="{{ asset('http://fonts.googleapis.com/css?family=Open+Sans:700,600,400italic,400,300') }}" rel='stylesheet' type='text/css'>
         <link href="{{ asset('http://fonts.googleapis.com/css?family=Oswald:400') }}" rel='stylesheet' type='text/css'>
         <link href="{{ asset('http://fonts.googleapis.com/css?family=Lato:400,700') }}" rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Kanit|Roboto" rel="stylesheet">
+        <link href="{{ asset('https://fonts.googleapis.com/css?family=Kanit|Bai+Jamjuree') }}" rel="stylesheet">
+        
 
         <!-- CSS LIBRARY -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/bootstrap.css') }}">
