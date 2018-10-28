@@ -219,16 +219,14 @@ Route::get('getCountry', 'MasterController@getCountry');
 
 Route::post('getAttractionByTourCountryId', 'AdminController@getAttractionByTourCountryId');
 
-<<<<<<< HEAD
 Route::get('status-package', 'ManageTourController@status_package');
 
 Route::get('status-period', 'ManageTourController@status_period');
 
 Route::get('updateTourPeriodStatus', 'ManageTourController@updateTourPeriodStatus');
-=======
+
 Route::get('manage-front-review', 'ManageFrontController@manage_front_review');
 
 Route::post('saveReview', 'ManageFrontController@saveReview');
 
 Route::post('searchReview', 'ManageFrontController@searchReview');
->>>>>>> 4bf14607cb1a7f27dd7b46e0b7b7e8660b660277
