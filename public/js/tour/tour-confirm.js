@@ -190,12 +190,12 @@ function renderOrderTourPackage(tour_package_period) {
     $('#one_amount').html(numberWithCommas(calculatePrice(removeCommas($('#one_price').text()), $('#one_qty').val())));
     $('#three_amount').html(numberWithCommas(calculatePrice(removeCommas($('#three_price').text()), $('#three_qty').val())));
     $('.adult_total_amount').html(numberWithCommas(calculateTotalPrice($('.adult-subtotal'))));
-    $('#child_two_price').html(numberWithCommas(tour_package_period.tour_period_child_price));
+//    $('#child_two_price').html(numberWithCommas(tour_package_period.tour_period_child_price));
     $('#child_one_price').html(numberWithCommas(tour_package_period.tour_period_child_price));
-    $('#child_nb_price').html(numberWithCommas(tour_package_period.tour_period_child_nb_price));
-    $('#child_two_amount').html(numberWithCommas(calculatePrice(removeCommas($('#child_two_price').text()), $('#child_two_qty').val())));
+//    $('#child_nb_price').html(numberWithCommas(tour_package_period.tour_period_child_nb_price));
+//    $('#child_two_amount').html(numberWithCommas(calculatePrice(removeCommas($('#child_two_price').text()), $('#child_two_qty').val())));
     $('#child_one_amount').html(numberWithCommas(calculatePrice(removeCommas($('#child_one_price').text()), $('#child_one_qty').val())));
-    $('#child_nb_amount').html(numberWithCommas(calculatePrice(removeCommas($('#child_nb_price').text()), $('#child_nb_qty').val())));
+//    $('#child_nb_amount').html(numberWithCommas(calculatePrice(removeCommas($('#child_nb_price').text()), $('#child_nb_qty').val())));
     $('.child_total_amount').html(numberWithCommas(calculateTotalPrice($('.child-subtotal'))));
     $('#all_total_amount').html(numberWithCommas(calculateAllTotalPrice()));
     calculateQty('adult');

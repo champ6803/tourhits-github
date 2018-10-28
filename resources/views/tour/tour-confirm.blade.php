@@ -93,22 +93,46 @@
             <div class="col-md-3">
                 <div class="product-detail__gallery">
                     <div class="product-slider-wrapper">
+                        @if(!$tourPackage->is_quick_tour)
                         <div class="product-slider">
-                            @foreach($tourPackageImagesList as $tourPackageImage)
+                            <!--                            @foreach($tourPackageImagesList as $tourPackageImage)
+                                                        <div class="item">
+                                                            <img src="{{ asset('images/tour-images/'.$tourPackageImage->tour_image_name)}}" alt="">
+                                                        </div>
+                                                        @endforeach-->
+                            @foreach ($tourPackageDayList as $tourPackageDay)
+                            @foreach ($tourAttractionDayList as $tourAttractionDay)
                             <div class="item">
-                                <img src="{{ asset('images/tour-images/'.$tourPackageImage->tour_image_name)}}" alt="">
+                                <img class="img-item" src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                             </div>
                             @endforeach
+                            @endforeach
                         </div>
-                        <div class="product-slider-thumb-row">
+                        <div class="hide product-slider-thumb-row">
                             <div class="product-slider-thumb">
-                                @foreach($tourPackageImagesList as $tourPackageImage)
+                                @foreach ($tourPackageDayList as $tourPackageDay)
+                                @foreach ($tourAttractionDayList as $tourAttractionDay)
                                 <div class="item">
-                                    <img src="{{ asset('images/tour-images/'.$tourPackageImage->tour_image_name)}}" alt="">
+                                    <img class="img-item" src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                                 </div>
+                                @endforeach
                                 @endforeach
                             </div>
                         </div>
+                        @else
+                        <div class="product-slider">
+                            <div class="item">
+                                <img class="img-item" src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
+                            </div>
+                        </div>
+                        <div class="hide product-slider-thumb-row">
+                            <div class="product-slider-thumb">
+                                <div class="item">
+                                    <img class="img-item" src="{{ asset('images/tour/'.$tourPackage->tour_package_image)}}">
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -291,7 +315,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="tlr">
+<!--                                <tr class="tlr">
 
                                     <td class="product-name tab-kid-1">
                                         <span>เด็ก</span>
@@ -314,7 +338,7 @@
                                     <td class="product-subtotal hidden-xs">
                                         <span id='child_two_amount' class="child-subtotal"></span> ฿
                                     </td>
-                                </tr>
+                                </tr>-->
                                 <tr>
 
                                     <td class="product-name tab-kid-2">

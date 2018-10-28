@@ -223,7 +223,7 @@ Route::get('status-package', 'ManageTourController@status_package');
 
 Route::get('status-period', 'ManageTourController@status_period');
 
-Route::get('updateTourPeriodStatus', 'ManageTourController@updateTourPeriodStatus');
+Route::post('updateTourPeriodStatus', 'ManageTourController@updateTourPeriodStatus');
 
 Route::get('manage-front-review', 'ManageFrontController@manage_front_review');
 

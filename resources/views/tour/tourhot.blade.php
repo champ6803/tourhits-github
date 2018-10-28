@@ -510,12 +510,12 @@
         </div>                           
     </div> 
 </section>
-<section class="tourhot-section" style="padding: 30px 0;">
+<section class="tourhot-section" style="padding: 30px 0 200px 0;">
     <div class="container">
         <div style="padding-bottom: 30px;">
             <div class="row">
                 <div style="margin-left: 10px;">
-                    <h3>แพ็คเกจทัวร์ฮิต</h3>
+                    <h3>{{$category->category_name ? $category->category_name : "แพ็คเกจทั้งหมด"}}</h3>
                     <div class="tourhot-head-detail">เราคัดสรรค์มาให้จากทัวร์ต่างประเทศทั้งหมดที่มีในราคาพิเศษ ณ ที่นี่ที่เดียว</div>   
                 </div>
                 <div class="line-gradient"></div>
