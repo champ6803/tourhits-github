@@ -720,7 +720,7 @@ session_start();
                 </div>     
                 
                 <div class="box-fb bx">
-                    <a href="">
+                    <a href="https://m.me/PAGE.TOURHITS/">
                     <div class="tel-img-box img-bx">
                         <img alt="" src="{{ asset('/images/icon/messenger.png')}}" title="">
                     </div>    
@@ -877,7 +877,7 @@ fjs.parentNode.insertBefore(js, fjs);
             window.onscroll = function() {scrollFunction()};
 
             function scrollFunction() {
-                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
                     document.getElementById("BtnBtt").style.display = "inline-flex";
                 } else {
                     document.getElementById("BtnBtt").style.display = "none";
