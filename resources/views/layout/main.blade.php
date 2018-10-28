@@ -712,7 +712,7 @@ session_start();
                 <div class="box-line bx">
                     <a target="_blank" rel="noopener noreferrer" href="http://line.me/ti/p/%40tourhits">
                         <div class="line-img-box img-bx">
-                            <img alt="" src="http://localhost:8000/images/icon/line.png" title="">
+                            <img alt="" src="{{ asset('/images/icon/line.png')}}" title="">
                         </div>    
                             <span>ไลน์หาเรา</span>
                          
@@ -722,7 +722,7 @@ session_start();
                 <div class="box-fb bx">
                     <a href="">
                     <div class="tel-img-box img-bx">
-                        <img alt="" src="http://localhost:8000/images/icon/messenger.png" title="">
+                        <img alt="" src="{{ asset('/images/icon/messenger.png')}}" title="">
                     </div>    
                         <span>Messenger</span>
                     </a> 
@@ -731,12 +731,15 @@ session_start();
                 <div class="box-tel bx">  
                     <a href="tel:02-379-1249">
                         <div class="tel-img-box img-bx">
-                            <img alt="" src="http://localhost:8000/images/icon/chat.png" title="">
+                            <img alt="" src="{{ asset('/images/icon/chat.png')}}" title="">
                         </div>    
                             <span>โทรหาเรา</span>    
                     </a>
                 </div>
             </div>
+            
+<!--back to top-->
+        <button onclick="topFunction()" id="BtnBtt" title="Go to top"><i class="fas fa-arrow-alt-circle-up"></i></button>
             
         </div>
 
@@ -866,6 +869,25 @@ fjs.parentNode.insertBefore(js, fjs);
                     hideAllCaptionAtLilmit: 0,
                     startWithSlide: 0
                 });
+            }
+        </script>
+        
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    document.getElementById("BtnBtt").style.display = "inline-flex";
+                } else {
+                    document.getElementById("BtnBtt").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
         </script>
         

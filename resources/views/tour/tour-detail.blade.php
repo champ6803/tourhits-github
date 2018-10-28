@@ -114,49 +114,52 @@
         float: right;
         margin-top: -24px;
     }
-
+    
     .product-detail .download-pdf p a{
         display: inline-block;
         padding-right: 17px;
         color: #fff;
-        font-size: 17px;    
-        border: 1px solid #ed5565;
-        background-color: #ed5565;
+        font-size: 18px;    
+        border: 1px solid #c33132;
+        background-color: #c33132;
         padding: 3px 14px 3px 14px;
         border-radius: 40px; 
-        line-height: 30px;
+        line-height: 36px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+        -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.1); 
+        box-shadow: 0 0px 5px 0 rgba(0,0,0,.1);      
     }
 
     .product-detail .download-pdf p a:hover{
-        background-color: #c33132;
-        border: 1px solid #c33132;
-        -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.3); 
-        box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
+        background-color: #ed5565;
+        border: 1px solid #ed5565;
+        -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.1); 
+        box-shadow: 0 0px 5px 0 rgba(0,0,0,.1);
     }
 
     .product-detail .facebook{padding-left: 10px; padding-right: 14px;}
     .product-detail .facebook p a{
         display: inline-block;
+        padding-right: 17px;
         color: #fff;
-        font-size: 17px;
-        border: 1px solid #4dabf7;
-        background-color: #4dabf7;
-        border-radius: 8px;
-        padding: 4px 21px 4px 10px;
-        line-height: 30px;
+        font-size: 18px;    
+        border: 1px solid #3b5998;
+        background-color: #3b5998;
+        padding: 3px 14px 3px 14px;
+        border-radius: 40px; 
+        line-height: 36px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+        -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.1); 
+        box-shadow: 0 0px 5px 0 rgba(0,0,0,.1); 
     }
     .product-detail .facebook p a:hover{
-        background-color: #2475b6;
-        border: 1px solid #2475b6;
-        -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.3); 
-        box-shadow: 0 0px 5px 0 rgba(0,0,0,.3);
+        background-color: #8b9dc3;
+        border: 1px solid #8b9dc3;
     }
 
-    @media (min-width: 1200px) {
+/*    @media (min-width: 1200px) {
         .container { 
             width: 100%;
             padding: 0 3%;}
@@ -171,7 +174,7 @@
 
     @media (max-width: 425px) {
         .product-detail__info .trips .time-xs{width: 100%;}     
-    }
+    }*/
 
 
 </style>
@@ -305,7 +308,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                 <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
             </div>
             <div class="right download-pdf">
-                <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="fas fa-file-pdf"></i>&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
+                <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><img src="{{ asset('/images/icon/pdf_2.png')}}">&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
             </div>
         </div>
         <div class="row">

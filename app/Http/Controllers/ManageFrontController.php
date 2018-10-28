@@ -15,6 +15,7 @@ use App\Models\Company;
 use App\Models\Category;
 use App\Models\Tour_Category;
 use App\Models\Tour_Package;
+use App\Models\Review;
 
 /**
  * Description of AdminController
@@ -33,6 +34,11 @@ class ManageFrontController extends Controller {
 
     public function profile() {
         return view('manage-front.profile');
+    }
+    
+    public function manage_front_review() {
+        $reviewObj = $this->searchReview();
+        return view('manage-front.manage-front-review', compact('reviewObj'));
     }
 
     public function searchAllCountry() {
@@ -226,5 +232,51 @@ class ManageFrontController extends Controller {
             return response($msg);
         }
     }
-
+    
+    public function saveReview() {
+        $reviewModel = new Review();
+        try {
+            $review_picture1 = $_FILES['file1']['name'];
+            $review_picture2 = $_FILES['file2']['name'];
+            $review_picture3 = $_FILES['file3']['name'];
+            $review_picture4 = $_FILES['file4']['name'];
+            $review_picture5 = $_FILES['file5']['name'];
+            $review_picture6 = $_FILES['file6']['name'];
+            $review_picture7 = $_FILES['file7']['name'];
+            $review_picture8 = $_FILES['file8']['name'];
+            $review_picture9 = $_FILES['file9']['name'];
+            
+            $reviewObj = $this->searchReview();
+            if($reviewObj==null){
+                            $reviewModel->insertReview($review_picture1,$review_picture2,$review_picture3,$review_picture4,$review_picture5
+            ,$review_picture6,$review_picture7,$review_picture8,$review_picture9);
+            
+            }else{
+                            $reviewModel->updateReview($review_picture1,$review_picture2,$review_picture3,$review_picture4,$review_picture5
+            ,$review_picture6,$review_picture7,$review_picture8,$review_picture9,$reviewObj->review_id);
+            
+            }   
+            
+            
+            
+            echo "<script>
+             alert('บันทึกข้อมูลเสร็จสมบูรณ์');
+             window.location.href='manage-front-review';
+             </script>";
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    } 
+    
+    public function searchReview() {
+           $reviewModel = new Review();
+         try {
+            $review = $reviewModel->getReview();
+            return $review;
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    } 
 }
