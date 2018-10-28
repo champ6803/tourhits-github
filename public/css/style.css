@@ -6670,8 +6670,8 @@ body.single-post .blog-page__content > .post .post-content {
 /* 12.   Productdetail
 --------------------------------------------------------------------------------*/
 .product-detail {
-    padding-top: 52px;
-    padding-bottom:50px;
+    padding-top: 30px;
+    padding-bottom:20px;
 }
 
 .product-detail__info .product-title h2 {
@@ -6679,8 +6679,7 @@ body.single-post .blog-page__content > .post .post-content {
     font-size: 32px;
     font-weight: 600;
     color: #0091ea;
-    margin: 0;
-    
+    margin: 0;    
 }
 
 .container-detail-confirm .product-title h3 {
@@ -6699,7 +6698,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .product-detail__info .product-address {
     font-size: 16px;
-    color: #8d8d8d; 
+    color: #34495e; 
     margin-bottom: 7px;
 /*    font-weight: bold;*/
 }
@@ -6835,8 +6834,8 @@ body.single-post .blog-page__content > .post .post-content {
     padding: 3px 14px 3px 14px;
     border-radius: 20px;
     line-height: 30px;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+/*    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;*/
 }
 
 .product-detail__info .trips .item p .fa,

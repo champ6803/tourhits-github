@@ -8,30 +8,20 @@
         padding-bottom: 0px;
         padding-top: 15px;
         background-color: #F7F7F7;
-
     }
-
-    .product-detail .trips {
-        overflow: hidden;
-        margin-top: 10px;
-        margin-left: -15px;
-        margin-right: -15px;
-
+    
+    .product-detail__info .trips .item{
+        padding: 0 15px;
+        width: calc(100%/2);
     }
-    .product-detail .trips .item {
-        padding: 0px 15px;
-        float: left;
-        /*    width: 25%;*/
+    
+    .product-detail__info .trips .warp-text p{
+        padding: 10px 14px 10px 14px;
     }
-
-    .product-detail .trips .item p{
-        font-size: 13px;
-        line-height: 30px;
-        color: #fff;
-        margin-bottom: 0;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+    
+    .product-detail__info .trips .item-width:nth-child(2){
+        width: calc(100%/2);
+        padding: 0 15px;
     }
 
     .cart-footer .cart-subtotal .subtotal-title h5 {color: #EC2424;   }
@@ -67,9 +57,7 @@
     font-size:19px;
     }
     .cart-content .cart-table tbody td .quantity .minus:hover{color:#c33132;}
-    @media (max-width: 425px) {
-        .product-detail__info .trips .time-xs{width: 100%;}     
-    }
+    
 </style>
 <!-- BREADCRUMB -->
 <section>
@@ -145,21 +133,21 @@
                         <span><?php echo $tourPackage->tour_package_detail ?></span>
                     </div>
                     <div class="trips">
-                        <div class="item warp-text">
-                            <h6>สายการบิน</h6>
-                            <p><i class="fas fa-plane" style="padding-right: 10px"></i>{{ $tourPackage->airline_name }}</p>
+                        <div class="item-width item warp-text">
+                            <h4>สายการบิน</h4>
+                            <p>{{ $tourPackage->airline_name }}</p>
+                        </div>
+                        <div class="item-width item warp-text">
+                            <h4>ระยะเวลา</h4>
+                            <p>{{$tourPackage->tour_period_day_number}} วัน {{$tourPackage->tour_period_night_number}} คืน</p>
                         </div>
                         <div class="item warp-text">
-                            <h6>ระยะเวลา</h6>
-                            <p><i class="far fa-clock" style="padding-right: 10px"></i>{{$tourPackage->tour_period_day_number}} วัน {{$tourPackage->tour_period_night_number}} คืน</p>
-                        </div>
-                        <div class="time-xs item warp-text">
-                            <h6>ช่วงเวลา</h6>
-                            <p><i class="far fa-calendar-minus" style="padding-right: 10px"></i><span id='period_month'></span></p>
+                            <h4>ช่วงเวลา</h4>
+                            <p><span id='period_month'></span></p>
                         </div>
                         <div class="item warp-text">
-                            <h6>รหัสทัวร์</h6>
-                            <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
+                            <h4>รหัสทัวร์</h4>
+                            <p>TH<span id='tour_code'></span></p>
                         </div>
                     </div>
 

@@ -164,17 +164,23 @@
             width: 100%;
             padding: 0 3%;}
     }
+*/
+    @media (min-width: 992px) and (max-width: 1400px) {
+        .product-detail__info .trips .item-width{
+             width: 100%;
+        }
 
-    @media (min-width: 992px) and (max-width: 1199px) {
-        .container {
+        .product-detail__info .trips .item-width:nth-child(2){
             width: 100%;
-            padding: 0 3%;
+            padding-left: 15px;
         }
     }
-
-    @media (max-width: 425px) {
-        .product-detail__info .trips .time-xs{width: 100%;}     
-    }*/
+    
+/*
+*/    @media (max-width: 425px) {
+        .product-detail__info .product-title h2{font-size: 20px;}
+        .Top3-detail .ex .heading span{font-size: 20px;}
+    }
 
 
 </style>
@@ -312,15 +318,19 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             </div>
         </div>
         <div class="row">
-            <div class="col-md-7">
-                <div class="product-detail__info">
+            <div class="col-md-8">
+                <div class="product-detail__info"> 
+                    <div class="product-tag-id">
+                        <img src="{{ asset('/images/icon/barcode.png')}}">
+                        <span>รหัสทัวร์ | TH</span><span id='tour_code'><img src="{{ asset('/images/icon/beating.gif')}}"></span>
+                    </div>                 
                     <div class="product-title">
                         <h2>{{ $tourPackage->tour_package_name }}</h2>
                     </div>
                     <div class="product-address">
                         <?php echo $tourPackage->tour_package_detail ?>
                     </div>
-                    <div class="trips">
+<!--                    <div class="trips">
                         <div class="item warp-text">
                             <h6>สายการบิน</h6>
                             <p><i class="fab fa-telegram-plane" style="padding-right: 10px"></i>{{ $tourPackage->airline_name }}</p>
@@ -337,8 +347,8 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             <h6>รหัสทัวร์</h6>
                             <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
                         </div>
-                    </div>
-<!--                    กิน เที่ยว ช๊อป-->
+                    </div>-->
+<!--  กิน เที่ยว ช๊อป-->
                     <div class="row">
                         <div class="col-md-12">
                             <div class="Top3-detail">
@@ -346,7 +356,11 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <div class="travel ex">
                                         <div class="heading"><img src="{{ asset('/images/icon/thirteen.png')}}"><span>เที่ยว</span></div>
                                         <div class="detail">
-                                            วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5 พิพิธภัณฑ์แผ่นดินไหว-ชงชาแบบญี่ปุ่น - หมู่บ้านอิยาชิโนะ ซาโตะ อิออน นาริตะ มอลล์-วัดนาริตะ
+                                            <p>วัดอาซากุสะ</p>
+                                            <p>โอชิโนะ ฮัคไค</p>
+                                            <p>ฟูจิออนเซ็น</p>
+                                            <p>ภูเขาไฟฟูจิ</p>
+                                            วัดนาริตะ</p>
                                         </div>
                                     </div> 
                                 </div>
@@ -354,7 +368,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <div class="eat ex">
                                         <div class="heading"><img src="{{ asset('/images/icon/sausages.png')}}"><span>กิน</span></div>
                                         <div class="detail">
-                                            บุฟเฟ่ต์ขาปูยักษ์
+                                            <p>บุฟเฟ่ต์ขาปูยักษ์</p>
                                         </div>
                                     </div> 
                                 </div>
@@ -362,7 +376,9 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <div class="shopping ex">
                                         <div class="heading"><img src="{{ asset('/images/icon/shopping-bag.png')}}"><span>ช้อป</span></div>
                                         <div class="detail">
-                                            ตลาดเช้าทาคายาม่า-มิตซุยเอ้าท์เล็ตโอยาเบะ-อิออนมอลล์
+                                            <p>ตลาดเช้าทาคายาม่า</p>
+                                            <p>มิตซุยเอ้าท์เล็ตโอยาเบะ</p>
+                                            <p>อิออนมอลล์</p> 
                                         </div>
                                     </div> 
                                 </div>
@@ -370,9 +386,29 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             </div>
                         </div>
                     </div>
-<!--                    ปฎิทิน-->
+<!--  ทริป/ปฎิทิน-->
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-5 col-sm-6">
+                           <div class="trips">
+                                <div class="item-width item warp-text">
+                                    <h4>สายการบิน</h4>
+                                    <p><i class="fab fa-telegram-plane" style="padding-right: 10px"></i>{{ $tourPackage->airline_name }}</p>
+                                </div>
+                                <div class="item-width item warp-text">
+                                    <h4>ระยะเวลา</h4>
+                                    <p>{{$tourPackage->tour_period_day_number}} วัน {{$tourPackage->tour_period_night_number}} คืน</p>
+                                </div>
+                                <div class="item warp-text">
+                                    <h4>ช่วงเวลา</h4>
+                                    <p><span id='period_month'></span></p>
+                                </div>
+<!--                                <div class="item warp-text">
+                                    <h4>รหัสทัวร์</h4>
+                                    <p><i class="fas fa-barcode" style="padding-right: 10px"></i>TH<span id='tour_code'></span></p>
+                                </div>-->
+                            </div> 
+                        </div>
+                        <div class="col-md-7 col-sm-6">
                             <table class="table table-bordered table-style table-responsive">
                                 <tr>
                                     <th colspan="2"><a style="color: #ffffff;" href="?ym=<?php echo $prev; ?>"><i class="fa fa-chevron-left"></i></a></th>
@@ -886,7 +922,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                 </div>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div class="product-detail__gallery">
                     <div class="product-slider-wrapper">
                         @if(!$tourPackage->is_quick_tour)

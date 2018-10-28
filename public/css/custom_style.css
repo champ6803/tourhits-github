@@ -6235,7 +6235,6 @@ https://flickity.metafizzy.co
 
 .awe-btn:focus{background-color: transparent;}
 
-.product-detail__info .trips i{color: #ea6a78;}
 
 .checkout-page__content .cart-content .tab-adult-pair span:nth-child(1){
     display: inline-block;
@@ -6310,6 +6309,10 @@ https://flickity.metafizzy.co
     background-color: #ea6a78; /* Add a dark-grey background on hover */
 }
 
+.Top3-detail{
+    margin-left: -15px;
+}
+
 .Top3-detail .ex{
     margin-top: 10px;
 }
@@ -6331,6 +6334,86 @@ https://flickity.metafizzy.co
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 14px;
     font-weight: bold;
-    padding-top: 5px;
     padding-top: 7px;
+}
+
+.Top3-detail .detail p{
+    display: inline;
+    line-height: 1;   
+}
+
+.Top3-detail .detail p:after{
+    content: " | ";
+    color: #8d8d8d;
+}
+
+.Top3-detail .detail p:last-child:after{
+    content: "";
+}
+
+.product-detail__info .trips .item{
+    padding: 0px 10px 0 15px;
+    width: 100%;
+}
+
+.product-detail__info .trips .item-width{
+    width: 55%;
+}
+
+.product-detail__info .trips .item-width:nth-child(2){
+    width: 45%;
+    padding-left: 5px;
+}
+
+.product-detail__info .trips .item-width h4{
+    font-size: 16px!important;
+}
+
+.product-detail__info .trips .item h4{
+    margin-left: 12px;
+    font-size: 18px;
+    padding: 1px 20px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 16px;
+    line-height: 24px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03), -10px 0 20px 0px rgba(0, 0, 0, 0.03);
+}
+
+.product-detail__info .trips .warp-text p{ 
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color:#c33132;
+    background-color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 20px 14px 20px 14px;
+    margin-top: -19px;
+    
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03), -10px 0 20px 0px rgba(0, 0, 0, 0.03);   
+}
+
+.product-detail__info .trips i{color: #ea6a78;}
+
+.product-detail__info .product-tag-id span{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+.product-detail__info .product-tag-id span:nth-child(1){
+    padding-left: 10px;
+}
+
+.product-detail__info .product-tag-id span:last-child{
+
+    padding-left:1px;
+}
+
+.product-detail__info .product-tag-id span img{
+    height: 21px;
+    padding-bottom: 2px;   
 }

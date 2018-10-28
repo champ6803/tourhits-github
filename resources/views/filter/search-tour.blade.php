@@ -217,6 +217,11 @@
     
     @media screen and ( max-width: 991px ) {
         
+        .category-heading-content.category-heading-content__2{
+            padding-top:60px;
+            
+        }
+        
         .trip-item .item-media .bot-img-detail{
             margin-top: -40px;
             background-color: rgba(58,53,53,0.8);
