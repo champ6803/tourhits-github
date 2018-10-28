@@ -51,7 +51,7 @@
                                                              <select id="tour_country" name="tour_country" class="form-control">
                                                                 <option value=""> -- กรุณาระบุประเทศ -- </option>
                                                             </select>
-                                                            <input hidden id="tour_country_hidden" value="{{old('tour_country')}}">
+                                                            <input hidden id="tour_country_hidden">
                                                             <div id="selectTourCountry"></div>
                                                             
                                                         </div>
@@ -64,7 +64,7 @@
                                                             <select id="conditions_select" name="conditions_id" class="form-control">
                                                                 <option value=""> -- กรุณาระบุเงื่อนไข -- </option>
                                                             </select>
-                                                            <input hidden id="conditions_hidden" value="{{old('conditions_id')}}">
+                                                            <input hidden id="conditions_hidden">
                                                             <div id="selectConditioins"></div>
                                                         </div>
                                                     </div>
@@ -76,7 +76,7 @@
                                                         <label for="tour_name" class="col-sm-2 control-label">Name</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="tour_name" value="{{old('tour_name')}}" name="tour_name" required="required">
+                                                            <input type="text" class="form-control" id="tour_name" name="tour_name" required="required">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -97,7 +97,7 @@
                                                         <label for="tour_detail" class="col-sm-1 control-label">Detail</label>
 
                                                         <div class="col-sm-11">
-                                                            <textarea type="text" class="form-control tour-main" id="tour_detail" name="tour_detail" value="{{old('tour_detail')}}"></textarea>
+                                                            <textarea type="text" class="form-control tour-main" id="tour_detail" name="tour_detail"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -108,7 +108,7 @@
                                                         <label for="day_tour" class="col-sm-2 control-label">No. Day</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="day_tour" name="day_tour" value="{{old('day_tour')}}" >
+                                                            <input type="number" class="form-control" id="day_tour" name="day_tour">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -117,7 +117,7 @@
                                                         <label for="night_tour" class="col-sm-2 control-label">No. Night</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="night_tour" name="night_tour" value="{{old('night_tour')}}">
+                                                            <input type="number" class="form-control" id="night_tour" name="night_tour">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -128,7 +128,7 @@
                                                         <label for="start_date" class="col-sm-2 control-label">Start Date</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="start_date" name="start_date" value="{{old('start_date')}}">
+                                                            <input type="text" class="form-control" id="start_date" name="start_date">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -137,7 +137,7 @@
                                                         <label for="end_date" class="col-sm-2 control-label">End Date</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="end_date" name="end_date" value="{{old('end_date')}}">
+                                                            <input type="text" class="form-control" id="end_date" name="end_date">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -148,7 +148,7 @@
                                                         <label for="main_price" class="col-sm-2 control-label">Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="main_price" name="main_price" value="{{old('main_price')}}">
+                                                            <input type="text" class="form-control" id="main_price" name="main_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -157,7 +157,7 @@
                                                         <label for="main_special_price" class="col-sm-2 control-label">Special Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="main_special_price" name="main_special_price" value="{{old('main_special_price')}}">
+                                                            <input type="text" class="form-control" id="main_special_price" name="main_special_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -168,7 +168,7 @@
                                                         <label for="tour_package_code" class="col-sm-2 control-label">Tour Code</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="tour_package_code" name="tour_package_code" value="{{old('tour_package_code')}}">
+                                                            <input type="text" class="form-control" id="tour_package_code" name="tour_package_code">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -213,7 +213,7 @@
                                                             <label for="tour_detail_0" class="col-sm-2 control-label">Day 1</label>
 
                                                             <div class="col-sm-10">
-                                                                <textarea type="text" class="form-control tour-main" id="tour_detail_0" name="tour_detail_0" value="{{old('tour_detail_0')}}"></textarea>
+                                                                <textarea type="text" class="form-control tour-main" id="tour_detail_0" name="tour_detail_0"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -225,7 +225,7 @@
 
                                                             <div class="col-sm-10">
                                                                 <input hidden id="day_name0" name="day_name[]" value="">
-                                                                <select id="attraction_select0" class="form-control js-example-basic-multiple attraction_select" name="attraction_select0[]" multiple="multiple" value="{{old('attraction_select0[]')}}"></select>
+                                                                <select id="attraction_select0" class="form-control js-example-basic-multiple attraction_select" name="attraction_select0[]" multiple="multiple"></select>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -253,7 +253,7 @@
                                                         <label for="period_start" class="col-sm-2 control-label">Period Start</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="period_start" name="period_start" value="{{old('period_start')}}">
+                                                            <input type="text" class="form-control" id="period_start" name="period_start">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -262,7 +262,7 @@
                                                         <label for="period_end" class="col-sm-2 control-label">Period End</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="period_end" name="period_end" value="{{old('period_end')}}">
+                                                            <input type="text" class="form-control" id="period_end" name="period_end">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -273,7 +273,7 @@
                                                         <label for="adult_price" class="col-sm-2 control-label">Adult Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="adult_price" name="adult_price" value="{{old('adult_price')}}">
+                                                            <input type="text" class="form-control" id="adult_price" name="adult_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -282,7 +282,7 @@
                                                         <label for="child_price" class="col-sm-2 control-label">Child Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="child_price" name="child_price" value="{{old('child_price')}}">
+                                                            <input type="text" class="form-control" id="child_price" name="child_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -300,7 +300,7 @@
                                                     <div class="form-group row">
                                                         <label for="alone_price" class="col-sm-2 control-label">Special Price</label>
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" id="special_price" name="special_price" value="{{old('special_price')}}">
+                                                            <input type="text" class="form-control" id="special_price" name="special_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -520,7 +520,7 @@
                                                         <label for="tag_select" class="col-sm-2 control-label">Tag</label>
 
                                                         <div class="col-sm-10">
-                                                            <select id="tag_select" class="form-control js-example-basic-multiple" name="tag_select[]" multiple="multiple" value="{{old('tag_select[]')}}">
+                                                            <select id="tag_select" class="form-control js-example-basic-multiple" name="tag_select[]" multiple="multiple">
 
                                                             </select> 
                                                         </div>
@@ -542,7 +542,7 @@
                                                         <label for="airline_select" class="col-sm-2 control-label">Airline</label>
 
                                                         <div class="col-sm-10">
-                                                            <select id="airline_select" class="form-control js-example-basic-multiple" value="{{old('airline_select[]')}}" name="airline_select[]" multiple="multiple">
+                                                            <select id="airline_select" class="form-control js-example-basic-multiple" name="airline_select[]" multiple="multiple">
                                                             </select>
                                                         </div>
                                                     </div>
@@ -554,7 +554,7 @@
                                                         <label for="holiday_select" class="col-sm-2 control-label">Holiday</label>
 
                                                         <div class="col-sm-10">
-                                                            <select id="holiday_select" class="form-control js-example-basic-multiple" name="holiday_select[]" value="{{old('holiday_select[]')}}" multiple="multiple">
+                                                            <select id="holiday_select" class="form-control js-example-basic-multiple" name="holiday_select[]" multiple="multiple">
                                                             </select>
                                                         </div>
                                                     </div>
@@ -564,7 +564,7 @@
                                                         <label for="holiday_select" class="col-sm-2 control-label">Route</label>
 
                                                         <div class="col-sm-10">
-                                                            <select id="route_select" class="form-control js-example-basic-multiple" name="route_select[]" value="{{old('route_select[]')}}" multiple="multiple">
+                                                            <select id="route_select" class="form-control js-example-basic-multiple" name="route_select[]" multiple="multiple">
                                                             </select>
                                                         </div>
                                                     </div>
