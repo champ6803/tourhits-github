@@ -78,4 +78,33 @@ class Tour_Period extends Model {
         }
     }
 
+    public function getTourPeriodByTourPackageId($tour_package_id) {
+        try {
+            $tourPeriodList = Tour_Period::join('tour_package', 'tour_package.tour_package_id', '=', 'tour_period.tour_package_id')
+                    ->where('tour_period.tour_package_id', $tour_package_id)
+                    ->get();
+            return $tourPeriodList;
+        } catch (\Exception $ex) {
+            return $ex;
+        }
+    }
+    
+    public function updateTourPeriodStatus($tour_period_id, $tour_period_status) {
+        try {
+            $date = \Carbon\Carbon::now();
+            Tour_Period::where('tour_period.tour_period_id', '=', $tour_period_id)
+                    ->update(
+                            ['tour_package_id' => $tour_package_id
+                                , 'tour_period_status' => $tour_period_status
+                                , 'created_by' => 'admin'
+                                , 'created_at' => $date
+                                , 'updated_by' => 'admin'
+                                , 'updated_at' => $date]
+            );
+            return true;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
 }
