@@ -5391,19 +5391,27 @@ Custom BS3
 }
 
 .pdf-download{
-    color: #0a9dde;
-    background-color: transparent;
+    display: block;  
     background-image: none;
-    border-color: #0a9dde;
-    width: 80%;
-    border-radius: 8px;
-    margin-left: 10%;
+    width: 100%;
+    padding: 0px 15px;  
+}
+
+.pdf-download:hover a{
+    color: #ea6a78;
+    border:2px solid #ea6a78;
 }
 
 .pdf-download a{
+    display: block;
+    color: #d30000;
+    background-color: transparent;
+    
     font-size: 18px;
+    border:2px solid #fd6149;
     font-weight: bold;
-    line-height: 1.6;
+    line-height: 28px;
+    border-radius: 8px; 
 }
 
 .filter-page__content .filter-item-wrapper .country{
@@ -6346,10 +6354,15 @@ https://flickity.metafizzy.co
     }
     .periods-table-detail .thead-light .py-4 .d-sm-none{
         display: inline!important;
-        font-size: 19px;
+        font-size: 19px!important;
     }
-
-
+    
+    .period-table-bottom .periods-table-detail .period-row-header .price-color{
+        font-size:19px!important;
+    }
+    .period-table-bottom .periods-table-detail .period-row-header td .baht-price{
+        font-size:12px!important;
+    }
 }
 
 .periods-table-detail .table .thead-light th{
@@ -6367,7 +6380,6 @@ https://flickity.metafizzy.co
 
 .periods-table-detail .table .thead-light th:nth-child(1){
     font-size: 16px;   
-    text-align: left;
 }
 
 .periods-table-detail .table .thead-light th .each{
@@ -6413,7 +6425,7 @@ https://flickity.metafizzy.co
     color: #fff;
     font-size: 21px;
     background-color: #d30000;
-    padding: 0 20px;
+    padding: 0 15px;
     line-height: 27px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -6462,3 +6474,17 @@ https://flickity.metafizzy.co
     color: #c33132;
     font-size: 20px;
 }
+
+.period-row-header .disabled{
+    border: 0;
+    background-color: transparent;
+    font-family: 'Kanit', sans-serif;
+    font-size: 12px;
+/*    font-weight: bold;*/
+    color: #fd6149;
+    opacity: 1;
+    padding: 0;
+    text-decoration: line-through;
+}
+
+
