@@ -175,7 +175,7 @@
 */    @media (max-width: 425px) {
         .product-detail__info .product-title h2{font-size: 20px;}
         .Top3-detail .ex .heading span{font-size: 20px;}
-        
+       
         .period-table-bottom .pricename-xs{
             display: inline;
             font-size: 19px;
@@ -1404,7 +1404,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                             <thead class="thead-light">
                                 <tr>
-                                    <th colspan="2" class="align-middle py-4">กำหนดการเดินทาง</th>
+                                    <th colspan="2" class="align-middle py-4">เลือกวันเดินทางและกดจอง</th>
                                     <th class="align-middle py-4">
                                         <span class="d-inline d-sm-none">พักคู่</span>
                                         <span class="d-none d-sm-inline">ผู้ใหญ่ (พักคู่)</span>
@@ -1433,7 +1433,9 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 <tr class="period-row-header">
                                     <td class="align-middle days-from text-sm-center">
                                         {{$tourPackageObj->tour_period_start}}
+                          
                                     </td>
+                                    
                                     <td class="align-middle days-from text-sm-center">
                                         {{$tourPackageObj->tour_period_end}}
                                     </td>

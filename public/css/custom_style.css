@@ -4612,7 +4612,8 @@ Custom BS3
 }
 
 .periods-table-detail .table .thead-light th:nth-child(1){
-    font-size: 19px;
+    font-size: 16px;
+    
 }
 
 .periods-table-detail .table .thead-light th .each{
