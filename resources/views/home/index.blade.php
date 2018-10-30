@@ -95,8 +95,8 @@
                             <div class="form-elements">
                                 <div class="form-item">
                                     <select id="country_dropdown" class="form-control">
-                                        <option value="">เลือกประเทศ</option>
-                                        <option selected value="japan">ญี่ปุ่น</option>
+                                        <option selected value="">เลือกประเทศ</option>
+                                        <option value="japan">ญี่ปุ่น</option>
                                         <option value="china">จีน</option>
                                         <option value="korea">เกาหลี</option>
                                         <option value="vietnam">เวียดนาม</option>

@@ -159,12 +159,7 @@
         border: 1px solid #8b9dc3;
     }
 
-/*    @media (min-width: 1200px) {
-        .container { 
-            width: 100%;
-            padding: 0 3%;}
-    }
-*/
+    
     @media (min-width: 992px) and (max-width: 1400px) {
         .product-detail__info .trips .item-width{
              width: 100%;
@@ -180,6 +175,22 @@
 */    @media (max-width: 425px) {
         .product-detail__info .product-title h2{font-size: 20px;}
         .Top3-detail .ex .heading span{font-size: 20px;}
+       
+        .period-table-bottom .pricename-xs{
+            display: inline;
+            font-size: 19px;
+        }
+        .period-table-bottom table tr td span{
+            display: block;
+        }
+        .period-table-bottom table th:nth-child(2), .period-table-bottom table th:nth-child(3), .period-table-bottom table th:nth-child(4){
+            display: none;
+        }
+
+        .period-table-bottom table td:nth-child(3), .period-table-bottom table td:nth-child(4), .period-table-bottom table td:nth-child(5){
+            display: none;
+        }
+
     }
 
 
@@ -391,15 +402,15 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <div class="col-md-5 col-sm-6">
                            <div class="trips">
                                 <div class="item-width item warp-text">
-                                    <h4>สายการบิน</h4>
-                                    <p><i class="fab fa-telegram-plane" style="padding-right: 10px"></i>{{ $tourPackage->airline_name }}</p>
+                                    <h4><i class="fab fa-telegram-plane" style="padding-right: 10px"></i>สายการบิน</h4>
+                                    <p>{{ $tourPackage->airline_name }}</p>
                                 </div>
                                 <div class="item-width item warp-text">
-                                    <h4>ระยะเวลา</h4>
+                                    <h4><i class="fas fa-moon" style="padding-right: 5px"></i>ระยะเวลา</h4>
                                     <p>{{$tourPackage->tour_period_day_number}} วัน {{$tourPackage->tour_period_night_number}} คืน</p>
                                 </div>
                                 <div class="item warp-text">
-                                    <h4>ช่วงเวลา</h4>
+                                    <h4>ช่วงเวลาของทัวร์นี้</h4>
                                     <p><span id='period_month'></span></p>
                                 </div>
 <!--                                <div class="item warp-text">
@@ -1385,26 +1396,33 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
                     </div>
                 </div>
+                
+<!--ตารางราคา                -->
                 <div class="period-table-bottom">
                     <h3><i class="far fa-calendar"></i> ข้อมูลราคา</h3>
                     <div class="tabledate-form-to periods-table-detail">
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                             <thead class="thead-light">
                                 <tr>
-                                    <th colspan="2" class="align-middle py-4">กำหนดการเดินทาง</th>
+                                    <th colspan="2" class="align-middle py-4">เลือกวันเดินทางและกดจอง</th>
                                     <th class="align-middle py-4">
-                                        <span class="d-inline d-sm-none">พักคู่<br> ท่านละ</span>
-                                        <span class="d-none d-sm-inline">ผู้ใหญ่พักคู่<br> ท่านละ</span>
+                                        <span class="d-inline d-sm-none">พักคู่</span>
+                                        <span class="d-none d-sm-inline">ผู้ใหญ่ (พักคู่)</span>
+                                        <span class="each">ท่านละ</span>
                                     </th>
                                     <th class="align-middle py-4">
-                                        <span class="d-inline d-sm-none">เด็ก<br> ท่านละ</span>
-                                        <span class="d-none d-sm-inline">เด็กไม่เพิ่มเตียง<br> ท่านละ</span>
+                                        <span class="d-inline d-sm-none">เด็ก</span>
+                                        <span class="d-none d-sm-inline">เด็ก (ไม่เพิ่มเตียง)</span>
+                                        <span class="each">ท่านละ</span>
                                     </th>
                                     <th class="align-middle py-4">
                                         <span class="d-inline d-sm-none">ราคาพิเศษ</span>
-                                        <span class="d-none d-sm-inline">ราคาพิเศษ<br> ท่านละ</span>
+                                        <span class="d-none d-sm-inline">ราคาพิเศษ</span>    
                                     </th>
-                                    <th class="align-middle py-4"></th>
+                                    <th class="align-middle py-4">
+                                        <span class="pricename-xs">ราคา</span>
+                                    </th>
+                                        
 <!--                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
                                     <th class="align-middle d-none d-sm-table-cell py-4">ราคาพิเศษ<br> ท่านละ</th>
                                     <th class="align-middle d-none d-sm-table-cell py-4"></th>-->
@@ -1415,7 +1433,9 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 <tr class="period-row-header">
                                     <td class="align-middle days-from text-sm-center">
                                         {{$tourPackageObj->tour_period_start}}
+                          
                                     </td>
+                                    
                                     <td class="align-middle days-from text-sm-center">
                                         {{$tourPackageObj->tour_period_end}}
                                     </td>
@@ -1443,11 +1463,23 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         @endif
                                     </td>
                                     <td class="align-middle days-from text-sm-center">
+<!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->
+                                        <span>
+                                        @if($tourPackageObj->tour_period_adult_special_price != 0)                                       
+                                            ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
+                                      
+                                        @else
+                                            ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
+                                       
+                                        @endif
+                                        </span>
+<!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->                                        
                                         @if($tourPackageObj->tour_period_status == 'Y')
                                         <a type="button" target="_blank" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods"  data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>
                                         @else
                                         <a type="button" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">เต็ม</a>
                                         @endif
+                                        
                                     </td> 
                                 </tr>
                                 @endforeach

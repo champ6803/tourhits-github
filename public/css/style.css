@@ -6795,6 +6795,7 @@ body.single-post .blog-page__content > .post .post-content {
     margin-left: -15px;
     margin-right: -15px;
     padding-bottom: 10px;
+    cursor: context-menu;
 }
 .product-detail__info .trips .item {
     padding: 0px 15px;
