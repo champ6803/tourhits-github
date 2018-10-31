@@ -158,6 +158,16 @@
         background-color: #8b9dc3;
         border: 1px solid #8b9dc3;
     }
+    
+    .ui-accordion .ui-accordion-content{
+        padding: 0;
+    }
+    
+    .trip-schedule-accordion .detail-condi ul li{
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+    }
 
     
     @media (min-width: 992px) and (max-width: 1400px) {
@@ -187,12 +197,44 @@
             display: none;
         }
 
-        .period-table-bottom table td:nth-child(3), .period-table-bottom table td:nth-child(4), .period-table-bottom table td:nth-child(5){
+        .period-table-bottom table td:nth-child(4), .period-table-bottom table td:nth-child(5), .period-table-bottom table td:nth-child(6){
             display: none;
         }
+        
+        .flexible-container {
+            padding-bottom:75%!important;
+        }
+      }
+      
+    /* Flexible iFrame */
 
-    }
+        .flexible-container {
+            position: relative;
+            /* This blank line was probably:
+            || padding-top: 56.25%;
+            */
+            height: 0;
+            overflow: hidden;
+            padding-bottom:50%; 
+            padding-top: 56.25%;
+        }
 
+        /* This ruleset says:
+        || "Apply the following properties and their values to ANY `<iframe>`,
+        || `<object>`, or `<embed>` THAT IS A CHILD OF any element with the 
+        || class of `.flexible-container`.
+        */
+        .flexible-container iframe,   
+        .flexible-container object, 
+        .flexible-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height:100%;
+/*            max-height:800px;*/
+            padding-bottom:10px;
+        }   
 
 </style>
 <style>
@@ -399,7 +441,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     </div>
 <!--  ทริป/ปฎิทิน-->
                     <div class="row">
-                        <div class="col-md-5 col-sm-6">
+                        <div class="col-md-5 col-sm-6">                           
                            <div class="trips">
                                 <div class="item-width item warp-text">
                                     <h4><i class="fab fa-telegram-plane" style="padding-right: 10px"></i>สายการบิน</h4>
@@ -1390,21 +1432,95 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                                 </div>-->
                         @else
                         <div id="tabs-1">
-                            <a class="embed" href="{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}"></a>
+                            <div class="flexible-container">
+                                <a class="embed" href="{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}"></a>
+<!--                                <a class="embed" href="{{ asset('http://www.tourhitsthai.com/images/pdf/208-1534835452.pdf')}}"></a>
+                                    <a class="embed" href="http://www.tourhitsthai.com/images/pdf/208-1534835452.pdf"></a>-->
+                            </div>     
+<!-- https://docs.google.com/viewerng/viewer?url=http://www.tourhitsthai.com/images/pdf/208-1534835452.pdf  -->
+<!--                                 <a class="embed" src="{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}"></a>-->
+                            
+                            
+                            
+                            
+                           
+<!--                            <div id="Iframe-Cicis-Menu-To-Go" class="set-margin-cicis-menu-to-go set-padding-cicis-menu-to-go set-border-cicis-menu-to-go set-box-shadow-cicis-menu-to-go center-block-horiz">
+                                <div class="responsive-wrapper 
+                                   responsive-wrapper-padding-bottom-90pct"
+                                   style="-webkit-overflow-scrolling: touch; overflow: auto;">
+                                   <iframe src="https://drive.google.com/file/d/0BxrMaW3xINrsR3h2cWx0OUlwRms/preview">
+                                    <p style="font-size: 110%;"><em><strong>ERROR: </strong>  
+                                    An &#105;frame should be displayed here but your browser version does not support &#105;frames.</em> Please update your browser to its most recent version and try again, or access the file <a href="https://drive.google.com/file/d/0BxrMaW3xINrsR3h2cWx0OUlwRms/preview"with this link.</a></p>
+                                  </iframe>
+                                </div>
+                              </div>-->
+<!--                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src='{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}' allowfullscreen></iframe>
+                              </div>-->
+<!--                            <div class="embed-responsive embed-responsive-16by9" style="padding-bottom: 141.42%;">
+                                <object class="embed-responsive-item" data='{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}' type="application/pdf" internalinstanceid="9" title="">
+                                    <p>Your browser isn't supporting embedded pdf files. You can download the file
+                                        <a href="/media/post/bootstrap-responsive-embed-aspect-ratio/example.pdf">here</a>.</p>
+                                </object>
+                            </div>-->
+
+<!--                            <div class="embed-responsive" style='padding-bottom:150%'>
+                                <object data='{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}' type='application/pdf' width='100%' height='100%'></object>
+                            </div>-->
+
+<!--                            <a class="embed" href="{{ asset('/images/pdf/'.$tourPackage->tour_package_pdf)}}"></a>-->
+                    </div>
+                        <div class="row">
+                                <div class="pdf-download btn btn-rounded">
+                                    <a id="" href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}">ดาวน์โหลดเอกสารทัวร์นี้ (PDF)</a>
+                                </div>
                         </div>
                         @endif
 
                     </div>
                 </div>
                 
+<!-- ตารางราคา nwe design-->                
+<!--                <div class="bottom-table">
+                   <h3><i class="far fa-calendar"></i> ข้อมูลราคา</h3>
+                   <div class="period-table">
+                       <table id="" class="">
+                          <tr>
+                            <th colspan="2" class="align-middle py-4">เลือกวันเดินทางและกดจอง</th>
+                            <th class="align-middle py-4">
+                                <span class="d-inline d-sm-none">พักคู่</span>
+                                <span class="d-none d-sm-inline">ผู้ใหญ่ (พักคู่)</span>
+                                <span class="each">ท่านละ</span>
+                            </th>
+                                <th class="align-middle py-4">
+                                        <span class="d-inline d-sm-none">เด็ก</span>
+                                        <span class="d-none d-sm-inline">เด็ก (ไม่เพิ่มเตียง)</span>
+                                        <span class="each">ท่านละ</span>
+                                    </th>
+                                    <th class="align-middle py-4">
+                                        <span class="d-inline d-sm-none">ราคาพิเศษ</span>
+                                        <span class="d-none d-sm-inline">ราคาพิเศษ</span>    
+                                    </th>
+                                    <th class="align-middle py-4">
+                                        <span class="pricename-xs">ราคา</span>
+                                    </th>
+                                        
+                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4">ราคาพิเศษ<br> ท่านละ</th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4"></th>
+                                </tr> 
+                       </table>
+                   </div>
+                </div>-->
+                
 <!--ตารางราคา                -->
                 <div class="period-table-bottom">
-                    <h3><i class="far fa-calendar"></i> ข้อมูลราคา</h3>
+                    <h3 style="font-size: 24px;"><img src="{{ asset('/images/icon/event.png')}}"> ข้อมูลราคา</h3>
                     <div class="tabledate-form-to periods-table-detail">
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                             <thead class="thead-light">
                                 <tr>
-                                    <th colspan="2" class="align-middle py-4">เลือกวันเดินทางและกดจอง</th>
+                                    <th colspan="3" class="align-middle py-4">เลือกวันเดินทางและกดจอง</th>
                                     <th class="align-middle py-4">
                                         <span class="d-inline d-sm-none">พักคู่</span>
                                         <span class="d-none d-sm-inline">ผู้ใหญ่ (พักคู่)</span>
@@ -1432,44 +1548,47 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 @foreach ($tourPackageList as $tourPackageObj)
                                 <tr class="period-row-header">
                                     <td class="align-middle days-from text-sm-center">
-                                        {{$tourPackageObj->tour_period_start}}
-                          
+                                        {{$tourPackageObj->tour_period_start}} 
                                     </td>
                                     
+                                    <td class="align-middle days-from text-sm-center text-to-date">                               
+                                        <span class="">ถึง</span>
+                                    </td>
+                                      
                                     <td class="align-middle days-from text-sm-center">
                                         {{$tourPackageObj->tour_period_end}}
                                     </td>
                                     @if($tourPackageObj->tour_period_adult_special_price != 0)
-                                    <td style="text-decoration: line-through;" class="align-middle days-from text-sm-center">
-                                        ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
+                                    <td style="text-decoration: line-through;" class="align-middle days-from text-sm-center price-color">
+                                        {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
                                     </td>
-                                    <td style="text-decoration: line-through;" class="align-middle days-from text-sm-center">
-                                        ฿{{number_format($tourPackageObj->tour_period_child_price)}}
+                                    <td style="text-decoration: line-through;" class="align-middle days-from text-sm-center price-color">
+                                        {{number_format($tourPackageObj->tour_period_child_price)}}<div class="baht-price">บาท</div>
                                     </td>
                                     @else
-                                    <td class="align-middle days-from text-sm-center">
-                                        ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
+                                    <td class="align-middle days-from text-sm-center price-color">
+                                        {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
                                     </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        ฿{{number_format($tourPackageObj->tour_period_child_price)}}
+                                    <td class="align-middle days-from text-sm-center price-color">
+                                        {{number_format($tourPackageObj->tour_period_child_price)}}<div class="baht-price">บาท</div>
                                     </td>
                                     @endif
 
-                                    <td class="align-middle days-from text-sm-center">
+                                    <td class="align-middle days-from text-sm-center price-color">
                                         @if($tourPackageObj->tour_period_adult_special_price != 0)
-                                        ฿{{number_format($tourPackageObj->tour_period_adult_special_price)}}
+                                        {{number_format($tourPackageObj->tour_period_adult_special_price)}}<div class="baht-price">บาท</div>
                                         @else
                                         -
                                         @endif
                                     </td>
                                     <td class="align-middle days-from text-sm-center">
 <!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->
-                                        <span>
+                                        <span class="price-color">
                                         @if($tourPackageObj->tour_period_adult_special_price != 0)                                       
-                                            ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
+                                            {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
                                       
                                         @else
-                                            ฿{{number_format($tourPackageObj->tour_period_adult_price)}}
+                                            {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
                                        
                                         @endif
                                         </span>
@@ -1477,7 +1596,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         @if($tourPackageObj->tour_period_status == 'Y')
                                         <a type="button" target="_blank" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods"  data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>
                                         @else
-                                        <a type="button" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">เต็ม</a>
+                                        <a type="button" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">SOLD OUT</a>
                                         @endif
                                         
                                     </td> 
@@ -1485,13 +1604,9 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 @endforeach
                             </tbody>
                         </table>
-                        <p class="text-center">*** ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม ***</p>       
+                        <p class="text-center" style="font-family: 'Bai Jamjuree', sans-serif;font-size: 13px; font-weight: bold; color: #746666;">* ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม</p>       
                     </div>
-                    <div class="row">
-                        <div class="pdf-download btn btn-rounded">
-                            <a id="" href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}">ดาวน์โหลดเอกสารทัวร์นี้ (PDF)</a>
-                        </div>
-                    </div> 
+                     
                 </div>
             </div>
             <!-- กล่องจอง -->
@@ -1760,7 +1875,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
 <!--period-table    -->
 <div class="container">
-
+    
 </div>        
 <!--end period-table--> 
 @stop

@@ -414,7 +414,7 @@
         <div class="col-md-6 col-md-push-3 page-mid-bg">
             <div id="loading" class="row">
                 <div class="col-md-12 text-center">
-                    <img style="padding-top:100px" src="../images/search-loading.gif">
+                    <img style="padding:100px 0" src="../images/search-loading.gif">
                 </div>
             </div>
             <div hidden class="filter-page__content card_show">

@@ -7026,13 +7026,13 @@ body.single-post .blog-page__content > .post .post-content {
 }
 
 .product-tabs {
-    margin-top: 62px;
+    margin-top: 10px;
 }
 
 .product-tabs__content .ui-tabs-panel {
     overflow: hidden;
     overflow-x: auto;
-    min-height: 1080px;
+/*    min-height: 1080px;*/
 }
 .product-tabs__content .ui-tabs-panel .check-availability {
     background-color: #fff;
