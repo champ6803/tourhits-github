@@ -458,7 +458,7 @@ if (!isset($_SESSION['a_user'])) {
                             </a>
                             <ul class="treeview-menu">
                                 <li id="categoryMenu"><a href="{{ url('manage-category')}}">จัดการหมวดหมู่</a></li>
-                                <li id="conditionsMenu"><a href="{{ url('manage-conditions')}}">จัดการเงื่อนไข</a></li>
+                                <!--<li id="conditionsMenu"><a href="{{ url('manage-conditions')}}">จัดการเงื่อนไข</a></li>-->
                                 <li id="tagMenu"><a href="{{ url('manage-tag')}}">จัดการ Tags</a></li>
                                 <li id="otherMenu"><a href="{{ url('manage-othertag')}}">จัดการ Tags อื่นๆ</a></li>
                                 <li id="attractionMenu"><a href="{{ url('manage-attraction')}}">จัดการสถานที่ท่องเที่ยว</a></li>

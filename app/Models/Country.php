@@ -24,7 +24,8 @@ class Country extends Model {
          $countryList = Country::all();
          return $countryList;
         } catch (Exception $ex) {
-               return $ex;
+               throw $ex;
         }
     }
+   
 }

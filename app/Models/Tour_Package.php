@@ -26,6 +26,7 @@ use App\Models\Tour_Image;
 use App\Models\Tour_Package_Day;
 use App\Models\Tour_Route;
 use App\Models\Tour_Tag;
+use App\Models\Tour_Country;
 
 class Tour_Package extends Model {
 
@@ -179,13 +180,21 @@ class Tour_Package extends Model {
 
     public function getFilterRoute($country) {
         try {
-            return Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
-                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                            ->join('route', 'route.route_id', '=', 'tour_route.route_id')
-                            ->select(DB::raw('COUNT(*) as r_num, route.route_id as r_id, route.route_name as r_name'))
-                            ->groupBy('r_id', 'r_name')
-                            ->where('tour_country.tour_country_url', $country)
-                            ->get();
+            $filterRoute = null;
+            $query = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
+                    ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                    ->join('route', 'route.route_id', '=', 'tour_route.route_id')
+                    ->select(DB::raw('COUNT(*) as r_num, route.route_id as r_id, route.route_name as r_name'))
+                    ->groupBy('r_id', 'r_name');
+            $tourCountryModel = new Tour_Country();
+            $countryList = $tourCountryModel->getTourCountryByUrl($country);
+            if ($countryList != null && count($countryList) > 0) {
+                $filterRoute = $query->where('tour_country.tour_country_url', $country)
+                        ->get();
+            } else {
+                $filterRoute = $query->get();
+            }
+            return $filterRoute;
         } catch (\Exception $e) {
             return $e;
         }
@@ -193,13 +202,22 @@ class Tour_Package extends Model {
 
     public function getFilterAirline($country) {
         try {
-            return Tour_Package::join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
-                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                            ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
-                            ->select(DB::raw('COUNT(*) as a_num, airline.airline_id as a_id, airline.airline_name as a_name'))
-                            ->groupBy('a_id', 'a_name')
-                            ->where('tour_country.tour_country_url', $country)
-                            ->get();
+            $filterAirline = null;
+            $query = Tour_Package::join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
+                    ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                    ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
+                    ->select(DB::raw('COUNT(*) as a_num, airline.airline_id as a_id, airline.airline_name as a_name'))
+                    ->groupBy('a_id', 'a_name');
+
+            $tourCountryModel = new Tour_Country();
+            $countryList = $tourCountryModel->getTourCountryByUrl($country);
+            if ($countryList != null && count($countryList) > 0) {
+                $filterAirline = $query->where('tour_country.tour_country_url', $country)
+                        ->get();
+            } else {
+                $filterAirline = $query->get();
+            }
+            return $filterAirline;
         } catch (\Exception $e) {
             return $e;
         }
@@ -218,12 +236,25 @@ class Tour_Package extends Model {
     public function getFilterMonth($country) {
         try {
             $date = \Carbon\Carbon::now();
-            return Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                            ->select(DB::raw('COUNT(*) as m_num, month(tour_package.tour_package_period_start) as m_month'))
-                            ->groupBy('m_month')
-                            ->where('tour_country.tour_country_url', $country)
-                            ->where('tour_package.tour_package_period_start', '>=', $date)
-                            ->get();
+            $filterMonth = null;
+            $query = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                    ->select(DB::raw('COUNT(*) as m_num, month(tour_package.tour_package_period_start) as m_month'))
+                    ->groupBy('m_month');
+
+            $tourCountryModel = new Tour_Country();
+            $countryList = $tourCountryModel->getTourCountryByUrl($country);
+
+
+            if ($countryList != null && count($countryList) > 0) {
+                $filterMonth = $query->where('tour_country.tour_country_url', $country)
+                        ->where('tour_package.tour_package_period_start', '>=', $date)
+                        ->get();
+            } else {
+                $filterMonth = $query
+                        ->where('tour_package.tour_package_period_start', '>=', $date)
+                        ->get();
+            }
+            return $filterMonth;
         } catch (\Exception $e) {
             return $e;
         }
@@ -237,11 +268,22 @@ class Tour_Package extends Model {
 //                            ->groupBy('duration')
 //                            ->where('tour_country.tour_country_name', $country)
 //                            ->get();
-            return Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                            ->select(DB::raw('COUNT(*) as sum, tour_package.tour_period_day_number as duration'))
-                            ->groupBy('tour_package.tour_period_day_number')
-                            ->where('tour_country.tour_country_url', $country)
-                            ->get();
+
+
+            $filterDay = null;
+            $query = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                    ->select(DB::raw('COUNT(*) as sum, tour_package.tour_period_day_number as duration'))
+                    ->groupBy('tour_package.tour_period_day_number');
+
+            $tourCountryModel = new Tour_Country();
+            $countryList = $tourCountryModel->getTourCountryByUrl($country);
+
+            if ($countryList != null && count($countryList) > 0) {
+                $filterDay = $query->where('tour_country.tour_country_url', $country)->get();
+            } else {
+                $filterDay = $query->get();
+            }
+            return $filterDay;
         } catch (\Exception $e) {
             return $e;
         }
@@ -249,13 +291,25 @@ class Tour_Package extends Model {
 
     public function getFilterTag($country) {
         try {
-            return Tour_Package::join('tour_tag', 'tour_tag.tour_package_id', '=', 'tour_package.tour_package_id')
-                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                            ->join('tag', 'tag.tag_id', '=', 'tour_tag.tag_id')
-                            ->select(DB::raw('COUNT(*) as t_num, tag.tag_id as t_id, tag.tag_name as t_name, tour_country.tour_country_id as tour_country_id, tour_country.tour_country_url as tour_country_url'))
-                            ->groupBy('t_id', 't_name', 'tour_country_id', 'tour_country_url')
-                            ->where('tour_country.tour_country_url', $country)
-                            ->get();
+            $filterTag = null;
+            $query = Tour_Package::join('tour_tag', 'tour_tag.tour_package_id', '=', 'tour_package.tour_package_id')
+                    ->join('tag', 'tag.tag_id', '=', 'tour_tag.tag_id');
+
+            $tourCountryModel = new Tour_Country();
+            $countryList = $tourCountryModel->getTourCountryByUrl($country);
+
+            if ($countryList != null && count($countryList) > 0) {
+                $filterTag = $query
+                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                        ->select(DB::raw('COUNT(*) as t_num,tag.tag_id as t_id, tag.tag_name as t_name, tag.tag_url, tour_country.tour_country_id as tour_country_id, tour_country.tour_country_url as tour_country_url'))
+                        ->groupBy('t_id', 't_name', 'tour_country_id', 'tour_country_url', 'tag.tag_url')
+                        ->where('tour_country.tour_country_url', $country)
+                        ->get();
+            } else {
+                $filterTag = $query->select(DB::raw('distinct(tag.tag_id), tag.tag_name as t_name, tag.tag_url'))
+                        ->get();
+            }
+            return $filterTag;
         } catch (\Exception $e) {
             return $e;
         }
@@ -263,16 +317,51 @@ class Tour_Package extends Model {
 
     public function getFilterAttraction($country) {
         try {
-            return Tour_Package::join('tour_attraction', 'tour_attraction.tour_package_id', '=', 'tour_package.tour_package_id')
-                            ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                            ->join('attraction', 'attraction.attraction_id', '=', 'tour_attraction.attraction_id')
-                            ->select(DB::raw('COUNT(*) as a_num, attraction.attraction_id as a_id, attraction.attraction_name as a_name, tour_country.tour_country_id as tour_country_id, tour_country.tour_country_url as tour_country_url, attraction.attraction_picture as attraction_picture'))
-                            ->groupBy('a_id', 'a_name', 'tour_country_id', 'tour_country_url', 'attraction_picture')
-                            ->where('tour_country.tour_country_url', $country)
-                            ->take(3)
-                            ->get();
+            $filterAttraction = null;
+            $query = Tour_Package::join('tour_attraction', 'tour_attraction.tour_package_id', '=', 'tour_package.tour_package_id')
+                    ->join('attraction', 'attraction.attraction_id', '=', 'tour_attraction.attraction_id');
+
+            $tourCountryModel = new Tour_Country();
+            $countryList = $tourCountryModel->getTourCountryByUrl($country);
+
+            if ($countryList != null && count($countryList) > 0) {
+                $filterAttraction = $query
+                        ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
+                        ->select(DB::raw('COUNT(*) as a_num, attraction.attraction_id as a_id, attraction.attraction_name as a_name, attraction.attraction_url, tour_country.tour_country_id as tour_country_id, tour_country.tour_country_url as tour_country_url, attraction.attraction_picture as attraction_picture'))
+                        ->groupBy('a_id', 'a_name', 'tour_country_id', 'tour_country_url', 'attraction_picture', 'attraction.attraction_url')
+                        ->where('tour_country.tour_country_url', $country)
+                        ->take(3)
+                        ->get();
+            } else {
+                $filterAttraction = $query->select(DB::raw('distinct(attraction.attraction_id), COUNT(*) as a_num, attraction.attraction_name as a_name, attraction.attraction_picture as attraction_picture, attraction.attraction_url'))
+                        ->groupBy('attraction.attraction_id', 'a_name', 'attraction_picture', 'attraction.attraction_url')
+                        ->take(3)
+                        ->get();
+            }
+            return $filterAttraction;
         } catch (\Exception $e) {
             return $e;
+        }
+    }
+
+    public function getMostPrice($country) {
+        try {
+            $price = null;
+            $query = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id');
+
+            $tourCountryModel = new Tour_Country();
+            $countryList = $tourCountryModel->getTourCountryByUrl($country);
+
+            if ($countryList != null && count($countryList) > 0) {
+                $price = $query
+                        ->where('tour_country.tour_country_url', $country)
+                        ->max('tour_package_price');
+            } else {
+                $price = $query->max('tour_package_price');
+            }
+            return $price;
+        } catch (\Exception $ex) {
+            throw $ex;
         }
     }
 
@@ -356,17 +445,6 @@ class Tour_Package extends Model {
                     ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.*,tour_country.tour_country_name'))
                     ->get();
             return $tourPackageList;
-        } catch (\Exception $ex) {
-            throw $ex;
-        }
-    }
-
-    public function getMostPrice($country) {
-        try {
-            $price = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                    ->where('tour_country.tour_country_url', $country)
-                    ->max('tour_package_price');
-            return $price;
         } catch (\Exception $ex) {
             throw $ex;
         }

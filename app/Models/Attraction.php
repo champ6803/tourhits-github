@@ -30,7 +30,7 @@ class Attraction extends Model {
             return $ex;
         }
     }
-    
+
     public function getAttractionByTourCountryId($tour_country_id) {
         try {
             $attractionList = Attraction::Leftjoin('country', 'attraction.country_id', 'country.country_id')
@@ -118,6 +118,19 @@ class Attraction extends Model {
                     $file->move('images/attraction', $file->getClientOriginalName());
                 }
             }
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function getAttractionByUrl($url) {
+        try {
+            $attractionList = null;
+            if ($url != null && $url != "") {
+                $attractionList = Attraction::where('attraction.attraction_url', $url)
+                        ->get();
+            }
+            return $attractionList;
         } catch (Exception $ex) {
             return $ex;
         }

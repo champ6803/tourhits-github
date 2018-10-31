@@ -114,4 +114,17 @@ class Tour_Country extends Model {
         }
     }
 
+    public function getTourCountryByUrl($url) {
+        try {
+            $tourCountryList = null;
+            if ($url != null) {
+                $tourCountryList = Tour_Country::where('tour_country.tour_country_url', $url)
+                        ->get();
+            }
+            return $tourCountryList;
+        } catch (Exception $ex) {
+            throw $ex;
+        }
+    }
+
 }

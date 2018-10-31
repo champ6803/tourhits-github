@@ -400,7 +400,7 @@
                    
                     <div id="owl-demo" class="tag-container owl-carousel owl-theme">
                         @foreach ($tagList as $tag)
-                        <div class="tag-item"><a href="{{url('/tour/'.$tag->tour_country_url.'?country='.$tag->tour_country_id.'&tag='.$tag->t_id)}}">{{$tag->t_name}}</a></div>
+                        <div class="tag-item"><a href="{{url('/tour/'.$tag->tag_url)}}">{{$tag->t_name}}</a></div>
                         @endforeach
                     </div>
                     <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
@@ -1449,14 +1449,14 @@
                         <div class="tour-left-bar-item">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="{{url('/tour/'.$attraction->tour_country_url.'?country='.$attraction->tour_country_id.'&attraction='.$attraction->a_id)}}" title="{{$attraction->a_name}}">
+                                    <a href="{{url('/tour/'.$attraction->attraction_url)}}" title="{{$attraction->a_name}}">
                                         <img class="media-object lazy" src="{{ asset('/images/attraction/'.$attraction->attraction_picture) }}" 
                                              alt="" style="display: inline-block;">
                                     </a>
                                 </div>
                                 <div class="media-body">
                                     <h6 class="media-heading">
-                                        <a href="{{url('/tour/'.$attraction->tour_country_url.'?country='.$attraction->tour_country_id.'&attraction='.$attraction->a_id)}}" title="">{{$attraction->a_name}} ({{$attraction->a_num}})</a>
+                                        <a href="{{url('/tour/'.$attraction->attraction_url)}}" title="">{{$attraction->a_name}} ({{$attraction->a_num}})</a>
                                     </h6>
                                 </div>                                        
                             </div>
@@ -1473,7 +1473,7 @@
                         <div class="swiper-wrapper tour-local-nav" style="transform: translate3d(0px, 0px, 0px);">
                             @foreach ($tagList as $tag)
                             <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
-                                <a href="{{url('/tour/'.$tag->tour_country_url.'?country='.$tag->tour_country_id.'&tag='.$tag->t_id)}}" title="" class="">{{$tag->t_name}}</a>
+                                <a href="{{url('/tour/'.$tag->tag_url)}}" title="" class="">{{$tag->t_name}}</a>
                             </div>
                             @endforeach                                
                         </div> 

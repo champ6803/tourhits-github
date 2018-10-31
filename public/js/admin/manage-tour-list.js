@@ -151,6 +151,15 @@ $(function () {
         }
     });
 
+    $('#rate_include').wysihtml5();
+    $('#rate_not_include').wysihtml5();
+    $('#payment_condition').wysihtml5();
+    $('#cancel_change').wysihtml5();
+    $('#other_condition').wysihtml5();
+    $('#beyond_respon').wysihtml5();
+    $('#suggest_warning').wysihtml5();
+    $('#visa_detail').wysihtml5();
+    $('#agreement').wysihtml5();
 
 });
 

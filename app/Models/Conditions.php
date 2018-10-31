@@ -41,7 +41,7 @@ class Conditions extends Model {
     public function insertConditions($conditions_name, $rate_include, $rate_not_include, $payment_condition, $cancel_change, $other_condition, $beyond_respon, $suggest_warning, $visa_detail, $agreement) {
         try {
             $date = \Carbon\Carbon::now();
-            Conditions::insert(
+            $conditions_id = Conditions::insertGetId(
                     ['conditions_name' => $conditions_name
                         , 'rate_include' => $rate_include
                         , 'rate_not_include' => $rate_not_include
@@ -57,8 +57,9 @@ class Conditions extends Model {
                         , 'updated_by' => 'admin'
                         , 'updated_at' => $date]
             );
+            return $conditions_id;
         } catch (Exception $ex) {
-            return $ex;
+            throw $ex;
         }
     }
 

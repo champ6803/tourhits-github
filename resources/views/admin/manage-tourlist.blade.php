@@ -32,6 +32,7 @@
                         <li class="nav-item"> <a class="nav-link active show" data-toggle="tab" href="#main" role="tab" aria-expanded="true" aria-selected="true"><span class="hidden-sm-up"><i class="ion-home"></i></span> <span class="hidden-xs-down">Main</span> </a> </li>
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#detail" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-person"></i></span> <span class="hidden-xs-down">Detail</span></a> </li>
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#periods" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Periods</span></a> </li>
+                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#conditions" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Conditions</span></a> </li>
                         <!--<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#images" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Images</span></a> </li>-->
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#tags" role="tab" aria-expanded="false" aria-selected="false"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span class="hidden-xs-down">Tags</span></a> </li>
                     </ul>
@@ -54,18 +55,6 @@
                                                             <input hidden id="tour_country_hidden">
                                                             <div id="selectTourCountry"></div>
                                                             
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="form-group row">
-                                                        <label for="inputEmail3" class="col-sm-2 control-label">Conditions</label>
-                                                        <div class="col-sm-10">
-                                                            <select id="conditions_select" name="conditions_id" class="form-control">
-                                                                <option value=""> -- กรุณาระบุเงื่อนไข -- </option>
-                                                            </select>
-                                                            <input hidden id="conditions_hidden">
-                                                            <div id="selectConditioins"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -359,6 +348,117 @@
                                                                                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Next</button>                                        
                                                                                 </div>-->
                                         <!-- /.box-footer -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane pad" id="conditions" role="tabpanel" aria-expanded="false">
+                            <div class='row'>
+                                <div class='col-12'>
+                                    <div class="form-horizontal form-element">
+                                        <div class="box-body">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <input type="hidden" class="form-control" id="conditions_id" name="conditions_id">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">เงื่อนไขโปรแกรมทัวร์ :</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="conditions_name" name="conditions_name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">อัตตราค่าบริการนี้รวม :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class="form-control" id="rate_include" name="rate_include"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">อัตตราค่าบริการนี้ไม่รวม :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class="form-control" id="rate_not_include" name="rate_not_include"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">เงื่อนไขการชำระเงิน :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class="form-control" id="payment_condition" name="payment_condition"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">การยกเลิกและการเปลี่ยนแปลง :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class="form-control" id="cancel_change" name="cancel_change"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">เงื่อนไขและข้อกำหนดอื่นๆ :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class="form-control" id="other_condition" name="other_condition"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">เงื่อนไขนอกเหนือความรับผิดชอบ :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class="form-control" id="beyond_respon" name="beyond_respon"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">คำแนะนำแนะข้อควรระวังในการเดินทาง :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class="form-control" id="suggest_warning" name="suggest_warning"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">ข้อมูลเกี่ยวกับการยื่นวีซ่า :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class="form-control" id="visa_detail" name="visa_detail"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="tour_detail_0" class="col-sm-2 control-label">ข้อตกลงสำคัญ :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea type="text" class="form-control" id="agreement" name="agreement"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
