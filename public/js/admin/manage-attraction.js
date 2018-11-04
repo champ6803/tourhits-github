@@ -55,6 +55,7 @@ function createTable() {
                     Str = Str + '<tr>';
                     Str = Str + '<td>' + rowNo + '</td>';
                     Str = Str + '<td>' + data[row].attraction_name + '</td>';
+                    Str = Str + '<td>' + data[row].attraction_url + '</td>';
                     Str = Str + '<td>' + data[row].country_name + '</td>';
                     Str = Str + '<td> <img src="images/attraction/' + data[row].attraction_picture + '" style="height:40px;"></td>';
                     Str = Str + '<td>' + data[row].created_by + '</td>';
@@ -156,6 +157,7 @@ function findAttractionByName(attractionName) {
                     Str = Str + '<tr>';
                     Str = Str + '<td>' + rowNo + '</td>';
                     Str = Str + '<td>' + data[row].attraction_name + '</td>';
+                    Str = Str + '<td>' + data[row].attraction_url + '</td>';
                     Str = Str + '<td>' + data[row].country_name + '</td>';
                     Str = Str + '<td> <img src="images/attraction/' + data[row].attraction_picture + '" style="height:40px;"></td>';
                     Str = Str + '<td>' + data[row].created_by + '</td>';

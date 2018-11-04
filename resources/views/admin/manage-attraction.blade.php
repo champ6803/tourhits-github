@@ -36,6 +36,7 @@
             <tr>
                 <th>ลำดับที่</th>
                 <th>ชื่อสถานที่ท่องเที่ยว</th>
+                <th>URL</th>
                 <th>ประเทศ</th>
                 <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
@@ -49,6 +50,7 @@
             <tr>
                 <th>ลำดับที่</th>
                 <th>ชื่อสถานที่ท่องเที่ยว</th>
+                <th>URL</th>
                 <th>ประเทศ</th>
                 <th>รูปภาพ</th>
                 <th>สร้างโดย</th>
@@ -77,6 +79,9 @@
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">ชื่อสถานที่ท่องเที่ยว:</label>
             <input type="text" class="form-control" id="attraction_name" name="attraction_name" required="required">
+            <br>
+            <label for="recipient-name" class="col-form-label">URL:</label>
+            <input type="text" class="form-control" id="attraction_url" name="attraction_url" required="required">
             <br>
             <label for="recipient-name" class="col-form-label">ทัวร์ประเทศ:</label>
             <select type="text" class="form-control" id="country_select"name="country_select" required="required">               
@@ -109,9 +114,12 @@
       <form action="{{ URL::to('updateAttraction') }}" method="post" enctype="multipart/form-data">
       <div class="modal-body">
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">ชื่อสถานที่ท่องเที่ยว:</label>
+            <label for="update_attraction_name" class="col-form-label">ชื่อสถานที่ท่องเที่ยว:</label>
             <input type="text" class="form-control" id="update_attraction_name" name="update_attraction_name">
             <input type="hidden" class="form-control" id="hidden_update_id" name="hidden_update_id">
+            <br>
+            <label for="update_attraction_url" class="col-form-label">URL:</label>
+            <input type="text" class="form-control" id="update_attraction_url" name="update_attraction_url">
             <br>
             <label for="recipient-name" class="col-form-label">ทัวร์ประเทศ:</label>
             <select type="text" class="form-control" id="update_country_select" name="update_country_select" required="required">               

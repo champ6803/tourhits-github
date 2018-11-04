@@ -409,11 +409,13 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <div class="travel ex">
                                         <div class="heading"><img src="{{ asset('/images/icon/thirteen.png')}}"><span>เที่ยว</span></div>
                                         <div class="detail">
-                                            <p>วัดอาซากุสะ</p>
+                                            <p>ใกล้จะถึงช่วงเทศกาลปีใหม่แล้ว</p>
+                                            <p>อีกหนึ่งเทศกาลแห่งวันหยุดยาวที่เหมาะแก่การพักผ่อนรับลมหนาวสุดฟิน</p>
+<!--                                            <p>วัดอาซากุสะ</p>
                                             <p>โอชิโนะ ฮัคไค</p>
                                             <p>ฟูจิออนเซ็น</p>
                                             <p>ภูเขาไฟฟูจิ</p>
-                                            วัดนาริตะ</p>
+                                            <p>วัดนาริตะ</p>-->
                                         </div>
                                     </div> 
                                 </div>
@@ -421,7 +423,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <div class="eat ex">
                                         <div class="heading"><img src="{{ asset('/images/icon/sausages.png')}}"><span>กิน</span></div>
                                         <div class="detail">
-                                            <p>บุฟเฟ่ต์ขาปูยักษ์</p>
+                                            <p>ชวนเช็คอินร้านอาหารสุดฟิน</p>
                                         </div>
                                     </div> 
                                 </div>
@@ -429,9 +431,8 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <div class="shopping ex">
                                         <div class="heading"><img src="{{ asset('/images/icon/shopping-bag.png')}}"><span>ช้อป</span></div>
                                         <div class="detail">
-                                            <p>ตลาดเช้าทาคายาม่า</p>
-                                            <p>มิตซุยเอ้าท์เล็ตโอยาเบะ</p>
-                                            <p>อิออนมอลล์</p> 
+                                            <p>ช้อปได้ทั่วโลกในราคานักท่องเที่ยว</p>
+                                            <p>สิ้นค้า Outlet มากมาย</p>
                                         </div>
                                     </div> 
                                 </div>
@@ -1731,10 +1732,14 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     <!-- Trigger the modal with a button -->
                     <div class="call-and-line">
                         <div class="call-to-book">
-                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal">
+                            <a href="tel:02-379-1249" type="button" class="btn btn-call-book">
                                 <i class="awe-icon awe-icon-phone"></i>
                                 <span>โทรจอง</span>                       
-                            </button>
+                            </a>
+<!--                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal">
+                                <i class="awe-icon awe-icon-phone"></i>
+                                <span>โทรจอง</span>                       
+                            </button>-->
                         </div> 
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
@@ -1800,10 +1805,14 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
                         <!-- Trigger the modal with a button -->
                         <div class="call-to-book2">
-                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal2">    
+                            <a target="_blank" href="http://line.me/ti/p/%40tourhits" type="button" class="btn btn-call-book">    
                                 <i class="fab fa-line"></i>                            
                                 <span>จองผ่านไลน์</span>
-                            </button>
+                            </a>
+<!--                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal2">    
+                                <i class="fab fa-line"></i>                            
+                                <span>จองผ่านไลน์</span>
+                            </button>-->
                         </div>
                         <!-- Modal -->
                         <div id="myModal2" class="modal fade" role="dialog">

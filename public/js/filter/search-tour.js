@@ -543,7 +543,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
 //                }
 //            });
             div = div + '</div>';
-            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">รายละเอียด</a>';
+            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">รายละเอียด</a>';
             div = div + '</div>';
             div = div + '</li>';
             divs = divs + div;

@@ -309,10 +309,11 @@ class AdminController extends Controller {
         $attractionModel = new Attraction();
         try {
             $attraction_name = $_POST['attraction_name'];
+            $attraction_url = $_POST['attraction_url'];
             $attraction_picture = $_FILES['file']['name'];
             $country_id = $_POST['country_select'];
             if (!$this->IsNullOrEmptyString($attraction_name) && !$this->IsNullOrEmptyString($attraction_picture) && !$this->IsNullOrEmptyString($country_id)) {
-                $attractionModel->insertAttraction($country_id, $attraction_name, $attraction_picture);
+                $attractionModel->insertAttraction($country_id, $attraction_name, $attraction_picture, $attraction_url);
                 echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-attraction';
@@ -346,12 +347,13 @@ class AdminController extends Controller {
         try {
             $id = $_POST['hidden_update_id'];
             $update_attraction_name = $_POST['update_attraction_name'];
+            $update_attraction_url = $_POST['update_attraction_url'];
             $attraction_picture = $_FILES['file']['name'];
             $country_id = $_POST['update_country_select'];
-            $attractionModel->editAttraction($id, $country_id, $update_attraction_name, $attraction_picture);
+            $attractionModel->editAttraction($id, $country_id, $update_attraction_name, $attraction_picture, $update_attraction_url);
             echo "<script>
              alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
-             window.location.href='manage-attraction';
+             window.location.href='manage-attraction';  
              </script>";
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -379,7 +381,8 @@ class AdminController extends Controller {
         $tagModel = new Tag();
         try {
             $tag_name = $_POST['tag_name'];
-            $tagModel->insertTag($tag_name);
+            $tag_url = $_POST['tag_url'];
+            $tagModel->insertTag($tag_name, $tag_url);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -404,7 +407,8 @@ class AdminController extends Controller {
         try {
             $id = $_POST['id'];
             $update_tag_name = $_POST['update_tag_name'];
-            $tagModel->editTag($id, $update_tag_name);
+            $update_tag_url = $_POST['update_tag_url'];
+            $tagModel->editTag($id, $update_tag_name, $update_tag_url);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -752,72 +756,73 @@ class AdminController extends Controller {
                 $tourImageModel = new Tour_Image();
                 $tourRoute = new Tour_Route();
                 $tourPeriodModel = new Tour_Period();
+                $conditions_id = 1;
+                if (!$quick_tour) {
+                    $conditions_id = $this->saveConditions(null, $request);
+                }
 
-                $conditions_id = $this->saveConditions(null, $request);
+                $id = $tourPackageModel->insertTourPackage($tour_package_code, $tour_country, $conditions_id, $tour_category
+                        , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
+                        , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $quick_tour);
 
-                if ($conditions_id > 0 && $conditions_id != null) {
-                    $id = $tourPackageModel->insertTourPackage($tour_package_code, $tour_country, $conditions_id, $tour_category
-                            , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
-                            , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $quick_tour);
+                if ($id != null && $id != 0) {
+                    $tour_period_start = $_POST['period_start'];
+                    $tour_period_end = $_POST['period_end'];
+                    $tour_period_adult_price = $_POST['adult_price'];
+                    $tour_period_child_price = $_POST['child_price'];
+                    $tour_period_child_nb_price = 0;
+                    $tour_period_alone_price = 0;
+                    $tour_period_adult_special_price = $_POST['special_price'];
+                    $tour_period_child_special_price = 0;
+                    $tour_period_status = 'Y';
 
-                    if ($id != null && $id != 0) {
-                        $tour_period_start = $_POST['period_start'];
-                        $tour_period_end = $_POST['period_end'];
-                        $tour_period_adult_price = $_POST['adult_price'];
-                        $tour_period_child_price = $_POST['child_price'];
-                        $tour_period_child_nb_price = 0;
-                        $tour_period_alone_price = 0;
-                        $tour_period_adult_special_price = $_POST['special_price'];
-                        $tour_period_child_special_price = 0;
-                        $tour_period_status = 'Y';
+                    for ($i = 0; $i < count($tour_period_start); $i++) {
+                        $tour_period_start[$i] = str_replace('/', '-', $tour_period_start[$i]);
+                        $dateStart = date('Y-m-d H:i:s', strtotime($tour_period_start[$i]));
+                        $tour_period_end[$i] = str_replace('/', '-', $tour_period_end[$i]);
+                        $dateEnd = date('Y-m-d H:i:s', strtotime($tour_period_end[$i]));
+                        $speriod = $tourPeriodModel->insertTourPeriod($id, $dateStart, $dateEnd, $tour_period_adult_price[$i]
+                                , $tour_period_child_price[$i], $tour_period_child_nb_price
+                                , $tour_period_alone_price, $tour_period_adult_special_price[$i]
+                                , $tour_period_child_special_price, $tour_period_status);
+                    }
 
-                        for ($i = 0; $i < count($tour_period_start); $i++) {
-                            $tour_period_start[$i] = str_replace('/', '-', $tour_period_start[$i]);
-                            $dateStart = date('Y-m-d H:i:s', strtotime($tour_period_start[$i]));
-                            $tour_period_end[$i] = str_replace('/', '-', $tour_period_end[$i]);
-                            $dateEnd = date('Y-m-d H:i:s', strtotime($tour_period_end[$i]));
-                            $speriod = $tourPeriodModel->insertTourPeriod($id, $dateStart, $dateEnd, $tour_period_adult_price[$i]
-                                    , $tour_period_child_price[$i], $tour_period_child_nb_price
-                                    , $tour_period_alone_price, $tour_period_adult_special_price[$i]
-                                    , $tour_period_child_special_price, $tour_period_status);
-                        }
-
-                        if (!$quick_tour) {
-                            for ($x = 0; $x < $day; $x++) {
-                                $tourdetailStr = 'tour_detail_' . $x;
-                                $tourname = "";
-                                $tourdetail = $_POST[$tourdetailStr];
-                                $attractionStr = 'attraction_select' . $x;
-                                $attraction = $_POST[$attractionStr];
+                    if (!$quick_tour) {
+                        for ($x = 0; $x < $day; $x++) {
+                            $tourdetailStr = 'tour_detail_' . $x;
+                            $tourname = "";
+                            $tourdetail = $_POST[$tourdetailStr];
+                            $attractionStr = 'attraction_select' . $x;
+                            $attraction = $_POST[$attractionStr];
+                            foreach ($attraction as $key => $value) {
+                                $attraction_name = $attractionModel->getAttractionById($value);
+                                if ($key == 0) {
+                                    $tourname = $attraction_name->attraction_name;
+                                } else {
+                                    $tourname = $tourname . '-' . $attraction_name->attraction_name;
+                                }
+                                $tourAttractionModel->insertTourAttraction($id, $value);
+                            }
+                            $tour_day_id = $tourPackageDayModel->insertTourPackageDay($id, $x + 1, $tourname, $tourdetail);
+                            if ($tour_day_id > 0) {
                                 foreach ($attraction as $key => $value) {
-                                    $attraction_name = $attractionModel->getAttractionById($value);
-                                    if ($key == 0) {
-                                        $tourname = $attraction_name->attraction_name;
-                                    } else {
-                                        $tourname = $tourname . '-' . $attraction_name->attraction_name;
-                                    }
-                                    $tourAttractionModel->insertTourAttraction($id, $value);
-                                }
-                                $tour_day_id = $tourPackageDayModel->insertTourPackageDay($id, $x + 1, $tourname, $tourdetail);
-                                if ($tour_day_id > 0) {
-                                    foreach ($attraction as $key => $value) {
-                                        $tourPackageDayModel->insertTourAttractionDay($tour_day_id, $value);
-                                    }
+                                    $tourPackageDayModel->insertTourAttractionDay($tour_day_id, $value);
                                 }
                             }
                         }
+                    }
 
-                        if (($airline_select != null) && ($airline_select != '')) {
-                            foreach ($airline_select as $value) {
-                                $tourAirlineModel->insertTourAirline($id, $value);
-                            }
+                    if (($airline_select != null) && ($airline_select != '')) {
+                        foreach ($airline_select as $value) {
+                            $tourAirlineModel->insertTourAirline($id, $value);
                         }
+                    }
 
-                        if (($holiday_select != null) && ($holiday_select != '')) {
-                            foreach ($holiday_select as $value) {
-                                $tourHolidayModel->insertTourHoliday($id, $value);
-                            }
+                    if (($holiday_select != null) && ($holiday_select != '')) {
+                        foreach ($holiday_select as $value) {
+                            $tourHolidayModel->insertTourHoliday($id, $value);
                         }
+                    }
 
 //                        if (($attraction_select != null) && ($attraction_select != '')) {
 //                            foreach ($attraction_select as $value) {
@@ -825,29 +830,24 @@ class AdminController extends Controller {
 //                            }
 //                        }
 
-                        if (($tag_select != null) && ($tag_select != '')) {
-                            foreach ($tag_select as $value) {
-                                $tourTagModel->insertTourTag($id, $value);
-                            }
+                    if (($tag_select != null) && ($tag_select != '')) {
+                        foreach ($tag_select as $value) {
+                            $tourTagModel->insertTourTag($id, $value);
                         }
+                    }
 
-                        if (($route_select != null) && ($route_select != '')) {
-                            foreach ($route_select as $value) {
-                                $tourRoute->insertTourRoute($id, $value);
-                            }
+                    if (($route_select != null) && ($route_select != '')) {
+                        foreach ($route_select as $value) {
+                            $tourRoute->insertTourRoute($id, $value);
                         }
+                    }
 
-                        //                        if (($images != null) && ($images != '')) {
+                    //                        if (($images != null) && ($images != '')) {
 //                            $tourImageModel->insertTourImage($id, $images);
 //                        }
-                    }
-                    echo "<script>
-             alert('บันทึกข้อมูลเรียบร้อย');    
-             window.location.href='manage-tourlist';
-             </script>";
                 }
                 echo "<script>
-             alert('ไม่สามารถบันทึกข้อมูลได้');    
+             alert('บันทึกข้อมูลเรียบร้อย');    
              window.location.href='manage-tourlist';
              </script>";
             } catch (\Exception $e) {

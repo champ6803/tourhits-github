@@ -37,11 +37,12 @@ class Tag extends Model {
         }
     }
 
-    public function insertTag($tag_name) {
+    public function insertTag($tag_name, $tag_url) {
         try {
             $date = \Carbon\Carbon::now();
             Tag::insert(
                     ['tag_name' => $tag_name
+                        , 'tag_url' => $tag_url
                         , 'created_by' => 'admin'
                         , 'created_at' => $date
                         , 'updated_by' => 'admin'
@@ -60,11 +61,12 @@ class Tag extends Model {
         }
     }
 
-    public function editTag($id, $update_tag_name) {
+    public function editTag($id, $update_tag_name, $update_tag_url) {
         try {
             $date = \Carbon\Carbon::now();
             Tag::where('tag_id', $id)
                     ->update(['tag_name' => $update_tag_name
+                        , 'tag_url' => $update_tag_url
                         , 'updated_at' => $date
                         , 'updated_by' => 'admin']);
         } catch (Exception $ex) {

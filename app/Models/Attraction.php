@@ -66,12 +66,13 @@ class Attraction extends Model {
         }
     }
 
-    public function insertAttraction($country_id, $attraction_name, $attraction_picture) {
+    public function insertAttraction($country_id, $attraction_name, $attraction_picture, $attraction_url) {
         try {
             $date = \Carbon\Carbon::now();
             \DB::table('attraction')->insert(
                     ['country_id' => $country_id
                         , 'attraction_name' => $attraction_name
+                        , 'attraction_url' => $attraction_url
                         , 'created_by' => 'admin'
                         , 'created_at' => $date
                         , 'updated_by' => 'admin'
@@ -95,7 +96,7 @@ class Attraction extends Model {
         }
     }
 
-    public function editAttraction($id, $country_id, $update_attraction_name, $attraction_picture) {
+    public function editAttraction($id, $country_id, $update_attraction_name, $attraction_picture, $update_attraction_url) {
         try {
             $date = \Carbon\Carbon::now();
             if (null == $attraction_picture) {
@@ -103,6 +104,7 @@ class Attraction extends Model {
                         ->where('attraction_id', $id)
                         ->update(['country_id' => $country_id
                             , 'attraction_name' => $update_attraction_name
+                            , 'attraction_url' => $update_attraction_url
                             , 'updated_at' => $date
                             , 'updated_by' => 'admin']);
             } else {
@@ -110,6 +112,7 @@ class Attraction extends Model {
                         ->where('attraction_id', $id)
                         ->update(['country_id' => $country_id
                             , 'attraction_name' => $update_attraction_name
+                            , 'attraction_url' => $update_attraction_url
                             , 'attraction_picture' => $attraction_picture
                             , 'updated_at' => $date
                             , 'updated_by' => 'admin']);

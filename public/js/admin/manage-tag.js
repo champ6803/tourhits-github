@@ -41,6 +41,7 @@ function createTable() {
                     Str = Str + '<tr>';
                     Str = Str + '<td>' + rowNo + '</td>';
                     Str = Str + '<td>' + data[row].tag_name + '</td>';
+                    Str = Str + '<td>' + data[row].tag_url + '</td>';
                     Str = Str + '<td>' + data[row].created_by + '</td>';
                     Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTag(' + data[row].tag_id + ',\'' + data[row].tag_name + '\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -73,6 +74,7 @@ function editTag(id, tagName) {
 
 function saveTag() {
     var tag_name = $('#tag_name').val();
+    var tag_url = $('#tag_url').val();
     var checkEmpty = tag_name.trim();
     if (checkEmpty.length <= 0) {
         alert('กรุณาระบุชื่อ Tags')
@@ -82,7 +84,7 @@ function saveTag() {
         type: 'post',
         url: 'saveTag',
         async: false,
-        data: {'tag_name': tag_name},
+        data: {'tag_name': tag_name, 'tag_url': tag_url},
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
@@ -134,6 +136,7 @@ function findTagByName(tagName) {
                     Str = Str + '<tr>';
                     Str = Str + '<td>' + rowNo + '</td>';
                     Str = Str + '<td>' + data[row].tag_name + '</td>';
+                    Str = Str + '<td>' + data[row].tag_url + '</td>';
                     Str = Str + '<td>' + data[row].created_by + '</td>';
                     Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTag(' + data[row].tag_id + ',\'' + data[row].tag_name + '\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
@@ -183,11 +186,12 @@ function deleteTag() {
 function updateTag() {
     var id = $('#hidden_update_id').val();
     var update_tag_name = $('#update_tag_name').val();
+    var update_tag_url = $('#update_tag_url').val();
     $.ajax({
         type: 'post',
         url: 'updateTag',
         async: false,
-        data: {'id': id, 'update_tag_name': update_tag_name},
+        data: {'id': id, 'update_tag_name': update_tag_name, 'update_tag_url': update_tag_url},
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
