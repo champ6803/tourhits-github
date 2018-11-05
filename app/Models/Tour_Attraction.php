@@ -52,7 +52,7 @@ class Tour_Attraction extends Model {
                 );
             } else {
                 Tour_Attraction::insert(
-                        ['attraction_id' => $tag_id
+                        ['attraction_id' => $attraction_id
                             , 'tour_package_id' => $id
                             , 'created_by' => 'admin'
                             , 'created_at' => $date
@@ -60,6 +60,16 @@ class Tour_Attraction extends Model {
                             , 'updated_at' => $date]
                 );
             }
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+    
+    public function removeTourAttraction($id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            Tour_Attraction::where('tour_package_id', $id)
+                    ->delete();
         } catch (Exception $ex) {
             return $ex;
         }

@@ -126,5 +126,15 @@ class Tour_Package_Day extends Model {
             return $ex;
         }
     }
+    
+    public function removeTourAttractionDay($id) {
+        try {
+            $date = \Carbon\Carbon::now();
+            Tour_Attraction_Day::where('tour_package_day_id', $id)
+                    ->delete();
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
 
 }

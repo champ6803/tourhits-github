@@ -1051,6 +1051,7 @@ class AdminController extends Controller {
                                 $attractionStr = 'attraction_select' . $x;
                                 isset($_POST[$attractionStr]) ? $attraction = $_POST[$attractionStr] : $attraction = null;
                                 if ($tourdetail != null && $attraction != null) {
+                                    $tourAttractionModel->removeTourAttraction($tour_package_id);
                                     foreach ($attraction as $key => $value) {
                                         $attraction_name = $attractionModel->getAttractionById($value);
                                         if ($key == 0) {
@@ -1062,11 +1063,10 @@ class AdminController extends Controller {
                                     }
 
                                     $arr_tour_package_day_id = explode(",", $tour_package_day_id);
-                                    foreach ($arr_tour_package_day_id as $keys => $values) {
-                                        $tourPackageDayModel->updateTourPackageDay($arr_tour_package_day_id[$keys], $tour_package_id, $x + 1, $tourname, $tourdetail);
-                                        foreach ($attraction as $key => $value) {
-                                            $tourPackageDayModel->updateTourAttractionDay($arr_tour_package_day_id[$keys], $value);
-                                        }
+                                    $tourPackageDayModel->updateTourPackageDay($arr_tour_package_day_id[$x], $tour_package_id, $x + 1, $tourname, $tourdetail);
+                                    $tourPackageDayModel->removeTourAttractionDay($arr_tour_package_day_id[$x]);
+                                    foreach ($attraction as $key => $value) {
+                                        $tourPackageDayModel->updateTourAttractionDay($arr_tour_package_day_id[$x], $value);
                                     }
                                 }
                             }
