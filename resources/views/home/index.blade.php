@@ -96,13 +96,9 @@
                                 <div class="form-item">
                                     <select id="country_dropdown" class="form-control">
                                         <option selected value="">เลือกประเทศ</option>
-                                        <option value="japan">ญี่ปุ่น</option>
-                                        <option value="china">จีน</option>
-                                        <option value="korea">เกาหลี</option>
-                                        <option value="vietnam">เวียดนาม</option>
-                                        <option value="europe">ยุโรป</option>
-                                        <option value="myanmar">พม่า</option>
-                                        <option value="hongkong">ฮ่องกง</option>
+                                        @foreach ($countryList as $country)
+                                        <option value="{{$country->tour_country_url}}">{{$country->country_name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

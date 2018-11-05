@@ -14,6 +14,7 @@ namespace App\Models;
  * @author Champ
  */
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Tour_Country;
 
 class Country extends Model {
 
@@ -21,7 +22,8 @@ class Country extends Model {
     
     public function getCountryAll(){
         try {
-         $countryList = Country::all();
+         $countryList = Country::join('tour_country', 'tour_country.country_id', '=','country.country_id')
+                 ->get();
          return $countryList;
         } catch (Exception $ex) {
                throw $ex;

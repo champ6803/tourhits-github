@@ -12,6 +12,7 @@ use App\Models\Tour_Category;
 use App\Models\Tour_Package;
 use App\Models\Category;
 use App\Models\Tour_Period;
+use App\Models\Country;
 
 /**
  * Description of HomeController
@@ -23,10 +24,12 @@ class HomeController extends Controller {
     public function index() {
         $cate = new Category();
         $tourList = new Tour_Package();
+        $countryModel = new Country();
         $categoryList = $cate->getCategoryGenaral();
         $tourHitsPackageActiveList = $tourList->getTourPackageByCategory(100000, 0); //แพ็คเกจยอดนิยม
         $tourHitsPackageList = $tourList->getTourPackageByCategory(100000, 4);
         $tourSalesPackageActiveList = $tourList->getTourPackageByCategory(100001, 0); //แพ็คเกจยอดนิยม
+        $countryList = $countryModel->getCountryAll();
         $arrayHitActive = array();
         foreach ($tourHitsPackageActiveList as $tour) {
             array_push($arrayHitActive, $tour->tour_package_id);
@@ -41,7 +44,7 @@ class HomeController extends Controller {
         $tourSalesPeriodActive = Tour_Period::whereIn('tour_package_id', $arraySalesActive)
                 ->get();
 
-        return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourSalesPackageActiveList', 'tourHitPeriodActive', 'tourSalesPeriodActive'));
+        return view('home.index', compact('categoryList', 'tourHitsPackageActiveList', 'tourSalesPackageActiveList', 'tourHitPeriodActive', 'tourSalesPeriodActive', 'countryList'));
     }
 
 }
