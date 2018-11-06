@@ -7728,7 +7728,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 
 .detail-sidebar {
-    margin-top: 72px;
+    margin-top: 140px;
     
 }
 
@@ -7806,13 +7806,13 @@ body.single-post .blog-page__content > .post .post-content {
 .booking-info {
     position: relative;
     background-color: #fff;
-    border: 2px solid  #c33132;
-    border-radius: 3px 3px 3px 0;
+    border: 2px solid  #fd6149;
+    border-radius: 8px 8px 8px 0;
     padding: 22px 20px;
     padding-bottom: 0;
-    margin-bottom: 100px;
+    margin-bottom: 58px;
     z-index: 9;
-    margin-top: 25px;
+    margin-top: -6px;
     -webkit-box-shadow:  0 4px 10px 0 rgba(0,0,0,.12);
     box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);   
 }
@@ -7853,7 +7853,7 @@ body.single-post .blog-page__content > .post .post-content {
 /*    color: #1F2021;*/
     margin: 0;
     margin-bottom: 18px;
-    color: #339af0;
+    color: #86979a;
 }
 .booking-info .awe-select-wrapper {
     width: 100%;
@@ -8026,12 +8026,12 @@ body.single-post .blog-page__content > .post .post-content {
 .booking-info .form-submit .add-to-cart button {
     font-size: 23px;
     color: #FCF2E5;
-    background-color: #c33132;
+    background-color: #fd6149;
     border: 0;
     cursor: pointer;
     line-height: 46px;
 /*    line-height: 1.5;*/
-    height: 46px;
+/*    height: 46px;*/
     padding: 0 26px;
     width:100%;
     border-radius: 0 0 5px 5px;
