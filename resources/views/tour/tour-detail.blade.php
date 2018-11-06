@@ -100,13 +100,6 @@
     }
 
 
-    .call-to-book span, .call-to-book2 span{     
-        font-size: 19px;
-        font-weight: bold;
-        line-height: 1.9;
-        padding-top: 2px;
-    }
-
     .modal-content{-webkit-box-shadow:  0 4px 10px 0 rgba(0,0,0,.12);box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);}
     .table{margin-top: 10px;}
 
@@ -1614,7 +1607,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             <div class="col-md-3">
                 <div class="detail-sidebar">                    
                     <div class="booking-info">
-                        <h3><i class="fas fa-check-circle"></i> จองทัวร์นี้</h3>
+                        <h3><img alt="" src="{{ asset('/images/icon/maps-and-flags.png')}}" title=""> จองทัวร์นี้</h3>
                         <div class="form-select-date">
                             <div class="form-elements">
                                 <label>เลือกช่วงเวลาเดินทาง</label>
@@ -1731,10 +1724,10 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     </div>
                     <!-- Trigger the modal with a button -->
                     <div class="call-and-line">
+                        <div class="call-or-line">- จองผ่านช่องทางอื่น -</div>
                         <div class="call-to-book">
                             <a href="tel:02-379-1249" type="button" class="btn btn-call-book">
-                                <i class="awe-icon awe-icon-phone"></i>
-                                <span>โทรจอง</span>                       
+                                <span><img alt="" src="{{ asset('/images/icon/telephone.png')}}" title=""> โทรจอง</span>                       
                             </a>
 <!--                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal">
                                 <i class="awe-icon awe-icon-phone"></i>
@@ -1804,10 +1797,9 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         </div>
 
                         <!-- Trigger the modal with a button -->
-                        <div class="call-to-book2">
+                        <div class="book-by-line">
                             <a target="_blank" href="http://line.me/ti/p/%40tourhits" type="button" class="btn btn-call-book">    
-                                <i class="fab fa-line"></i>                            
-                                <span>จองผ่านไลน์</span>
+                                <span><img alt="" src="{{ asset('/images/icon/line.png')}}" title=""> จองผ่านไลน์</span>
                             </a>
 <!--                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal2">    
                                 <i class="fab fa-line"></i>                            

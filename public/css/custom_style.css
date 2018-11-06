@@ -5437,63 +5437,49 @@ Custom BS3
     color:#339af0;
 }
 
-.call-to-book .btn-call-book {
-    width: 90%;
-    border-radius: 50px;
-    background-color: #f7f7f7;
-    border: 1px solid #2A3F54;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    -webkit-box-shadow: 0 0px 10px 0 rgba(0,0,0,.2);
-    box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.2);
+.call-and-line .call-or-line{
+    font-family: 'Kanit', sans-serif;
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 15px;
 }
 
-.call-to-book .btn-call-book:hover {
-    background-color: #2A3F54;          
-}
-
-.call-to-book .btn-call-book:hover .awe-icon{
-    border: solid #fff;
-    color: #fff;
-}
-
-.call-to-book .btn-call-book:hover em{
-    color: #fff;
-}
-
-.call-to-book .btn-call-book:hover span{
-    color: #fff;
-}
-
-
-.call-to-book2 .btn-call-book {
+.call-to-book, .book-by-line{
     width: 50%;
-    border-radius: 50px;
-    background-color: #f7f7f7;
-    border: 1px solid #00c500;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    -webkit-box-shadow: 0 0px 10px 0 rgba(0,0,0,.2);
-    box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.2);
+    float: left;
+    padding: 0 5px;
 }
 
-.call-to-book2 .btn-call-book:hover{
-    background-color: #00c500;
+.call-to-book a,.book-by-line a{
+    text-align: center;
+    display: block;
+    border: 2px solid #5de0bf;
+    border-radius: 40px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px!important;
 }
 
-.call-to-book2 .btn-call-book:hover .fa-line{
-    color: #fff;
+.book-by-line a{
+    border: 2px solid #69e781;
 }
 
-.call-to-book2 .btn-call-book:hover span{
-    color: #fff;
+.call-to-book span, .book-by-line span{
+    line-height: 32px;
 }
 
-.call-and-line{
-    margin-top: -40px;
+.call-to-book span{
+    color: #262626;
 }
+
+.book-by-line span{
+    font-size: 16px!important;
+    color: #262626;
+}
+.call-to-book span img,.book-by-line span img{
+    padding-right: 1px;
+}
+
 
 .modal-body .trip-item{
     margin-bottom: -15px;
@@ -6091,10 +6077,6 @@ https://flickity.metafizzy.co
     background-size:     cover;
 }
 
-.detail-sidebar {
-    margin-top: 130px;
-}
-
 .trip-item .item-media .bot-img-detail{
     position: relative;
     width: 100%;
@@ -6480,7 +6462,7 @@ https://flickity.metafizzy.co
     background-color: transparent;
     font-family: 'Kanit', sans-serif;
     font-size: 12px;
-/*    font-weight: bold;*/
+    font-weight: bold;
     color: #fd6149;
     opacity: 1;
     padding: 0;
