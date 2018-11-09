@@ -5451,6 +5451,20 @@ Custom BS3
     padding: 0 5px;
 }
 
+.call-to-book a:hover{
+    background-color: #5de0bf;
+}
+.call-to-book a:hover span{
+    color: #fff;
+}
+
+.book-by-line a:hover{
+    background-color: #69e781;
+}
+.book-by-line a:hover span{
+    color: #fff;
+}
+
 .call-to-book a,.book-by-line a{
     text-align: center;
     display: block;
@@ -5458,6 +5472,11 @@ Custom BS3
     border-radius: 40px;
     font-family: 'Kanit', sans-serif;
     font-size: 18px!important;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+   -ms-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+   transition: all 0.3s ease;    
 }
 
 .book-by-line a{
