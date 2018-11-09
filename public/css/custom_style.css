@@ -6165,47 +6165,55 @@ https://flickity.metafizzy.co
 .checkout-page__content .cart-content .tab-adult-pair span:nth-child(1){
     display: inline-block;
     width: 100%;
-    color: #8d8d8d;
+    color: black;
 }
 
 .checkout-page__content .cart-content .tab-adult-pair span:nth-child(2){
     font-size: 17px;
-    color: black;    
+    color: #8d8d8d;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
 }
 
 .checkout-page__content .cart-content .tab-adult-single span:nth-child(1){
     display: inline-block;
     width: 100%;
-    color: #8d8d8d;
+    color: black;
     padding-top: 3px;
 }
 
 .checkout-page__content .cart-content .tab-adult-single span:nth-child(2){
     font-size: 17px;
-    color: black;    
+    color: #8d8d8d; 
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
 }
 
 .checkout-page__content .cart-content .tab-kid-1 span:nth-child(1){
     display: inline-block;
     width: 100%;
-    color: #8d8d8d;  
+    color: black;  
 }
 
 .checkout-page__content .cart-content .tab-kid-1 span:nth-child(2){
     font-size: 17px;
-    color: black;
+    color: #8d8d8d;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
 }
 
 .checkout-page__content .cart-content .tab-kid-2 span:nth-child(1){
     display: inline-block;
     width: 100%;
-    color: #8d8d8d;
+    color: black;
     padding-top: 3px;
 }
 
 .checkout-page__content .cart-content .tab-kid-2 span:nth-child(2){
     font-size: 17px;
-    color: black;
+    color:#8d8d8d;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
 }
 
 .checkout-page__content .cart-content .cart-table tbody .tlr{

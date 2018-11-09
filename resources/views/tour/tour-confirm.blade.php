@@ -57,7 +57,7 @@
     font-size:19px;
     }
     .cart-content .cart-table tbody td .quantity .minus:hover{color:#c33132;}
-    
+    .cart-content .cart-table tbody td .quantity .fa-minus-circle:hover{color:#c33132;}
 </style>
 <!-- BREADCRUMB -->
 <section>
@@ -226,7 +226,7 @@
                                         <span>(พัก2-3คน)</span>
                                     </td>
                                     <td class="product-price">
-                                        <span id="two_price"></span> ฿
+                                        <span id="two_price"></span>฿
                                     </td>
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
@@ -249,7 +249,7 @@
                                         <span>(พักเดี่ยว)</span>
                                     </td>
                                     <td class="product-price">
-                                        <span id="one_price"></span> ฿
+                                        <span id="one_price"></span>฿
                                     </td>
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
@@ -334,7 +334,7 @@
                                          <span>(ไม่เพิ่มเตียง)</span>
                                     </td>
                                     <td class="product-price">
-                                        <span id='child_one_price' class="amount"></span> ฿
+                                        <span id='child_one_price' class="amount"></span>฿
                                     </td>
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
