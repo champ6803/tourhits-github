@@ -732,7 +732,7 @@ session_start();
                 <div class="box-tel bx">  
                     <a href="tel:02-379-1249">
                         <div class="tel-img-box img-bx">
-                            <img alt="" src="{{ asset('/images/icon/chat.png')}}" title="">
+                            <img alt="" src="{{ asset('/images/icon/telephone2.png')}}" title="">
                         </div>    
                             <span>โทรหาเรา</span>    
                     </a>
