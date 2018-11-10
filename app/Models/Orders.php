@@ -23,36 +23,39 @@ class Orders extends Model {
 
     public function saveOrder($customer_id, $order_name, $order_email, $order_phone, $order_line, $order_remark, $order_total_price, $tour_package_id, $tour_period_id, $quantity_adult, $quantity_child) {
         try {
-            $order_id = Orders::insertGetId([
-                        'customer_id' => $customer_id
-                        , 'order_status_code' => 'WA'
-                        , 'order_date' => null
-                        , 'order_name' => $order_name
-                        , 'order_email' => $order_email
-                        , 'order_phone' => $order_phone
-                        , 'order_line' => $order_line
-                        , 'order_remark' => $order_remark
-                        , 'order_total_price' => $order_total_price
-                        , 'created_by' => 'admin'
-                        , 'created_at' => null
-                        , 'updated_by' => 'admin'
-                        , 'updated_at' => null
-            ]);
-            Order_Tour_Package::insert([
-                'order_id' => $order_id,
-                'tour_package_id' => $tour_package_id,
-                'tour_period_id' => $tour_period_id,
-                'quantity_adult' => $quantity_adult,
-                'quantity_child' => $quantity_child,
-                'price_each' => null,
-                'created_by' => 'admin',
-                'created_at' => null,
-                'updated_by' => 'admin',
-                'updated_at' => null
-            ]);
+            DB::transaction(function () use ($customer_id, $order_name, $order_email, $order_phone, $order_line, $order_remark, $order_total_price, $tour_package_id, $tour_period_id, $quantity_adult, $quantity_child) {
+                $order_id = Orders::insertGetId([
+                            'customer_id' => $customer_id
+                            , 'order_status_code' => 'WA'
+                            , 'order_date' => null
+                            , 'order_name' => $order_name
+                            , 'order_email' => $order_email
+                            , 'order_phone' => $order_phone
+                            , 'order_line' => $order_line
+                            , 'order_remark' => $order_remark
+                            , 'order_total_price' => $order_total_price
+                            , 'created_by' => 'admin'
+                            , 'created_at' => null
+                            , 'updated_by' => 'admin'
+                            , 'updated_at' => null
+                ]);
+                
+                Order_Tour_Package::insert([
+                    'order_id' => $order_id,
+                    'tour_package_id' => $tour_package_id,
+                    'tour_period_id' => $tour_period_id,
+                    'quantity_adult' => $quantity_adult,
+                    'quantity_child' => $quantity_child,
+                    'price_each' => null,
+                    'created_by' => 'admin',
+                    'created_at' => null,
+                    'updated_by' => 'admin',
+                    'updated_at' => null
+                ]); 
+            });
             return true;
         } catch (\Exception $ex) {
-            return $ex;
+            throw $ex;
         }
     }
 
@@ -69,8 +72,8 @@ class Orders extends Model {
             return $ex;
         }
     }
-    
-    public function getOrderDetail($order_id){
+
+    public function getOrderDetail($order_id) {
         try {
             $orderDetail = Order_Tour_Package::join('tour_package', 'tour_package.tour_package_id', '=', 'order_tour_package.tour_package_id')
                     ->join('tour_period', 'tour_period.tour_period_id', '=', 'order_tour_package.tour_period_id')

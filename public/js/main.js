@@ -133,3 +133,13 @@ const numberWithCommas = (x) => {
 const removeCommas = (x) => {
     return x.toString().replace(/,\s?/g, "");
 }
+
+function validatePhone(txtPhone) {
+    var filter = /^[0-9-+]+$/;
+    if (filter.test(txtPhone)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}

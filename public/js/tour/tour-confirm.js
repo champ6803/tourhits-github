@@ -206,18 +206,18 @@ function calculateQty(type) {
     if (type == 'adult') {
         var atq = parseInt($('#two_qty').val());
         var anq = parseInt($('#one_qty').val());
-        var athq = parseInt($('#three_qty').val());
-        var sum_of_aqty = atq + anq + athq;
+        //var athq = parseInt($('#three_qty').val());
+        var sum_of_aqty = atq + anq;
         if (sum_of_aqty != 0) {
             $('#adult_qty').html(sum_of_aqty);
         } else {
             $('#adult_qty').html('');
         }
     } else if (type == 'child') {
-        var ctq = parseInt($('#child_two_qty').val());
+        //var ctq = parseInt($('#child_two_qty').val());
         var cnq = parseInt($('#child_one_qty').val());
-        var cnbq = parseInt($('#child_nb_qty').val());
-        var sum_of_cqty = ctq + cnq + cnbq;
+        //var cnbq = parseInt($('#child_nb_qty').val());
+        var sum_of_cqty = cnq;
         if (sum_of_cqty != 0) {
             $('#child_qty').html(sum_of_cqty);
         } else {
@@ -281,7 +281,7 @@ function sendTourOrders() {
     var tour_package_id = tourPackage.tour_package_id;
 
     if (cus_name || cus_email || line_id || phone) {
-        if (cus_name && cus_email && line_id && phone) {
+        if (cus_name && cus_email && validatePhone(phone)) {
             if (all_total_amount && all_total_amount != 0) {
                 $.ajax({
                     type: 'post',

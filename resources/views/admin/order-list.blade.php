@@ -1,6 +1,15 @@
 @extends('layout.main-admin')
 @section('page_title','Admin Management')
 @section('main-content')
+<style type="text/css">
+    .modal-lg {
+        width: 1800px !important;
+    }
+    .modal-lg {
+        max-width: none !important; 
+    }
+</style>
+
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
