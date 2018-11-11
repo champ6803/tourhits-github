@@ -312,7 +312,7 @@ class AdminController extends Controller {
             $attraction_url = $_POST['attraction_url'];
             $attraction_picture = $_FILES['file']['name'];
             $country_id = $_POST['country_select'];
-            if (!$this->IsNullOrEmptyString($attraction_name) && !$this->IsNullOrEmptyString($attraction_picture) && !$this->IsNullOrEmptyString($country_id)) {
+            if (!$this->IsNullOrEmptyString($attraction_name) && !$this->IsNullOrEmptyString($country_id)) {
                 $attractionModel->insertAttraction($country_id, $attraction_name, $attraction_picture, $attraction_url);
                 echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');

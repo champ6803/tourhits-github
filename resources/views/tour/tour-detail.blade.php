@@ -981,19 +981,23 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                                         @endforeach-->
                             @foreach ($tourPackageDayList as $tourPackageDay)
                             @foreach ($tourAttractionDayList as $tourAttractionDay)
+                            @if($tourAttractionDay->attraction_picture != null)
                             <div class="item">
                                 <img class="img-item" src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                             </div>
+                            @endif
                             @endforeach
                             @endforeach
                         </div>
-                        <div class="hide product-slider-thumb-row">
-                            <div class="product-slider-thumb">
+                        <div class="product-slider-thumb-row">
+                            <div id="product_item" class="product-slider-thumb">
                                 @foreach ($tourPackageDayList as $tourPackageDay)
                                 @foreach ($tourAttractionDayList as $tourAttractionDay)
+                                @if($tourAttractionDay->attraction_picture != null)
                                 <div class="item">
                                     <img class="img-item" src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                                 </div>
+                                @endif
                                 @endforeach
                                 @endforeach
                             </div>
@@ -1048,10 +1052,12 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <br>
                                     @foreach ($tourAttractionDayList as $tourAttractionDay)
                                     @if($tourAttractionDay->tour_package_day_id == $tourPackageDay->tour_package_day_id)
+                                    @if($tourAttractionDay->attraction_picture != null)
                                     <p style="font-size:24px;"><i class="fa fa-image"></i>&nbsp;{{$tourAttractionDay->attraction_name}}</p>
                                     <img src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                                     <br>
                                     <br>
+                                    @endif
                                     @endif
                                     @endforeach
                                 </div>
