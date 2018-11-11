@@ -182,15 +182,22 @@
                                                 <div class="col-6">
                                                     <div class="form-group row">
                                                         <label for="pdf_file" class="col-sm-2 control-label">PDF File</label>
-                                                        <div class="col-sm-10">
+                                                        <div id="show_pdf" class="col-sm-5">
+                                                            <div class="input-group">
+                                                                <a class="control-label" href="{{ url('images/pdf/'.$tourPackage->tour_package_pdf) }}" target=_blank>{{$tourPackage->tour_package_pdf}}</a>
+                                                                &nbsp;
+                                                                <span class="input-group-btn">
+                                                                    <button id="close_pdf_btn" class="btn btn-secondary" type="button"><i class="fa fa-times"></i></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: none" id="add_pdf" class="col-sm-10">
                                                             <input class="form-control" type="file" id="pdf_file" name="pdf_file">
                                                             <input type="hidden" value="{{ csrf_token() }}" name="_token">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
-                                                        
                                                         <label class="col-sm-2 control-label"></label>
-                                                        <a class="col-sm-offset-2 col-sm-10 control-label" href="{{ url('images/pdf/'.$tourPackage->tour_package_pdf) }}" target=_blank>{{$tourPackage->tour_package_pdf}}</a>
                                                         <input id="pdf_hidden" type="hidden" value="" name="pdf_hidden">
                                                     </div>
                                                 </div>
@@ -321,6 +328,16 @@
                                                 </div>
                                             </div>
                                             <br>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group row">
+                                                        <label for="remark" class="col-sm-2 control-label">Remark</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="remark" name="remark">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="row">
                                                 <div class="col-12">
                                                     <table class="table table-bordered" id="period_table">

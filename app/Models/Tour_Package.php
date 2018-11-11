@@ -37,7 +37,7 @@ class Tour_Package extends Model {
     }
 
     public function insertTourPackage($tour_package_code, $tour_country, $conditions_id, $tour_category, $tour_name
-    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price, $quick_tour) {
+    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price, $quick_tour, $remark) {
         try {
             $id_max = DB::table('tour_package')->max('tour_package_id');
             $date = \Carbon\Carbon::now();
@@ -57,6 +57,7 @@ class Tour_Package extends Model {
                                 , 'tour_package_period_start' => $dateStart
                                 , 'tour_package_period_end' => $dateEnd
                                 , 'tour_package_pdf' => ($id_max + 1) . '-' . $pdf
+                                , 'tour_package_remark' => $remark
                                 , 'is_quick_tour' => $quick_tour
                                 , 'created_by' => 'admin'
                                 , 'created_at' => $date
@@ -79,7 +80,7 @@ class Tour_Package extends Model {
     }
 
     public function updateTourPackage($tour_package_id, $tour_package_code, $tour_country, $conditions_id, $tour_category, $tour_name
-    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price) {
+    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price, $remark) {
         try {
             $date = \Carbon\Carbon::now();
             if ($this->IsNullOrEmptyString($tourlist_picture) && !$this->IsNullOrEmptyString($pdf)) {
@@ -99,6 +100,7 @@ class Tour_Package extends Model {
                                     , 'tour_package_period_start' => $dateStart
                                     , 'tour_package_period_end' => $dateEnd
                                     , 'tour_package_pdf' => $tour_package_id . '-' . $pdf
+                                    , 'tour_package_remark' => $remark
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );
@@ -119,6 +121,7 @@ class Tour_Package extends Model {
                                     , 'tour_package_special_price' => $special_price
                                     , 'tour_package_period_start' => $dateStart
                                     , 'tour_package_period_end' => $dateEnd
+                                    , 'tour_package_remark' => $remark
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );
@@ -141,6 +144,7 @@ class Tour_Package extends Model {
                                     , 'tour_package_special_price' => $special_price
                                     , 'tour_package_period_start' => $dateStart
                                     , 'tour_package_period_end' => $dateEnd
+                                    , 'tour_package_remark' => $remark
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );
@@ -161,6 +165,7 @@ class Tour_Package extends Model {
                                     , 'tour_package_period_start' => $dateStart
                                     , 'tour_package_period_end' => $dateEnd
                                     , 'tour_package_pdf' => $tour_package_id . '-' . $pdf
+                                    , 'tour_package_remark' => $remark
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );

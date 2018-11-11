@@ -715,6 +715,7 @@ class AdminController extends Controller {
                 $tourlist_pdf = $_FILES['pdf_file']['name'];
                 $main_price = str_replace(",", "", $_POST['main_price']);
                 $main_special_price = str_replace(",", "", $_POST['main_special_price']);
+                $remark = $_POST['remark'];
 
                 $holiday_select = null;
                 if (isset($_POST['holiday_select'])) {
@@ -763,7 +764,7 @@ class AdminController extends Controller {
 
                 $id = $tourPackageModel->insertTourPackage($tour_package_code, $tour_country, $conditions_id, $tour_category
                         , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
-                        , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $quick_tour);
+                        , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $quick_tour, $remark);
 
                 if ($id != null && $id != 0) {
                     $tour_period_start = $_POST['period_start'];
@@ -975,6 +976,7 @@ class AdminController extends Controller {
                     $tourlist_pdf = $_FILES['pdf_file']['name'];
                     $main_price = $_POST['main_price'];
                     $main_special_price = $_POST['main_special_price'];
+                    $remark = $_POST['remark'];
 
                     $holiday_select = null;
                     if (isset($_POST['holiday_select'])) {
@@ -1018,7 +1020,7 @@ class AdminController extends Controller {
                     $tourPeriodModel = new Tour_Period();
                     $tourPackageModel->updateTourPackage($tour_package_id, $tour_package_code, $tour_country, $conditions_id, $tour_category
                             , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
-                            , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price);
+                            , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $remark);
 
                     if ($tour_period_id != null && $tour_period_id != 0) {
                         $arr_tour_period_id = explode(",", $tour_period_id);
