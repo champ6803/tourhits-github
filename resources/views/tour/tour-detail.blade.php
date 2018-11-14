@@ -204,6 +204,14 @@
         .product-detail{
             padding-top: 30px; 
         }
+        
+        .product-detail__info .product-address p{
+            font-size: 13px;
+        }
+        .product-detail__info .trips .warp-text p{
+           font-size: 14px;
+           padding: 15px 14px 10px 14px;
+        }
     }
 
     /* Flexible iFrame */
