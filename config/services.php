@@ -39,5 +39,4 @@ return [
         'client_secret' => 'ca9be52843f3b4b81fbf1de4dde908be',
         'redirect' => 'http://www.tourhitsthai.com/register',
     ],
-
 ];
