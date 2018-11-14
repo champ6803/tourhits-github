@@ -355,6 +355,9 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
 <section class="product-detail">
     <div class="container">
+        <div class="row">
+
+        </div>
         <div class="row">         
             <div class="right facebook">
                 <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
@@ -1899,6 +1902,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
     var child_nb_qty = 0;
 </script>
 <script type="text/javascript" src="{{ asset('js/tour/tour-detail.js') }}"></script>
+
 @endsection
 
 <!--กดแล้วถ่าง                        -->
