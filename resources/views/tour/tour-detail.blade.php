@@ -105,17 +105,18 @@
 
     .product-detail .right{
         float: right;
-        margin-top: -24px;
     }
 
     .product-detail .download-pdf p a{
         display: inline-block;
         padding-right: 17px;
         color: #fff;
-        font-size: 18px;    
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 14px;
+        font-weight: bold;   
         border: 1px solid #c33132;
         background-color: #c33132;
-        padding: 3px 14px 3px 14px;
+        padding: 0 14px;
         border-radius: 40px; 
         line-height: 36px;
         margin-top: 0.5rem;
@@ -139,8 +140,8 @@
         font-size: 18px;    
         border: 1px solid #3b5998;
         background-color: #3b5998;
-        padding: 3px 14px 3px 14px;
-        border-radius: 40px; 
+        padding: 0 14px;
+        border-radius: 50%; 
         line-height: 36px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
@@ -227,7 +228,44 @@
         height:100%;
         /*            max-height:800px;*/
         padding-bottom:10px;
-    }   
+    }
+    
+        #owl-demo .tag-item{
+        display: block;
+        background: #d7d7d7;
+        width: auto;
+        margin-right: 10px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        text-align: center;
+        margin: 10px;
+        border: 1px solid #d7d7d7;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+        /*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);*/
+    }
+
+    #owl-demo .tag-item:hover{
+        border-color: #34495e;
+        background-color: #34495e;
+        opacity: 0.8;
+
+    }
+
+    #owl-demo .tag-item:hover a{
+        color : #Fff; 
+    }
+
+
+    #owl-demo .tag-item a{
+        color : #363636;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 5px 10px;
+        line-height: 2;   
+    }
 
 </style>
 <style>
@@ -355,11 +393,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
 <section class="product-detail">
     <div class="container">
-<<<<<<< HEAD
-        <div class="row">
 
-        </div>
-=======
         <div class="row">   
             <div class="col-md-12 tour-local-wrapper">
 
@@ -372,13 +406,13 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                 <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
             </div>    
         </div>  
->>>>>>> ba0472d466f42803780a024bbb9403726c67480e
+
         <div class="row">         
             <div class="right facebook">
                 <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
             </div>
             <div class="right download-pdf">
-                <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><img src="{{ asset('/images/icon/pdf_2.png')}}">&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
+                <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><img src="{{ asset('/images/icon/pdf_2.png')}}" style="height: 20px;">&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
             </div>
         </div>
         <div class="row">
