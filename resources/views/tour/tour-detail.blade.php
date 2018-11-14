@@ -6,7 +6,9 @@
         counter-reset: count;
     }
 
-    .product-detail{background-color: #F7F7F7;}
+    .product-detail{
+        background-color: #F7F7F7;
+    }
 
     .trip-schedule-accordion .days{    
         counter-increment: count;
@@ -266,7 +268,7 @@
         padding: 5px 10px;
         line-height: 2;   
     }
-
+    
 </style>
 <style>
     iframe{
