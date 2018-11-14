@@ -2612,7 +2612,7 @@ span.dropcap {
 .breadcrumb ul li a {
     position: relative;
     display: block;
-    color: #666;
+    color: black;
     margin-right: 32px;
     font-size: 15px;
     
@@ -6671,7 +6671,7 @@ body.single-post .blog-page__content > .post .post-content {
 /* 12.   Productdetail
 --------------------------------------------------------------------------------*/
 .product-detail {
-    padding-top: 30px;
+/*    padding-top: 30px;*/
     padding-bottom:20px;
 }
 

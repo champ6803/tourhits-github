@@ -6,7 +6,10 @@
         counter-reset: count;
     }
 
-    .product-detail{background-color: #F7F7F7;}
+    .product-detail{
+        background-color: #F7F7F7;
+
+    }
 
     .trip-schedule-accordion .days{    
         counter-increment: count;
@@ -105,19 +108,20 @@
 
     .product-detail .right{
         float: right;
-        margin-top: -24px;
     }
 
     .product-detail .download-pdf p a{
         display: inline-block;
         padding-right: 17px;
         color: #fff;
-        font-size: 18px;    
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 11px;
+        font-weight: bold;   
         border: 1px solid #c33132;
         background-color: #c33132;
-        padding: 3px 14px 3px 14px;
+        padding: 0 14px;
         border-radius: 40px; 
-        line-height: 36px;
+        line-height: 27px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.1); 
@@ -136,12 +140,12 @@
         display: inline-block;
         padding-right: 17px;
         color: #fff;
-        font-size: 18px;    
+        font-size: 11px;    
         border: 1px solid #3b5998;
         background-color: #3b5998;
-        padding: 3px 14px 3px 14px;
-        border-radius: 40px; 
-        line-height: 36px;
+        padding: 0 11px;
+        border-radius: 50%; 
+        line-height: 27px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         -webkit-box-shadow:  0 0px 5px 0 rgba(0,0,0,.1); 
@@ -174,8 +178,7 @@
         }
     }
 
-    /*
-    */    @media (max-width: 425px) {
+   @media (max-width: 425px) {
         .product-detail__info .product-title h2{font-size: 20px;}
         .Top3-detail .ex .heading span{font-size: 20px;}
 
@@ -196,6 +199,18 @@
 
         .flexible-container {
             padding-bottom:75%!important;
+        }
+        
+        .product-detail{
+            padding-top: 30px; 
+        }
+        
+        .product-detail__info .product-address p{
+            font-size: 13px;
+        }
+        .product-detail__info .trips .warp-text p{
+           font-size: 14px;
+           padding: 15px 14px 10px 14px;
         }
     }
 
@@ -227,8 +242,45 @@
         height:100%;
         /*            max-height:800px;*/
         padding-bottom:10px;
-    }   
+    }
+    
+        #owl-demo .tag-item{
+        display: block;
+        background: #d7d7d7;
+        width: auto;
+        margin-right: 10px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        text-align: center;
+        margin: 10px;
+        border: 1px solid #d7d7d7;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+        /*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);*/
+    }
 
+    #owl-demo .tag-item:hover{
+        border-color: #34495e;
+        background-color: #34495e;
+        opacity: 0.8;
+
+    }
+
+    #owl-demo .tag-item:hover a{
+        color : #Fff; 
+    }
+
+
+    #owl-demo .tag-item a{
+        color : #363636;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 5px 10px;
+        line-height: 2;   
+    }
+    
 </style>
 <style>
     iframe{
@@ -355,6 +407,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
 <section class="product-detail">
     <div class="container">
+
         <div class="row">   
             <div class="col-md-12 tour-local-wrapper">
 
@@ -365,14 +418,15 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                 </div>
                 <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
                 <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
-            </div>    
+            </div>
         </div>  
-        <div class="row">         
+
+        <div class="row visible-xs">         
             <div class="right facebook">
                 <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
             </div>
             <div class="right download-pdf">
-                <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><img src="{{ asset('/images/icon/pdf_2.png')}}">&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
+                <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><img src="{{ asset('/images/icon/pdf_2.png')}}" style="height: 20px;">&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
             </div>
         </div>
         <div class="row">
@@ -381,7 +435,16 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     <div class="product-tag-id">
                         <img src="{{ asset('/images/icon/barcode.png')}}">
                         <span>รหัสทัวร์ | TH</span><span id='tour_code'><img src="{{ asset('/images/icon/beating.gif')}}"></span>
-                    </div>                 
+                        
+                        <div class="right facebook hidden-xs">
+                            <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
+                        </div>
+                        <div class="right download-pdf hidden-xs">
+                            <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><img src="{{ asset('/images/icon/pdf_2.png')}}" style="height: 20px;">&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
+                        </div>
+                        
+                    </div>
+                                       
                     <div class="product-title">
                         <h2>{{ $tourPackage->tour_package_name }}</h2>
                     </div>
@@ -1959,6 +2022,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 </script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="{{ asset('js/tour/tour-detail.js') }}"></script>
+
 @endsection
 
 <!--กดแล้วถ่าง                        -->
