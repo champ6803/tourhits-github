@@ -8,6 +8,7 @@
 
     .product-detail{
         background-color: #F7F7F7;
+
     }
 
     .trip-schedule-accordion .days{    
@@ -177,8 +178,7 @@
         }
     }
 
-    /*
-    */    @media (max-width: 425px) {
+   @media (max-width: 425px) {
         .product-detail__info .product-title h2{font-size: 20px;}
         .Top3-detail .ex .heading span{font-size: 20px;}
 
@@ -199,6 +199,10 @@
 
         .flexible-container {
             padding-bottom:75%!important;
+        }
+        
+        .product-detail{
+            padding-top: 30px; 
         }
     }
 
