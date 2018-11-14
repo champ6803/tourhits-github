@@ -355,9 +355,24 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
 <section class="product-detail">
     <div class="container">
+<<<<<<< HEAD
         <div class="row">
 
         </div>
+=======
+        <div class="row">   
+            <div class="col-md-12 tour-local-wrapper">
+
+                <div id="owl-demo" class="tag-container owl-carousel owl-theme">
+                    @foreach ($tagList as $tag)
+                    <div class="tag-item"><a href="{{url('/tour/'.$tag->tag_url)}}">{{$tag->t_name}}</a></div>
+                    @endforeach
+                </div>
+                <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
+                <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
+            </div>    
+        </div>  
+>>>>>>> ba0472d466f42803780a024bbb9403726c67480e
         <div class="row">         
             <div class="right facebook">
                 <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
@@ -398,44 +413,44 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                             </div>
                                         </div>-->
                     <!--  กิน เที่ยว ช๊อป-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="Top3-detail">
-                                <div class="col-md-4">
-                                    <div class="travel ex">
-                                        <div class="heading"><img src="{{ asset('/images/icon/thirteen.png')}}"><span>เที่ยว</span></div>
-                                        <div class="detail">
-                                            <p>ใกล้จะถึงช่วงเทศกาลปีใหม่แล้ว</p>
-                                            <p>อีกหนึ่งเทศกาลแห่งวันหยุดยาวที่เหมาะแก่การพักผ่อนรับลมหนาวสุดฟิน</p>
-<!--                                            <p>วัดอาซากุสะ</p>
-                                            <p>โอชิโนะ ฮัคไค</p>
-                                            <p>ฟูจิออนเซ็น</p>
-                                            <p>ภูเขาไฟฟูจิ</p>
-                                            <p>วัดนาริตะ</p>-->
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="eat ex">
-                                        <div class="heading"><img src="{{ asset('/images/icon/sausages.png')}}"><span>กิน</span></div>
-                                        <div class="detail">
-                                            <p>ชวนเช็คอินร้านอาหารสุดฟิน</p>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="shopping ex">
-                                        <div class="heading"><img src="{{ asset('/images/icon/shopping-bag.png')}}"><span>ช้อป</span></div>
-                                        <div class="detail">
-                                            <p>ช้อปได้ทั่วโลกในราคานักท่องเที่ยว</p>
-                                            <p>สิ้นค้า Outlet มากมาย</p>
-                                        </div>
-                                    </div> 
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                    <!--                    <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="Top3-detail">
+                                                    <div class="col-md-4">
+                                                        <div class="travel ex">
+                                                            <div class="heading"><img src="{{ asset('/images/icon/thirteen.png')}}"><span>เที่ยว</span></div>
+                                                            <div class="detail">
+                                                                <p>ใกล้จะถึงช่วงเทศกาลปีใหม่แล้ว</p>
+                                                                <p>อีกหนึ่งเทศกาลแห่งวันหยุดยาวที่เหมาะแก่การพักผ่อนรับลมหนาวสุดฟิน</p>
+                                                                <p>วัดอาซากุสะ</p>
+                                                                <p>โอชิโนะ ฮัคไค</p>
+                                                                <p>ฟูจิออนเซ็น</p>
+                                                                <p>ภูเขาไฟฟูจิ</p>
+                                                                <p>วัดนาริตะ</p>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="eat ex">
+                                                            <div class="heading"><img src="{{ asset('/images/icon/sausages.png')}}"><span>กิน</span></div>
+                                                            <div class="detail">
+                                                                <p>ชวนเช็คอินร้านอาหารสุดฟิน</p>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="shopping ex">
+                                                            <div class="heading"><img src="{{ asset('/images/icon/shopping-bag.png')}}"><span>ช้อป</span></div>
+                                                            <div class="detail">
+                                                                <p>ช้อปได้ทั่วโลกในราคานักท่องเที่ยว</p>
+                                                                <p>สิ้นค้า Outlet มากมาย</p>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+                                        </div>-->
                     <!--  ทริป/ปฎิทิน-->
                     <div class="row">
                         <div class="col-md-5 col-sm-6">                           
@@ -984,19 +999,23 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                                         @endforeach-->
                             @foreach ($tourPackageDayList as $tourPackageDay)
                             @foreach ($tourAttractionDayList as $tourAttractionDay)
+                            @if($tourAttractionDay->attraction_picture != null)
                             <div class="item">
                                 <img class="img-item" src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                             </div>
+                            @endif
                             @endforeach
                             @endforeach
                         </div>
-                        <div class="hide product-slider-thumb-row">
-                            <div class="product-slider-thumb">
+                        <div class="product-slider-thumb-row">
+                            <div id="product_item" class="product-slider-thumb">
                                 @foreach ($tourPackageDayList as $tourPackageDay)
                                 @foreach ($tourAttractionDayList as $tourAttractionDay)
+                                @if($tourAttractionDay->attraction_picture != null)
                                 <div class="item">
                                     <img class="img-item" src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                                 </div>
+                                @endif
                                 @endforeach
                                 @endforeach
                             </div>
@@ -1051,10 +1070,12 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <br>
                                     @foreach ($tourAttractionDayList as $tourAttractionDay)
                                     @if($tourAttractionDay->tour_package_day_id == $tourPackageDay->tour_package_day_id)
+                                    @if($tourAttractionDay->attraction_picture != null)
                                     <p style="font-size:24px;"><i class="fa fa-image"></i>&nbsp;{{$tourAttractionDay->attraction_name}}</p>
                                     <img src="{{ asset('images/attraction/'.$tourAttractionDay->attraction_picture)}}">
                                     <br>
                                     <br>
+                                    @endif
                                     @endif
                                     @endforeach
                                 </div>
@@ -1511,7 +1532,14 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </div>-->
 
                 <!--ตารางราคา                -->
-                <div class="period-table-bottom">
+                <div class="period-table-bottom" style="padding-top: 25px;">
+                    @if($tourPackage->tour_package_remark != null && $tourPackage->tour_package_remark != "")
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p style="font-family: 'Bai Jamjuree', sans-serif;font-size: 18px; font-weight: bold; "><i class="fa fa-info-circle"></i> {{ $tourPackage->tour_package_remark }}</p>       
+                        </div>
+                    </div>
+                    @endif
                     <h3 style="font-size: 24px;"><img src="{{ asset('/images/icon/event.png')}}"> ข้อมูลราคา</h3>
                     <div class="tabledate-form-to periods-table-detail">
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
@@ -1886,6 +1914,40 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
 @section('footer_scripts')
 <script type="text/javascript">
+    $(document).ready(function () {
+
+        var owl = $("#owl-demo");
+
+        owl.owlCarousel({
+            items: 6, //5 items above 1000px browser width
+            autoWidth: true,
+            loop: true,
+            autoPlay: 6000,
+            stopOnHover: true,
+            pagination: false,
+            margin: 5,
+            transitionStyle: "fade",
+            itemsDesktop: [1199, 4],
+            itemsTablet: [768, 3],
+            itemsMobile: [479, 2]
+
+        });
+
+        // Custom Navigation Events
+        $(".next").click(function () {
+            owl.trigger('owl.next');
+        })
+        $(".prev").click(function () {
+            owl.trigger('owl.prev');
+        })
+        $(".play").click(function () {
+            owl.trigger('owl.play', 1000); //owl.play event accept autoPlay speed as second parameter
+        })
+        $(".stop").click(function () {
+            owl.trigger('owl.stop');
+        })
+    });
+    
     var tour_package_id = <?php echo json_encode($tourPackage->tour_package_id); ?>;
     var tour_period = 0;
     var sum_appraise_adult = 0;
@@ -1901,6 +1963,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
     var child_one_qty = 0;
     var child_nb_qty = 0;
 </script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="{{ asset('js/tour/tour-detail.js') }}"></script>
 
 @endsection

@@ -7,10 +7,10 @@ $(function () {
     var as2 = as[2].split(' ');
     var date = as2[0] + " " + setCTMonthString(as[1]) + " - " + ae2[0] + " " + setCTMonthString(ae[1]) + " " + ae[0];
     $('#period_month').html(date);
-    while (tour_code.length != 6)
-    {
-        tour_code = '0' + tour_code;
-    }
+//    while (tour_code.length != 6)
+//    {
+//        tour_code = '0' + tour_code;
+//    }
     $('#tour_code').html(tour_code);
 
     $('#tour_period').change(function () {

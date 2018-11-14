@@ -492,10 +492,10 @@ session_start();
                                     <a href="{{ url('tourhit?category_id=100002') }}"><i class="fa fa-star"></i>&nbsp;ทัวร์ฮิต</a>
                                     <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
-                                <li class="menu-item-has-children">
+<!--                                <li class="menu-item-has-children">
                                     <a><i class="fa fa-map-marker"></i>&nbsp;สถานที่ยอดฮิต</a>
                                     <hr id="hothits" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
-                                </li>
+                                </li>-->
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('about') }}">เกี่ยวกับเรา</a>
                                     <hr id="about" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">

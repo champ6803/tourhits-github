@@ -298,11 +298,21 @@
                                                 <div class="col-12">
                                                     <button id="btn_period_add" type="button" class="btn btn-info"> 
                                                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
-                                                    <button id="btn_period_delete" type="button" class="btn btn-info"> 
+                                                    <button id="btn_period_delete" type="button" class="btn btn-danger"> 
                                                         <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</button>
                                                 </div>
                                             </div>
                                             <br>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group row">
+                                                        <label for="remark" class="col-sm-2 control-label">Remark</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="remark" name="remark">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="row">
                                                 <div class="col-12">
                                                     <table class="table table-bordered" id="period_table">

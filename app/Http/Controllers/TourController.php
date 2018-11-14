@@ -13,6 +13,7 @@ use App\Models\Tour_Package_Day;
 use App\Models\Orders;
 use App\Models\Tour_Attraction_Day;
 use Illuminate\Support\Facades\Response;
+use App\Models\Tag;
 
 /* * x
  * Description of TourController
@@ -21,10 +22,10 @@ use Illuminate\Support\Facades\Response;
  */
 
 class TourController extends Controller {
-
     public function tour_detail($tour_country_name, $tour_package_id, $tour_package_name) {
         $tourModel = new Tour_Package();
         $tourDayModel = new Tour_Package_Day();
+        $tagList = $tourModel->getFilterTag($tour_country_name);
         $tourPackage = $tourModel->getTourDetail($tour_package_id);
         $tourPackageList = $tourModel->getTourDetailList($tour_package_id);
         $tourPackageDayList = $tourDayModel->getTourPackageDay($tour_package_id);
@@ -43,7 +44,7 @@ class TourController extends Controller {
             $tourPackageObj->tour_period_end = $newEndDate;
         }
         $page_title = $tourPackage->tour_package_name;
-        return view('tour.tour-detail', compact('tourPackage', 'tourPackageList', 'tourPackageImagesList', 'tourPackageDayList', 'page_title', 'tourAttractionDayList'));
+        return view('tour.tour-detail', compact('tourPackage', 'tourPackageList', 'tourPackageImagesList', 'tourPackageDayList', 'page_title', 'tourAttractionDayList', 'tagList'));
     }
 
     public function tour_confirm($tour_package_id, $tour_period_id) {
