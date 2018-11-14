@@ -410,10 +410,10 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                 </div>
                 <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
                 <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
-            </div>    
+            </div>
         </div>  
 
-        <div class="row">         
+        <div class="row visible-xs">         
             <div class="right facebook">
                 <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
             </div>
@@ -427,7 +427,16 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     <div class="product-tag-id">
                         <img src="{{ asset('/images/icon/barcode.png')}}">
                         <span>รหัสทัวร์ | TH</span><span id='tour_code'><img src="{{ asset('/images/icon/beating.gif')}}"></span>
-                    </div>                 
+                        
+                        <div class="right facebook hidden-xs">
+                            <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
+                        </div>
+                        <div class="right download-pdf hidden-xs">
+                            <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><img src="{{ asset('/images/icon/pdf_2.png')}}" style="height: 20px;">&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
+                        </div>
+                        
+                    </div>
+                                       
                     <div class="product-title">
                         <h2>{{ $tourPackage->tour_package_name }}</h2>
                     </div>
