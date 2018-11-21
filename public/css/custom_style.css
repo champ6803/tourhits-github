@@ -5429,8 +5429,9 @@ Custom BS3
 }
 
 .product-tabs__content p{
-    /*        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
-    font-size: 19px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .detail-sidebar .booking-info h3 i{
@@ -5679,8 +5680,17 @@ Custom BS3
     text-align: center;
     font-size: 14px;
     display: block;
-    color: #8d8d8d;
+    color: #262626;
+    font-weight: bold;
 }
+
+/*.navbar-bot .box-line span{
+    color: #04c304;
+}
+
+.navbar-bot .box-fb span{
+    color: #488cff;
+}*/
 
 .navbar-bot .bx{
     width: calc(100%/3);
@@ -5699,7 +5709,7 @@ Custom BS3
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25px;
+    width: 27px;
     
 }
 
