@@ -323,7 +323,7 @@
                                                 <div class="col-12">
                                                     <button id="btn_period_add" type="button" class="btn btn-info"> 
                                                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
-                                                    <button id="btn_period_delete" type="button" class="btn btn-info"> 
+                                                    <button id="btn_period_delete" type="button" class="btn btn-danger"> 
                                                         <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</button>
                                                 </div>
                                             </div>
@@ -360,6 +360,9 @@
                                                                 </th>
                                                                 <th align='center'>
                                                                     Special Price
+                                                                </th>
+                                                                <th align='center'>
+                                                                    Action
                                                                 </th>
                                                             </tr>
                                                         </thead>
@@ -606,7 +609,7 @@
                                             <div class="col-lg-12">
                                                 <button type="submit" class="btn btn-info" id="saveAll"> 
                                                     <i class="fa fa-floppy-o"></i>&nbsp;Update</button>
-                                                <button type="button" id="btn_delete" class="btn btn-info"> 
+                                                <button type="button" id="btn_delete" class="btn btn-danger"> 
                                                     <i class="fa fa-trash-o"></i>&nbsp;Delete</button>
                                             </div>
                                         </div>
@@ -644,6 +647,45 @@
             <div class="modal-footer" style="text-align: center">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal" id="deleteClose">ยกเลิก</button>
                 <button type="button" class="btn btn-primary" onclick="deleteTourPackage()">ตกลง</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">แก้ไขข้อมูลทัวร์ประเทศ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label id="label_update_no" for="recipient-name" class="col-form-label"></label>
+                    <input type="hidden" id="hidden_update_no" name="hidden_update_no">
+                    <br>
+                    <label for="recipient-name" class="col-form-label">Period Start:</label>
+                    <input type="text" class="form-control" id="update_period_start" name="update_period_start" maxlength="100" required="required">
+                    <br> 
+                    <label for="recipient-name" class="col-form-label">Period End:</label>
+                    <input type="text" class="form-control" id="update_period_end" name="update_period_end" maxlength="100" required="required">
+                    <br> 
+                    <label for="recipient-name" class="col-form-label">Adult Price:</label>
+                    <input type="text" class="form-control" id="update_adult_price" name="update_adult_price" maxlength="100" required="required">
+                    <br> 
+                    <label for="recipient-name" class="col-form-label">Child Price:</label>
+                    <input type="text" class="form-control" id="update_child_price" name="update_child_price">
+                    <br> 
+                    <label for="recipient-name" class="col-form-label">Special Price:</label>
+                    <input type="text" class="form-control" id="update_special_price" name="update_special_price">
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: right ; width: 100%">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+                <button type="button" id="btn_edit_period" name="button" class="btn btn-primary">แก้ไข</button>
             </div>
         </div>
     </div>
