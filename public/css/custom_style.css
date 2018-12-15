@@ -5498,6 +5498,7 @@ Custom BS3
 }
 .call-to-book span img,.book-by-line span img{
     padding-right: 1px;
+    height: 32px;
 }
 
 
@@ -6340,7 +6341,7 @@ https://flickity.metafizzy.co
 }
 
 
-.product-detail__info .trips i{color: #ea6a78;}
+.product-detail__info .trips i{color: #c33132;}
 
 .product-detail__info .product-tag-id span{
     font-family: 'Bai Jamjuree', sans-serif;

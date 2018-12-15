@@ -143,7 +143,7 @@
         font-size: 11px;    
         border: 1px solid #3b5998;
         background-color: #3b5998;
-        padding: 0 11px;
+        padding: 2px 13px;
         border-radius: 50%; 
         line-height: 27px;
         margin-top: 0.5rem;
@@ -165,8 +165,7 @@
         font-size: 14px;
         font-weight: bold;
     }
-
-
+    
     @media (min-width: 992px) and (max-width: 1400px) {
         .product-detail__info .trips .item-width{
             width: 100%;
@@ -176,6 +175,9 @@
             width: 100%;
             padding-left: 15px;
         }
+        
+        .call-to-book, .book-by-line{width: 100%;}
+        .booking-info label{font-size:13px;}
     }
 
    @media (max-width: 425px) {
@@ -212,6 +214,10 @@
            font-size: 14px;
            padding: 15px 14px 10px 14px;
         }
+        
+        .call-to-book a, .book-by-line a{border: none;}
+        .call-to-book {border-right: 1px solid;}
+        .book-by-line span{font-size:14px!important;}
     }
 
     /* Flexible iFrame */
@@ -426,7 +432,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                 <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
             </div>
             <div class="right download-pdf">
-                <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><img src="{{ asset('/images/icon/pdf_2.png')}}" style="height: 20px;">&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
+                <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="far fa-file-pdf" style="font-size:17px; line-height: 27px;"></i>&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
             </div>
         </div>
         <div class="row">
@@ -440,7 +446,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                             <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
                         </div>
                         <div class="right download-pdf hidden-xs">
-                            <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><img src="{{ asset('/images/icon/pdf_2.png')}}" style="height: 20px;">&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
+                            <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="far fa-file-pdf" style="font-size:20px; line-height: 27px;"></i>&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
                         </div>
                         
                     </div>
@@ -1597,7 +1603,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         </div>
                     </div>
                     @endif
-                    <h3 style="font-size: 24px;"><img src="{{ asset('/images/icon/event.png')}}"> ข้อมูลราคา</h3>
+                    <h3 style="font-size: 24px;"><i class="fas fa-calculator"></i> ข้อมูลราคา</h3>
                     <div class="tabledate-form-to periods-table-detail">
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                             <thead class="thead-light">
@@ -1805,7 +1811,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <div class="form-submit">
                             <div class="add-to-cart">
                                 <button onclick='redirect()'>
-                                    <i class="far fa-check-circle" style="padding-right: 10px;"></i>ส่งใบจอง
+                                    <i class="far fa-check-circle" style="padding-right: 10px;"></i>จอง
                                 </button>
                             </div>
                         </div>
@@ -1815,7 +1821,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <div class="call-or-line">- จองผ่านช่องทางอื่น -</div>
                         <div class="call-to-book">
                             <a href="tel:02-379-1249" type="button" class="btn btn-call-book">
-                                <span><img alt="" src="{{ asset('/images/icon/telephone.png')}}" title=""> โทรจอง</span>                       
+                                <span><i class="fas fa-phone"></i> โทรจอง</span>                       
                             </a>
                             <!--                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal">
                                                             <i class="awe-icon awe-icon-phone"></i>
@@ -1887,7 +1893,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <!-- Trigger the modal with a button -->
                         <div class="book-by-line">
                             <a target="_blank" href="http://line.me/ti/p/%40tourhits" type="button" class="btn btn-call-book">    
-                                <span><img alt="" src="{{ asset('/images/icon/line.png')}}" title=""> จองผ่านไลน์</span>
+                                <span><img alt="" src="{{ asset('/images/icon/logo-line.png')}}" title=""> จองผ่านไลน์</span>
                             </a>
                             <!--                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal2">    
                                                             <i class="fab fa-line"></i>                            

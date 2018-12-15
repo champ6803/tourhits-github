@@ -713,7 +713,7 @@ session_start();
                 <div class="box-line bx">
                     <a target="_blank" rel="noopener noreferrer" href="http://line.me/ti/p/%40tourhits">
                         <div class="line-img-box img-bx">
-                            <img alt="" src="{{ asset('/images/icon/line.png')}}" title="">
+                            <img alt="" src="{{ asset('/images/icon/logo-line.png')}}" title="">
                         </div>    
                             <span>ไลน์หาเรา</span>
                          
