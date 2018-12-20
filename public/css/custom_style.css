@@ -6522,7 +6522,7 @@ https://flickity.metafizzy.co
             overflow: hidden;
     }
     
-    .article-index-cover .index-cover-img  .index-cover-text h1, .article-content-cover .content-cover-img  .content-cover-text h1 {
+    .article-index-cover .index-cover-img  .index-cover-text h1{
             z-index: 999;
             font-weight: 600;
             position: absolute;
@@ -6533,7 +6533,7 @@ https://flickity.metafizzy.co
             padding-top: 100px;
             font-size: 40px;
     }
-    .article-index-cover .index-cover-img  .index-cover-text h2, .article-content-cover .content-cover-img  .content-cover-text h2{
+    .article-index-cover .index-cover-img  .index-cover-text h2{
             font-family: 'Bai Jamjuree', sans-serif;
             padding-top: 200px;
             text-align: center;
@@ -6546,6 +6546,31 @@ https://flickity.metafizzy.co
             font-size: 22px;
     }
     
+    .article-content-cover .content-cover-img  .content-cover-text h1{
+            z-index: 999;
+            font-weight: 600;
+            position: absolute;
+            width: 100%;
+            letter-spacing: 0.5px;
+            color: #fff;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 40px;
+    }
+    
+    .article-content-cover .content-cover-img  .content-cover-text h2{
+            font-family: 'Bai Jamjuree', sans-serif;
+            padding-top: 150px;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            padding-left: 5%;
+            padding-right: 5%;
+            width: 100%;
+            z-index: 997;
+            font-size: 22px;
+    }
+     
     .article-index-content .article-card{
         margin-top: -20px;
         padding: 0 10px 70px 10px;

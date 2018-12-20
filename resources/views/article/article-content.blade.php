@@ -10,7 +10,7 @@
             background-size: cover;
             background-position: center;
             width: 100%;
-            height: 350px;
+            height: 250px;
             background-color: #000;
             overflow: hidden;
     }

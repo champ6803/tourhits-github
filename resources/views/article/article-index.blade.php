@@ -4,8 +4,7 @@
 
 <style>
     @media screen and (min-width: 320px) and (max-width: 990px) {
-/*        #fix-col {clear: both;}*/
-        
+/*        #fix-col {clear: both;}*/        
         .article-index-content .container .col-sm-6:nth-child(3){
             clear: both;
         }
@@ -108,7 +107,7 @@
                     <div class="article-card">
                         <div class="article-card-cover">
                             <a href="" title="">
-                                <img src="{{asset('images/article-img/japan-0.jpg')}}" class="" alt="" scale="0">
+                                <img src="{{asset('images/article-img/paris.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
                         <div class="article-card-content">
@@ -126,7 +125,7 @@
                     <div class="article-card">
                         <div class="article-card-cover">
                             <a href="" title="">
-                                <img src="{{asset('images/article-img/japan-1.jpg')}}" class="" alt="" scale="0">
+                                <img src="{{asset('images/article-img/china.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
                         <div class="article-card-content">
@@ -144,7 +143,7 @@
                     <div class="article-card">
                         <div class="article-card-cover">
                             <a href="" title="">
-                                <img src="{{asset('images/article-img/japan.jpg')}}" class="" alt="" scale="0">
+                                <img src="{{asset('images/article-img/soul.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
                         <div class="article-card-content">
@@ -163,7 +162,7 @@
                     <div class="article-card">
                         <div class="article-card-cover">
                             <a href="" title="">
-                                <img src="{{asset('images/article-img/switzerland.jpg')}}" class="" alt="" scale="0">
+                                <img src="{{asset('images/article-img/thailand.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
                         <div class="article-card-content">
