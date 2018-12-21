@@ -3,6 +3,14 @@
 @section('main-content')
 
 <style>
+    
+    @media screen and (max-width: 990px) {
+        .article-content-bottom .article-card .article-card-content a{
+                font-size: 14px;
+            }
+        }
+  
+    
     .article-content-cover .content-cover-img{
             display: block;
             z-index: -99;
@@ -23,7 +31,9 @@
         width: 100%;
         height: 100%;
     }
+    
 
+    
     
 </style>    
 
@@ -38,6 +48,205 @@
 
 </section>
 
+<section class="article-content">
+    
+    <div class="container">
+        <div class="article-content-date">
+            <i class="far fa-clock"></i>27 ตุลาคม 2562
+        </div>
+        
+        <div class="article-content-head">
+            <p>4 เส้นทางปีนภูเขาไฟฟูจิ วิวดี ชีวิตนี้ต้องไปให้ได้ซักครั้ง</p>
+        </div>
+        
+        <div class="article-content-text">
+            <p>4 เส้นทางปีนภูเขาไฟฟูจิ ที่มีดีต่างกัน ภูเขาไฟฟูจิ สูง 3776 เมตรจากระดับน้ำทะเล ฟูจิคือ ภูเขาที่สูงที่สุดของประเทศญี่ปุ่น และจัดเป็นสัญญลักษณ์ของประเทศญี่ปุ่นที่จะสร้างความประทับใจต่อผู้มาเยือน และสร้างความทรงจำต่อนักท่องเที่ยวและนักปีนเขาไม่รู้ลืมตลอดชีวิตเลยทีเดียว ภูเขาแห่งนี้จะน่าสนใจยิ่งกว่าหากได้สัมผัสแบบใกล้ๆยิ่งขึ้นขึ้น มุมมองในวันที่อากาศแจ่มใสและประสบการณ์การปีนเขาในช่วงเช้าตรู่ ท่ามกลางผู้ร่วมเดินทางไกลหลายพันคน ที่มีใจรักการปีนเขาอย่างจริงจังจากทั่วโลก ก็เป็นสิ่งที่คุ้มค่ามากที่ได้มาใช้เวลาในช่วงฤดูร้อนเพื่อมาสัมผัสสัญญลักษณ์ของญี่ปุ่นอย่างเข้าถึงแบบสุดๆ
+        4 เส้นทางปีนภูเขาไฟฟูจิ เปิดให้ปีนภูเขาเมื่อไหร่ มีเส้นทางไหนบ้าง และเราควรเตรียมตัวอย่างไร ก่อนไปชมวิวสวยๆของฟูจิ ยามเช้ามืดที่สวยงาม</p>
+        </div>
+    </div>
+       
+</section>
+
+<section class="article-content-bottom article-index-content">
+    
+    <div class="container">
+        <div class="head">
+            <p>บทความอื่นๆของเรา</p>
+        </div>
+        <div class="row">
+            <div class="article-button-next next"><i class="fa fa-angle-right"></i></div>
+            <div class="article-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
+        </div>
+        
+        <div class="row">
+            
+            <div id="owl-demo-article" class="owl-carousel owl-theme">
+          
+                <div class="item">
+                    <div class="article-card">
+                        <div class="article-card-cover">
+                            <a href="" title="">
+                                <img src="{{asset('images/article-img/japan-0.jpg')}}" class="" alt="" scale="0">
+                            </a>
+                        </div>
+                        <div class="article-card-content">
+                            <a href="" title="">
+                               10 ชายหาดแนะนำซัมเมอร์นี้ที่ญี่ปุ่น ใครว่าหาดที่ญี่ปุ่นไม่สวย บทความนี้อาจเปลี่ยนความคิดคุณไปโดยสิ้นเชิง
+                            </a>
+                            <div class="article-card-date">
+                                <i class="far fa-clock"></i>31 ตุลาคม 2562
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item">
+                    <div class="article-card">
+                        <div class="article-card-cover">
+                            <a href="" title="">
+                                <img src="{{asset('images/article-img/japan-1.jpg')}}" class="" alt="" scale="0">
+                            </a>
+                        </div>
+                        <div class="article-card-content">
+                            <a href="" title="">
+                               5 เทศกาลหน้าร้อนญี่ปุ่น ที่จะทำให้คุณหลงไหลในมนต์เสน่ห์ความเป็นญี่ปุ่นแท้ๆ แบบไม่รู้ลืม
+                            </a>
+                            <div class="article-card-date">
+                                <i class="far fa-clock"></i>27 ตุลาคม 2562
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="article-card">
+                        <div class="article-card-cover">
+                            <a href="" title="">
+                                <img src="{{asset('images/article-img/japan.jpg')}}" class="" alt="" scale="0">
+                            </a>
+                        </div>
+                        <div class="article-card-content">
+                            <a href="" title="">
+                               4 เส้นทางปีนภูเขาไฟฟูจิ วิวดี ชีวิตนี้ต้องไปให้ได้ซักครั้ง
+                            </a>
+                            <div class="article-card-date">
+                                <i class="far fa-clock"></i>25 ตุลาคม 2562
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="article-card">
+                        <div class="article-card-cover">
+                            <a href="" title="">
+                                <img src="{{asset('images/article-img/switzerland.jpg')}}" class="" alt="" scale="0">
+                            </a>
+                        </div>
+                        <div class="article-card-content">
+                            <a href="" title="">
+                               15 เมืองน่าเที่ยวหน้าหนาวในสวิส เที่ยวให้มิด พิชิตยอดเขา เข้าถึงวัฒนธรรม จดจำประทับใจ!
+                            </a>
+                            <div class="article-card-date">
+                             <i class="far fa-clock"></i>24 ตุลาคม 2562
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="article-card">
+                        <div class="article-card-cover">
+                            <a href="" title="">
+                                <img src="{{asset('images/article-img/paris.jpg')}}" class="" alt="" scale="0">
+                            </a>
+                        </div>
+                        <div class="article-card-content">
+                            <a href="" title="">
+                               10 ชายหาดแนะนำซัมเมอร์นี้ที่ญี่ปุ่น ใครว่าหาดที่ญี่ปุ่นไม่สวย บทความนี้อาจเปลี่ยนความคิดคุณไปโดยสิ้นเชิง
+                            </a>
+                            <div class="article-card-date">
+                                <i class="far fa-clock"></i>31 ตุลาคม 2562
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="article-card">
+                        <div class="article-card-cover">
+                            <a href="" title="">
+                                <img src="{{asset('images/article-img/china.jpg')}}" class="" alt="" scale="0">
+                            </a>
+                        </div>
+                        <div class="article-card-content">
+                            <a href="" title="">
+                               5 เทศกาลหน้าร้อนญี่ปุ่น ที่จะทำให้คุณหลงไหลในมนต์เสน่ห์ความเป็นญี่ปุ่นแท้ๆ แบบไม่รู้ลืม
+                            </a>
+                            <div class="article-card-date">
+                                <i class="far fa-clock"></i>27 ตุลาคม 2562
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="article-card">
+                        <div class="article-card-cover">
+                            <a href="" title="">
+                                <img src="{{asset('images/article-img/soul.jpg')}}" class="" alt="" scale="0">
+                            </a>
+                        </div>
+                        <div class="article-card-content">
+                            <a href="" title="">
+                               4 เส้นทางปีนภูเขาไฟฟูจิ วิวดี ชีวิตนี้ต้องไปให้ได้ซักครั้ง
+                            </a>
+                            <div class="article-card-date">
+                                <i class="far fa-clock"></i>25 ตุลาคม 2562
+                            </div>
+                        </div>                           
+                    </div>
+                </div>
+                
+             </div>
+        </div>
+    </div>
+    
+</section>
+
 @stop
 @section('footer_scripts')
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var owl = $("#owl-demo-article");
+
+        owl.owlCarousel({
+            items: 4, //5 items above 1000px browser width
+           
+            
+            loop: true,
+            autoPlay: 6000,
+            stopOnHover: true,
+            pagination: false,
+            margin: 5,
+            transitionStyle: "fade",
+            itemsDesktop: [1199, 3],
+            itemsTablet: [768, 2],
+            itemsMobile: [479, 2]
+
+        });
+
+        // Custom Navigation Events
+        $(".next").click(function () {
+            owl.trigger('owl.next');
+        })
+        $(".prev").click(function () {
+            owl.trigger('owl.prev');
+        })
+        $(".play").click(function () {
+            owl.trigger('owl.play', 1000); //owl.play event accept autoPlay speed as second parameter
+        })
+        $(".stop").click(function () {
+            owl.trigger('owl.stop');
+        })
+    });
+    
+</script>
+
 @endsection

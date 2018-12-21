@@ -6573,8 +6573,7 @@ https://flickity.metafizzy.co
      
     .article-index-content .article-card{
         margin-top: -20px;
-        padding: 0 10px 70px 10px;
-        
+        padding: 0 10px 70px 10px;       
     }
     
     .article-index-content .article-card:hover .article-card-content{
@@ -6629,3 +6628,66 @@ https://flickity.metafizzy.co
        padding-right: 5px;
     }
 
+
+/*    บทความหน้าเนื้อหา*/
+
+        .article-content-bottom .article-card{
+        margin-top: 0px;
+        padding: 0 30px 30px 10px;
+    }
+    
+    
+    
+    .article-content .article-content-date{
+        text-align: center; 
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 14px;
+        color: black;
+        padding: 50px 0px 20px 0;
+    }
+    .article-content .article-content-date i{padding-right: 5px;}
+    
+    .article-content .article-content-head {
+        text-align: center;
+        font-family: 'Kanit', sans-serif;
+        font-size: 30px;
+        padding: 10px 0 10px 0;
+    }
+    
+    .article-content .article-content-text{
+        padding: 20px 0 50px 0;
+    }
+    
+    .article-content .article-content-text p{
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 16px;
+    }
+    
+    .article-content-bottom .head{
+        border-top: 1px solid;
+    }
+    
+    .article-content-bottom .head p{
+        text-align: left;
+        font-family: 'Kanit', sans-serif;
+        font-size: 20px;
+        padding: 20px 0 10px 0;
+        float: left;
+    }
+    
+    .article-content-bottom .article-button-next{ 
+        text-align: right;
+        float: right;
+        font-size: 25px;
+        width: 60px;
+        cursor: pointer;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        margin-top : 20px;
+    }
+    .article-content-bottom .article-button-prev{ 
+        text-align: right;
+        font-size: 25px;
+        cursor: pointer;
+        margin-top : 20px;
+    }
