@@ -8,7 +8,11 @@
         .article-content-bottom .article-card .article-card-content a{
                 font-size: 14px;
             }
-        }
+            
+        .article-content-bottom .article-card .article-card-cover img{
+                max-height: 105px;
+            }    
+    }
   
     
     .article-content-cover .content-cover-img{
@@ -32,9 +36,30 @@
         height: 100%;
     }
     
-
+/*    .article-social-share{
+        position: absolute;
+     width: 100%; 
+     top: 50%; 
+     transform: translateY(-50%); 
+    }*/
+    
+    .article-social-share .item-shared{
+        position: absolute;
+        right:10px;
+        top: 10px;
+        z-index: 999;
+    }
+    
+    .article-social-share .item-shared .article-line-shared{
+        float: left;
+        padding-right: 10px;
+    }
     
     
+    .article-social-share .article-line-shared img{
+        height: 28px;
+    }
+       
 </style>    
 
 <section class="article-content-cover">
@@ -46,6 +71,23 @@
             </div>
         </div>
 
+</section>
+
+<section class="article-social-share">
+    <div class="container">
+        <div class="item-shared">
+<!--            แชร์ไลน์ ต้องแก้ลิ้ง url-->
+            <div class="article-line-shared">
+                <a href="https://social-plugins.line.me/lineit/share?url=http://localhost:8000/article-content" target="_blank">
+                <img src="{{asset('images/icon/share-a.png')}}" class="" alt="">
+                </a>
+            </div>
+<!--            แชร์facebook ต้องแก้ลิ้ง url-->
+            <div class="fb-share-button" data-href="http://localhost:8000/article-content" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A8000%2Farticle-content&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"></a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="article-content">
@@ -227,7 +269,7 @@
             margin: 5,
             transitionStyle: "fade",
             itemsDesktop: [1199, 3],
-            itemsTablet: [768, 2],
+            itemsTablet: [768, 3],
             itemsMobile: [479, 2]
 
         });
@@ -248,5 +290,17 @@
     });
     
 </script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+ <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 
 @endsection
