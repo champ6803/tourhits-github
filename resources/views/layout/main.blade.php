@@ -505,7 +505,7 @@ session_start();
                                     <hr id="contact" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a>บทความ</a>
+                                    <a href="{{ url('article-index') }}">บทความ</a>
                                     <!--<a href="{{ url('blog') }}">บทความ</a>-->
                                     <hr id="blog" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>

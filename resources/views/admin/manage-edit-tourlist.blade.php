@@ -155,7 +155,7 @@
                                                         <label for="main_price" class="col-sm-2 control-label">Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="main_price" name="main_price">
+                                                            <input type="text" class="form-control" id="main_price" name="main_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -287,7 +287,7 @@
                                                         <label for="adult_price" class="col-sm-2 control-label">Adult Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="adult_price" name="adult_price">
+                                                            <input type="text" class="form-control" id="adult_price" name="adult_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -296,7 +296,7 @@
                                                         <label for="child_price" class="col-sm-2 control-label">Child Price</label>
 
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="child_price" name="child_price">
+                                                            <input type="text" class="form-control" id="child_price" name="child_price">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -314,7 +314,7 @@
                                                     <div class="form-group row">
                                                         <label for="alone_price" class="col-sm-2 control-label">Special Price</label>
                                                         <div class="col-sm-10">
-                                                            <input type="number" class="form-control" id="special_price" name="special_price">
+                                                            <input type="text" class="form-control" id="special_price" name="special_price">
                                                         </div>
                                                     </div>
                                                 </div>

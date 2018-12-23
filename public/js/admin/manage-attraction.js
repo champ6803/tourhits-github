@@ -35,7 +35,10 @@ $(function () {
         $('#updateFile').val('');
     });
     createTable();
-    $('#attractionTable').DataTable();
+    $('#attractionTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
 });
 
 function createTable() {
@@ -64,7 +67,7 @@ function createTable() {
                     }
 
                     Str = Str + '<td>' + data[row].created_by + '</td>';
-                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction(' + data[row].attraction_id + ',' + data[row].country_id + ',\'' + data[row].attraction_name+ '\',\'' + data[row].attraction_url + '\')">\n\
+                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction(' + data[row].attraction_id + ',' + data[row].country_id + ',\'' + data[row].attraction_name + '\',\'' + data[row].attraction_url + '\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
                     Str = Str + '<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeAttraction(' + data[row].attraction_id + ')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
@@ -135,7 +138,10 @@ function refresh() {
     $('#attraction_name').val('');
     $('#attractionTable').DataTable().destroy();
     createTable();
-    $('#attractionTable').DataTable();
+    $('#attractionTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
     $('#update_attraction_picture').val('');
@@ -179,7 +185,10 @@ function findAttractionByName(attractionName) {
                     rowNo++;
                 }
                 document.getElementById("attractionData").innerHTML = Str;
-                $('#attractionTable').DataTable();
+                $('#attractionTable').DataTable({
+                    "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+                    "iDisplayLength": 100
+                });
             } else {
                 alert('select fail');
             }

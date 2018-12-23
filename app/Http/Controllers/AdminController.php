@@ -1039,10 +1039,17 @@ class AdminController extends Controller {
                             $dateStart = date('Y-m-d H:i:s', strtotime($tour_period_start[$i]));
                             $tour_period_end[$i] = str_replace('/', '-', $tour_period_end[$i]);
                             $dateEnd = date('Y-m-d H:i:s', strtotime($tour_period_end[$i]));
-                            $speriod = $tourPeriodModel->updateTourPeriod($arr_tour_period_id[$i], $tour_package_id, $dateStart, $dateEnd, $tour_period_adult_price[$i]
-                                    , $tour_period_child_price[$i], $tour_period_child_nb_price
-                                    , $tour_period_alone_price, $tour_period_adult_special_price[$i]
-                                    , $tour_period_child_special_price, $tour_period_status);
+                            if ($arr_tour_period_id[$i] != 0) {
+                                $speriod = $tourPeriodModel->updateTourPeriod($arr_tour_period_id[$i], $tour_package_id, $dateStart, $dateEnd, $tour_period_adult_price[$i]
+                                        , $tour_period_child_price[$i], $tour_period_child_nb_price
+                                        , $tour_period_alone_price, $tour_period_adult_special_price[$i]
+                                        , $tour_period_child_special_price, $tour_period_status);
+                            } else {
+                                $speriod = $tourPeriodModel->insertTourPeriod($tour_package_id, $dateStart, $dateEnd, $tour_period_adult_price[$i]
+                                , $tour_period_child_price[$i], $tour_period_child_nb_price
+                                , $tour_period_alone_price, $tour_period_adult_special_price[$i]
+                                , $tour_period_child_special_price, $tour_period_status);
+                            }
                         }
 
                         if ($speriod && !$quick_tour) {

@@ -14,6 +14,13 @@ $(function () {
     $('#airline_select').select2({width: '100%'});
     $('#route_select').select2({width: '100%'});
 
+    // set numeric
+    $('#main_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0'});
+    $('#main_special_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0'});
+    $('#adult_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0', aSign: ' ฿', pSign: 's'});
+    $('#child_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0', aSign: ' ฿', pSign: 's'});
+    $('#special_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0', aSign: ' ฿', pSign: 's'});
+
     $("#divTable").fadeOut("fast");
     $('#saveAll').prop('disabled', true);
     $('#saveBtn').prop('disabled', false);
@@ -51,6 +58,8 @@ $(function () {
         var adult_price = $('#adult_price').autoNumeric('get');
         var child_price = $('#child_price').autoNumeric('get');
         var special_price = $('#special_price').autoNumeric('get');
+        var arrp = $('#tour_period_id').val() + ",0";
+        $('#tour_period_id').val(arrp);
         if (period_start && period_end && adult_price && child_price && special_price) {
             if (number == 0) {
                 $('#period_body').empty();

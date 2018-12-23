@@ -29,7 +29,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="article-card">
                         <div class="article-card-cover">
-                            <a href="" title="">
+                            <a href="{{ url('article-content') }}" title="">
                                 <img src="{{asset('images/article-img/japan-0.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
@@ -47,7 +47,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="article-card">
                         <div class="article-card-cover">
-                            <a href="" title="">
+                            <a href="{{ url('article-content') }}" title="">
                                 <img src="{{asset('images/article-img/japan-1.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
@@ -65,7 +65,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="article-card">
                         <div class="article-card-cover">
-                            <a href="" title="">
+                             <a href="{{ url('article-content') }}" title="">
                                 <img src="{{asset('images/article-img/japan.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
@@ -84,7 +84,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="article-card">
                         <div class="article-card-cover">
-                            <a href="" title="">
+                             <a href="{{ url('article-content') }}" title="">
                                 <img src="{{asset('images/article-img/switzerland.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
@@ -106,7 +106,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="article-card">
                         <div class="article-card-cover">
-                            <a href="" title="">
+                             <a href="{{ url('article-content') }}" title="">
                                 <img src="{{asset('images/article-img/paris.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
@@ -124,7 +124,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="article-card">
                         <div class="article-card-cover">
-                            <a href="" title="">
+                             <a href="{{ url('article-content') }}" title="">
                                 <img src="{{asset('images/article-img/china.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
@@ -142,7 +142,7 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="article-card">
                         <div class="article-card-cover">
-                            <a href="" title="">
+                             <a href="{{ url('article-content') }}" title="">
                                 <img src="{{asset('images/article-img/soul.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
@@ -161,12 +161,12 @@
                 <div class="col-sm-6 col-md-3">
                     <div class="article-card">
                         <div class="article-card-cover">
-                            <a href="" title="">
+                             <a href="{{ url('article-content') }}" title="">
                                 <img src="{{asset('images/article-img/thailand.jpg')}}" class="" alt="" scale="0">
                             </a>
                         </div>
                         <div class="article-card-content">
-                            <a href="" title="">
+                             <a href="{{ url('article-content') }}" title="">
                                15 เมืองน่าเที่ยวหน้าหนาวในสวิส เที่ยวให้มิด พิชิตยอดเขา เข้าถึงวัฒนธรรม จดจำประทับใจ!
                             </a>
                             <div class="article-card-date">
@@ -190,4 +190,5 @@
 
 @stop
 @section('footer_scripts')
+<script type="text/javascript" src="{{asset('js/article/article-index.js')}}"></script>
 @endsection
