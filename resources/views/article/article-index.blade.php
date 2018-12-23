@@ -34,7 +34,7 @@
                             </a>
                         </div>
                         <div class="article-card-content">
-                            <a href="" title="">
+                            <a href="{{ url('article-content') }}" title="">
                                10 ชายหาดแนะนำซัมเมอร์นี้ที่ญี่ปุ่น ใครว่าหาดที่ญี่ปุ่นไม่สวย บทความนี้อาจเปลี่ยนความคิดคุณไปโดยสิ้นเชิง
                             </a>
                             <div class="article-card-date">
@@ -52,7 +52,7 @@
                             </a>
                         </div>
                         <div class="article-card-content">
-                            <a href="" title="">
+                            <a href="{{ url('article-content') }}" title="">
                                5 เทศกาลหน้าร้อนญี่ปุ่น ที่จะทำให้คุณหลงไหลในมนต์เสน่ห์ความเป็นญี่ปุ่นแท้ๆ แบบไม่รู้ลืม
                             </a>
                             <div class="article-card-date">
@@ -70,7 +70,7 @@
                             </a>
                         </div>
                         <div class="article-card-content">
-                            <a href="" title="">
+                            <a href="{{ url('article-content') }}" title="">
                                4 เส้นทางปีนภูเขาไฟฟูจิ วิวดี ชีวิตนี้ต้องไปให้ได้ซักครั้ง
                             </a>
                             <div class="article-card-date">
@@ -89,7 +89,7 @@
                             </a>
                         </div>
                         <div class="article-card-content">
-                            <a href="" title="">
+                            <a href="{{ url('article-content') }}" title="">
                                15 เมืองน่าเที่ยวหน้าหนาวในสวิส เที่ยวให้มิด พิชิตยอดเขา เข้าถึงวัฒนธรรม จดจำประทับใจ!
                             </a>
                             <div class="article-card-date">
@@ -111,7 +111,7 @@
                             </a>
                         </div>
                         <div class="article-card-content">
-                            <a href="" title="">
+                            <a href="{{ url('article-content') }}" title="">
                                10 ชายหาดแนะนำซัมเมอร์นี้ที่ญี่ปุ่น ใครว่าหาดที่ญี่ปุ่นไม่สวย บทความนี้อาจเปลี่ยนความคิดคุณไปโดยสิ้นเชิง
                             </a>
                             <div class="article-card-date">
@@ -129,7 +129,7 @@
                             </a>
                         </div>
                         <div class="article-card-content">
-                            <a href="" title="">
+                            <a href="{{ url('article-content') }}" title="">
                                5 เทศกาลหน้าร้อนญี่ปุ่น ที่จะทำให้คุณหลงไหลในมนต์เสน่ห์ความเป็นญี่ปุ่นแท้ๆ แบบไม่รู้ลืม
                             </a>
                             <div class="article-card-date">
@@ -147,7 +147,7 @@
                             </a>
                         </div>
                         <div class="article-card-content">
-                            <a href="" title="">
+                            <a href="{{ url('article-content') }}" title="">
                                4 เส้นทางปีนภูเขาไฟฟูจิ วิวดี ชีวิตนี้ต้องไปให้ได้ซักครั้ง
                             </a>
                             <div class="article-card-date">
