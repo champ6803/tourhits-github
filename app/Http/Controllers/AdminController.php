@@ -1236,9 +1236,13 @@ class AdminController extends Controller {
                 $newStartDate = date("d-m-Y", strtotime($tourPackageObj->tour_package_period_start));
                 $newEndDate = date("d-m-Y", strtotime($tourPackageObj->tour_package_period_end));
                 $newUpdated = date("d-m-Y h:i:s", strtotime($tourPackageObj->updated_at));
-                $tourPackageObj->tour_package_period_start = $newStartDate;
-                $tourPackageObj->tour_package_period_end = $newEndDate;
-                $tourPackageObj->updated_date = $newUpdated;
+//                $tourPackageObj->tour_package_period_start = $newStartDate;
+//                $tourPackageObj->tour_package_period_end = $newEndDate;
+//                $tourPackageObj->updated_date = $newUpdated;
+                
+                $tourPackageObj->tour_package_period_start_new = $newStartDate;
+                $tourPackageObj->tour_package_period_end_new = $newEndDate;
+                $tourPackageObj->updated_date_new = $newUpdated;
             }
 
             return $tourPackageList;

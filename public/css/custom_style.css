@@ -6590,7 +6590,8 @@ https://flickity.metafizzy.co
     .article-index-content .article-card .article-card-cover img{  
         width: 100%;
         transform: scale(1.1);
-        max-height: 200px;
+        /*max-height: 200px;*/
+        height:200px;
     }
     
     .article-index-content .article-card .article-card-content{

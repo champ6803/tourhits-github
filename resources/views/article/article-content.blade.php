@@ -1,5 +1,19 @@
 @extends('layout.main')
 @section('page_title','บทความ')
+@section('meta_tag')
+<!-- Open Graph data -->
+        <meta property="og:title" content="{{ $articleDetailList[0]->article_title }}" />
+        <meta property="og:type" content="article" />
+        <!--<meta property="og:url" content="http://www.tourhitsthai.com/article-content?id=4" />-->
+        <meta property="og:image" content="http://www.tourhitsthai.com/images/article-img/{{ $articleDetailList[0]->article_image }}" />
+        <!--<meta property="og:description" content="<?php echo $articleDetailList[0]->article_detail_name ?>" />-->
+        <meta property="og:site_name" content="Tourhits" />
+        <meta property="article:published_time" content="<?php echo date('d-m-Y', strtotime($articleDetailList[0]->created_date)); ?>" />
+        <!--<meta property="article:modified_time" content="2013-09-16T19:08:47+01:00" />-->
+        <meta property="article:section" content="Article Section" />
+        <meta property="article:tag" content="{{ $articleDetailList[0]->article_title }}" />
+        <!--<meta property="fb:admins" content="Facebook numberic ID" />-->
+@endsection
 @section('main-content')
 
 <style>
@@ -62,16 +76,17 @@
 
 </style>    
 
-<section class="article-content-cover">
+
+<!--<section class="article-content-cover">
 
     <div class="content-cover-img">
         <div class="content-cover-text layer">
-            <h1>ประเทศญี่ปุ่น</h1>
-            <h2>4 เส้นทางปีนภูเขาไฟฟูจิ วิวดี ชีวิตนี้ต้องไปให้ได้ซักครั้ง</h2>
+            <h1>บทความ</h1>
+            <h1> {{ $articleDetailList[0]->article_title }} </h1>
         </div>
     </div>
 
-</section>
+</section>-->
 
 <section class="article-social-share">
     <div class="container">
@@ -93,17 +108,21 @@
 <section class="article-content">
 
     <div class="container">
+        
         <div class="article-content-date">
-            <i class="far fa-clock"></i>27 ตุลาคม 2562
+            <i class="far fa-clock"></i><?php echo date('d-m-Y', strtotime($articleDetailList[0]->created_date)); ?>
         </div>
-
+        
         <div class="article-content-head">
-            <p>4 เส้นทางปีนภูเขาไฟฟูจิ วิวดี ชีวิตนี้ต้องไปให้ได้ซักครั้ง</p>
+            <p>{{ $articleDetailList[0]->article_title }}</p>
         </div>
 
+        <div style="padding: 0;" class="article-content-date">
+            <img style="width:500px; padding: 0;" src="../images/article-img/{{ $articleDetailList[0]->article_image }}">
+        </div>
+        
         <div class="article-content-text">
-            <p>4 เส้นทางปีนภูเขาไฟฟูจิ ที่มีดีต่างกัน ภูเขาไฟฟูจิ สูง 3776 เมตรจากระดับน้ำทะเล ฟูจิคือ ภูเขาที่สูงที่สุดของประเทศญี่ปุ่น และจัดเป็นสัญญลักษณ์ของประเทศญี่ปุ่นที่จะสร้างความประทับใจต่อผู้มาเยือน และสร้างความทรงจำต่อนักท่องเที่ยวและนักปีนเขาไม่รู้ลืมตลอดชีวิตเลยทีเดียว ภูเขาแห่งนี้จะน่าสนใจยิ่งกว่าหากได้สัมผัสแบบใกล้ๆยิ่งขึ้นขึ้น มุมมองในวันที่อากาศแจ่มใสและประสบการณ์การปีนเขาในช่วงเช้าตรู่ ท่ามกลางผู้ร่วมเดินทางไกลหลายพันคน ที่มีใจรักการปีนเขาอย่างจริงจังจากทั่วโลก ก็เป็นสิ่งที่คุ้มค่ามากที่ได้มาใช้เวลาในช่วงฤดูร้อนเพื่อมาสัมผัสสัญญลักษณ์ของญี่ปุ่นอย่างเข้าถึงแบบสุดๆ
-                4 เส้นทางปีนภูเขาไฟฟูจิ เปิดให้ปีนภูเขาเมื่อไหร่ มีเส้นทางไหนบ้าง และเราควรเตรียมตัวอย่างไร ก่อนไปชมวิวสวยๆของฟูจิ ยามเช้ามืดที่สวยงาม</p>
+           <?php echo $articleDetailList[0]->article_detail_name ?>
         </div>
     </div>
 
@@ -123,127 +142,26 @@
         <div class="row">
 
             <div id="owl-demo-article" class="owl-carousel owl-theme">
-
+                @foreach($articleList as $article)
                 <div class="item">
                     <div class="article-card">
                         <div class="article-card-cover">
                             <a href="" title="">
-                                <img src="{{asset('images/article-img/japan-0.jpg')}}" class="" alt="" scale="0">
+                                <img src="{{asset('images/article-img/'.$article->article_image)}}" class="" alt="" scale="0">
                             </a>
                         </div>
                         <div class="article-card-content">
                             <a href="" title="">
-                                10 ชายหาดแนะนำซัมเมอร์นี้ที่ญี่ปุ่น ใครว่าหาดที่ญี่ปุ่นไม่สวย บทความนี้อาจเปลี่ยนความคิดคุณไปโดยสิ้นเชิง
+                                {{ $article->article_title }}
                             </a>
                             <div class="article-card-date">
-                                <i class="far fa-clock"></i>31 ตุลาคม 2562
+                                <i class="far fa-clock"></i><?php echo date('d-m-Y', strtotime($article->created_date)); ?>
                             </div>
                         </div>
                     </div> 
                 </div>
-                <div class="item">
-                    <div class="article-card">
-                        <div class="article-card-cover">
-                            <a href="" title="">
-                                <img src="{{asset('images/article-img/japan-1.jpg')}}" class="" alt="" scale="0">
-                            </a>
-                        </div>
-                        <div class="article-card-content">
-                            <a href="" title="">
-                                5 เทศกาลหน้าร้อนญี่ปุ่น ที่จะทำให้คุณหลงไหลในมนต์เสน่ห์ความเป็นญี่ปุ่นแท้ๆ แบบไม่รู้ลืม
-                            </a>
-                            <div class="article-card-date">
-                                <i class="far fa-clock"></i>27 ตุลาคม 2562
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="article-card">
-                        <div class="article-card-cover">
-                            <a href="" title="">
-                                <img src="{{asset('images/article-img/japan.jpg')}}" class="" alt="" scale="0">
-                            </a>
-                        </div>
-                        <div class="article-card-content">
-                            <a href="" title="">
-                                4 เส้นทางปีนภูเขาไฟฟูจิ วิวดี ชีวิตนี้ต้องไปให้ได้ซักครั้ง
-                            </a>
-                            <div class="article-card-date">
-                                <i class="far fa-clock"></i>25 ตุลาคม 2562
-                            </div>
-                        </div>
+                @endforeach
 
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="article-card">
-                        <div class="article-card-cover">
-                            <a href="" title="">
-                                <img src="{{asset('images/article-img/switzerland.jpg')}}" class="" alt="" scale="0">
-                            </a>
-                        </div>
-                        <div class="article-card-content">
-                            <a href="" title="">
-                                15 เมืองน่าเที่ยวหน้าหนาวในสวิส เที่ยวให้มิด พิชิตยอดเขา เข้าถึงวัฒนธรรม จดจำประทับใจ!
-                            </a>
-                            <div class="article-card-date">
-                                <i class="far fa-clock"></i>24 ตุลาคม 2562
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="article-card">
-                        <div class="article-card-cover">
-                            <a href="" title="">
-                                <img src="{{asset('images/article-img/paris.jpg')}}" class="" alt="" scale="0">
-                            </a>
-                        </div>
-                        <div class="article-card-content">
-                            <a href="" title="">
-                                10 ชายหาดแนะนำซัมเมอร์นี้ที่ญี่ปุ่น ใครว่าหาดที่ญี่ปุ่นไม่สวย บทความนี้อาจเปลี่ยนความคิดคุณไปโดยสิ้นเชิง
-                            </a>
-                            <div class="article-card-date">
-                                <i class="far fa-clock"></i>31 ตุลาคม 2562
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="article-card">
-                        <div class="article-card-cover">
-                            <a href="" title="">
-                                <img src="{{asset('images/article-img/china.jpg')}}" class="" alt="" scale="0">
-                            </a>
-                        </div>
-                        <div class="article-card-content">
-                            <a href="" title="">
-                                5 เทศกาลหน้าร้อนญี่ปุ่น ที่จะทำให้คุณหลงไหลในมนต์เสน่ห์ความเป็นญี่ปุ่นแท้ๆ แบบไม่รู้ลืม
-                            </a>
-                            <div class="article-card-date">
-                                <i class="far fa-clock"></i>27 ตุลาคม 2562
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="article-card">
-                        <div class="article-card-cover">
-                            <a href="" title="">
-                                <img src="{{asset('images/article-img/soul.jpg')}}" class="" alt="" scale="0">
-                            </a>
-                        </div>
-                        <div class="article-card-content">
-                            <a href="" title="">
-                                4 เส้นทางปีนภูเขาไฟฟูจิ วิวดี ชีวิตนี้ต้องไปให้ได้ซักครั้ง
-                            </a>
-                            <div class="article-card-date">
-                                <i class="far fa-clock"></i>25 ตุลาคม 2562
-                            </div>
-                        </div>                           
-                    </div>
-                </div>
 
             </div>
         </div>

@@ -1,6 +1,14 @@
 @extends('layout.main-admin')
 @section('page_title','Admin Management')
 @section('main-content')
+<style>
+    [type=checkbox]:checked, [type=checkbox]:not(:checked) {
+        position: relative;
+        left: 0; 
+        opacity: 1; 
+}
+</style>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -14,7 +22,7 @@
     </section>
 
     <!-- Main content -->
-    <section class="content">
+    <sec    tion class="content">
         <div class="row">
             <div class="col-xl-12 col-12">		  
                 <!-- AREA CHART -->
@@ -29,8 +37,12 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-12">
+                                <button disabled="true" id="remove" class="btn btn-danger">
+                                    <i class="fa fa-check-square"></i>
+                                    ลบรายการที่เลือก
+                                </button>
                                 <table class="table" id="tour_package_table">
-                                    
+
                                 </table>
                             </div>
                         </div>

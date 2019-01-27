@@ -15,7 +15,5 @@ namespace App\Http\Controllers;
  */
 class ArticleContentController extends Controller{
     
-     public function article_content() {
-        return view('article.article-content');
-    }
+    
 }
