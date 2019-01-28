@@ -14,6 +14,13 @@ $(function () {
     $('#airline_select').select2({width: '100%'});
     $('#route_select').select2({width: '100%'});
 
+    // set numeric
+    $('#main_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0'});
+    $('#main_special_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0'});
+    $('#adult_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0', aSign: ' ฿', pSign: 's'});
+    $('#child_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0', aSign: ' ฿', pSign: 's'});
+    $('#special_price').autoNumeric('init', {aSep: ',', aDec: '.', mDec: '0', aSign: ' ฿', pSign: 's'});
+
     $("#divTable").fadeOut("fast");
     $('#saveAll').prop('disabled', true);
     $('#saveBtn').prop('disabled', false);
@@ -48,21 +55,24 @@ $(function () {
     $('#btn_period_add').click(function () {
         var period_start = $('#period_start').val();
         var period_end = $('#period_end').val();
-        var adult_price = $('#adult_price').val();
-        var child_price = $('#child_price').val();
-        var special_price = $('#special_price').val();
+        var adult_price = $('#adult_price').autoNumeric('get');
+        var child_price = $('#child_price').autoNumeric('get');
+        var special_price = $('#special_price').autoNumeric('get');
+        var arrp = $('#tour_period_id').val() + ",0";
+        $('#tour_period_id').val(arrp);
         if (period_start && period_end && adult_price && child_price && special_price) {
             if (number == 0) {
                 $('#period_body').empty();
             }
             number++;
             var table = "<tr>";
-            table = table + "<td>" + number + '<input type="hidden" class="run_number" value="' + number + '" /></td>';
-            table = table + "<td>" + period_start + '<input type="hidden" name="period_start[]" value="' + period_start + '" /></td>';
-            table = table + "<td>" + period_end + '<input type="hidden" name="period_end[]" value="' + period_end + '" /></td>';
-            table = table + "<td align='right'>" + numberWithCommas(adult_price) + '<input type="hidden" name="adult_price[]" value="' + adult_price + '" /></td>';
-            table = table + "<td align='right'>" + numberWithCommas(child_price) + '<input type="hidden" name="child_price[]" value="' + child_price + '" /></td>';
-            table = table + "<td align='right'>" + numberWithCommas(special_price) + '<input type="hidden" name="special_price[]" value="' + special_price + '" /></td>';
+            table = table + "<td>" + number + '<input id="no_' + number + '" type="hidden" class="run_number" value="' + number + '" /></td>';
+            table = table + "<td>" + period_start + '<input id="period_start_' + number + '" type="hidden" name="period_start[]" value="' + period_start + '" /></td>';
+            table = table + "<td>" + period_end + '<input id="period_end_' + number + '" type="hidden" name="period_end[]" value="' + period_end + '" /></td>';
+            table = table + "<td align='right'>" + numberWithCommas(adult_price) + '<input id="adult_price_' + number + '" type="hidden" name="adult_price[]" value="' + adult_price + '" /></td>';
+            table = table + "<td align='right'>" + numberWithCommas(child_price) + '<input id="child_price_' + number + '" type="hidden" name="child_price[]" value="' + child_price + '" /></td>';
+            table = table + "<td align='right'>" + numberWithCommas(special_price) + '<input id="special_price_' + number + '" type="hidden" name="special_price[]" value="' + special_price + '" /></td>';
+            table = table + "<td align='center'><button type='button' class='btn btn-primary btn-xs' onclick='editPeriod(" + number + ")'><i class='fa fa-pencil-square'></i></button>&nbsp;<button type='button' class='btn btn-danger btn-xs' onclick='deletePeriod(" + number + ")'><i class='fa fa-trash'></i></button></td>";
             table = table + "</tr>";
             $('#period_body').append(table);
         }
@@ -83,11 +93,68 @@ $(function () {
         }
     });
 
+    $('#btn_edit_period').click(function () {
+        var num = $('#hidden_update_no').val();
+        if (num) {
+            var r_number = (parseInt(num) - 1);
+            console.log($('#period_body > tr').eq(r_number))
+            var tr = $('#period_body > tr').eq(r_number);
+            var children = tr.children();
+            var period_start = $('#update_period_start').val();
+            var period_end = $('#update_period_end').val();
+            var adult_price = $('#update_adult_price').val();
+            var child_price = $('#update_child_price').val();
+            var special_price = $('#update_special_price').val();
+
+            children.eq(1).html(period_start + '<input id="period_start_' + num + '" type="hidden" name="period_start[]" value="' + period_start + '" /></td>');
+            children.eq(2).html(period_end + '<input id="period_end_' + num + '" type="hidden" name="period_end[]" value="' + period_end + '" /></td>');
+            children.eq(3).html(numberWithCommas(adult_price) + '<input id="adult_price_' + num + '" type="hidden" name="adult_price[]" value="' + adult_price + '" /></td>');
+            children.eq(4).html(numberWithCommas(child_price) + '<input id="child_price_' + num + '" type="hidden" name="child_price[]" value="' + child_price + '" /></td>');
+            children.eq(5).html(numberWithCommas(special_price) + '<input id="special_price_' + num + '" type="hidden" name="special_price[]" value="' + special_price + '" /></td>');
+
+            $('#editModal').modal('hide');
+        } else {
+            alert("no number");
+        }
+    });
+
     $('#btn_delete').click(function () {
         $('#removeModal').modal();
     });
     initValues();
+
+    $('#close_pdf_btn').click(function () {
+        $('#show_pdf').hide();
+        $('#add_pdf').fadeIn();
+    });
 });
+
+function editPeriod(num) {
+    if (num) {
+        var period_start = $('#period_start_' + num).val();
+        var period_end = $('#period_end_' + num).val();
+        var adult_price = $('#adult_price_' + num).val();
+        var child_price = $('#child_price_' + num).val();
+        var special_price = $('#special_price_' + num).val();
+
+        $('#label_update_no').html("No : " + num);
+        $('#hidden_update_no').val(num);
+        $('#update_period_start').datepicker("setDate", period_start);
+        $('#update_period_end').datepicker("setDate", period_end);
+        $('#update_adult_price').val(adult_price);
+        $('#update_child_price').val(child_price);
+        $('#update_special_price').val(special_price);
+
+        $('#editModal').modal();
+    }
+}
+
+function deletePeriod(num) {
+    if (num) {
+        var r_number = (parseInt(num) - 1);
+        $('#period_body > tr').eq(r_number).remove();
+    }
+}
 
 function runNumber(value, row, index, field) {
     return parseInt(index) + 1;
@@ -541,6 +608,7 @@ function initValues() {
             $("#file_show").removeClass('hide');
             //$("#pdf_show").html(tourPackageDetail.tourPackage.tour_package_pdf);
             $("#pdf_hidden").val(tourPackageDetail.tourPackage.tour_package_pdf);
+            $("#remark").val(tourPackageDetail.tourPackage.tour_package_remark);
 
 
             //$('#div_file').html('<div class="row"><div class="col-xs-8"><img height="100px;" src="images/tour/tour6.jpg"></div><div class="col-xs-4"><input class="form-control" type="file" id="file" name="file"><input type="hidden" value="{{ csrf_token() }}" name="_token"></div></div>');
@@ -559,12 +627,13 @@ function initValues() {
                 var period_end_split = this.tour_period_end.split("-");
                 var period_end = period_end_split[0] + "/" + period_end_split[1] + "/" + period_end_split[2];
                 var table = "<tr>";
-                table = table + "<td>" + number + '<input type="hidden" class="run_number" value="' + number + '" /></td>';
-                table = table + "<td>" + period_start + '<input type="hidden" name="period_start[]" value="' + period_start + '" /></td>';
-                table = table + "<td>" + period_end + '<input type="hidden" name="period_end[]" value="' + period_end + '" /></td>';
-                table = table + "<td align='right'>" + numberWithCommas(this.tour_period_adult_price) + '<input type="hidden" name="adult_price[]" value="' + this.tour_period_adult_price + '" /></td>';
-                table = table + "<td align='right'>" + numberWithCommas(this.tour_period_child_price) + '<input type="hidden" name="child_price[]" value="' + this.tour_period_child_price + '" /></td>';
-                table = table + "<td align='right'>" + numberWithCommas(this.tour_period_adult_special_price) + '<input type="hidden" name="special_price[]" value="' + this.tour_period_adult_special_price + '" /></td>';
+                table = table + "<td>" + number + '<input id="no_' + number + '" type="hidden" class="run_number" value="' + number + '" /></td>';
+                table = table + "<td>" + period_start + '<input id="period_start_' + number + '" type="hidden" name="period_start[]" value="' + period_start + '" /></td>';
+                table = table + "<td>" + period_end + '<input id="period_end_' + number + '" type="hidden" name="period_end[]" value="' + period_end + '" /></td>';
+                table = table + "<td align='right'>" + numberWithCommas(this.tour_period_adult_price) + '<input id="adult_price_' + number + '" type="hidden" name="adult_price[]" value="' + this.tour_period_adult_price + '" /></td>';
+                table = table + "<td align='right'>" + numberWithCommas(this.tour_period_child_price) + '<input id="child_price_' + number + '" type="hidden" name="child_price[]" value="' + this.tour_period_child_price + '" /></td>';
+                table = table + "<td align='right'>" + numberWithCommas(this.tour_period_adult_special_price) + '<input id="special_price_' + number + '" type="hidden" name="special_price[]" value="' + this.tour_period_adult_special_price + '" /></td>';
+                table = table + "<td align='center'><button type='button' class='btn btn-primary btn-xs' onclick='editPeriod(" + number + ")'><i class='fa fa-pencil-square'></i></button>&nbsp;<button type='button' class='btn btn-danger btn-xs' onclick='deletePeriod(" + number + ")'><i class='fa fa-trash'></i></button></td>";
                 table = table + "</tr>";
                 $('#period_body').append(table);
             });

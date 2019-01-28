@@ -8,7 +8,7 @@ $(function () {
         pageSize: 10,
         columns: [{
                 field: 'order_id',
-                align: 'right',
+                align: 'center',
                 title: 'Order Id',
                 sortable: true
             }, {
@@ -19,15 +19,16 @@ $(function () {
             }, {
                 field: 'phone',
                 title: 'เบอร์โทรศัพท์',
-                align: 'right'
+                align: 'center'
             }, {
                 field: 'order_date',
                 title: 'วันที่จอง',
-                sortable: true
+                sortable: true,
+                align: 'center'
             }, {
                 field: 'order_total_price',
                 title: 'ราคารวม',
-                align: 'right',
+                align: 'center',
                 formatter: numberFormat,
                 sortable: true
             }, {
@@ -117,7 +118,7 @@ function order_view(order_id) {
                     pageSize: 10,
                     columns: [{
                             field: 'tour_package_id',
-                            align: 'right',
+                            align: 'center',
                             title: 'Tour Package Id',
                             sortable: true,
                             formatter: padZero
@@ -129,31 +130,34 @@ function order_view(order_id) {
                         }, {
                             field: 'tour_period_start',
                             title: 'วันเดินทาง',
-                            align: 'right'
+                            align: 'center',
+                            sortable: true
                         }, {
                             field: 'tour_period_end',
                             title: 'วันที่กลับ',
+                            align: 'center',
                             sortable: true
                         }, {
                             field: 'quantity_adult',
                             title: 'จำนวนผู้ใหญ่',
-                            align: 'right',
+                            align: 'center',
                             sortable: true
                         }, {
                             field: 'quantity_child',
                             title: 'จำนวนเด็ก',
-                            align: 'right',
+                            align: 'center',
                             formatter: numberFormat,
                             sortable: true
                         }, {
                             field: 'tour_period_adult_price',
                             title: 'ราคาผู้ใหญ่',
-                            align: 'right',
-                            sortable: true
+                            align: 'center',
+                            sortable: true,
+                            formatter: numberFormat,
                         }, {
                             field: 'tour_period_child_price',
                             title: 'ราคาเด็ก',
-                            align: 'right',
+                            align: 'center',
                             formatter: numberFormat,
                             sortable: true
                         }]
@@ -176,5 +180,5 @@ function pad(str, max) {
 }
 
 function padZero(value, row, index) {
-    return "#" + pad(value, 6);
+    return "TH" + value;
 }

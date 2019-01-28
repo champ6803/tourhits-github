@@ -1,6 +1,15 @@
 @extends('layout.main-admin')
 @section('page_title','Admin Management')
 @section('main-content')
+<style type="text/css">
+    .modal-lg {
+        width: 1800px !important;
+    }
+    .modal-lg {
+        max-width: none !important; 
+    }
+</style>
+
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -9,7 +18,7 @@
             Order List
         </h1>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="#"><i class="fa fa-clipboard"></i> Dashboard</a></li>
             <li class="breadcrumb-item active">Order List</li>
         </ol>
     </section>

@@ -531,7 +531,7 @@ if (!isset($_SESSION['a_user'])) {
                                 <li><a href="pages/charts/chart/chartjs.html">จัดการ Template</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li id="blog_manage" class="treeview">
                             <a href="#">
                                 <i class="fa fa-edit"></i> <span>Blog</span>
                                 <span class="pull-right-container">
@@ -539,8 +539,7 @@ if (!isset($_SESSION['a_user'])) {
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/forms/advanced.html">สร้าง Blog</a></li>
-                                <li><a href="pages/forms/code-editor.html">แก้ไข Blog</a></li>
+                                <li id="article_manage"><a href="{{ url('article-manage') }}">จัดการบทความ</a></li>
                             </ul>
                         </li>      
 

@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Input as Input;
  * @author Champ
  */
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Category extends Model {
 

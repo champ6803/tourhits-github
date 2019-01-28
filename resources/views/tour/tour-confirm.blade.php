@@ -9,16 +9,16 @@
         padding-top: 15px;
         background-color: #F7F7F7;
     }
-    
+
     .product-detail__info .trips .item{
         padding: 0 15px;
         width: calc(100%/2);
     }
-    
+
     .product-detail__info .trips .warp-text p{
         padding: 10px 14px 10px 14px;
     }
-    
+
     .product-detail__info .trips .item-width:nth-child(2){
         width: calc(100%/2);
         padding: 0 15px;
@@ -50,14 +50,15 @@
     .table > thead > tr > th, .table > thead > tr > td {
         border: 0;
     }
-    
+
     .product-detail__info .product-title h2 {
-    color: #c33132;
-    display: inline;
-    font-size:19px;
+        color: #c33132;
+        display: inline;
+        font-size:19px;
     }
     .cart-content .cart-table tbody td .quantity .minus:hover{color:#c33132;}
-    
+    .cart-content .cart-table tbody td .quantity .fa-minus-circle:hover{color:#c33132;}
+
 </style>
 <!-- BREADCRUMB -->
 <section>
@@ -66,7 +67,7 @@
             <ul>
                 <li><a href="{{url('/')}}">แพ็คเกจทัวร์</a></li>
                 <li><a href="{{ URL::to('search-tour/' .$tourPackage->tour_country_name. '?country='. $tourPackage->tour_country_id)}}">{{$tourPackage->tour_country_name}}</a></li>
-                <li><a href="{{url('tour-detail/' .$tourPackage->tour_package_id. '/'.$tourPackage->tour_package_name)}}">{{$tourPackage->tour_package_name}}</a></li>
+                <li><a href="{{url('tour-detail/'.$tourPackage->tour_country_url. '/' .$tourPackage->tour_package_id. '/'.$tourPackage->tour_package_code)}}">{{$tourPackage->tour_package_name}}</a></li>
                 <li><span>ใบจอง</span></li>
             </ul>
         </div>
@@ -173,15 +174,15 @@
             <div class="col-md-3 col-sm-12">
                 <div class="checkout-page__sidebar">
                     <ul>
-<!--                        <li><a style="background-color: #EC2424;">
-                                <div class="fix-img" style="float:left;"><img src="{{asset('images/ticket.png')}}" alt=""></div>
-                                วันเดินทางที่เลือก
-                            </a>
-                        </li>
-                        <select id='sel_tour_package_period' class="form-control form-control-sm option-confirm-tour">
-                            <option val='0'>วันเดินทางที่เลือก</option>
-                        </select>
-                        <hr>-->
+                        <!--                        <li><a style="background-color: #EC2424;">
+                                                        <div class="fix-img" style="float:left;"><img src="{{asset('images/ticket.png')}}" alt=""></div>
+                                                        วันเดินทางที่เลือก
+                                                    </a>
+                                                </li>
+                                                <select id='sel_tour_package_period' class="form-control form-control-sm option-confirm-tour">
+                                                    <option val='0'>วันเดินทางที่เลือก</option>
+                                                </select>
+                                                <hr>-->
                         <li>
                             <a>
                                 <div class="fix-img" style="float:left;"><img src="{{asset('images/airplane.png')}}" alt=""></div>
@@ -226,7 +227,7 @@
                                         <span>(พัก2-3คน)</span>
                                     </td>
                                     <td class="product-price">
-                                        <span id="two_price"></span> ฿
+                                        <span id="two_price"></span>฿
                                     </td>
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
@@ -249,7 +250,7 @@
                                         <span>(พักเดี่ยว)</span>
                                     </td>
                                     <td class="product-price">
-                                        <span id="one_price"></span> ฿
+                                        <span id="one_price"></span>฿
                                     </td>
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
@@ -331,10 +332,10 @@
 
                                     <td class="product-name tab-kid-2">
                                         <span>เด็ก</span>
-                                         <span>(ไม่เพิ่มเตียง)</span>
+                                        <span>(ไม่เพิ่มเตียง)</span>
                                     </td>
                                     <td class="product-price">
-                                        <span id='child_one_price' class="amount"></span> ฿
+                                        <span id='child_one_price' class="amount"></span>฿
                                     </td>
                                     <td class="product-quantity">
                                         <div class="quantity buttons_added">
@@ -429,7 +430,7 @@
                                                             </div>-->
                     </div>
                     <div id='login_panel' class="content-title text-center">
-                        <h2 style="color:#EC2424"><i class="fas fa-lock"></i>&nbsp;<a href="/login">เข้าสู่ระบบ</a></h2>
+                        <h2 style="color:#EC2424"><i class="fas fa-lock"></i>&nbsp;<a href="/login">เข้าสู่ระบบ หรือ </a></h2>
                     </div>
                     <div class="panel-group">
                         <div class="panel panel-default">
@@ -448,7 +449,7 @@
                                             <input id='line_id' type="text" value="" name="line_id" placeholder=" Line (ถ้ามี)">
                                         </div>
                                         <div class="form-item">
-                                            <input id='phone' type="number" value="" name="phone" maxlength="10" placeholder="เบอร์โทรศัพท์">
+                                            <input id='phone' type="text" value="" name="phone" maxlength="11" placeholder="เบอร์โทรศัพท์">
                                         </div>
                                         <div class="form-textarea-wrapper">
                                             <textarea id='remark' name="message">หมายเหตุ (ถ้ามี)</textarea>
@@ -468,7 +469,7 @@
                 </div> <!-- พท การ์ดทางขวา -->  
             </div> <!-- end lg9   -->
         </div> <!-- end row   -->
-        
+
     </div>
 </section>
 @stop

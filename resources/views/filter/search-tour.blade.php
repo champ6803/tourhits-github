@@ -1429,9 +1429,6 @@
                                     </div>
                                 </div>-->
 
-
-
-
             </div>
         </div>
         </div>
@@ -1520,8 +1517,6 @@
         $(".stop").click(function () {
             owl.trigger('owl.stop');
         })
-        var test = <?php echo json_encode($dayList); ?>;
-        console.log(test);
     });
     var price_most = <?php echo json_encode($price_most); ?>;
 </script>

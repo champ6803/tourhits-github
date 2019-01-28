@@ -5429,8 +5429,9 @@ Custom BS3
 }
 
 .product-tabs__content p{
-    /*        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;*/
-    font-size: 19px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .detail-sidebar .booking-info h3 i{
@@ -5451,6 +5452,20 @@ Custom BS3
     padding: 0 5px;
 }
 
+.call-to-book a:hover{
+    background-color: #5de0bf;
+}
+.call-to-book a:hover span{
+    color: #fff;
+}
+
+.book-by-line a:hover{
+    background-color: #69e781;
+}
+.book-by-line a:hover span{
+    color: #fff;
+}
+
 .call-to-book a,.book-by-line a{
     text-align: center;
     display: block;
@@ -5458,6 +5473,11 @@ Custom BS3
     border-radius: 40px;
     font-family: 'Kanit', sans-serif;
     font-size: 18px!important;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+   -ms-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+   transition: all 0.3s ease;    
 }
 
 .book-by-line a{
@@ -5478,6 +5498,7 @@ Custom BS3
 }
 .call-to-book span img,.book-by-line span img{
     padding-right: 1px;
+    height: 32px;
 }
 
 
@@ -5660,8 +5681,17 @@ Custom BS3
     text-align: center;
     font-size: 14px;
     display: block;
-    color: #8d8d8d;
+    color: #262626;
+    font-weight: bold;
 }
+
+/*.navbar-bot .box-line span{
+    color: #04c304;
+}
+
+.navbar-bot .box-fb span{
+    color: #488cff;
+}*/
 
 .navbar-bot .bx{
     width: calc(100%/3);
@@ -5680,7 +5710,7 @@ Custom BS3
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25px;
+    width: 27px;
     
 }
 
@@ -6146,47 +6176,55 @@ https://flickity.metafizzy.co
 .checkout-page__content .cart-content .tab-adult-pair span:nth-child(1){
     display: inline-block;
     width: 100%;
-    color: #8d8d8d;
+    color: black;
 }
 
 .checkout-page__content .cart-content .tab-adult-pair span:nth-child(2){
     font-size: 17px;
-    color: black;    
+    color: #8d8d8d;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
 }
 
 .checkout-page__content .cart-content .tab-adult-single span:nth-child(1){
     display: inline-block;
     width: 100%;
-    color: #8d8d8d;
+    color: black;
     padding-top: 3px;
 }
 
 .checkout-page__content .cart-content .tab-adult-single span:nth-child(2){
     font-size: 17px;
-    color: black;    
+    color: #8d8d8d; 
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
 }
 
 .checkout-page__content .cart-content .tab-kid-1 span:nth-child(1){
     display: inline-block;
     width: 100%;
-    color: #8d8d8d;  
+    color: black;  
 }
 
 .checkout-page__content .cart-content .tab-kid-1 span:nth-child(2){
     font-size: 17px;
-    color: black;
+    color: #8d8d8d;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
 }
 
 .checkout-page__content .cart-content .tab-kid-2 span:nth-child(1){
     display: inline-block;
     width: 100%;
-    color: #8d8d8d;
+    color: black;
     padding-top: 3px;
 }
 
 .checkout-page__content .cart-content .tab-kid-2 span:nth-child(2){
     font-size: 17px;
-    color: black;
+    color:#8d8d8d;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
 }
 
 .checkout-page__content .cart-content .cart-table tbody .tlr{
@@ -6290,23 +6328,24 @@ https://flickity.metafizzy.co
 .product-detail__info .trips .warp-text p{ 
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 15px;
+    line-height: 30px;
     font-weight: bold;
     text-align: center;
     color:#c33132;
     background-color: #fff;
     border: 0;
     border-radius: 8px;
-    padding: 20px 14px 20px 14px;
+    padding: 15px 14px 15px 14px;
     margin-top: -19px; 
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03), -10px 0 20px 0px rgba(0, 0, 0, 0.03);   
 }
 
 
-.product-detail__info .trips i{color: #ea6a78;}
+.product-detail__info .trips i{color: #c33132;}
 
 .product-detail__info .product-tag-id span{
     font-family: 'Bai Jamjuree', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     line-height: 32px;
     color: #fd6149; 
@@ -6469,4 +6508,187 @@ https://flickity.metafizzy.co
     text-decoration: line-through;
 }
 
+/*บทความ*/
 
+    .article-index-cover .index-cover-img{
+            display: block;
+            z-index: -99;
+            background-image: url(https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2698&q=80);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 350px;
+            background-color: #000;
+            overflow: hidden;
+    }
+    
+    .article-index-cover .index-cover-img  .index-cover-text h1{
+            z-index: 999;
+            font-weight: 600;
+            position: absolute;
+            width: 100%;
+            letter-spacing: 0.5px;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+            font-size: 40px;
+    }
+    .article-index-cover .index-cover-img  .index-cover-text h2{
+            font-family: 'Bai Jamjuree', sans-serif;
+            padding-top: 200px;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            padding-left: 5%;
+            padding-right: 5%;
+            width: 100%;
+            z-index: 997;
+            font-size: 22px;
+    }
+    
+    .article-content-cover .content-cover-img  .content-cover-text h1{
+            z-index: 999;
+            font-weight: 600;
+            position: absolute;
+            width: 100%;
+            letter-spacing: 0.5px;
+            color: #fff;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 40px;
+    }
+    
+    .article-content-cover .content-cover-img  .content-cover-text h2{
+            font-family: 'Bai Jamjuree', sans-serif;
+            padding-top: 150px;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            padding-left: 5%;
+            padding-right: 5%;
+            width: 100%;
+            z-index: 997;
+            font-size: 22px;
+    }
+     
+    .article-index-content .article-card{
+        margin-top: -20px;
+        padding: 0 10px 70px 10px;       
+    }
+    
+    .article-index-content .article-card:hover .article-card-content{
+        margin-top: -40px;    
+    }
+    
+    .article-index-content .article-card:hover .article-card-content a{
+        opacity: 0.7;
+    }
+    
+    .article-index-content .article-card .article-card-cover{
+    }
+    
+    .article-index-content .article-card .article-card-cover img{  
+        width: 100%;
+        transform: scale(1.1);
+        /*max-height: 200px;*/
+        height:200px;
+    }
+    
+    .article-index-content .article-card .article-card-content{
+        position: relative;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+        margin-top: -33px;
+        border-radius: 4px;
+        width: 90%;
+        left: 5%;
+        background: #fff;
+        padding: 10px 10px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+       -ms-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+       transition: all 0.3s ease;     
+    }
+    
+    .article-index-content .article-card .article-card-content a{
+       font-family: 'Kanit', sans-serif;
+       font-size: 17px;
+       font-weight: bold;
+       color: black;
+    }
+    
+    .article-index-content .article-card .article-card-content .article-card-date{
+       font-family: 'Bai Jamjuree', sans-serif;
+       font-size: 12px;
+       color: #8d8d8d;
+       text-align: right;
+       padding-top: 5px;    
+    }
+    
+    .article-index-content .article-card .article-card-content .article-card-date i{
+       padding-right: 5px;
+    }
+
+
+/*    บทความหน้าเนื้อหา*/
+
+        .article-content-bottom .article-card{
+        margin-top: 0px;
+        padding: 0 30px 30px 10px;
+    }
+    
+    
+    
+    .article-content .article-content-date{
+        text-align: center; 
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 14px;
+        color: black;
+        padding: 50px 0px 20px 0;
+    }
+    .article-content .article-content-date i{padding-right: 5px;}
+    
+    .article-content .article-content-head {
+        text-align: center;
+        font-family: 'Kanit', sans-serif;
+        font-size: 30px;
+        padding: 10px 0 10px 0;
+    }
+    
+    .article-content .article-content-text{
+        padding: 20px 0 50px 0;
+    }
+    
+    .article-content .article-content-text p{
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-size: 16px;
+    }
+    
+    .article-content-bottom .head{
+        border-top: 1px solid;
+    }
+    
+    .article-content-bottom .head p{
+        text-align: left;
+        font-family: 'Kanit', sans-serif;
+        font-size: 20px;
+        padding: 20px 0 10px 0;
+        float: left;
+    }
+    
+    .article-content-bottom .article-button-next{ 
+        text-align: right;
+        float: right;
+        font-size: 25px;
+        width: 60px;
+        cursor: pointer;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        margin-top : 20px;
+    }
+    .article-content-bottom .article-button-prev{ 
+        text-align: right;
+        font-size: 25px;
+        cursor: pointer;
+        margin-top : 20px;
+    }

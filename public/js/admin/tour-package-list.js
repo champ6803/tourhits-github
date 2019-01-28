@@ -1,3 +1,7 @@
+var $table = $('#tour_package_table')
+var $remove = $('#remove')
+var selections = []
+var conselect = false;
 $(function () {
     $('#managetour').addClass("active");
     $('#tour_package_list').addClass("active");
@@ -8,7 +12,12 @@ $(function () {
         search: true,
         pagination: true,
         pageSize: 100,
-        columns: [{
+        columns: [
+            {
+                field: 'state',
+                checkbox: true
+            },
+            {
                 field: 'tour_package_id',
                 align: 'center',
                 title: 'Tour Package Id',
@@ -53,7 +62,7 @@ $(function () {
                 sortable: true,
                 formatter: dateFormate
             }, {
-                field: 'updated_date',
+                field: 'updated_at',
                 title: 'Update',
                 align: 'center',
                 sortable: true
@@ -67,11 +76,80 @@ $(function () {
 
     loadTourPackageList(package_list);
 
+    $('#tour_package_table').on('check.bs.table uncheck.bs.table ' +
+            'check-all.bs.table uncheck-all.bs.table',
+            function () {
+                $remove.prop('disabled', !$('#tour_package_table').bootstrapTable('getSelections').length)
+
+                // save your data, here just save the current page
+                selections = getIdSelections()
+                // push or splice the selections if you want to save all data selections
+            });
+
+    $remove.click(function () {
+        var ids = getIdSelections()
+//        $table.bootstrapTable('remove', {
+//            field: 'tour_package_id',
+//            values: ids
+//        });
+        conselect = confirm("คุณต้องการลบรายการที่เลือกหรือไม่ ?");
+        var res = false;
+        $.each(ids, function (i, value) {
+            res = deleteSelectedPackage(value);
+        });
+        if (res) {
+            alert('ลบข้อมูลเรียบร้อยแล้ว');
+            window.location.href = "tour-package-list";
+        }
+
+
+        //$remove.prop('disabled', true)
+    })
+
 //    $('#tour_package_table').on('click-row.bs.table', function (row, $element, field) {
 //        window.location.href = "./manage-edit-tourlist?id=" + $element.tour_package_id;
 //        console.log($element);
 //    });
 });
+
+function deleteSelectedPackage(tour_package_id) {
+    var respone = false;
+    if (tour_package_id && conselect) {
+        $.ajax({
+            type: 'post',
+            url: 'deleteTourPackage',
+            async: false,
+            data: {tour_package_id: tour_package_id},
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (data) {
+                if (data == 'success') {
+                    respone = true;
+                } else {
+                    alert('ไม่สามารถลบข้อมูลได้');
+                }
+            },
+            error: function (data) {
+                alert('error');
+            }
+        });
+    }
+    return respone;
+}
+
+function responseHandler(res) {
+    $.each(res.rows, function (i, row) {
+        row.state = $.inArray(row.tour_package_id, selections) !== -1
+    })
+    return res
+}
+
+function getIdSelections() {
+    return $.map($table.bootstrapTable('getSelections'), function (row) {
+        return row.tour_package_id;
+    })
+}
 
 function loadTourPackageList(data) {
     $('#tour_package_table').bootstrapTable('load', data);
@@ -91,7 +169,8 @@ function pad(str, max) {
 }
 
 function padZero(value, row, index) {
-    return "TH" + pad(value, 6);
+//    return "TH" + pad(value, 6);
+    return "TH" + value;
 }
 
 function actionButton(value, row, index) {

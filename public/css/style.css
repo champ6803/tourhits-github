@@ -2612,7 +2612,7 @@ span.dropcap {
 .breadcrumb ul li a {
     position: relative;
     display: block;
-    color: #666;
+    color: black;
     margin-right: 32px;
     font-size: 15px;
     
@@ -6289,9 +6289,10 @@ body.single-post .blog-page__content > .post .post-content {
 .cart-content .cart-table tbody td {
     font-weight: 100;
     font-size: 19px;
-    color: #515050;
+    color: black;
     padding: 0 0 10px 0;
     font-weight: bold;
+    
 }
 .cart-content .cart-table tbody td.product-remove {
     width: 12.6%;
@@ -6670,7 +6671,7 @@ body.single-post .blog-page__content > .post .post-content {
 /* 12.   Productdetail
 --------------------------------------------------------------------------------*/
 .product-detail {
-    padding-top: 30px;
+/*    padding-top: 30px;*/
     padding-bottom:20px;
 }
 
@@ -10408,8 +10409,11 @@ select {
 }
 .contact-page__form .descriptions {
     color: #666;
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
+
 }
 
 .confirm-form .descriptions p {

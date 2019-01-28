@@ -1,15 +1,15 @@
 $(function () {
     $('#managemaster').addClass('active');
     $('#attractionMenu').addClass('active');
-    
+
     $('#country_select').select2({width: '100%', dropdownParent: $("#attractionModal")});
     $('#update_country_select').select2({width: '100%', dropdownParent: $("#editModal")});
-    
+
     $('#btn_add_attraction').click(function () {
         $('#attractionModal').modal();
         createCountryDropDown("country_select");
     });
-    
+
     $('#searchButton').click(function () {
         var input_attraction_name = $('#input_attraction_name').val();
         var checkEmpty = input_attraction_name.trim();
@@ -19,7 +19,7 @@ $(function () {
             findAttractionByName(input_attraction_name);
         }
     });
-    
+
     $('#close').click(function () {
         $('#attraction_name').val('');
         $('#attraction_picture').val('')
@@ -35,7 +35,10 @@ $(function () {
         $('#updateFile').val('');
     });
     createTable();
-    $('#attractionTable').DataTable();
+    $('#attractionTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
 });
 
 function createTable() {
@@ -57,9 +60,14 @@ function createTable() {
                     Str = Str + '<td>' + data[row].attraction_name + '</td>';
                     Str = Str + '<td>' + data[row].attraction_url + '</td>';
                     Str = Str + '<td>' + data[row].country_name + '</td>';
-                    Str = Str + '<td> <img src="images/attraction/' + data[row].attraction_picture + '" style="height:40px;"></td>';
+                    if (data[row].attraction_picture) {
+                        Str = Str + '<td> <img src="images/attraction/' + data[row].attraction_picture + '" style="height:40px;"></td>';
+                    } else {
+                        Str = Str + '<td> - </td>';
+                    }
+
                     Str = Str + '<td>' + data[row].created_by + '</td>';
-                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction(' + data[row].attraction_id + ',' + data[row].country_id + ',\'' + data[row].attraction_name + '\')">\n\
+                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction(' + data[row].attraction_id + ',' + data[row].country_id + ',\'' + data[row].attraction_name + '\',\'' + data[row].attraction_url + '\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
                     Str = Str + '<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeAttraction(' + data[row].attraction_id + ')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
@@ -82,11 +90,12 @@ function removeAttraction(id) {
     $('#hidden_remove_id').val(id);
     // $('#removeModal').modal('show'); 
 }
-function editAttraction(id, country_id,attractionName) {
+function editAttraction(id, country_id, attractionName, attractionUrl) {
     createCountryDropDown("update_country_select");
-    
+
     $('#hidden_update_id').val(id);
     $('#update_attraction_name').val(attractionName);
+    $('#update_attraction_url').val(attractionUrl);
     $('#update_country_select').val(country_id);
     // $('#editModal').modal('hide'); 
 }
@@ -129,7 +138,10 @@ function refresh() {
     $('#attraction_name').val('');
     $('#attractionTable').DataTable().destroy();
     createTable();
-    $('#attractionTable').DataTable();
+    $('#attractionTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
     $('#update_attraction_picture').val('');
@@ -159,9 +171,13 @@ function findAttractionByName(attractionName) {
                     Str = Str + '<td>' + data[row].attraction_name + '</td>';
                     Str = Str + '<td>' + data[row].attraction_url + '</td>';
                     Str = Str + '<td>' + data[row].country_name + '</td>';
-                    Str = Str + '<td> <img src="images/attraction/' + data[row].attraction_picture + '" style="height:40px;"></td>';
+                    if (data[row].attraction_picture) {
+                        Str = Str + '<td> <img src="images/attraction/' + data[row].attraction_picture + '" style="height:40px;"></td>';
+                    } else {
+                        Str = Str + '<td> - </td>';
+                    }
                     Str = Str + '<td>' + data[row].created_by + '</td>';
-                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction(' + data[row].attraction_id + ',\'' + data[row].attraction_name + '\')">\n\
+                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editAttraction(' + data[row].attraction_id + ',\'' + data[row].attraction_name + '\',\'' + data[row].attraction_url + '\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
                     Str = Str + '<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeAttraction(' + data[row].attraction_id + ')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
@@ -169,7 +185,10 @@ function findAttractionByName(attractionName) {
                     rowNo++;
                 }
                 document.getElementById("attractionData").innerHTML = Str;
-                $('#attractionTable').DataTable();
+                $('#attractionTable').DataTable({
+                    "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+                    "iDisplayLength": 100
+                });
             } else {
                 alert('select fail');
             }

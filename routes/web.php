@@ -230,3 +230,21 @@ Route::get('manage-front-review', 'ManageFrontController@manage_front_review');
 Route::post('saveReview', 'ManageFrontController@saveReview');
 
 Route::post('searchReview', 'ManageFrontController@searchReview');
+
+// Article //
+
+Route::get('article-index', 'ArticleIndexController@article_index');
+
+Route::get('article-content', 'ArticleIndexController@article_content');
+
+Route::get('article-manage', 'ArticleIndexController@article_manage');
+
+Route::get('article-manage-action', 'ArticleIndexController@article_manage_action');
+
+Route::post('searchArticle', 'ArticleIndexController@searchArticle');
+
+Route::post('saveArticle', 'ArticleIndexController@saveArticle');
+
+Route::post('getArticleById', 'ArticleIndexController@getArticleById');
+
+Route::post('removeArticle', 'ArticleIndexController@removeArticle');

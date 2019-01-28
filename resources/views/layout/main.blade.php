@@ -20,7 +20,7 @@ session_start();
         <link href="{{ asset('http://fonts.googleapis.com/css?family=Oswald:400') }}" rel='stylesheet' type='text/css'>
         <link href="{{ asset('http://fonts.googleapis.com/css?family=Lato:400,700') }}" rel='stylesheet' type='text/css'>
         <link href="{{ asset('https://fonts.googleapis.com/css?family=Kanit|Bai+Jamjuree') }}" rel="stylesheet">
-        
+
 
         <!-- CSS LIBRARY -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/lib/bootstrap.css') }}">
@@ -53,6 +53,7 @@ session_start();
         <script type="text/javascript">
             var base_path = "{{ url('/') }}";
         </script>
+        @yield('meta_tag')
     </head>
 
     <!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
@@ -88,7 +89,7 @@ session_start();
                         </div>
 
                         <div class="col-md-9">
-                            
+
                             <div class="work-time-line">
                                 <a href="http://line.me/ti/p/%40tourhits" target="_blank" rel="noopener noreferrer" class="" data-line-link=""><img src="{{ asset('/images/logo-line.png')}}"> @Tourhits</a>        
                             </div>
@@ -492,10 +493,10 @@ session_start();
                                     <a href="{{ url('tourhit?category_id=100002') }}"><i class="fa fa-star"></i>&nbsp;ทัวร์ฮิต</a>
                                     <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
-                                <li class="menu-item-has-children">
-                                    <a><i class="fa fa-map-marker"></i>&nbsp;สถานที่ยอดฮิต</a>
-                                    <hr id="hothits" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
-                                </li>
+                                <!--                                <li class="menu-item-has-children">
+                                                                    <a><i class="fa fa-map-marker"></i>&nbsp;สถานที่ยอดฮิต</a>
+                                                                    <hr id="hothits" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                                                </li>-->
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('about') }}">เกี่ยวกับเรา</a>
                                     <hr id="about" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
@@ -505,7 +506,7 @@ session_start();
                                     <hr id="contact" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a>บทความ</a>
+                                    <a href="{{ url('article-index') }}">บทความ</a>
                                     <!--<a href="{{ url('blog') }}">บทความ</a>-->
                                     <hr id="blog" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
                                 </li>
@@ -588,100 +589,100 @@ session_start();
 
             <footer id="footer-page">
                 <div class="container">
-                        <!-- WIDGET ซ้าย -->
-                        <div class="col-md-5 col-xs-12">
-                            <div class="row">
-                                <div class="footer-one">
-                                    <div class="col-xs-4 box-border"><a href="#">หน้าหลัก</a></div>
-                                    <div class="col-xs-4 box-border"><a href="">เกี่ยวกับเรา</a></div>
-                                    <div class="col-xs-4 box-border"><a href="">ติดต่อเรา</a></div>
-                                </div>
-                            </div>    
-                            <div class="row">
-                                <div class="foot-location-head">บริษัท ทัวร์ฮิตส์ จำกัด</div>
+                    <!-- WIDGET ซ้าย -->
+                    <div class="col-md-5 col-xs-12">
+                        <div class="row">
+                            <div class="footer-one">
+                                <div class="col-xs-4 box-border"><a href="#">หน้าหลัก</a></div>
+                                <div class="col-xs-4 box-border"><a href="">เกี่ยวกับเรา</a></div>
+                                <div class="col-xs-4 box-border"><a href="">ติดต่อเรา</a></div>
                             </div>
-                            <div class="row">
-                                <div class="foot-location-detail"> 
-                                    <p>เลขที่ 300/76 โครงการพรีเมี่ยมเพลส
-                                    <p>ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กรุงเทพฯ 10240</p>                           
-                                    <p>โทร: 0-2379-1249 Fax: 0-2379-1966-7</p>
-                                    <p>E-mail:<a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;"> tourhits@gmail.com</a></p>
-                                </div> 
-                            </div>
-                            <div class="row">
-                                
-                            </div>   
-                            <div class="row">
-                                <div class="fb-page" data-href="https://www.facebook.com/page.tourhits" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/page.tourhits" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/page.tourhits">Tourhits</a></blockquote></div>
-                            </div>
+                        </div>    
+                        <div class="row">
+                            <div class="foot-location-head">บริษัท ทัวร์ฮิตส์ จำกัด</div>
                         </div>
+                        <div class="row">
+                            <div class="foot-location-detail"> 
+                                <p>เลขที่ 300/76 โครงการพรีเมี่ยมเพลส
+                                <p>ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กรุงเทพฯ 10240</p>                           
+                                <p>โทร: 0-2379-1249 Fax: 0-2379-1966-7</p>
+                                <p>E-mail:<a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;"> tourhits@gmail.com</a></p>
+                            </div> 
+                        </div>
+                        <div class="row">
+
+                        </div>   
+                        <div class="row">
+                            <div class="fb-page" data-href="https://www.facebook.com/page.tourhits" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/page.tourhits" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/page.tourhits">Tourhits</a></blockquote></div>
+                        </div>
+                    </div>
 
                     <!-- WIDGET ขวา -->
                     <div class="col-md-7 hidden-xs hidden-sm">
-                            <div class="footer-two">
-                                <div class="col-md-12">แพ็คเกจทัวร์ ทั้งหมด</div>
+                        <div class="footer-two">
+                            <div class="col-md-12">แพ็คเกจทัวร์ ทั้งหมด</div>
+                        </div>
+                        <div class="row">
+                            <div class="package-country-footer">
+                                <div class="col-md-12">
+                                    <div class="continent-name">ทวีปเอเชีย</div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ญี่ปุ่น?country=ทัวร์ญี่ปุ่น')}}">ทัวร์ญี่ปุ่น</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์จีน?country=ทัวร์จีน')}}">ทัวร์จีน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ฮ่องกง?country=ทัวร์ฮ่องกง')}}">ทัวร์ฮ่องกง</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์พม่า?country=ทัวร์พม่า')}}">ทัวร์พม่า</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ไต้หวัน?country=ทัวร์ไต้หวัน')}}">ทัวร์ไต้หวัน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์เกาหลี?country=ทัวร์เกาหลี')}}">ทัวร์เกาหลี</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์เวียดนาม?country=ทัวร์เวียดนาม')}}">ทัวร์เวียดนาม</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์สิงคโปร์?country=ทัวร์สิงคโปร์')}}">ทัวร์สิงคโปร์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ลาว?country=ทัวร์ลาว')}}">ทัวร์ลาว</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์มาเก๊า?country=ทัวร์มาเก๊า')}}">ทัวร์มาเก๊า</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อินเดีย?country=ทัวร์อินเดีย')}}">ทัวร์อินเดีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อินโดนีเซีย?country=ทัวร์อินโดนีเซีย')}}">ทัวร์อินโดนีเซีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์มาเลเซีย?country=ทัวร์มาเลเซีย')}}">ทัวร์เนปาล</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์มาเลเซีย?country=ทัวร์มาเลเซีย')}}">ทัวร์มาเลเซีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์บรูไน?country=ทัวร์บรูไน')}}">ทัวร์บรูไน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์กัมพูชา?country=ทัวร์กัมพูชา')}}">ทัวร์กัมพูชา</a></div>
+                                </div>        
+                                <div class="col-md-12" style="margin-top: 20px;">
+                                    <div class="continent-name">ทวีปยุโรป</div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ยุโรป?country=ทัวร์ยุโรป')}}">ทัวร์ยุโรป</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ยุโรปตะวันออก?country=ทัวร์ยุโรปตะวันออก')}}">ทัวร์ยุโรปตะวันออก</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์รัสเซีย?country=ทัวร์รัสเซีย')}}">ทัวร์รัสเซีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อิตาลี?country=ทัวร์อิตาลี')}}">ทัวร์อิตาลี</a></div>   
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ออสเตรีย?country=ทัวร์ออสเตรีย')}}">ทัวร์ออสเตรีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ฝรั่งเศส?country=ทัวร์ฝรั่งเศส')}}">ทัวร์ฝรั่งเศส</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์สวิส?country=ทัวร์สวิส')}}">ทัวร์สวิส</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์เยอรมัน?country=ทัวร์เยอรมัน')}}">ทัวร์เยอรมัน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์สเปน?country=ทัวร์สเปน')}}">ทัวร์สเปน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ฟินแลนด์?country=ทัวร์ฟินแลนด์')}}">ทัวร์ฟินแลนด์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์เนเธอร์แลนด์?country=ทัวร์เนเธอร์แลนด์')}}">ทัวร์เนเธอร์แลนด์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์โปแลนด์?country=ทัวร์โปแลนด์')}}">ทัวร์โปแลนด์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์โครเอเชีย?country=ทัวร์โครเอเชีย')}}">ทัวร์โครเอเชีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อังกฤษ?country=ทัวร์อังกฤษ')}}">ทัวร์อังกฤษ</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์สแกนดิเนเวีย?country=ทัวร์สแกนดิเนเวีย')}}">ทัวร์สแกนดิเนเวีย</a></div>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 20px;">
+                                    <div class="continent-name">ทวีปอื่นๆ</div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์มัลดีฟส์?country=ทัวร์มัลดีฟส์')}}">ทัวร์มัลดีฟส์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ดูไบ?country=ทัวร์ดูไบ')}}">ทัวร์ดูไบ</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ออสเตรเลีย?country=ทัวร์ออสเตรเลีย')}}">ทัวร์ออสเตรเลีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อียิปต์?country=ทัวร์อียิปต์')}}">ทัวร์อียิปต์</a></div>   
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ตุรกี?country=ทัวร์ตุรกี')}}">ทัวร์ตุรกี</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์แอฟริกาใต้?country=ทัวร์แอฟริกาใต้')}}">ทัวร์แอฟริกาใต้</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์นอร์เวย์?country=ทัวร์นอร์เวย์')}}">ทัวร์นอร์เวย์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์นิวซีแลนด์?country=ทัวร์นิวซีแลนด์')}}">ทัวร์นิวซีแลนด์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ดูไบ?country=ทัวร์อเมริกา')}}">ทัวร์อเมริกา</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ดูไบ?country=ทัวร์อเมริกาใต้')}}">ทัวร์อเมริกาใต้</a></div> 
+                                </div>    
                             </div>
-                            <div class="row">
-                                    <div class="package-country-footer">
-                                        <div class="col-md-12">
-                                            <div class="continent-name">ทวีปเอเชีย</div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ญี่ปุ่น?country=ทัวร์ญี่ปุ่น')}}">ทัวร์ญี่ปุ่น</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์จีน?country=ทัวร์จีน')}}">ทัวร์จีน</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ฮ่องกง?country=ทัวร์ฮ่องกง')}}">ทัวร์ฮ่องกง</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์พม่า?country=ทัวร์พม่า')}}">ทัวร์พม่า</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ไต้หวัน?country=ทัวร์ไต้หวัน')}}">ทัวร์ไต้หวัน</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์เกาหลี?country=ทัวร์เกาหลี')}}">ทัวร์เกาหลี</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์เวียดนาม?country=ทัวร์เวียดนาม')}}">ทัวร์เวียดนาม</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์สิงคโปร์?country=ทัวร์สิงคโปร์')}}">ทัวร์สิงคโปร์</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ลาว?country=ทัวร์ลาว')}}">ทัวร์ลาว</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์มาเก๊า?country=ทัวร์มาเก๊า')}}">ทัวร์มาเก๊า</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อินเดีย?country=ทัวร์อินเดีย')}}">ทัวร์อินเดีย</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อินโดนีเซีย?country=ทัวร์อินโดนีเซีย')}}">ทัวร์อินโดนีเซีย</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์มาเลเซีย?country=ทัวร์มาเลเซีย')}}">ทัวร์เนปาล</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์มาเลเซีย?country=ทัวร์มาเลเซีย')}}">ทัวร์มาเลเซีย</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์บรูไน?country=ทัวร์บรูไน')}}">ทัวร์บรูไน</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์กัมพูชา?country=ทัวร์กัมพูชา')}}">ทัวร์กัมพูชา</a></div>
-                                        </div>        
-                                        <div class="col-md-12" style="margin-top: 20px;">
-                                            <div class="continent-name">ทวีปยุโรป</div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ยุโรป?country=ทัวร์ยุโรป')}}">ทัวร์ยุโรป</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ยุโรปตะวันออก?country=ทัวร์ยุโรปตะวันออก')}}">ทัวร์ยุโรปตะวันออก</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์รัสเซีย?country=ทัวร์รัสเซีย')}}">ทัวร์รัสเซีย</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อิตาลี?country=ทัวร์อิตาลี')}}">ทัวร์อิตาลี</a></div>   
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ออสเตรีย?country=ทัวร์ออสเตรีย')}}">ทัวร์ออสเตรีย</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ฝรั่งเศส?country=ทัวร์ฝรั่งเศส')}}">ทัวร์ฝรั่งเศส</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์สวิส?country=ทัวร์สวิส')}}">ทัวร์สวิส</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์เยอรมัน?country=ทัวร์เยอรมัน')}}">ทัวร์เยอรมัน</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์สเปน?country=ทัวร์สเปน')}}">ทัวร์สเปน</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ฟินแลนด์?country=ทัวร์ฟินแลนด์')}}">ทัวร์ฟินแลนด์</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์เนเธอร์แลนด์?country=ทัวร์เนเธอร์แลนด์')}}">ทัวร์เนเธอร์แลนด์</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์โปแลนด์?country=ทัวร์โปแลนด์')}}">ทัวร์โปแลนด์</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์โครเอเชีย?country=ทัวร์โครเอเชีย')}}">ทัวร์โครเอเชีย</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อังกฤษ?country=ทัวร์อังกฤษ')}}">ทัวร์อังกฤษ</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์สแกนดิเนเวีย?country=ทัวร์สแกนดิเนเวีย')}}">ทัวร์สแกนดิเนเวีย</a></div>
-                                        </div>
-                                        <div class="col-md-12" style="margin-top: 20px;">
-                                            <div class="continent-name">ทวีปอื่นๆ</div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์มัลดีฟส์?country=ทัวร์มัลดีฟส์')}}">ทัวร์มัลดีฟส์</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ดูไบ?country=ทัวร์ดูไบ')}}">ทัวร์ดูไบ</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ออสเตรเลีย?country=ทัวร์ออสเตรเลีย')}}">ทัวร์ออสเตรเลีย</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์อียิปต์?country=ทัวร์อียิปต์')}}">ทัวร์อียิปต์</a></div>   
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ตุรกี?country=ทัวร์ตุรกี')}}">ทัวร์ตุรกี</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์แอฟริกาใต้?country=ทัวร์แอฟริกาใต้')}}">ทัวร์แอฟริกาใต้</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์นอร์เวย์?country=ทัวร์นอร์เวย์')}}">ทัวร์นอร์เวย์</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์นิวซีแลนด์?country=ทัวร์นิวซีแลนด์')}}">ทัวร์นิวซีแลนด์</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ดูไบ?country=ทัวร์อเมริกา')}}">ทัวร์อเมริกา</a></div>
-                                            <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/ทัวร์ดูไบ?country=ทัวร์อเมริกาใต้')}}">ทัวร์อเมริกาใต้</a></div> 
-                                        </div>    
-                                    </div>
-                            </div>             
+                        </div>             
+                    </div>
+
                 </div>
-                    
-            </div>
-        </footer>
+            </footer>
             <footer id="footer-page-bottom">
                 <div class="container">
-                <div class="col-xs-12">
+                    <div class="col-xs-12">
                         <div class="verification-footer">
                             <div class="sponsor-footer hidden-xs hidden-sm">
                                 <ul>
@@ -702,7 +703,7 @@ session_start();
                             </div>    
                             <p>สงวนลิขสิทธิ์ 2561 Tourhits.co | 2018 Tourhits All rights reserved.</p>  
                         </div>
-                </div>
+                    </div>
                 </div>
             </footer>
             <!-- END / FOOTER PAGE -->
@@ -713,184 +714,188 @@ session_start();
                 <div class="box-line bx">
                     <a target="_blank" rel="noopener noreferrer" href="http://line.me/ti/p/%40tourhits">
                         <div class="line-img-box img-bx">
-                            <img alt="" src="{{ asset('/images/icon/line.png')}}" title="">
+                            <img alt="" src="{{ asset('/images/icon/logo-line.png')}}" title="">
                         </div>    
-                            <span>ไลน์หาเรา</span>
-                         
+                        <span>ไลน์หาเรา</span>
+
                     </a>
                 </div>     
-                
+
                 <div class="box-fb bx">
                     <a href="https://m.me/PAGE.TOURHITS/">
-                    <div class="tel-img-box img-bx">
-                        <img alt="" src="{{ asset('/images/icon/messenger.png')}}" title="">
-                    </div>    
+                        <div class="tel-img-box img-bx">
+                            <img alt="" src="{{ asset('/images/icon/messenger.png')}}" title="">
+                        </div>    
                         <span>Messenger</span>
                     </a> 
                 </div>
-                
+
                 <div class="box-tel bx">  
                     <a href="tel:02-379-1249">
                         <div class="tel-img-box img-bx">
-                            <img alt="" src="{{ asset('/images/icon/chat.png')}}" title="">
+                            <img alt="" src="{{ asset('/images/icon/telephone2.png')}}" title="">
                         </div>    
-                            <span>โทรหาเรา</span>    
+                        <span>โทรหาเรา</span>    
                     </a>
                 </div>
             </div>
-            
-<!--back to top-->
-        <button onclick="topFunction()" id="BtnBtt" title="Go to top"><i class="fas fa-arrow-alt-circle-up"></i></button>
-            
+
+            <!--back to top-->
+            <button onclick="topFunction()" id="BtnBtt" title="Go to top"><i class="fas fa-arrow-alt-circle-up"></i></button>
+
         </div>
 
-            <!-- END navbar only xs -->
-        </div>
-        <!-- END / PAGE WRAP -->
-        <div id="fb-root"></div>
-        
-        <script>(function (d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id))
-return;
-js = d.createElement(s);
-js.id = id;
-js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-        </script>
-        <!-- LOAD JQUERY -->
-        <script type="text/javascript" src="{{ asset('js/lib/jquery-1.11.2.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/masonry.pkgd.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/jquery.parallax-1.1.3.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/jquery.owl.carousel.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/theia-sticky-sidebar.js') }}"></script>
-        <script type='text/javascript' src="{{ asset('js/lib/jquery-ui.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/bootstrap.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/bootstrap-slider.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/pagination.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/moment.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/AutoNumeric.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/jquery.gdocsviewer.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/qqq.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/lib/jquery.endless-scroll.js') }}"></script>
-        <script type="text/javascript">
-            $(function () {
-                $('.underline-link').removeClass('menu-active');
-            });
-        </script>
+        <!-- END navbar only xs -->
+    </div>
+    <!-- END / PAGE WRAP -->
+    <div id="fb-root"></div>
 
-        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-        <!--footer scripts-->
-        @yield('footer_scripts')
-        <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1';
-          fjs.parentNode.insertBefore(js, fjs);
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- LOAD JQUERY -->
+    <script type="text/javascript" src="{{ asset('js/lib/jquery-1.11.2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/masonry.pkgd.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/jquery.parallax-1.1.3.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/jquery.owl.carousel.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/theia-sticky-sidebar.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/lib/jquery-ui.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/bootstrap-slider.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/pagination.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/moment.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/AutoNumeric.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/jquery.gdocsviewer.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/qqq.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/jquery.endless-scroll.js') }}"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.underline-link').removeClass('menu-active');
+        });
+    </script>
+
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    <!--footer scripts-->
+    @yield('footer_scripts')
+    <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1';
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-        <!-- REVOLUTION DEMO -->
-        <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.revolution.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.tools.min.js') }}"></script>
-        <script type="text/javascript">
-            if ($('#slider-revolution').length) {
-                $('#slider-revolution').show().revolution({
-                    ottedOverlay: "none",
-                    delay: 10000,
-                    startwidth: 1600,
-                    startheight: 448,
-                    hideThumbs: 200,
+    <!-- REVOLUTION DEMO -->
+    <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('revslider-demo/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script type="text/javascript">
+        if ($('#slider-revolution').length) {
+            $('#slider-revolution').show().revolution({
+                ottedOverlay: "none",
+                delay: 10000,
+                startwidth: 1600,
+                startheight: 448,
+                hideThumbs: 200,
 
-                    thumbWidth: 100,
-                    thumbHeight: 50,
-                    thumbAmount: 5,
+                thumbWidth: 100,
+                thumbHeight: 50,
+                thumbAmount: 5,
 
-                    simplifyAll: "off",
+                simplifyAll: "off",
 
-                    navigationType: "none",
-                    navigationArrows: "solo",
-                    navigationStyle: "preview4",
+                navigationType: "none",
+                navigationArrows: "solo",
+                navigationStyle: "preview4",
 
-                    touchenabled: "on",
-                    onHoverStop: "on",
-                    nextSlideOnWindowFocus: "off",
+                touchenabled: "on",
+                onHoverStop: "on",
+                nextSlideOnWindowFocus: "off",
 
-                    swipe_threshold: 0.7,
-                    swipe_min_touches: 1,
-                    drag_block_vertical: false,
+                swipe_threshold: 0.7,
+                swipe_min_touches: 1,
+                drag_block_vertical: false,
 
-                    parallax: "mouse",
-                    parallaxBgFreeze: "on",
-                    parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
+                parallax: "mouse",
+                parallaxBgFreeze: "on",
+                parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
 
-                    keyboardNavigation: "off",
+                keyboardNavigation: "off",
 
-                    navigationHAlign: "center",
-                    navigationVAlign: "bottom",
-                    navigationHOffset: 0,
-                    navigationVOffset: 20,
+                navigationHAlign: "center",
+                navigationVAlign: "bottom",
+                navigationHOffset: 0,
+                navigationVOffset: 20,
 
-                    soloArrowLeftHalign: "left",
-                    soloArrowLeftValign: "center",
-                    soloArrowLeftHOffset: 20,
-                    soloArrowLeftVOffset: 0,
+                soloArrowLeftHalign: "left",
+                soloArrowLeftValign: "center",
+                soloArrowLeftHOffset: 20,
+                soloArrowLeftVOffset: 0,
 
-                    soloArrowRightHalign: "right",
-                    soloArrowRightValign: "center",
-                    soloArrowRightHOffset: 20,
-                    soloArrowRightVOffset: 0,
+                soloArrowRightHalign: "right",
+                soloArrowRightValign: "center",
+                soloArrowRightHOffset: 20,
+                soloArrowRightVOffset: 0,
 
-                    shadow: 0,
-                    fullWidth: "on",
-                    fullScreen: "off",
+                shadow: 0,
+                fullWidth: "on",
+                fullScreen: "off",
 
-                    spinner: "spinner2",
+                spinner: "spinner2",
 
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
 
-                    shuffle: "off",
+                shuffle: "off",
 
-                    autoHeight: "off",
-                    forceFullWidth: "off",
+                autoHeight: "off",
+                forceFullWidth: "off",
 
-                    hideThumbsOnMobile: "off",
-                    hideNavDelayOnMobile: 1500,
-                    hideBulletsOnMobile: "off",
-                    hideArrowsOnMobile: "off",
-                    hideThumbsUnderResolution: 0,
+                hideThumbsOnMobile: "off",
+                hideNavDelayOnMobile: 1500,
+                hideBulletsOnMobile: "off",
+                hideArrowsOnMobile: "off",
+                hideThumbsUnderResolution: 0,
 
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    startWithSlide: 0
-                });
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0
+            });
+        }
+    </script>
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                document.getElementById("BtnBtt").style.display = "inline-flex";
+            } else {
+                document.getElementById("BtnBtt").style.display = "none";
             }
-        </script>
-        
-        <script>
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
+        }
 
-            function scrollFunction() {
-                if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-                    document.getElementById("BtnBtt").style.display = "inline-flex";
-                } else {
-                    document.getElementById("BtnBtt").style.display = "none";
-                }
-            }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
 
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0; // For Safari
-                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-            }
-        </script>
-        
-    </body>
+</body>
 </html>

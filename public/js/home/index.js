@@ -57,10 +57,10 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
             div = div + '<div class="tour-bottom-right">';
             div = div + '<div class="pull-right">';
             var tour_code = val['tour_package_id'];
-            while (tour_code.length != 4)
-            {
-                tour_code = '0' + tour_code;
-            }
+//            while (tour_code.length != 4)
+//            {
+//                tour_code = '0' + tour_code;
+//            }
 
             div = div + '<span class="tag">TH' + tour_code + '</span>';
             div = div + '</div>';
