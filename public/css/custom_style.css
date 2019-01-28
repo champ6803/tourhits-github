@@ -1,13 +1,14 @@
 
 .underline-link {
-    border-bottom: 4px solid #488bf8;
+    border-bottom: 3px solid #ca161d;
     width: 0;
-    bottom: 0;
+    bottom: 3px;
     margin: 0;
     opacity: 0;
     z-index: 1;
     position: absolute;
     display: none;
+    opacity: 0.8;
 }
 
 .register-section{
@@ -4369,7 +4370,7 @@ Custom BS3
     font-family: 'Kanit', sans-serif;
     font-size: 14px;    
     display: inline; 
-    color: black;
+    color: white;
     line-height: 60px;
     float: left;
     min-width: 192px;
@@ -5943,7 +5944,7 @@ https://flickity.metafizzy.co
 }
 
 .menu-item-has-children i {
-    color: #ed5565;
+    color: #ce171e;
 }
 
 .sub-item i {
@@ -6037,8 +6038,8 @@ https://flickity.metafizzy.co
 #header-page .main-header{
     font-family: 'Kanit', sans-serif;
     height: 60px;
-    background-color: #f0f2f3;
-    color: black;
+    background-color: #ca161d;
+    color: white;
 }
 
 #header-page .work-time1{
@@ -6082,14 +6083,14 @@ https://flickity.metafizzy.co
 #header-page .work-time-line a{
     padding-left: 20px;
     font-size: 21px;
-    color: #000;
+    color: white;
     font-family: 'supermarket', sans-serif;
 }
 #header-page .work-time-tel{float: right;}
 #header-page .work-time-tel span{
     padding-left: 20px;
     font-size: 19px;
-    color: #ed5565;
+    color: white;
     font-family: 'supermarket', sans-serif;    
     font-weight: bold;
     line-height: 60px;

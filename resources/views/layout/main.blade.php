@@ -91,7 +91,7 @@ session_start();
                         <div class="col-md-9">
 
                             <div class="work-time-line">
-                                <a href="http://line.me/ti/p/%40tourhits" target="_blank" rel="noopener noreferrer" class="" data-line-link=""><img src="{{ asset('/images/logo-line.png')}}"> @Tourhits</a>        
+                                <a href="http://line.me/ti/p/%40tourhits" target="_blank" rel="noopener noreferrer" class="" data-line-link=""><img src="{{ asset('/images/logo-line-2.png')}}"> @Tourhits</a>        
                             </div>
                             <div class="work-time-tel">
                                 <span><i class="fas fa-phone"></i> 02-379-1249</span>
@@ -119,11 +119,11 @@ session_start();
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('/')}}"><i class="fa fa-home"></i>&nbsp;หน้าแรก</a>
-                                    <hr id="home" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <hr id="home" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a><i class="fas fa-globe-africa"></i>&nbsp;แพ็คเกจทัวร์</a>
-                                    <hr id="package_tour" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <a><i class="far fa-flag"></i>&nbsp;แพ็คเกจทัวร์</a>
+                                    <hr id="package_tour" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
                                     <ul class="col-md-12 sub-menu">
                                         <div class="col-md-4 cat-asian cat-line">
                                             <!--                                        เอเชีย-->
@@ -490,8 +490,8 @@ session_start();
                                                                         <hr id="indx" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">-->
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('tourhit?category_id=100002') }}"><i class="fa fa-star"></i>&nbsp;ทัวร์ฮิต</a>
-                                    <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <a href="{{ url('tourhit?category_id=100002') }}">ทัวร์ฮิต</a>
+                                    <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px;">
                                 </li>
                                 <!--                                <li class="menu-item-has-children">
                                                                     <a><i class="fa fa-map-marker"></i>&nbsp;สถานที่ยอดฮิต</a>
@@ -499,16 +499,16 @@ session_start();
                                                                 </li>-->
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('about') }}">เกี่ยวกับเรา</a>
-                                    <hr id="about" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <hr id="about" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('contact') }}">ติดต่อเรา</a>
-                                    <hr id="contact" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <hr id="contact" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('article-index') }}">บทความ</a>
                                     <!--<a href="{{ url('blog') }}">บทความ</a>-->
-                                    <hr id="blog" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
+                                    <hr id="blog" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
                                 </li>
                                 <!--                                <li class="menu-item-has-children">
                                                                     <a href="{{ url('login')}}">เข้าสู่ระบบ</a>
