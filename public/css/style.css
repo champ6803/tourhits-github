@@ -1058,7 +1058,8 @@ span.dropcap {
 .awe-navigation {
     position: relative;
     text-align: right;
-    padding-right: 65px;
+/*    padding-right: 65px;*/
+    padding-right: 282px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -1071,15 +1072,15 @@ span.dropcap {
 .awe-navigation .menu-list li {
     position: relative;
     display: inline-block;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 .awe-navigation .menu-list li a {
     display: block;
     font-family: supermarket, sans-serif;
     font-weight: 600;
     font-size: 17px;
-    color: #000;
-    line-height: 50px;
+    color: #262626;
+    line-height: 43px;
 }
 .awe-navigation .menu-list li:hover > a, .awe-navigation .menu-list li.current-menu-parent > a, .awe-navigation .menu-list li.current-menu-item > a {
     color: #ca161d!important;
@@ -1263,7 +1264,7 @@ span.dropcap {
 .search-box {
     position: absolute;
     top: 0;
-    right: 15px;
+    right: 75px;
     white-space: nowrap;
     display: inline-block;
     z-index: 9;

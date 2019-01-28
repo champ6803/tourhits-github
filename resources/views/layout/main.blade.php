@@ -119,11 +119,11 @@ session_start();
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('/')}}"><i class="fa fa-home"></i>&nbsp;หน้าแรก</a>
-                                    <hr id="home" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
+                                    <hr id="home" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a><i class="far fa-flag"></i>&nbsp;แพ็คเกจทัวร์</a>
-                                    <hr id="package_tour" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
+                                    <a><i class="fas fa-globe-asia"></i>&nbsp;แพ็คเกจทัวร์</a>
+                                    <hr id="package_tour" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
                                     <ul class="col-md-12 sub-menu">
                                         <div class="col-md-4 cat-asian cat-line">
                                             <!--                                        เอเชีย-->
@@ -491,7 +491,7 @@ session_start();
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('tourhit?category_id=100002') }}">ทัวร์ฮิต</a>
-                                    <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px;">
+                                    <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
                                 </li>
                                 <!--                                <li class="menu-item-has-children">
                                                                     <a><i class="fa fa-map-marker"></i>&nbsp;สถานที่ยอดฮิต</a>
@@ -499,18 +499,18 @@ session_start();
                                                                 </li>-->
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('about') }}">เกี่ยวกับเรา</a>
-                                    <hr id="about" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
+                                    <hr id="about" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('contact') }}">ติดต่อเรา</a>
-                                    <hr id="contact" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
+                                    <hr id="contact" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="{{ url('article-index') }}">บทความ</a>
                                     <!--<a href="{{ url('blog') }}">บทความ</a>-->
-                                    <hr id="blog" class="underline-link" data-selenium="underline-link" style="width: 60%; left: 20%;">
+                                    <hr id="blog" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
                                 </li>
-                                <!--                                <li class="menu-item-has-children">
+<!--                                                                <li class="menu-item-has-children">
                                                                     <a href="{{ url('login')}}">เข้าสู่ระบบ</a>
                                                                 </li>-->
 
@@ -518,7 +518,102 @@ session_start();
 
                         </nav>
                         <!-- END / NAVIGATION -->
+<!--                        <input id="search-tour-box" type="checkbox" class="d-none">
+                        <label for="search-tour-box" class="search-tour-box">
+                            <span class=""><i class="awe-icon awe-icon-search"></i>ค้นหาแพ็คเกจ</span>
+                        </label>-->
+                        <div class="search-tour-box">
+                            <button onclick="toggle_div_fun('sectiontohide');">
+                            <span class="">ค้นหาแพ็คเกจ</span> 
+                            </button>
+                        </div>    
 
+                        <div id="sectiontohide">
+                            <div class="search-modal-box">
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="input-group mb-2">
+                                            ประเทศ
+                                            <input title="" id="search_input" placeholder="ประเทศ, เส้นทาง, เมือง" name="" type="text" class="form-control rounded">
+                                            <input type="hidden" title="optional_input" disabled="">
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                        <div class="input-group w-50 mr-2">
+                                        <div class="input-group-prepend">
+                                        <img class="mr-2 d-flex align-self-center" height="20px" alt="Flag Icon" src="https://cloudfront.tourkrub.co/packs/images/icon/icon-calendar-grey-71cd3d4d135ec13759effc6dd2ff929a.png">
+                                        </div>
+                                        <select id="month_nav_search" title="month_period" name="month[]" class="form-control rounded">
+                                        <option value="">ช่วงเดือน</option>
+                                        <option value="2019-1-01">มกราคม</option>
+                                        <option value="2019-2-01">กุมภาพันธ์</option>
+                                        <option value="2019-3-01">มีนาคม</option>
+                                        <option value="2019-4-01">เมษายน</option>
+                                        <option value="2019-5-01">พฤษภาคม</option>
+                                        <option value="2019-6-01">มิถุนายน</option>
+                                        <option value="2019-7-01">กรกฎาคม</option>
+                                        <option value="2019-8-01">สิงหาคม</option>
+                                        <option value="2019-9-01">กันยายน</option>
+                                        <option value="2019-10-01">ตุลาคม</option>
+                                        <option value="2019-11-01">พฤศจิกายน</option>
+                                        <option value="2019-12-01">ธันวาคม</option>
+                                        </select>
+                                        </div>
+                                        <div class="input-group w-50">
+                                        <div class="input-group-prepend">
+                                        <img class="mr-2 d-flex align-self-center" height="20px" alt="Flag Icon" src="https://cloudfront.tourkrub.co/packs/images/icon/icon-hash-grey-4c9c0df1ffa73eb5a1a1bfed3ff6d608.png">
+                                        </div>
+                                        <input id="search_id" name="query" type="text" placeholder="รหัสทัวร์ (ถ้าทราบ)" class="form-control rounded">
+                                        </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-green btn-rounded px-5 d-block mx-auto">ค้นหาทัวร์</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                            
+                            
+<!--                            <div class="search-modal">
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="input-group mb-2">
+                                            ประเทศ
+                                            <input title="" id="search_input" placeholder="ประเทศ, เส้นทาง, เมือง" name="" type="text" class="form-control rounded">
+                                            <input type="hidden" title="optional_input" disabled="">
+                                        </div>
+                                        <div class="d-flex mb-3">
+                                        <div class="input-group w-50 mr-2">
+                                        <div class="input-group-prepend">
+                                        <img class="mr-2 d-flex align-self-center" height="20px" alt="Flag Icon" src="https://cloudfront.tourkrub.co/packs/images/icon/icon-calendar-grey-71cd3d4d135ec13759effc6dd2ff929a.png">
+                                        </div>
+                                        <select id="month_nav_search" title="month_period" name="month[]" class="form-control rounded">
+                                        <option value="">ช่วงเดือน</option>
+                                        <option value="2019-1-01">มกราคม</option>
+                                        <option value="2019-2-01">กุมภาพันธ์</option>
+                                        <option value="2019-3-01">มีนาคม</option>
+                                        <option value="2019-4-01">เมษายน</option>
+                                        <option value="2019-5-01">พฤษภาคม</option>
+                                        <option value="2019-6-01">มิถุนายน</option>
+                                        <option value="2019-7-01">กรกฎาคม</option>
+                                        <option value="2019-8-01">สิงหาคม</option>
+                                        <option value="2019-9-01">กันยายน</option>
+                                        <option value="2019-10-01">ตุลาคม</option>
+                                        <option value="2019-11-01">พฤศจิกายน</option>
+                                        <option value="2019-12-01">ธันวาคม</option>
+                                        </select>
+                                        </div>
+                                        <div class="input-group w-50">
+                                        <div class="input-group-prepend">
+                                        <img class="mr-2 d-flex align-self-center" height="20px" alt="Flag Icon" src="https://cloudfront.tourkrub.co/packs/images/icon/icon-hash-grey-4c9c0df1ffa73eb5a1a1bfed3ff6d608.png">
+                                        </div>
+                                        <input id="search_id" name="query" type="text" placeholder="รหัสทัวร์ (ถ้าทราบ)" class="form-control rounded">
+                                        </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-green btn-rounded px-5 d-block mx-auto">ค้นหาทัวร์</button>
+                                    </form>
+                                </div>
+                            </div>    -->
+
+                        
 
                         <!-- SEARCH BOX -->
                         <div class="search-box">
@@ -559,6 +654,7 @@ session_start();
                                     @endif
                                 </div>
                             </form>
+                            
                         </div>
 
                         <!-- END / SEARCH BOX -->
@@ -896,6 +992,19 @@ session_start();
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     </script>
+    
+    <script type="text/javascript">
+    function toggle_div_fun(id) {
+
+       var divelement = document.getElementById(id);
+
+       if(divelement.style.display == 'block')
+          divelement.style.display = 'none';
+       else
+          divelement.style.display = 'block';
+    }
+    </script>
+
 
 </body>
 </html>
