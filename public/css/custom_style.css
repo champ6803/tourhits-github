@@ -6809,12 +6809,14 @@ https://flickity.metafizzy.co
     
     
     @media screen and ( max-width: 958px ) {
-        .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 23px; width:100%;}
-        .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 23px;}
+        .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 18px; width:100%;}
+        .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 18px;}
         .awe-search-tabs__content .ui-tabs-panel select{font-size: 14px;}
         .awe-search-tabs-2 .awe-search-tabs__content{
             margin-top: 45px;
         }
+        .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
+        
     }    
     
     
