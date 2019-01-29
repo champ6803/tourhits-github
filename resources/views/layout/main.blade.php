@@ -85,7 +85,7 @@ session_start();
                 <div class="main-header hidden-xs hidden-sm">
                     <div class="container">
                         <div class="col-md-3">
-                            <span class="cer-logo"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/09305</span>               
+                            <span class="cer-logo"><i class="far fa-registered"></i> เลขที่ใบอนุญาต 11/09305</span>               
                         </div>
 
                         <div class="col-md-9">
@@ -687,7 +687,7 @@ session_start();
 
                         <!-- SEARCH BOX -->
                         <div class="search-box">
-                            <span class="searchtoggle"><i class="fas fa-user"></i></span>
+                            <span class="searchtoggle"><i class="fas fa-user-circle"></i></span>
                             <form class="form-search">
                                 <div class="form-item">
                                     @if(!isset($_SESSION['m_user']))
