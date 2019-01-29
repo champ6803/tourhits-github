@@ -85,7 +85,7 @@ session_start();
                 <div class="main-header hidden-xs hidden-sm">
                     <div class="container">
                         <div class="col-md-3">
-                            <span class="cer-logo"><i class="far fa-registered"></i> เลขที่ใบอนุญาติ 11/09305</span>               
+                            <span class="cer-logo"><i class="far fa-registered"></i> เลขที่ใบอนุญาต 11/09305</span>               
                         </div>
 
                         <div class="col-md-9">
@@ -523,9 +523,9 @@ session_start();
                             <span class=""><i class="awe-icon awe-icon-search"></i>ค้นหาแพ็คเกจ</span>
                         </label>-->
                         <div class="search-tour-box">
-                            <button onclick="toggle_div_fun('sectiontohide');">
-                            <span class=""><i class="fas fa-search"></i>ค้นหาแพ็คเกจ</span> 
-                            </button>
+                            
+                            <span class="" onclick="toggle_div_fun('sectiontohide');"><i class="fas fa-search"></i>ค้นหาแพ็คเกจ</span> 
+                            
                         </div>    
 
                         <div id="sectiontohide">
@@ -541,7 +541,7 @@ session_start();
                                             </li>
                                         </ul>
                                         <div class="awe-search-tabs__content tabs__content ">
-                                            <div class="close-modal-search">
+                                            <div class="close-modal-search" onclick="toggle_div_fun('sectiontohide');">
                                                 <i class="fas fa-times"></i>
                                             </div>
                                             <div id="awe-search-tabs-1">
@@ -687,7 +687,7 @@ session_start();
 
                         <!-- SEARCH BOX -->
                         <div class="search-box">
-                            <span class="searchtoggle"><i class="fas fa-user"></i></span>
+                            <span class="searchtoggle"><i class="fas fa-user-circle"></i></span>
                             <form class="form-search">
                                 <div class="form-item">
                                     @if(!isset($_SESSION['m_user']))
@@ -1075,18 +1075,6 @@ session_start();
     }
     </script>
     
-    <script type="text/javascript">
-    function toggle_close(id) {
-
-       var divelement = document.getElementById(id);
-
-       if(divelement.style.display == 'block')
-          divelement.style.display = 'none';
-       else
-          divelement.style.display = 'block';
-    }
-    </script>
-
 
 </body>
 </html>

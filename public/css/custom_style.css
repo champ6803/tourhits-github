@@ -5946,11 +5946,11 @@ https://flickity.metafizzy.co
 }
 
 .sub-item i {
-    color: #f15f3c;
+    color: #ed5565;
 }
 
 .searchtoggle i {
-    color: #ed5565;
+    color: #575c5d;
 }
 
 .daterangepicker.dropdown-menu {
@@ -6710,6 +6710,7 @@ https://flickity.metafizzy.co
        border-radius: 18px;
        background-color: #ed5565;
        padding: 3px 10px;
+       cursor: pointer;
     }
     
     .search-tour-box span i{
@@ -6816,7 +6817,7 @@ https://flickity.metafizzy.co
             margin-top: 45px;
         }
         .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
-        
+        .search-tour-box{right: 140px;}
     }    
     
     .awe-search-tabs__content .close-modal-search{
