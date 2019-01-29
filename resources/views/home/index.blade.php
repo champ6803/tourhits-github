@@ -27,11 +27,7 @@
     @media screen and ( max-width: 958px ) {
         .package-hit-title h1{font-size: 23px;}
         .package-hit-title .see-more span{font-size: 14px; line-height: 33px;}
-        .package-hit-title .section-descripion{font-size: 19px;}
-        .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
-
-        .awe-search-tabs__content .ui-tabs-panel input{font-size: 16px; font-weight: bold;}
-        
+        .package-hit-title .section-descripion{font-size: 19px;}   
         .hothits-name-box .text{font-size: 14px;}
     }
     .item { width: 25%; }
