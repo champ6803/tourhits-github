@@ -14,6 +14,7 @@ use App\Models\Orders;
 use App\Models\Tour_Attraction_Day;
 use Illuminate\Support\Facades\Response;
 use App\Models\Tag;
+use App\Models\Country;
 
 /* * x
  * Description of TourController
@@ -25,6 +26,8 @@ class TourController extends Controller {
     public function tour_detail($tour_country_name, $tour_package_id, $tour_package_name) {
         $tourModel = new Tour_Package();
         $tourDayModel = new Tour_Package_Day();
+        $countryModel = new Country();
+        $countryList = $countryModel->getCountryAll();
         $tagList = $tourModel->getFilterTag($tour_country_name);
         $tourPackage = $tourModel->getTourDetail($tour_package_id);
         $tourPackageList = $tourModel->getTourDetailList($tour_package_id);
@@ -44,7 +47,7 @@ class TourController extends Controller {
             $tourPackageObj->tour_period_end = $newEndDate;
         }
         $page_title = $tourPackage->tour_package_name;
-        return view('tour.tour-detail', compact('tourPackage', 'tourPackageList', 'tourPackageImagesList', 'tourPackageDayList', 'page_title', 'tourAttractionDayList', 'tagList'));
+        return view('tour.tour-detail', compact('tourPackage', 'tourPackageList', 'tourPackageImagesList', 'tourPackageDayList', 'page_title', 'tourAttractionDayList', 'tagList', 'countryList'));
     }
 
     public function tour_confirm($tour_package_id, $tour_period_id) {
