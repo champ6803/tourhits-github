@@ -541,6 +541,9 @@ session_start();
                                             </li>
                                         </ul>
                                         <div class="awe-search-tabs__content tabs__content ">
+                                            <div class="close-modal-search">
+                                                <i class="fas fa-times"></i>
+                                            </div>
                                             <div id="awe-search-tabs-1">
                                                 <form>
                                                     <div class="form-group">

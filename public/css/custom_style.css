@@ -5954,7 +5954,7 @@ https://flickity.metafizzy.co
 }
 
 .daterangepicker.dropdown-menu {
-    z-index:9999;
+    z-index:99999;
 }
 
 .footer-one{padding-bottom: 20px; }
@@ -6819,6 +6819,14 @@ https://flickity.metafizzy.co
         
     }    
     
+    .awe-search-tabs__content .close-modal-search{
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        cursor: pointer;
+    }
     
-
-    
+    .awe-search-tabs__content .close-modal-search i{
+        font-size: 18px;
+        color: #000000;
+    }
