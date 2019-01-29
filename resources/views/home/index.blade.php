@@ -61,7 +61,13 @@
     <div id="slider-revolution">
         <ul>
             <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
-                <img src="images/bg/banner.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                <img src="images/bg/cover1.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+            </li>
+            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
+                <img src="images/bg/cover2.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+            </li>
+            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
+                <img src="images/bg/cover3.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
         </ul>
     </div>
@@ -69,7 +75,7 @@
 <!-- END / HERO SECTION -->
 
 <!-- SEARCH TABS -->
-<section>
+<!--<section>
     <div class="container search-container">
         <div class="awe-search-tabs-2 tabs">            
             <ul hidden="">
@@ -108,7 +114,7 @@
                                 <div class="form-item">
                                     <input type="text" id="date_picker" placeholder="วันเดินทาง ไป - กลับ" class="form-control">
                                     <i class="far fa-calendar-check awe-icon"></i>
-<!--                                    <i class="awe-icon awe-icon-calendar"></i>-->
+                                    <i class="awe-icon awe-icon-calendar"></i>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +142,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 <!-- END / SEARCH TABS -->
 
 <!-- MASONRY -->

@@ -137,7 +137,7 @@
       </div>
         <div class="modal-footer" style="text-align: center">
          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="deleteClose">ยกเลิก</button>
-        <button type="button" class="btn btn-primary" onclick="deleteCategory()">ตกลง</button>
+        <button type="button" class="btn btn-primary" onclick="deleteTourCategory()">ตกลง</button>
       </div>
     </div>
   </div>
