@@ -27,12 +27,15 @@
     .cart-footer .cart-subtotal .subtotal-title h5 {color: #EC2424;   }
     .cart-footer .cart-subtotal .subtotal {color: #EC2424;}
 
-    .checkout-page__content #payment .place-order input {background-color: #EC2424; }
-    .checkout-page__sidebar ul li a {background-color: #34495e; }
-    .checkout-page__sidebar ul li:hover a {color: #F6A95B;}
-    .checkout-page__sidebar ul li a p {margin-left: 100px; }
-    .checkout-page__sidebar ul li a h5 {font-weight: 300;}
-    .fix-img { width: 60px; height:60px;  padding-right: 20px;}
+    .checkout-page__content #payment .place-order input {background-color: #26aeca; font-size: 20px; font-family: 'Kanit', sans-serif;}
+    .checkout-page__sidebar ul li a {
+        background-color: rgb(237, 85, 101);
+        border-radius: 11px; 
+    }
+    .checkout-page__sidebar ul li:hover a {color: white;}
+    .checkout-page__sidebar ul li a p {font-size: 25px; margin-top: -20px;}
+    .checkout-page__sidebar ul li a h5 {color: white;  font-family: 'Kanit', sans-serif; font-size: 15px; font-weight: 300;}
+    .fix-img { width: 60px; height:73px; border-right: 2px dashed black; margin-right: 25px;}
 
     .form-control{padding: 0px 12px;}
     .checkout-page__content .contact-form{
@@ -185,20 +188,25 @@
                                                 <hr>-->
                         <li>
                             <a>
-                                <div class="fix-img" style="float:left;"><img src="{{asset('images/airplane.png')}}" alt=""></div>
-                                <h5 style="color:#C1BDBD; font-family: 'Kanit', sans-serif;">วันเดินทางไป</h5>
+                                <div class="fix-img" style="float:left;">
+<!--                                    <img src="{{asset('images/airplane.png')}}" alt="">-->
+                                    <span><i class="fas fa-plane-departure"></i></span>
+                                </div>
+                                <h5>- วันเดินทางไป -</h5>
                                 <p id='txt_tour_period_start'></p>
                             </a>
                         </li>
                         <li>
                             <a>
-                                <div class="fix-img" style="float:left;"><img src="{{asset('images/luggage.png')}}" alt=""></div>
-                                <h5 style="color:#C1BDBD; font-family: 'Kanit', sans-serif;">วันเดินทางกลับ</h5>
+                                <div class="fix-img" style="float:left;">
+<!--                                    <img src="{{asset('images/luggage.png')}}" alt="">-->
+                                    <span><i class="fas fa-plane-arrival"></i></span>
+                                </div>
+                                <h5>- วันเดินทางกลับ -</h5>
                                 <p id='txt_tour_period_end'></p>
                             </a>
                         </li>
                     </ul>
-                    <hr>
 <!--                            <span class="phone"><i class="awe-icon awe-icon-phone"></i> ติดต่อเรา : 062 914 2361 <br> <i class="fab fa-line"></i> จองผ่านไลน์ : @Tourhits</span>-->
                 </div>
             </div>
@@ -430,13 +438,13 @@
                                                             </div>-->
                     </div>
                     <div id='login_panel' class="content-title text-center">
-                        <h2 style="color:#EC2424"><i class="fas fa-lock"></i>&nbsp;<a href="/login">เข้าสู่ระบบ หรือ </a></h2>
+                        <h2 style="color:#26aeca"><i class="fas fa-lock"></i>&nbsp;<a href="/login">เข้าสู่ระบบ หรือ </a></h2>
                     </div>
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div id="collapse1" class="panel-collapse">
                                 <div class="contact-form">
-                                    <span><h4 style="color:#ec2424; display: inline; line-height: 1.6;"> ข้อมูลผู้จองสำหรับติดต่อกลับ (ที่อยู่อื่น)</h4></span><br>
+                                    <span><h4 style="color:#26aeca; display: inline; line-height: 1.6;"> ข้อมูลผู้จองสำหรับติดต่อกลับ (ที่อยู่อื่น)</h4></span><br>
                                     <em style="font-size: 18px; font-weight: bold;">กรุณากรอกข้อมูลที่ถูกต้องและครบถ้วน เพื่อการตอบกลับที่รวดเร็ว</em><br>
                                     <div class="confirm-form">
                                         <div class="form-item">

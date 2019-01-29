@@ -49,13 +49,13 @@
 <section class="hero-section">
     <div id="slider-revolution">
         <ul>
-            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
+            <li data-slotamount="7" data-masterspeed="500" data-title="หน้าต่อไป">
                 <img src="images/bg/cover1.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
-            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
+            <li data-slotamount="7" data-masterspeed="500" data-title="หน้าต่อไป">
                 <img src="images/bg/cover2.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
-            <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
+            <li data-slotamount="7" data-masterspeed="500" data-title="หน้าต่อไป">
                 <img src="images/bg/cover3.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
         </ul>
@@ -705,7 +705,44 @@
         </div>
     </div>
 </section>
+<section class="article-section">
+    <div class="container">
+        <div class="package-hit-title">
+            <div class="section-title" style="float:none;">
+                <h1><i class="far fa-newspaper"></i>&nbsp;บทความท่องเที่ยว</h1>           
+            </div>
+        </div>
+        <div class="row">
+            <div class="article-button-next next"><i class="fa fa-angle-right"></i></div>
+            <div class="article-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
+        </div>
+        <div class="row">
 
+<!--            <div id="owl-demo-article" class="owl-carousel owl-theme">
+                
+                <div class="item">
+                    <div class="article-card">
+                        <div class="article-card-cover">
+                            <a href="" title="">
+                                <img src="https://images.unsplash.com/photo-1501696461415-6bd6660c6742?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" class="" alt="" scale="0">
+                            </a>
+                        </div>
+                        <div class="article-card-content">
+                            <a href="" title="">
+                               
+                            </a>
+                            <div class="article-card-date">
+                                <i class="far fa-clock"></i>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+               
+            </div>-->
+        </div>
+    </div>
+    
+</section>
 <!-- ลูกค้าที่ไว้วางใจ -->
 <section class="package-hit-section">
     <div class="container">
@@ -957,4 +994,41 @@ var rootPath = '{{asset("/images/")}}';
 </script>
 
 <script type="text/javascript" src="{{ asset('js/home/index.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var owl = $("#owl-demo-article");
+
+        owl.owlCarousel({
+            items: 4, //5 items above 1000px browser width
+
+
+            loop: true,
+            autoPlay: 6000,
+            stopOnHover: true,
+            pagination: false,
+            margin: 5,
+            transitionStyle: "fade",
+            itemsDesktop: [1199, 3],
+            itemsTablet: [768, 3],
+            itemsMobile: [479, 2]
+
+        });
+
+        // Custom Navigation Events
+        $(".next").click(function () {
+            owl.trigger('owl.next');
+        })
+        $(".prev").click(function () {
+            owl.trigger('owl.prev');
+        })
+        $(".play").click(function () {
+            owl.trigger('owl.play', 1000); //owl.play event accept autoPlay speed as second parameter
+        })
+        $(".stop").click(function () {
+            owl.trigger('owl.stop');
+        })
+    });
+
+</script>
 @endsection

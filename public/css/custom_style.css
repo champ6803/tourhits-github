@@ -110,7 +110,7 @@
 }
 
 .package-hit-title h1 {
-    font-size: 30px;
+    font-size: 25px;
     margin: 0 0 0 0;
 }
 
@@ -146,7 +146,7 @@
     font-weight: bold;
     font-size: 19px;
     color: #ed5565;
-    line-height: 45px;
+    line-height: 38px;
 }
 .package-hit-title .section-descripion {
     font-size: 21px;
@@ -4327,7 +4327,7 @@ Custom BS3
     font-size: 16px;
     border-radius: 4px;
     position: absolute;
-    left: 25px;
+    right: 10px;
     top: 6px;
     background: rgba(55, 56, 58, .8);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -6180,7 +6180,7 @@ https://flickity.metafizzy.co
 }
 
 .checkout-page__content .cart-content .tab-adult-pair span:nth-child(2){
-    font-size: 17px;
+    font-size: 15px;
     color: #8d8d8d;
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
@@ -6194,7 +6194,7 @@ https://flickity.metafizzy.co
 }
 
 .checkout-page__content .cart-content .tab-adult-single span:nth-child(2){
-    font-size: 17px;
+    font-size: 15px;
     color: #8d8d8d; 
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
@@ -6207,7 +6207,7 @@ https://flickity.metafizzy.co
 }
 
 .checkout-page__content .cart-content .tab-kid-1 span:nth-child(2){
-    font-size: 17px;
+    font-size: 15px;
     color: #8d8d8d;
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
@@ -6221,7 +6221,7 @@ https://flickity.metafizzy.co
 }
 
 .checkout-page__content .cart-content .tab-kid-2 span:nth-child(2){
-    font-size: 17px;
+    font-size: 15px;
     color:#8d8d8d;
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
@@ -6676,7 +6676,7 @@ https://flickity.metafizzy.co
         float: left;
     }
     
-    .article-content-bottom .article-button-next{ 
+    .article-content-bottom .article-button-next, .article-section .article-button-next{ 
         text-align: right;
         float: right;
         font-size: 25px;
@@ -6686,36 +6686,40 @@ https://flickity.metafizzy.co
         padding-bottom: 20px;
         margin-top : 20px;
     }
-    .article-content-bottom .article-button-prev{ 
+    .article-content-bottom .article-button-prev, .article-section .article-button-prev{ 
         text-align: right;
         font-size: 25px;
         cursor: pointer;
         margin-top : 20px;
     }
+    .article-section .article-button-next, .article-section .article-button-prev{margin-top : -30px;} 
+    
     
     .search-tour-box{   
     position: absolute;
     top: 0;
-    right: 160px;
+    right: 149px;
     white-space: nowrap;
     display: inline-block;
     z-index: 9;    
     }
     
     .search-tour-box span{
-       font-family: 'Kanit', sans-serif, ;
+       font-family: 'Kanit', sans-serif;
        color: white;
-       font-size: 15px;  
-       line-height: 50px;
+       font-size: 14px;  
+       line-height: 50px!important;
        border-radius: 18px;
        background-color: #ed5565;
        padding: 3px 10px;
        cursor: pointer;
+       text-align: center;
     }
     
     .search-tour-box span i{
         padding-right: 7px;
         font-weight: bold;
+        
     }
     
     .search-tour-box button, input[type="submit"], input[type="reset"] {
@@ -6830,4 +6834,10 @@ https://flickity.metafizzy.co
     .awe-search-tabs__content .close-modal-search i{
         font-size: 18px;
         color: #000000;
+    }
+    
+    .checkout-section-demo .checkout-page__sidebar .fix-img span{
+        font-size: 21px;
+        line-height: 73px;
+        color: white;
     }

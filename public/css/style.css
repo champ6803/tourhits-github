@@ -5694,14 +5694,14 @@ body.single-post .blog-page__content > .post .post-content {
 /* 11.   Checkout
 --------------------------------------------------------------------------------*/
 .checkout-page__top {
-    margin-bottom: 34px;
+    margin-bottom: 10px;
     overflow: hidden;
 }
 .checkout-page__top .title {
     float: left;
 }
 .checkout-page__top .title h1 {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 700;
     color: #666;
     margin: 0;
@@ -5771,7 +5771,7 @@ body.single-post .blog-page__content > .post .post-content {
     -o-border-radius: 2px;
     border-radius: 2px;
     text-align: left;
-    padding: 0 15px 0 15px;
+    padding: 5px 15px 5px 30px;
 }
 .checkout-page__sidebar ul li:hover:before {
     border-color: #0091ea;
@@ -6064,7 +6064,7 @@ body.single-post .blog-page__content > .post .post-content {
     margin-top: -70px;
 }
 .checkout-page__content #payment {
-    margin-top: 42px;
+    margin-top: 20px;
     background: none;
 }
 .checkout-page__content #payment h3 {
@@ -6707,7 +6707,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .product-detail__info .product-address {
     font-size: 16px;
-    color: #34495e; 
+/*    color: #34495e; */
     margin-bottom: 7px;
 /*    font-weight: bold;*/
 }
@@ -10439,11 +10439,12 @@ select {
     float: left;
 }
 .confirm-form .form-item input {
+    font-family: 'Kanit', sans-serif;
     width: 100%;
     border: 1px solid #eee;
     background-color: #eee;
-    font-size: 19px;
-    font-weight: bold;
+    font-size: 16px;
+    
 }
 .confirm-form .form-textarea-wrapper {
     width: 100%;
@@ -10451,6 +10452,7 @@ select {
     float: left;
 }
 .confirm-form .form-textarea-wrapper textarea {
+    font-family: 'Kanit', sans-serif;
     width: 100%;
     border: 1px solid #eee;
     background-color: #eee;
