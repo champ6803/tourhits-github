@@ -6710,6 +6710,7 @@ https://flickity.metafizzy.co
        border-radius: 18px;
        background-color: #ed5565;
        padding: 3px 10px;
+       cursor: pointer;
     }
     
     .search-tour-box span i{
