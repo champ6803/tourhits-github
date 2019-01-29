@@ -524,7 +524,11 @@ session_start();
                         </label>-->
                         <div class="search-tour-box">
                             <button onclick="toggle_div_fun('sectiontohide');">
+<<<<<<< HEAD
                             <span class=""><i class="fas fa-search"></i>ค้นหาแพ็คเกจ</span> 
+=======
+                            <span class=""><i class="fa fa-search"></i> ค้นหาแพ็คเกจ</span>
+>>>>>>> e0aa3817958f0e438b39491e05207bbd7b2d1bbb
                             </button>
                         </div>    
 

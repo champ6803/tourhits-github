@@ -41,8 +41,16 @@
         width:100% !important;
         box-shadow: none !important;
     }
+<<<<<<< HEAD
     
     
+=======
+
+    .awe-search-tabs__content .ui-tabs-panel input{
+        font-size: 19px;
+        font-weight: bold;
+    }
+>>>>>>> e0aa3817958f0e438b39491e05207bbd7b2d1bbb
 
 </style>
 
@@ -634,16 +642,16 @@
                 <div class="see-more">
                     <a href="#" ><span>ดูทั้งหมด <i class="fas fa-arrow-circle-right"></i></span></a>
                 </div>
-<!--                <div class='section-descripion hidden-xs'>
-                    ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
-                </div>-->
+                <!--                <div class='section-descripion hidden-xs'>
+                                    ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
+                                </div>-->
             </div>
         </div>
         <!--        หน้าจอเวอชั่น mobile/pc-->        
         <div id="card_area_hit" class="card-xs js-flickity" data-flickity='{ "freeScroll": true, "wrapAround": true, "autoPlay": true }'>
 
         </div>
-       
+
     </div>
 </section>
 
@@ -655,29 +663,29 @@
                 <h1><i class="" style='color: #c33132;'></i>เราคัดสรรมาให้จากกว่า 200 ทัวร์</h1>              
             </div>
         </div>    
-<!--            <div class='section-descripion hidden-xs'>
-                ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
-            </div>-->
-            <div class="row">
-                @foreach($categoryList as $category)
-                <div class="col-sm-4 col-xs-6 col-md-3">
-                    <div class="select-item">
-                        <a href="{{url('tourhit?category_id='. $category->category_id)}}">
-                            <div class="select-img lazyloaded">
-                                <div class="center-crop"> 
-                                    <img src="images/category/{{ $category->category_img }}" alt="">
-                                </div> 
+        <!--            <div class='section-descripion hidden-xs'>
+                        ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
+                    </div>-->
+        <div class="row">
+            @foreach($categoryList as $category)
+            <div class="col-sm-4 col-xs-6 col-md-3">
+                <div class="select-item">
+                    <a href="{{url('tourhit?category_id='. $category->category_id)}}">
+                        <div class="select-img lazyloaded">
+                            <div class="center-crop"> 
+                                <img src="images/category/{{ $category->category_img }}" alt="">
                             </div> 
-                            <div class="hothits-name-box">
-                                <div class="text ">แนะนำ</div>
-                            </div>
-                        </a>
-                    </div>   
-                </div>
-                @endforeach
+                        </div> 
+                        <div class="hothits-name-box">
+                            <div class="text ">แนะนำ</div>
+                        </div>
+                    </a>
+                </div>   
             </div>
+            @endforeach
         </div>
-    
+    </div>
+
 </section>
 
 <!-- แพ๊คลดราคา -->
@@ -691,9 +699,9 @@
                 <div class="see-more">
                     <a href="#" ><span>ดูทั้งหมด <i class="fas fa-arrow-circle-right"></i></span></a>
                 </div>
-<!--                <div class='section-descripion hidden-xs'>
-                    ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
-                </div>-->
+                <!--                <div class='section-descripion hidden-xs'>
+                                    ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
+                                </div>-->
             </div>
         </div>
         <!--        หน้าจอเวอชั่น mobile/pc-->
@@ -713,191 +721,191 @@
         <div class="package-hit-title">
             <div class="section-title" style="float:none;">
                 <h1><i class="fas fa-hands-helping" style='color: #c33132;'></i>&nbsp;ลูกค้าที่ไว้วางใจกับเรา</h1>
-<!--                <div class="line-gradient"></div>-->
+                <!--                <div class="line-gradient"></div>-->
             </div>
         </div>    
         <div class="awe-masonry item-9" style="position: relative; height: 877.5px;">
-                <!-- GALLERY ITEM -->
-                <div class="first-item-image awe-masonry__item" style="position: absolute; left: 0px; top: 0px;">
-                    <a>
-                        <div class="image-wrap image-cover">
-                            <img src="../images/sponsor/spon1.jpg" alt="" style="height: 100%; width: auto;">
-                        </div>
-                    </a>      
-                </div>
-                <!-- END / GALLERY ITEM -->
-                <!-- GALLERY ITEM -->
-                <div class="awe-masonry__item" style="position: absolute; left: 292px; top: 0px;">
-                    <a>
-                        <div class="image-wrap image-cover">
-                            <img src="../images/sponsor/spon2.jpg" alt="" style="height: 100%; width: auto;">
-                        </div>
-                    </a>                               
-                </div>
-                <!-- END / GALLERY ITEM -->
-                <!-- GALLERY ITEM -->
-                <div class="awe-masonry__item" style="position: absolute; left: 585px; top: 0px;">
-                    <a>
-                        <div class="image-wrap image-cover">
-                            <img src="../images/sponsor/spon3.jpg" alt="" style="height: 100%; width: auto;">
-                        </div>
-                    </a>
-                </div>
-                <!-- END / GALLERY ITEM -->
-                <!-- GALLERY ITEM -->
-                <div class="awe-masonry__item" style="position: absolute; left: 0px; top: 292px;">
-                    <a>
-                        <div class="image-wrap image-cover">
-                            <img src="../images/sponsor/spon4.jpg" alt="" style="height: 100%; width: auto;">
-                        </div>
-                    </a>                              
-                </div>
-                <!-- END / GALLERY ITEM -->
-                <!-- GALLERY ITEM -->
-                <div class="awe-masonry__item" style="position: absolute; left: 292px; top: 292px;">
-                    <a>
-                        <div class="image-wrap image-cover">
-                            <img src="../images/sponsor/spon5.jpg" alt="" style="height: 100%; width: auto;">
-                        </div>
-                    </a>                                
-                </div>
-                <!-- END / GALLERY ITEM -->
-                <!-- GALLERY ITEM -->
-                <div class="awe-masonry__item" style="position: absolute; left: 0px; top: 585px;">
-                    <a>
-                        <div class="image-wrap image-cover">
-                            <img src="../images/sponsor/spon6.jpg" alt="" style="height: 100%; width: auto;">
-                        </div>
-                    </a>                                
-                </div>
-                <!-- END / GALLERY ITEM -->
-                <!-- GALLERY ITEM -->
-                <div class="awe-masonry__item" style="position: absolute; left: 292px; top: 585px;">
-                    <a>
-                        <div class="image-wrap image-cover">
-                            <img src="../images/sponsor/spon7.jpg" alt="" style="height: 100%; width: auto;">
-                        </div>
-                    </a>                               
-                </div>
-                <!-- END / GALLERY ITEM -->
-                <!-- GALLERY ITEM -->
-                <div class="awe-masonry__item" style="position: absolute; left: 585px; top: 585px;">
-                    <a>
-                        <div class="image-wrap image-cover">
-                            <img src="../images/sponsor/spon8.jpg" alt="" style="height: 100%; width: auto;">
-                        </div>
-                    </a>                               
-                </div>
-                <!-- END / GALLERY ITEM -->
-                <!-- GALLERY ITEM -->
-                <div class="awe-masonry__item" style="position: absolute; left: 877px; top: 585px;">
-                    <a>
-                        <div class="image-wrap image-cover">
-                            <img src="../images/sponsor/spon9.jpg" alt="" style="height: 100%; width: auto;">
-                        </div>
-                    </a>                               
-                </div>
-                <!-- END / GALLERY ITEM -->            
+            <!-- GALLERY ITEM -->
+            <div class="first-item-image awe-masonry__item" style="position: absolute; left: 0px; top: 0px;">
+                <a>
+                    <div class="image-wrap image-cover">
+                        <img src="../images/sponsor/spon1.jpg" alt="" style="height: 100%; width: auto;">
+                    </div>
+                </a>      
+            </div>
+            <!-- END / GALLERY ITEM -->
+            <!-- GALLERY ITEM -->
+            <div class="awe-masonry__item" style="position: absolute; left: 292px; top: 0px;">
+                <a>
+                    <div class="image-wrap image-cover">
+                        <img src="../images/sponsor/spon2.jpg" alt="" style="height: 100%; width: auto;">
+                    </div>
+                </a>                               
+            </div>
+            <!-- END / GALLERY ITEM -->
+            <!-- GALLERY ITEM -->
+            <div class="awe-masonry__item" style="position: absolute; left: 585px; top: 0px;">
+                <a>
+                    <div class="image-wrap image-cover">
+                        <img src="../images/sponsor/spon3.jpg" alt="" style="height: 100%; width: auto;">
+                    </div>
+                </a>
+            </div>
+            <!-- END / GALLERY ITEM -->
+            <!-- GALLERY ITEM -->
+            <div class="awe-masonry__item" style="position: absolute; left: 0px; top: 292px;">
+                <a>
+                    <div class="image-wrap image-cover">
+                        <img src="../images/sponsor/spon4.jpg" alt="" style="height: 100%; width: auto;">
+                    </div>
+                </a>                              
+            </div>
+            <!-- END / GALLERY ITEM -->
+            <!-- GALLERY ITEM -->
+            <div class="awe-masonry__item" style="position: absolute; left: 292px; top: 292px;">
+                <a>
+                    <div class="image-wrap image-cover">
+                        <img src="../images/sponsor/spon5.jpg" alt="" style="height: 100%; width: auto;">
+                    </div>
+                </a>                                
+            </div>
+            <!-- END / GALLERY ITEM -->
+            <!-- GALLERY ITEM -->
+            <div class="awe-masonry__item" style="position: absolute; left: 0px; top: 585px;">
+                <a>
+                    <div class="image-wrap image-cover">
+                        <img src="../images/sponsor/spon6.jpg" alt="" style="height: 100%; width: auto;">
+                    </div>
+                </a>                                
+            </div>
+            <!-- END / GALLERY ITEM -->
+            <!-- GALLERY ITEM -->
+            <div class="awe-masonry__item" style="position: absolute; left: 292px; top: 585px;">
+                <a>
+                    <div class="image-wrap image-cover">
+                        <img src="../images/sponsor/spon7.jpg" alt="" style="height: 100%; width: auto;">
+                    </div>
+                </a>                               
+            </div>
+            <!-- END / GALLERY ITEM -->
+            <!-- GALLERY ITEM -->
+            <div class="awe-masonry__item" style="position: absolute; left: 585px; top: 585px;">
+                <a>
+                    <div class="image-wrap image-cover">
+                        <img src="../images/sponsor/spon8.jpg" alt="" style="height: 100%; width: auto;">
+                    </div>
+                </a>                               
+            </div>
+            <!-- END / GALLERY ITEM -->
+            <!-- GALLERY ITEM -->
+            <div class="awe-masonry__item" style="position: absolute; left: 877px; top: 585px;">
+                <a>
+                    <div class="image-wrap image-cover">
+                        <img src="../images/sponsor/spon9.jpg" alt="" style="height: 100%; width: auto;">
+                    </div>
+                </a>                               
+            </div>
+            <!-- END / GALLERY ITEM -->            
 
         </div>   
 
 
-            <!--            <div class="openGallery-board">
-                            <div class="Grid">
-                                <div class="Grid-row">
-                                    <a class="Card" onclick="openGallery(1)" id="card-1">
-                                    <div class="Card-thumb">
-                                      <div class="Card-shadow"></div>
-                                      <div class="Card-shadow"></div>
-                                      <div class="Card-shadow"></div>
-                                      <div class="Card-image" style="background-image: url(https://robohash.org/1);"></div>
-                                    </div>
-                                    <div class="Card-title"><span>Super interesting card</span></div>
-                                    <div class="Card-explore"><span>Explore 50 more</span></div>
-                                    <button class="Card-button">view more</button>
-                                    </a>
-                                    
-                                    <a class="Card" onclick="openGallery(2)" id="card-2">
-                                    <div class="Card-thumb">
-                                      <div class="Card-shadow"></div>
-                                      <div class="Card-shadow"></div>
-                                      <div class="Card-shadow"></div>
-                                      <div class="Card-image" style="background-image: url(https://robohash.org/2);"></div>
-                                    </div>
-                                    <div class="Card-title"><span>Super interesting card</span></div>
-                                    <div class="Card-explore"><span>Explore 50 more</span></div>
-                                    <button class="Card-button">view more</button>
-                                    </a>
-                                    
-                                    <a class="Card" onclick="openGallery(3)" id="card-3">
-                                    <div class="Card-thumb">
-                                      <div class="Card-shadow"></div>
-                                      <div class="Card-shadow"></div>
-                                      <div class="Card-shadow"></div>
-                                      <div class="Card-image" style="background-image: url(https://robohash.org/3);"></div>
-                                    </div>
-                                    <div class="Card-title"><span>Super interesting card</span></div>
-                                    <div class="Card-explore"><span>Explore 50 more</span></div>
-                                    <button class="Card-button">view more</button>
-                                    </a>
+        <!--            <div class="openGallery-board">
+                        <div class="Grid">
+                            <div class="Grid-row">
+                                <a class="Card" onclick="openGallery(1)" id="card-1">
+                                <div class="Card-thumb">
+                                  <div class="Card-shadow"></div>
+                                  <div class="Card-shadow"></div>
+                                  <div class="Card-shadow"></div>
+                                  <div class="Card-image" style="background-image: url(https://robohash.org/1);"></div>
                                 </div>
+                                <div class="Card-title"><span>Super interesting card</span></div>
+                                <div class="Card-explore"><span>Explore 50 more</span></div>
+                                <button class="Card-button">view more</button>
+                                </a>
+                                
+                                <a class="Card" onclick="openGallery(2)" id="card-2">
+                                <div class="Card-thumb">
+                                  <div class="Card-shadow"></div>
+                                  <div class="Card-shadow"></div>
+                                  <div class="Card-shadow"></div>
+                                  <div class="Card-image" style="background-image: url(https://robohash.org/2);"></div>
+                                </div>
+                                <div class="Card-title"><span>Super interesting card</span></div>
+                                <div class="Card-explore"><span>Explore 50 more</span></div>
+                                <button class="Card-button">view more</button>
+                                </a>
+                                
+                                <a class="Card" onclick="openGallery(3)" id="card-3">
+                                <div class="Card-thumb">
+                                  <div class="Card-shadow"></div>
+                                  <div class="Card-shadow"></div>
+                                  <div class="Card-shadow"></div>
+                                  <div class="Card-image" style="background-image: url(https://robohash.org/3);"></div>
+                                </div>
+                                <div class="Card-title"><span>Super interesting card</span></div>
+                                <div class="Card-explore"><span>Explore 50 more</span></div>
+                                <button class="Card-button">view more</button>
+                                </a>
                             </div>
-                            <div class="Gallery" id="gallery-1">
-                                    <div class="Gallery-header"><a class="Gallery-close" onclick="closeAll()"><i class="fas fa-times-circle"></i></a></div>
-                                    <div class="Gallery-images">
-                                      <div class="Gallery-left">
-                                        <div class="Gallery-image"></div>
-                                        <div class="Gallery-image"></div>
-                                      </div>
-                                      <div class="Gallery-image Gallery-image--primary" style="background-image: url(https://robohash.org/1);"></div>
-                                    </div>
-                                    <div class="Gallery-images">
-                                      <div class="Gallery-image"></div>
-                                      <div class="Gallery-image"></div>
-                                      <div class="Gallery-image"></div>
-                                    </div>
-                                    <div class="Gallery-images">
-                                      <div class="Gallery-image"></div>
-                                      <div class="Gallery-image"></div>
-                                      <div class="Gallery-image"></div>
-                                    </div>
-                                    <div class="Gallery-images">
-                                      <div class="Gallery-image"></div>
-                                      <div class="Gallery-image"></div>
-                                      <div class="Gallery-image"></div>
-                                    </div>
-                                    <div class="Gallery-images">
-                                      <div class="Gallery-image"></div>
-                                      <div class="Gallery-image"></div>
-                                      <div class="Gallery-image"></div>
-                                    </div>
-                            </div>
-                        </div>-->
-
-
-
-            <!--            <div align="center">
-                            <img width="200px;" src="../images/sponsor/7.jpg">
-                            <img width="200px;" src="../images/sponsor/3.jpg">
-                            <img width="250px;" src="../images/sponsor/benz.png">
                         </div>
-                        <br>
-                        <div align="center">
-                            <img width="200px;" src="../images/sponsor/singha.jpg">
-                            <img width="200px;" src="../images/sponsor/cp.png">
-                            <img width="250px;" src="../images/sponsor/pizza.jpg">
-                        </div>-->
+                        <div class="Gallery" id="gallery-1">
+                                <div class="Gallery-header"><a class="Gallery-close" onclick="closeAll()"><i class="fas fa-times-circle"></i></a></div>
+                                <div class="Gallery-images">
+                                  <div class="Gallery-left">
+                                    <div class="Gallery-image"></div>
+                                    <div class="Gallery-image"></div>
+                                  </div>
+                                  <div class="Gallery-image Gallery-image--primary" style="background-image: url(https://robohash.org/1);"></div>
+                                </div>
+                                <div class="Gallery-images">
+                                  <div class="Gallery-image"></div>
+                                  <div class="Gallery-image"></div>
+                                  <div class="Gallery-image"></div>
+                                </div>
+                                <div class="Gallery-images">
+                                  <div class="Gallery-image"></div>
+                                  <div class="Gallery-image"></div>
+                                  <div class="Gallery-image"></div>
+                                </div>
+                                <div class="Gallery-images">
+                                  <div class="Gallery-image"></div>
+                                  <div class="Gallery-image"></div>
+                                  <div class="Gallery-image"></div>
+                                </div>
+                                <div class="Gallery-images">
+                                  <div class="Gallery-image"></div>
+                                  <div class="Gallery-image"></div>
+                                  <div class="Gallery-image"></div>
+                                </div>
+                        </div>
+                    </div>-->
 
 
-        <div id="Carousel" class="carousel slide">
+
+        <!--            <div align="center">
+                        <img width="200px;" src="../images/sponsor/7.jpg">
+                        <img width="200px;" src="../images/sponsor/3.jpg">
+                        <img width="250px;" src="../images/sponsor/benz.png">
+                    </div>
+                    <br>
+                    <div align="center">
+                        <img width="200px;" src="../images/sponsor/singha.jpg">
+                        <img width="200px;" src="../images/sponsor/cp.png">
+                        <img width="250px;" src="../images/sponsor/pizza.jpg">
+                    </div>-->
+
+
+<!--        <div id="Carousel" class="carousel slide">
 
             <ol class="carousel-indicators">
                 <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                <!--                        <li data-target="#Carousel" data-slide-to="1"></li>
-                                        <li data-target="#Carousel" data-slide-to="2"></li>-->
+                                        <li data-target="#Carousel" data-slide-to="1"></li>
+                                        <li data-target="#Carousel" data-slide-to="2"></li>
             </ol>
 
-            <!-- Carousel items -->
+             Carousel items 
             <div class="carousel-inner">
 
                 <div class="item active" style="width:100% !important">
@@ -908,8 +916,8 @@
                         <div class="col-md-2 col-xs-4"><a href="https://www.mahidol.ac.th/th/" class="thumbnail"><img src="https://tmaxtech.co.th/images/Partner/4.jpg" alt="Image" style="height:80px;"></a></div>
                         <div class="col-md-2 col-xs-4"><a href="http://www.kkopenzoo.com/" class="thumbnail"><img src="https://tmaxtech.co.th/images/Partner/5.jpg" alt="Image" style="height:80px;"></a></div>
                         <div class="col-md-2 col-xs-4"><a href="http://www.songkhlazoo.com/" class="thumbnail"><img src="https://tmaxtech.co.th/images/Partner/6.jpg" alt="Image" style="height:80px;"></a></div>
-                    </div><!--.row-->
-                </div><!--.item-->
+                    </div>.row
+                </div>.item
 
                 <div class="item" style="width:100% !important">
                     <div class="row company">
@@ -936,9 +944,9 @@
 
 
             </div>
-        </div>
-        </div>
-    
+        </div>-->
+    </div>
+
 </section>
 @stop
 @section('footer_scripts')

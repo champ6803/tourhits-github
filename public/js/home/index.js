@@ -136,7 +136,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
         $('#search_tour_pager').show();
     } else {
         $('#' + selection).empty();
-        var div = "<div class='search-empty'>ขออภัยไม่พบทัวร์</div>";
+        var div = "<div class='search-empty'>ขออภัยยังไม่มีทัวร์ในโปรแกรมนี้</div>";
         $('#' + selection).html(div);
         $('#search_tour_pager').hide();
     }
