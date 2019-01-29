@@ -8,13 +8,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
+
 /**
  * Description of ConfirmController
  *
  * @author chonl
  */
 class ConfirmController {
+
     public function tour_confirm() {
-        return view('tour.tour-confirm');
+        $countryModel = new Country();
+        $countryList = $countryModel->getCountryAll();
+        return view('tour.tour-confirm', compact('countryList'));
     }
+
 }

@@ -17,6 +17,7 @@ use App\Models\Customer;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
+use App\Models\Country;
 
 /**
  * Description of LoginController
@@ -27,7 +28,9 @@ class LoginController {
     #region View
 
     public function index() {
-        return view('auth.login');
+        $countryModel = new Country();
+        $countryList = $countryModel->getCountryAll();
+        return view('auth.login', compact('countryList'));
     }
 
     public function adminLogin() {

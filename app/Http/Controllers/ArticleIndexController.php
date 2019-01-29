@@ -11,6 +11,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Article_Detail;
 use Illuminate\Http\Request;
+use App\Models\Country;
 
 /**
  * Description of ArticleIndexController
@@ -21,21 +22,24 @@ class ArticleIndexController extends Controller {
 
     public function article_index() {
         $articleModel = new Article();
+        $countryModel = new Country();
+        $countryList = $countryModel->getCountryAll();
         $articleList = $articleModel->getArticleAll();
-
-        return view('article.article-index', compact('articleList'));
+        return view('article.article-index', compact('articleList', 'countryList'));
     }
 
     public function article_content(Request $request) {
         $id = $request->query('id');
         $articleDetailModel = new Article_Detail();
+        $countryModel = new Country();
+        $countryList = $countryModel->getCountryAll();
         $articleDetailList = $articleDetailModel->getArticleDetailByArticleID($id);
         $articleDetailList[0]->article_image = str_replace(" ", "%20", $articleDetailList[0]->article_image);
 
         $articleModel = new Article();
         $articleList = $articleModel->getArticleAll();
 
-        return view('article.article-content', compact('articleDetailList', 'articleList'));
+        return view('article.article-content', compact('articleDetailList', 'articleList', 'countryList'));
     }
 
     public function article_manage() {

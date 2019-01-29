@@ -7,7 +7,7 @@
  */
 
 namespace App\Http\Controllers;
-
+use App\Models\Country;
 /**
  * Description of HomeController
  *
@@ -16,7 +16,9 @@ namespace App\Http\Controllers;
 class AboutController extends Controller {
 
     public function about_us() {
-        return view('about.aboutus');
+        $countryModel = new Country();
+        $countryList = $countryModel->getCountryAll();
+        return view('about.aboutus', compact('countryList'));
     }
 
 }

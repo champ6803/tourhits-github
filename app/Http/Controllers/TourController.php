@@ -52,6 +52,8 @@ class TourController extends Controller {
 
     public function tour_confirm($tour_package_id, $tour_period_id) {
         $tourModel = new Tour_Package();
+        $countryModel = new Country();
+        $countryList = $countryModel->getCountryAll();
         $tourPackage = $tourModel->getTourDetail($tour_package_id);
         $tourPackageList = $tourModel->getTourDetailList($tour_package_id);
         $tourPackagePeriod = $tourModel->getTourDetailPeriod($tour_package_id, $tour_period_id);
@@ -68,7 +70,7 @@ class TourController extends Controller {
             $tourPackageObj->tour_period_end = $newEndDate;
         }
         $page_title = 'รายการจองทัวร์ ' . $tourPackage->tour_package_name;
-        return view('tour.tour-confirm', compact('tourPackage', 'tourPackageImagesList', 'page_title', 'tourPackagePeriod', 'tourPackageList'));
+        return view('tour.tour-confirm', compact('tourPackage', 'tourPackageImagesList', 'page_title', 'tourPackagePeriod', 'tourPackageList', 'countryList'));
     }
 
     public function orders() {

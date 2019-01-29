@@ -8,6 +8,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
+
 /**
  * Description of HomeController
  *
@@ -16,7 +18,9 @@ namespace App\Http\Controllers;
 class ContactController extends Controller {
 
     public function contact_us() {
-        return view('contact.contactus');
+        $countryModel = new Country();
+        $countryList = $countryModel->getCountryAll();
+        return view('contact.contactus', compact('countryList'));
     }
 
 }
