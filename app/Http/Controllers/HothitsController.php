@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Models\Tour_Package;
 use App\Models\Tour_Period;
 use App\Models\Category;
+use App\Models\Country;
 
 /**
  * Description of HomeController
@@ -28,6 +29,8 @@ class HothitsController extends Controller {
         $category_id = $request->query('category_id');
         $tourModel = new Tour_Package();
         $categoryModel = new Category();
+        $countryModel = new Country();
+        $countryList = $countryModel->getCountryAll();
         $category = $categoryModel->getCategoryById($category_id);
         $tourHitsPackageActiveList = $tourModel->getTourPackageByCategory($category_id);
         $arrayHitActive = array();
@@ -37,7 +40,7 @@ class HothitsController extends Controller {
         $tourHitPeriodActive = Tour_Period::whereIn('tour_package_id', $arrayHitActive)
                 ->get();
         
-        return view('tour.tourhot', compact('tourHitsPackageActiveList', 'tourHitPeriodActive', 'category'));
+        return view('tour.tourhot', compact('tourHitsPackageActiveList', 'tourHitPeriodActive', 'category', 'countryList'));
     }
 
 }
