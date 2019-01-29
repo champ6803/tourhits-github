@@ -110,7 +110,7 @@ session_start();
                     <div class="container">
                         <!-- LOGO -->
                         <div class="logo">
-                            <a href="/"><img src="{{ asset('/images/logo.png')}}" alt=""></a>
+                            <a href="/"><img src="{{ asset('/images/logo-old.png')}}" alt=""></a>
                         </div>
 
                         <!-- END / LOGO -->
@@ -118,11 +118,11 @@ session_start();
                         <nav class="navigation awe-navigation" data-responsive="1200">
                             <ul class="menu-list">
                                 <li class="menu-item-has-children">
-                                    <a href="{{ url('/')}}"><i class="fa fa-home"></i>&nbsp;หน้าแรก</a>
+                                    <a href="{{ url('/')}}">หน้าแรก</a>
                                     <hr id="home" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a><i class="fas fa-globe-asia"></i>&nbsp;แพ็คเกจทัวร์</a>
+                                    <a>แพ็คเกจทัวร์</a>
                                     <hr id="package_tour" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
                                     <ul class="col-md-12 sub-menu">
                                         <div class="col-md-4 cat-asian cat-line">
@@ -524,13 +524,80 @@ session_start();
                         </label>-->
                         <div class="search-tour-box">
                             <button onclick="toggle_div_fun('sectiontohide');">
-                            <span class="">ค้นหาแพ็คเกจ</span> 
+                            <span class=""><i class="fas fa-search"></i>ค้นหาแพ็คเกจ</span> 
                             </button>
                         </div>    
 
                         <div id="sectiontohide">
                             <div class="search-modal-box">
-                                <div class="modal-body">
+
+                                <div class="container search-container">
+                                    <div class="awe-search-tabs-2 tabs" style="transform: unset;">            
+                                        <ul hidden="">
+                                            <li>
+                                                <a href="#awe-search-tabs-1">
+                                                    ค้นหาทัวร์
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="awe-search-tabs__content tabs__content ">
+                                            <div id="awe-search-tabs-1">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <div class="form-elements">
+                                                            <div class="form-item" style="cursor: text;">
+                                                                <i class="fas fa-search awe-icon"></i>                                                   
+                                                                <input id="search_text" class="form-control" type="text" placeholder="ค้นหาชื่อแพ็คเกจทัวร์" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="form-elements">
+                                                            <div class="form-item">
+                                                                <select id="country_dropdown" class="form-control">
+                                                                    <option selected value="">เลือกประเทศ</option>
+                                                                    @foreach ($countryList as $country)
+                                                                    <option value="{{$country->tour_country_url}}">{{$country->country_name}}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="form-elements">
+                                                            <div class="form-item">
+                                                                <input type="text" id="date_picker" placeholder="วันเดินทาง ไป - กลับ" class="form-control">
+                                                                <i class="far fa-calendar-check awe-icon"></i>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="form-elements days">
+                                                            <div class="form-item">
+                                                                <select id="days_dropdown" class="form-control">
+                                                                    <option selected value="">จำนวนวัน</option>
+                                                                    <option value="1">1 วัน</option>
+                                                                    <option value="2">2 วัน</option>
+                                                                    <option value="3">3 วัน</option>
+                                                                    <option value="4">4 วัน</option>
+                                                                    <option value="5">5 วัน</option>
+                                                                    <option value="6">6 วัน</option>
+                                                                    <option value="7">7 วัน</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-actions">
+                                                        <a id="search_tour" class="btn btn-search">ค้นหาทัวร์</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+<!--                                <div class="modal-body">
                                     <form>
                                         <div class="input-group mb-2">
                                             ประเทศ
@@ -567,7 +634,7 @@ session_start();
                                         </div>
                                         <button type="submit" class="btn btn-green btn-rounded px-5 d-block mx-auto">ค้นหาทัวร์</button>
                                     </form>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                             
@@ -793,7 +860,7 @@ session_start();
                                 </ul>
                             </div>
                             <div class="row">
-                                <div class="col-md-4">ใบอนุญาตการท่องเที่ยวแห่งประเทศไทย เลขที่ 11/09305</div>
+                                <div class="col-md-4">ใบอนุญาตประกอบธุรกิจนำเที่ยว<br>เลขที่ 11/09305</div>
                                 <div class="col-md-4 hidden-xs hidden-smboxx">สมาชิกสมาคมไทยธุรกิจการท่องเที่ยว เลขที่ 012345</div>
                                 <div class="col-md-4 hidden-xs hidden-sm boxx">e-Commerce No.01234567890</div>
                             </div>    
@@ -995,6 +1062,18 @@ session_start();
     
     <script type="text/javascript">
     function toggle_div_fun(id) {
+
+       var divelement = document.getElementById(id);
+
+       if(divelement.style.display == 'block')
+          divelement.style.display = 'none';
+       else
+          divelement.style.display = 'block';
+    }
+    </script>
+    
+    <script type="text/javascript">
+    function toggle_close(id) {
 
        var divelement = document.getElementById(id);
 

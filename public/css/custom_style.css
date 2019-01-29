@@ -24,9 +24,6 @@
     padding: 70px 0;
 }
 
-.search-container{
-    max-width: 941px;
-}
 
 .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{
  background-color: rgba(249, 166, 124, 1);
@@ -816,6 +813,7 @@ hr {
 .ui-widget.ui-widget-content {
     border: 0px solid #c5c5c5;
     /*    margin-top: -2px;*/
+
 }
 
 .ui-slider-horizontal {
@@ -4595,15 +4593,15 @@ Custom BS3
 .hothits-name-box {
     position: absolute;
     left: 0;
-    top: 20px;
+    top: 4px;
     background: rgba(226, 29, 44, .8);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .hothits-name-box .text {
     color: #ffffff;
-    padding: 3px 10px 2px 10px;
-    font-size: 20px; 
+    padding: 1px 5px 1px 7px;
+    font-size: 17px; 
 }
 
 .hothits-img {
@@ -6754,17 +6752,70 @@ https://flickity.metafizzy.co
     
     #sectiontohide .search-modal-box{
         position: absolute;
-        right: 75px;
-        background-color: white;
-        z-index: 9999;
-        border: 1px solid #dad9dc;
+        top: 55px;
+        right: 0;
+        
     }
     
-    .search-tour-box span::before{
+    .search-container{
+        max-width: 500px;
+    }
+    
+/*    .search-tour-box span::before{
         font-family: FontAwesome;
         content: "\F002";
         padding-right: 7px;
+    }*/
+    
+    .search-modal-box .awe-search-tabs__content .ui-tabs-panel input{
+        font-family: 'Kanit', sans-serif;
+        font-size: 14px;
+        font-weight: bold;        
     }
+    
+    .search-modal-box .awe-search-tabs__content .form-group{
+        margin-bottom: 5px;
+    }
+    
+    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search {
+        font-family: 'Kanit', sans-serif;
+        display: block; 
+        border-radius: 20px; 
+        background-color: #ed5565; 
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); 
+        font-size: 17px; 
+        color: #fff ; 
+        padding: 0px 20px; 
+        transition: all .5s ease; 
+        line-height: 38px;
+        margin: 6px 0;
+    }
+    
+    .awe-search-tabs__content .ui-tabs-panel input:nth-child(2){
+        cursor: text!important;
+    }
+    
+    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-actions{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search:hover{opacity: 0.8;}
+    .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
+    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
+    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
+    
+    
+    @media screen and ( max-width: 958px ) {
+        .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 23px; width:100%;}
+        .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 23px;}
+        .awe-search-tabs__content .ui-tabs-panel select{font-size: 14px;}
+        .awe-search-tabs-2 .awe-search-tabs__content{
+            margin-top: 45px;
+        }
+    }    
     
     
 

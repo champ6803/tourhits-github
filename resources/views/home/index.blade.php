@@ -24,12 +24,6 @@
     }
 
 
-    .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
-    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
-    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search {display:block; border-radius: 4px; background-color: #ed5565; box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); font-size: 24px; color: #fff ; padding: 11px 8px; transition: all .5s ease; line-height: 36px;}
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search:hover{opacity: 0.8;}
-
     @media screen and ( max-width: 958px ) {
         .package-hit-title h1{font-size: 23px;}
         .package-hit-title .see-more span{font-size: 14px; line-height: 33px;}
@@ -37,9 +31,8 @@
         .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
 
         .awe-search-tabs__content .ui-tabs-panel input{font-size: 16px; font-weight: bold;}
-        .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 23px; width:100%;}
-        .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 23px;}
-        .awe-search-tabs__content .ui-tabs-panel select{font-size: 16px;}
+        
+        .hothits-name-box .text{font-size: 14px;}
     }
     .item { width: 25%; }
     .item.w2 { width: 50%; }
@@ -49,10 +42,7 @@
         box-shadow: none !important;
     }
     
-    .awe-search-tabs__content .ui-tabs-panel input{
-        font-size: 19px;
-        font-weight: bold;
-    }
+    
 
 </style>
 
@@ -75,8 +65,8 @@
 <!-- END / HERO SECTION -->
 
 <!-- SEARCH TABS -->
-<!--<section>
-    <div class="container search-container">
+<section>
+<!--    <div class="container search-container">
         <div class="awe-search-tabs-2 tabs">            
             <ul hidden="">
                 <li>
@@ -141,8 +131,8 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>-->
+    </div>-->
+</section>
 <!-- END / SEARCH TABS -->
 
 <!-- MASONRY -->
