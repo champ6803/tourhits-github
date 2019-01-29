@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tour_Package;
 use App\Models\Holiday;
+use App\Models\Country;
 use App\Models\Tour_Period;
 use App\Models\Tag;
 use App\Models\Attraction;
@@ -26,7 +27,6 @@ class FilterController extends Controller {
     protected $_tourCountryModel;
     protected $_tagModel;
     protected $_attractionModel;
-    
 
     public function __construct(Tour_Country $tourCountryModel, Tag $tagModel, Attraction $attractionModel) {
         $this->_tourCountryModel = $tourCountryModel;
@@ -36,6 +36,7 @@ class FilterController extends Controller {
 
     public function search_tour($country) {
         $tourModel = new Tour_Package();
+        $countryModel = new Country();
         $price_most = $tourModel->getMostPrice($country);
         $routeList = $tourModel->getFilterRoute($country);
         $airlineList = $tourModel->getFilterAirline($country);
@@ -44,7 +45,9 @@ class FilterController extends Controller {
         $dayList = $tourModel->getFilterDay($country);
         $tagList = $tourModel->getFilterTag($country);
         $attractionList = $tourModel->getFilterAttraction($country);
-        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList', 'price_most', 'attractionList'));
+        $countryList = $countryModel->getCountryAll();
+
+        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList', 'price_most', 'attractionList', 'countryList'));
     }
 
     public function getTourPackage() {
@@ -62,7 +65,7 @@ class FilterController extends Controller {
             $others = json_decode(request()->get('_others'));
             $price_from = request()->get('_price_from');
             $price_to = request()->get('_price_to');
-            
+
             $filterName = "";
             $filterType = "tag";
 
@@ -471,7 +474,7 @@ class FilterController extends Controller {
                 }
                 $filterName = $tourPackageList[0]->tour_country_name;
                 $filterType = "country";
-            } else if(count($tagList) > 0 && $tagList != null) {
+            } else if (count($tagList) > 0 && $tagList != null) {
                 if (!(count($route) > 0) && empty($start_date) && empty($end_date) && !(count($month) > 0) && !(count($days) > 0) && !(count($airline) > 0) && !(count($tags) > 0) && !(count($attraction) > 0) && !(count($others) > 0) && !empty($search_text)) {
                     $query = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
                             ->join('route', 'route.route_id', '=', 'tour_route.route_id')
@@ -521,7 +524,7 @@ class FilterController extends Controller {
                 }
                 $filterName = $tourPackageList[0]->tag_name;
                 $filterType = "tag";
-            } else if(count($attractionList) > 0 && $attractionList != null) {
+            } else if (count($attractionList) > 0 && $attractionList != null) {
                 if (!(count($route) > 0) && empty($start_date) && empty($end_date) && !(count($month) > 0) && !(count($days) > 0) && !(count($airline) > 0) && !(count($tags) > 0) && !(count($attraction) > 0) && !(count($others) > 0) && !empty($search_text)) {
                     $query = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
                             ->join('route', 'route.route_id', '=', 'tour_route.route_id')
@@ -571,7 +574,7 @@ class FilterController extends Controller {
                 }
                 $filterName = $tourPackageList[0]->tag_name;
                 $filterType = "attraction";
-            } else if ($country == "search"){
+            } else if ($country == "search") {
                 if (!(count($route) > 0) && empty($start_date) && empty($end_date) && !(count($month) > 0) && !(count($days) > 0) && !(count($airline) > 0) && !(count($tags) > 0) && !(count($attraction) > 0) && !(count($others) > 0) && !empty($search_text)) {
                     $query = Tour_Package::join('tour_route', 'tour_route.tour_package_id', '=', 'tour_package.tour_package_id')
                             ->join('route', 'route.route_id', '=', 'tour_route.route_id')
@@ -662,7 +665,7 @@ class FilterController extends Controller {
                     $tourPeriod = Tour_Period::whereIn('tour_package_id', $array)
                             ->get();
                 }
-                
+
                 $filterName = $search_text;
                 $filterType = "search";
             }
