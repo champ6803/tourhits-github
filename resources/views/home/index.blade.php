@@ -41,16 +41,11 @@
         width:100% !important;
         box-shadow: none !important;
     }
-<<<<<<< HEAD
     
-    
-=======
-
     .awe-search-tabs__content .ui-tabs-panel input{
         font-size: 19px;
         font-weight: bold;
     }
->>>>>>> e0aa3817958f0e438b39491e05207bbd7b2d1bbb
 
 </style>
 
