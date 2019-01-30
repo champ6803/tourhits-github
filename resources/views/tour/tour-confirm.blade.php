@@ -35,7 +35,7 @@
     .checkout-page__sidebar ul li:hover a {color: white;}
     .checkout-page__sidebar ul li a p {font-size: 25px; margin-top: -20px;}
     .checkout-page__sidebar ul li a h5 {color: white;  font-family: 'Kanit', sans-serif; font-size: 15px; font-weight: 300;}
-    .fix-img { width: 60px; height:73px; border-right: 2px dashed black; margin-right: 25px;}
+    .fix-img { width: 42px; height:73px; border-right: 2px dashed black; margin-right: 10px;}
 
     .form-control{padding: 0px 12px;}
     .checkout-page__content .contact-form{

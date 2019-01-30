@@ -760,7 +760,7 @@
             <div class="first-item-image awe-masonry__item" style="position: absolute; left: 0px; top: 0px;">
                 <a>
                     <div class="image-wrap image-cover">
-                        <img src="../images/sponsor/spon1.jpg" alt="" style="height: 100%; width: auto;">
+                        <img src="../images/sponsor/cm-1.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
                 </a>
             </div>
@@ -769,7 +769,7 @@
             <div class="awe-masonry__item" style="position: absolute; left: 292px; top: 0px;">
                 <a>
                     <div class="image-wrap image-cover">
-                        <img src="../images/sponsor/spon2.jpg" alt="" style="height: 100%; width: auto;">
+                        <img src="../images/sponsor/cm-2.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
                 </a>
             </div>
@@ -778,7 +778,7 @@
             <div class="awe-masonry__item" style="position: absolute; left: 585px; top: 0px;">
                 <a>
                     <div class="image-wrap image-cover">
-                        <img src="../images/sponsor/spon3.jpg" alt="" style="height: 100%; width: auto;">
+                        <img src="../images/sponsor/cm-3.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
                 </a>
             </div>
@@ -787,7 +787,7 @@
             <div class="awe-masonry__item" style="position: absolute; left: 0px; top: 292px;">
                 <a>
                     <div class="image-wrap image-cover">
-                        <img src="../images/sponsor/spon4.jpg" alt="" style="height: 100%; width: auto;">
+                        <img src="../images/sponsor/cm-4.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
                 </a>
             </div>
@@ -796,7 +796,7 @@
             <div class="awe-masonry__item" style="position: absolute; left: 292px; top: 292px;">
                 <a>
                     <div class="image-wrap image-cover">
-                        <img src="../images/sponsor/spon5.jpg" alt="" style="height: 100%; width: auto;">
+                        <img src="../images/sponsor/cm-5.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
                 </a>
             </div>
@@ -805,7 +805,7 @@
             <div class="awe-masonry__item" style="position: absolute; left: 0px; top: 585px;">
                 <a>
                     <div class="image-wrap image-cover">
-                        <img src="../images/sponsor/spon6.jpg" alt="" style="height: 100%; width: auto;">
+                        <img src="../images/sponsor/cm-6.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
                 </a>
             </div>
@@ -814,7 +814,7 @@
             <div class="awe-masonry__item" style="position: absolute; left: 292px; top: 585px;">
                 <a>
                     <div class="image-wrap image-cover">
-                        <img src="../images/sponsor/spon7.jpg" alt="" style="height: 100%; width: auto;">
+                        <img src="../images/sponsor/cm-7.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
                 </a>
             </div>
@@ -823,7 +823,7 @@
             <div class="awe-masonry__item" style="position: absolute; left: 585px; top: 585px;">
                 <a>
                     <div class="image-wrap image-cover">
-                        <img src="../images/sponsor/spon8.jpg" alt="" style="height: 100%; width: auto;">
+                        <img src="../images/sponsor/cm-8.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
                 </a>
             </div>
@@ -832,7 +832,7 @@
             <div class="awe-masonry__item" style="position: absolute; left: 877px; top: 585px;">
                 <a>
                     <div class="image-wrap image-cover">
-                        <img src="../images/sponsor/spon9.jpg" alt="" style="height: 100%; width: auto;">
+                        <img src="../images/sponsor/cm-9.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
                 </a>
             </div>
