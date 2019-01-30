@@ -6907,24 +6907,24 @@ https://flickity.metafizzy.co
     }
 
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
-    .search-tour-box{right: 140px;}
-    .search-tour-box span{font-size: 11px;}
-}
 
-.awe-search-tabs__content .close-modal-search{
-    position: absolute;
-    top: 7px;
-    right: 10px;
-    cursor: pointer;
-}
 
-.awe-search-tabs__content .close-modal-search i{
-    font-size: 18px;
-    color: #000000;
-}
+    .awe-search-tabs__content .close-modal-search{
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        cursor: pointer;
+    }
 
-.checkout-section-demo .checkout-page__sidebar .fix-img span{
-    font-size: 21px;
-    line-height: 73px;
-    color: white;
-}
+    .awe-search-tabs__content .close-modal-search i{
+        font-size: 18px;
+        color: #000000;
+    }
+
+    .checkout-section-demo .checkout-page__sidebar .fix-img span{
+        font-size: 21px;
+        line-height: 73px;
+        color: white;
+    }
+
+    .article-section .section-title i{color: #c33132;}
