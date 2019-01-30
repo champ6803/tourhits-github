@@ -6656,7 +6656,12 @@ https://flickity.metafizzy.co
 }
 
 .article-content .article-content-short{
-    ///padding: 20px 0 50px 0;
+    /*padding: 20px 0 50px 0;*/
+}
+
+.article-content .article-content-short p{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
 }
 
 
