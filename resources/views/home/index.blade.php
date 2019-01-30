@@ -708,37 +708,84 @@
 <section class="article-section">
     <div class="container">
         <div class="package-hit-title">
-            <div class="section-title" style="float:none;">
-                <h1><i class="far fa-newspaper"></i>&nbsp;บทความท่องเที่ยว</h1>           
+            <div class="section-title">
+                <h1><i class="fas fa-globe-asia"></i>&nbsp;เรื่องราวที่น่าสนใจ</h1>           
+            </div>
+            <div class="see-more">
+                    <a href="#" ><span>ดูทั้งหมด <i class="fas fa-arrow-circle-right"></i></span></a>
             </div>
         </div>
         <div class="row">
-            <div class="article-button-next next"><i class="fa fa-angle-right"></i></div>
-            <div class="article-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
+<!--            <div class="article-button-next next"><i class="fa fa-angle-right"></i></div>
+            <div class="article-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>-->
         </div>
         <div class="row">
+            <div class="col-sm-6">  
+                    <div class="article-item">
+                        <div class="article-item-img">
+                            <img src="https://images.unsplash.com/photo-1536242019389-18dea718fd7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="" alt="" scale="0">
+                        </div>
+                        <div class="article-item-head">
+                            <span>เทคนิคการพายเรือคายัค พายอย่างไรให้ถูกวิธี ไม่จมกลางน้ำ</span>
+                        </div>
+                        <div class="article-item-detail">
+                            <span>การพายเรือคายัค เป็นกิจกรรมอย่างหนึ่งสำหรับนักท่องเที่ยว ที่กำลังได้รับความนิยมเป็นอย่างมาก ซึ่งก็มีสถานที่ท่องเที่ยวหลายแห่งด้วยกัน โดยเฉพาะแพที่พักบนเขื่อนเชี่ยวหลาน ที่เปิดให้บริการพายเรือคายัค ไม่ว่าจะเป็นการพายเรือเพื่อพักผ่อนชมวิวเพลินๆ หรือการพายเรือล่องแก่งก็ตาม แต่ทั้งนี้การจะพายเรือคายัคให้สนุกและคุ้มค่าที่สุดก็ต้องมีเทคนิคกันหน่อย พร้อมด้วยข้อควรระวังที่จะต้องทำความเข้าใจก่อนเริ่มพายจริง นั่นก็เพื่อความปลอดภัยจากการพายเรือคายัคนั่นเอง</span>
+                        </div>
+                        <div class="article-item-date hidden-sm hidden-xs">
+                            <span><i class="far fa-clock"></i>19 ตุลาคม 2020</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-sm-6">  
+                    <div class="article-item">
+                        <div class="article-item-img">
+                            <img src="https://images.unsplash.com/photo-1536242019389-18dea718fd7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="" alt="" scale="0">
+                        </div>
+                        <div class="article-item-head">
+                            <span>เทคนิคการพายเรือคายัค พายอย่างไรให้ถูกวิธี ไม่จมกลางน้ำ</span>
+                        </div>
+                        <div class="article-item-detail">
+                            <span>การพายเรือคายัค เป็นกิจกรรมอย่างหนึ่งสำหรับนักท่องเที่ยว ที่กำลังได้รับความนิยมเป็นอย่างมาก ซึ่งก็มีสถานที่ท่องเที่ยวหลายแห่งด้วยกัน โดยเฉพาะแพที่พักบนเขื่อนเชี่ยวหลาน ที่เปิดให้บริการพายเรือคายัค ไม่ว่าจะเป็นการพายเรือเพื่อพักผ่อนชมวิวเพลินๆ หรือการพายเรือล่องแก่งก็ตาม แต่ทั้งนี้การจะพายเรือคายัคให้สนุกและคุ้มค่าที่สุดก็ต้องมีเทคนิคกันหน่อย พร้อมด้วยข้อควรระวังที่จะต้องทำความเข้าใจก่อนเริ่มพายจริง นั่นก็เพื่อความปลอดภัยจากการพายเรือคายัคนั่นเอง</span>
+                        </div>
+                        <div class="article-item-date hidden-sm hidden-xs">
+                            <span><i class="far fa-clock"></i>19 ตุลาคม 2020</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-sm-6">  
+                    <div class="article-item">
+                        <div class="article-item-img">
+                            <img src="https://images.unsplash.com/photo-1536242019389-18dea718fd7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="" alt="" scale="0">
+                        </div>
+                        <div class="article-item-head">
+                            <span>เทคนิคการพายเรือคายัค พายอย่างไรให้ถูกวิธี ไม่จมกลางน้ำ</span>
+                        </div>
+                        <div class="article-item-detail">
+                            <span>การพายเรือคายัค เป็นกิจกรรมอย่างหนึ่งสำหรับนักท่องเที่ยว ที่กำลังได้รับความนิยมเป็นอย่างมาก ซึ่งก็มีสถานที่ท่องเที่ยวหลายแห่งด้วยกัน โดยเฉพาะแพที่พักบนเขื่อนเชี่ยวหลาน ที่เปิดให้บริการพายเรือคายัค ไม่ว่าจะเป็นการพายเรือเพื่อพักผ่อนชมวิวเพลินๆ หรือการพายเรือล่องแก่งก็ตาม แต่ทั้งนี้การจะพายเรือคายัคให้สนุกและคุ้มค่าที่สุดก็ต้องมีเทคนิคกันหน่อย พร้อมด้วยข้อควรระวังที่จะต้องทำความเข้าใจก่อนเริ่มพายจริง นั่นก็เพื่อความปลอดภัยจากการพายเรือคายัคนั่นเอง</span>
+                        </div>
+                        <div class="article-item-date hidden-sm hidden-xs">
+                            <span><i class="far fa-clock"></i>19 ตุลาคม 2020</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-sm-6">  
+                    <div class="article-item">
+                        <div class="article-item-img">
+                            <img src="https://images.unsplash.com/photo-1536242019389-18dea718fd7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="" alt="" scale="0">
+                        </div>
+                        <div class="article-item-head">
+                            <span>เทคนิคการพายเรือคายัค พายอย่างไรให้ถูกวิธี ไม่จมกลางน้ำ</span>
+                        </div>
+                        <div class="article-item-detail">
+                            <span>การพายเรือคายัค เป็นกิจกรรมอย่างหนึ่งสำหรับนักท่องเที่ยว ที่กำลังได้รับความนิยมเป็นอย่างมาก ซึ่งก็มีสถานที่ท่องเที่ยวหลายแห่งด้วยกัน โดยเฉพาะแพที่พักบนเขื่อนเชี่ยวหลาน ที่เปิดให้บริการพายเรือคายัค ไม่ว่าจะเป็นการพายเรือเพื่อพักผ่อนชมวิวเพลินๆ หรือการพายเรือล่องแก่งก็ตาม แต่ทั้งนี้การจะพายเรือคายัคให้สนุกและคุ้มค่าที่สุดก็ต้องมีเทคนิคกันหน่อย พร้อมด้วยข้อควรระวังที่จะต้องทำความเข้าใจก่อนเริ่มพายจริง นั่นก็เพื่อความปลอดภัยจากการพายเรือคายัคนั่นเอง</span>
+                        </div>
+                        <div class="article-item-date hidden-sm hidden-xs">
+                            <span><i class="far fa-clock"></i>19 ตุลาคม 2020</span>
+                        </div>
+                    </div>
+            </div>
+            
 
-<!--            <div id="owl-demo-article" class="owl-carousel owl-theme">
-                
-                <div class="item">
-                    <div class="article-card">
-                        <div class="article-card-cover">
-                            <a href="" title="">
-                                <img src="https://images.unsplash.com/photo-1501696461415-6bd6660c6742?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80" class="" alt="" scale="0">
-                            </a>
-                        </div>
-                        <div class="article-card-content">
-                            <a href="" title="">
-                               
-                            </a>
-                            <div class="article-card-date">
-                                <i class="far fa-clock"></i>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-               
-            </div>-->
         </div>
     </div>
     
@@ -994,41 +1041,5 @@ var rootPath = '{{asset("/images/")}}';
 </script>
 
 <script type="text/javascript" src="{{ asset('js/home/index.js') }}"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
 
-        var owl = $("#owl-demo-article");
-
-        owl.owlCarousel({
-            items: 4, //5 items above 1000px browser width
-
-
-            loop: true,
-            autoPlay: 6000,
-            stopOnHover: true,
-            pagination: false,
-            margin: 5,
-            transitionStyle: "fade",
-            itemsDesktop: [1199, 3],
-            itemsTablet: [768, 3],
-            itemsMobile: [479, 2]
-
-        });
-
-        // Custom Navigation Events
-        $(".next").click(function () {
-            owl.trigger('owl.next');
-        })
-        $(".prev").click(function () {
-            owl.trigger('owl.prev');
-        })
-        $(".play").click(function () {
-            owl.trigger('owl.play', 1000); //owl.play event accept autoPlay speed as second parameter
-        })
-        $(".stop").click(function () {
-            owl.trigger('owl.stop');
-        })
-    });
-
-</script>
 @endsection
