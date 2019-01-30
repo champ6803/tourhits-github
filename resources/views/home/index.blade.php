@@ -8,10 +8,10 @@
     .tabs .ui-tabs-nav{
         overflow-y: hidden;
         overflow-x: scroll;
-        /*display: -webkit-box;*/    
+        /*display: -webkit-box;*/
     }
 
-    .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {    
+    .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
         color: #EC2424;
         border-bottom-color: #EC2424;
     }
@@ -27,13 +27,13 @@
     @media screen and ( max-width: 958px ) {
         .package-hit-title h1{font-size: 23px;}
         .package-hit-title .see-more span{font-size: 14px; line-height: 33px;}
-        .package-hit-title .section-descripion{font-size: 19px;}   
+        .package-hit-title .section-descripion{font-size: 19px;}
         .hothits-name-box .text{font-size: 14px;}
     }
     .item { width: 25%; }
     .item.w2 { width: 50%; }
 
-    .company .thumbnail { 
+    .company .thumbnail {
         width:100% !important;
         box-shadow: none !important;
     }
@@ -66,7 +66,7 @@
 <!-- SEARCH TABS -->
 <section>
     <!--    <div class="container search-container">
-            <div class="awe-search-tabs-2 tabs">            
+            <div class="awe-search-tabs-2 tabs">
                 <ul hidden="">
                     <li>
                         <a href="#awe-search-tabs-1">
@@ -142,7 +142,7 @@
                  <h1>Tourhits.co (ทัวร์ฮิต) ศูนย์รวมทัวร์คุณภาพทั่วโลก</h1>
             </div>
             <div class="row">
-                <div class="col-md-10 col-md-offset-1 tabs-flagall">                                                  
+                <div class="col-md-10 col-md-offset-1 tabs-flagall">
                     <div class="product-tabs tabs">
                         <ul>
                             <li>
@@ -160,7 +160,7 @@
                         </ul>
                         <div class="all-flag-content">
                             <div id="tabs-1">
-                                <div class="flag-tab1">                                        
+                                <div class="flag-tab1">
                                     <div class=”flag-all”>
                                         <div class="row">
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/japan')}}">
@@ -196,7 +196,7 @@
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/taiwan')}}">
                                                     <img data-src="../images/flags/Taiwan.png" alt="ทัวร์ไต้หวัน" class=" lazyloaded" src="../images/flags/Taiwan.png">
                                                     <h5>ทัวร์ไต้หวัน</h5>
-                                                </a>      
+                                                </a>
                                             </div>
 
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/maldives')}}">
@@ -406,7 +406,7 @@
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/taiwan')}}">
                                                     <img data-src="../images/flags/Taiwan.png" alt="ทัวร์ไต้หวัน" class=" lazyloaded" src="../images/flags/Taiwan.png">
                                                     <h5>ทัวร์ไต้หวัน</h5>
-                                                </a>      
+                                                </a>
                                             </div>
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/korea')}}">
                                                     <img data-src="../images/flags/South_Korea.png" alt="ทัวร์เกาหลี" class=" lazyloaded" src="../images/flags/South_Korea.png">
@@ -462,8 +462,8 @@
                                                     <img data-src="../images/flags/Cambodia.png" alt="ทัวร์กัมพูชา" class=" lazyloaded" src="../images/flags/Cambodia.png">
                                                     <h5>ทัวร์กัมพูชา</h5>
                                                 </a>
-                                            </div>                                                          
-                                        </div> 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -485,7 +485,7 @@
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/russia')}}">
                                                     <img data-src="../images/flags/Russia.png" alt="ทัวร์รัสเซีย" class=" lazyloaded" src="../images/flags/Russia.png">
                                                     <h5>ทัวร์รัสเซีย</h5>
-                                                </a>    
+                                                </a>
                                             </div>
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/italy')}}">
                                                     <img data-src="../images/flags/Italy.png" alt="ทัวร์อิตาลี" class=" lazyloaded" src="../images/flags/Italy.png">
@@ -547,10 +547,10 @@
                                                     <h5>ทัวร์สแกนดิเนเวีย</h5>
                                                 </a>
                                             </div>
-                                        </div> 
+                                        </div>
                                     </div>
-                                </div>    
-                            </div> 
+                                </div>
+                            </div>
 
                             <div id="tabs-4">
                                 <div class="flag-tab4">
@@ -606,19 +606,19 @@
                                                     <h5>อเมริกาใต้</h5>
                                                 </a>
                                             </div>
-                                        </div> 
+                                        </div>
                                     </div>
                                 </div>
 
-                            </div>                               
-                        </div>                                                         
+                            </div>
+                        </div>
                     </div>
-                </div>    
+                </div>
             </div>
 
         </div>
     </div>
-</div>    
+</div>
 </section>
 <!-- END / MASONRY -->
 
@@ -628,7 +628,7 @@
         <div class="row">
             <div class="col-md-12 package-hit-title">
                 <div class="section-title">
-                    <h1><i class="fas fa-map-marker" style='color: #c33132;'></i>&nbsp;แพ็คเกจยอดนิยม</h1>              
+                    <h1><i class="fas fa-map-marker" style='color: #c33132;'></i>&nbsp;แพ็คเกจยอดนิยม</h1>
                 </div>
                 <div class="see-more">
                     <a href="#" ><span>ดูทั้งหมด <i class="fas fa-arrow-circle-right"></i></span></a>
@@ -638,7 +638,7 @@
                                 </div>-->
             </div>
         </div>
-        <!--        หน้าจอเวอชั่น mobile/pc-->        
+        <!--        หน้าจอเวอชั่น mobile/pc-->
         <div id="card_area_hit" class="card-xs js-flickity" data-flickity='{ "freeScroll": true, "wrapAround": true, "autoPlay": true }'>
 
         </div>
@@ -651,9 +651,9 @@
     <div class="container">
         <div class="package-hit-title">
             <div class="section-title" style="width:100%;">
-                <h1><i class="" style='color: #c33132;'></i>เราคัดสรรมาให้จากกว่า 200 ทัวร์</h1>              
+                <h1><i class="" style='color: #c33132;'></i>เราคัดสรรมาให้จากกว่า 200 ทัวร์</h1>
             </div>
-        </div>    
+        </div>
         <!--            <div class='section-descripion hidden-xs'>
                         ทางบริษัททัวร์ฮิต ได้คัดเลือกแพ็คเกจทัวร์ต่างประเทศทั้งหมดที่มี เฉพาะส่วนที่จัดรายการโปรโมชั่นต้อนรับเทศกาลต่างๆในแต่ละเดือนมาไว้ ณ ที่นี้ ซึ่งในแต่ละแพ็คเกจจะราคาถูกต่างกัน โดยแต่ละแพ็คเกจหรือแต่ละช่วงเวลาจะมีที่นั่งจำกัด เพียงไม่กี่ที่เท่านั้น ท่านสามารถเลือกซื้อ หรือ เลือกชมได้จากหน้านี้ หรือสามารถสอบถามเพิ่มเติมได้จากเจ้าหน้าที่ เพื่อขอคำแนะนำ ทางเรายินดีให้บริการครับ
                     </div>-->
@@ -663,15 +663,15 @@
                 <div class="select-item">
                     <a href="{{url('tourhit?category_id='. $category->category_id)}}">
                         <div class="select-img lazyloaded">
-                            <div class="center-crop"> 
+                            <div class="center-crop">
                                 <img src="images/category/{{ $category->category_img }}" alt="">
-                            </div> 
-                        </div> 
+                            </div>
+                        </div>
                         <div class="hothits-name-box">
                             <div class="text ">แนะนำ</div>
                         </div>
                     </a>
-                </div>   
+                </div>
             </div>
             @endforeach
         </div>
@@ -707,9 +707,9 @@
 </section>
 <section class="article-section">
     <div class="container">
-        <div class="package-hit-title">          
+        <div class="package-hit-title">
             <div class="section-title">
-                <h1><i class="fas fa-globe-asia"></i>&nbsp;เรื่องราวที่น่าสนใจ</h1>           
+                <h1><i class="fas fa-globe-asia"></i>&nbsp;เรื่องราวที่น่าสนใจ</h1>
             </div>
             <div class="see-more">
                 <a href="{{ url("article-index")}}" ><span>ดูทั้งหมด <i class="fas fa-arrow-circle-right"></i></span></a>
@@ -720,9 +720,8 @@
             <div class="article-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>-->
         </div>
         <div class="row">
-
-            <?php for ($i = 0; $i < 4; $i++) { ?>
-                <div class="col-sm-6">  
+            <?php for ($i = 0; $i < (count($articleList) > 4 ? 4 : count($articleList)); $i++) { ?>
+                <div class="col-sm-6">
                     <div class="article-item">
                         <div class="article-item-img">
                             <a href="{{ url('article-content?id='.$articleList[$i]->article_id) }}" title="">
@@ -735,7 +734,7 @@
                             </a>
                         </div>
                         <div class="article-item-detail">
-                            <span>{{ $articleList[$i]->article_short_detail }}</span>
+                            <span><?php echo $articleList[$i]->article_short_detail ?></span>
                         </div>
                         <div class="article-item-date hidden-sm hidden-xs">
                             <span><i class="far fa-clock"></i><?php echo date('d-m-Y', strtotime($articleList[$i]->created_date)); ?></span>
@@ -755,7 +754,7 @@
                 <h1><i class="fas fa-hands-helping" style='color: #c33132;'></i>&nbsp;ลูกค้าที่ไว้วางใจกับเรา</h1>
                 <!--                <div class="line-gradient"></div>-->
             </div>
-        </div>    
+        </div>
         <div class="awe-masonry item-9" style="position: relative; height: 877.5px;">
             <!-- GALLERY ITEM -->
             <div class="first-item-image awe-masonry__item" style="position: absolute; left: 0px; top: 0px;">
@@ -763,7 +762,7 @@
                     <div class="image-wrap image-cover">
                         <img src="../images/sponsor/spon1.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
-                </a>      
+                </a>
             </div>
             <!-- END / GALLERY ITEM -->
             <!-- GALLERY ITEM -->
@@ -772,7 +771,7 @@
                     <div class="image-wrap image-cover">
                         <img src="../images/sponsor/spon2.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
-                </a>                               
+                </a>
             </div>
             <!-- END / GALLERY ITEM -->
             <!-- GALLERY ITEM -->
@@ -790,7 +789,7 @@
                     <div class="image-wrap image-cover">
                         <img src="../images/sponsor/spon4.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
-                </a>                              
+                </a>
             </div>
             <!-- END / GALLERY ITEM -->
             <!-- GALLERY ITEM -->
@@ -799,7 +798,7 @@
                     <div class="image-wrap image-cover">
                         <img src="../images/sponsor/spon5.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
-                </a>                                
+                </a>
             </div>
             <!-- END / GALLERY ITEM -->
             <!-- GALLERY ITEM -->
@@ -808,7 +807,7 @@
                     <div class="image-wrap image-cover">
                         <img src="../images/sponsor/spon6.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
-                </a>                                
+                </a>
             </div>
             <!-- END / GALLERY ITEM -->
             <!-- GALLERY ITEM -->
@@ -817,7 +816,7 @@
                     <div class="image-wrap image-cover">
                         <img src="../images/sponsor/spon7.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
-                </a>                               
+                </a>
             </div>
             <!-- END / GALLERY ITEM -->
             <!-- GALLERY ITEM -->
@@ -826,7 +825,7 @@
                     <div class="image-wrap image-cover">
                         <img src="../images/sponsor/spon8.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
-                </a>                               
+                </a>
             </div>
             <!-- END / GALLERY ITEM -->
             <!-- GALLERY ITEM -->
@@ -835,11 +834,11 @@
                     <div class="image-wrap image-cover">
                         <img src="../images/sponsor/spon9.jpg" alt="" style="height: 100%; width: auto;">
                     </div>
-                </a>                               
+                </a>
             </div>
-            <!-- END / GALLERY ITEM -->            
+            <!-- END / GALLERY ITEM -->
 
-        </div>   
+        </div>
 
 
         <!--            <div class="openGallery-board">
@@ -856,7 +855,7 @@
                                 <div class="Card-explore"><span>Explore 50 more</span></div>
                                 <button class="Card-button">view more</button>
                                 </a>
-                                
+
                                 <a class="Card" onclick="openGallery(2)" id="card-2">
                                 <div class="Card-thumb">
                                   <div class="Card-shadow"></div>
@@ -868,7 +867,7 @@
                                 <div class="Card-explore"><span>Explore 50 more</span></div>
                                 <button class="Card-button">view more</button>
                                 </a>
-                                
+
                                 <a class="Card" onclick="openGallery(3)" id="card-3">
                                 <div class="Card-thumb">
                                   <div class="Card-shadow"></div>
@@ -930,16 +929,16 @@
 
 
         <!--        <div id="Carousel" class="carousel slide">
-        
+
                     <ol class="carousel-indicators">
                         <li data-target="#Carousel" data-slide-to="0" class="active"></li>
                                                 <li data-target="#Carousel" data-slide-to="1"></li>
                                                 <li data-target="#Carousel" data-slide-to="2"></li>
                     </ol>
-        
-                     Carousel items 
+
+                     Carousel items
                     <div class="carousel-inner">
-        
+
                         <div class="item active" style="width:100% !important">
                             <div class="row company">
                                 <div class="col-md-2 col-xs-4"><a href="http://reg.thonburi-u.ac.th/registrar/home.asp" class="thumbnail"><img src="https://tmaxtech.co.th/images/Partner/1.jpg" alt="Image" style="height:80px;"></a></div>
@@ -950,7 +949,7 @@
                                 <div class="col-md-2 col-xs-4"><a href="http://www.songkhlazoo.com/" class="thumbnail"><img src="https://tmaxtech.co.th/images/Partner/6.jpg" alt="Image" style="height:80px;"></a></div>
                             </div>.row
                         </div>.item
-        
+
                         <div class="item" style="width:100% !important">
                             <div class="row company">
                                 <div class="col-md-2 col-xs-4"><a href="http://www.zoothailand.org/" class="thumbnail"><img src="https://tmaxtech.co.th/images/Partner/7.jpg" alt="Image" style="max-height:80px;"></a></div>
@@ -961,7 +960,7 @@
                                 <div class="col-md-2 col-xs-4"><a href="http://www.nstda.or.th/index.php" class="thumbnail"><img src="https://tmaxtech.co.th/images/Partner/12.jpg" alt="Image" style="max-height:80px;"></a></div>
                             </div>
                         </div>
-        
+
                         <div class="item" style="width:100% !important">
                             <div class="row company">
                                 <div class="col-md-2 col-xs-4"><a href="http://www.oaep.go.th/" class="thumbnail"><img src="https://tmaxtech.co.th/images/Partner/13.png" alt="Image" style="max-height:80px;"></a></div>
@@ -972,9 +971,9 @@
                                 <div class="col-md-2 col-xs-4"><a href="http://www.spu.ac.th" class="thumbnail"><img src="https://tmaxtech.co.th/images/Partner/2.jpg" alt="Image" style="height:80px;"></a></div>
                             </div>
                         </div>
-        
-        
-        
+
+
+
                     </div>
                 </div>-->
     </div>
