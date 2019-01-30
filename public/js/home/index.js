@@ -136,7 +136,7 @@ function renderTourPackage(tourPackageList, tourPeriod, selection) {
         $('#search_tour_pager').show();
     } else {
         $('#' + selection).empty();
-        var div = "<div class='search-empty'>โปรแกรมจะมาเร็วๆนี้</div>";
+        var div = "<div class='search-empty' style='color: #c33132;'>Coming Soon <i class='fa fa-plane-departure'></i></div>";
         $('#' + selection).html(div);
         $('#search_tour_pager').hide();
     }

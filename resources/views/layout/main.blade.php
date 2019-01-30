@@ -7,7 +7,7 @@ session_start();
         <meta charset="utf-8">
 
         <!-- TITLE -->
-        <title>{{$page_title or 'Welcome To Tourhits'}}</title>
+        <title>{{$page_title or 'ทัวร์ต่างประเทศ ท่องเที่ยว ทัวร์ กับ บริษัททัวร์ ทัวร์ราคาถูก ทัวร์มีคุณภาพ ทัวร์ชั้นนำ ทัวร์ต่างประเทศ I บริษัททัวร์ต่างประเทศ I ทัวร์ I บริษัททัวร์ I ท่องเที่ยว'}}</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
