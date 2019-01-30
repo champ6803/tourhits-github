@@ -64,7 +64,17 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="form-group row">
-                                                        <label for="tour_detail_0" class="col-sm-2 control-label">รายละเอียด :</label>
+                                                        <label for="article_short_detail" class="col-sm-2 control-label">รายละเอียด(ย่อ) :</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea style="height: 200px;" type="text" class="form-control" id="article_short_detail" name="article_short_detail"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="article_detail_name" class="col-sm-2 control-label">รายละเอียด :</label>
                                                         <div class="col-sm-10">
                                                             <textarea style="height: 500px;" type="text" class="form-control" id="article_detail_name" name="article_detail_name"></textarea>
                                                         </div>

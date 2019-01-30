@@ -69,9 +69,10 @@ class ArticleIndexController extends Controller {
             if ($this->IsNullOrEmptyString($article_id)) {
                 $article_title = $request->get('article_title');
                 $article_image = $_FILES['image']['name'];
+                $article_short_detail = $request->get('article_short_detail');
                 $article_detail_name = $request->get('article_detail_name');
 
-                $articleDetailModel->insertArticle($article_title, $article_detail_name, $article_image);
+                $articleDetailModel->insertArticle($article_title, $article_short_detail, $article_detail_name, $article_image);
                 echo "<script>
                         alert('บันทึกเรียบร้อย');
                         window.location.href='article-manage';
@@ -79,9 +80,10 @@ class ArticleIndexController extends Controller {
             } else {
                 $article_title = $request->get('article_title');
                 $article_image = $_FILES['image']['name'];
+                $article_short_detail = $request->get('article_short_detail');
                 $article_detail_name = $request->get('article_detail_name');
 
-                $articleDetailModel->updateArticle($article_id, $article_title, $article_detail_name, $article_image);
+                $articleDetailModel->updateArticle($article_id, $article_title, $article_short_detail, $article_detail_name, $article_image);
                 echo "<script>
                         alert('บันทึกเรียบร้อย');
                         window.location.href='article-manage';
