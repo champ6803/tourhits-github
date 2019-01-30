@@ -712,7 +712,7 @@
                 <h1><i class="fas fa-globe-asia"></i>&nbsp;เรื่องราวที่น่าสนใจ</h1>           
             </div>
             <div class="see-more">
-                <a href="#" ><span>ดูทั้งหมด <i class="fas fa-arrow-circle-right"></i></span></a>
+                <a href="{{ url("article-index")}}" ><span>ดูทั้งหมด <i class="fas fa-arrow-circle-right"></i></span></a>
             </div>
         </div>
         <div class="row">
