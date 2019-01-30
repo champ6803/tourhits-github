@@ -29,7 +29,7 @@
     background-color: rgba(249, 166, 124, 1);
     background-color: rgb(237, 85, 101);
     /*    background-color: rgba(227, 220, 221, 0.88);*/
-    padding-top: 9px; 
+    padding-top: 9px;
     font-size: 28px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -198,7 +198,7 @@
 }
 .nav-tabs > .active {
     color: #555555;
-    cursor: default;    
+    cursor: default;
     background-color: #FFFFFF;
     /*background-color: #ffffff;*/
     /*border: 1px solid #ddd;*/
@@ -221,7 +221,7 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card-detail{   
+.card-detail{
     height: 160px;
     overflow: auto;
     text-align: left;
@@ -306,11 +306,11 @@
 
 .product-detail__info .product-address p:after{
     content: " | ";
-    color: #8d8d8d;      
+    color: #8d8d8d;
 }
 
 .product-detail__info .product-address p:last-child:after{
-    content: "";   
+    content: "";
 }
 
 .card-highlight{
@@ -348,16 +348,16 @@
     /*    font-family: sans-serif;*/
 }
 
-.card-airline img{ 
-    max-width: 130px; 
-    max-height: 35px; 
-    position: relative; 
-    left: 0; 
+.card-airline img{
+    max-width: 130px;
+    max-height: 35px;
+    position: relative;
+    left: 0;
 }
 
 .card-price{
-    padding: 0 0px 0 0; 
-    color: #EC2424; 
+    padding: 0 0px 0 0;
+    color: #EC2424;
     text-align: right;
     font-size: 26px;
     /*    font-weight: 900;*/
@@ -369,8 +369,8 @@
 /*
 .card-special-price{
     text-decoration: line-through;
-    padding: 0 0px 0 0; 
-    color: #262626; 
+    padding: 0 0px 0 0;
+    color: #262626;
     text-align: right;
     font-size: 20px;
         font-weight: 900;
@@ -490,11 +490,11 @@
     /*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
     /*    width: 200px;*/
     margin: 20px 0 20px 0;
-    border-radius: 8px;    
+    border-radius: 8px;
     color: #fff;
     background-color: #7F7FF5;
     border-color: #7F7FF5;
-    font-size: 20px;    
+    font-size: 20px;
     font-family: supermarket, sans-serif;
 }
 
@@ -506,8 +506,8 @@
 /* END css for btn-nextpage */
 
 hr {
-    margin-top: 0; 
-    margin-bottom: 0; 
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .card{
@@ -558,7 +558,7 @@ hr {
 
 .login-section .panel-login{
     border-radius: 10px;
-}        
+}
 
 .login-section .panel-heading{
     font-size: 25px;
@@ -592,7 +592,7 @@ hr {
     background-color: #f2f2f2;
     padding: 5px 10px;
     font-size: 18px;
-    color: #fff;   
+    color: #fff;
 }
 
 /* footer css */
@@ -634,7 +634,7 @@ hr {
     font-weight: bold;
 }
 
-.filter-header-text {   
+.filter-header-text {
     font-size: 20px;
     font-weight: bold;
 }
@@ -657,7 +657,7 @@ hr {
 .filter-bar hr{
     height: 20px;
     left: 10px;
-    right: 10px;   
+    right: 10px;
 }
 
 .filter-bar{
@@ -750,7 +750,7 @@ hr {
 }
 
 .cntr {
-    position: absolute; 
+    position: absolute;
     top: 45%;
     left: 0;
     width: 100%;
@@ -906,7 +906,7 @@ hr {
 
 .pagination a.more{
     font-size: 25px;
-    background-color: #fff; 
+    background-color: #fff;
     color: #EC2424;
 }
 
@@ -922,7 +922,7 @@ hr {
 }
 /* next page หน้า filter */
 
-#filter-route .option{ 
+#filter-route .option{
     display:none;
 }
 
@@ -939,7 +939,7 @@ hr {
     color: #ec2424;
     background-color: #fff;
     border-color: #ec2424;
-    font-size: 16px; 
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -953,13 +953,13 @@ hr {
 
 /* ปฎิทิน */
 #calendar .panel-default{
-    width: 100%; 
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     border-bottom: 0px;
     border-left: 0px;
     border-right: 0px;
-    border-radius: 0px;  
+    border-radius: 0px;
 
 }
 
@@ -4336,7 +4336,7 @@ Custom BS3
 
 
 .img-about{
-    height: 400px;     
+    height: 400px;
 }
 
 .img-about img{
@@ -4366,8 +4366,8 @@ Custom BS3
 
 .cer-logo {
     font-family: 'Kanit', sans-serif;
-    font-size: 14px;    
-    display: inline; 
+    font-size: 14px;
+    display: inline;
     color: white;
     line-height: 60px;
     float: left;
@@ -4418,7 +4418,7 @@ Custom BS3
     background-position: 50%;
     background-size: cover;
     border-radius: 5px;
-    text-align: center;  
+    text-align: center;
 }
 
 .hothits-country-name{
@@ -4467,8 +4467,8 @@ Custom BS3
     font-size: 15px;
     font-family: 'Kanit', sans-serif;
     line-height: 1.6;
-    display: inline-block;   
-}  
+    display: inline-block;
+}
 
 .btn-lr{
     width: 100%;
@@ -4486,9 +4486,9 @@ Custom BS3
 .btn-lr, .btn-facebook-reg:hover {
     opacity: 1;
     color : white;
-}        
+}
 
-.btn-facebook-reg{ 
+.btn-facebook-reg{
     padding: 12px 25px;
     border: none;
     border-radius: 6px;
@@ -4521,15 +4521,15 @@ Custom BS3
 .register-section .panel-register{
     border: 0px solid transparent;
     border-radius: 10px;
-}    
+}
 
 .register-section .btn-reg-submit{
-    font-size:20px; 
-    color: #fff; 
+    font-size:20px;
+    color: #fff;
     background-color: #5670a5;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     opacity: 0.85;
-    padding: 5px 25px;    
+    padding: 5px 25px;
 }
 
 .register-section .btn-reg-submit:hover{
@@ -4553,7 +4553,7 @@ Custom BS3
 
 .loading-section .loading-text{
     font-size: 25px;
-    font-weight: 300; 
+    font-weight: 300;
 }
 
 .loading-section .loading-text span{
@@ -4601,7 +4601,7 @@ Custom BS3
 .hothits-name-box .text {
     color: #ffffff;
     padding: 1px 5px 1px 7px;
-    font-size: 17px; 
+    font-size: 17px;
 }
 
 .hothits-img {
@@ -4639,7 +4639,7 @@ Custom BS3
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 10px 10px; 
+    padding: 10px 10px;
 }
 
 .hothits-item .tour-description .tour-price small.strike {
@@ -4671,7 +4671,7 @@ Custom BS3
 
 .hothits-item a .hothits-img .center-crop img{
     min-height: 200px!important;
-    width: 100%;    
+    width: 100%;
 
     -moz-transition: all 0.7s;
     -webkit-transition: all 0.7s;
@@ -4702,7 +4702,7 @@ Custom BS3
 
 .select-item a .select-img .center-crop img{
     max-height: 200px!important;
-    width: 100%;    
+    width: 100%;
 
     -moz-transition: all 0.7s;
     -webkit-transition: all 0.7s;
@@ -4747,9 +4747,9 @@ Custom BS3
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;       
+    flex-wrap: wrap;
     /*        margin-right: -15px;
-            margin-left: -15px;*/       
+            margin-left: -15px;*/
 }
 
 .cat-line{
@@ -4758,7 +4758,7 @@ Custom BS3
 
 .cat-asian .flag{
     width: 130px;
-    margin: 5px -10px 5px 3px;   
+    margin: 5px -10px 5px 3px;
 }
 
 .cat-asian .flag a{
@@ -4863,12 +4863,12 @@ Custom BS3
 
 
     }
-}    
+}
 /*    @media screen and (max-width: 768px) {
         .card-body-xs {
             display: flex;
         }
-        
+
         .card-xs {
             display: flex;
         }
@@ -5243,12 +5243,12 @@ Custom BS3
 }
 
 .filter-page__content .trip-item .hilight .detail p:after{
-    content: " | "; 
+    content: " | ";
     color: #8d8d8d;
 }
 
 .filter-page__content .trip-item .hilight .detail p:last-child:after{
-    font-family: "Font Awesome 5 Free"; 
+    font-family: "Font Awesome 5 Free";
     content: " \f10e";
     color: #ed5565;
     font-size: 15px;
@@ -5283,8 +5283,8 @@ Custom BS3
 
 @media screen and (max-width: 464px){
 
-    .filter-page__content .trip-item .hilight .detail{        
-        -webkit-line-clamp: 4;     
+    .filter-page__content .trip-item .hilight .detail{
+        -webkit-line-clamp: 4;
     }
     .footer-one .box-border{font-size: 14px!important;}
     .foot-location-head{text-align: center;}
@@ -5323,7 +5323,7 @@ Custom BS3
     font-family: 'Kanit', sans-serif;
     font-size: 17px;
     line-height: 20px;
-    color: #ed5565;   
+    color: #ed5565;
 }
 .filter-page__content .country span{
     font-size: 27px;
@@ -5372,7 +5372,7 @@ Custom BS3
 
 @media screen and (max-width: 1200px) {
     .trip-item .item-price-more a {
-        position: absolute;              
+        position: absolute;
         right: 0;
         top: -23px;
         line-height: 1.3;
@@ -5390,10 +5390,10 @@ Custom BS3
 }
 
 .pdf-download{
-    display: block;  
+    display: block;
     background-image: none;
     width: 100%;
-    padding: 0px 15px;  
+    padding: 0px 15px;
 }
 
 .pdf-download:hover a{
@@ -5410,7 +5410,7 @@ Custom BS3
     border:2px solid #fd6149;
     font-weight: bold;
     line-height: 28px;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
 .filter-page__content .filter-item-wrapper .country{
@@ -5476,7 +5476,7 @@ Custom BS3
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;    
+    transition: all 0.3s ease;
 }
 
 .book-by-line a{
@@ -5507,7 +5507,7 @@ Custom BS3
 
 .modal-body .trip-item:hover{
     opacity:1.0;
-    box-shadow:none; 
+    box-shadow:none;
 }
 
 .modal-body .trip-item .item-body{
@@ -5540,12 +5540,12 @@ Custom BS3
     overflow : hidden;
     text-overflow: ellipsis;
 
-}   
+}
 
 .modal-body .trip-item .item-body .hilight .detail{
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;     
+    -webkit-box-orient: vertical;
 }
 
 .modal-body .trip-item .item-body .item-list li {
@@ -5561,23 +5561,23 @@ Custom BS3
 @media screen and (min-width: 1199px) {
     .call-and-line .modal-dialog{
         margin: 200px auto;
-    }              
-}    
+    }
+}
 
 .call-and-line .modal-header{
     background-color: #2A3F54;
-} 
+}
 
 .call-and-line .header-line{
     background-color: #00c500;
-} 
+}
 
 .call-and-line .modal-header .close{
     color: #fff;
     margin-top: 0px;
     font-size: 23px;
     text-shadow: none;
-} 
+}
 
 .call-and-line .modal-header .modal-title{
     font-size: 28px;
@@ -5696,14 +5696,14 @@ Custom BS3
     width: calc(100%/3);
     display: block;
     float: left;
-    margin-top: -2px;    
+    margin-top: -2px;
 }
 
 .navbar-bot .bx .img-bx{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 33.33%;   
+    width: 33.33%;
 }
 .navbar-bot .bx .img-bx img{
     display: block;
@@ -5879,7 +5879,7 @@ https://flickity.metafizzy.co
         height: 30px;
     }
     .card--content {
-        margin: 5px;  
+        margin: 5px;
     }
 
     /* arrow color */
@@ -5937,7 +5937,7 @@ https://flickity.metafizzy.co
 
     @media screen and ( min-width: 768px ) {
         /* half-width cells for larger devices */
-        .gallery-cell { width: 50%; } 
+        .gallery-cell { width: 50%; }
     }
 }
 
@@ -5981,10 +5981,10 @@ https://flickity.metafizzy.co
 #footer-page-bottom .verification-footer .boxx:first-child{border-left: 0;}
 #footer-page-bottom .verification-footer p{margin-top: 20px; font-size: 15px;}
 
-.fb-page, 
-.fb-page span, 
-.fb-page span iframe[style] { 
-    width: 100% !important; 
+.fb-page,
+.fb-page span,
+.fb-page span iframe[style] {
+    width: 100% !important;
     height: 180px!important;
     padding-left: 5px;
 }
@@ -6019,7 +6019,7 @@ https://flickity.metafizzy.co
 }
 
 #footer-page .package-country-footer .continent-name{
-    font-family: 'Kanit', sans-serif; 
+    font-family: 'Kanit', sans-serif;
     width: 100%;
     text-align: left;
     font-size: 21px;
@@ -6090,7 +6090,7 @@ https://flickity.metafizzy.co
     padding-left: 20px;
     font-size: 19px;
     color: white;
-    font-family: 'supermarket', sans-serif;    
+    font-family: 'supermarket', sans-serif;
     font-weight: bold;
     line-height: 60px;
 }
@@ -6116,37 +6116,37 @@ https://flickity.metafizzy.co
     padding: 2px 0;
 }
 .trip-item .item-media .bot-img-detail .tag-day-and-period{
-    float: left; 
+    float: left;
     padding-left: 15px;
     color: #fff;
     height: 100%;
 }
 
-.trip-item .item-media .bot-img-detail .tag-day-and-period span:nth-child(1){ 
-    font-size: 22px;  
-    line-height: 19px;   
+.trip-item .item-media .bot-img-detail .tag-day-and-period span:nth-child(1){
+    font-size: 22px;
+    line-height: 19px;
 }
 .trip-item .item-media .bot-img-detail .tag-day-and-period span:nth-child(2){
     font-family: 'Kanit', sans-serif;
-    font-size: 15px;    
-    line-height: 19px;   
+    font-size: 15px;
+    line-height: 19px;
 }
 
-.trip-item .item-media .bot-img-detail .tag-day-and-period span:nth-child(3){   
-    font-size: 22px;  
-    line-height: 19px;   
+.trip-item .item-media .bot-img-detail .tag-day-and-period span:nth-child(3){
+    font-size: 22px;
+    line-height: 19px;
 }
 
 .trip-item .item-media .bot-img-detail .tag-day-and-period span:nth-child(4){
     font-family: 'Kanit', sans-serif;
     font-size: 15px;
-    line-height: 19px;   
+    line-height: 19px;
 }
 
 .trip-item .item-media .bot-img-detail .tag-day-and-period span:nth-child(5){
     font-family: 'Kanit', sans-serif;
     display: block;
-    line-height: 10px;  
+    line-height: 10px;
 }
 
 .trip-item .item-media .bot-img-detail .tag-tour-num{
@@ -6154,7 +6154,7 @@ https://flickity.metafizzy.co
     text-align: right;
     color: #fff;
     line-height: 34px;
-    padding-right: 10px;   
+    padding-right: 10px;
 }
 
 .trip-item .item-media .bot-img-detail .tag-tour-num span:nth-child(1){
@@ -6195,7 +6195,7 @@ https://flickity.metafizzy.co
 
 .checkout-page__content .cart-content .tab-adult-single span:nth-child(2){
     font-size: 15px;
-    color: #8d8d8d; 
+    color: #8d8d8d;
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: bold;
 }
@@ -6203,7 +6203,7 @@ https://flickity.metafizzy.co
 .checkout-page__content .cart-content .tab-kid-1 span:nth-child(1){
     display: inline-block;
     width: 100%;
-    color: black;  
+    color: black;
 }
 
 .checkout-page__content .cart-content .tab-kid-1 span:nth-child(2){
@@ -6284,7 +6284,7 @@ https://flickity.metafizzy.co
 
 .Top3-detail .detail p{
     display: inline;
-    line-height: 1;   
+    line-height: 1;
 }
 
 .Top3-detail .detail p:after{
@@ -6325,7 +6325,7 @@ https://flickity.metafizzy.co
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03), -10px 0 20px 0px rgba(0, 0, 0, 0.03);
 }
 
-.product-detail__info .trips .warp-text p{ 
+.product-detail__info .trips .warp-text p{
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 15px;
     line-height: 30px;
@@ -6336,8 +6336,8 @@ https://flickity.metafizzy.co
     border: 0;
     border-radius: 8px;
     padding: 15px 14px 15px 14px;
-    margin-top: -19px; 
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03), -10px 0 20px 0px rgba(0, 0, 0, 0.03);   
+    margin-top: -19px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03), -10px 0 20px 0px rgba(0, 0, 0, 0.03);
 }
 
 
@@ -6348,7 +6348,7 @@ https://flickity.metafizzy.co
     font-size: 14px;
     font-weight: bold;
     line-height: 32px;
-    color: #fd6149; 
+    color: #fd6149;
 }
 
 .product-detail__info .product-tag-id span:nth-child(1){
@@ -6361,7 +6361,7 @@ https://flickity.metafizzy.co
 
 .product-detail__info .product-tag-id span img{
     height: 21px;
-    padding-bottom: 2px;   
+    padding-bottom: 2px;
 }
 
 /* ตารางราคา */
@@ -6393,14 +6393,14 @@ https://flickity.metafizzy.co
     font-weight: bold;
     color: black;
     background-color: transparent;
-    border: 0px;   
+    border: 0px;
     border-top: 1px solid #fd6149!important;
     border-bottom: 1px solid #efe8e8!important;
     vertical-align: middle;
 }
 
 .periods-table-detail .table .thead-light th:nth-child(1){
-    font-size: 16px;   
+    font-size: 16px;
 }
 
 .periods-table-detail .table .thead-light th .each{
@@ -6410,7 +6410,7 @@ https://flickity.metafizzy.co
 }
 
 .periods-table-detail .table-bordered,.periods-table-detail .table-bordered  tbody  tr  td{
-    border: 0px solid #b5b5b5;  
+    border: 0px solid #b5b5b5;
 }
 
 .periods-table-detail .table-bordered  tbody  tr .text-to-date span{
@@ -6573,11 +6573,11 @@ https://flickity.metafizzy.co
 
 .article-index-content .article-card{
     margin-top: -20px;
-    padding: 0 10px 70px 10px;       
+    padding: 0 10px 70px 10px;
 }
 
 .article-index-content .article-card:hover .article-card-content{
-    margin-top: -40px;    
+    margin-top: -40px;
 }
 
 .article-index-content .article-card:hover .article-card-content a{
@@ -6587,7 +6587,7 @@ https://flickity.metafizzy.co
 .article-index-content .article-card .article-card-cover{
 }
 
-.article-index-content .article-card .article-card-cover img{  
+.article-index-content .article-card .article-card-cover img{
     width: 100%;
     transform: scale(1.1);
     /*max-height: 200px;*/
@@ -6607,7 +6607,7 @@ https://flickity.metafizzy.co
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;     
+    transition: all 0.3s ease;
 }
 
 .article-index-content .article-card .article-card-content a{
@@ -6622,7 +6622,7 @@ https://flickity.metafizzy.co
     font-size: 12px;
     color: #8d8d8d;
     text-align: right;
-    padding-top: 5px;    
+    padding-top: 5px;
 }
 
 .article-index-content .article-card .article-card-content .article-card-date i{
@@ -6640,7 +6640,7 @@ https://flickity.metafizzy.co
 
 
 .article-content .article-content-date{
-    /*text-align: center;*/ 
+    /*text-align: center;*/
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 14px;
     color: black;
@@ -6681,7 +6681,7 @@ https://flickity.metafizzy.co
     float: left;
 }
 
-.article-content-bottom .article-button-next, .article-section .article-button-next{ 
+.article-content-bottom .article-button-next, .article-section .article-button-next{
     text-align: right;
     float: right;
     font-size: 25px;
@@ -6691,29 +6691,29 @@ https://flickity.metafizzy.co
     padding-bottom: 20px;
     margin-top : 20px;
 }
-.article-content-bottom .article-button-prev, .article-section .article-button-prev{ 
+.article-content-bottom .article-button-prev, .article-section .article-button-prev{
     text-align: right;
     font-size: 25px;
     cursor: pointer;
     margin-top : 20px;
 }
-.article-section .article-button-next, .article-section .article-button-prev{margin-top : -30px;} 
+.article-section .article-button-next, .article-section .article-button-prev{margin-top : -30px;}
 
 
-.search-tour-box{   
+.search-tour-box{
     position: absolute;
     top: 0;
     right: 149px;
     white-space: nowrap;
     display: inline-block;
-    z-index: 9;    
+    z-index: 9;
     line-height: 50px;
 }
 
 .search-tour-box span{
     font-family: 'Kanit', sans-serif;
     color: white;
-    font-size: 14px;  
+    font-size: 14px;
     line-height: 50px!important;
     border-radius: 18px;
     background-color: #ed5565;
@@ -6750,7 +6750,7 @@ https://flickity.metafizzy.co
         -webkit-transition: opacity 400ms ease-out 110ms, top 100ms ease-out, left 100ms ease-out, max-height 10ms ease-out;
         transition: opacity 400ms ease-out 110ms, top 100ms ease-out, left 100ms ease-out, max-height 10ms ease-out;
     }
-    
+
     .header-page__inner .modal{
         bottom: auto;
         display: block;
@@ -6758,7 +6758,7 @@ https://flickity.metafizzy.co
     }*/
 
 .header-page__inner #sectiontohide {
-    display: none;     
+    display: none;
 }
 
 #sectiontohide .search-modal-box{
@@ -6777,50 +6777,47 @@ https://flickity.metafizzy.co
         content: "\F002";
         padding-right: 7px;
     }*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
     .search-modal-box .awe-search-tabs__content .ui-tabs-panel input{
         font-family: 'Kanit', sans-serif;
         font-size: 14px;
-        font-weight: bold;        
+        font-weight: bold;
     }
-    
+
     .search-modal-box .awe-search-tabs__content .form-group{
         margin-bottom: 5px;
     }
-    
+
     .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search {
         font-family: 'Kanit', sans-serif;
-        display: block; 
-        border-radius: 20px; 
-        background-color: #ed5565; 
-        box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); 
-        font-size: 17px; 
-        color: #fff ; 
-        padding: 0px 20px; 
-        transition: all .5s ease; 
+        display: block;
+        border-radius: 20px;
+        background-color: #ed5565;
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);
+        font-size: 17px;
+        color: #fff ;
+        padding: 0px 20px;
+        transition: all .5s ease;
         line-height: 38px;
         margin: 6px 0;
     }
-    
+
     .awe-search-tabs__content .ui-tabs-panel input:nth-child(2){
         cursor: text!important;
     }
-    
+
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-actions{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
+
     .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search:hover{opacity: 0.8;}
     .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
-    
-    
+
+
     @media screen and ( max-width: 958px ) {
         .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 18px; width:100%;}
         .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 18px;}
@@ -6832,41 +6829,41 @@ https://flickity.metafizzy.co
         .search-tour-box{right: 140px;}
         .search-tour-box span{font-size: 11px;}
         .article-section .article-item .article-item-head span{font-size: 15px!important;}
-    }    
-    
+    }
+
     .awe-search-tabs__content .close-modal-search{
         position: absolute;
         top: 7px;
         right: 10px;
         cursor: pointer;
     }
-    
+
     .awe-search-tabs__content .close-modal-search i{
         font-size: 18px;
         color: #000000;
     }
-    
+
     .checkout-section-demo .checkout-page__sidebar .fix-img span{
         font-size: 21px;
         line-height: 73px;
         color: white;
     }
-    
+
     .article-section .article-item{
         height: 195px;
     }
-    
+
     .article-section .article-item .article-item-img{
         float: left;
         width: 40%;
         padding-right: 20px;
     }
-    
+
     .article-section .article-item .article-item-img img{
         max-height: 180px;
         width: 100%;
     }
-       
+
     .article-section .article-item .article-item-head{
         width: 60%;
         display: inline-block;
@@ -6879,13 +6876,13 @@ https://flickity.metafizzy.co
         color: #ca161d;
         font-weight: bold;
     }
-    
-    .article-section .article-item .article-item-detail {   
+
+    .article-section .article-item .article-item-detail {
         max-height: 90px;
-        padding-top: 10px; 
+        padding-top: 10px;
         padding-right: 20px;
     }
-    
+
     .article-section .article-item .article-item-detail span{
         font-size: 14px;
         font-family: 'Bai Jamjuree', sans-serif;
@@ -6895,124 +6892,24 @@ https://flickity.metafizzy.co
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
-    
+
     .article-section .article-item .article-item-date{
         font-size: 14px;
         font-family: 'Bai Jamjuree', sans-serif;
         color: gray;
         text-align: right;
         padding-top: 10px;
-        padding-right: 30px; 
+        padding-right: 30px;
     }
-    
+
     .article-section .article-item .article-item-date span i{
         padding-right: 5px;
     }
-=======
 
-.search-modal-box .awe-search-tabs__content .ui-tabs-panel input{
-    font-family: 'Kanit', sans-serif;
-    font-size: 14px;
-    font-weight: bold;        
-}
-
-.search-modal-box .awe-search-tabs__content .form-group{
-    margin-bottom: 5px;
-}
-
-.search-container .awe-search-tabs__content .ui-tabs-panel .btn-search {
-    font-family: 'Kanit', sans-serif;
-    display: block; 
-    border-radius: 20px; 
-    background-color: #ed5565; 
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); 
-    font-size: 17px; 
-    color: #fff ; 
-    padding: 0px 20px; 
-    transition: all .5s ease; 
-    line-height: 38px;
-    margin: 6px 0;
-}
-
-.awe-search-tabs__content .ui-tabs-panel input:nth-child(2){
-    cursor: text!important;
-}
-
-.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-actions{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-container .awe-search-tabs__content .ui-tabs-panel .btn-search:hover{opacity: 0.8;}
-.search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
-.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
-.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
-
-
-@media screen and ( max-width: 958px ) {
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 18px; width:100%;}
-    .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 18px;}
-    .awe-search-tabs__content .ui-tabs-panel select{font-size: 14px;}
-    .awe-search-tabs-2 .awe-search-tabs__content{
-        margin-top: 45px;
-    }
-=======
-
-.search-modal-box .awe-search-tabs__content .ui-tabs-panel input{
-    font-family: 'Kanit', sans-serif;
-    font-size: 14px;
-    font-weight: bold;        
-}
-
-.search-modal-box .awe-search-tabs__content .form-group{
-    margin-bottom: 5px;
-}
-
-.search-container .awe-search-tabs__content .ui-tabs-panel .btn-search {
-    font-family: 'Kanit', sans-serif;
-    display: block; 
-    border-radius: 20px; 
-    background-color: #ed5565; 
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,.12); 
-    font-size: 17px; 
-    color: #fff ; 
-    padding: 0px 20px; 
-    transition: all .5s ease; 
-    line-height: 38px;
-    margin: 6px 0;
-}
-
-.awe-search-tabs__content .ui-tabs-panel input:nth-child(2){
-    cursor: text!important;
-}
-
-.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-actions{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-container .awe-search-tabs__content .ui-tabs-panel .btn-search:hover{opacity: 0.8;}
-.search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
-.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
-.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
-
-
-@media screen and ( max-width: 958px ) {
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 18px; width:100%;}
-    .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 18px;}
-    .awe-search-tabs__content .ui-tabs-panel select{font-size: 14px;}
-    .awe-search-tabs-2 .awe-search-tabs__content{
-        margin-top: 45px;
-    }
->>>>>>> f198f1d990c060c61143e2da23880bd494ac8fc1
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
     .search-tour-box{right: 140px;}
     .search-tour-box span{font-size: 11px;}
-}    
+}
 
 .awe-search-tabs__content .close-modal-search{
     position: absolute;
@@ -7030,9 +6927,4 @@ https://flickity.metafizzy.co
     font-size: 21px;
     line-height: 73px;
     color: white;
-<<<<<<< HEAD
 }
->>>>>>> f198f1d990c060c61143e2da23880bd494ac8fc1
-=======
-}
->>>>>>> f198f1d990c060c61143e2da23880bd494ac8fc1
