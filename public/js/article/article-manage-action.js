@@ -37,6 +37,7 @@ function initArticle(data) {
     $('#article_id').val(data.article_id);
     $('#article_title').val(data.article_title);
     $('#article_detail_name').val(data.article_detail_name);
+    $('#article_short_detail').val(data.article_short_detail);
 
     var src = "images/article-img/" + data.article_image;
     $("#file_show").attr("src", src);

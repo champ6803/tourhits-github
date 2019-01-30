@@ -109,16 +109,18 @@
 
     <div class="container">
         
-        <div class="article-content-date">
-            <i class="far fa-clock"></i><?php echo date('d-m-Y', strtotime($articleDetailList[0]->created_date)); ?>
-        </div>
-        
         <div class="article-content-head">
             <p>{{ $articleDetailList[0]->article_title }}</p>
         </div>
-
+        <div class="article-content-short">
+           <?php echo $articleDetailList[0]->article_short_detail ?>
+        </div>
+        <div class="article-content-date">
+            <i class="far fa-clock"></i><?php echo date('d-m-Y', strtotime($articleDetailList[0]->created_date)); ?>
+        </div>
+       
         <div style="padding: 0;" class="article-content-date">
-            <img style="width:500px; padding: 0;" src="../images/article-img/{{ $articleDetailList[0]->article_image }}">
+            <img style="width:100%; padding: 0;" src="../images/article-img/{{ $articleDetailList[0]->article_image }}">
         </div>
         
         <div class="article-content-text">

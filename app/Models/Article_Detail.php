@@ -41,13 +41,14 @@ class Article_Detail extends Model {
         }
     }
 
-    public function insertArticle($article_title, $article_detail_name, $article_image) {
+    public function insertArticle($article_title, $article_short_detail, $article_detail_name, $article_image) {
         try {
-            DB::transaction(function ()use($article_title, $article_detail_name, $article_image) {
+            DB::transaction(function ()use($article_title, $article_short_detail, $article_detail_name, $article_image) {
                 $date = \Carbon\Carbon::now();
                 $id_max = DB::table('article')->max('article_id');
                 $article_id = Article::insertGetId(
                                 ['article_title' => $article_title
+                                    , 'article_short_detail' => $article_short_detail
                                     , 'article_image' => ($id_max + 1) . "-" . $article_image
                                     , 'created_by' => 'admin'
                                     , 'updated_by' => 'admin'
@@ -73,7 +74,7 @@ class Article_Detail extends Model {
         }
     }
 
-    public function updateArticle($article_id, $article_title, $article_detail_name, $article_image) {
+    public function updateArticle($article_id, $article_title, $article_short_detail, $article_detail_name, $article_image) {
         try {
             $date = \Carbon\Carbon::now();
             $id_max = DB::table('article')->max('article_id');
@@ -81,6 +82,7 @@ class Article_Detail extends Model {
                 Article::where('article_id', $article_id)
                         ->update(
                                 ['article_title' => $article_title
+                                    , 'article_short_detail' => $article_short_detail
                                     , 'article_image' => ($id_max + 1) . "-" . $article_image
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
@@ -101,6 +103,7 @@ class Article_Detail extends Model {
                 Article::where('article_id', $article_id)
                         ->update([
                             'article_title' => $article_title,
+                            'article_short_detail' => $article_short_detail,
                             'updated_by' => 'admin'
                 ]);
                 Article_Detail::where('article_id', $article_id)
