@@ -720,7 +720,7 @@
             <div class="article-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>-->
         </div>
         <div class="row">
-            <?php for ($i = 0; $i < 4; $i++) { ?>
+            <?php for ($i = 0; $i < (count($articleList) > 4 ? 4 : count($articleList)); $i++) { ?>
                 <div class="col-sm-6">  
                     <div class="article-item">
                         <div class="article-item-img">
@@ -734,7 +734,7 @@
                             </a>
                         </div>
                         <div class="article-item-detail">
-                            <span>{{ $articleList[$i]->article_short_detail }}</span>
+                            <span><?php echo $articleList[$i]->article_short_detail ?></span>
                         </div>
                         <div class="article-item-date hidden-sm hidden-xs">
                             <span><i class="far fa-clock"></i><?php echo date('d-m-Y', strtotime($articleList[$i]->created_date)); ?></span>
