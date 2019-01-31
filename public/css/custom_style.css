@@ -4798,8 +4798,10 @@ Custom BS3
 }
 
 .sub-menu .pagtour-head{
+    font-weight: 600;
+    font-size: 17px;
     padding-left: 20px;
-    font-size: 23px;
+    color: #262626;
 }
 
 @media screen and (max-width: 1200px) {
@@ -6837,7 +6839,7 @@ https://flickity.metafizzy.co
         .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
         .search-tour-box{right: 140px;}
         .search-tour-box span{font-size: 11px;}
-        .article-section .article-item .article-item-head span{font-size: 15px!important;}
+        .article-section .article-item .article-item-head a{font-size: 15px!important;}
     }
 
     .awe-search-tabs__content .close-modal-search{
@@ -6879,16 +6881,21 @@ https://flickity.metafizzy.co
         max-height: 80px;
         padding-right: 20px;
     }
-    .article-section .article-item .article-item-head span{
+    .article-section .article-item .article-item-head a{
         font-size: 18px;
         font-family: 'Kanit', sans-serif;
-        color: #ca161d;
+        color: #ca161d!important;
         font-weight: bold;
+        line-height: 1;
+    }
+    
+    .article-section .article-item .article-item-head a:hover{
+        color: #940107!important;
     }
 
     .article-section .article-item .article-item-detail {
         max-height: 90px;
-        padding-top: 10px;
+        padding-top: 5px;
         padding-right: 20px;
     }
 
@@ -6900,6 +6907,12 @@ https://flickity.metafizzy.co
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        height: 81px;
+    }
+    
+    .article-section .article-item .article-item-detail span p{
+       line-height: 1.5; 
+       font-weight: bold;
     }
 
     .article-section .article-item .article-item-date{
@@ -6907,7 +6920,7 @@ https://flickity.metafizzy.co
         font-family: 'Bai Jamjuree', sans-serif;
         color: gray;
         text-align: right;
-        padding-top: 10px;
+        padding-top: 20px;
         padding-right: 30px;
     }
 
