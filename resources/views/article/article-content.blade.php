@@ -62,11 +62,12 @@
         right:10px;
         top: 10px;
         z-index: 999;
+        display: flex;
     }
 
     .article-social-share .item-shared .article-line-shared{
-        float: left;
-        padding-right: 10px;
+/*        float: left;*/
+       padding-right: 10px;
     }
 
 

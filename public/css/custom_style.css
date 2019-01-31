@@ -6651,8 +6651,12 @@ https://flickity.metafizzy.co
 .article-content .article-content-head {
     /*text-align: center;*/
     font-family: 'Kanit', sans-serif;
-    font-size: 30px;
+    font-size: 27px;
     padding: 50px 0px 0px 0;
+}
+
+.article-content .article-content-head p{
+    line-height: 1;
 }
 
 .article-content .article-content-short{
