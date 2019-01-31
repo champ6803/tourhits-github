@@ -442,7 +442,7 @@
                     </div>
 
                     <!--                เทส Card-->
-                    <!--            <div class="row">
+                                <div class="row">
                                     <div id="card_area" class="card_show filter-item-wrapper">
                                             
                                         <li class="trip-item">
@@ -543,7 +543,7 @@
                                         </li>
                                         
                                     </div>
-                                </div>-->
+                                </div>
                     <!--       end         เทส Card-->
 
 
