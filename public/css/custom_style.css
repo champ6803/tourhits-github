@@ -44,9 +44,9 @@
 }
 
 .destination-grid-content .flag{
-    max-width: 207px;
+/*    max-width: 207px;*/
     /*    min-width: 247.5px;*/
-    /*    max-width: 320px;*/
+        max-width: 320px;
     margin-bottom: 10px;
     padding-left: 0px;
     padding-right: 10px;
@@ -80,21 +80,24 @@
     text-align: -webkit-match-parent;
 }
 .sponsor-footer ul li img{width: 80%;}
+
 .country-link {
     border-radius: 8px;
     display: block;
-    padding: 5px 0px 5px 10px;
+    padding: 5px 0px 5px 8px;
     /*background: #EC2424;*/
-    background: #ebebeb;
+/*    background: #ebebeb; สีเดิม*/
     height: 50px;
     text-overflow: ellipsis;
     overflow: hidden;
+    border: 1px solid #e7e6e6;
+    background: #fbfafa;
 }
 .country-link img{
-    height: 35px;
+    height: 33px;
     float: left;
     padding-right: 8px;
-     margin-top: 2px;
+     margin-top: 1px;
 
 }
 
@@ -4773,17 +4776,19 @@ Custom BS3
     transition: all 0s ease;
 }
 
-.cat-asian .flag:hover {
-    opacity: 0.8;
+.cat-asian .flag:hover > .country-link {
+/*    opacity: 0.8;*/
+    background: #ebebeb;
 }
 
-.all-flag-content .flag:hover {
-    opacity: 0.8;
+.all-flag-content .flag:hover > .country-link {
+/*    opacity: 0.8;*/
+    background: #ebebeb;
 }
 
 .cat-asian .country-link{
     height: auto;
-    padding: 5px 0px 5px 10px;
+    padding: 5px 0px 5px 4px;
 }
 
 .cat-asian .country-link h5 {
@@ -6850,6 +6855,8 @@ https://flickity.metafizzy.co
             padding-right: 0px;
             padding-left: 0px;
         }
+/*        .main-content .hero-section{top: 50px;}*/
+        .destination-grid-content .section-title h1{font-size: 17px; }
     }
     
     @media (min-width: 1024px) and (max-width: 1360px){   
@@ -6970,10 +6977,14 @@ https://flickity.metafizzy.co
     .article-section .section-title i{color: #c33132;}
     
     .awe-navigation .menu-list li .country-link{
-        line-height: 27px!important;
+        line-height: 42px!important;
+        height: 42px;
     }
     
     .awe-navigation-responsive .menu-list li .country-link{
         line-height: 17px!important;
     }
     
+    .all-flag-content .country-link h5::before{
+        content: 'ทัวร์';
+    }

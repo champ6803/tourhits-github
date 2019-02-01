@@ -6384,17 +6384,17 @@ body.single-post .blog-page__content > .post .post-content {
     
     .destination-grid-content .flag{
         float: left;
-        width: 50%;
-         
+        width: 50%;       
     }
     
     .country-link{
-        padding: 10px 0px 10px 10px!important;
-        height: 50px!important;
+        padding: 5px 0px 5px 10px!important;
+        height: 45px!important;
     }
     .country-link img{
         height: 28px!important;
         padding-right: 5px!important;
+        line-height: 33px!important;
         
     }
     .country-link h5{
@@ -6403,7 +6403,7 @@ body.single-post .blog-page__content > .post .post-content {
         width: 51%;
         overflow: hidden;
         text-overflow: ellipsis;
-        line-height: 36px!important;
+        line-height: 33px!important;
     }  
     
     #BtnBtt{
@@ -6414,11 +6414,11 @@ body.single-post .blog-page__content > .post .post-content {
         opacity: 0.9!important;
     }
     
+    .all-flag-content .country-link h5::before{
+        content: ''!important;
+    }
 }
 
-/*@media screen and (max-width: 425px) {
-    
-}*/
 
 .cart-content .cart-table tbody td .quantity .plus,
 .cart-content .cart-table tbody td .quantity .minus {
