@@ -22,9 +22,10 @@ $(function () {
     ary_days = days_no == "" ? [] : [days_no];
 
     var page_num = 1; // default page number
-    getTourPackage(page_num); // init package tour card
+    //getTourPackage(page_num); // init package tour card
     checkboxChecked();
-
+$('.card_show').show();
+                    $('#loading').hide();
     if (ary_days.length > 0) {
         $('#day_all').prop('checked', false);
         $('#day_' + days_no).prop('checked', true);
