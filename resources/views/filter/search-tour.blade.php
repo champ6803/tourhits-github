@@ -98,6 +98,13 @@
     .slider.slider-horizontal .slider-selection {
         background: #5e758c;
     }
+    
+    @media (min-width: 1920px) {
+        .container {
+          width: 1550px!important;
+        }
+    }
+    
 </style>
 
 <style>

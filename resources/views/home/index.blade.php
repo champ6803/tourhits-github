@@ -42,6 +42,12 @@
         font-size: 19px;
         font-weight: bold;
     }
+    
+    @media (min-width: 1920px) {
+        .container {
+          max-width: 1140px;
+        }
+    }
 
 </style>
 
@@ -136,13 +142,13 @@
 
 <!-- MASONRY -->
 <section class="masonry-section-demo">
-    <div class="container-country">
+    <div class="container">
         <div class="destination-grid-content">
             <div class="section-title" margin-top: 30px;>
                  <h1>Tourhits.co (ทัวร์ฮิต) ศูนย์รวมทัวร์คุณภาพทั่วโลก</h1>
             </div>
             <div class="row">
-                <div class="col-md-10 col-md-offset-1 tabs-flagall">
+                <div class="col-md-12 tabs-flagall">
                     <div class="product-tabs tabs">
                         <ul>
                             <li>
@@ -639,7 +645,7 @@
             </div>
         </div>
         <!--        หน้าจอเวอชั่น mobile/pc-->
-        <div id="card_area_hit" class="card-xs js-flickity" data-flickity='{ "freeScroll": true, "wrapAround": true, "autoPlay": true }'>
+        <div id="card_area_hit" class="card-xs js-flickity" data-flickity='{ "dragThreshold": 10, "freeScroll": true, "wrapAround": true, "autoPlay": true, "selectedAttraction": 0.2, "friction": 0.8 }'>   
 
         </div>
 
@@ -696,7 +702,7 @@
             </div>
         </div>
         <!--        หน้าจอเวอชั่น mobile/pc-->
-        <div id="card_area_sale" class="card-xs js-flickity" data-flickity='{ "freeScroll": true, "wrapAround": true, "autoPlay": true }'>
+        <div id="card_area_sale" class="card-xs js-flickity" data-flickity='{ "dragThreshold": 10, "freeScroll": true, "wrapAround": true, "autoPlay": false, "selectedAttraction": 0.2, "friction": 0.8 }'>
 
         </div>
 
