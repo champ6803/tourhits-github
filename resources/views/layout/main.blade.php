@@ -533,7 +533,7 @@ session_start();
                             <div class="search-modal-box">
 
                                 <div class="container search-container">
-                                    <div class="awe-search-tabs-2 tabs" style="transform: unset; right:0;  ">            
+                                    <div class="awe-search-tabs-2 tabs" style="transform: unset;">            
                                         <ul hidden="">
                                             <li>
                                                 <a href="#awe-search-tabs-1">
