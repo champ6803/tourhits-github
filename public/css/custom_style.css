@@ -44,9 +44,9 @@
 }
 
 .destination-grid-content .flag{
-/*    max-width: 207px;*/
+    max-width: 207px;
     /*    min-width: 247.5px;*/
-        max-width: 320px;
+    /*    max-width: 320px;*/
     margin-bottom: 10px;
     padding-left: 0px;
     padding-right: 10px;
@@ -80,34 +80,30 @@
     text-align: -webkit-match-parent;
 }
 .sponsor-footer ul li img{width: 80%;}
-
 .country-link {
     border-radius: 8px;
     display: block;
-    padding: 5px 0px 5px 8px;
+    padding: 12px 0px 12px 12px;
     /*background: #EC2424;*/
-/*    background: #ebebeb; สีเดิม*/
-    height: 50px;
+    background: #ebebeb;
+    height: 60px;
     text-overflow: ellipsis;
     overflow: hidden;
-    border: 1px solid #e7e6e6;
-    background: #fbfafa;
 }
 .country-link img{
-    height: 33px;
+    height: 35px;
     float: left;
-    padding-right: 8px;
-     margin-top: 1px;
+    padding-right: 10px;
 
 }
 
 .country-link h5 {
     /*    width: 70%;*/
     font-weight: bold;
-    line-height: 40px;
-    font-size: 16px;
+    line-height: 36px;
+    font-size: 17px;
     color: #444;
-/*    float: left;*/
+    float: left;
     margin: 0 0 0 0px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -4358,8 +4354,6 @@ Custom BS3
     line-height: 1.2;
 }
 
-.about-tab1 .col-md-12 img{height: 100px;}
-
 .tabs-aboutpage{
     padding-bottom: 50px;
     margin-bottom: 100px;
@@ -4776,19 +4770,17 @@ Custom BS3
     transition: all 0s ease;
 }
 
-.cat-asian .flag:hover > .country-link {
-/*    opacity: 0.8;*/
-    background: #ebebeb;
+.cat-asian .flag:hover {
+    opacity: 0.8;
 }
 
-.all-flag-content .flag:hover > .country-link {
-/*    opacity: 0.8;*/
-    background: #ebebeb;
+.all-flag-content .flag:hover {
+    opacity: 0.8;
 }
 
 .cat-asian .country-link{
     height: auto;
-    padding: 5px 0px 5px 4px;
+    padding: 10px 0px 10px 10px;
 }
 
 .cat-asian .country-link h5 {
@@ -5747,11 +5739,9 @@ https://flickity.metafizzy.co
 
 .flickity-slider {
     position: absolute;
-    width: 111%;
+    width: 100%;
     height: 100%;
 }
-
-
 
 /* draggable */
 
@@ -6610,7 +6600,7 @@ https://flickity.metafizzy.co
 .article-index-content .article-card .article-card-content{
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
-    margin-top: -10px;
+    margin-top: -33px;
     border-radius: 4px;
     width: 90%;
     left: 5%;
@@ -6839,7 +6829,7 @@ https://flickity.metafizzy.co
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
 
-/*จอขนาดมือถือ*/
+
     @media screen and ( max-width: 958px ) {
         .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 18px; width:100%;}
         .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 18px;}
@@ -6851,20 +6841,6 @@ https://flickity.metafizzy.co
         .search-tour-box{right: 140px;}
         .search-tour-box span{font-size: 11px;}
         .article-section .article-item .article-item-head a{font-size: 15px!important;}
-        .tabs-flagall{
-            padding-right: 0px;
-            padding-left: 0px;
-        }
-/*        .main-content .hero-section{top: 50px;}*/
-        .destination-grid-content .section-title h1{font-size: 17px; }
-    }
-    
-    @media (min-width: 1024px) and (max-width: 1360px){   
-        .flickity-slider{width: 85%;}
-    }
-    
-    @media (min-width: 768px) and (max-width: 1023px){ 
-        .flickity-slider{width: 95%!important;}
     }
 
     .awe-search-tabs__content .close-modal-search{
@@ -6975,16 +6951,3 @@ https://flickity.metafizzy.co
     }
 
     .article-section .section-title i{color: #c33132;}
-    
-    .awe-navigation .menu-list li .country-link{
-        line-height: 42px!important;
-        height: 42px;
-    }
-    
-    .awe-navigation-responsive .menu-list li .country-link{
-        line-height: 17px!important;
-    }
-    
-    .all-flag-content .country-link h5::before{
-        content: 'ทัวร์';
-    }

@@ -1608,14 +1608,7 @@ pre code {
 /* เพิ่ม Container */
 @media (min-width: 1920px) {
   .container {
-/*    width: 1550px;*/
-    width: 1140px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1140px;
+    width: 1550px;
   }
 }
 

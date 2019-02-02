@@ -12,6 +12,7 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <!--CSRF Token-->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -532,7 +533,7 @@ session_start();
                             <div class="search-modal-box">
 
                                 <div class="container search-container">
-                                    <div class="awe-search-tabs-2 tabs" style="transform: unset; right:0;  ">            
+                                    <div class="awe-search-tabs-2 tabs" style="transform: unset;">            
                                         <ul hidden="">
                                             <li>
                                                 <a href="#awe-search-tabs-1">
