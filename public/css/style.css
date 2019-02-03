@@ -6414,6 +6414,10 @@ body.single-post .blog-page__content > .post .post-content {
         opacity: 0.9!important;
     }
     
+    .all-flag-content .country-link h5::before{
+        content: ''!important;
+    }
+    
 }
 
 /*@media screen and (max-width: 425px) {
