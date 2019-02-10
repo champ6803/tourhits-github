@@ -23,6 +23,7 @@ use App\Models\Country;
  */
 
 class TourController extends Controller {
+
     public function tour_detail($tour_country_name, $tour_package_id, $tour_package_name) {
         $tourModel = new Tour_Package();
         $tourDayModel = new Tour_Package_Day();
@@ -41,13 +42,25 @@ class TourController extends Controller {
                 ->get();
         $tourPackageImagesList = $tourModel->getTourImages($tour_package_id);
         foreach ($tourPackageList as $tourPackageObj) {
-            $newStartDate = date("d-m-Y", strtotime($tourPackageObj->tour_period_start));
-            $newEndDate = date("d-m-Y", strtotime($tourPackageObj->tour_period_end));
-            $tourPackageObj->tour_period_start = $newStartDate;
-            $tourPackageObj->tour_period_end = $newEndDate;
+//            $newStartDate = date("d-m-Y", strtotime($tourPackageObj->tour_period_start));
+//            $newEndDate = date("d-m-Y", strtotime($tourPackageObj->tour_period_end));
+            $tourPackageObj->tour_period_start = $this->DateThai($tourPackageObj->tour_period_start);
+            $tourPackageObj->tour_period_end = $this->DateThai($tourPackageObj->tour_period_end);
         }
         $page_title = $tourPackage->tour_package_name;
         return view('tour.tour-detail', compact('tourPackage', 'tourPackageList', 'tourPackageImagesList', 'tourPackageDayList', 'page_title', 'tourAttractionDayList', 'tagList', 'countryList'));
+    }
+
+    public function DateThai($strDate) {
+        $strYear = date("Y", strtotime($strDate)) + 543;
+        $strMonth = date("n", strtotime($strDate));
+        $strDay = date("j", strtotime($strDate));
+        $strHour = date("H", strtotime($strDate));
+        $strMinute = date("i", strtotime($strDate));
+        $strSeconds = date("s", strtotime($strDate));
+        $strMonthCut = Array("", "ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค.");
+        $strMonthThai = $strMonthCut[$strMonth];
+        return "$strDay $strMonthThai $strYear";
     }
 
     public function tour_confirm($tour_package_id, $tour_period_id) {
