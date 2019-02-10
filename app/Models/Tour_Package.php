@@ -104,6 +104,10 @@ class Tour_Package extends Model {
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );
+                if (Input::hasFile('pdf_file')) {
+                    $file_pdf = Input::file('pdf_file');
+                    $file_pdf->move('images/pdf', $tour_package_id . "-" . $file_pdf->getClientOriginalName());
+                }
             } else if ($this->IsNullOrEmptyString($pdf) && !$this->IsNullOrEmptyString($tourlist_picture)) {
                 Tour_Package::where('tour_package_id', '=', $tour_package_id)
                         ->update(
@@ -447,7 +451,7 @@ class Tour_Package extends Model {
         try {
             $tourPackageList = Tour_Package::leftJoin('tour_package_day', 'tour_package.tour_package_id', '=', 'tour_package_day.tour_package_id')
                     ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
-                    ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.*,tour_country.tour_country_name'))
+                    ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.*,tour_country.tour_country_name, tour_country.tour_country_url'))
                     ->get();
             return $tourPackageList;
         } catch (\Exception $ex) {

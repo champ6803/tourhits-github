@@ -59,7 +59,10 @@ $(function () {
 
     createCountryDropDown('country_select');
     createTable();
-    $('#tourCountryTable').DataTable();
+    $('#tourCountryTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
 
 });
 
@@ -244,7 +247,10 @@ function refresh() {
     $('#tour_country_name').val('');
     $('#tourCountryTable').DataTable().destroy();
     createTable();
-    $('#tourCountryTable').DataTable();
+    $('#tourCountryTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
     $('#hidden_remove_id').val('');
     $('#hidden_update_id').val('');
     $('#tour_country_picture').val('');
@@ -253,7 +259,7 @@ function refresh() {
 
 function findTourCountryByName(input_tour_country_name) {
     var Str = '';
-    var input_tour_country_name = $('#input_tour_country_name').val();
+    var input_tour_country_name = $('#input_tour_countsry_name').val();
     $.ajax({
         type: 'post',
         url: 'searchTourCountry',

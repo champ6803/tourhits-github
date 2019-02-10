@@ -52,7 +52,7 @@ session_start();
             <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
         <![endif]-->
         <script type="text/javascript">
-            var base_path = "{{ url('/') }}";
+            var base_path = "{{ secure_url('/') }}";
         </script>
         @yield('meta_tag')
     </head>
@@ -859,7 +859,7 @@ session_start();
                                     <li><a href="http://thai.tourismthailand.org/" target="_blank" rel="nofollow noopener" title="TAT Travel License No.11/09294"><img class="lazy" src="https://cdn.mushroomtravel.com/assets/images/footer/footer-icon-02.jpg" alt="TAT Travel License No.11/09294" style="display: inline-block;"></a>
                                     </li>
                                     <li>
-                                        <script type="text/javascript" src="https://lvs.truehits.in.th/datasecure/t0029848.js"></script><a href="http://truehits.net/stat.php?login=mushroomtravel" target="_blank"><img src="https://lvs.truehits.in.th/goggen.php?hc=t0029848&amp;bv=0&amp;rf=https%3A//www.google.co.th/&amp;web=NPtNfFjN0H0kP291ULgt9w%3D%3D&amp;bn=Netscape&amp;ss=1707*1067&amp;sc=24&amp;sv=1.3&amp;ck=y&amp;ja=n&amp;vt=B09A8E38.2&amp;fp=r&amp;fv=-&amp;truehitspage=&amp;truehitsurl=https%3a//www.mushroomtravel.com/" width="14" height="17" alt="Thailand Web Stat" border="0"></a><noscript><a target="_blank" href="http://truehits.net/stat.php?id=t0029848" rel="nofollow noopener"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://hits.truehits.in.th/noscript.php?id=t0029848" title="Thailand Web Stat" alt="Thailand Web Stat"border="0" width="14" height="17" al></a> <a target="_blank" href="http://truehits.net/" rel="nofollow">Truehits.net</a></noscript></li><li><a href="https://www.trustmarkthai.com/callbackData/popup.php?data=f66c4a0-22-4-23af312cf01cf2e186948793fa2caef7a8d10" rel="nofollow noopener" target="_blank" title="Department of Business Development, the Ministry of Commerce of Thailand"><img class="lazy" src="https://cdn.mushroomtravel.com/assets/images/footer/dbd-logo.jpg" alt="Department of Business Development, the Ministry of Commerce of Thailand" style="display: inline-block;"></a>
+                                        <script type="text/javascript" src="https://lvs.truehits.in.th/datasecure/t0029848.js"></script><a href="http://truehits.net/stat.php?login=mushroomtravel" target="_blank"><img src="https://lvs.truehits.in.th/goggen.php?hc=t0029848&amp;bv=0&amp;rf=https%3A//www.google.co.th/&amp;web=NPtNfFjN0H0kP291ULgt9w%3D%3D&amp;bn=Netscape&amp;ss=1707*1067&amp;sc=24&amp;sv=1.3&amp;ck=y&amp;ja=n&amp;vt=B09A8E38.2&amp;fp=r&amp;fv=-&amp;truehitspage=&amp;truehitsurl=https%3a//www.mushroomtravel.com/" width="14" height="17" alt="Thailand Web Stat" border="0"></a><noscript><a target="_blank" href="http://truehits.net/stat.php?id=t0029848" rel="nofollow noopener"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://hits.truehits.in.th/noscript.php?id=t0029848" title="Thailand Web Stat" alt="Thailand Web Stat"border="0" width="14" height="17" al></a> <a target="_blank" href="http://truehits.net/" rel="nofollow">Truehits.net</a></noscript>
                                     </li>
                                 </ul>
                             </div>

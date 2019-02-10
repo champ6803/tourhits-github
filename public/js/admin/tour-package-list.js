@@ -174,7 +174,7 @@ function padZero(value, row, index) {
 }
 
 function actionButton(value, row, index) {
-    return ['<button class="btn btn-primary btn-sm" onclick="editPackage(' + row.tour_package_id + ')"><i class="fa fa-pencil"></i></button> &nbsp; <button class="btn btn-danger btn-sm" onclick="deletePackage(' + row.tour_package_id + ')"><i class="fa fa-trash"></i></button>'];
+    return ['<a title="ดูโปรแกรมหน้าเว็บ" target="_blank" href="/tour-detail/' + row.tour_country_url + '/' + row.tour_package_id + '/' + row.tour_package_code + '" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a> &nbsp; <button title="แก้ไขโปรแกรม" class="btn btn-primary btn-sm" onclick="editPackage(' + row.tour_package_id + ')"><i class="fa fa-pencil"></i></button> &nbsp; <button title="ลบโปรแกรม" class="btn btn-danger btn-sm" onclick="deletePackage(' + row.tour_package_id + ')"><i class="fa fa-trash"></i></button>'];
 }
 
 function editPackage(tour_package_id) {

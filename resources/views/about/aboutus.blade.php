@@ -63,7 +63,7 @@
                                                 <p style="color:#EC2424;">Our Vision : Prestige Travel Atmost Quality</p>
                                                 <p>ใบอนุญาตประกอบธุรกิจนำเที่ยว เลขที่ 11/09305</p></strong>
                                         </div>
-                                        <p><img src="images/Certificate/TAT-TEC-W.png" alt="" title=""></p>
+                                        <p><img style="width:250px;" src="images/Certificate/TAT-License-TH.png" alt="" title=""></p>
                                         <br>
                                         <hr>
                                     </div>
@@ -133,7 +133,7 @@
                                 </row>    
                                 <row>    
                                     <div class="col-md-6" style="text-align: center;">
-                                        <img src="images/Certificate/TAT-TEC-W.png" alt="" title="">      
+                                        <img style="width:250px; src="images/Certificate/TAT-License-TH.png" alt="" title="">      
                                     </div>
 
                                 </row>

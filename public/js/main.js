@@ -1,6 +1,30 @@
-$(function(){
+$(function () {
+    $('#date_picker').daterangepicker({
+        "autoApply": true,
+        "opens": "center",
+        locale: {
+            "format": 'DD/MM/YYYY',
+        }
+    }, function (start, end, label) {
+        start_date = start.format('YYYY-MM-DD');
+        end_date = end.format('YYYY-MM-DD');
+    });
     
+    $('#date_picker').val("");
+
+    $('#search_tour').click(function () {
+        var search = $('#search_text').val();
+        var country_dropdown = $('#country_dropdown').val();
+        country_dropdown = country_dropdown == "" ? "search" : country_dropdown;
+        var days_dropdown = $('#days_dropdown option:selected').val();
+        var url = base_path + "/tour/" +country_dropdown + "?start_date=" + start_date + "&end_date=" + end_date + "&search=" + search + "&days=" + days_dropdown;
+        window.location.href = url;
+    });
 });
+
+var start_date = "";
+var end_date = "";
+
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
             sURLVariables = sPageURL.split('&'),
@@ -33,7 +57,7 @@ function getDateNow() {
 
 function changeFormateDate(date) {
     var date_split = date.split("-");
-    var dd =  date_split[2];
+    var dd = date_split[2];
     var mm = date_split[1];
     var yyyy = date_split[0];
     return dd + '/' + mm + '/' + yyyy;
@@ -138,8 +162,7 @@ function validatePhone(txtPhone) {
     var filter = /^[0-9-+]+$/;
     if (filter.test(txtPhone)) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 }

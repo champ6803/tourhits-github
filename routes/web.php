@@ -248,3 +248,7 @@ Route::post('saveArticle', 'ArticleIndexController@saveArticle');
 Route::post('getArticleById', 'ArticleIndexController@getArticleById');
 
 Route::post('removeArticle', 'ArticleIndexController@removeArticle');
+
+// Email //
+
+Route::post('confirmOrderEmail', 'EmailController@confirmOrderEmail');

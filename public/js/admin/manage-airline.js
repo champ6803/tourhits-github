@@ -32,7 +32,10 @@ $(function () {
         $('#file').val('');
     });
     createTable()
-    $('#airlineTable').DataTable();
+    $('#airlineTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
 });
 
 function createTable() {
@@ -119,7 +122,10 @@ function refresh() {
     $('#airline_name').val('');
     $('#airlineTable').DataTable().destroy();
     createTable();
-    $('#airlineTable').DataTable();
+    $('#airlineTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
     $('#update_airline_picture').val('');
@@ -157,7 +163,10 @@ function findAirlineByName(airlineName) {
                     rowNo++;
                 }
                 document.getElementById("airlineData").innerHTML = Str;
-                $('#airlineTable').DataTable();
+                $('#airlineTable').DataTable({
+                    "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+                    "iDisplayLength": 100
+                });
             } else {
                 alert('select fail');
             }

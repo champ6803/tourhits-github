@@ -20,7 +20,10 @@ $(function () {
         $('#route_name').val('');
     });
     createTable()
-    $('#routeTable').DataTable();
+    $('#routeTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
 });
 function createTable() {
     var Str = '';
@@ -106,7 +109,10 @@ function refresh() {
     $('#route_name').val('');
     $('#routeTable').DataTable().destroy();
     createTable();
-    $('#routeTable').DataTable();
+    $('#routeTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
 }
@@ -141,7 +147,10 @@ function findRouteByName(routeName) {
                     rowNo++;
                 }
                 document.getElementById("routeData").innerHTML = Str;
-                $('#routeTable').DataTable();
+                $('#routeTable').DataTable({
+                    "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+                    "iDisplayLength": 100
+                });
             } else {
                 alert('select fail');
             }

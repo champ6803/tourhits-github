@@ -37,6 +37,6 @@ return [
     'facebook' => [
         'client_id' => '1121096638053125',
         'client_secret' => 'ca9be52843f3b4b81fbf1de4dde908be',
-        'redirect' => 'http://www.tourhitsthai.com/register',
+        'redirect' => 'https://www.tourhits.co/register',
     ],
 ];

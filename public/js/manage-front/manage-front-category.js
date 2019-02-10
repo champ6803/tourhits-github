@@ -44,7 +44,10 @@ $(function () {
 
     createTable("");
 
-    $('#tourCategoryTable').DataTable();
+    $('#tourCategoryTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
 });
 
 function createTable(param) {

@@ -21,7 +21,10 @@ $(function () {
     });
 
     createTable()
-    $('#tagTable').DataTable();
+    $('#tagTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
 });
 
 function createTable() {
@@ -110,7 +113,10 @@ function refresh() {
     $('#tag_name').val('');
     $('#tagTable').DataTable().destroy();
     createTable();
-    $('#tagTable').DataTable();
+    $('#tagTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
 }
@@ -146,7 +152,10 @@ function findTagByName(tagName) {
                     rowNo++;
                 }
                 document.getElementById("tagData").innerHTML = Str;
-                $('#tagTable').DataTable();
+                $('#tagTable').DataTable({
+                    "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+                    "iDisplayLength": 100
+                });
             } else {
                 alert('select fail');
             }

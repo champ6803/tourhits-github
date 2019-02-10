@@ -65,6 +65,7 @@ class FilterController extends Controller {
             $others = json_decode(request()->get('_others'));
             $price_from = request()->get('_price_from');
             $price_to = request()->get('_price_to');
+            $sort_by = request()->get('_sort_by');
 
             $filterName = "";
             $filterType = "tag";
@@ -82,6 +83,20 @@ class FilterController extends Controller {
             $take = (int) $_take;
             $page_num = (int) $_page_num;
             $skip = ($page_num - 1) * $take;
+
+            $order_by = 'tour_package.tour_package_price';
+            $sort = 'asc';
+            if ($sort_by == "lowest_price") {
+
+                $order_by = 'tour_package.tour_package_price';
+                $sort = 'asc';
+            } else if ($sort_by == "most_price") {
+                $order_by = 'tour_package.tour_package_price';
+                $sort = 'desc';
+            } else {
+                $order_by = 'tour_package.tour_package_price';
+                $sort = 'asc';
+            }
 
             $countryList = $this->_tourCountryModel->getTourCountryByUrl($country);
             $tagList = $this->_tagModel->getTagByUrl($country);
@@ -101,7 +116,7 @@ class FilterController extends Controller {
                                 ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
                             })
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id, tour_country.tour_country_name'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -123,7 +138,7 @@ class FilterController extends Controller {
                             ->where('tour_package.tour_package_price', '>=', $price_from)
                             ->where('tour_package.tour_package_price', '<=', $price_to)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id, tour_country.tour_country_name'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -144,7 +159,7 @@ class FilterController extends Controller {
                             ->where('tour_country.tour_country_url', $country)
                             ->whereIn('route.route_name', $route)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -166,7 +181,7 @@ class FilterController extends Controller {
                             ->where('tour_period.tour_period_start', '>=', $start_date)
                             ->where('tour_period.tour_period_end', '<=', $end_date)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -186,7 +201,7 @@ class FilterController extends Controller {
                             ->whereRaw('extract(month from tour_package.tour_package_period_start) = ?', $month)
                             //->whereMonth('tour_period.tour_period_start', $month)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -205,7 +220,7 @@ class FilterController extends Controller {
                             ->where('tour_country.tour_country_id', $country)
                             ->whereIn('tour_package.tour_period_day_number', $days)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -224,7 +239,7 @@ class FilterController extends Controller {
                             ->where('tour_country.tour_country_url', $country)
                             ->whereIn('airline.airline_name', $airline)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -248,7 +263,7 @@ class FilterController extends Controller {
                             ->where('tour_period.tour_period_start', '>=', $start_date)
                             ->where('tour_period.tour_period_end', '<=', $end_date)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -273,7 +288,7 @@ class FilterController extends Controller {
                             ->where('tour_period.tour_period_end', '<=', $end_date)
                             ->whereRaw('extract(month from tour_package.tour_package_period_start) = ?', $month)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -299,7 +314,7 @@ class FilterController extends Controller {
                             ->whereRaw('extract(month from tour_package.tour_package_period_start) = ?', $month)
                             ->whereIn('tour_package.tour_period_day_number', $days)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -326,7 +341,7 @@ class FilterController extends Controller {
                             ->whereIn('tour_package.tour_period_day_number', $days)
                             ->whereIn('airline.airline_name', $airline)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -357,7 +372,7 @@ class FilterController extends Controller {
                                 ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
                             })
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id, tour_country.tour_country_name'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -388,7 +403,7 @@ class FilterController extends Controller {
                                 ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
                             })
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -417,7 +432,7 @@ class FilterController extends Controller {
                                 ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
                             })
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -442,7 +457,7 @@ class FilterController extends Controller {
                             ->where('tour_period.tour_period_end', '<=', $end_date)
                             ->whereIn('tour_package.tour_period_day_number', $days)
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -459,7 +474,7 @@ class FilterController extends Controller {
                             ->join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
                             ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                             ->where('tour_country.tour_country_url', $country)
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -490,7 +505,7 @@ class FilterController extends Controller {
                                 ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
                             })
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id, tour_country.tour_country_name'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -509,7 +524,7 @@ class FilterController extends Controller {
                             ->join('tour_tag', 'tour_tag.tour_package_id', '=', 'tour_package.tour_package_id')
                             ->join('tag', 'tag.tag_id', '=', 'tour_tag.tag_id')
                             ->where('tag.tag_url', $country)
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -540,7 +555,7 @@ class FilterController extends Controller {
                                 ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
                             })
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id, tour_country.tour_country_name'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -559,7 +574,7 @@ class FilterController extends Controller {
                             ->join('tour_attraction', 'tour_attraction.tour_package_id', '=', 'tour_package.tour_package_id')
                             ->join('attraction', 'attraction.attraction_id', '=', 'tour_attraction.attraction_id')
                             ->where('attraction.attraction_url', $country)
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -589,11 +604,12 @@ class FilterController extends Controller {
                                 ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
                             })
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id, tour_country.tour_country_name'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
+                    $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
                             ->get();
-                    $totalRecord = $tourPackageList->count();
+
                     $array = array();
                     foreach ($tourPackageList as $tour) {
                         array_push($array, $tour->tour_package_id);
@@ -605,7 +621,7 @@ class FilterController extends Controller {
                             ->join('country', 'country.country_id', '=', 'tour_country.country_id')
                             ->join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
                             ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
@@ -635,11 +651,12 @@ class FilterController extends Controller {
                                 ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
                             })
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id, tour_country.tour_country_name'))
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
+                    $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)
                             ->get();
-                    $totalRecord = $tourPackageList->count();
+
                     $array = array();
                     foreach ($tourPackageList as $tour) {
                         array_push($array, $tour->tour_package_id);
@@ -652,7 +669,7 @@ class FilterController extends Controller {
                             ->join('tour_airline', 'tour_airline.tour_package_id', '=', 'tour_package.tour_package_id')
                             ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                             ->where('tour_country.tour_country_url', $country)
-                            ->orderBy('tour_package.tour_package_price', 'asc');
+                            ->orderBy($order_by, $sort);
                     $totalRecord = $query->count();
                     $tourPackageList = $query->skip($skip)
                             ->take($take)

@@ -43,9 +43,10 @@ class DashboardController extends Controller {
             $orderModel = new Orders();
             $orderList = $orderModel->getOrder();
             foreach ($orderList as $order) {
-                $newOrderDate = date("d-m-Y h:i:s", strtotime($order->order_date));
-                $order->order_date = $newOrderDate;
+//                $newOrderDate = date("d-m-Y h:i:s", strtotime($order->order_date));
+//                $order->order_date = $newOrderDate;
             }
+            
             return $orderList;
         } catch (\Exception $ex) {
             return $ex;

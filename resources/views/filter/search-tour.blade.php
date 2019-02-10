@@ -431,8 +431,10 @@
                             <div id="sorting" class="row card_show">
                                 <div class="col-sm-6">
                                     <div class="page-top">
-                                        <select class="awe-select">
-                                            <option>ราคาถูกที่สุด</option> 
+                                        <select onchange="sortPackage()" id="sort_package" class="awe-select">
+                                            <option value="lowest_price">ราคาต่ำที่สุด</option>
+                                            <option value="most_price">ราคาสูงที่สุด</option>
+                                            <option value="hot_tour">นิยมมากที่สุด</option>
                                         </select>
                                         <div class="sort-name hidden-xs hidden-sm"><span>เรียงตาม :</span></div>                           
                                     </div>
@@ -442,108 +444,108 @@
                     </div>
 
                     <!--                เทส Card-->
-                                <div class="row">
-                                    <div id="card_area" class="card_show filter-item-wrapper">
-                                            
-                                        <li class="trip-item">
-                                            <div class="item-media">
-                                                <div class="image-cover">
-                                                    <img src="../images/tour/208-Oshino Hakkai.jpg" alt="">
-                                                </div>
-                                                <div class="bot-img-detail">
-                                                    <div class="tag-day-and-period">
-                                                        <span>5</span>
-                                                        <span>วัน</span>
-                                                        <span>3</span>
-                                                        <span>คืน</span>
-                                                        <span>ก.ย. - ต.ค.</span>
-                                                    </div>
-                                                    <div class="tag-tour-num">
-                                                        <span>รหัส</span>
-                                                        <span>TH034</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item-body">
-                                                <div class="item-title">
-                                                    <h2><a href="/tour-detail/japan/208/THG15-XW-JP-1-29SEP18">Test ระบบการ์ด</a></h2>
-                                                </div>
-                                                <div class="hilight">
-                                                    <i class="far fa-flag"></i>
-                                                    <div class="detail">
-                                                        <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น (อาบน้ำแร่)</p>
-                                                        <p>ภูเขาไฟฟูจิ ชั้น 5 - พิพิธภัณฑ์แผ่นดินไหว – ศาลเจ้าคิตะงุจิฮองงุ ฟูจิ</p>
-                                                        <p>ชงชาแบบญี่ปุ่น – โอไดบะ-วัดนาริตะ</p>
-                                                    </div>
-                                                </div>
-                                                <div class="item-list">
-                                                    <ul>
-                                                        <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
-                                                        <li><i class="far fa-calendar"></i> ช่วงเวลา ก.ย. - ต.ค.</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="item-footer">
-                                                    <div class="item-rate">
-                                                        <div class="card-airline">
-                                                            <img alt="NokScoot" src="../images/airline/NokScoot.png" title=""></div>
-                                                    </div>
-                                                    <div class="item-icon">
-                                                        <div class="pass">รหัสทัวร์&nbsp;</div>
-                                                        TH208
-                                                    </div>
-                                                        
-                                                </div>
-                                                    
-                                            </div>
-                                            <div class="item-price-more">
-                                                <div class="price">ราคา<ins><span class="amount">16,888฿</span></ins>
-                                                </div>
-                                                <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/208/NRT44 TOKYO FUJI โปรกระแทกใจ 5D3N ">รายละเอียด</a>
-                                            </div>
-                                        </li>
-                                        
-                                        <li class="trip-item">
-                                            <div class="item-media">
-                                                <div class="image-cover">
-                                                    <img src="../images/tour/208-Oshino Hakkai.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="item-body">
-                                                <div class="item-title"><h2><a href="/tour-detail/japan/208/THG15-XW-JP-1-29SEP18">Test ระบบการ์ด2</a></h2>
-                                                </div>
-                                                <div class="hilight">
-                                                    <i class="far fa-flag"></i>
-                                                    <div class="detail">
-                                                        <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น (อาบน้ำแร่)</p>
-                                                        <p>ภูเขาไฟฟูจิ ชั้น 5 - พิพิธภัณฑ์แผ่นดินไหว – ศาลเจ้าคิตะงุจิฮองงุ ฟูจิ</p>
-                                                        <p>ชงชาแบบญี่ปุ่น – โอไดบะ-วัดนาริตะ</p>
-                                                    </div>
-                                                </div>
-                                                <div class="item-list">
-                                                    <ul><li><i class="far fa-clock"></i> 5 วัน 3 คืน</li><li><i class="far fa-calendar"></i> ช่วงเวลา ก.ย. - ต.ค.</li></ul>
-                                                </div>
-                                                <div class="item-footer">
-                                                    <div class="item-rate">
-                                                        <div class="card-airline">
-                                                            <img alt="NokScoot" src="../images/airline/NokScoot.png" title=""></div>
-                                                    </div>
-                                                    <div class="item-icon">
-                                                        <div class="pass">รหัสทัวร์&nbsp;</div>
-                                                        TH208
-                                                    </div>
-                                                        
-                                                </div>
-                                                    
-                                            </div>
-                                            <div class="item-price-more">
-                                                <div class="price">ราคา<ins><span class="amount">16,888฿</span></ins>
-                                                </div>
-                                                <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/208/NRT44 TOKYO FUJI โปรกระแทกใจ 5D3N ">รายละเอียด</a>
-                                            </div>
-                                        </li>
-                                        
+                    <div class="row">
+                        <div id="card_area" class="card_show filter-item-wrapper">
+
+                            <li class="trip-item">
+                                <div class="item-media">
+                                    <div class="image-cover">
+                                        <img src="../images/tour/208-Oshino Hakkai.jpg" alt="">
+                                    </div>
+                                    <div class="bot-img-detail">
+                                        <div class="tag-day-and-period">
+                                            <span>5</span>
+                                            <span>วัน</span>
+                                            <span>3</span>
+                                            <span>คืน</span>
+                                            <span>ก.ย. - ต.ค.</span>
+                                        </div>
+                                        <div class="tag-tour-num">
+                                            <span>รหัส</span>
+                                            <span>TH034</span>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="item-body">
+                                    <div class="item-title">
+                                        <h2><a href="/tour-detail/japan/208/THG15-XW-JP-1-29SEP18">Test ระบบการ์ด</a></h2>
+                                    </div>
+                                    <div class="hilight">
+                                        <i class="far fa-flag"></i>
+                                        <div class="detail">
+                                            <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น (อาบน้ำแร่)</p>
+                                            <p>ภูเขาไฟฟูจิ ชั้น 5 - พิพิธภัณฑ์แผ่นดินไหว – ศาลเจ้าคิตะงุจิฮองงุ ฟูจิ</p>
+                                            <p>ชงชาแบบญี่ปุ่น – โอไดบะ-วัดนาริตะ</p>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <ul>
+                                            <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                            <li><i class="far fa-calendar"></i> ช่วงเวลา ก.ย. - ต.ค.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-rate">
+                                            <div class="card-airline">
+                                                <img alt="NokScoot" src="../images/airline/NokScoot.png" title=""></div>
+                                        </div>
+                                        <div class="item-icon">
+                                            <div class="pass">รหัสทัวร์&nbsp;</div>
+                                            TH208
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="item-price-more">
+                                    <div class="price">ราคา<ins><span class="amount">16,888฿</span></ins>
+                                    </div>
+                                    <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/208/NRT44 TOKYO FUJI โปรกระแทกใจ 5D3N ">รายละเอียด</a>
+                                </div>
+                            </li>
+
+                            <li class="trip-item">
+                                <div class="item-media">
+                                    <div class="image-cover">
+                                        <img src="../images/tour/208-Oshino Hakkai.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-body">
+                                    <div class="item-title"><h2><a href="/tour-detail/japan/208/THG15-XW-JP-1-29SEP18">Test ระบบการ์ด2</a></h2>
+                                    </div>
+                                    <div class="hilight">
+                                        <i class="far fa-flag"></i>
+                                        <div class="detail">
+                                            <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น (อาบน้ำแร่)</p>
+                                            <p>ภูเขาไฟฟูจิ ชั้น 5 - พิพิธภัณฑ์แผ่นดินไหว – ศาลเจ้าคิตะงุจิฮองงุ ฟูจิ</p>
+                                            <p>ชงชาแบบญี่ปุ่น – โอไดบะ-วัดนาริตะ</p>
+                                        </div>
+                                    </div>
+                                    <div class="item-list">
+                                        <ul><li><i class="far fa-clock"></i> 5 วัน 3 คืน</li><li><i class="far fa-calendar"></i> ช่วงเวลา ก.ย. - ต.ค.</li></ul>
+                                    </div>
+                                    <div class="item-footer">
+                                        <div class="item-rate">
+                                            <div class="card-airline">
+                                                <img alt="NokScoot" src="../images/airline/NokScoot.png" title=""></div>
+                                        </div>
+                                        <div class="item-icon">
+                                            <div class="pass">รหัสทัวร์&nbsp;</div>
+                                            TH208
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="item-price-more">
+                                    <div class="price">ราคา<ins><span class="amount">16,888฿</span></ins>
+                                    </div>
+                                    <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/208/NRT44 TOKYO FUJI โปรกระแทกใจ 5D3N ">รายละเอียด</a>
+                                </div>
+                            </li>
+
+                        </div>
+                    </div>
                     <!--       end         เทส Card-->
 
 
@@ -980,7 +982,7 @@
                     <div class="sidebar-title hidden-xs filter-tittle">
 
                         <div class="search-box-new">
-                            <input id="search_text" type="text" name="search" placeholder="ค้นหาชื่อแพ็คเกจทัวร์" class="search-text-new"/>
+                            <input id="search_input" type="text" name="search" placeholder="ค้นหาชื่อแพ็คเกจทัวร์" class="search-text-new"/>
                             <a id="search_btn" class="search-btn-new">
                                 <i class="fa fa-search"></i>
                             </a>
@@ -996,7 +998,7 @@
                         <div class="box-content">
                             <div class="filter-bar">
                                 <!--                            <div class="filter-text text-center">
-                                                                <input id="search_text" type="text" class="form-control" placeholder="ค้นหาชื่อแพ็คเกจทัวร์">
+                                                                <input id="search_text" type="text" class="form-control" placeholder="ค้นหาชื่อแพ็คเกจทัวร์"> 
                                                             </div>
                                 
                                                             <hr>
@@ -1462,7 +1464,7 @@
                 </div>
                 @endif
 
-
+                @if (count($tagList) > 0)
                 <div class="sidebar-title">
                     <h3><i class="fa fa-tags"></i> Tags</h3>         
                 </div>
@@ -1476,7 +1478,8 @@
                             @endforeach                                
                         </div> 
                     </div>
-                </div>    
+                </div>
+                @endif
             </div>
         </div>
 

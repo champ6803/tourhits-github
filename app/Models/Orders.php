@@ -65,6 +65,7 @@ class Orders extends Model {
             $order = Orders::join('order_status', 'order_status.order_status_code', '=', 'orders.order_status_code')
                     ->leftJoin('customer', 'customer.customer_id', '=', 'orders.customer_id')
                     ->select(DB::raw('COALESCE(orders.order_name, customer.customer_fname) as name'), DB::raw('COALESCE(orders.order_phone, customer.customer_phone) as phone'), 'orders.*', 'order_status.*')
+                    ->orderBy('orders.order_id', 'desc')
                     ->get();
 
             return $order;

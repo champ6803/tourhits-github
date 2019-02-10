@@ -42,7 +42,10 @@ $(function () {
     });
 
     createTable()
-    $('#holidayTable').DataTable();
+    $('#holidayTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
 });
 
 function createTable() {
@@ -160,7 +163,10 @@ function refresh() {
     $('#holiday_name').val('');
     $('#holidayTable').DataTable().destroy();
     createTable();
-    $('#holidayTable').DataTable();
+    $('#holidayTable').DataTable({
+        "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+        "iDisplayLength": 100
+    });
     $('#hidden_remove_id').val('')
     $('#hidden_update_id').val('')
 }
@@ -198,7 +204,10 @@ function findHolidayByName(holidayName) {
                     rowNo++;
                 }
                 document.getElementById("holidayData").innerHTML = Str;
-                $('#holidayTable').DataTable();
+                $('#holidayTable').DataTable({
+                    "aLengthMenu": [[100, 200, 300, -1], [100, 200, 300, "All"]],
+                    "iDisplayLength": 100
+                });
             } else {
                 alert('select fail');
             }

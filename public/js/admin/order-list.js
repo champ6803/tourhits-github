@@ -5,7 +5,7 @@ $(function () {
     $('#order_table').bootstrapTable({
         search: true,
         pagination: true,
-        pageSize: 10,
+        pageSize: 100,
         columns: [{
                 field: 'order_id',
                 align: 'center',

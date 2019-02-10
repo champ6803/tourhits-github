@@ -306,7 +306,7 @@ function sendTourOrders() {
                     success: function (data) {
                         if (data == "true") {
                             alert('ส่งข้อมูลการจองเรียบร้อย');
-                            window.location.href = "/";
+                            sendEmail();
                         } else {
                             alert('จองไม่สำเร็จ');
                         }
@@ -315,8 +315,7 @@ function sendTourOrders() {
                         alert('error');
                     }
                 });
-            }
-            else{
+            } else {
                 alert('กรุณาเลือกแพ็คเกจ');
             }
         } else {
@@ -347,7 +346,7 @@ function sendTourOrders() {
                 success: function (data) {
                     if (data == 'true') {
                         alert('ส่งข้อมูลการจองเรียบร้อย');
-                        window.location.href = "/";
+                        sendEmail();
                     } else {
                         alert('จองไม่สำเร็จ');
                     }
@@ -363,4 +362,49 @@ function sendTourOrders() {
     } else {
         alert('กรุณาเข้าสู่ระบบ');
     }
+}
+
+sendEmail = function () {
+    var customer_id = $('#customer_id').val();
+    var cus_name = $('#cus_name').val();
+    var cus_email = $('#cus_email').val();
+    var line_id = $('#line_id').val();
+    var phone = $('#phone').val();
+    var remark = $('#remark').val();
+
+    var all_total_amount = $('#all_total_amount').text();
+    var adult_total_amount = $('#adult_total_amount').text();
+    var child_total_amount = $('#child_total_amount').text();
+    var adult_qty = $('#adult_qty').text();
+    var child_qty = $('#child_qty').text() === '' ? 0 : $('#child_qty').text();
+    var tour_period_id = tourPackagePeriod.tour_period_id;
+    var tour_package_id = tourPackage.tour_package_id;
+
+    $.ajax({
+        type: 'post',
+        url: base_path + '/confirmOrderEmail',
+        async: true,
+        data: {
+            'customer_id': customer_id,
+            'cus_name': cus_name,
+            'cus_email': cus_email,
+            'line_id': line_id,
+            'phone': phone,
+            'remark': remark,
+            'all_total_amount': all_total_amount,
+            'adult_qty': adult_qty,
+            'child_qty': child_qty,
+            'tour_period_id': tour_period_id,
+            'tour_package_id': tour_package_id
+        },
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            console.log("mail: " + data);
+        },
+        error: function (data) {
+            console.log("mail: " + data);
+        }
+    });
 }
