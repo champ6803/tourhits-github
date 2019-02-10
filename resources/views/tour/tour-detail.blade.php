@@ -1819,7 +1819,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     <!-- Trigger the modal with a button -->
                     <div class="call-and-line">
                         <div class="call-or-line">- จองผ่านช่องทางอื่น -</div>
-                        <div class="call-to-book">
+                        <div class="call-to-book" style="width:100%;">
                             <a href="tel:02-379-1249" type="button" class="btn btn-call-book">
                                 <span><i class="fas fa-phone"></i> โทรจอง</span>                       
                             </a>
@@ -1827,7 +1827,16 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                                             <i class="awe-icon awe-icon-phone"></i>
                                                             <span>โทรจอง</span>                       
                                                         </button>-->
-                        </div> 
+                        </div>
+                        <div class="inbox-fb call-to-book">
+                            <a target="_blank" href="http://m.me/PAGE.TOURHITS" type="button" class="btn btn-call-book">
+                                <span><img alt="" src="{{ asset('/images/icon/messenger.png')}}" title=""> Inbox page</span>                       
+                            </a>
+                            <!--                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal">
+                                                            <i class="awe-icon awe-icon-phone"></i>
+                                                            <span>โทรจอง</span>                       
+                                                        </button>-->
+                        </div>
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
                             <div class="modal-dialog">
@@ -1893,7 +1902,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <!-- Trigger the modal with a button -->
                         <div class="book-by-line">
                             <a target="_blank" href="http://line.me/ti/p/%40tourhits" type="button" class="btn btn-call-book">    
-                                <span><img alt="" src="{{ asset('/images/icon/logo-line.png')}}" title=""> จองผ่านไลน์</span>
+                                <span><img alt="" src="{{ asset('/images/icon/logo-line-2.png')}}" title=""> จองผ่านไลน์</span>
                             </a>
                             <!--                            <button type="button" class="btn btn-call-book" data-toggle="modal" data-target="#myModal2">    
                                                             <i class="fab fa-line"></i>                            
