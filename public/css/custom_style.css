@@ -5463,6 +5463,18 @@ Custom BS3
 .call-to-book a:hover{
     background-color: #5de0bf;
 }
+.inbox-fb span{
+    font-size: 16px;
+}
+
+.inbox-fb a{
+    border-color: #475993!important;
+}
+
+.inbox-fb a:hover{
+    background-color: #475993;
+}
+
 .call-to-book a:hover span{
     color: #fff;
 }
@@ -5481,11 +5493,11 @@ Custom BS3
     border-radius: 40px;
     font-family: 'Kanit', sans-serif;
     font-size: 18px!important;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
 }
 
 .book-by-line a{
@@ -5506,7 +5518,7 @@ Custom BS3
 }
 .call-to-book span img,.book-by-line span img{
     padding-right: 1px;
-    height: 32px;
+    height: 30px;
 }
 
 
