@@ -294,9 +294,9 @@
                                                     <h5>ตุรกี</h5>
                                                 </a>
                                             </div>
-                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/indonesia')}}">
-                                                    <img data-src="../images/flags/Indonesia.png" alt="ทัวร์อินโดนีเซีย" class=" lazyloaded" src="../images/flags/Indonesia.png">
-                                                    <h5>อินโดนีเซีย</h5>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/bali')}}">
+                                                    <img data-src="../images/flags/Indonesia.png" alt="ทัวร์บาหลี" class=" lazyloaded" src="../images/flags/Indonesia.png">
+                                                    <h5>บาหลี</h5>
                                                 </a>
                                             </div>
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/south-africa')}}">
