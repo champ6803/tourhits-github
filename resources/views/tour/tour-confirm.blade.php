@@ -460,7 +460,7 @@
                                             <input id='phone' type="text" value="" name="phone" maxlength="11" placeholder="เบอร์โทรศัพท์">
                                         </div>
                                         <div class="form-textarea-wrapper">
-                                            <textarea id='remark' name="message">หมายเหตุ (ถ้ามี)</textarea>
+                                            <textarea placeholder="หมายเหตุ (ถ้ามี)" id='remark' name="message"></textarea>
                                         </div>
                                     </div> 
                                 </div>
