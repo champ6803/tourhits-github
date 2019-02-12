@@ -203,9 +203,6 @@
             padding-bottom:75%!important;
         }
         
-        .product-detail{
-            padding-top: 30px; 
-        }
         
         .product-detail__info .product-address p{
             font-size: 13px;
@@ -216,7 +213,7 @@
         }
         
         .call-to-book a, .book-by-line a{border: none;}
-        .call-to-book {border-right: 1px solid;}
+        .inbox-fb {border-right: 1px solid;}
         .book-by-line span{font-size:14px!important;}
     }
 
@@ -1611,8 +1608,8 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     <th colspan="3" class="align-middle py-4">เลือกวันเดินทางและกดจอง</th>
                                     <th class="align-middle py-4">
                                         <span class="d-inline d-sm-none">พักคู่</span>
-                                        <span class="d-none d-sm-inline">ผู้ใหญ่ (พักคู่)</span>
-                                        <span class="each">ท่านละ</span>
+                                        <span class="d-none d-sm-inline">ผู้ใหญ่</span>
+                                        <span class="each">พักคู่</span>
                                     </th>
                                     <th class="align-middle py-4">
                                         <span class="d-inline d-sm-none">เด็ก</span>
@@ -1640,7 +1637,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                     </td>
 
                                     <td class="align-middle days-from text-sm-center text-to-date">                               
-                                        <span class="">ถึง</span>
+                                        <span class="">-</span>
                                     </td>
 
                                     <td class="align-middle days-from text-sm-center">
