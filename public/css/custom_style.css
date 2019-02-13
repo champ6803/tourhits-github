@@ -6520,9 +6520,9 @@ https://flickity.metafizzy.co
 .tbody-space .img-airline i{color: #b5b2b2;}
 
 .btn-confirm-periods{
-    color: #fff;
+    color: #d30000;
     font-size: 21px;
-    background-color: #d30000;
+    border: 2px solid #ed5565;
     padding: 0 15px;
     line-height: 27px;
     -webkit-transition: all 0.3s ease;

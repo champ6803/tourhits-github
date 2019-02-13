@@ -1738,7 +1738,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 
                                 <tr class="period-row-header">
                                     <td class="img-airline">
-                                        <i class="far fa-calendar-check"></i>
+                                        <i class="far fa-calendar-check d-none"></i>
                                     </td>
                                     <td class="days-from text-sm-center">
                                         28 ก.ย. 2561 
@@ -1774,7 +1774,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </tr>
                                 <tr class="period-row-header">
                                     <td class="img-airline">
-                                        <i class="far fa-calendar-check"></i>
+                                        <i class="far fa-calendar-check d-none"></i>
                                     </td>
                                     <td class="days-from text-sm-center">
                                         28 ก.ย. 2561 
