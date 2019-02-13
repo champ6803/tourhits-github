@@ -195,7 +195,7 @@
             display: none;
         }
 
-        .period-table-bottom table td:nth-child(4), .period-table-bottom table td:nth-child(5), .period-table-bottom table td:nth-child(6){
+        .period-table-bottom table td:nth-child(5), .period-table-bottom table td:nth-child(6), .period-table-bottom table td:nth-child(7){
             display: none;
         }
 
@@ -1591,7 +1591,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                    </div>
                                 </div>-->
 
-                <!--ตารางราคา                -->
+                <!--ตารางราคา  -->
                 <div class="period-table-bottom" style="padding-top: 25px;">
                     @if($tourPackage->tour_package_remark != null && $tourPackage->tour_package_remark != "")
                     <div class="row">
@@ -1694,7 +1694,127 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
                 </div>
             </div>
-            <!-- กล่องจอง -->
+           
+            
+  <!--ตารางราคา  new ล่าสุด-->  
+        <div class="col-md-9">
+            <div class="period-table-bottom" style="padding-top: 25px;">
+                <h3 style="font-size: 24px;"><i class="fas fa-calculator"></i> ข้อมูลราคา(อันแก้ไข)</h3>
+                    <div class="tabledate-form-to periods-table-detail">
+                        <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th colspan="4" class="align-middle py-4">เลือกวันเดินทางและกดจอง</th>
+                                    <th class="py-4">
+                                        <span class="d-inline d-sm-none">พักคู่</span>
+                                        <span class="d-none d-sm-inline">ผู้ใหญ่</span>
+                                        <span class="each">พักคู่</span>
+                                    </th>
+                                    <th class="py-4">
+                                        <span class="d-inline d-sm-none">พักคู่</span>
+                                        <span class="d-none d-sm-inline">ผู้ใหญ่</span>
+                                        <span class="each">พักเดี่ยว</span>
+                                    </th>
+                                    <th class="py-4">
+                                        <span class="d-inline d-sm-none">เด็ก</span>
+                                        <span class="d-none d-sm-inline">เด็ก</span>
+                                        <span class="each">(ไม่เพิ่มเตียง)</span>
+                                    </th>
+<!--                                    <th class="align-middle py-4">
+                                        <span class="d-inline d-sm-none">ราคาพิเศษ</span>
+                                        <span class="d-none d-sm-inline">ราคาพิเศษ</span>    
+                                    </th>-->
+                                    <th class="py-4">
+                                        <span class="pricename-xs">ราคา</span>
+                                    </th>
+
+<!--                                <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
+<th class="align-middle d-none d-sm-table-cell py-4">ราคาพิเศษ<br> ท่านละ</th>
+<th class="align-middle d-none d-sm-table-cell py-4"></th>-->
+                                </tr>
+                            </thead>
+                            
+                            <tbody class="tbody-space">
+                                
+                                <tr class="period-row-header">
+                                    <td class="img-airline">
+                                        <i class="far fa-calendar-check"></i>
+                                    </td>
+                                    <td class="days-from text-sm-center">
+                                        28 ก.ย. 2561 
+                                    </td>
+
+                                    <td class="days-from text-sm-center text-to-date">                               
+                                        <span class="">-</span>
+                                    </td>
+
+                                    <td class="days-from text-sm-center days-end-discout">
+                                        2 ต.ค. 2561
+                                    </td>
+                                    <td class="days-from text-sm-center price-color">
+                                        <div class="old-price">25,000 บาท</div>
+                                        16,001<div class="baht-price">บาท</div>
+                                    </td>
+                                    <td class="days-from text-sm-center price-color">
+                                        <div class="old-price">25,000 บาท</div>
+                                        16,002<div class="baht-price">บาท</div>
+                                    </td>
+                                    <td class="days-from text-sm-center price-color">
+                                        <div class="old-price">25,000 บาท</div>
+                                        16,003<div class="baht-price">บาท</div>
+                                    </td>                                 
+                                    <td class="days-from text-sm-center">
+                                        <!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->
+                                        <span class="price-color">
+                                            6,888<div class="baht-price">บาท</div>
+                                        </span>
+                                        <!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->                                        
+                                            <a type="button" href="http://localhost:8000/tour-confirm/208/2237" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">SOLD OUT</a>  
+                                    </td> 
+                                </tr>
+                                <tr class="period-row-header">
+                                    <td class="img-airline">
+                                        <i class="far fa-calendar-check"></i>
+                                    </td>
+                                    <td class="days-from text-sm-center">
+                                        28 ก.ย. 2561 
+                                    </td>
+
+                                    <td class="days-from text-sm-center text-to-date">                               
+                                        <span class="">-</span>
+                                    </td>
+
+                                    <td class="days-from text-sm-center days-end-flash">
+                                        2 ต.ค. 2561
+                                    </td>
+                                    <td class="days-from text-sm-center price-color">
+                                        <div class="old-price"></div>
+                                        16,001<div class="baht-price">บาท</div>
+                                    </td>
+                                    <td class="days-from text-sm-center price-color">
+                                        <div class="old-price"></div>
+                                        16,002<div class="baht-price">บาท</div>
+                                    </td>
+                                    <td class="days-from text-sm-center price-color">
+                                        <div class="old-price"></div>
+                                        16,003<div class="baht-price">บาท</div>
+                                    </td>
+                                    <td class="align-middle days-from text-sm-center">
+<!--                                        ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->
+                                        <span class="price-color">
+                                            16,888<div class="baht-price">บาท</div>
+                                        </span>                                                                         
+                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
+                                    </td> 
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        <p class="text-center" style="font-family: 'Bai Jamjuree', sans-serif;font-size: 13px; font-weight: bold; color: #746666;">* ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม</p>       
+                    </div>
+            </div>
+        </div>    
+        <!-- กล่องจอง -->
             <div class="col-md-3">
                 <div class="detail-sidebar">                    
                     <div class="booking-info">

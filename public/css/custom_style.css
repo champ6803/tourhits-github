@@ -6407,6 +6407,51 @@ https://flickity.metafizzy.co
     }
 }
 
+/*.period-table-bottom .table{
+    width:  100%;
+}
+
+.period-table-bottom .table thead {
+    display: block;
+}
+
+.period-table-bottom .table tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    max-height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}*/
+
+.periods-table-detail .tbody-space .days-end-discout::after{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+    -webkit-transform: translate(0, 4px);
+    -ms-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+    content: '';
+    background: url(../images/icon/discount.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.periods-table-detail .tbody-space .days-end-flash::after{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+    -webkit-transform: translate(0, 4px);
+    -ms-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+    content: '';
+    background: url(../images/icon/flash.svg) no-repeat center center;
+    background-size: contain;
+}
+
 .periods-table-detail .table .thead-light th{
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 17px;
@@ -6432,6 +6477,7 @@ https://flickity.metafizzy.co
 
 .periods-table-detail .table-bordered,.periods-table-detail .table-bordered  tbody  tr  td{
     border: 0px solid #b5b5b5;
+    padding: 5px 0;
 }
 
 .periods-table-detail .table-bordered  tbody  tr .text-to-date span{
@@ -6452,7 +6498,7 @@ https://flickity.metafizzy.co
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     cursor: default;
-
+/*    height: 50px;*/
 }
 
 .period-row-header:hover{
@@ -6462,6 +6508,16 @@ https://flickity.metafizzy.co
 .period-row-header:last-child{
     border-bottom: 1px solid #fd6149;
 }
+
+.period-row-header td .old-price{
+    font-size: 12px;
+    font-weight: bold;
+    color:  #b5b2b2;
+    text-decoration: line-through;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.tbody-space .img-airline i{color: #b5b2b2;}
 
 .btn-confirm-periods{
     color: #fff;
@@ -7034,4 +7090,5 @@ https://flickity.metafizzy.co
     .sponsor-section .carousel-cell-image.flickity-lazyerror {
       opacity: 1;
     }   
+    
     
