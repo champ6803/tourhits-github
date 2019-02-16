@@ -6407,23 +6407,6 @@ https://flickity.metafizzy.co
     }
 }
 
-/*.period-table-bottom .table{
-    width:  100%;
-}
-
-.period-table-bottom .table thead {
-    display: block;
-}
-
-.period-table-bottom .table tbody {
-    display: block;
-    width: 100%;
-    overflow: auto;
-    max-height: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}*/
-
 .periods-table-detail .tbody-space .days-end-discout::after{
     display: inline-block;
     width: 20px;
@@ -6436,6 +6419,10 @@ https://flickity.metafizzy.co
     content: '';
     background: url(../images/icon/discount.svg) no-repeat center center;
     background-size: contain;
+}
+
+.periods-table-detail .tbody-space .days-end-discout{
+    line-height: 48px;
 }
 
 .periods-table-detail .tbody-space .days-end-flash::after{
@@ -6477,8 +6464,10 @@ https://flickity.metafizzy.co
 
 .periods-table-detail .table-bordered,.periods-table-detail .table-bordered  tbody  tr  td{
     border: 0px solid #b5b5b5;
-    padding: 5px 0;
+
+/*    padding: 5px 0;*/
 }
+
 
 .periods-table-detail .table-bordered  tbody  tr .text-to-date span{
     display: inline;
@@ -7090,5 +7079,92 @@ https://flickity.metafizzy.co
     .sponsor-section .carousel-cell-image.flickity-lazyerror {
       opacity: 1;
     }   
+
+/*    .periods-table-detail thead{
+        display: block;
+
+    }
+
     
-    
+    .periods-table-detail .tbody-space{
+        display: block;
+        overflow: auto;
+        width: 100%;
+        max-height: 50px;     
+        padding-bottom: 10px;
+    }
+    */
+
+        .period-table-bottom table {
+            width: 100%;
+        }
+
+        .period-table-bottom thead, .period-table-bottom tbody, .period-table-bottom tr, .period-table-bottom td, .period-table-bottom th { display: block; }
+
+        .period-table-bottom tr:after {
+            content: ' ';
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .period-table-bottom thead th {
+            height: 60px;
+
+            /*text-align: left;*/
+        }
+
+        .period-table-bottom tbody {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .period-table-bottom thead {
+            /* fallback */
+        }
+
+
+        .period-table-bottom thead th:nth-child(1) {
+            width:40%;
+            float: left;
+            line-height: 48px;
+        }
+        
+        .period-table-bottom thead th:nth-child(2),.period-table-bottom thead th:nth-child(3), .period-table-bottom thead th:nth-child(4){
+            width:15%;
+            float: left;
+        }
+        
+        .period-table-bottom thead th:nth-child(5) {
+            width:15%;
+            float: left;
+            line-height: 48px;
+        }
+        
+        .period-table-bottom tbody td:nth-child(1){
+            width:40%;
+            float: left;
+           
+        } 
+        
+        .period-table-bottom tbody td:nth-child(2), .period-table-bottom tbody td:nth-child(3), .period-table-bottom tbody td:nth-child(4){
+            width:15%;
+            float: left;           
+        } 
+        
+        .period-table-bottom tbody td:nth-child(5){
+            width:15%;
+            float: left; 
+        }
+        
+        .period-table-bottom tbody:before{
+            position: absolute;
+            height: 60px;
+            bottom: 102px;
+            left: 15px;
+            right: 0;
+            width: 96%;
+            z-index: 100;
+            content: '';
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(239, 236, 236) 99%, #fff 100%);
+        }
