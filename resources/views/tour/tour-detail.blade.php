@@ -165,7 +165,7 @@
         font-size: 14px;
         font-weight: bold;
     }
-    
+
     @media (min-width: 992px) and (max-width: 1400px) {
         .product-detail__info .trips .item-width{
             width: 100%;
@@ -175,12 +175,12 @@
             width: 100%;
             padding-left: 15px;
         }
-        
+
         .call-to-book, .book-by-line{width: 100%;}
         .booking-info label{font-size:13px;}
     }
 
-   @media (max-width: 425px) {
+    @media (max-width: 425px) {
         .product-detail__info .product-title h2{font-size: 20px;}
         .Top3-detail .ex .heading span{font-size: 20px;}
 
@@ -198,32 +198,34 @@
         .period-table-bottom table td:nth-child(2), .period-table-bottom table td:nth-child(3), .period-table-bottom table td:nth-child(4){
             display: none;
         }
-        
+
         .period-table-bottom thead th:nth-child(1),.period-table-bottom tbody td:nth-child(1) {
             width:70%;
             float: left;
         }
-        
+
         .period-table-bottom thead th:nth-child(5),.period-table-bottom tbody td:nth-child(5) {
             width:30%;
             float: left;      
         }
-        
-        .period-table-bottom tbody:before{display:none;}
+
+        .period-table-bottom tbody:before{
+            display:none !important;
+        }
 
         .flexible-container {
             padding-bottom:75%!important;
         }
-        
-        
+
+
         .product-detail__info .product-address p{
             font-size: 13px;
         }
         .product-detail__info .trips .warp-text p{
-           font-size: 14px;
-           padding: 15px 14px 10px 14px;
+            font-size: 14px;
+            padding: 15px 14px 10px 14px;
         }
-        
+
         .call-to-book a, .book-by-line a{border: none;}
         .inbox-fb {border-right: 1px solid;}
         .book-by-line span{font-size:14px!important;}
@@ -258,8 +260,8 @@
         /*            max-height:800px;*/
         padding-bottom:10px;
     }
-    
-        #owl-demo .tag-item{
+
+    #owl-demo .tag-item{
         display: block;
         background: #d7d7d7;
         width: auto;
@@ -295,7 +297,7 @@
         padding: 5px 10px;
         line-height: 2;   
     }
-    
+
 </style>
 <style>
     iframe{
@@ -317,6 +319,8 @@ if (isset($_GET['ym'])) {
     $ym = $_GET['ym'];
 } else {
     // This month
+
+
     $ym = date('Y-m');
 }
 
@@ -450,16 +454,16 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     <div class="product-tag-id">
                         <img src="{{ asset('/images/icon/barcode.png')}}">
                         <span>รหัสทัวร์ | TH</span><span id='tour_code'><img src="{{ asset('/images/icon/beating.gif')}}"></span>
-                        
+
                         <div class="right facebook hidden-xs">
                             <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
                         </div>
                         <div class="right download-pdf hidden-xs">
                             <p><a href="{{url('download_pdf/' .$tourPackage->tour_package_id)}}"><i class="far fa-file-pdf" style="font-size:20px; line-height: 27px;"></i>&nbsp;ดาวน์โหลดไฟล์ PDF</a></p>
                         </div>
-                        
+
                     </div>
-                                       
+
                     <div class="product-title">
                         <h2>{{ $tourPackage->tour_package_name }}</h2>
                     </div>
@@ -1604,7 +1608,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </div>-->
 
                 <!--ตารางราคา  -->
-                <div class="period-table-bottom" style="padding-top: 25px;">
+<!--                <div class="period-table-bottom" style="padding-top: 25px;">
                     @if($tourPackage->tour_package_remark != null && $tourPackage->tour_package_remark != "")
                     <div class="row">
                         <div class="col-md-12">
@@ -1636,9 +1640,9 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         <span class="pricename-xs">ราคา</span>
                                     </th>
 
-<!--                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
+                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
 <th class="align-middle d-none d-sm-table-cell py-4">ราคาพิเศษ<br> ท่านละ</th>
-<th class="align-middle d-none d-sm-table-cell py-4"></th>-->
+<th class="align-middle d-none d-sm-table-cell py-4"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1679,7 +1683,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         @endif
                                     </td>
                                     <td class="align-middle days-from text-sm-center">
-                                        <!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->
+                                        ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที
                                         <span class="price-color">
                                             @if($tourPackageObj->tour_period_adult_special_price != 0)                                       
                                             {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
@@ -1689,7 +1693,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 
                                             @endif
                                         </span>
-                                        <!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->                                        
+                                        ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที                                        
                                         @if($tourPackageObj->tour_period_status == 'Y')
                                         <a type="button" target="_blank" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods"  data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>
                                         @else
@@ -1704,14 +1708,14 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         <p class="text-center" style="font-family: 'Bai Jamjuree', sans-serif;font-size: 13px; font-weight: bold; color: #746666;">* ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม</p>       
                     </div>
 
-                </div>
+                </div>-->
             </div>
-           
-            
-  <!--ตารางราคา  new ล่าสุด-->  
-        <div class="col-md-9">
-            <div class="period-table-bottom" style="padding-top: 25px;">
-                <h3 style="font-size: 24px;"><i class="fas fa-calculator"></i> ข้อมูลราคา(อันแก้ไข)</h3>
+
+
+            <!--ตารางราคา  new ล่าสุด-->  
+            <div class="col-md-9">
+                <div class="period-table-bottom" style="padding-top: 25px;">
+                    <h3 style="font-size: 24px;"><i class="fas fa-calculator"></i> ข้อมูลราคา(อันแก้ไข)</h3>
                     <div class="tabledate-form-to periods-table-detail">
 
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
@@ -1724,14 +1728,14 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         <span class="each">พักคู่</span>
                                     </th>
                                     <th class="py-4">
-                                        <span class="d-inline d-sm-none">พักคู่</span>
-                                        <span class="d-none d-sm-inline">ผู้ใหญ่</span>
-                                        <span class="each">พักเดี่ยว</span>
-                                    </th>
-                                    <th class="py-4">
-                                        <span class="d-inline d-sm-none">เด็ก</span>
+                                        <span class="d-inline d-sm-none">(ไม่เพิ่มเตียง)</span>
                                         <span class="d-none d-sm-inline">เด็ก</span>
                                         <span class="each">(ไม่เพิ่มเตียง)</span>
+                                    </th>
+                                    <th class="py-4">
+                                        <span class="d-inline d-sm-none">ราคาพิเศษ</span>
+                                        <span class="d-none d-sm-inline">ผู้ใหญ่</span>
+                                        <span class="each">ราคาพิเศษ</span>
                                     </th>
 <!--                                    <th class="align-middle py-4">
                                         <span class="d-inline d-sm-none">ราคาพิเศษ</span>
@@ -1746,323 +1750,60 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 <th class="align-middle d-none d-sm-table-cell py-4"></th>-->
                                 </tr>
                             </thead>
-                            
+
                             <tbody class="tbody-space">
-                                
+                                @foreach ($tourPackageList as $tourPackageObj)
                                 <tr class="period-row-header">
 <!--                                    <td class="img-airline">
                                         <i class="far fa-calendar-check d-none"></i>
                                     </td>-->
                                     <td class="days-from text-sm-center days-end-discout">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
+                                        {{$tourPackageObj->tour_period_start}} - {{$tourPackageObj->tour_period_end}}
                                     </td>
 
                                     <td class="days-from text-sm-center price-color">
-                                        <div class="old-price">25,000 บาท</div>
-                                        16,001<div class="baht-price">บาท</div>
+                                        @if($tourPackageObj->tour_period_adult_special_price != 0)
+                                        <div class="old-price">{{number_format($tourPackageObj->tour_period_adult_special_price)}} บาท</div>
+                                        @endif
+                                        {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
                                     </td>
                                     <td class="days-from text-sm-center price-color">
-                                        <div class="old-price">25,000 บาท</div>
-                                        16,002<div class="baht-price">บาท</div>
+                                        @if($tourPackageObj->tour_period_adult_special_price != 0)
+                                        <div class="old-price">{{number_format($tourPackageObj->tour_period_adult_special_price)}} บาท</div>
+                                        @endif
+                                        {{number_format($tourPackageObj->tour_period_child_price)}}<div class="baht-price">บาท</div>
                                     </td>
                                     <td class="days-from text-sm-center price-color">
-                                        <div class="old-price">25,000 บาท</div>
-                                        16,003<div class="baht-price">บาท</div>
+                                        @if($tourPackageObj->tour_period_adult_special_price != 0)
+                                        <!--<div class="old-price">{{number_format($tourPackageObj->tour_period_adult_special_price)}} บาท</div>-->
+                                        {{number_format($tourPackageObj->tour_period_adult_special_price)}}<div class="baht-price">บาท</div>
+                                        @else
+                                        -
+                                        @endif
+                                        
                                     </td>                                 
                                     <td class="days-from text-sm-center">
                                         <!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->
                                         <span class="price-color">
-                                            6,888<div class="baht-price">บาท</div>
+                                            {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
                                         </span>
-                                        <!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->                                        
-                                            <a type="button" href="http://localhost:8000/tour-confirm/208/2237" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">SOLD OUT</a>  
+                                        <!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->    
+
+                                        @if($tourPackageObj->tour_period_status == 'Y')
+                                        <a type="button" target="_blank" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods"  data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>
+                                        @else
+                                        <a type="button" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">SOLD OUT</a>
+                                        @endif
                                     </td> 
                                 </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                <tr class="period-row-header">
-                                    <td class="days-from text-sm-center days-end-flash">
-                                        28 ก.ย. 2561 - 2 ต.ค. 2561
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,001<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,002<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="days-from text-sm-center price-color">
-                                        <div class="old-price"></div>
-                                        16,003<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        <span class="price-color">
-                                            16,888<div class="baht-price">บาท</div>
-                                        </span>                                                                         
-                                        <a type="button" target="_blank" href="http://localhost:8000/tour-confirm/208/2238" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods" data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>                                        
-                                    </td> 
-                                </tr>
-                                
-                                
+                                @endforeach
                             </tbody>
                         </table>
                         <p class="text-center" style="font-family: 'Bai Jamjuree', sans-serif;font-size: 13px; font-weight: bold; color: #746666;">* ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม</p>       
                     </div>
-            </div>
-        </div>    
-        <!-- กล่องจอง -->
+                </div>
+            </div>    
+            <!-- กล่องจอง -->
             <div class="col-md-3">
                 <div class="detail-sidebar">                    
                     <div class="booking-info">
@@ -2384,7 +2125,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             owl.trigger('owl.stop');
         })
     });
-    
+
     var tour_package_id = <?php echo json_encode($tourPackage->tour_package_id); ?>;
     var tour_period = 0;
     var sum_appraise_adult = 0;
