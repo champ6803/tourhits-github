@@ -330,6 +330,8 @@ function getTourPackage(page_num, sort_by) {
 
                     $('.card_show').show();
                     $('#loading').hide();
+                    document.body.scrollTop = 0; // For Safari
+                    document.documentElement.scrollTop = 0;
                 }
             },
             error: function (data) {

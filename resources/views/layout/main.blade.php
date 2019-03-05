@@ -52,7 +52,7 @@ session_start();
             <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
         <![endif]-->
         <script type="text/javascript">
-            var base_path = "{{ secure_url('/') }}";
+            var base_path = "{{ url('/') }}";
         </script>
         @yield('meta_tag')
     </head>

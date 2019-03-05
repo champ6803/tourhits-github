@@ -1680,7 +1680,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                         @else
                                         -
                                         @endif
-                                        
+
                                     </td>                                 
                                     <td class="days-from text-sm-center">
                                         <!--ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที-->
@@ -1775,44 +1775,44 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </div>
                                 <!--<span>อายุ 11 หรือต่ำกว่า</span>-->
                             </div>
-                            <!--                            <div class="form-elements form-adult">
-                                                            <label>ผู้ใหญ่ (พักเดี่ยว)</label>
-                                                            <div class="form-item">
-                                                                <select id="alone_price" class="awe-select" disabled="">
-                                                                    <option selected val="0">0</option>
-                                                                    <option val="1">1</option>
-                                                                    <option val="2">2</option>
-                                                                    <option val="3">3</option>
-                                                                    <option val="4">4</option>
-                                                                    <option val="5">5</option>
-                                                                    <option val="6">6</option>
-                                                                    <option val="7">7</option>
-                                                                    <option val="8">8</option>
-                                                                    <option val="9">9</option>
-                                                                    <option val="10">10</option>
-                                                                </select>
-                                                            </div>
-                                                            <span>อายุ 12 ปีขึ้นไป</span>
-                                                        </div>
-                                                        <div class="form-elements form-kids">
-                                                            <label>เด็ก (ไม่เพิ่มเตียง)</label>
-                                                            <div class="form-item">
-                                                                <select id="child_nb_price" class="awe-select" disabled="">
-                                                                    <option selected val="0">0</option>
-                                                                    <option val="1">1</option>
-                                                                    <option val="2">2</option>
-                                                                    <option val="3">3</option>
-                                                                    <option val="4">4</option>
-                                                                    <option val="5">5</option>
-                                                                    <option val="6">6</option>
-                                                                    <option val="7">7</option>
-                                                                    <option val="8">8</option>
-                                                                    <option val="9">9</option>
-                                                                    <option val="10">10</option>
-                                                                </select>
-                                                            </div>
-                                                            <span>อายุ 11 หรือต่ำกว่า</span>
-                                                        </div>-->
+                            <div class="form-elements form-adult">
+                                <label>ผู้ใหญ่ (พักเดี่ยว)</label>
+                                <div class="form-item">
+                                    <select id="alone_price" class="awe-select" disabled="">
+                                        <option selected val="0">0</option>
+                                        <option val="1">1</option>
+                                        <option val="2">2</option>
+                                        <option val="3">3</option>
+                                        <option val="4">4</option>
+                                        <option val="5">5</option>
+                                        <option val="6">6</option>
+                                        <option val="7">7</option>
+                                        <option val="8">8</option>
+                                        <option val="9">9</option>
+                                        <option val="10">10</option>
+                                    </select>
+                                </div>
+                                <!--<span>อายุ 12 ปีขึ้นไป</span>-->
+                            </div>
+<!--                            <div class="form-elements form-kids">
+                                <label>เด็ก (ไม่เพิ่มเตียง)</label>
+                                <div class="form-item">
+                                    <select id="child_nb_price" class="awe-select" disabled="">
+                                        <option selected val="0">0</option>
+                                        <option val="1">1</option>
+                                        <option val="2">2</option>
+                                        <option val="3">3</option>
+                                        <option val="4">4</option>
+                                        <option val="5">5</option>
+                                        <option val="6">6</option>
+                                        <option val="7">7</option>
+                                        <option val="8">8</option>
+                                        <option val="9">9</option>
+                                        <option val="10">10</option>
+                                    </select>
+                                </div>
+                                <span>อายุ 11 หรือต่ำกว่า</span>
+                            </div>-->
                         </div>
                         <div class="price">
                             <em>ประเมินราคา</em>

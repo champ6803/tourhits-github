@@ -6,10 +6,10 @@ $(function () {
             "format": 'DD/MM/YYYY',
         }
     }, function (start, end, label) {
-        start_date = start.format('YYYY-MM-DD');
-        end_date = end.format('YYYY-MM-DD');
+//        start_date = start.format('YYYY-MM-DD');
+//        end_date = end.format('YYYY-MM-DD');
     });
-    
+
     $('#date_picker').val("");
 
     $('#search_tour').click(function () {
@@ -17,7 +17,7 @@ $(function () {
         var country_dropdown = $('#country_dropdown').val();
         country_dropdown = country_dropdown == "" ? "search" : country_dropdown;
         var days_dropdown = $('#days_dropdown option:selected').val();
-        var url = base_path + "/tour/" +country_dropdown + "?start_date=" + start_date + "&end_date=" + end_date + "&search=" + search + "&days=" + days_dropdown;
+        var url = base_path + "/tour/" + country_dropdown + "?start_date=" + start_date + "&end_date=" + end_date + "&search=" + search + "&days=" + days_dropdown;
         window.location.href = url;
     });
 });

@@ -3,26 +3,34 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\UrlGenerator;
 
-class AppServiceProvider extends ServiceProvider
-{
+class AppServiceProvider extends ServiceProvider {
+
     /**
      * Bootstrap any application services.
      *
      * @return void
      */
-    public function boot()
-    {
-        //
-    }
+//    public function boot() {
+//        //
+//    }
 
     /**
      * Register any application services.
      *
      * @return void
      */
-    public function register()
-    {
-        //
+    public function register() {
+//        if (env('APP_ENV') === 'production') {
+//            $this->app['request']->server->set('HTTPS', true);
+//        }
     }
+
+    public function boot(UrlGenerator $url) {
+//        if (env('APP_ENV') == 'production') {
+//            $url->forceScheme('https');
+//        }
+    }
+
 }
