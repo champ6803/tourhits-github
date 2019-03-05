@@ -1608,7 +1608,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </div>-->
 
                 <!--ตารางราคา  -->
-<!--                <div class="period-table-bottom" style="padding-top: 25px;">
+                <div class="period-table-bottom" style="padding-top: 25px;">
                     @if($tourPackage->tour_package_remark != null && $tourPackage->tour_package_remark != "")
                     <div class="row">
                         <div class="col-md-12">
@@ -1618,106 +1618,6 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                     @endif
                     <h3 style="font-size: 24px;"><i class="fas fa-calculator"></i> ข้อมูลราคา</h3>
                     <div class="tabledate-form-to periods-table-detail">
-                        <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th colspan="3" class="align-middle py-4">เลือกวันเดินทางและกดจอง</th>
-                                    <th class="align-middle py-4">
-                                        <span class="d-inline d-sm-none">พักคู่</span>
-                                        <span class="d-none d-sm-inline">ผู้ใหญ่</span>
-                                        <span class="each">พักคู่</span>
-                                    </th>
-                                    <th class="align-middle py-4">
-                                        <span class="d-inline d-sm-none">เด็ก</span>
-                                        <span class="d-none d-sm-inline">เด็ก (ไม่เพิ่มเตียง)</span>
-                                        <span class="each">ท่านละ</span>
-                                    </th>
-                                    <th class="align-middle py-4">
-                                        <span class="d-inline d-sm-none">ราคาพิเศษ</span>
-                                        <span class="d-none d-sm-inline">ราคาพิเศษ</span>    
-                                    </th>
-                                    <th class="align-middle py-4">
-                                        <span class="pricename-xs">ราคา</span>
-                                    </th>
-
-                                    <th class="align-middle d-none d-sm-table-cell py-4">เด็กไม่เพิ่มเตียง<br> ท่านละ</th>
-<th class="align-middle d-none d-sm-table-cell py-4">ราคาพิเศษ<br> ท่านละ</th>
-<th class="align-middle d-none d-sm-table-cell py-4"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($tourPackageList as $tourPackageObj)
-                                <tr class="period-row-header">
-                                    <td class="align-middle days-from text-sm-center">
-                                        {{$tourPackageObj->tour_period_start}} 
-                                    </td>
-
-                                    <td class="align-middle days-from text-sm-center text-to-date">                               
-                                        <span class="">-</span>
-                                    </td>
-
-                                    <td class="align-middle days-from text-sm-center">
-                                        {{$tourPackageObj->tour_period_end}}
-                                    </td>
-                                    @if($tourPackageObj->tour_period_adult_special_price != 0)
-                                    <td style="text-decoration: line-through;" class="align-middle days-from text-sm-center price-color">
-                                        {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td style="text-decoration: line-through;" class="align-middle days-from text-sm-center price-color">
-                                        {{number_format($tourPackageObj->tour_period_child_price)}}<div class="baht-price">บาท</div>
-                                    </td>
-                                    @else
-                                    <td class="align-middle days-from text-sm-center price-color">
-                                        {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center price-color">
-                                        {{number_format($tourPackageObj->tour_period_child_price)}}<div class="baht-price">บาท</div>
-                                    </td>
-                                    @endif
-
-                                    <td class="align-middle days-from text-sm-center price-color">
-                                        @if($tourPackageObj->tour_period_adult_special_price != 0)
-                                        {{number_format($tourPackageObj->tour_period_adult_special_price)}}<div class="baht-price">บาท</div>
-                                        @else
-                                        -
-                                        @endif
-                                    </td>
-                                    <td class="align-middle days-from text-sm-center">
-                                        ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที
-                                        <span class="price-color">
-                                            @if($tourPackageObj->tour_period_adult_special_price != 0)                                       
-                                            {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
-
-                                            @else
-                                            {{number_format($tourPackageObj->tour_period_adult_price)}}<div class="baht-price">บาท</div>
-
-                                            @endif
-                                        </span>
-                                        ราคาที่โชว์หน้ามือถือมีอันเดียว เอาเป็นราคาผู้ใหญ่พักคู่ ฝากเชคเงื่อนไขที                                        
-                                        @if($tourPackageObj->tour_period_status == 'Y')
-                                        <a type="button" target="_blank" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-orange  btn-table-cell py-0 btn-confirm-periods"  data-target=".period_7001273_table" aria-expanded="false" aria-controls="periods">จอง</a>
-                                        @else
-                                        <a type="button" href="{{ url('/tour-confirm/'.$tourPackageObj->tour_package_id.'/'.$tourPackageObj->tour_period_id) }}" class="btn btn-outline-secondary  btn-table-cell btn-confirm-periods disabled" disabled="">SOLD OUT</a>
-                                        @endif
-
-                                    </td> 
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                        <p class="text-center" style="font-family: 'Bai Jamjuree', sans-serif;font-size: 13px; font-weight: bold; color: #746666;">* ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม</p>       
-                    </div>
-
-                </div>-->
-            </div>
-
-
-            <!--ตารางราคา  new ล่าสุด-->  
-            <div class="col-md-9">
-                <div class="period-table-bottom" style="padding-top: 25px;">
-                    <h3 style="font-size: 24px;"><i class="fas fa-calculator"></i> ข้อมูลราคา(อันแก้ไข)</h3>
-                    <div class="tabledate-form-to periods-table-detail">
-
                         <table id="periods_table" class="table table-sm table-bordered text-center js-periods-table">
                             <thead class="thead-light">
                                 <tr>
@@ -1801,8 +1701,12 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                         </table>
                         <p class="text-center" style="font-family: 'Bai Jamjuree', sans-serif;font-size: 13px; font-weight: bold; color: #746666;">* ราคาดั่งกล่าวอาจมีการปรับเปลี่ยนหากสายการบินมีการเรียกเก็บภาษีน้ำมันเเละภาษีสนามบินเพิ่ม</p>       
                     </div>
+
                 </div>
-            </div>    
+            </div>
+
+
+   
             <!-- กล่องจอง -->
             <div class="col-md-3">
                 <div class="detail-sidebar">                    
