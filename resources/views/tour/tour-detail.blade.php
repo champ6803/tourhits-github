@@ -453,8 +453,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                 <div class="product-detail__info"> 
                     <div class="product-tag-id">
                         <img src="{{ asset('/images/icon/barcode.png')}}">
-                        <span>รหัสทัวร์ | TH</span><span id='tour_code'><img src="{{ asset('/images/icon/beating.gif')}}"></span>
-
+                        <span>รหัสทัวร์ | TH</span><span id='tour_code'><img src="{{ asset('/images/icon/beating.gif')}}"></span><span> | {{ $tourPackage->tour_package_code }}</span>
                         <div class="right facebook hidden-xs">
                             <p><a target="_blank" href="https://www.facebook.com/PAGE.TOURHITS"><i class="fab fa-facebook-f"></i></a></p>
                         </div>
@@ -1794,25 +1793,25 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
                                 </div>
                                 <!--<span>อายุ 12 ปีขึ้นไป</span>-->
                             </div>
-<!--                            <div class="form-elements form-kids">
-                                <label>เด็ก (ไม่เพิ่มเตียง)</label>
-                                <div class="form-item">
-                                    <select id="child_nb_price" class="awe-select" disabled="">
-                                        <option selected val="0">0</option>
-                                        <option val="1">1</option>
-                                        <option val="2">2</option>
-                                        <option val="3">3</option>
-                                        <option val="4">4</option>
-                                        <option val="5">5</option>
-                                        <option val="6">6</option>
-                                        <option val="7">7</option>
-                                        <option val="8">8</option>
-                                        <option val="9">9</option>
-                                        <option val="10">10</option>
-                                    </select>
-                                </div>
-                                <span>อายุ 11 หรือต่ำกว่า</span>
-                            </div>-->
+                            <!--                            <div class="form-elements form-kids">
+                                                            <label>เด็ก (ไม่เพิ่มเตียง)</label>
+                                                            <div class="form-item">
+                                                                <select id="child_nb_price" class="awe-select" disabled="">
+                                                                    <option selected val="0">0</option>
+                                                                    <option val="1">1</option>
+                                                                    <option val="2">2</option>
+                                                                    <option val="3">3</option>
+                                                                    <option val="4">4</option>
+                                                                    <option val="5">5</option>
+                                                                    <option val="6">6</option>
+                                                                    <option val="7">7</option>
+                                                                    <option val="8">8</option>
+                                                                    <option val="9">9</option>
+                                                                    <option val="10">10</option>
+                                                                </select>
+                                                            </div>
+                                                            <span>อายุ 11 หรือต่ำกว่า</span>
+                                                        </div>-->
                         </div>
                         <div class="price">
                             <em>ประเมินราคา</em>
@@ -2040,6 +2039,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
     var tour_package_period_end = <?php echo json_encode($tourPackage->tour_package_period_end); ?>;
     var tourPackageList = <?php echo json_encode($tourPackageList); ?>;
     var tour_code = <?php echo json_encode($tourPackage->tour_package_id); ?>;
+    var tour_package_code = <?php echo json_encode($tourPackage->tour_package_code); ?>;
     var two_qty = 0;
     var one_qty = 0;
     var child_one_qty = 0;

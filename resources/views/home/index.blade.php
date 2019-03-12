@@ -639,7 +639,7 @@
             </div>
         </div>
         <!--        หน้าจอเวอชั่น mobile/pc-->
-        <div id="card_area_hit" class="card-xs js-flickity" data-flickity='{ "dragThreshold": 10, "freeScroll": true, "wrapAround": false,"cellAlign": "left" , "autoPlay": true}'>   
+        <div id="card_area_hit" class="card-xs js-flickity" data-flickity='{ "dragThreshold": 10, "freeScroll": true, "wrapAround": false,"cellAlign": "left" , "autoPlay": false}'>   
 
         </div>
 

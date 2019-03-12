@@ -59,13 +59,13 @@ session_start();
 
     <!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
     <!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
-    <!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
+    <!--[if IE 9]> <body class="ie9 lt-ie10"> <![enz    dif]-->
     <!--[if (gt IE 9)|!(IE)]><!--> 
     <body> <!--<![endif]-->
         <!-- PAGE WRAP -->
         <div id="page-wrap">
             <!-- PRELOADER -->
-            <!--<div class="preloader"></div>-->
+            <div class="preloader"></div>
             <!-- END / PRELOADER -->
 
             @if(!isset($_SESSION['role']))
@@ -494,6 +494,10 @@ session_start();
                                     <a href="{{ url('tourhit?category_id=100002') }}">ทัวร์ฮิต</a>
                                     <hr id="tourhot" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
                                 </li>
+                                <li class="menu-item-has-children">
+                                    <a href="{{ url('tourhit?category_id=100003') }}">ทัวร์ล่องเรือสำราญ</a>
+                                    <hr id="tourboat" class="underline-link" data-selenium="underline-link" style="width: 50%; left: 25%;">
+                                </li>
                                 <!--                                <li class="menu-item-has-children">
                                                                     <a><i class="fa fa-map-marker"></i>&nbsp;สถานที่ยอดฮิต</a>
                                                                     <hr id="hothits" class="underline-link" data-selenium="underline-link" style="width: 100%; left: 0px; opacity: 1;">
@@ -570,7 +574,7 @@ session_start();
                                                     <div class="form-group">
                                                         <div class="form-elements">
                                                             <div class="form-item">
-                                                                <input type="text" id="date_picker" placeholder="วันเดินทาง ไป - กลับ" class="form-control">
+                                                                <input type="text" id="date_picker" autocomplete="off" placeholder="วันเดินทาง ไป - กลับ" class="form-control">
                                                                 <i class="far fa-calendar-check awe-icon"></i>
 
                                                             </div>

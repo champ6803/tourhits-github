@@ -12,6 +12,7 @@ $(function () {
 //        tour_code = '0' + tour_code;
 //    }
     $('#tour_code').html(tour_code);
+    $('#tour_package_code').html(tour_package_code);
 
     $('#tour_period').change(function () {
         tour_period = $(this).val();

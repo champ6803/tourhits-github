@@ -6,8 +6,8 @@ $(function () {
             "format": 'DD/MM/YYYY',
         }
     }, function (start, end, label) {
-//        start_date = start.format('YYYY-MM-DD');
-//        end_date = end.format('YYYY-MM-DD');
+        start_date = start.format('YYYY-MM-DD');
+        end_date = end.format('YYYY-MM-DD');
     });
 
     $('#date_picker').val("");
