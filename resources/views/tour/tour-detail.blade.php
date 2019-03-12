@@ -1705,7 +1705,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             </div>
 
 
-
+   
             <!-- กล่องจอง -->
             <div class="col-md-3">
                 <div class="detail-sidebar">                    
