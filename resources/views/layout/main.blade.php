@@ -54,6 +54,21 @@ session_start();
         <script type="text/javascript">
             var base_path = "{{ url('/') }}";
         </script>
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WVXGR66');
+        </script>
+        <!-- End Google Tag Manager -->
+
         @yield('meta_tag')
     </head>
 
@@ -63,6 +78,11 @@ session_start();
     <!--[if (gt IE 9)|!(IE)]><!--> 
     <body> <!--<![endif]-->
         <!-- PAGE WRAP -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVXGR66"
+                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
         <div id="page-wrap">
             <!-- PRELOADER -->
             <div class="preloader"></div>
@@ -261,6 +281,31 @@ session_start();
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="row">
+                                                <div class="col-xs-6 col-md-6">
+                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('tour/jordan')}}">
+                                                            <img data-src="../images/flags/Cambodia.png" alt="ทัวร์จอร์แดน" class=" lazyloaded" src="{{ asset('/images/flags/Jordan-2.png')}}">
+                                                            <h5>จอร์แดน</h5>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('tour/bhutan')}}">
+                                                            <img data-src="../images/flags/Bhutan.png" alt="ทัวร์ภูฏาน" class=" lazyloaded" src="{{ asset('/images/flags/Bhutan.png')}}">
+                                                            <h5>ภูฏาน</h5>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-6 col-md-6">
+                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('tour/georgia')}}">
+                                                            <img data-src="../images/flags/Georgia.png" alt="ทัวร์จอร์เจีย" class=" lazyloaded" src="{{ asset('/images/flags/Georgia.png')}}">
+                                                            <h5>จอร์เจีย</h5>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>    
                                         <!--                                        เอเชีย-->
                                         <!--                                        ยุโรป-->
@@ -387,6 +432,13 @@ session_start();
                                                     <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('tour/scandinavia')}}">
                                                             <img style="border-radius: 4px;" data-src="../images/flags/scandinavia.png" alt="ทัวร์สแกนดิเนเวีย" class=" lazyloaded" src="{{ asset('/images/flags/scandinavia.png')}}">
                                                             <h5>สแกนดิเนเวีย</h5>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('tour/iceland')}}">
+                                                            <img style="border-radius: 4px;" data-src="../images/flags/Iceland.png" alt="ทัวร์ไอซ์แลนด์" class=" lazyloaded" src="{{ asset('/images/flags/Iceland.png')}}">
+                                                            <h5>ไอซ์แลนด์</h5>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -779,77 +831,81 @@ session_start();
                                 <p>โทร: 0-2379-1249 Fax: 0-2379-1966-7</p>
                                 <p>E-mail:<a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;"> tourhits@gmail.com</a></p>
                             </div> 
-                            </div>
-                            <div class="row">
-
-                            </div>   
-                            <div class="row">
-                                <div class="fb-page" data-href="https://www.facebook.com/page.tourhits" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/page.tourhits" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/page.            tourhits">Tourhits</a></blockquote></div>
-                            </div>
                         </div>
+                        <div class="row">
 
-                        <!-- WIDGET ขวา -->
-                        <div class="col-md-7 hidden-xs hidden-sm">
-                            <div class="footer-two">
-                                <div class="col-md-12">แพ็คเกจทัวร์ ทั้งหมด</div>
-                            </div>
-                            <div class="row">
-                                <div class="package-country-footer">
-                                    <div class="col-md-12">
-                                        <div class="continent-name">ทวีปเอเชีย</div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/japan')}}">ทัวร์ญี่ปุ่น</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/china')}}">ทัวร์จีน</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/hongkong')}}">ทัวร์ฮ่องกง</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/myanmar')}}">ทัวร์พม่า</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/taiwan')}}">ทัวร์ไต้หวัน</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/korea')}}">ทัวร์เกาหลี</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/vietnam')}}">ทัวร์เวียดนาม</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/singapore')}}">ทัวร์สิงคโปร์</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/laos')}}">ทัวร์ลาว</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/macau')}}">ทัวร์มาเก๊า</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/india')}}">ทัวร์อินเดีย</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/indonesia')}}">ทัวร์อินโดนีเซีย</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/nepal')}}">ทัวร์เนปาล</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/malaysia')}}">ทัวร์มาเลเซีย</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/brunei')}}">ทัวร์บรูไน</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/cambodia')}}">ทัวร์กัมพูชา</a></div>
-                                    </div>        
-                                    <div class="col-md-12" style="margin-top: 20px;">
-                                        <div class="continent-name">ทวีปยุโรป</div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/europe')}}">ทัวร์ยุโรป</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/europe-east')}}">ทัวร์ยุโรปตะวันออก</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/russia')}}">ทัวร์รัสเซีย</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/italy')}}">ทัวร์อิตาลี</a></div>   
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/austria')}}">ทัวร์ออสเตรีย</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/france')}}">ทัวร์ฝรั่งเศส</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/switzerland')}}">ทัวร์สวิส</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/germany')}}">ทัวร์เยอรมัน</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/spain')}}">ทัวร์สเปน</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/finland')}}">ทัวร์ฟินแลนด์</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/netherlands')}}">ทัวร์เนเธอร์แลนด์</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/poland')}}">ทัวร์โปแลนด์</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/croatia')}}">ทัวร์โครเอเชีย</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/england')}}">ทัวร์อังกฤษ</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/scandinavia')}}">ทัวร์สแกนดิเนเวีย</a></div>
-                                    </div>
-                                    <div class="col-md-12" style="margin-top: 20px;">
-                                        <div class="continent-name">ทวีปอื่นๆ</div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/maldives')}}">ทัวร์มัลดีฟส์</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/dubai')}}">ทัวร์ดูไบ</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/australia')}}">ทัวร์ออสเตรเลีย</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/egypt')}}">ทัวร์อียิปต์</a></div>   
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/turkey')}}">ทัวร์ตุรกี</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/south-africa')}}">ทัวร์แอฟริกาใต้</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/norway')}}">ทัวร์นอร์เวย์</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/new-zealand')}}">ทัวร์นิวซีแลนด์</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/america')}}">ทัวร์อเมริกา</a></div>
-                                        <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/south-america')}}">ทัวร์อเมริกาใต้</a></div> 
-                                    </div>    
-                                </div>
-                            </div>             
+                        </div>   
+                        <div class="row">
+                            <div class="fb-page" data-href="https://www.facebook.com/page.tourhits" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/page.tourhits" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/page.            tourhits">Tourhits</a></blockquote></div>
                         </div>
-
                     </div>
+
+                    <!-- WIDGET ขวา -->
+                    <div class="col-md-7 hidden-xs hidden-sm">
+                        <div class="footer-two">
+                            <div class="col-md-12">แพ็คเกจทัวร์ ทั้งหมด</div>
+                        </div>
+                        <div class="row">
+                            <div class="package-country-footer">
+                                <div class="col-md-12">
+                                    <div class="continent-name">ทวีปเอเชีย</div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/japan')}}">ทัวร์ญี่ปุ่น</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/china')}}">ทัวร์จีน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/hongkong')}}">ทัวร์ฮ่องกง</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/myanmar')}}">ทัวร์พม่า</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/taiwan')}}">ทัวร์ไต้หวัน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/korea')}}">ทัวร์เกาหลี</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/vietnam')}}">ทัวร์เวียดนาม</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/singapore')}}">ทัวร์สิงคโปร์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/laos')}}">ทัวร์ลาว</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/macau')}}">ทัวร์มาเก๊า</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/india')}}">ทัวร์อินเดีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/indonesia')}}">ทัวร์อินโดนีเซีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/nepal')}}">ทัวร์เนปาล</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/malaysia')}}">ทัวร์มาเลเซีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/brunei')}}">ทัวร์บรูไน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/cambodia')}}">ทัวร์กัมพูชา</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/jordan')}}">ทัวร์จอร์แดน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/bhutan')}}">ทัวร์ภูฏาน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/georgia')}}">ทัวร์จอร์เจีย</a></div>
+                                </div>        
+                                <div class="col-md-12" style="margin-top: 20px;">
+                                    <div class="continent-name">ทวีปยุโรป</div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/europe')}}">ทัวร์ยุโรป</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/europe-east')}}">ทัวร์ยุโรปตะวันออก</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/russia')}}">ทัวร์รัสเซีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/italy')}}">ทัวร์อิตาลี</a></div>   
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/austria')}}">ทัวร์ออสเตรีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/france')}}">ทัวร์ฝรั่งเศส</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/switzerland')}}">ทัวร์สวิส</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/germany')}}">ทัวร์เยอรมัน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/spain')}}">ทัวร์สเปน</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/finland')}}">ทัวร์ฟินแลนด์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/netherlands')}}">ทัวร์เนเธอร์แลนด์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/poland')}}">ทัวร์โปแลนด์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/croatia')}}">ทัวร์โครเอเชีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/england')}}">ทัวร์อังกฤษ</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/scandinavia')}}">ทัวร์สแกนดิเนเวีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/iceland')}}">ทัวร์ไอซ์แลนด์</a></div>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 20px;">
+                                    <div class="continent-name">ทวีปอื่นๆ</div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/maldives')}}">ทัวร์มัลดีฟส์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/dubai')}}">ทัวร์ดูไบ</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/australia')}}">ทัวร์ออสเตรเลีย</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/egypt')}}">ทัวร์อียิปต์</a></div>   
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/turkey')}}">ทัวร์ตุรกี</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/south-africa')}}">ทัวร์แอฟริกาใต้</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/norway')}}">ทัวร์นอร์เวย์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/new-zealand')}}">ทัวร์นิวซีแลนด์</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/america')}}">ทัวร์อเมริกา</a></div>
+                                    <div class="col-md-3 name-country-footer"><a href="{{ URL::to('tour/south-america')}}">ทัวร์อเมริกาใต้</a></div> 
+                                </div>    
+                            </div>
+                        </div>             
+                    </div>
+
+                </div>
             </footer>
             <footer id="footer-page-bottom">
                 <div class="container">

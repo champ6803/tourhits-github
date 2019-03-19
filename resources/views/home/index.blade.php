@@ -371,6 +371,26 @@
                                                     <h5>ฮ่องกง-มาเก๊า</h5>
                                                 </a>
                                             </div>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/iceland')}}">
+                                                    <img data-src="../images/flags/Iceland.png" alt="ทัวร์ไอซ์แลนด์" class=" lazyloaded" src="../images/flags/Iceland.png">
+                                                    <h5>ไอซ์แลนด์</h5>
+                                                </a>
+                                            </div>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/jordan')}}">
+                                                    <img data-src="../images/flags/Jordan-2.png" alt="ทัวร์จอร์แดน" class=" lazyloaded" src="../images/flags/Jordan-2.png">
+                                                    <h5>จอร์แดน</h5>
+                                                </a>
+                                            </div>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/bhutan')}}">
+                                                    <img data-src="../images/flags/Bhutan.png" alt="ทัวร์ภูฏาน" class=" lazyloaded" src="../images/flags/Bhutan.png">
+                                                    <h5>ภูฏาน</h5>
+                                                </a>
+                                            </div>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/georgia')}}">
+                                                    <img data-src="../images/flags/Georgia.png" alt="ทัวร์จอร์เจีย" class=" lazyloaded" src="../images/flags/Georgia.png">
+                                                    <h5>จอร์เจีย</h5>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -460,6 +480,21 @@
                                                     <h5>กัมพูชา</h5>
                                                 </a>
                                             </div>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/jordan')}}">
+                                                    <img data-src="../images/flags/Jordan-2.png" alt="ทัวร์จอร์แดน" class=" lazyloaded" src="../images/flags/Jordan-2.png">
+                                                    <h5>จอร์แดน</h5>
+                                                </a>
+                                            </div>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/bhutan')}}">
+                                                    <img data-src="../images/flags/Bhutan.png" alt="ทัวร์ภูฏาน" class=" lazyloaded" src="../images/flags/Bhutan.png">
+                                                    <h5>ภูฏาน</h5>
+                                                </a>
+                                            </div>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/georgia')}}">
+                                                    <img data-src="../images/flags/Georgia.png" alt="ทัวร์จอร์เจีย" class=" lazyloaded" src="../images/flags/Georgia.png">
+                                                    <h5>จอร์เจีย</h5>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -542,6 +577,11 @@
                                             <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/scandinavia')}}">
                                                     <img data-src="../images/flags/scandinavia.png" alt="ทัวร์สแกนดิเนเวีย" class=" lazyloaded" src="../images/flags/scandinavia.png" style="border-radius: 4px;">
                                                     <h5>สแกนดิเนเวีย</h5>
+                                                </a>
+                                            </div>
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/iceland')}}">
+                                                    <img data-src="../images/flags/Iceland.png" alt="ทัวร์ไอซ์แลนด์" class=" lazyloaded" src="../images/flags/Iceland.png">
+                                                    <h5>ไอซ์แลนด์</h5>
                                                 </a>
                                             </div>
                                         </div>
