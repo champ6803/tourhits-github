@@ -178,7 +178,9 @@ function actionButton(value, row, index) {
 }
 
 function editPackage(tour_package_id) {
-    window.location.href = "./manage-edit-tourlist?id=" + tour_package_id;
+    // window.location.href = "./manage-edit-tourlist?id=" + tour_package_id;
+    var url = "./manage-edit-tourlist?id=" + tour_package_id;
+    window.open(url, '_blank');
 }
 
 function deletePackage(tour_package_id) {

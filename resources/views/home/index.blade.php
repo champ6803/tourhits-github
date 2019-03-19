@@ -53,9 +53,6 @@
                 <img src="images/bg/cover1.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
             <li data-slotamount="7" data-masterspeed="500" data-title="หน้าต่อไป">
-                <img src="images/bg/cover2.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
-            </li>
-            <li data-slotamount="7" data-masterspeed="500" data-title="หน้าต่อไป">
                 <img src="images/bg/cover3.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
             </li>
         </ul>

@@ -501,7 +501,6 @@ class FilterController extends Controller {
                     }
                     $tourPeriod = Tour_Period::whereIn('tour_package_id', $array)
                             ->get();
-                    
                 } else {
                     $query = Tour_Package::join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                             ->join('country', 'country.country_id', '=', 'tour_country.country_id')
@@ -629,9 +628,13 @@ class FilterController extends Controller {
                             ->join('airline', 'airline.airline_id', '=', 'tour_airline.airline_id')
                             ->join('tour_country', 'tour_country.tour_country_id', '=', 'tour_package.tour_country_id')
                             ->join('country', 'country.country_id', '=', 'tour_country.country_id')
+                            ->leftJoin('tour_tag', 'tour_tag.tour_package_id', '=', 'tour_package.tour_package_id')
+                            ->leftJoin('tag', 'tag.tag_id', '=', 'tour_tag.tag_id')
                             ->where(function ($query) use ($search_text) {
                                 $query->where('tour_package.tour_package_id', 'like', '%' . $search_text . '%')
-                                ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%');
+                                ->orWhere('tour_package.tour_package_name', 'like', '%' . $search_text . '%')
+                                ->orWhere('tag.tag_name', 'like', '%' . $search_text . '%')
+                                ->orWhere('tag.tag_url', 'like', '%' . $search_text . '%');
                             })
                             ->select(DB::raw('distinct(tour_package.tour_package_id),tour_package.tour_package_name, tour_package.tour_package_detail, tour_package.tour_package_highlight, tour_package.tour_package_image, tour_package.tour_period_day_number, tour_package.tour_period_night_number, tour_package.tour_package_period_start, tour_package.tour_package_period_end, country.country_code, airline.airline_name, airline.airline_picture, tour_package.tour_package_price, tour_package.tour_package_special_price, tour_country.tour_country_id, tour_country.tour_country_name'))
                             ->orderBy($order_by, $sort);
