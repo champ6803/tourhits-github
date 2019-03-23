@@ -22,7 +22,7 @@ $(function () {
     ary_days = days_no == "" ? [] : [days_no];
 
     var page_num = 1; // default page number
-    getTourPackage(page_num, sort_by); // init package tour card
+    //getTourPackage(page_num, sort_by); // init package tour card
     checkboxChecked();
     $('.card_show').show();
     $('#loading').hide();

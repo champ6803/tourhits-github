@@ -951,10 +951,10 @@
 
                     </div>    
                     <br>
-
+<!--
                     <div id="card_area" class="card_show filter-item-wrapper">
 
-                    </div>
+                    </div>-->
 
 
                     <!-- PAGINATION -->
