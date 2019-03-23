@@ -252,3 +252,19 @@ Route::post('removeArticle', 'ArticleIndexController@removeArticle');
 // Email //
 
 Route::post('confirmOrderEmail', 'EmailController@confirmOrderEmail');
+
+// Article //
+
+Route::get('country-article-manage', 'ArticleIndexController@country_article_manage');
+
+Route::get('country-article-manage-action', 'ArticleIndexController@country_article_manage_action');
+
+Route::post('searchCountryArticle', 'ArticleIndexController@searchCountryArticle');
+
+Route::post('getCountryArticleById', 'ArticleIndexController@getCountryArticleById');
+
+Route::post('saveCountryArticle', 'ArticleIndexController@saveCountryArticle');
+
+Route::post('getArticleById', 'ArticleIndexController@getArticleById');
+
+Route::post('removeCountryArticle', 'ArticleIndexController@removeCountryArticle');

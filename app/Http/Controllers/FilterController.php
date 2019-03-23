@@ -45,9 +45,11 @@ class FilterController extends Controller {
         $dayList = $tourModel->getFilterDay($country);
         $tagList = $tourModel->getFilterTag($country);
         $attractionList = $tourModel->getFilterAttraction($country);
+        $countryArticleList = $tourModel->getCountryArticle($country);
+        $tourCountryList = $countryModel->getCountryByUrl($country);
         $countryList = $countryModel->getCountryAll();
-
-        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList', 'price_most', 'attractionList', 'countryList'));
+        $tags = $this->_tagModel->getTagByUrl($country);
+        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList', 'price_most', 'attractionList', 'countryArticleList', 'countryList', 'tourCountryList', 'tags'));
     }
 
     public function getTourPackage() {

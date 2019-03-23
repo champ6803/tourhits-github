@@ -3,19 +3,19 @@
 @section('main-content')
 
 <style type="text/css">
-    .filter-tabcard .nav-tabs {  width: 50%; margin-left:auto; margin-right: auto; } 
+    .filter-tabcard .nav-tabs {  width: 50%; margin-left:auto; margin-right: auto; }
     .filter-tabcard .nav-tabs > li.active > a, .filter-tabcard .nav-tabs > li.active > a:focus, .filter-tabcard .nav-tabs > li.active > a:hover {color: #fff; background: #EC2424; border: none; box-shadow: 0 0px 5px rgba(112, 112, 112, 0.3); transform: scale(1.005); } <!--กด-->
-    .filter-tabcard .nav-tabs > li > a { border: none; color: #515050; background: #fff;  } <!--ยังไม่ได้กด--> 
+    .filter-tabcard .nav-tabs > li > a { border: none; color: #515050; background: #fff;  } <!--ยังไม่ได้กด-->
     .filter-tabcard .nav-tabs > li.active > a,.filter-tabcard .nav-tabs > li > a:hover { border: none;  color: #fff !important; background: #EC2424; }
     .filter-tabcard .nav-tabs > li > a::after { content: ""; background: #F58A1F; height: 3px; position: absolute; width: 100%; left: 0px; bottom: -8px; transition: all 250ms ease 0s; transform: scale(0); }
     .filter-tabcard .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
     .filter-tabcard .tab-nav > li > a::after { background: #5a4080 none repeat scroll 0% 0%; color: #fff; }
     .filter-tabcard .tab-pane { padding: 15px 0; }
     .filter-tabcard .tab-content {
-        padding:10px; 
-        height: auto; 
-        /*width: 880px;*/ 
-        border-radius: 10px;         
+        padding:10px;
+        height: auto;
+        /*width: 880px;*/
+        border-radius: 10px;
         border: 2px solid #F58A1F;
         margin-left: 50px;
         margin-right: 50px;
@@ -27,14 +27,14 @@
 
     .filter-tabcard .nav-tabs > li > a {
         color: #515050;
-        border-left: 1px solid #fff;        
+        border-left: 1px solid #fff;
     }
 
     @media all and (max-width:724px){
         /*        .filter-tabcard .nav-tabs{
                     width: 300px;
                 }*/
-        .nav-tabs > li > a > span {display:none;}	
+        .nav-tabs > li > a > span {display:none;}
         .nav-tabs > li > a {padding: 0px 0px;}
     }
 
@@ -83,14 +83,14 @@
 
     .filter-pickdate{
         padding-top: 10px;
-        position: relative; 
+        position: relative;
     }
 
     .filter-pickdate i {
-        position: absolute; 
-        bottom: 12px; 
-        right: 12px; 
-        top: auto; 
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        top: auto;
         cursor: pointer;
         color: black;
     }
@@ -143,7 +143,7 @@
     }
 
     #owl-demo .tag-item:hover a{
-        color : #Fff; 
+        color : #Fff;
     }
 
 
@@ -152,13 +152,13 @@
         font-size: 15px;
         font-weight: bold;
         padding: 5px 10px;
-        line-height: 2;   
+        line-height: 2;
     }
     .filter-page__content .trip-item .item-body .item-title h2 a:hove{color: #c33132;}
     .filter-box {display: none;}
     .filter-box .searchtoggle {display: none;}
     .trip-item:hover .item-body .item-title h2 a{color: #c33132;}
-    .filter-page__content .country img{height: 55px;} 
+    .filter-page__content .country img{height: 55px;}
 
     .filter-page__content .trip-item:hover .price .amount{color:#c33132;}
     .filter-page__content .trip-item:hover .price{color:black;}
@@ -169,7 +169,7 @@
         .owl-theme .owl-controls .owl-page{zoom:0.5;}
         .filter-page__content .country h6{font-size: 15px; line-height: 34px;}
         .filter-page__content .country span{font-size: 22px; line-height: 34px;}
-        .filter-page__content .country img{height: 34px;} 
+        .filter-page__content .country img{height: 34px;}
         .tour-local-wrapper .swiper-button-next{font-size: 17px;height: 46px;line-height: 46px;width: 40px;}
         .tour-local-wrapper .swiper-button-prev{font-size: 17px;height: 46px;line-height: 46px;width: 40px;}
         .filter-page__content .country{}
@@ -192,10 +192,10 @@
     @media (min-width: 992px) and (max-width: 1024px){
         .container {width: 100%;}
 
-        .sidebar-3{display: none;} 
+        .sidebar-3{display: none;}
         .sort-name{display: none;}
 
-        .filter-page-left .col-md-pull-6{right: 70%;} 
+        .filter-page-left .col-md-pull-6{right: 70%;}
         .filter-page-left .col-md-3{width: 30%;}
         .filter-page-mid .col-md-push-3 {left: 30%;}
         .filter-page-mid .col-md-6 {width: 70%;}
@@ -206,7 +206,7 @@
         .filter-page__content .trip-item .item-body .item-title h2 a{padding-left: 0px;}
         .filter-page__content .trip-item .item-body .hilight i{display: none;}
         .trip-item{margin-bottom: 0px;}
-        .trip-item .item-price-more .awe-btn{margin-right: 10px;}          
+        .trip-item .item-price-more .awe-btn{margin-right: 10px;}
     }
 
     @media screen and ( max-width: 991px ) {
@@ -319,7 +319,7 @@
         padding: 10px;
     }
 
-    .filter-page .filter-page-left .search-btn-new {    
+    .filter-page .filter-page-left .search-btn-new {
         font-size: 18px;
         color: #fff;
         float: right;
@@ -372,7 +372,10 @@
 
     .awe-btn:focus{background-color: transparent;}
 
-
+    .filter-article > p{
+        font-family: kanit,sans-serif;
+        font-size: 15px;
+    }
 
 </style>
 
@@ -389,7 +392,7 @@
 <section class="filter-page">
     <div class="container">
 
-        <div class="row">   
+        <div class="row">
             <div class="col-md-12 tour-local-wrapper">
 
                 <div id="owl-demo" class="tag-container owl-carousel owl-theme">
@@ -399,8 +402,8 @@
                 </div>
                 <div class="swiper-button-next next"><i class="fa fa-angle-right"></i></div>
                 <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
-            </div>    
-        </div>                               
+            </div>
+        </div>
 
 
         <!--กลาง-->
@@ -430,134 +433,114 @@
                                             <option value="most_price">ราคาสูงที่สุด</option>
                                             <option value="hot_tour">นิยมมากที่สุด</option>
                                         </select>
-                                        <div class="sort-name hidden-xs hidden-sm"><span>เรียงตาม :</span></div>                           
+                                        <div class="sort-name hidden-xs hidden-sm"><span>เรียงตาม :</span></div>
                                     </div>
                                 </div>
-                            </div>                    
+                            </div>
                         </div>
                     </div>
 
                     <!--                เทส Card-->
                     <div class="row">
                         <div id="card_area" class="card_show filter-item-wrapper">
-                            <li class="trip-item">
-                                <div class="item-media">
-                                    <div class="image-cover"><img src="../images/tour/206-Fuji Mountain.jpg" alt=""></div>
-                                    <div class="bot-img-detail visible-xs visible-sm">
-                                        <div class="tag-day-and-period">
-                                            <span>5 </span>
-                                            <span>วัน</span>
-                                            <span> 3 </span>
-                                            <span>คืน</span>
-                                            <span>ก.ย. - ต.ค.</span>
-                                        </div>
-                                        <div class="tag-tour-num">
-                                            <span>รหัส</span>
-                                            <span> TH206</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-head-body">     
-                                        <a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">ทัวร์ญี่ปุ่น ฮอกไกโด หิมะแรก ตามรอยหนังแฟนเดย์ 6 วัน 4 คืน </a>   
-                                </div>
-                                <div class="item-body">
-<!--                                <div class="item-title">
-                                        <h2><a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">NRT48 โตเกียวจ๋า พี่มาแล้ว อยู่นี่แล้วนะ กินนมฮอกไกโด 5D3N</a></h2>
-                                    </div>-->
-                                    <div class="tag-box-left">
-                                        <div class="tag-head flexbox">
-                                            <span class="flexbox">ระยะเวลา</span>
-                                            <span class="flexbox">รหัสทัวร์</span>
-                                        </div>
-                                        <div class="tag-id flexbox">
-                                            <span class="flexbox">2 วัน 9 คืน</span>
-                                            <span class="flexbox">TH2248</span>
-                                        </div>
-                                        <div class="tag-airline">
-                                            <span class="flexbox">สายการบิน</span>
-                                            <div class="tag-airline2 flexbox">
-                                                <img alt="" src="../images/airline/thai_airasia_x.png" title="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="item-price-more">
-                                    <div class="price">ราคา
-                                        <ins><span class="amount">16,999<span class="bbb">บาท</span></span></ins>
-                                    </div>
-                                    <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
-                                </div>
-                                <div class="item-hilight-more hilight">
-                                    <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
-                                    <div class="detail">
-                                            <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
-                                            <p>พิพิธภัณฑ์แผ่นดินไหว-ชงชาแบบญี่ปุ่น - หมู่บ้านอิยาชิโนะ ซาโตะ</p>
-                                            <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
-                                    </div>
-                                </div>
-                                <div class="item-period-table">
-                                    <div class="table-month">
-					<span class="month">ม.ค.</span>
-                                    </div>
-                                    <div class="peroid">  
-                                       <span class="date soldout" data-event-name="">1-4</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date">7-9</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date soldout" data-event-name="">14-21</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date soldout" data-event-name="">20-23</span>
-                                       <span class="separate">/</span>
-                                       
-                                        <span class="date soldout" data-event-name="">24-26</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date">27-30</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date soldout" data-event-name="">1-4</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date">7-9</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date soldout" data-event-name="">14-21</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date soldout" data-event-name="">20-23</span>
-                                       <span class="separate">/</span>
-                                       
-                                        <span class="date soldout" data-event-name="">24-26</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date">27-30</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date soldout" data-event-name="">1-4</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date">7-9</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date soldout" data-event-name="">14-21</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date soldout" data-event-name="">20-23</span>
-                                       <span class="separate">/</span>
-                                       
-                                        <span class="date soldout" data-event-name="">24-26</span>
-                                       <span class="separate">/</span>
-                                       
-                                       <span class="date">27-30</span>
-                                       <span class="separate">/</span>
-                                            
-                                    </div>
-                                </div>
-                            </li>
+
+                            <!--                            <li class="trip-item">
+                                                            <div class="item-media">
+                                                                <div class="image-cover">
+                                                                    <img src="../images/tour/208-Oshino Hakkai.jpg" alt="">
+                                                                </div>
+                                                                <div class="bot-img-detail">
+                                                                    <div class="tag-day-and-period">
+                                                                        <span>5</span>
+                                                                        <span>วัน</span>
+                                                                        <span>3</span>
+                                                                        <span>คืน</span>
+                                                                        <span>ก.ย. - ต.ค.</span>
+                                                                    </div>
+                                                                    <div class="tag-tour-num">
+                                                                        <span>รหัส</span>
+                                                                        <span>TH034</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="item-title">
+                                                                    <h2><a href="/tour-detail/japan/208/THG15-XW-JP-1-29SEP18">Test ระบบการ์ด</a></h2>
+                                                                </div>
+                                                                <div class="hilight">
+                                                                    <i class="far fa-flag"></i>
+                                                                    <div class="detail">
+                                                                        <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น (อาบน้ำแร่)</p>
+                                                                        <p>ภูเขาไฟฟูจิ ชั้น 5 - พิพิธภัณฑ์แผ่นดินไหว – ศาลเจ้าคิตะงุจิฮองงุ ฟูจิ</p>
+                                                                        <p>ชงชาแบบญี่ปุ่น – โอไดบะ-วัดนาริตะ</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-list">
+                                                                    <ul>
+                                                                        <li><i class="far fa-clock"></i> 5 วัน 3 คืน</li>
+                                                                        <li><i class="far fa-calendar"></i> ช่วงเวลา ก.ย. - ต.ค.</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="item-footer">
+                                                                    <div class="item-rate">
+                                                                        <div class="card-airline">
+                                                                            <img alt="NokScoot" src="../images/airline/NokScoot.png" title=""></div>
+                                                                    </div>
+                                                                    <div class="item-icon">
+                                                                        <div class="pass">รหัสทัวร์&nbsp;</div>
+                                                                        TH208
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="item-price-more">
+                                                                <div class="price">ราคา<ins><span class="amount">16,888฿</span></ins>
+                                                                </div>
+                                                                <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/208/NRT44 TOKYO FUJI โปรกระแทกใจ 5D3N ">รายละเอียด</a>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="trip-item">
+                                                            <div class="item-media">
+                                                                <div class="image-cover">
+                                                                    <img src="../images/tour/208-Oshino Hakkai.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="item-title"><h2><a href="/tour-detail/japan/208/THG15-XW-JP-1-29SEP18">Test ระบบการ์ด2</a></h2>
+                                                                </div>
+                                                                <div class="hilight">
+                                                                    <i class="far fa-flag"></i>
+                                                                    <div class="detail">
+                                                                        <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น (อาบน้ำแร่)</p>
+                                                                        <p>ภูเขาไฟฟูจิ ชั้น 5 - พิพิธภัณฑ์แผ่นดินไหว – ศาลเจ้าคิตะงุจิฮองงุ ฟูจิ</p>
+                                                                        <p>ชงชาแบบญี่ปุ่น – โอไดบะ-วัดนาริตะ</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-list">
+                                                                    <ul><li><i class="far fa-clock"></i> 5 วัน 3 คืน</li><li><i class="far fa-calendar"></i> ช่วงเวลา ก.ย. - ต.ค.</li></ul>
+                                                                </div>
+                                                                <div class="item-footer">
+                                                                    <div class="item-rate">
+                                                                        <div class="card-airline">
+                                                                            <img alt="NokScoot" src="../images/airline/NokScoot.png" title=""></div>
+                                                                    </div>
+                                                                    <div class="item-icon">
+                                                                        <div class="pass">รหัสทัวร์&nbsp;</div>
+                                                                        TH208
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="item-price-more">
+                                                                <div class="price">ราคา<ins><span class="amount">16,888฿</span></ins>
+                                                                </div>
+                                                                <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/208/NRT44 TOKYO FUJI โปรกระแทกใจ 5D3N ">รายละเอียด</a>
+                                                            </div>
+                                                        </li>-->
+
                         </div>
                     </div>
                     <!--       end         เทส Card-->
@@ -567,9 +550,9 @@
                                         <div class="col-md-6">
                                             <div class="page-top">
                                                 <select class="awe-select">
-                                                    <option>ราคาถูกที่สุด</option> 
+                                                    <option>ราคาถูกที่สุด</option>
                                                 </select>
-                                                <div class="sort-name hidden-xs"><span>เรียงตาม :</span></div>                           
+                                                <div class="sort-name hidden-xs"><span>เรียงตาม :</span></div>
                                             </div>
                                         </div>
                                     </div>-->
@@ -578,7 +561,7 @@
                             <!-- FILTER BOX -->
                             <div class="filter-box">
                                 <span class="searchtoggle" data-toggle="modal" data-target="#filterModal"><i class="fas fa-sliders-h" style="font-size: 15px"></i> คัดกรอง</span>
-                            </div> 
+                            </div>
                         </div>
                         <!-- Modal -->
                         <!--                    <div class="modal fade filterModal" id="filterModal" role="dialog">
@@ -591,17 +574,17 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="box-content">
-                                                                <div class="filter-bar">    
+                                                                <div class="filter-bar">
                                                                     <div class="filter-price">
                                                                         <div class='filter-header'>
                                                                             <span class='filter-header-text'><i class="fas fa-exchange-alt"></i> กำหนดช่วงราคา</span>
-                                                                        </div>     
+                                                                        </div>
                                                                         <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to">80,000</span> บาท</div>
-                                                                        <input id="price" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
+                                                                        <input id="price" data-slider-id='priceSlider' type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/>
                                                                     </div>
-                        
+
                                                                     <hr>
-                        
+
                                                                     <div class="filter-route">
                                                                         <div class='filter-header'>
                                                                             <span class='filter-header-text'><i class="far fa-map"></i> เส้นทาง</span>
@@ -635,12 +618,12 @@
                                                                                 </label>
                                                                             </div>
                                                                             @endforeach
-                                                                            <div id="expandToggleRoute" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreRoute">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>                                                                                      
+                                                                            <div id="expandToggleRoute" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreRoute">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
                                                                         </div>
                                                                     </div>
-                        
+
                                                                     <hr>
-                        
+
                                                                     <div class="filter-date">
                                                                         <div class='filter-header'>
                                                                             <span class='filter-header-text'><i class="far fa-calendar-alt"></i> วันเดินทาง ไป-กลับ</span>
@@ -678,13 +661,13 @@
                                                                                 </label>
                                                                             </div>
                                                                             @endforeach
-                        
+
                                                                         </div>
                                                                         <div id="expandToggleHoliday" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreHoliday">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
                                                                     </div>
-                        
+
                                                                     <hr>
-                        
+
                                                                     <div class="filter-month">
                                                                         <div class='filter-header'>
                                                                             <span class='filter-header-text'><i class="far fa-calendar-check"></i> เดือน</span>
@@ -863,13 +846,13 @@
                                                                                 @endif
                                                                             </div>
                                                                             @endforeach
-                        
+
                                                                         </div>
                                                                         <div id="expandToggleMonth" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreMonth">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
                                                                     </div>
-                        
+
                                                                     <hr>
-                        
+
                                                                     <div class="filter-countdate">
                                                                         <div class='filter-header'>
                                                                             <span class='filter-header-text'><i class="far fa-clock"></i> จำนวนวัน</span>
@@ -906,9 +889,9 @@
                                                                         </div>
                                                                         <div id="expandToggleDates" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreDates">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
                                                                     </div>
-                        
+
                                                                     <hr>
-                        
+
                                                                     <div class="filter-airline">
                                                                         <div class='filter-header'>
                                                                             <span class='filter-header-text'><i class="far fa-paper-plane"></i> สายการบิน</span>
@@ -942,30 +925,30 @@
                                                                                 </label>
                                                                             </div>
                                                                             @endforeach
-                        
+
                                                                         </div>
                                                                         <div id="expandToggleAirline" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreAirline">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
                                                                     </div>
-                        
-                        
-                                                                                                end filter-bar                                                                           
+
+
+                                                                                                end filter-bar
                                                                 </div>
-                                                            </div>    
+                                                            </div>
                                                         </div>
                                                         <div class="modal-footer" style="text-align:center;">
                                                             <button type="button" class="awe-btn cancel" data-dismiss="modal">เสร็จสิ้น</button>
                                                         </div>
                                                     </div>
-                        
+
                                                 </div>
                                             </div>-->
 
-                    </div>    
+                    </div>
                     <br>
-
+<!--
                     <div id="card_area" class="card_show filter-item-wrapper">
 
-                    </div>
+                    </div>-->
 
 
                     <!-- PAGINATION -->
@@ -1005,28 +988,28 @@
 
 
                         <hr style="margin-top:18px; border-style: hidden;">
-                        <h3><i class="fas fa-filter"></i> คัดกรอง</h3>      
-                    </div>         
+                        <h3><i class="fas fa-filter"></i> คัดกรอง</h3>
+                    </div>
 
                     <div class="left-bar3 mobile-version hidden-xs">
                         <div class="box-content">
                             <div class="filter-bar">
                                 <!--                            <div class="filter-text text-center">
-                                                                <input id="search_text" type="text" class="form-control" placeholder="ค้นหาชื่อแพ็คเกจทัวร์"> 
+                                                                <input id="search_text" type="text" class="form-control" placeholder="ค้นหาชื่อแพ็คเกจทัวร์">
                                                             </div>
-                                
+
                                                             <hr>
-                                
+
                                                             <div class="filter-text text-center" style="margin-bottom: 10px;">
                                                                 <button id="search_btn" class="btn btn-danger" type="button" style="height: 40px; width: 120px; border-radius: 20px;"><i class="fa fa-search"></i></button>
                                                             </div>
-                                
+
                                                             <hr>-->
 
                                 <div class="filter-price">
                                     <div class='filter-header'>
                                         <span class='filter-header-text'><i class="fas fa-exchange-alt"></i> กำหนดช่วงราคา</span>
-                                    </div>     
+                                    </div>
                                     <div class="textpricesm"><span id="price_from">0</span> ถึง <span id="price_to"></span> บาท</div>
                                     <input id="price" type="text" class="span2" data-slider-step="5">
                                 </div>
@@ -1066,7 +1049,7 @@
                                             </label>
                                         </div>
                                         @endforeach
-                                        <div id="expandToggleRoute" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreRoute">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>                                                                                      
+                                        <div id="expandToggleRoute" class="expand-toggle"><a href="javascript:void(0)" id="loadMoreRoute">ดูเพิ่มเติม <i class="fas fa-caret-down"></i></a></div>
                                     </div>
                                 </div>
 
@@ -1379,9 +1362,9 @@
                                 </div>
 
 
-                                <!--                            end filter-bar-->                                                                           
+                                <!--                            end filter-bar-->
                             </div>
-                        </div> 
+                        </div>
                     </div>
 
                     <!--                <div class="sidebar-title hidden-xs">
@@ -1393,7 +1376,7 @@
                                                 <div class="media">
                                                     <div class="media-left">
                                                         <a href="" title="">
-                                                            <img class="media-object lazy" src="https://images.unsplash.com/photo-1519882189396-71f93cb4714b?ixlib=rb-0.3.5&s=0b977d67f187eec17eb555555ef59a6d&auto=format&fit=crop&w=500&q=60" 
+                                                            <img class="media-object lazy" src="https://images.unsplash.com/photo-1519882189396-71f93cb4714b?ixlib=rb-0.3.5&s=0b977d67f187eec17eb555555ef59a6d&auto=format&fit=crop&w=500&q=60"
                                                                  alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
                                                         </a>
                                                     </div>
@@ -1403,15 +1386,15 @@
                                                         </h6>
                                                         <div class="peroid">เริ่มเดินทาง 21 มิ.ย. 61</div>
                                                         <div class="price"><span>14,900</span> บาท</div>
-                                                    </div>                                        
+                                                    </div>
                                                 </div>
                                             </div>
-                    
+
                                             <div class="tour-left-bar-item">
                                                 <div class="media">
                                                     <div class="media-left">
                                                         <a href="" title="">
-                                                            <img class="media-object lazy" src="{{ asset('images/tour/1-tour6.jpg')}}" 
+                                                            <img class="media-object lazy" src="{{ asset('images/tour/1-tour6.jpg')}}"
                                                                  alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
                                                         </a>
                                                     </div>
@@ -1421,15 +1404,15 @@
                                                         </h6>
                                                         <div class="peroid">เริ่มเดินทาง 10 ต.ค. 61</div>
                                                         <div class="price"><span>20,900</span> บาท</div>
-                                                    </div>                                        
+                                                    </div>
                                                 </div>
                                             </div>
-                    
+
                                             <div class="tour-left-bar-item">
                                                 <div class="media">
                                                     <div class="media-left">
                                                         <a href="" title="">
-                                                            <img class="media-object lazy" src="{{ asset('images/tour/1-tour1.jpg')}}" 
+                                                            <img class="media-object lazy" src="{{ asset('images/tour/1-tour1.jpg')}}"
                                                                  alt="ทัวร์ญี่ปุ่น โอไดบะ ขึ้นภูเขาไฟฟูจิ ชมทุ่งดอกลาเวนเดอร์ นมัสการและขอพรวัดนาริตะและวัดอาซากุสะ" style="display: inline-block;">
                                                         </a>
                                                     </div>
@@ -1439,7 +1422,7 @@
                                                         </h6>
                                                         <div class="peroid">เริ่มเดินทาง 30 ธ.ค. 61</div>
                                                         <div class="price"><span>48,000</span> บาท</div>
-                                                    </div>                                        
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1462,7 +1445,7 @@
                             <div class="media">
                                 <div class="media-left">
                                     <a href="{{url('/tour/'.$attraction->attraction_url)}}" title="{{$attraction->a_name}}">
-                                        <img class="media-object lazy" src="{{ asset('/images/attraction/'.$attraction->attraction_picture) }}" 
+                                        <img class="media-object lazy" src="{{ asset('/images/attraction/'.$attraction->attraction_picture) }}"
                                              alt="" style="display: inline-block;">
                                     </a>
                                 </div>
@@ -1470,17 +1453,17 @@
                                     <h6 class="media-heading">
                                         <a href="{{url('/tour/'.$attraction->attraction_url)}}" title="">{{$attraction->a_name}} ({{$attraction->a_num}})</a>
                                     </h6>
-                                </div>                                        
+                                </div>
                             </div>
                         </div>
                         @endforeach
-                    </div>    
+                    </div>
                 </div>
                 @endif
 
                 @if (count($tagList) > 0)
                 <div class="sidebar-title">
-                    <h3><i class="fa fa-tags"></i> Tags</h3>         
+                    <h3><i class="fa fa-tags"></i> Tags</h3>
                 </div>
                 <div class="left-bar2">
                     <div class="box-content">
@@ -1489,8 +1472,20 @@
                             <div class="swiper-slide local-nav-item" style="margin-right: 10px;">
                                 <a href="{{url('/tour/'.$tag->tag_url)}}" title="" class="">{{$tag->t_name}}</a>
                             </div>
-                            @endforeach                                
-                        </div> 
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                @endif
+                @if (count($countryArticleList) > 0)
+                <div class="sidebar-title">
+                    <h3><i class="fa fa-globe"></i>&nbsp;<?php echo $countryArticleList[0]->country_article_name ?></h3>
+                </div>
+                <div class="left-bar2">
+                    <div class="box-content">
+                        <div class="filter-article" style="padding: 10px;">
+                            <?php echo $countryArticleList[0]->country_article_detail ?>
+                        </div>
                     </div>
                 </div>
                 @endif
@@ -1541,3 +1536,39 @@
 <script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 @endsection
+
+@section('schema_scripts')
+<script>
+<?php
+$pattern = '/\s*/m';
+$replace = '';
+?>
+</script>
+<script type='application/ld+json'>
+    {
+    "@context": "http://www.schema.org",
+    "@type": "product",
+    "brand": "<?php
+    if (count($tourCountryList) > 0) {
+        echo strip_tags($tourCountryList[0]->tour_country_name);
+    } else if (count($tags) > 0) {
+        echo strip_tags($tags[0]->tag_name);
+    }
+    ?>",
+    "name": "<?php
+    if (count($tourCountryList) > 0) {
+        echo strip_tags($tourCountryList[0]->tour_country_name);
+     } else if (count($tags) > 0) {
+        echo strip_tags($tags[0]->tag_name);
+    }
+    ?>",
+    "image":"<?php if (count($tourCountryList) > 0) echo "https://www.tourhits.co/images/fg/" . strip_tags($tourCountryList[0]->country_code) . ".png"; ?>",
+    "description": "<?php if (count($countryArticleList) > 0) echo preg_replace($pattern, $replace, strip_tags($countryArticleList[0]->country_article_detail)); ?>",
+    "aggregateRating": {
+    "@type": "aggregateRating",
+    "ratingValue": "10",
+    "reviewCount": "100"
+    }
+    }
+</script>
+@stop

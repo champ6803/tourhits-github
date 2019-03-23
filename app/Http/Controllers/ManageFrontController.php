@@ -35,7 +35,7 @@ class ManageFrontController extends Controller {
     public function profile() {
         return view('manage-front.profile');
     }
-    
+
     public function manage_front_review() {
         $reviewObj = $this->searchReview();
         return view('manage-front.manage-front-review', compact('reviewObj'));
@@ -232,7 +232,7 @@ class ManageFrontController extends Controller {
             return response($msg);
         }
     }
-    
+
     public function saveReview() {
         $reviewModel = new Review();
         try {
@@ -245,20 +245,18 @@ class ManageFrontController extends Controller {
             $review_picture7 = $_FILES['file7']['name'];
             $review_picture8 = $_FILES['file8']['name'];
             $review_picture9 = $_FILES['file9']['name'];
-            
+
             $reviewObj = $this->searchReview();
-            if($reviewObj==null){
-                            $reviewModel->insertReview($review_picture1,$review_picture2,$review_picture3,$review_picture4,$review_picture5
-            ,$review_picture6,$review_picture7,$review_picture8,$review_picture9);
-            
-            }else{
-                            $reviewModel->updateReview($review_picture1,$review_picture2,$review_picture3,$review_picture4,$review_picture5
-            ,$review_picture6,$review_picture7,$review_picture8,$review_picture9,$reviewObj->review_id);
-            
-            }   
-            
-            
-            
+            if ($reviewObj == null) {
+                $reviewModel->insertReview($review_picture1, $review_picture2, $review_picture3, $review_picture4, $review_picture5
+                        , $review_picture6, $review_picture7, $review_picture8, $review_picture9);
+            } else {
+                $reviewModel->updateReview($review_picture1, $review_picture2, $review_picture3, $review_picture4, $review_picture5
+                        , $review_picture6, $review_picture7, $review_picture8, $review_picture9, $reviewObj->review_id);
+            }
+
+
+
             echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-front-review';
@@ -267,16 +265,21 @@ class ManageFrontController extends Controller {
             $msg = $e->getMessage();
             return response($msg);
         }
-    } 
-    
+    }
+
     public function searchReview() {
-           $reviewModel = new Review();
-         try {
+        $reviewModel = new Review();
+        try {
             $review = $reviewModel->getReview();
             return $review;
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
         }
-    } 
+    }
+
+    public function manage_front_country_article() {
+        return view('manage-front.manage-front-country-article');
+    }
+
 }

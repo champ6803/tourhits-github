@@ -540,6 +540,7 @@ if (!isset($_SESSION['a_user'])) {
                             </a>
                             <ul class="treeview-menu">
                                 <li id="article_manage"><a href="{{ url('article-manage') }}">จัดการบทความ</a></li>
+                                <li id="country_article_manage"><a href="{{ url('country-article-manage') }}">จัดการบทความประเทศ</a></li>
                             </ul>
                         </li>      
 

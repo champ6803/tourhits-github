@@ -27,6 +27,7 @@ use App\Models\Tour_Package_Day;
 use App\Models\Tour_Route;
 use App\Models\Tour_Tag;
 use App\Models\Tour_Country;
+use App\Models\Country_Article;
 
 class Tour_Package extends Model {
 
@@ -476,6 +477,23 @@ class Tour_Package extends Model {
             return $tourPackage;
         } catch (\Exception $ex) {
             throw $ex;
+        }
+    }
+
+    public function getCountryArticle($country) {
+        try {
+            $countryArticle = null;
+            $tourCountryModel = new Tour_Country();
+            $countryList = $tourCountryModel->getTourCountryByUrl($country);
+            if ($countryList != null && count($countryList) > 0) {
+                $countryArticle = Country_Article::where('tour_country_id', $countryList[0]->tour_country_id)
+                        ->get();
+            } else {
+                $countryArticle = Country_Article::get();
+            }
+            return $countryArticle;
+        } catch (\Exception $e) {
+            return $e;
         }
     }
 
