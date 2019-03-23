@@ -4653,8 +4653,9 @@ body.single-post .blog-page__content > .post .post-content {
 .attraction-item .item-media,
 .hotel-item .item-media {
     position: relative;
-    width: 30%;
+    width: 40%;
     float: left;
+    padding-right: 10px;
 }
 .flight-item .item-media .image-cover,
 .trip-item .item-media .image-cover,
@@ -4680,10 +4681,24 @@ body.single-post .blog-page__content > .post .post-content {
 .hotel-item .item-body {
     position: relative;
     padding: 18px 34px;
-    width: 50%;
+    width: 35%;
     float: left;
     overflow: hidden;
     overflow-x: auto;
+}
+.item-head-body {
+    position: relative;
+    padding: 10px 10px 3px 10px;
+}
+
+.item-head-body a{
+    display: -webkit-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+    line-height: 25px;
+    white-space: normal;
+    font-size: 19px;
+    color: #b5292e;
+    
 }
 .flight-item .item-body .item-title h2,
 .trip-item .item-body .item-title h2,
@@ -4856,8 +4871,8 @@ body.single-post .blog-page__content > .post .post-content {
 .hotel-item .item-price-more {
     position: relative;
     padding: 0 30px;
-    margin: 20px 0;
-    width: 20%;
+    margin: 0px 0;
+    width: 25%;
     float: right;
     overflow: hidden;
 }
@@ -4901,7 +4916,7 @@ body.single-post .blog-page__content > .post .post-content {
     display: block;
     font-weight: 700;
     font-style: normal;
-    font-size: 24px;
+    font-size: 30px;
     color: #666;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -4929,7 +4944,8 @@ body.single-post .blog-page__content > .post .post-content {
 .trip-item .item-price-more a,
 .attraction-item .item-price-more a,
 .hotel-item .item-price-more a {
-    margin-top: 32px;
+    margin-top: 10px;
+    padding: 3px 30px;
 }
 .flight-item:hover,
 .trip-item:hover,
