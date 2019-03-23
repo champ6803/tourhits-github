@@ -876,7 +876,8 @@ hr {
     width: 100%;
 }
 .pagination a {
-    font-size: 23px;
+        font-family: kanit,sans-serif;
+/*    font-size: 23px;
     display: inline-block;
     border: 0px solid #ddd;
     border-radius: 200px;
@@ -887,19 +888,20 @@ hr {
     background-color: #EC2424;
     color: #FFF;
     float: none !important;
-    padding: 0 !important;
+    padding: 0 !important;*/
+    
 
 }
 
 .pagination a.next {
-    border-radius: 8px !important;
-    width: 110px;
+/*    border-radius: 8px !important;
+    width: 110px;*/
     /*background-color: #EC2424;*/
 }
 
 .pagination a.back {
-    border-radius: 8px !important;
-    width: 110px;
+/*    border-radius: 8px !important;
+    width: 110px;*/
     /*background-color: #EC2424;*/
 }
 
@@ -4976,7 +4978,7 @@ Custom BS3
     height: 52px;
     margin-bottom: 10px;
     margin-top: 10px;
-    background-color: #fff;
+    //background-color: #fff;
 }
 
 .swiper-container, .swiper-slide{
@@ -5108,7 +5110,7 @@ Custom BS3
     /*        margin-top: 5px;*/
 
     line-height: 52px;
-    background: linear-gradient(to left, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);
+    /*background: linear-gradient(to left, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);*/
 }
 
 .tour-local-wrapper .swiper-button-next{
@@ -5121,7 +5123,7 @@ Custom BS3
     text-align: center;
     /*        margin-top: 5px;*/
     line-height: 52px;
-    background: linear-gradient(to right, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);
+    /*background: linear-gradient(to right, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);*/
 }
 
 
@@ -7157,7 +7159,7 @@ https://flickity.metafizzy.co
             float: left; 
         }
         
-        .period-table-bottom tbody:before{
+/*        .period-table-bottom tbody:before{
             position: absolute;
             height: 60px;
             bottom: 102px;
@@ -7166,5 +7168,5 @@ https://flickity.metafizzy.co
             width: 96%;
             z-index: 100;
             content: '';
-            /*background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(239, 236, 236) 99%, #fff 100%);*/
-        }
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(239, 236, 236) 99%, #fff 100%);
+        }*/

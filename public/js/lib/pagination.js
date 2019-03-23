@@ -29,14 +29,18 @@ $.fn.pageMe = function (opts) {
     console.log(pager.children());
 
     if (settings.showPrevNext) {
-        $('<li><a href="#" class="prev_link back"><i class="fas fa-chevron-circle-left"></i> หน้าก่อน</a></li>').appendTo(pager);
+        $('<li class="hidden-xs"><a href="#" class="prev_link back"><i class="fas fa-chevron-circle-left"></i> หน้าก่อน</a></li>').appendTo(pager);
     }
 
     if (curr > 1) {
         $('<li><a href="#" class="page_link p">' + (1) + '</a></li>').appendTo(pager);
         $('<li><a href="javascript:void(0)">' + " ... " + '</a></li>').appendTo(pager);
     }
+    var str = pg;
     while (numPages > pg && (settings.hidePageNumbers == false)) {
+        if (str != 0 && pg == 1){
+            $('<li><a href="#" class="page_link p">' + (1) + '</a></li>').appendTo(pager);
+        }
         if (pg < last_num) {
             $('<li><a href="#" class="page_link p">' + (pg + 1) + '</a></li>').appendTo(pager);
         } else if (pg == numPages - 1) {
@@ -49,7 +53,14 @@ $.fn.pageMe = function (opts) {
 
     pager.data("curr", curr);
     pager.children().removeClass("active");
-    pager.children().eq((curr > 1 ? 3 : 1)).addClass("active");
+//    if (str == 1){
+//        pager.children().eq((curr > 1 ? 3 : 1)).addClass("active");
+//    } else {
+//        pager.children().eq((curr > 1 ? 3 : 1)).addClass("active");
+//    }
+    
+    pager.children().eq((curr > 0 ? curr == 1 ? 2 : 3 : 1)).addClass("active");
+    
 
 
 //    for (var i = 0; i < numPages; i++) {
@@ -63,7 +74,7 @@ $.fn.pageMe = function (opts) {
 //    }
 
     if (settings.showPrevNext) {
-        $('<li><a href="#" class="next_link next">หน้าถัดไป <i class="fas fa-chevron-circle-right"></i></a></li>').appendTo(pager);
+        $('<li class="hidden-xs"><a href="#" class="next_link next">หน้าถัดไป <i class="fas fa-chevron-circle-right"></i></a></li>').appendTo(pager);
     }
 
     //pager.find('.page_link:first').addClass('active');

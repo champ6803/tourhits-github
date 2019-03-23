@@ -52,7 +52,7 @@ session_start();
             <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
         <![endif]-->
         <script type="text/javascript">
-            var base_path = "{{ url('/') }}";
+            var base_path = "{{ secure_url('/') }}";
         </script>
         <!-- Google Tag Manager -->
         <script>
@@ -68,6 +68,8 @@ session_start();
             })(window, document, 'script', 'dataLayer', 'GTM-WVXGR66');
         </script>
         <!-- End Google Tag Manager -->
+        
+        @yield('schema_scripts')
 
         @yield('meta_tag')
     </head>
@@ -267,14 +269,14 @@ session_start();
 
                                             <div class="row">
                                                 <div class="col-xs-6 col-md-6">
-                                                    <div class="flag"><a class="country-link new-thai-font" href="/cambodia-tour">
+                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('tour/cambodia')}}">
                                                             <img data-src="../images/flags/Cambodia.png" alt="ทัวร์กัมพูชา" class=" lazyloaded" src="{{ asset('/images/flags/Cambodia.png')}}">
                                                             <h5>กัมพูชา</h5>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-6 col-md-6">
-                                                    <div class="flag"><a class="country-link new-thai-font" href="/nepal-tour">
+                                                    <div class="flag"><a class="country-link new-thai-font" href="{{ URL::to('tour/nepal')}}">
                                                             <img data-src="../images/flags/Nepal.png" alt="ทัวร์เนปาล" class=" lazyloaded" src="{{ asset('/images/flags/Nepal.png')}}">
                                                             <h5>เนปาล</h5>
                                                         </a>

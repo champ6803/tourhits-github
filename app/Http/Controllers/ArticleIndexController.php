@@ -12,6 +12,8 @@ use App\Models\Article;
 use App\Models\Article_Detail;
 use Illuminate\Http\Request;
 use App\Models\Country;
+use App\Models\Country_Article;
+use App\Models\Tour_Country;
 
 /**
  * Description of ArticleIndexController
@@ -46,6 +48,16 @@ class ArticleIndexController extends Controller {
         return view('article.article-manage');
     }
 
+    public function country_article_manage() {
+        return view('article.country-article-manage');
+    }
+
+    public function country_article_manage_action() {
+        $tour_country_model = new Tour_Country();
+        $tourCountryList = $tour_country_model->getTourCountryAll();
+        return view('article.country-article-manage-action', compact('tourCountryList'));
+    }
+
     public function article_manage_action() {
         return view('article.article-manage-action');
     }
@@ -56,6 +68,18 @@ class ArticleIndexController extends Controller {
             $input_article_title = $_POST['article_title'];
             $articleDetailList = $articleDetailModel->getArticleDetailAll();
             return response($articleDetailList);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
+
+    public function searchCountryArticle() {
+        $countryArticleModel = new Country_Article();
+        try {
+            $input_article_name = $_POST['country_article_name'];
+            $countryArticleModel = $countryArticleModel->getCountryArticleAll();
+            return response($countryArticleModel);
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
@@ -120,6 +144,64 @@ class ArticleIndexController extends Controller {
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             return response($msg);
+        }
+    }
+
+    public function getCountryArticleById(Request $request) {
+        $countryArticleModel = new Country_Article();
+        try {
+            $country_article_id = $request->get('country_article_id');
+            $result = $countryArticleModel->getCountryArticleByID($country_article_id);
+            return response($result);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
+    
+    public function removeCountryArticle() {
+        $countryArticleModel = new Country_Article();
+        try {
+            $country_article_id = $_POST['id'];
+            $countryArticleModel->removeCountryArticle($country_article_id);
+            return response('success');
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            return response($msg);
+        }
+    }
+    
+    public function saveCountryArticle(Request $request) {
+        $countryArticleModel = new Country_Article();
+        try {
+            $country_article_id = $request->get('country_article_id');
+            if ($this->IsNullOrEmptyString($country_article_id)) {
+                $tour_country_id = $request->get('tour_country_id');
+                $country_article_name = $request->get('country_article_name');
+                $country_article_detail = $request->get('country_article_detail');
+                $countryArticleModel->insertCountryArticle($country_article_name, $country_article_detail, $tour_country_id);
+                echo "<script>
+                        alert('บันทึกเรียบร้อย');
+                        window.location.href='country-article-manage';
+                        </script>";
+            } else {
+                $tour_country_id = $request->get('tour_country_id');
+                $country_article_name = $request->get('country_article_name');
+                $country_article_detail = $request->get('country_article_detail');
+                $countryArticleModel->updateCountryArticle($country_article_id, $country_article_name, $country_article_detail, $tour_country_id);
+                echo "<script>
+                        alert('บันทึกเรียบร้อย');
+                        window.location.href='country-article-manage';
+                        </script>";
+            }
+            
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            dd($msg);
+            echo "<script>
+                        alert('ไม่สามารถบันทึกได้');
+                        window.location.href='country-article-manage';
+                        </script>";
         }
     }
 

@@ -19,15 +19,26 @@ use App\Models\Tour_Country;
 class Country extends Model {
 
     protected $table = 'country';
-    
-    public function getCountryAll(){
+
+    public function getCountryAll() {
         try {
-         $countryList = Country::join('tour_country', 'tour_country.country_id', '=','country.country_id')
-                 ->get();
-         return $countryList;
+            $countryList = Country::join('tour_country', 'tour_country.country_id', '=', 'country.country_id')
+                    ->get();
+            return $countryList;
         } catch (Exception $ex) {
-               throw $ex;
+            throw $ex;
         }
     }
-   
+
+    public function getCountryByUrl($url) {
+        try {
+            $countryList = Country::join('tour_country', 'tour_country.country_id', '=', 'country.country_id')
+                    ->where('tour_country.tour_country_url', $url)
+                    ->get();
+            return $countryList;
+        } catch (Exception $ex) {
+            throw $ex;
+        }
+    }
+
 }
