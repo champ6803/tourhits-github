@@ -4655,7 +4655,7 @@ body.single-post .blog-page__content > .post .post-content {
     position: relative;
     width: 40%;
     float: left;
-    padding-right: 10px;
+/*    padding-right: 10px;*/
 }
 .flight-item .item-media .image-cover,
 .trip-item .item-media .image-cover,
@@ -4698,7 +4698,7 @@ body.single-post .blog-page__content > .post .post-content {
     white-space: normal;
     font-size: 19px;
     color: #b5292e;
-    
+    padding-left: 5px;
 }
 .flight-item .item-body .item-title h2,
 .trip-item .item-body .item-title h2,

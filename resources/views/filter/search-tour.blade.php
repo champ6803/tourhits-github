@@ -487,7 +487,7 @@
                                     </div>
                                     <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
                                 </div>
-                                <div class="item-hilight-more hilight">
+                                <div class="item-hilight-more hilight hidden-sm">
                                     <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
                                     <div class="detail">
                                             <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
@@ -495,7 +495,7 @@
                                             <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
                                     </div>
                                 </div>
-                                <div class="item-period-table hidden-xs">
+                                <div class="item-period-table hidden-xs hidden-sm">
                                     <div class="table-month">
 					<span class="month">ม.ค.</span>
                                     </div>
@@ -560,7 +560,616 @@
                         </div>
                     </div>
                     <!--       end         เทส Card-->
-
+                    <div class="row">
+                        <div id="card_area" class="card_show filter-item-wrapper">
+                            <li class="trip-item">
+                                <div class="item-media">
+                                    <div class="image-cover"><img src="../images/tour/206-Fuji Mountain.jpg" alt=""></div>
+                                    <div class="bot-img-detail visible-xs visible-sm">
+                                        <div class="tag-day-and-period">
+                                            <span>5 </span>
+                                            <span>วัน</span>
+                                            <span> 3 </span>
+                                            <span>คืน</span>
+                                            <span>ก.ย. - ต.ค.</span>
+                                        </div>
+                                        <div class="tag-tour-num">
+                                            <span>รหัส</span>
+                                            <span> TH206</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-head-body">     
+                                        <a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">ทัวร์ญี่ปุ่น ฮอกไกโด หิมะแรก ตามรอยหนังแฟนเดย์ 5 วัน 3 คืน </a>   
+                                </div>
+                                <div class="item-body">
+<!--                                <div class="item-title">
+                                        <h2><a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">NRT48 โตเกียวจ๋า พี่มาแล้ว อยู่นี่แล้วนะ กินนมฮอกไกโด 5D3N</a></h2>
+                                    </div>-->
+                                    <div class="tag-box-left hidden-xs">
+                                        <div class="tag-head flexbox">
+                                            <span class="flexbox">ระยะเวลา</span>
+                                            <span class="flexbox">รหัสทัวร์</span>
+                                        </div>
+                                        <div class="tag-id flexbox">
+                                            <span class="flexbox">5 วัน 3 คืน</span>
+                                            <span class="flexbox">TH206</span>
+                                        </div>
+                                        <div class="tag-airline">
+                                            <span class="flexbox">สายการบิน</span>
+                                            <div class="tag-airline2 flexbox">
+                                                <img alt="" src="../images/airline/thai_airasia_x.png" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="item-price-more">
+                                    <div class="price">ราคา
+                                        <ins><span class="amount">16,999<span class="bbb">บาท</span></span></ins>
+                                    </div>
+                                    <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
+                                </div>
+                                <div class="item-hilight-more hilight hidden-sm">
+                                    <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
+                                    <div class="detail">
+                                            <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
+                                            <p>พิพิธภัณฑ์แผ่นดินไหว-ชงชาแบบญี่ปุ่น - หมู่บ้านอิยาชิโนะ ซาโตะ</p>
+                                            <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
+                                    </div>
+                                </div>
+                                <div class="item-period-table hidden-xs hidden-sm">
+                                    <div class="table-month">
+					<span class="month">ม.ค.</span>
+                                    </div>
+                                    <div class="peroid">  
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                            
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="card_area" class="card_show filter-item-wrapper">
+                            <li class="trip-item">
+                                <div class="item-media">
+                                    <div class="image-cover"><img src="../images/tour/206-Fuji Mountain.jpg" alt=""></div>
+                                    <div class="bot-img-detail visible-xs visible-sm">
+                                        <div class="tag-day-and-period">
+                                            <span>5 </span>
+                                            <span>วัน</span>
+                                            <span> 3 </span>
+                                            <span>คืน</span>
+                                            <span>ก.ย. - ต.ค.</span>
+                                        </div>
+                                        <div class="tag-tour-num">
+                                            <span>รหัส</span>
+                                            <span> TH206</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-head-body">     
+                                        <a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">ทัวร์ญี่ปุ่น ฮอกไกโด หิมะแรก ตามรอยหนังแฟนเดย์ 5 วัน 3 คืน </a>   
+                                </div>
+                                <div class="item-body">
+<!--                                <div class="item-title">
+                                        <h2><a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">NRT48 โตเกียวจ๋า พี่มาแล้ว อยู่นี่แล้วนะ กินนมฮอกไกโด 5D3N</a></h2>
+                                    </div>-->
+                                    <div class="tag-box-left hidden-xs">
+                                        <div class="tag-head flexbox">
+                                            <span class="flexbox">ระยะเวลา</span>
+                                            <span class="flexbox">รหัสทัวร์</span>
+                                        </div>
+                                        <div class="tag-id flexbox">
+                                            <span class="flexbox">5 วัน 3 คืน</span>
+                                            <span class="flexbox">TH206</span>
+                                        </div>
+                                        <div class="tag-airline">
+                                            <span class="flexbox">สายการบิน</span>
+                                            <div class="tag-airline2 flexbox">
+                                                <img alt="" src="../images/airline/thai_airasia_x.png" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="item-price-more">
+                                    <div class="price">ราคา
+                                        <ins><span class="amount">16,999<span class="bbb">บาท</span></span></ins>
+                                    </div>
+                                    <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
+                                </div>
+                                <div class="item-hilight-more hilight hidden-sm">
+                                    <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
+                                    <div class="detail">
+                                            <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
+                                            <p>พิพิธภัณฑ์แผ่นดินไหว-ชงชาแบบญี่ปุ่น - หมู่บ้านอิยาชิโนะ ซาโตะ</p>
+                                            <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
+                                    </div>
+                                </div>
+                                <div class="item-period-table hidden-xs hidden-sm">
+                                    <div class="table-month">
+					<span class="month">ม.ค.</span>
+                                    </div>
+                                    <div class="peroid">  
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                            
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="card_area" class="card_show filter-item-wrapper">
+                            <li class="trip-item">
+                                <div class="item-media">
+                                    <div class="image-cover"><img src="../images/tour/206-Fuji Mountain.jpg" alt=""></div>
+                                    <div class="bot-img-detail visible-xs visible-sm">
+                                        <div class="tag-day-and-period">
+                                            <span>5 </span>
+                                            <span>วัน</span>
+                                            <span> 3 </span>
+                                            <span>คืน</span>
+                                            <span>ก.ย. - ต.ค.</span>
+                                        </div>
+                                        <div class="tag-tour-num">
+                                            <span>รหัส</span>
+                                            <span> TH206</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-head-body">     
+                                        <a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">ทัวร์ญี่ปุ่น ฮอกไกโด หิมะแรก ตามรอยหนังแฟนเดย์ 5 วัน 3 คืน </a>   
+                                </div>
+                                <div class="item-body">
+<!--                                <div class="item-title">
+                                        <h2><a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">NRT48 โตเกียวจ๋า พี่มาแล้ว อยู่นี่แล้วนะ กินนมฮอกไกโด 5D3N</a></h2>
+                                    </div>-->
+                                    <div class="tag-box-left hidden-xs">
+                                        <div class="tag-head flexbox">
+                                            <span class="flexbox">ระยะเวลา</span>
+                                            <span class="flexbox">รหัสทัวร์</span>
+                                        </div>
+                                        <div class="tag-id flexbox">
+                                            <span class="flexbox">5 วัน 3 คืน</span>
+                                            <span class="flexbox">TH206</span>
+                                        </div>
+                                        <div class="tag-airline">
+                                            <span class="flexbox">สายการบิน</span>
+                                            <div class="tag-airline2 flexbox">
+                                                <img alt="" src="../images/airline/thai_airasia_x.png" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="item-price-more">
+                                    <div class="price">ราคา
+                                        <ins><span class="amount">16,999<span class="bbb">บาท</span></span></ins>
+                                    </div>
+                                    <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
+                                </div>
+                                <div class="item-hilight-more hilight hidden-sm">
+                                    <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
+                                    <div class="detail">
+                                            <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
+                                            <p>พิพิธภัณฑ์แผ่นดินไหว-ชงชาแบบญี่ปุ่น - หมู่บ้านอิยาชิโนะ ซาโตะ</p>
+                                            <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
+                                    </div>
+                                </div>
+                                <div class="item-period-table hidden-xs hidden-sm">
+                                    <div class="table-month">
+					<span class="month">ม.ค.</span>
+                                    </div>
+                                    <div class="peroid">  
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                            
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="card_area" class="card_show filter-item-wrapper">
+                            <li class="trip-item">
+                                <div class="item-media">
+                                    <div class="image-cover"><img src="../images/tour/206-Fuji Mountain.jpg" alt=""></div>
+                                    <div class="bot-img-detail visible-xs visible-sm">
+                                        <div class="tag-day-and-period">
+                                            <span>5 </span>
+                                            <span>วัน</span>
+                                            <span> 3 </span>
+                                            <span>คืน</span>
+                                            <span>ก.ย. - ต.ค.</span>
+                                        </div>
+                                        <div class="tag-tour-num">
+                                            <span>รหัส</span>
+                                            <span> TH206</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-head-body">     
+                                        <a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">ทัวร์ญี่ปุ่น ฮอกไกโด หิมะแรก ตามรอยหนังแฟนเดย์ 5 วัน 3 คืน </a>   
+                                </div>
+                                <div class="item-body">
+<!--                                <div class="item-title">
+                                        <h2><a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">NRT48 โตเกียวจ๋า พี่มาแล้ว อยู่นี่แล้วนะ กินนมฮอกไกโด 5D3N</a></h2>
+                                    </div>-->
+                                    <div class="tag-box-left hidden-xs">
+                                        <div class="tag-head flexbox">
+                                            <span class="flexbox">ระยะเวลา</span>
+                                            <span class="flexbox">รหัสทัวร์</span>
+                                        </div>
+                                        <div class="tag-id flexbox">
+                                            <span class="flexbox">5 วัน 3 คืน</span>
+                                            <span class="flexbox">TH206</span>
+                                        </div>
+                                        <div class="tag-airline">
+                                            <span class="flexbox">สายการบิน</span>
+                                            <div class="tag-airline2 flexbox">
+                                                <img alt="" src="../images/airline/thai_airasia_x.png" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="item-price-more">
+                                    <div class="price">ราคา
+                                        <ins><span class="amount">16,999<span class="bbb">บาท</span></span></ins>
+                                    </div>
+                                    <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
+                                </div>
+                                <div class="item-hilight-more hilight hidden-sm">
+                                    <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
+                                    <div class="detail">
+                                            <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
+                                            <p>พิพิธภัณฑ์แผ่นดินไหว-ชงชาแบบญี่ปุ่น - หมู่บ้านอิยาชิโนะ ซาโตะ</p>
+                                            <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
+                                    </div>
+                                </div>
+                                <div class="item-period-table hidden-xs hidden-sm">
+                                    <div class="table-month">
+					<span class="month">ม.ค.</span>
+                                    </div>
+                                    <div class="peroid">  
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                            
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="card_area" class="card_show filter-item-wrapper">
+                            <li class="trip-item">
+                                <div class="item-media">
+                                    <div class="image-cover"><img src="../images/tour/206-Fuji Mountain.jpg" alt=""></div>
+                                    <div class="bot-img-detail visible-xs visible-sm">
+                                        <div class="tag-day-and-period">
+                                            <span>5 </span>
+                                            <span>วัน</span>
+                                            <span> 3 </span>
+                                            <span>คืน</span>
+                                            <span>ก.ย. - ต.ค.</span>
+                                        </div>
+                                        <div class="tag-tour-num">
+                                            <span>รหัส</span>
+                                            <span> TH206</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-head-body">     
+                                        <a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">ทัวร์ญี่ปุ่น ฮอกไกโด หิมะแรก ตามรอยหนังแฟนเดย์ 5 วัน 3 คืน </a>   
+                                </div>
+                                <div class="item-body">
+<!--                                <div class="item-title">
+                                        <h2><a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">NRT48 โตเกียวจ๋า พี่มาแล้ว อยู่นี่แล้วนะ กินนมฮอกไกโด 5D3N</a></h2>
+                                    </div>-->
+                                    <div class="tag-box-left hidden-xs">
+                                        <div class="tag-head flexbox">
+                                            <span class="flexbox">ระยะเวลา</span>
+                                            <span class="flexbox">รหัสทัวร์</span>
+                                        </div>
+                                        <div class="tag-id flexbox">
+                                            <span class="flexbox">5 วัน 3 คืน</span>
+                                            <span class="flexbox">TH206</span>
+                                        </div>
+                                        <div class="tag-airline">
+                                            <span class="flexbox">สายการบิน</span>
+                                            <div class="tag-airline2 flexbox">
+                                                <img alt="" src="../images/airline/thai_airasia_x.png" title="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="item-price-more">
+                                    <div class="price">ราคา
+                                        <ins><span class="amount">16,999<span class="bbb">บาท</span></span></ins>
+                                    </div>
+                                    <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
+                                </div>
+                                <div class="item-hilight-more hilight hidden-sm">
+                                    <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
+                                    <div class="detail">
+                                            <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
+                                            <p>พิพิธภัณฑ์แผ่นดินไหว-ชงชาแบบญี่ปุ่น - หมู่บ้านอิยาชิโนะ ซาโตะ</p>
+                                            <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
+                                    </div>
+                                </div>
+                                <div class="item-period-table hidden-xs hidden-sm">
+                                    <div class="table-month">
+					<span class="month">ม.ค.</span>
+                                    </div>
+                                    <div class="peroid">  
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">1-4</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">7-9</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">14-21</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date soldout" data-event-name="">20-23</span>
+                                       <span class="separate">/</span>
+                                       
+                                        <span class="date soldout" data-event-name="">24-26</span>
+                                       <span class="separate">/</span>
+                                       
+                                       <span class="date">27-30</span>
+                                       <span class="separate">/</span>
+                                            
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
 
                     <!--                <div id="sorting" class="row card_show">
                                         <div class="col-md-6">
