@@ -876,8 +876,7 @@ hr {
     width: 100%;
 }
 .pagination a {
-        font-family: kanit,sans-serif;
-/*    font-size: 23px;
+    font-size: 23px;
     display: inline-block;
     border: 0px solid #ddd;
     border-radius: 200px;
@@ -888,20 +887,19 @@ hr {
     background-color: #EC2424;
     color: #FFF;
     float: none !important;
-    padding: 0 !important;*/
-
+    padding: 0 !important;
 
 }
 
 .pagination a.next {
-/*    border-radius: 8px !important;
-    width: 110px;*/
+    border-radius: 8px !important;
+    width: 110px;
     /*background-color: #EC2424;*/
 }
 
 .pagination a.back {
-/*    border-radius: 8px !important;
-    width: 110px;*/
+    border-radius: 8px !important;
+    width: 110px;
     /*background-color: #EC2424;*/
 }
 
@@ -4978,7 +4976,7 @@ Custom BS3
     height: 52px;
     margin-bottom: 10px;
     margin-top: 10px;
-    //background-color: #fff;
+    background-color: #fff;
 }
 
 .swiper-container, .swiper-slide{
@@ -5110,7 +5108,7 @@ Custom BS3
     /*        margin-top: 5px;*/
 
     line-height: 52px;
-    /*background: linear-gradient(to left, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);*/
+    background: linear-gradient(to left, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);
 }
 
 .tour-local-wrapper .swiper-button-next{
@@ -5123,7 +5121,7 @@ Custom BS3
     text-align: center;
     /*        margin-top: 5px;*/
     line-height: 52px;
-    /*background: linear-gradient(to right, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);*/
+    background: linear-gradient(to right, rgba(255,255,255,0) 0, #fff 40%, #fff 100%);
 }
 
 
@@ -5347,7 +5345,7 @@ Custom BS3
 
 .trip-item .item-price-more .price{
     font-size: 18px;
-    color: #969696;
+    color: black;
 }
 
 .trip-item .item-price-more a{
@@ -6913,11 +6911,11 @@ https://flickity.metafizzy.co
         .destination-grid-content .section-title h1{font-size: 17px; }
     }
 
-    @media (min-width: 1024px) and (max-width: 1360px){
+    @media (min-width: 1024px) and (max-width: 1360px){   
         .flickity-slider{width: 85%;}
     }
-
-    @media (min-width: 768px) and (max-width: 1023px){
+    
+    @media (min-width: 768px) and (max-width: 1023px){ 
         .flickity-slider{width: 95%!important;}
     }
 
@@ -6967,7 +6965,7 @@ https://flickity.metafizzy.co
         font-weight: bold;
         line-height: 1;
     }
-
+    
     .article-section .article-item .article-item-head a:hover{
         color: #940107!important;
     }
@@ -6988,9 +6986,9 @@ https://flickity.metafizzy.co
         overflow: hidden;
         height: 81px;
     }
-
+    
     .article-section .article-item .article-item-detail span p{
-       line-height: 1.5;
+       line-height: 1.5; 
        font-weight: bold;
     }
 
@@ -7029,28 +7027,28 @@ https://flickity.metafizzy.co
     }
 
     .article-section .section-title i{color: #c33132;}
-
+    
     .awe-navigation .menu-list li .country-link{
         line-height: 42px!important;
         height: 42px;
     }
-
+    
     .awe-navigation-responsive .menu-list li .country-link{
         line-height: 17px!important;
     }
-
+    
     .all-flag-content .country-link h5::before{
         content: 'ทัวร์';
     }
-
+    
     .sponsor-section .flickity-prev-next-button{
         top: 53%!important;
     }
-
+    
     .sponsor-section{
         padding-top: 20px;
     }
-
+    
 
 
     .sponsor-section .carousel {
@@ -7079,19 +7077,19 @@ https://flickity.metafizzy.co
     .sponsor-section .carousel-cell-image.flickity-lazyloaded,
     .sponsor-section .carousel-cell-image.flickity-lazyerror {
       opacity: 1;
-    }
+    }   
 
 /*    .periods-table-detail thead{
         display: block;
 
     }
 
-
+    
     .periods-table-detail .tbody-space{
         display: block;
         overflow: auto;
         width: 100%;
-        max-height: 50px;
+        max-height: 50px;     
         padding-bottom: 10px;
     }
     */
@@ -7130,35 +7128,35 @@ https://flickity.metafizzy.co
             float: left;
             line-height: 48px;
         }
-
+        
         .period-table-bottom thead th:nth-child(2),.period-table-bottom thead th:nth-child(3), .period-table-bottom thead th:nth-child(4){
             width:15%;
             float: left;
         }
-
+        
         .period-table-bottom thead th:nth-child(5) {
             width:15%;
             float: left;
             line-height: 48px;
         }
-
+        
         .period-table-bottom tbody td:nth-child(1){
             width:40%;
             float: left;
-
-        }
-
+           
+        } 
+        
         .period-table-bottom tbody td:nth-child(2), .period-table-bottom tbody td:nth-child(3), .period-table-bottom tbody td:nth-child(4){
             width:15%;
-            float: left;
-        }
-
+            float: left;           
+        } 
+        
         .period-table-bottom tbody td:nth-child(5){
             width:15%;
-            float: left;
+            float: left; 
         }
-
-/*        .period-table-bottom tbody:before{
+        
+        .period-table-bottom tbody:before{
             position: absolute;
             height: 60px;
             bottom: 102px;
@@ -7167,5 +7165,136 @@ https://flickity.metafizzy.co
             width: 96%;
             z-index: 100;
             content: '';
-            background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(239, 236, 236) 99%, #fff 100%);
-        }*/
+            /*background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(239, 236, 236) 99%, #fff 100%);*/
+        }
+        
+        .flexbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .trip-item .item-price-more .price .amount .bbb{
+            padding-left: 7px;
+            font-size: 16px;
+        }
+        
+        .trip-item .item-body .tag-box-left{
+            
+        }
+        
+        .trip-item .item-body .tag-head span:nth-child(1){
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 16px;
+            width: 50%;
+            border-right: 1px solid #D4D4D4;         
+        }
+        
+        .trip-item .item-body .tag-head span:nth-child(2){          
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 15px;
+            width: 50%;
+        }
+        
+        .trip-item .item-body .tag-id span:nth-child(1){
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 16px; 
+            font-weight: 600;
+            width: 50%;
+            padding-bottom: 10px;
+        }
+        
+        .trip-item .item-body .tag-id span:nth-child(2){          
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            width: 50%;
+            padding-bottom: 10px;
+        }
+        
+        .trip-item .item-body .tag-airline{
+            width: 100%;
+            padding-top:5px;
+            border-top: 1px solid #D4D4D4;
+        }
+        
+        .trip-item .item-body .tag-airline span{
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 15px;
+            width: 70px;
+            float:left;
+            height: 45px;
+            width: 50%;
+            
+        }
+        
+        .trip-item .item-body .tag-airline .tag-airline2{
+            width: 50%;
+            float:left;
+        }
+        
+        .trip-item .item-body .tag-airline img{
+            height: 45px;
+        }
+        
+        .trip-item .item-hilight-more{
+            display: inline-block;
+            width:100%;
+            padding: 10px 20px 5px 20px;
+        }   
+        
+        .trip-item .item-hilight-more i{
+            float: left;
+            color: #ed5565;
+            padding-right: 5px; 
+        }
+        
+        .trip-item .item-hilight-more .hi-text{
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-size: 16px;
+            font-style: italic;
+            color: #ed5565;
+            float: left;
+            padding-right: 10px;
+        }
+        
+        .trip-item .item-period-table .table-month{
+            display: table-cell;
+            vertical-align: top;
+            padding-left: 20px;
+        }
+        
+        .trip-item .item-period-table .table-month .month{
+            font-family: 'Kanit', sans-serif;
+            display: inline-block;
+            margin-right: 20px;
+            min-width: 50px;
+            font-size: 16px;
+            background: #ed5565;
+            text-align: center;
+            border-radius: 0px;
+            color: #fff;
+            padding: 3px 0;
+        }
+        
+        .trip-item .item-period-table .peroid{
+            display: table-cell;
+            vertical-align: top;
+            width: 1000px;
+            color: #000;
+        }
+        
+        .trip-item .item-period-table .peroid .soldout{          
+            color:  #D4D4D4;
+        }
+        
+        .trip-item .item-period-table .peroid .separate{
+            padding: 0 5px;
+            color: #d7d7d7;
+        }
+        
+        .trip-item .item-period-table .peroid .date{
+            font-family: 'Kanit', sans-serif; 
+            font-size: 16px;
+        }
+        
