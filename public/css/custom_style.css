@@ -640,7 +640,8 @@ hr {
 }
 
 .filter-header-text {
-    font-size: 20px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -5168,11 +5169,12 @@ Custom BS3
 }
 
 .page-sidebar .tour-local-nav>.local-nav-item>a{
+    font-family: 'Kanit', sans-serif;
     padding: 0px 10px;
     border-radius: 8px;
     font-size: 15px;
     color: #333;
-    font-weight: bold;
+    
 }
 
 .page-sidebar .tour-local-nav>.local-nav-item>a:hover{
@@ -5188,23 +5190,33 @@ Custom BS3
 }
 
 .filter-page__content .trip-item{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 3px 0 3px 3px;
+/*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+    padding: 3px 0 10px 3px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
     border-top-left-radius: 0px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
+    
+    border-bottom: 1px solid #D4D4D4;
 }
 
 .filter-page__content .trip-item:hover{
-    /*    box-shadow: 0 0 0 2px #cdc7ec;*/
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)
+}
 
+.filter-page__content .trip-item:hover .item-price-more .awe-btn{
+    /*    box-shadow: 0 0 0 2px #cdc7ec;*/
+/*    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);*/
+    background-color: #ea1c24;
+}
+
+.filter-page__content .trip-item:hover .item-price-more a{
+    color: white;
 }
 
 .filter-page__content .trip-item .item-body .item-title h2 a{
@@ -5277,8 +5289,9 @@ Custom BS3
 
 .filter-page__content .page-top{padding-top: 55px; padding-right: 10px;}
 .filter-page__content .page-top span{
+    font-family: 'Bai Jamjuree', sans-serif;
     float: right;
-    font-size: 17px;
+    font-size: 15px;
     padding-right: 10px;
     line-height: 36px;
     font-weight: bold;
@@ -7241,7 +7254,7 @@ https://flickity.metafizzy.co
         .trip-item .item-hilight-more{
             display: inline-block;
             width:100%;
-            padding: 10px 20px 5px 20px;
+            padding: 10px 10px 5px 10px;
         }   
         
         .trip-item .item-hilight-more i{
@@ -7262,7 +7275,7 @@ https://flickity.metafizzy.co
         .trip-item .item-period-table .table-month{
             display: table-cell;
             vertical-align: top;
-            padding-left: 20px;
+            padding-left: 10px;
         }
         
         .trip-item .item-period-table .table-month .month{
@@ -7283,6 +7296,8 @@ https://flickity.metafizzy.co
             vertical-align: top;
             width: 1000px;
             color: #000;
+            padding-right: 10px;
+            padding-bottom: 7px;
         }
         
         .trip-item .item-period-table .peroid .soldout{          
@@ -7290,7 +7305,7 @@ https://flickity.metafizzy.co
         }
         
         .trip-item .item-period-table .peroid .separate{
-            padding: 0 5px;
+            padding: 0 0px;
             color: #d7d7d7;
         }
         

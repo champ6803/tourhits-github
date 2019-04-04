@@ -105,7 +105,7 @@
     .category-heading-content.category-heading-content__2{padding-top: 180px;}
     .filter-page{ background-color: #f6f6f6; margin-bottom: 0px;}
     .filter-item-wrapper{list-style-type: none;}
-    .page-sidebar{background-color: #fff; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-top: 0px;}
+    .page-sidebar{background-color: #fff; margin-top: 0px;}
     .page-sidebar .sidebar-title{
         /*        border-top-color: #d7d7d7;*/
         border-top-color: #ea6a78;
@@ -187,7 +187,7 @@
     @media (min-width: 1024px) and (max-width: 1399px) {
         .container {width: 100%;}
     }
-    @media (min-width: 700px) and (max-width: 1024px){.trip-item{height: 525px;}}
+/*    @media (min-width: 700px) and (max-width: 1024px){.trip-item{height: 525px;}}*/
     @media (min-width: 992px) and (max-width: 1024px){
         .container {width: 100%;}
 
@@ -487,7 +487,7 @@
                                     </div>
                                     <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
                                 </div>
-                                <div class="item-hilight-more hilight hidden-sm">
+                                <div class="item-hilight-more hilight">
                                     <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
                                     <div class="detail">
                                             <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
@@ -495,7 +495,7 @@
                                             <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
                                     </div>
                                 </div>
-                                <div class="item-period-table hidden-xs hidden-sm">
+                                <div class="item-period-table hidden-xs">
                                     <div class="table-month">
 					<span class="month">ม.ค.</span>
                                     </div>
@@ -610,7 +610,7 @@
                                     </div>
                                     <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
                                 </div>
-                                <div class="item-hilight-more hilight hidden-sm">
+                                <div class="item-hilight-more hilight">
                                     <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
                                     <div class="detail">
                                             <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
@@ -618,7 +618,7 @@
                                             <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
                                     </div>
                                 </div>
-                                <div class="item-period-table hidden-xs hidden-sm">
+                                <div class="item-period-table hidden-xs">
                                     <div class="table-month">
 					<span class="month">ม.ค.</span>
                                     </div>
@@ -732,7 +732,7 @@
                                     </div>
                                     <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
                                 </div>
-                                <div class="item-hilight-more hilight hidden-sm">
+                                <div class="item-hilight-more hilight">
                                     <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
                                     <div class="detail">
                                             <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
@@ -740,7 +740,7 @@
                                             <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
                                     </div>
                                 </div>
-                                <div class="item-period-table hidden-xs hidden-sm">
+                                <div class="item-period-table hidden-xs">
                                     <div class="table-month">
 					<span class="month">ม.ค.</span>
                                     </div>
@@ -854,7 +854,7 @@
                                     </div>
                                     <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
                                 </div>
-                                <div class="item-hilight-more hilight hidden-sm">
+                                <div class="item-hilight-more hilight">
                                     <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
                                     <div class="detail">
                                             <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
@@ -862,7 +862,7 @@
                                             <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
                                     </div>
                                 </div>
-                                <div class="item-period-table hidden-xs hidden-sm">
+                                <div class="item-period-table hidden-xs">
                                     <div class="table-month">
 					<span class="month">ม.ค.</span>
                                     </div>
@@ -976,7 +976,7 @@
                                     </div>
                                     <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
                                 </div>
-                                <div class="item-hilight-more hilight hidden-sm">
+                                <div class="item-hilight-more hilight">
                                     <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
                                     <div class="detail">
                                             <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
@@ -984,7 +984,7 @@
                                             <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
                                     </div>
                                 </div>
-                                <div class="item-period-table hidden-xs hidden-sm">
+                                <div class="item-period-table hidden-xs">
                                     <div class="table-month">
 					<span class="month">ม.ค.</span>
                                     </div>
@@ -1098,7 +1098,7 @@
                                     </div>
                                     <a class="awe-btn" href="/tour-detail/ทัวร์ญี่ปุ่น/206/THG15-XW-JP-1-30SEP18">ดูรายละเอียด</a>
                                 </div>
-                                <div class="item-hilight-more hilight hidden-sm">
+                                <div class="item-hilight-more hilight">
                                     <span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>
                                     <div class="detail">
                                             <p>โตเกียว – วัดอาซากุสะ – โอชิโนะ ฮัคไค - ฟูจิออนเซ็น-ภูเขาไฟฟูจิ ชั้น 5</p>
@@ -1106,7 +1106,7 @@
                                             <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
                                     </div>
                                 </div>
-                                <div class="item-period-table hidden-xs hidden-sm">
+                                <div class="item-period-table hidden-xs">
                                     <div class="table-month">
 					<span class="month">ม.ค.</span>
                                     </div>
