@@ -927,7 +927,7 @@ session_start();
                             </div>
                             <div class="row">
                                 <div class="col-md-4">ใบอนุญาตประกอบธุรกิจนำเที่ยว<br>เลขที่ 11/09305</div>
-                                <div class="col-md-4 hidden-xs hidden-smboxx">สมาชิกสมาคมไทยธุรกิจการท่องเที่ยว เลขที่ 012345</div>
+                                <div class="col-md-4 hidden-xs hidden-smboxx">สมาคมไทยบริการท่องเที่ยว เลขที่ 1474</div>
                                 <div class="col-md-4 hidden-xs hidden-sm boxx">e-Commerce No.01234567890</div>
                             </div>    
                             <p>สงวนลิขสิทธิ์ 2561 Tourhits.co | 2018 Tourhits All rights reserved.</p>  

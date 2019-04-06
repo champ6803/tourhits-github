@@ -44,9 +44,9 @@
 }
 
 .destination-grid-content .flag{
-/*    max-width: 207px;*/
+    /*    max-width: 207px;*/
     /*    min-width: 247.5px;*/
-        max-width: 320px;
+    max-width: 320px;
     margin-bottom: 10px;
     padding-left: 0px;
     padding-right: 10px;
@@ -86,7 +86,7 @@
     display: block;
     padding: 5px 0px 5px 8px;
     /*background: #EC2424;*/
-/*    background: #ebebeb; สีเดิม*/
+    /*    background: #ebebeb; สีเดิม*/
     height: 50px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -97,17 +97,17 @@
     height: 33px;
     float: left;
     padding-right: 8px;
-     margin-top: 1px;
+    margin-top: 1px;
 
 }
 
 .country-link h5 {
     /*    width: 70%;*/
-    font-weight: bold;
+    font-weight: 500;
     line-height: 40px;
     font-size: 16px;
     color: #444;
-/*    float: left;*/
+    /*    float: left;*/
     margin: 0 0 0 0px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -227,7 +227,7 @@
 
 .card-detail{
     height: 160px;
-/*    overflow: auto;*/
+    /*    overflow: auto;*/
     overflow: hidden;
     text-align: left;
     line-height: 1.3;
@@ -640,7 +640,7 @@ hr {
 }
 
 .filter-header-text {
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: kanit, sans-serif;
     font-size: 16px;
     font-weight: bold;
 }
@@ -894,13 +894,13 @@ hr {
 
 .pagination a.next {
     border-radius: 8px !important;
-    width: 110px;
+    /*width: 110px;*/
     /*background-color: #EC2424;*/
 }
 
 .pagination a.back {
     border-radius: 8px !important;
-    width: 110px;
+    /*width: 110px;*/
     /*background-color: #EC2424;*/
 }
 
@@ -4372,7 +4372,7 @@ Custom BS3
 
 .cer-logo {
     font-family: 'Kanit', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     display: inline;
     color: white;
     line-height: 60px;
@@ -4776,12 +4776,12 @@ Custom BS3
 }
 
 .cat-asian .flag:hover > .country-link {
-/*    opacity: 0.8;*/
+    /*    opacity: 0.8;*/
     background: #ebebeb;
 }
 
 .all-flag-content .flag:hover > .country-link {
-/*    opacity: 0.8;*/
+    /*    opacity: 0.8;*/
     background: #ebebeb;
 }
 
@@ -4795,7 +4795,7 @@ Custom BS3
     line-height: 25px;
     display: inline-block;
     font-size: 17px;
-    font-weight: bold;
+    font-weight: 500;
     overflow: hidden;
     color: black;
     padding-left: 1px;
@@ -4806,7 +4806,7 @@ Custom BS3
 }
 
 .sub-menu .pagtour-head{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 17px;
     padding-left: 20px;
     color: #262626;
@@ -5021,7 +5021,7 @@ Custom BS3
 }
 
 .tour-local-nav>.local-nav-item>a{
-    background: #d7d7d7;
+    background: #f5f5f5;
     color: #363636;
     padding: 0px 18px;
     display: inline-block;
@@ -5174,7 +5174,7 @@ Custom BS3
     border-radius: 8px;
     font-size: 15px;
     color: #333;
-    
+
 }
 
 .page-sidebar .tour-local-nav>.local-nav-item>a:hover{
@@ -5190,7 +5190,7 @@ Custom BS3
 }
 
 .filter-page__content .trip-item{
-/*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+    /*    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
     padding: 3px 0 10px 3px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -5201,7 +5201,7 @@ Custom BS3
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    
+
     border-bottom: 1px solid #D4D4D4;
 }
 
@@ -5211,7 +5211,7 @@ Custom BS3
 
 .filter-page__content .trip-item:hover .item-price-more .awe-btn{
     /*    box-shadow: 0 0 0 2px #cdc7ec;*/
-/*    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);*/
+    /*    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);*/
     background-color: #ea1c24;
 }
 
@@ -5289,7 +5289,7 @@ Custom BS3
 
 .filter-page__content .page-top{padding-top: 55px; padding-right: 10px;}
 .filter-page__content .page-top span{
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: kanit, sans-serif;
     float: right;
     font-size: 15px;
     padding-right: 10px;
@@ -5984,7 +5984,7 @@ https://flickity.metafizzy.co
 }
 
 .searchtoggle i {
-    color: #575c5d;
+    color: #ff595f;
 }
 
 .daterangepicker.dropdown-menu {
@@ -6070,7 +6070,7 @@ https://flickity.metafizzy.co
 #header-page .main-header{
     font-family: 'Kanit', sans-serif;
     height: 60px;
-    background-color: #ca161d;
+    background-color: #ff595f;
     color: white;
 }
 
@@ -6117,7 +6117,7 @@ https://flickity.metafizzy.co
     padding-left: 20px;
     font-size: 21px;
     color: white;
-    font-family: 'supermarket', sans-serif;
+    font-family: kanit, sans-serif;
 }
 #header-page .work-time-tel{float: right;}
 #header-page .work-time-tel span{
@@ -6478,7 +6478,7 @@ https://flickity.metafizzy.co
 .periods-table-detail .table-bordered,.periods-table-detail .table-bordered  tbody  tr  td{
     border: 0px solid #b5b5b5;
 
-/*    padding: 5px 0;*/
+    /*    padding: 5px 0;*/
 }
 
 
@@ -6500,7 +6500,7 @@ https://flickity.metafizzy.co
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     cursor: default;
-/*    height: 50px;*/
+    /*    height: 50px;*/
 }
 
 .period-row-header:hover{
@@ -6804,7 +6804,7 @@ https://flickity.metafizzy.co
     font-size: 14px;
     line-height: 50px!important;
     border-radius: 18px;
-    background-color: #ed5565;
+    background-color: #ff595f;
     padding: 3px 10px;
     cursor: pointer;
     text-align: center;
@@ -6865,233 +6865,233 @@ https://flickity.metafizzy.co
         content: "\F002";
         padding-right: 7px;
     }*/
-    .search-modal-box .awe-search-tabs__content .ui-tabs-panel input{
-        font-family: 'Kanit', sans-serif;
-        font-size: 14px;
-        font-weight: bold;
-    }
+.search-modal-box .awe-search-tabs__content .ui-tabs-panel input{
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-    .search-modal-box .awe-search-tabs__content .form-group{
-        margin-bottom: 5px;
-    }
+.search-modal-box .awe-search-tabs__content .form-group{
+    margin-bottom: 5px;
+}
 
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search {
-        font-family: 'Kanit', sans-serif;
-        display: block;
-        border-radius: 20px;
-        background-color: #ed5565;
-        box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);
-        font-size: 17px;
-        color: #fff ;
-        padding: 0px 20px;
-        transition: all .5s ease;
-        line-height: 38px;
-        margin: 6px 0;
-    }
+.search-container .awe-search-tabs__content .ui-tabs-panel .btn-search {
+    font-family: 'Kanit', sans-serif;
+    display: block;
+    border-radius: 20px;
+    background-color: #ed5565;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.12);
+    font-size: 17px;
+    color: #fff ;
+    padding: 0px 20px;
+    transition: all .5s ease;
+    line-height: 38px;
+    margin: 6px 0;
+}
 
-    .awe-search-tabs__content .ui-tabs-panel input:nth-child(2){
-        cursor: text!important;
-    }
+.awe-search-tabs__content .ui-tabs-panel input:nth-child(2){
+    cursor: text!important;
+}
 
-    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-actions{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-actions{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search:hover{opacity: 0.8;}
-    .search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
-    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
-    .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
+.search-container .awe-search-tabs__content .ui-tabs-panel .btn-search:hover{opacity: 0.8;}
+.search-container .awe-search-tabs__content .ui-tabs-panel{padding: 13px 0px 0px 0px;}
+.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .start-date input{border-top-left-radius: 14px; border-bottom-left-radius: 14px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;}
+.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group .end-date input{border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
 
 /*จอขนาดมือถือ*/
-    @media screen and ( max-width: 958px ) {
-        .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 18px; width:100%;}
-        .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 18px;}
-        .awe-search-tabs__content .ui-tabs-panel select{font-size: 14px;}
-        .awe-search-tabs-2 .awe-search-tabs__content{
-            margin-top: 45px;
-        }
-        .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
-        .search-tour-box{right: 140px;}
-        .search-tour-box span{font-size: 11px;}
-        .article-section .article-item .article-item-head a{font-size: 15px!important;}
-        .tabs-flagall{
-            padding-right: 0px;
-            padding-left: 0px;
-        }
-/*        .main-content .hero-section{top: 50px;}*/
-        .destination-grid-content .section-title h1{font-size: 17px; }
+@media screen and ( max-width: 958px ) {
+    .search-container .awe-search-tabs__content .ui-tabs-panel .btn-search{font-size: 18px; width:100%;}
+    .search-container .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 18px;}
+    .awe-search-tabs__content .ui-tabs-panel select{font-size: 14px;}
+    .awe-search-tabs-2 .awe-search-tabs__content{
+        margin-top: 45px;
     }
-
-    @media (min-width: 1024px) and (max-width: 1360px){   
-        .flickity-slider{width: 85%;}
-    }
-    
-    @media (min-width: 768px) and (max-width: 1023px){ 
-        .flickity-slider{width: 95%!important;}
-    }
-
-    .awe-search-tabs__content .close-modal-search{
-        position: absolute;
-        top: 7px;
-        right: 10px;
-        cursor: pointer;
-    }
-
-    .awe-search-tabs__content .close-modal-search i{
-        font-size: 18px;
-        color: #000000;
-    }
-
-    .checkout-section-demo .checkout-page__sidebar .fix-img span{
-        font-size: 21px;
-        line-height: 73px;
-        color: white;
-    }
-
-    .article-section .article-item{
-        height: 195px;
-    }
-
-    .article-section .article-item .article-item-img{
-        float: left;
-        width: 40%;
-        padding-right: 20px;
-    }
-
-    .article-section .article-item .article-item-img img{
-        max-height: 180px;
-        width: 100%;
-    }
-
-    .article-section .article-item .article-item-head{
-        width: 60%;
-        display: inline-block;
-        max-height: 80px;
-        padding-right: 20px;
-    }
-    .article-section .article-item .article-item-head a{
-        font-size: 18px;
-        font-family: 'Kanit', sans-serif;
-        color: #ca161d!important;
-        font-weight: bold;
-        line-height: 1;
-    }
-    
-    .article-section .article-item .article-item-head a:hover{
-        color: #940107!important;
-    }
-
-    .article-section .article-item .article-item-detail {
-        max-height: 90px;
-        padding-top: 5px;
-        padding-right: 20px;
-    }
-
-    .article-section .article-item .article-item-detail span{
-        font-size: 14px;
-        font-family: 'Bai Jamjuree', sans-serif;
-        color: black;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        height: 81px;
-    }
-    
-    .article-section .article-item .article-item-detail span p{
-       line-height: 1.5; 
-       font-weight: bold;
-    }
-
-    .article-section .article-item .article-item-date{
-        font-size: 14px;
-        font-family: 'Bai Jamjuree', sans-serif;
-        color: gray;
-        text-align: right;
-        padding-top: 20px;
-        padding-right: 30px;
-    }
-
-    .article-section .article-item .article-item-date span i{
-        padding-right: 5px;
-    }
-
     .awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
+    .search-tour-box{right: 140px;}
+    .search-tour-box span{font-size: 11px;}
+    .article-section .article-item .article-item-head a{font-size: 15px!important;}
+    .tabs-flagall{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    /*        .main-content .hero-section{top: 50px;}*/
+    .destination-grid-content .section-title h1{font-size: 17px; }
+}
+
+@media (min-width: 1024px) and (max-width: 1360px){   
+    .flickity-slider{width: 85%;}
+}
+
+@media (min-width: 768px) and (max-width: 1023px){ 
+    .flickity-slider{width: 95%!important;}
+}
+
+.awe-search-tabs__content .close-modal-search{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.awe-search-tabs__content .close-modal-search i{
+    font-size: 18px;
+    color: #000000;
+}
+
+.checkout-section-demo .checkout-page__sidebar .fix-img span{
+    font-size: 21px;
+    line-height: 73px;
+    color: white;
+}
+
+.article-section .article-item{
+    height: 195px;
+}
+
+.article-section .article-item .article-item-img{
+    float: left;
+    width: 40%;
+    padding-right: 20px;
+}
+
+.article-section .article-item .article-item-img img{
+    max-height: 180px;
+    width: 100%;
+}
+
+.article-section .article-item .article-item-head{
+    width: 60%;
+    display: inline-block;
+    max-height: 80px;
+    padding-right: 20px;
+}
+.article-section .article-item .article-item-head a{
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    color: #ca161d!important;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.article-section .article-item .article-item-head a:hover{
+    color: #940107!important;
+}
+
+.article-section .article-item .article-item-detail {
+    max-height: 90px;
+    padding-top: 5px;
+    padding-right: 20px;
+}
+
+.article-section .article-item .article-item-detail span{
+    font-size: 14px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: black;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 81px;
+}
+
+.article-section .article-item .article-item-detail span p{
+    line-height: 1.5; 
+    font-weight: bold;
+}
+
+.article-section .article-item .article-item-date{
+    font-size: 14px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: gray;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+
+.article-section .article-item .article-item-date span i{
+    padding-right: 5px;
+}
+
+.awe-search-tabs-2 .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) .form-elements{width: 100%; padding-right: 0px!important;}
 
 
-    .awe-search-tabs__content .close-modal-search{
-        position: absolute;
-        top: 7px;
-        right: 10px;
-        cursor: pointer;
-    }
+.awe-search-tabs__content .close-modal-search{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    cursor: pointer;
+}
 
-    .awe-search-tabs__content .close-modal-search i{
-        font-size: 18px;
-        color: #000000;
-    }
+.awe-search-tabs__content .close-modal-search i{
+    font-size: 18px;
+    color: #000000;
+}
 
-    .checkout-section-demo .checkout-page__sidebar .fix-img span{
-        font-size: 21px;
-        line-height: 73px;
-        color: white;
-    }
+.checkout-section-demo .checkout-page__sidebar .fix-img span{
+    font-size: 21px;
+    line-height: 73px;
+    color: white;
+}
 
-    .article-section .section-title i{color: #c33132;}
-    
-    .awe-navigation .menu-list li .country-link{
-        line-height: 42px!important;
-        height: 42px;
-    }
-    
-    .awe-navigation-responsive .menu-list li .country-link{
-        line-height: 17px!important;
-    }
-    
-    .all-flag-content .country-link h5::before{
-        content: 'ทัวร์';
-    }
-    
-    .sponsor-section .flickity-prev-next-button{
-        top: 53%!important;
-    }
-    
-    .sponsor-section{
-        padding-top: 20px;
-    }
-    
+.article-section .section-title i{color: #c33132;}
+
+.awe-navigation .menu-list li .country-link{
+    line-height: 42px!important;
+    height: 42px;
+}
+
+.awe-navigation-responsive .menu-list li .country-link{
+    line-height: 17px!important;
+}
+
+.all-flag-content .country-link h5::before{
+    content: 'ทัวร์';
+}
+
+.sponsor-section .flickity-prev-next-button{
+    top: 53%!important;
+}
+
+.sponsor-section{
+    padding-top: 20px;
+}
 
 
-    .sponsor-section .carousel {
-      background: white;
-    }
 
-    .sponsor-section .carousel-cell {
-      width: 25%;
-      height: 300px;
-      margin-right: 0px;
-      background: #333;
-      overflow: hidden;
-    }
+.sponsor-section .carousel {
+    background: white;
+}
 
-    .sponsor-section .carousel-cell-image {
-      display: block;
-      max-height: 100%;
-      margin: 0 auto;
-      max-width: 100%;
-      opacity: 0;
-      -webkit-transition: opacity 0.4s;
-              transition: opacity 0.4s;
-    }
+.sponsor-section .carousel-cell {
+    width: 25%;
+    height: 300px;
+    margin-right: 0px;
+    background: #333;
+    overflow: hidden;
+}
 
-    /* fade in lazy loaded image */
-    .sponsor-section .carousel-cell-image.flickity-lazyloaded,
-    .sponsor-section .carousel-cell-image.flickity-lazyerror {
-      opacity: 1;
-    }   
+.sponsor-section .carousel-cell-image {
+    display: block;
+    max-height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.sponsor-section .carousel-cell-image.flickity-lazyloaded,
+.sponsor-section .carousel-cell-image.flickity-lazyerror {
+    opacity: 1;
+}   
 
 /*    .periods-table-detail thead{
         display: block;
@@ -7106,211 +7106,226 @@ https://flickity.metafizzy.co
         max-height: 50px;     
         padding-bottom: 10px;
     }
-    */
+*/
 
-        .period-table-bottom table {
-            width: 100%;
-        }
+.period-table-bottom table {
+    width: 100%;
+}
 
-        .period-table-bottom thead, .period-table-bottom tbody, .period-table-bottom tr, .period-table-bottom td, .period-table-bottom th { display: block; }
+.period-table-bottom thead, .period-table-bottom tbody, .period-table-bottom tr, .period-table-bottom td, .period-table-bottom th { display: block; }
 
-        .period-table-bottom tr:after {
-            content: ' ';
-            display: block;
-            visibility: hidden;
-            clear: both;
-        }
+.period-table-bottom tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
 
-        .period-table-bottom thead th {
-            height: 60px;
+.period-table-bottom thead th {
+    height: 60px;
 
-            /*text-align: left;*/
-        }
+    /*text-align: left;*/
+}
 
-        .period-table-bottom tbody {
-            max-height: 300px;
-            overflow-y: auto;
-        }
+.period-table-bottom tbody {
+    max-height: 300px;
+    overflow-y: auto;
+}
 
-        .period-table-bottom thead {
-            /* fallback */
-        }
+.period-table-bottom thead {
+    /* fallback */
+}
 
 
-        .period-table-bottom thead th:nth-child(1) {
-            width:40%;
-            float: left;
-            line-height: 48px;
-        }
-        
-        .period-table-bottom thead th:nth-child(2),.period-table-bottom thead th:nth-child(3), .period-table-bottom thead th:nth-child(4){
-            width:15%;
-            float: left;
-        }
-        
-        .period-table-bottom thead th:nth-child(5) {
-            width:15%;
-            float: left;
-            line-height: 48px;
-        }
-        
-        .period-table-bottom tbody td:nth-child(1){
-            width:40%;
-            float: left;
-           
-        } 
-        
-        .period-table-bottom tbody td:nth-child(2), .period-table-bottom tbody td:nth-child(3), .period-table-bottom tbody td:nth-child(4){
-            width:15%;
-            float: left;           
-        } 
-        
-        .period-table-bottom tbody td:nth-child(5){
-            width:15%;
-            float: left; 
-        }
-        
-        .period-table-bottom tbody:before{
-            position: absolute;
-            height: 60px;
-            bottom: 102px;
-            left: 15px;
-            right: 0;
-            width: 96%;
-            z-index: 100;
-            content: '';
-            /*background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(239, 236, 236) 99%, #fff 100%);*/
-        }
-        
-        .flexbox {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .trip-item .item-price-more .price .amount .bbb{
-            padding-left: 7px;
-            font-size: 16px;
-        }
-        
-        .trip-item .item-body .tag-box-left{
-            
-        }
-        
-        .trip-item .item-body .tag-head span:nth-child(1){
-            font-family: 'Bai Jamjuree', sans-serif;
-            font-size: 16px;
-            width: 50%;
-            border-right: 1px solid #D4D4D4;         
-        }
-        
-        .trip-item .item-body .tag-head span:nth-child(2){          
-            font-family: 'Bai Jamjuree', sans-serif;
-            font-size: 15px;
-            width: 50%;
-        }
-        
-        .trip-item .item-body .tag-id span:nth-child(1){
-            font-family: 'Bai Jamjuree', sans-serif;
-            font-size: 16px; 
-            font-weight: 600;
-            width: 50%;
-            padding-bottom: 10px;
-        }
-        
-        .trip-item .item-body .tag-id span:nth-child(2){          
-            font-family: 'Bai Jamjuree', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            width: 50%;
-            padding-bottom: 10px;
-        }
-        
-        .trip-item .item-body .tag-airline{
-            width: 100%;
-            padding-top:5px;
-            border-top: 1px solid #D4D4D4;
-        }
-        
-        .trip-item .item-body .tag-airline span{
-            font-family: 'Bai Jamjuree', sans-serif;
-            font-size: 15px;
-            width: 70px;
-            float:left;
-            height: 45px;
-            width: 50%;
-            
-        }
-        
-        .trip-item .item-body .tag-airline .tag-airline2{
-            width: 50%;
-            float:left;
-        }
-        
-        .trip-item .item-body .tag-airline img{
-            height: 45px;
-        }
-        
-        .trip-item .item-hilight-more{
-            display: inline-block;
-            width:100%;
-            padding: 10px 10px 5px 10px;
-        }   
-        
-        .trip-item .item-hilight-more i{
-            float: left;
-            color: #ed5565;
-            padding-right: 5px; 
-        }
-        
-        .trip-item .item-hilight-more .hi-text{
-            font-family: 'Bai Jamjuree', sans-serif;
-            font-size: 16px;
-            font-style: italic;
-            color: #ed5565;
-            float: left;
-            padding-right: 10px;
-        }
-        
-        .trip-item .item-period-table .table-month{
-            display: table-cell;
-            vertical-align: top;
-            padding-left: 10px;
-        }
-        
-        .trip-item .item-period-table .table-month .month{
-            font-family: 'Kanit', sans-serif;
-            display: inline-block;
-            margin-right: 20px;
-            min-width: 50px;
-            font-size: 16px;
-            background: #ed5565;
-            text-align: center;
-            border-radius: 0px;
-            color: #fff;
-            padding: 3px 0;
-        }
-        
-        .trip-item .item-period-table .peroid{
-            display: table-cell;
-            vertical-align: top;
-            width: 1000px;
-            color: #000;
-            padding-right: 10px;
-            padding-bottom: 7px;
-        }
-        
-        .trip-item .item-period-table .peroid .soldout{          
-            color:  #D4D4D4;
-        }
-        
-        .trip-item .item-period-table .peroid .separate{
-            padding: 0 0px;
-            color: #d7d7d7;
-        }
-        
-        .trip-item .item-period-table .peroid .date{
-            font-family: 'Kanit', sans-serif; 
-            font-size: 16px;
-        }
-        
+.period-table-bottom thead th:nth-child(1) {
+    width:40%;
+    float: left;
+    line-height: 48px;
+}
+
+.period-table-bottom thead th:nth-child(2),.period-table-bottom thead th:nth-child(3), .period-table-bottom thead th:nth-child(4){
+    width:15%;
+    float: left;
+}
+
+.period-table-bottom thead th:nth-child(5) {
+    width:15%;
+    float: left;
+    line-height: 48px;
+}
+
+.period-table-bottom tbody td:nth-child(1){
+    width:40%;
+    float: left;
+
+} 
+
+.period-table-bottom tbody td:nth-child(2), .period-table-bottom tbody td:nth-child(3), .period-table-bottom tbody td:nth-child(4){
+    width:15%;
+    float: left;           
+} 
+
+.period-table-bottom tbody td:nth-child(5){
+    width:15%;
+    float: left; 
+}
+
+.period-table-bottom tbody:before{
+    position: absolute;
+    height: 60px;
+    bottom: 102px;
+    left: 15px;
+    right: 0;
+    width: 96%;
+    z-index: 100;
+    content: '';
+    /*background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(239, 236, 236) 99%, #fff 100%);*/
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trip-item .item-price-more .price .amount .bbb{
+    padding-left: 7px;
+    font-size: 16px;
+}
+
+.trip-item .item-body .tag-box-left{
+
+}
+
+.trip-item .item-body .tag-head span:nth-child(1){
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
+    width: 50%;
+    border-right: 1px solid #D4D4D4;         
+}
+
+.trip-item .item-body .tag-head span:nth-child(2){          
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 15px;
+    width: 50%;
+}
+
+.trip-item .item-body .tag-id span:nth-child(1){
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px; 
+    font-weight: 600;
+    width: 50%;
+    padding-bottom: 10px;
+}
+
+.trip-item .item-body .tag-id span:nth-child(2){          
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    width: 50%;
+    padding-bottom: 10px;
+}
+
+.trip-item .item-body .tag-airline{
+    width: 100%;
+    padding-top:5px;
+    border-top: 1px solid #D4D4D4;
+}
+
+.trip-item .item-body .tag-airline span{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 15px;
+    width: 70px;
+    float:left;
+    height: 45px;
+    width: 50%;
+
+}
+
+.trip-item .item-body .tag-airline .tag-airline2{
+    width: 50%;
+    float:left;
+}
+
+.trip-item .item-body .tag-airline img{
+    height: 45px;
+}
+
+.trip-item .item-hilight-more{
+    display: inline-block;
+    width:100%;
+    padding: 10px 10px 5px 10px;
+}   
+
+.trip-item .item-hilight-more i{
+    float: left;
+    color: #ed5565;
+    padding-right: 5px; 
+}
+
+.trip-item .item-hilight-more .hi-text{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #ed5565;
+    float: left;
+    padding-right: 10px;
+}
+
+.trip-item .item-period-table .table-month{
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+.trip-item .item-period-table .table-month .month{
+    font-family: 'Kanit', sans-serif;
+    display: inline-block;
+    margin-right: 20px;
+    min-width: 50px;
+    font-size: 16px;
+    background: #ed5565;
+    text-align: center;
+    border-radius: 0px;
+    color: #fff;
+    padding: 3px 0;
+}
+
+.trip-item .item-period-table .peroid{
+    display: table-cell;
+    vertical-align: top;
+    width: 1000px;
+    color: #000;
+    padding-right: 10px;
+    padding-bottom: 7px;
+}
+
+.trip-item .item-period-table .peroid .soldout{          
+    color:  #778899;
+}
+
+.trip-item .item-period-table .peroid .separate{
+    padding: 0 0px;
+    color: #d7d7d7;
+}
+
+.trip-item .item-period-table .peroid .date{
+    font-family: 'Kanit', sans-serif; 
+    font-size: 16px;
+}
+
+
+.tabs {
+    font-family: kanit,sans-serif;
+}
+
+.tabs .ui-tabs-nav li .ui-tabs-anchor{
+    font-weight: 500;
+}
+
+#owl-demo .tag-item a {
+    font-weight: 500 !important;
+}
+.page-top .awe-select-wrapper .awe-select {
+    font-family: kanit,sans-serif;
+}

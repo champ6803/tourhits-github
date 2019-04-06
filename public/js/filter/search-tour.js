@@ -465,6 +465,117 @@ function checkboxChecked() {
     });
 }
 
+//function renderTourCard(tourPackageList, tourPeriod) {
+//    var obj = tourPackageList;
+//    if (obj != null && obj.length > 0) {
+//        $('#package_country').show();
+//        $('#package_country_image').show();
+//        $('#sorting').show();
+//        var divs = "";
+//        $("#card_area").empty();
+//        $.each(obj, function (key, val) {
+//            var div = '<li class="trip-item">';
+//            div = div + '<div class="item-media">';
+//            div = div + '<div class="image-cover">';
+//            div = div + '<img src="../images/tour/' + this.tour_package_image + '" alt="">';
+//            div = div + '</div>';
+//
+//            div = div + '<div class="bot-img-detail">';
+//            div = div + '<div class="tag-day-and-period">';
+//            var all_as = val["tour_package_period_start"].split("-");
+//            var all_ae = val["tour_package_period_end"].split("-");
+//            div = div + '<span>' + this.tour_period_day_number + ' </span>';
+//            div = div + '<span>วัน</span>';
+//            div = div + '<span> ' + this.tour_period_night_number + ' </span>';
+//            div = div + '<span>คืน</span>';
+//            div = div + '<span>' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</span>';
+//            div = div + '</div>';
+//            div = div + '<div class="tag-tour-num">';
+//            var tour_code = val['tour_package_id'];
+//            div = div + '<span>รหัส</span>';
+//            div = div + '<span> TH' + tour_code + '</span>';
+//            div = div + '</div>';
+//
+//            div = div + '</div>';
+//            div = div + '</div>';
+//
+//
+//            div = div + '<div class="item-body">';
+//            //div = div + '<div class="item-title"><h5 style="color:#ea1c24"><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_name + '</a></h5></div>';
+//            div = div + '<div class="item-title"><h2><a href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">' + this.tour_package_name + '</a></h2></div>';
+//            div = div + '<div class="hilight">';
+//            div = div + '<i class="fas fa-quote-left"></i>';
+//            div = div + '<div class="detail">';
+//            div = div + this.tour_package_detail;
+//            div = div + '</div>';
+//            div = div + '</div>';
+////            div = div + '<div class="item-list">';
+////            div = div + '<ul>';
+////            div = div + '<li><i class="far fa-clock"></i> ' + this.tour_period_day_number + ' วัน ' + this.tour_period_night_number + ' คืน</li>';
+////            var all_as = val["tour_package_period_start"].split("-");
+////            var all_ae = val["tour_package_period_end"].split("-");
+////            div = div + '<li><i class="far fa-calendar"></i> ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</li>';
+////            div = div + '</ul>';
+////            div = div + '</div>';
+//            div = div + '<div class="item-footer">';
+//            div = div + '<div class="item-rate">';
+//            div = div + '<div class="card-airline">';
+//            div = div + '<img alt="' + this.airline_name + '" src="../images/airline/' + this.airline_picture + '" title="">';
+//            div = div + '</div>';
+//            div = div + '</div>';
+////            div = div + '<div class="item-icon">';
+////            var tour_code = val['tour_package_id'];
+//////            while (tour_code.length != 6)
+//////            {
+//////                tour_code = '0' + tour_code;
+//////            }
+////            div = div + '<div class="pass">รหัสทัวร์&nbsp</div>TH' + tour_code;
+////            div = div + '</div>';
+//            div = div + '</div>';
+//            div = div + '</div>';
+//            div = div + '<div class="item-price-more">';
+//            div = div + '<div class="price">';
+//            div = div + 'ราคา';
+//            if (this.tour_package_special_price > 0) {
+//                div = div + '<ins>';
+//                div = div + '<span class="amount">' + numberWithCommas(this.tour_package_special_price) + '฿</span>';
+//                div = div + '</ins>';
+//                div = div + '<del>';
+//                div = div + '<span class="amount">' + numberWithCommas(this.tour_package_price) + '฿</span>';
+//                div = div + '</del>'
+//            } else {
+//                div = div + '<ins>';
+//                div = div + '<span class="amount">' + numberWithCommas(this.tour_package_price) + '฿</span>';
+//                div = div + '</ins>';
+//            }
+//
+////            $.each(tourPeriod, function (keyPrice, valPrice) {
+////                if (valPrice['tour_package_id'] === val['tour_package_id']) {
+////                    div = div + '<span class="amount">฿' + numberWithCommas(tourPeriod[keyPrice].tour_period_adult_price) + '</span>';
+////                    return false;
+////                }
+////            });
+//            div = div + '</div>';
+//            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">รายละเอียด</a>';
+//            div = div + '</div>';
+//            div = div + '</li>';
+//            divs = divs + div;
+//        });
+//        $('#card_area').html(divs);
+//        $('#search_tour_pager').show();
+//    } else {
+//        $('.card_show').show();
+//        $('#loading').hide();
+//        $('#package_country').hide();
+//        $('#package_country_image').hide();
+//        $('#sorting').hide();
+//        $("#card_area").empty();
+//        var div = "<div class='search-empty'>ขออภัยไม่พบทัวร์ที่ค้นหา</div>";
+//        $('#card_area').html(div);
+//        $('#search_tour_pager').hide();
+//    }
+//}
+
 function renderTourCard(tourPackageList, tourPeriod) {
     var obj = tourPackageList;
     if (obj != null && obj.length > 0) {
@@ -480,16 +591,19 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + '<img src="../images/tour/' + this.tour_package_image + '" alt="">';
             div = div + '</div>';
 
-            div = div + '<div class="bot-img-detail">';
+            div = div + '<div class="bot-img-detail visible-xs visible-sm">';
             div = div + '<div class="tag-day-and-period">';
+
             var all_as = val["tour_package_period_start"].split("-");
             var all_ae = val["tour_package_period_end"].split("-");
+
             div = div + '<span>' + this.tour_period_day_number + ' </span>';
             div = div + '<span>วัน</span>';
             div = div + '<span> ' + this.tour_period_night_number + ' </span>';
             div = div + '<span>คืน</span>';
             div = div + '<span>' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</span>';
             div = div + '</div>';
+
             div = div + '<div class="tag-tour-num">';
             var tour_code = val['tour_package_id'];
             div = div + '<span>รหัส</span>';
@@ -500,64 +614,254 @@ function renderTourCard(tourPackageList, tourPeriod) {
             div = div + '</div>';
 
 
+            div = div + '<div class="item-head-body">';
+            div = div + '<a href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">' + this.tour_package_name + '</a>';
+            div = div + '</div>';
+
+
             div = div + '<div class="item-body">';
-            //div = div + '<div class="item-title"><h5 style="color:#ea1c24"><a href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_name'] + '">' + this.tour_package_name + '</a></h5></div>';
-            div = div + '<div class="item-title"><h2><a href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">' + this.tour_package_name + '</a></h2></div>';
-            div = div + '<div class="hilight">';
-            div = div + '<i class="fas fa-quote-left"></i>';
+            div = div + '<div class="tag-box-left hidden-xs">';
+            div = div + '<div class="tag-head flexbox">';
+            div = div + '<span class="flexbox">ระยะเวลา</span>';
+            div = div + '<span class="flexbox">รหัสทัวร์</span>';
+            div = div + '</div>'
+
+            div = div + '<div class="tag-id flexbox">';
+            div = div + '<span class="flexbox">' + this.tour_period_day_number + ' วัน ' + this.tour_period_night_number + ' คืน</span>';
+            div = div + '<span class="flexbox">TH' + tour_code + '</span>';
+            div = div + '</div>'
+
+            div = div + '<div class="tag-airline">';
+            div = div + '<span class="flexbox">สายการบิน</span>';
+            div = div + '<div class="tag-airline2 flexbox">';
+            div = div + '<img alt="' + this.airline_name + '" src="../images/airline/' + this.airline_picture + '" title="">';
+            div = div + '</div>';
+            div = div + '</div>';
+            div = div + '</div>';
+            div = div + '</div>';
+
+            div = div + '<div class="item-price-more">';
+            div = div + '<div class="price">ราคา';
+            div = div + '<ins><span class="amount">' + numberWithCommas(this.tour_package_price) + '<span class="bbb">บาท</span></span></ins>'
+            div = div + '</div>';
+            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">ดูรายละเอียด</a>';
+            div = div + '</div>';
+
+            div = div + '<div class="item-hilight-more hilight">';
+            div = div + '<span class="hi-text">ไฮไลท์ - </span><i class="fas fa-quote-left"></i>';
             div = div + '<div class="detail">';
             div = div + this.tour_package_detail;
             div = div + '</div>';
             div = div + '</div>';
-//            div = div + '<div class="item-list">';
-//            div = div + '<ul>';
-//            div = div + '<li><i class="far fa-clock"></i> ' + this.tour_period_day_number + ' วัน ' + this.tour_period_night_number + ' คืน</li>';
-//            var all_as = val["tour_package_period_start"].split("-");
-//            var all_ae = val["tour_package_period_end"].split("-");
-//            div = div + '<li><i class="far fa-calendar"></i> ช่วงเวลา ' + setCTMonthString(all_as[1]) + ' - ' + setCTMonthString(all_ae[1]) + '</li>';
-//            div = div + '</ul>';
-//            div = div + '</div>';
-            div = div + '<div class="item-footer">';
-            div = div + '<div class="item-rate">';
-            div = div + '<div class="card-airline">';
-            div = div + '<img alt="' + this.airline_name + '" src="../images/airline/' + this.airline_picture + '" title="">';
-            div = div + '</div>';
-            div = div + '</div>';
-//            div = div + '<div class="item-icon">';
-//            var tour_code = val['tour_package_id'];
-////            while (tour_code.length != 6)
-////            {
-////                tour_code = '0' + tour_code;
-////            }
-//            div = div + '<div class="pass">รหัสทัวร์&nbsp</div>TH' + tour_code;
-//            div = div + '</div>';
-            div = div + '</div>';
-            div = div + '</div>';
-            div = div + '<div class="item-price-more">';
-            div = div + '<div class="price">';
-            div = div + 'ราคา';
-            if (this.tour_package_special_price > 0) {
-                div = div + '<ins>';
-                div = div + '<span class="amount">' + numberWithCommas(this.tour_package_special_price) + '฿</span>';
-                div = div + '</ins>';
-                div = div + '<del>';
-                div = div + '<span class="amount">' + numberWithCommas(this.tour_package_price) + '฿</span>';
-                div = div + '</del>'
-            } else {
-                div = div + '<ins>';
-                div = div + '<span class="amount">' + numberWithCommas(this.tour_package_price) + '฿</span>';
-                div = div + '</ins>';
+
+            var months = [];
+            var h01 = "";
+            var h02 = "";
+            var h03 = "";
+            var h04 = "";
+            var h05 = "";
+            var h06 = "";
+            var h07 = "";
+            var h08 = "";
+            var h09 = "";
+            var h10 = "";
+            var h11 = "";
+            var h12 = "";
+
+            $.each(tourPeriod, function (keyPrice, valPrice) {
+                if (valPrice['tour_package_id'] === val['tour_package_id']) {
+                    var as = valPrice["tour_period_start"].split("-");
+                    var ae = valPrice["tour_period_end"].split("-");
+                    var ae2 = ae[2].split(' ');
+                    var as2 = as[2].split(' ');
+                    var date = as2[0] + "-" + ae2[0];
+
+                    if (as[1] === "01") {
+                        h01 = h01 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h01 = h01 + '<span class="separate"> / </span>';
+                        months.indexOf("01") == -1 ? months.push("01") : "";
+                    }
+
+                    if (as[1] === "02") {
+                        h02 = h02 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h02 = h02 + '<span class="separate"> / </span>';
+                        months.indexOf("02") == -1 ? months.push("02") : "";
+                    }
+                    if (as[1] === "03") {
+                        h03 = h03 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h03 = h03 + '<span class="separate"> / </span>';
+                        months.indexOf("03") == -1 ? months.push("03") : "";
+                    }
+                    if (as[1] === "04") {
+                        h04 = h04 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h04 = h04 + '<span class="separate"> / </span>';
+                        months.indexOf("04") == -1 ? months.push("04") : "";
+                    }
+                    if (as[1] === "05") {
+                        h05 = h05 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h05 = h05 + '<span class="separate"> / </span>';
+                        months.indexOf("05") == -1 ? months.push("05") : "";
+                    }
+                    if (as[1] === "06") {
+                        h06 = h06 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h06 = h06 + '<span class="separate"> / </span>';
+                        months.indexOf("06") == -1 ? months.push("06") : "";
+                    }
+                    if (as[1] === "07") {
+                        h07 = h07 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h07 = h07 + '<span class="separate"> / </span>';
+                        months.indexOf("07") == -1 ? months.push("07") : "";
+                    }
+                    if (as[1] === "08") {
+                        h08 = h08 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h08 = h08 + '<span class="separate"> / </span>';
+                        months.indexOf("08") == -1 ? months.push("08") : "";
+                    }
+                    if (as[1] === "09") {
+                        h09 = h09 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h09 = h09 + '<span class="separate"> / </span>';
+                        months.indexOf("09") == -1 ? months.push("09") : "";
+                    }
+                    if (as[1] === "10") {
+                        h10 = h10 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h10 = h10 + '<span class="separate"> / </span>';
+                        months.indexOf("10") == -1 ? months.push("10") : "";
+                    }
+                    if (as[1] === "11") {
+                        h11 = h11 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h11 = h11 + '<span class="separate"> / </span>';
+                        months.indexOf("11") == -1 ? months.push("11") : "";
+                    }
+                    if (as[1] === "12") {
+                        h12 = h12 + '<span class="date soldout" data-event-name="">' + date + '</span>';
+                        h12 = h12 + '<span class="separate"> / </span>';
+                        months.indexOf("12") == -1 ? months.push("12") : "";
+                    }
+                }
+            });
+
+            if (months.indexOf("01") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("01") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h01;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("02") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("02") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h02;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("03") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("03") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h03;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("04") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("04") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h04;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("05") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("05") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h05;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("06") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("06") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h06;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("07") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("07") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h07;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("08") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("08") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h08;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("09") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("09") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h09;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("10") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("10") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h10;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("11") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("11") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h11;
+                div = div + '</div>';
+                div = div + '</div>';
+            }
+            if (months.indexOf("12") != -1) {
+                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="table-month">';
+                div = div + '<span class="month">' + setCTMonthString("12") + '</span>';
+                div = div + '</div>';
+                div = div + '<div class="peroid">';
+                div = div + h12;
+                div = div + '</div>';
+                div = div + '</div>';
             }
 
-//            $.each(tourPeriod, function (keyPrice, valPrice) {
-//                if (valPrice['tour_package_id'] === val['tour_package_id']) {
-//                    div = div + '<span class="amount">฿' + numberWithCommas(tourPeriod[keyPrice].tour_period_adult_price) + '</span>';
-//                    return false;
-//                }
-//            });
-            div = div + '</div>';
-            div = div + '<a class="awe-btn" href="/tour-detail/' + val['tour_country_name'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">รายละเอียด</a>';
-            div = div + '</div>';
+
             div = div + '</li>';
             divs = divs + div;
         });
