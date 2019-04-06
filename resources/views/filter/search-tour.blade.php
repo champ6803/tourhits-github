@@ -444,7 +444,7 @@
                     <div class="row">
                         <div id="card_area" class="card_show filter-item-wrapper">
 
-                            <!--                            <li class="trip-item">
+<!--                                                        <li class="trip-item">
                                                             <div class="item-media">
                                                                 <div class="image-cover">
                                                                     <img src="../images/tour/208-Oshino Hakkai.jpg" alt="">

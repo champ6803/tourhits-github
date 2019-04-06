@@ -66,7 +66,7 @@
                                                     <div class="form-group row">
                                                         <label for="article_short_detail" class="col-sm-2 control-label">รายละเอียด(ย่อ) :</label>
                                                         <div class="col-sm-10">
-                                                            <textarea style="height: 200px;" type="text" class="form-control" id="article_short_detail" name="article_short_detail"></textarea>
+                                                            <textarea style="height: 200px;" type="text" class="form-control wysi" id="article_short_detail" name="article_short_detail"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
