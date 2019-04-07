@@ -615,7 +615,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
 
 
             div = div + '<div class="item-head-body">';
-            div = div + '<a href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">' + this.tour_package_name + '</a>';
+            div = div + '<h3><a href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">' + this.tour_package_name + '</a></h3>';
             div = div + '</div>';
 
 
@@ -741,7 +741,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
             });
 
             if (months.indexOf("01") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("01") + '</span>';
                 div = div + '</div>';
@@ -751,7 +751,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("02") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("02") + '</span>';
                 div = div + '</div>';
@@ -761,7 +761,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("03") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("03") + '</span>';
                 div = div + '</div>';
@@ -771,7 +771,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("04") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("04") + '</span>';
                 div = div + '</div>';
@@ -781,7 +781,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("05") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("05") + '</span>';
                 div = div + '</div>';
@@ -791,7 +791,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("06") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("06") + '</span>';
                 div = div + '</div>';
@@ -801,7 +801,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("07") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("07") + '</span>';
                 div = div + '</div>';
@@ -811,7 +811,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("08") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("08") + '</span>';
                 div = div + '</div>';
@@ -821,7 +821,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("09") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("09") + '</span>';
                 div = div + '</div>';
@@ -831,7 +831,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("10") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("10") + '</span>';
                 div = div + '</div>';
@@ -841,7 +841,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("11") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("11") + '</span>';
                 div = div + '</div>';
@@ -851,7 +851,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
                 div = div + '</div>';
             }
             if (months.indexOf("12") != -1) {
-                div = div + '<div class="item-period-table hidden-xs">';
+                div = div + '<div class="item-period-table">';
                 div = div + '<div class="table-month">';
                 div = div + '<span class="month">' + setCTMonthString("12") + '</span>';
                 div = div + '</div>';

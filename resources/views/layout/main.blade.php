@@ -1137,7 +1137,5 @@ session_start();
                 divelement.style.display = 'block';
         }
     </script>
-
-
 </body>
 </html>

@@ -231,6 +231,7 @@
 
         .filter-page__content .trip-item{
             padding: 0;
+            padding-bottom: 10px;
             border-radius: 0;
             margin-top: 20px;
         }
@@ -384,13 +385,10 @@
     </div>
 </section>
 <!-- END / HEADING PAGE -->
-
 <section class="filter-page">
     <div class="container">
-
         <div class="row">   
             <div class="col-md-12 tour-local-wrapper">
-
                 <div id="owl-demo" class="tag-container owl-carousel owl-theme">
                     @foreach ($tagList as $tag)
                     <div class="tag-item"><a href="{{url('/tour/'.$tag->tag_url)}}">{{$tag->t_name}}</a></div>
@@ -400,8 +398,6 @@
                 <div class="swiper-button-prev swiper-button-disabled prev"><i class="fa fa-angle-left"></i></div>
             </div>    
         </div>                               
-
-
         <!--กลาง-->
         <div class="filter-page-mid">
             <div class="col-md-6 col-md-push-3 page-mid-bg">
@@ -1482,6 +1478,18 @@
                     </div>
                 </div>
                 @endif
+                @if (count($countryArticleList) > 0)
+                <div class="sidebar-title">
+                    <h3><i class="fa fa-globe"></i>&nbsp;<?php echo $countryArticleList[0]->country_article_name ?></h3>         
+                </div>
+                <div class="left-bar2">
+                    <div class="box-content">
+                        <div class="filter-article" style="padding: 10px;">
+                            <?php echo $countryArticleList[0]->country_article_detail ?>
+                        </div>
+                    </div>
+                </div>
+                @endif
             </div>
         </div>
 
@@ -1529,3 +1537,38 @@
 <script type="text/javascript" src="{{ asset('js/filter/search-tour.js') }}"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 @endsection
+@section('schema_scripts')
+<script>
+<?php
+$pattern = '/\s*/m';
+$replace = '';
+?>
+</script>
+<script type='application/ld+json'> 
+    {
+    "@context": "http://www.schema.org",
+    "@type": "product",
+    "brand": "<?php
+    if (count($tourCountryList) > 0) {
+        echo strip_tags($tourCountryList[0]->tour_country_name);
+    } else if (count($tags) > 0) {
+        echo strip_tags($tags[0]->tag_name);
+    }
+    ?>",
+    "name": "<?php
+    if (count($tourCountryList) > 0) {
+        echo strip_tags($tourCountryList[0]->tour_country_name);
+     } else if (count($tags) > 0) {
+        echo strip_tags($tags[0]->tag_name);
+    }
+    ?>",
+    "image":"<?php if (count($tourCountryList) > 0) echo "https://www.tourhits.co/images/fg/" . strip_tags($tourCountryList[0]->country_code) . ".png"; ?>",
+    "description": "<?php if (count($countryArticleList) > 0) echo preg_replace($pattern, $replace, strip_tags($countryArticleList[0]->country_article_detail)); ?>",
+    "aggregateRating": {
+    "@type": "aggregateRating",
+    "ratingValue": "10",
+    "reviewCount": "100"
+    }
+    }
+</script>
+@stop

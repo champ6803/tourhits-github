@@ -6992,7 +6992,6 @@ https://flickity.metafizzy.co
 
 .article-section .article-item .article-item-detail span{
     font-size: 14px;
-    font-family: 'Bai Jamjuree', sans-serif;
     color: black;
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -7003,7 +7002,7 @@ https://flickity.metafizzy.co
 
 .article-section .article-item .article-item-detail span p{
     line-height: 1.5; 
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .article-section .article-item .article-item-date{
@@ -7270,6 +7269,10 @@ https://flickity.metafizzy.co
     color: #ed5565;
     float: left;
     padding-right: 10px;
+}
+
+.trip-item .item-period-table {
+    padding-top: 5px;
 }
 
 .trip-item .item-period-table .table-month{

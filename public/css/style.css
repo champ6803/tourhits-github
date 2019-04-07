@@ -4692,6 +4692,10 @@ body.single-post .blog-page__content > .post .post-content {
     padding: 10px 10px 3px 10px;
 }
 
+.item-head-body h3 {
+    margin-top: 0;
+}
+
 .item-head-body a{
     display: -webkit-box;
     font-family: 'Bai Jamjuree', sans-serif;
