@@ -5352,6 +5352,12 @@ Custom BS3
     line-height: 27.5px;
 }
 
+.filter-page__content .country h1{
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 27.5px;
+}
+
 .filter-page__content .country{
     padding-top: 33px;
 }

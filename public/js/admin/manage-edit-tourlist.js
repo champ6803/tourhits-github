@@ -609,7 +609,9 @@ function initValues() {
             //$("#pdf_show").html(tourPackageDetail.tourPackage.tour_package_pdf);
             $("#pdf_hidden").val(tourPackageDetail.tourPackage.tour_package_pdf);
             $("#remark").val(tourPackageDetail.tourPackage.tour_package_remark);
-
+            $('#meta_title').val(tourPackageDetail.tourPackage.meta_title);
+            $('#meta_keywords').val(tourPackageDetail.tourPackage.meta_keywords);
+            $('#meta_description').val(tourPackageDetail.tourPackage.meta_description);
 
             //$('#div_file').html('<div class="row"><div class="col-xs-8"><img height="100px;" src="images/tour/tour6.jpg"></div><div class="col-xs-4"><input class="form-control" type="file" id="file" name="file"><input type="hidden" value="{{ csrf_token() }}" name="_token"></div></div>');
         }

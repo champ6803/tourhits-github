@@ -615,7 +615,7 @@ function renderTourCard(tourPackageList, tourPeriod) {
 
 
             div = div + '<div class="item-head-body">';
-            div = div + '<h3><a href="/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">' + this.tour_package_name + '</a></h3>';
+            div = div + '<h3><a href="' + base_path + '/tour-detail/' + val['tour_country_url'] + '/' + val['tour_package_id'] + '/' + val['tour_package_code'] + '">' + this.tour_country_name + ' ' + this.tour_package_name + '</a></h3>';
             div = div + '</div>';
 
 

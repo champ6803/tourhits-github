@@ -412,9 +412,8 @@
                             <div class="col-sm-6">
                                 <div class="country">
                                     <img id="package_country_image" style="float: left; margin-right: 10px; border:#d7d7d7 solid 1px; border-radius: 8px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);" class="lazyloaded">
-                                    <span id="package_country2"></span>
+                                    <h1 id="package_country2"></h1>
                                     <h6 id="package_country"></h6>
-
                                 </div>
                             </div>
                             <div id="sorting" class="row card_show">
@@ -432,7 +431,7 @@
                         </div>
                     </div>
 
-                    <!--                เทส Card-->
+                    <!--เทส Card-->
                     <div class="row">
                         <div id="card_area" class="card_show filter-item-wrapper">
                             <li class="trip-item">

@@ -437,9 +437,9 @@
                                                                 </div>                                                                                
                                                             </div>-->
                     </div>
-                    <div id='login_panel' class="content-title text-center">
+<!--                    <div id='login_panel' class="content-title text-center">
                         <h2 style="color:#26aeca"><i class="fas fa-lock"></i>&nbsp;<a href="/login">เข้าสู่ระบบ หรือ </a></h2>
-                    </div>
+                    </div>-->
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div id="collapse1" class="panel-collapse">

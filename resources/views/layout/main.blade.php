@@ -13,6 +13,14 @@ session_start();
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        @yield('meta')
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="contact_addr" content="300/76  NAWAMIN RD. NAWAMIN BUENGKUM BANGKOK THAILAND 10240.">
+        <meta name="copyright" content="Copyright 2018 By Tourhits co., ltd.">
+        <meta name="author" content="Tourhits co., ltd.">
+        <meta name="revisit-after" content="1 days">
+
         <!--CSRF Token-->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -68,7 +76,9 @@ session_start();
             })(window, document, 'script', 'dataLayer', 'GTM-WVXGR66');
         </script>
         <!-- End Google Tag Manager -->
-        
+
+
+
         @yield('schema_scripts')
 
         @yield('meta_tag')
