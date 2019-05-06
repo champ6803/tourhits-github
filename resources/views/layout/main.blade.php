@@ -127,7 +127,7 @@ session_start();
                                 <a href="http://line.me/ti/p/%40tourhits" target="_blank" rel="noopener noreferrer" class="" data-line-link=""><img src="{{ asset('/images/logo-line-2.png')}}"> @Tourhits</a>        
                             </div>
                             <div class="work-time-tel">
-                                <span><i class="fas fa-phone"></i> 02-379-1249</span>
+                                <span><i class="fas fa-phone"></i> 062-914-2361</span>
                             </div>                
                             <div class="work-time2">
                                 <span class="line-1">จ-ศ. เวลา 09.00-18.00 น.</span>
@@ -840,6 +840,7 @@ session_start();
                             <div class="foot-location-detail"> 
                                 <p>เลขที่ 300/76 โครงการพรีเมี่ยมเพลส
                                 <p>ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กรุงเทพฯ 10240</p>                           
+                                <p>Hotline: 062-914-2361</p>
                                 <p>โทร: 0-2379-1249 Fax: 0-2379-1966-7</p>
                                 <p>E-mail:<a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;"> tourhits@gmail.com</a></p>
                             </div> 
@@ -970,7 +971,7 @@ session_start();
                 </div>
 
                 <div class="box-tel bx">  
-                    <a href="tel:02-379-1249">
+                    <a href="tel:062-914-2361">
                         <div class="tel-img-box img-bx">
                             <img alt="" src="{{ asset('/images/icon/telephone2.png')}}" title="">
                         </div>    
