@@ -13,6 +13,14 @@ session_start();
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        @yield('meta')
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="contact_addr" content="300/76  NAWAMIN RD. NAWAMIN BUENGKUM BANGKOK THAILAND 10240.">
+        <meta name="copyright" content="Copyright 2018 By Tourhits co., ltd.">
+        <meta name="author" content="Tourhits co., ltd.">
+        <meta name="revisit-after" content="1 days">
+
         <!--CSRF Token-->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -68,7 +76,9 @@ session_start();
             })(window, document, 'script', 'dataLayer', 'GTM-WVXGR66');
         </script>
         <!-- End Google Tag Manager -->
-        
+
+
+
         @yield('schema_scripts')
 
         @yield('meta_tag')
@@ -117,7 +127,7 @@ session_start();
                                 <a href="http://line.me/ti/p/%40tourhits" target="_blank" rel="noopener noreferrer" class="" data-line-link=""><img src="{{ asset('/images/logo-line-2.png')}}"> @Tourhits</a>        
                             </div>
                             <div class="work-time-tel">
-                                <span><i class="fas fa-phone"></i> 02-379-1249</span>
+                                <span><i class="fas fa-phone"></i> 062-914-2361</span>
                             </div>                
                             <div class="work-time2">
                                 <span class="line-1">จ-ศ. เวลา 09.00-18.00 น.</span>
@@ -830,6 +840,7 @@ session_start();
                             <div class="foot-location-detail"> 
                                 <p>เลขที่ 300/76 โครงการพรีเมี่ยมเพลส
                                 <p>ถนนนวมินทร์ แขวงนวมินทร์ เขตบึงกุ่ม กรุงเทพฯ 10240</p>                           
+                                <p>Hotline: 062-914-2361</p>
                                 <p>โทร: 0-2379-1249 Fax: 0-2379-1966-7</p>
                                 <p>E-mail:<a href="mailto:tourhits@gmail.com" style="color:#7F7FF5;"> tourhits@gmail.com</a></p>
                             </div> 
@@ -927,7 +938,7 @@ session_start();
                             </div>
                             <div class="row">
                                 <div class="col-md-4">ใบอนุญาตประกอบธุรกิจนำเที่ยว<br>เลขที่ 11/09305</div>
-                                <div class="col-md-4 hidden-xs hidden-smboxx">สมาชิกสมาคมไทยธุรกิจการท่องเที่ยว เลขที่ 012345</div>
+                                <div class="col-md-4 hidden-xs hidden-smboxx">สมาคมไทยบริการท่องเที่ยว เลขที่ 1474</div>
                                 <div class="col-md-4 hidden-xs hidden-sm boxx">e-Commerce No.01234567890</div>
                             </div>    
                             <p>สงวนลิขสิทธิ์ 2561 Tourhits.co | 2018 Tourhits All rights reserved.</p>  
@@ -960,7 +971,7 @@ session_start();
                 </div>
 
                 <div class="box-tel bx">  
-                    <a href="tel:02-379-1249">
+                    <a href="tel:062-914-2361">
                         <div class="tel-img-box img-bx">
                             <img alt="" src="{{ asset('/images/icon/telephone2.png')}}" title="">
                         </div>    
@@ -1137,7 +1148,5 @@ session_start();
                 divelement.style.display = 'block';
         }
     </script>
-
-
 </body>
 </html>

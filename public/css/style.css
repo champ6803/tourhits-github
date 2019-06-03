@@ -58,7 +58,7 @@ select:focus {
 
 body {
     position: relative;
-    font-family: supermarket, sans-serif;
+    font-family: kanit, sans-serif;
     font-size: 15px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -1076,8 +1076,8 @@ span.dropcap {
 }
 .awe-navigation .menu-list li a {
     display: block;
-    font-family: supermarket, sans-serif;
-    font-weight: 600;
+    font-family: kanit,sans-serif;
+    /*font-weight: 600;*/
     font-size: 17px;
     color: #262626;
     line-height: 43px;
@@ -4690,6 +4690,10 @@ body.single-post .blog-page__content > .post .post-content {
 .item-head-body {
     position: relative;
     padding: 10px 10px 3px 10px;
+}
+
+.item-head-body h3 {
+    margin-top: 0;
 }
 
 .item-head-body a{

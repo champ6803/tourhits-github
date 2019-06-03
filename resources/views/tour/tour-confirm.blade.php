@@ -214,7 +214,7 @@
                 <div class="checkout-page__content">
                     <!--<div class="yourcart-content">-->
                     <div class="content-title">
-                        <h2><i class="fas fa-male"></i> <i class="fas fa-female"></i> <i class="fas fa-child"></i>&nbspจำนวนผู้โดยสาร</h2>
+                        <h2><i class="fas fa-male"></i> <i class="fas fa-female"></i> <i class="fas fa-child"></i>&nbsp;จำนวนผู้โดยสาร</h2>
                     </div>
                     <div class="cart-content">
                         <!--ผู้ใหญ่-->
@@ -437,9 +437,9 @@
                                                                 </div>                                                                                
                                                             </div>-->
                     </div>
-                    <div id='login_panel' class="content-title text-center">
+<!--                    <div id='login_panel' class="content-title text-center">
                         <h2 style="color:#26aeca"><i class="fas fa-lock"></i>&nbsp;<a href="/login">เข้าสู่ระบบ หรือ </a></h2>
-                    </div>
+                    </div>-->
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div id="collapse1" class="panel-collapse">

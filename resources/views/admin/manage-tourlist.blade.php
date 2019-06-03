@@ -175,6 +175,38 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="meta_title" class="col-sm-1 control-label">Meta Title (SEO)</label>
+                                                        <div class="col-sm-11">
+                                                            <input type="text" class="form-control" id="meta_title" name="meta_title">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="meta_keywords" class="col-sm-1 control-label">Meta Keywords (SEO)</label>
+
+                                                        <div class="col-sm-11">
+                                                            <input type="text" class="form-control" id="meta_keywords" name="meta_keywords">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <label for="meta_description" class="col-sm-1 control-label">Meta Description (SEO)</label>
+
+                                                        <div class="col-sm-11">
+                                                            <input type="text" class="form-control" id="meta_description" name="meta_description">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <!-- /.box-body -->
                                         <div class="box-footer">

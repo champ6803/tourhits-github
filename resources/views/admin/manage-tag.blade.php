@@ -83,12 +83,24 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">ชื่อ Tags:</label>
+                        <label for="tag_name" class="col-form-label">ชื่อ Tags:</label>
                         <input type="text" class="form-control" id="tag_name">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">URL:</label>
+                        <label for="rtag_url" class="col-form-label">URL:</label>
                         <input type="text" class="form-control" id="tag_url">
+                    </div>
+                    <div class="form-group">
+                        <label for="meta_title" class="col-form-label">Meta Title:</label>
+                        <input type="text" class="form-control" id="meta_title">
+                    </div>
+                    <div class="form-group">
+                        <label for="meta_title" class="col-form-label">Meta Keywords:</label>
+                        <input type="text" class="form-control" id="meta_keywords">
+                    </div>
+                    <div class="form-group">
+                        <label for="meta_title" class="col-form-label">Meta Description:</label>
+                        <input type="text" class="form-control" id="meta_description">
                     </div>
                 </form>
             </div>
@@ -120,6 +132,18 @@
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">URL:</label>
                         <input type="text" class="form-control" id="update_tag_url">
+                    </div>
+                    <div class="form-group">
+                        <label for="meta_title" class="col-form-label">Meta Title:</label>
+                        <input type="text" class="form-control" id="update_meta_title">
+                    </div>
+                    <div class="form-group">
+                        <label for="meta_title" class="col-form-label">Meta Keywords:</label>
+                        <input type="text" class="form-control" id="update_meta_keywords">
+                    </div>
+                    <div class="form-group">
+                        <label for="meta_title" class="col-form-label">Meta Description:</label>
+                        <input type="text" class="form-control" id="update_meta_description">
                     </div>
                 </form>
             </div>

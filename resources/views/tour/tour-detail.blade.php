@@ -416,7 +416,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
         <div class="breadcrumb">
             <ul>
                 <li><a href="{{url('/')}}">แพ็คเกจทัวร์</a></li>
-                <li><a href="{{ URL::to('search-tour/' .$tourPackage->tour_country_name. '?country='. $tourPackage->tour_country_id)}}">{{$tourPackage->tour_country_name}}</a></li>
+                <li><a href="{{ URL::to('tour/' .$tourPackage->tour_country_url)}}">{{$tourPackage->tour_country_name}}</a></li>
                 <li><a href="{{url('tour-detail/' .$tourPackage->tour_country_url. '/' .$tourPackage->tour_package_id. '/'.$tourPackage->tour_package_code)}}">{{$tourPackage->tour_package_name}}</a></li>
             </ul>
         </div>
@@ -1705,7 +1705,7 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
             </div>
 
 
-   
+
             <!-- กล่องจอง -->
             <div class="col-md-3">
                 <div class="detail-sidebar">                    
@@ -2049,6 +2049,12 @@ for ($day = 1; $day <= $day_count; $day++, $str++) {
 <script type="text/javascript" src="{{ asset('js/tour/tour-detail.js') }}"></script>
 
 @endsection
+@section('meta')
+<meta name="title" content="{{ $tourPackage->meta_title }}">
+<meta name="description" content="{{ $tourPackage->meta_description }}">
+<meta name="keywords" content="{{ $tourPackage->meta_keywords }}">
+@endsection
+
 
 <!--กดแล้วถ่าง                        -->
 <!--                         กดแล้วถ่าง 

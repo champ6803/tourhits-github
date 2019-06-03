@@ -29,7 +29,7 @@ $.fn.pageMe = function (opts) {
     console.log(pager.children());
 
     if (settings.showPrevNext) {
-        $('<li class="hidden-xs"><a href="#" class="prev_link back"><i class="fas fa-chevron-circle-left"></i> หน้าก่อน</a></li>').appendTo(pager);
+        $('<li class="hidden-xs"><a href="#" class="prev_link back"><i class="fas fa-chevron-circle-left"></i></a></li>').appendTo(pager);
     }
 
     if (curr > 1) {
@@ -74,7 +74,7 @@ $.fn.pageMe = function (opts) {
 //    }
 
     if (settings.showPrevNext) {
-        $('<li class="hidden-xs"><a href="#" class="next_link next">หน้าถัดไป <i class="fas fa-chevron-circle-right"></i></a></li>').appendTo(pager);
+        $('<li class="hidden-xs"><a href="#" class="next_link next"><i class="fas fa-chevron-circle-right"></i></a></li>').appendTo(pager);
     }
 
     //pager.find('.page_link:first').addClass('active');

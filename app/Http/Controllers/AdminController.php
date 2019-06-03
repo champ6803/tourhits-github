@@ -382,7 +382,10 @@ class AdminController extends Controller {
         try {
             $tag_name = $_POST['tag_name'];
             $tag_url = $_POST['tag_url'];
-            $tagModel->insertTag($tag_name, $tag_url);
+            $meta_title = $_POST['meta_title'];
+            $meta_keywords = $_POST['meta_keywords'];
+            $meta_description = $_POST['meta_description'];
+            $tagModel->insertTag($tag_name, $tag_url, $meta_title, $meta_keywords, $meta_description);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -408,7 +411,10 @@ class AdminController extends Controller {
             $id = $_POST['id'];
             $update_tag_name = $_POST['update_tag_name'];
             $update_tag_url = $_POST['update_tag_url'];
-            $tagModel->editTag($id, $update_tag_name, $update_tag_url);
+            $update_meta_title = $_POST['meta_title'];
+            $update_meta_keywords = $_POST['meta_keywords'];
+            $update_meta_description = $_POST['meta_description'];
+            $tagModel->editTag($id, $update_tag_name, $update_tag_url, $update_meta_title, $update_meta_keywords, $update_meta_description);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -641,7 +647,10 @@ class AdminController extends Controller {
                         "airline_select" => "required",
                         "route_select" => "required",
                         "main_price" => "required",
-                        "main_special_price" => "required"
+                        "main_special_price" => "required",
+                        "meta_title" => "required",
+                        "meta_keywords" => "required",
+                        "meta_description" => "required"
             ]);
 
             if ($validator->fails()) {
@@ -672,7 +681,10 @@ class AdminController extends Controller {
                         "airline_select" => "required",
                         "route_select" => "required",
                         "main_price" => "required",
-                        "main_special_price" => "required"
+                        "main_special_price" => "required",
+                        "meta_title" => "required",
+                        "meta_keywords" => "required",
+                        "meta_description" => "required"
             ]);
 
             if ($validator->fails()) {
@@ -716,6 +728,9 @@ class AdminController extends Controller {
                 $main_price = str_replace(",", "", $_POST['main_price']);
                 $main_special_price = str_replace(",", "", $_POST['main_special_price']);
                 $remark = $_POST['remark'];
+                $meta_title = $_POST['meta_title'];
+                $meta_keywords = $_POST['meta_keywords'];
+                $meta_description = $_POST['meta_description'];
 
                 $holiday_select = null;
                 if (isset($_POST['holiday_select'])) {
@@ -764,7 +779,7 @@ class AdminController extends Controller {
 
                 $id = $tourPackageModel->insertTourPackage($tour_package_code, $tour_country, $conditions_id, $tour_category
                         , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
-                        , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $quick_tour, $remark);
+                        , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $quick_tour, $remark, $meta_title, $meta_keywords, $meta_description);
 
                 if ($id != null && $id != 0) {
                     $tour_period_start = $_POST['period_start'];
@@ -916,7 +931,10 @@ class AdminController extends Controller {
                             "airline_select" => "required",
                             "route_select" => "required",
                             "main_price" => "required",
-                            "main_special_price" => "required"
+                            "main_special_price" => "required",
+                            "meta_title" => "required",
+                            "meta_keywords" => "required",
+                            "meta_description" => "required"
                 ]);
 
                 if ($validator->fails()) {
@@ -944,7 +962,10 @@ class AdminController extends Controller {
                             "airline_select" => "required",
                             "route_select" => "required",
                             "main_price" => "required",
-                            "main_special_price" => "required"
+                            "main_special_price" => "required",
+                            "meta_title" => "required",
+                            "meta_keywords" => "required",
+                            "meta_description" => "required"
                 ]);
 
                 if ($validator->fails()) {
@@ -977,6 +998,9 @@ class AdminController extends Controller {
                     $main_price = $_POST['main_price'];
                     $main_special_price = $_POST['main_special_price'];
                     $remark = $_POST['remark'];
+                    $meta_title = $_POST['meta_title'];
+                    $meta_keywords = $_POST['meta_keywords'];
+                    $meta_description = $_POST['meta_description'];
 
                     $holiday_select = null;
                     if (isset($_POST['holiday_select'])) {
@@ -1020,7 +1044,7 @@ class AdminController extends Controller {
                     $tourPeriodModel = new Tour_Period();
                     $tourPackageModel->updateTourPackage($tour_package_id, $tour_package_code, $tour_country, $conditions_id, $tour_category
                             , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
-                            , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $remark);
+                            , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $remark, $meta_title, $meta_keywords, $meta_description);
 
                     if ($tour_period_id != null && $tour_period_id != 0) {
                         $arr_tour_period_id = explode(",", $tour_period_id);
@@ -1046,9 +1070,9 @@ class AdminController extends Controller {
                                         , $tour_period_child_special_price, $tour_period_status);
                             } else {
                                 $speriod = $tourPeriodModel->insertTourPeriod($tour_package_id, $dateStart, $dateEnd, $tour_period_adult_price[$i]
-                                , $tour_period_child_price[$i], $tour_period_child_nb_price
-                                , $tour_period_alone_price, $tour_period_adult_special_price[$i]
-                                , $tour_period_child_special_price, $tour_period_status);
+                                        , $tour_period_child_price[$i], $tour_period_child_nb_price
+                                        , $tour_period_alone_price, $tour_period_adult_special_price[$i]
+                                        , $tour_period_child_special_price, $tour_period_status);
                             }
                         }
 
@@ -1239,7 +1263,7 @@ class AdminController extends Controller {
 //                $tourPackageObj->tour_package_period_start = $newStartDate;
 //                $tourPackageObj->tour_package_period_end = $newEndDate;
 //                $tourPackageObj->updated_date = $newUpdated;
-                
+
                 $tourPackageObj->tour_package_period_start_new = $newStartDate;
                 $tourPackageObj->tour_package_period_end_new = $newEndDate;
                 $tourPackageObj->updated_date_new = $newUpdated;

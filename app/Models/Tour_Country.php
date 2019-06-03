@@ -49,7 +49,7 @@ class Tour_Country extends Model {
         }
     }
 
-    public function insertTourCountry($tour_country_name, $country_id, $tour_country_detail, $tour_country_img, $tour_country_url) {
+    public function insertTourCountry($tour_country_name, $country_id, $tour_country_detail, $tour_country_img, $tour_country_url, $meta_title, $meta_keywords, $meta_description) {
         try {
             $date = \Carbon\Carbon::now();
             \DB::table('tour_country')->insert(
@@ -58,6 +58,9 @@ class Tour_Country extends Model {
                         , 'tour_country_detail' => $tour_country_detail
                         , 'tour_country_url' => $tour_country_url
                         , 'tour_country_img' => $tour_country_img
+                        , 'meta_title' => $meta_title
+                        , 'meta_description' => $meta_description
+                        , 'meta_keywords' => $meta_keywords
                         , 'created_by' => 'admin'
                         , 'created_at' => $date
                         , 'updated_by' => 'admin'
@@ -73,7 +76,7 @@ class Tour_Country extends Model {
         }
     }
 
-    public function editTourCountry($id, $update_tour_country_name, $tour_country_img, $country_id, $tour_country_detail, $tour_country_url) {
+    public function editTourCountry($id, $update_tour_country_name, $tour_country_img, $country_id, $tour_country_detail, $tour_country_url, $meta_title, $meta_keywords, $meta_description) {
         try {
             $date = \Carbon\Carbon::now();
             if (null == $tour_country_img) {
@@ -84,6 +87,9 @@ class Tour_Country extends Model {
                             , 'updated_by' => 'admin'
                             , 'tour_country_detail' => $tour_country_detail
                             , 'tour_country_url' => $tour_country_url
+                            , 'meta_title' => $meta_title
+                            , 'meta_description' => $meta_description
+                            , 'meta_keywords' => $meta_keywords
                             , 'country_id' => $country_id]);
             } else {
                 \DB::table('tour_country')
@@ -94,6 +100,9 @@ class Tour_Country extends Model {
                             , 'tour_country_img' => $tour_country_img
                             , 'tour_country_detail' => $tour_country_detail
                             , 'tour_country_url' => $tour_country_url
+                            , 'meta_title' => $meta_title
+                            , 'meta_description' => $meta_description
+                            , 'meta_keywords' => $meta_keywords
                             , 'country_id' => $country_id]);
                 if (Input::hasFile('file')) {
                     $file = Input::file('file');

@@ -75,7 +75,9 @@ if (!isset($_SESSION['a_user'])) {
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-
+        <script type="text/javascript">
+            var base_path = "{{ secure_url('/') }}";
+        </script>
     </head>
 
     <body class="hold-transition skin-blue-light sidebar-mini">

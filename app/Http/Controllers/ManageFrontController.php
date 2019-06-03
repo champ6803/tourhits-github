@@ -85,8 +85,12 @@ class ManageFrontController extends Controller {
             $country_id = $_POST['countryEdit'];
             $tour_country_detail = $_POST['update_tour_country_detail'];
             $tour_country_url = $_POST['update_tour_country_url'];
+            $meta_title = $_POST['update_meta_title'];
+            $meta_keywords = $_POST['update_meta_keywords'];
+            $meta_description = $_POST['update_meta_description'];
+
             $tourCountryModel->editTourCountry($id, $update_tour_country_name, null
-                    , $country_id, $tour_country_detail, $tour_country_url);
+                    , $country_id, $tour_country_detail, $tour_country_url, $meta_title, $meta_keywords, $meta_description);
             echo "<script>
                         alert('แก้ไขข้อมูลเสร็จสมบูรณ์');
                         window.location.href='manage-front-country';
@@ -105,9 +109,13 @@ class ManageFrontController extends Controller {
             $country_id = $_POST['country'];
             $tour_country_detail = $_POST['tour_country_detail'];
             $tour_country_url = $_POST['tour_country_url'];
+            $meta_title = $_POST['meta_title'];
+            $meta_keywords = $_POST['meta_keywords'];
+            $meta_description = $_POST['meta_description'];
+
             //$tour_country_img = $_FILES['file']['name'];
             $tourCountryModel->insertTourCountry($tour_country_name, $country_id
-                    , $tour_country_detail, null, $tour_country_url);
+                    , $tour_country_detail, null, $tour_country_url, $meta_title, $meta_keywords, $meta_description);
             echo "<script>
              alert('บันทึกข้อมูลเสร็จสมบูรณ์');
              window.location.href='manage-front-country';

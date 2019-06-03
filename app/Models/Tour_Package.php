@@ -38,7 +38,7 @@ class Tour_Package extends Model {
     }
 
     public function insertTourPackage($tour_package_code, $tour_country, $conditions_id, $tour_category, $tour_name
-    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price, $quick_tour, $remark) {
+    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price, $quick_tour, $remark, $meta_title, $meta_keywords, $meta_description) {
         try {
             $id_max = DB::table('tour_package')->max('tour_package_id');
             $date = \Carbon\Carbon::now();
@@ -59,6 +59,9 @@ class Tour_Package extends Model {
                                 , 'tour_package_period_end' => $dateEnd
                                 , 'tour_package_pdf' => ($id_max + 1) . '-' . $pdf
                                 , 'tour_package_remark' => $remark
+                                , 'meta_title' => $meta_title
+                                , 'meta_description' => $meta_description
+                                , 'meta_keywords' => $meta_keywords
                                 , 'is_quick_tour' => $quick_tour
                                 , 'created_by' => 'admin'
                                 , 'created_at' => $date
@@ -81,7 +84,7 @@ class Tour_Package extends Model {
     }
 
     public function updateTourPackage($tour_package_id, $tour_package_code, $tour_country, $conditions_id, $tour_category, $tour_name
-    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price, $remark) {
+    , $tour_detail, $highlight_tour, $tourlist_picture, $day, $night, $pdf, $dateStart, $dateEnd, $price, $special_price, $remark, $meta_title, $meta_keywords, $meta_description) {
         try {
             $date = \Carbon\Carbon::now();
             if ($this->IsNullOrEmptyString($tourlist_picture) && !$this->IsNullOrEmptyString($pdf)) {
@@ -102,6 +105,9 @@ class Tour_Package extends Model {
                                     , 'tour_package_period_end' => $dateEnd
                                     , 'tour_package_pdf' => $tour_package_id . '-' . $pdf
                                     , 'tour_package_remark' => $remark
+                                    , 'meta_title' => $meta_title
+                                    , 'meta_description' => $meta_description
+                                    , 'meta_keywords' => $meta_keywords
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );
@@ -127,6 +133,9 @@ class Tour_Package extends Model {
                                     , 'tour_package_period_start' => $dateStart
                                     , 'tour_package_period_end' => $dateEnd
                                     , 'tour_package_remark' => $remark
+                                    , 'meta_title' => $meta_title
+                                    , 'meta_description' => $meta_description
+                                    , 'meta_keywords' => $meta_keywords
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );
@@ -150,6 +159,9 @@ class Tour_Package extends Model {
                                     , 'tour_package_period_start' => $dateStart
                                     , 'tour_package_period_end' => $dateEnd
                                     , 'tour_package_remark' => $remark
+                                    , 'meta_title' => $meta_title
+                                    , 'meta_description' => $meta_description
+                                    , 'meta_keywords' => $meta_keywords
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );
@@ -171,6 +183,9 @@ class Tour_Package extends Model {
                                     , 'tour_package_period_end' => $dateEnd
                                     , 'tour_package_pdf' => $tour_package_id . '-' . $pdf
                                     , 'tour_package_remark' => $remark
+                                    , 'meta_title' => $meta_title
+                                    , 'meta_description' => $meta_description
+                                    , 'meta_keywords' => $meta_keywords
                                     , 'updated_by' => 'admin'
                                     , 'updated_at' => $date]
                 );
