@@ -214,7 +214,7 @@
                 <div class="checkout-page__content">
                     <!--<div class="yourcart-content">-->
                     <div class="content-title">
-                        <h2><i class="fas fa-male"></i> <i class="fas fa-female"></i> <i class="fas fa-child"></i>&nbspจำนวนผู้โดยสาร</h2>
+                        <h2><i class="fas fa-male"></i> <i class="fas fa-female"></i> <i class="fas fa-child"></i>&nbsp;จำนวนผู้โดยสาร</h2>
                     </div>
                     <div class="cart-content">
                         <!--ผู้ใหญ่-->

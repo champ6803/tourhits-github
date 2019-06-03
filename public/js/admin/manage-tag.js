@@ -46,7 +46,7 @@ function createTable() {
                     Str = Str + '<td>' + data[row].tag_name + '</td>';
                     Str = Str + '<td>' + data[row].tag_url + '</td>';
                     Str = Str + '<td>' + data[row].created_by + '</td>';
-                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTag(' + data[row].tag_id + ',\'' + data[row].tag_name + '\')">\n\
+                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTag(' + data[row].tag_id + ',\'' + data[row].tag_name + '\',\'' + data[row].tag_url + '\',\'' + data[row].meta_title + '\',\'' + data[row].meta_keywords +  '\',\'' + data[row].meta_description + '\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
                     Str = Str + '<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeTag(' + data[row].tag_id + ')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
@@ -69,15 +69,23 @@ function removeTag(id) {
     $('#hidden_remove_id').val(id);
     // $('#removeModal').modal('show'); 
 }
-function editTag(id, tagName) {
+function editTag(id, tagName, tagUrl, metaTitle, metaKeywords, metaDescription) {
     $('#hidden_update_id').val(id);
     $('#update_tag_name').val(tagName);
+    $('#update_tag_url').val(tagUrl);
+    $('#update_meta_title').val(metaTitle);
+    $('#update_meta_keywords').val(metaKeywords);
+    $('#update_meta_description').val(metaDescription);
     // $('#editModal').modal('hide'); 
 }
 
 function saveTag() {
     var tag_name = $('#tag_name').val();
     var tag_url = $('#tag_url').val();
+    var meta_title = $('#meta_title').val();
+    var meta_keywords = $('#meta_keywords').val();
+    var meta_description = $('#meta_description').val();
+    
     var checkEmpty = tag_name.trim();
     if (checkEmpty.length <= 0) {
         alert('กรุณาระบุชื่อ Tags')
@@ -87,7 +95,13 @@ function saveTag() {
         type: 'post',
         url: 'saveTag',
         async: false,
-        data: {'tag_name': tag_name, 'tag_url': tag_url},
+        data: {
+            'tag_name': tag_name,
+            'tag_url': tag_url,
+            'meta_title': meta_title,
+            'meta_keywords': meta_keywords,
+            'meta_description': meta_description
+        },
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
@@ -144,7 +158,7 @@ function findTagByName(tagName) {
                     Str = Str + '<td>' + data[row].tag_name + '</td>';
                     Str = Str + '<td>' + data[row].tag_url + '</td>';
                     Str = Str + '<td>' + data[row].created_by + '</td>';
-                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTag(' + data[row].tag_id + ',\'' + data[row].tag_name + '\')">\n\
+                    Str = Str + '<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal" onclick="editTag(' + data[row].tag_id + ',\'' + data[row].tag_name + '\',\'' + data[row].tag_url + '\',\'' + data[row].meta_title + '\',\'' + data[row].meta_keywords +  '\',\'' + data[row].meta_description + '\')">\n\
                     <span class="glyphicon glyphicon-pencil"></span>&nbsp;แก้ไข</button></td>';
                     Str = Str + '<td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeModal" onclick="removeTag(' + data[row].tag_id + ')">\n\
                     <span class="glyphicon glyphicon-minus"></span>&nbsp;ลบ</button></td>';
@@ -196,11 +210,21 @@ function updateTag() {
     var id = $('#hidden_update_id').val();
     var update_tag_name = $('#update_tag_name').val();
     var update_tag_url = $('#update_tag_url').val();
+    var update_meta_title = $('#update_meta_title').val();
+    var update_meta_keywords = $('#update_meta_keywords').val();
+    var update_meta_description = $('#update_meta_description').val();
     $.ajax({
         type: 'post',
         url: 'updateTag',
         async: false,
-        data: {'id': id, 'update_tag_name': update_tag_name, 'update_tag_url': update_tag_url},
+        data: {
+            'id': id,
+            'update_tag_name': update_tag_name, 
+            'update_tag_url': update_tag_url,
+            'update_meta_title': update_meta_title,
+            'update_meta_keywords': update_meta_keywords,
+            'update_meta_description': update_meta_description
+        },
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
@@ -218,6 +242,3 @@ function updateTag() {
         }
     });
 }
-
-
-

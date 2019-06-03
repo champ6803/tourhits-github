@@ -453,23 +453,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="item-head-body">     
                                     <a href="/tour-detail/japan/206/THG15-XW-JP-1-30SEP18">ทัวร์ญี่ปุ่น ฮอกไกโด หิมะแรก ตามรอยหนังแฟนเดย์ 5 วัน 3 คืน </a>   
                                 </div>
-                                
+
                                 <div class="item-body">
                                     <div class="tag-box-left hidden-xs">
                                         <div class="tag-head flexbox">
                                             <span class="flexbox">ระยะเวลา</span>
                                             <span class="flexbox">รหัสทัวร์</span>
                                         </div>
-                                        
+
                                         <div class="tag-id flexbox">
                                             <span class="flexbox">5 วัน 3 คืน</span>
                                             <span class="flexbox">TH206</span>
                                         </div>
-                                        
+
                                         <div class="tag-airline">
                                             <span class="flexbox">สายการบิน</span>
                                             <div class="tag-airline2 flexbox">
@@ -478,7 +478,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="item-price-more">
                                     <div class="price">ราคา
                                         <ins><span class="amount">16,999<span class="bbb">บาท</span></span></ins>
@@ -493,8 +493,8 @@
                                         <p>อิออน นาริตะ มอลล์-วัดนาริตะ</p>
                                     </div>
                                 </div>
-                                
-                                
+
+
                                 <div class="item-period-table hidden-xs">
                                     <div class="table-month">
                                         <span class="month">ม.ค.</span>
@@ -1557,7 +1557,7 @@ $replace = '';
     "name": "<?php
     if (count($tourCountryList) > 0) {
         echo strip_tags($tourCountryList[0]->tour_country_name);
-     } else if (count($tags) > 0) {
+    } else if (count($tags) > 0) {
         echo strip_tags($tags[0]->tag_name);
     }
     ?>",
@@ -1571,3 +1571,9 @@ $replace = '';
     }
 </script>
 @stop
+
+@section('meta')
+<meta name="title" content="{{ $meta_title }}">
+<meta name="description" content="{{ $meta_description }}">
+<meta name="keywords" content="{{ $meta_keywords }}">
+@endsection

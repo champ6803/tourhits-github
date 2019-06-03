@@ -382,7 +382,10 @@ class AdminController extends Controller {
         try {
             $tag_name = $_POST['tag_name'];
             $tag_url = $_POST['tag_url'];
-            $tagModel->insertTag($tag_name, $tag_url);
+            $meta_title = $_POST['meta_title'];
+            $meta_keywords = $_POST['meta_keywords'];
+            $meta_description = $_POST['meta_description'];
+            $tagModel->insertTag($tag_name, $tag_url, $meta_title, $meta_keywords, $meta_description);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();
@@ -408,7 +411,10 @@ class AdminController extends Controller {
             $id = $_POST['id'];
             $update_tag_name = $_POST['update_tag_name'];
             $update_tag_url = $_POST['update_tag_url'];
-            $tagModel->editTag($id, $update_tag_name, $update_tag_url);
+            $update_meta_title = $_POST['meta_title'];
+            $update_meta_keywords = $_POST['meta_keywords'];
+            $update_meta_description = $_POST['meta_description'];
+            $tagModel->editTag($id, $update_tag_name, $update_tag_url, $update_meta_title, $update_meta_keywords, $update_meta_description);
             return response('success');
         } catch (\Exception $e) {
             $msg = $e->getMessage();

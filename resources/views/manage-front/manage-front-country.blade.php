@@ -90,6 +90,15 @@
             <br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
             <input type="text" class="form-control" id="tour_country_detail" name="tour_country_detail">
+            <br>
+            <label for="meta_title" class="col-form-label">Meta Title:</label>
+            <input type="text" class="form-control" id="meta_title" name="meta_title">
+            <br>
+            <label for="meta_keywords" class="col-form-label">Meta Keywords:</label>
+            <input type="text" class="form-control" id="meta_keywords" name="meta_keywords">
+            <br> 
+            <label for="meta_description" class="col-form-label">Meta Description:</label>
+            <input type="text" class="form-control" id="meta_description" name="meta_description">
 <!--            <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
             <input class="form-control" type="file" id="file" name="file">-->
@@ -132,6 +141,15 @@
             <br> 
             <label for="recipient-name" class="col-form-label">รายละเอียด:</label>
             <input type="text" class="form-control" id="update_tour_country_detail" name="update_tour_country_detail">
+            <br>
+            <label for="update_meta_title" class="col-form-label">Meta Title:</label>
+            <input type="text" class="form-control" id="update_meta_title" name="update_meta_title">
+            <br>
+            <label for="update_meta_keywords" class="col-form-label">Meta Keywords:</label>
+            <input type="text" class="form-control" id="update_meta_keywords" name="update_meta_keywords">
+            <br> 
+            <label for="update_meta_description" class="col-form-label">Meta Description:</label>
+            <input type="text" class="form-control" id="update_meta_description" name="update_meta_description">
 <!--            <br>
             <label for="recipient-name" class="col-form-label">รูปภาพ:</label>
             <input class="form-control" type="file" id="updateFile" name="file">-->
