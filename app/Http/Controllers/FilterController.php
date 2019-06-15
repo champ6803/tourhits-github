@@ -53,8 +53,11 @@ class FilterController extends Controller {
         $meta_title = count($tourCountryList) > 0 ? $tourCountryList[0]->meta_title : $tags[0]->meta_title;
         $meta_keywords = count($tourCountryList) > 0 ? $tourCountryList[0]->meta_keywords : $tags[0]->meta_keywords;
         $meta_description = count($tourCountryList) > 0 ? $tourCountryList[0]->meta_description : $tags[0]->meta_description;
+        
+        $title = count($tourCountryList) > 0 ? $tourCountryList[0]->tour_country_name : $tags[0]->tag_name;
+        $page_title = $meta_title.' | ทัวร์ต่างประเทศ ท่องเที่ยว ทัวร์ กับ บริษัททัวร์ ทัวร์ราคาถูก ทัวร์มีคุณภาพ ทัวร์ชั้นนำ ทัวร์ต่างประเทศ I บริษัททัวร์ต่างประเทศ I ทัวร์ I บริษัททัวร์ I ท่องเที่ยว';
                 
-        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList', 'price_most', 'attractionList', 'countryArticleList', 'countryList', 'tourCountryList', 'tags', 'meta_title', 'meta_keywords', 'meta_description'));
+        return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList', 'price_most', 'attractionList', 'countryArticleList', 'countryList', 'tourCountryList', 'tags', 'meta_title', 'meta_keywords', 'meta_description', 'page_title'));
     }
 
     public function getTourPackage() {

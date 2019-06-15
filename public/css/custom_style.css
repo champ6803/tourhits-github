@@ -7175,7 +7175,7 @@ https://flickity.metafizzy.co
     float: left; 
 }
 
-.period-table-bottom tbody:before{
+/*.period-table-bottom tbody:before{
     position: absolute;
     height: 60px;
     bottom: 102px;
@@ -7184,8 +7184,8 @@ https://flickity.metafizzy.co
     width: 96%;
     z-index: 100;
     content: '';
-    /*background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(239, 236, 236) 99%, #fff 100%);*/
-}
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(239, 236, 236) 99%, #fff 100%);
+}*/
 
 .flexbox {
     display: flex;

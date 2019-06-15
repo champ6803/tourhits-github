@@ -47,7 +47,7 @@ class TourController extends Controller {
             $tourPackageObj->tour_period_start = $this->DateThai($tourPackageObj->tour_period_start);
             $tourPackageObj->tour_period_end = $this->DateThai($tourPackageObj->tour_period_end);
         }
-        $page_title = $tourPackage->tour_package_name;
+        $page_title = $tourPackage->meta_title. ' | ' .$tourPackage->tour_package_name;
         return view('tour.tour-detail', compact('tourPackage', 'tourPackageList', 'tourPackageImagesList', 'tourPackageDayList', 'page_title', 'tourAttractionDayList', 'tagList', 'countryList'));
     }
 

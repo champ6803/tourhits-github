@@ -180,7 +180,7 @@
                                                     <h5>ยุโรปตะวันออก</h5>
                                                 </a>
                                             </div>
-                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/hongkong')}}">
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/hongkong-macau')}}">
                                                     <img data-src="../images/flags/hk.png" alt="ทัวร์ฮ่องกง" class=" lazyloaded" src="../images/flags/hk.png">
                                                     <h5>ฮ่องกง</h5>
                                                 </a>
@@ -251,7 +251,7 @@
                                                     <h5>เยอรมัน</h5>
                                                 </a>
                                             </div>
-                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/macau')}}">
+                                            <div class="flag col-sm-6 col-md-3 col-lg-2"><a class="country-link new-thai-font" href="{{ URL::to('tour/hongkong-macau')}}">
                                                     <img data-src="../images/flags/Macau.png" alt="ทัวร์มาเก๊า" class=" lazyloaded" src="../images/flags/Macau.png">
                                                     <h5>มาเก๊า</h5>
                                                 </a>

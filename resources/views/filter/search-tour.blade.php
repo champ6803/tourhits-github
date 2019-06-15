@@ -1576,4 +1576,6 @@ $replace = '';
 <meta name="title" content="{{ $meta_title }}">
 <meta name="description" content="{{ $meta_description }}">
 <meta name="keywords" content="{{ $meta_keywords }}">
+
+<link rel="canonical" href="{{Request::fullUrl()}}" />
 @endsection
