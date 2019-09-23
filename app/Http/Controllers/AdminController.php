@@ -931,10 +931,7 @@ class AdminController extends Controller {
                             "airline_select" => "required",
                             "route_select" => "required",
                             "main_price" => "required",
-                            "main_special_price" => "required",
-                            "meta_title" => "required",
-                            "meta_keywords" => "required",
-                            "meta_description" => "required"
+                            "main_special_price" => "required"
                 ]);
 
                 if ($validator->fails()) {
@@ -962,10 +959,7 @@ class AdminController extends Controller {
                             "airline_select" => "required",
                             "route_select" => "required",
                             "main_price" => "required",
-                            "main_special_price" => "required",
-                            "meta_title" => "required",
-                            "meta_keywords" => "required",
-                            "meta_description" => "required"
+                            "main_special_price" => "required"
                 ]);
 
                 if ($validator->fails()) {
@@ -995,8 +989,8 @@ class AdminController extends Controller {
                     $end_date = $_POST['end_date'];
                     $tour_package_code = $_POST['tour_package_code'];
                     $tourlist_pdf = $_FILES['pdf_file']['name'];
-                    $main_price = $_POST['main_price'];
-                    $main_special_price = $_POST['main_special_price'];
+                    $main_price = str_replace(",", "", $_POST['main_price']);
+                    $main_special_price = str_replace(",", "", $_POST['main_special_price']);
                     $remark = $_POST['remark'];
                     $meta_title = $_POST['meta_title'];
                     $meta_keywords = $_POST['meta_keywords'];

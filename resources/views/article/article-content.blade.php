@@ -5,8 +5,8 @@
         <meta property="og:title" content="{{ $articleDetailList[0]->article_title }}" />
         <meta property="og:type" content="article" />
         <!--<meta property="og:url" content="http://www.tourhitsthai.com/article-content?id=4" />-->
-        <meta property="og:image" content="http://www.tourhitsthai.com/images/article-img/{{ $articleDetailList[0]->article_image }}" />
-        <!--<meta property="og:description" content="<?php echo $articleDetailList[0]->article_detail_name ?>" />-->
+        <meta property="og:image" content="{{ URL::to("/images/article-img/".$articleDetailList[0]->article_image)}}" />
+        <!--<meta property="og:description" content="<?php echo $articleDetailList[0]->article_detail_name ?>" />-->ห
         <meta property="og:site_name" content="Tourhits" />
         <meta property="article:published_time" content="<?php echo date('d-m-Y', strtotime($articleDetailList[0]->created_date)); ?>" />
         <!--<meta property="article:modified_time" content="2013-09-16T19:08:47+01:00" />-->
