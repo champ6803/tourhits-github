@@ -816,5 +816,4 @@ class FilterController extends Controller {
         $tourModel = new Tour_Package();
         $tourModel->deleteRoute($id);
     }
-
 }

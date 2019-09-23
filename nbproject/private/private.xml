@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Workspace/tourhits-github/app/Http/Controllers/TourController.php</file>
-            <file>file:/E:/Workspace/tourhits-github/resources/views/layout/main.blade.php</file>
-            <file>file:/E:/Workspace/tourhits-github/resources/views/filter/search-tour.blade.php</file>
-            <file>file:/E:/Workspace/tourhits-github/app/Http/Controllers/FilterController.php</file>
-            <file>file:/E:/Workspace/tourhits-github/public/js/filter/search-tour.js</file>
-            <file>file:/E:/Workspace/tourhits-github/resources/views/tour/tour-detail.blade.php</file>
+            <file>file:/D:/Champ/Project/tourhits-github/resources/views/article/article-manage-action.blade.php</file>
+            <file>file:/D:/Champ/Project/tourhits-github/app/Models/Tour_Package.php</file>
+            <file>file:/D:/Champ/Project/tourhits-github/resources/views/filter/search-tour.blade.php</file>
+            <file>file:/D:/Champ/Project/tourhits-github/app/Http/Controllers/FilterController.php</file>
+            <file>file:/D:/Champ/Project/tourhits-github/resources/views/article/country-article-manage.blade.php</file>
+            <file>file:/D:/Champ/Project/tourhits-github/app/Http/Controllers/ArticleIndexController.php</file>
         </group>
     </open-files>
 </project-private>
