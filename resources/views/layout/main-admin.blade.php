@@ -52,7 +52,9 @@ if (!isset($_SESSION['a_user'])) {
         <link rel="stylesheet" href="../assets/vendor_components/bootstrap-daterangepicker/daterangepicker.css">
 
         <!-- bootstrap wysihtml5 - text editor -->
-        <link rel="stylesheet" href="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
+        <!--<link rel="stylesheet" href="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">-->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap-wysihtml5.css')}}">
+        <!--<link href="//cdn.jsdelivr.net/bootstrap.wysihtml5/0.0.2/bootstrap-wysihtml5-0.0.2.css" rel="stylesheet">-->
 
         <link rel="stylesheet" href="{{ asset('css/lib/bootstrap-table.css')}}">
 
@@ -787,7 +789,16 @@ if (!isset($_SESSION['a_user'])) {
         <script src="../../../assets/vendor_components/ckeditor/ckeditor.js"></script>
 
         <!-- Bootstrap WYSIHTML5 -->
-        <script src="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
+        <!--<script src="../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>-->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
+        <script src="{{ asset('js/wysihtml5-0.3.0.js')}}"></script>
+        <script src="{{ asset('js/bootstrap-wysihtml5.js')}}"></script>
+        <script src="{{ asset('js/jqueryupload.js')}}"></script>
+        <script src="{{ asset('js/custom-insert-image.js')}}"></script>
+<!--        <script type="text/javascript" src="//cdn.jsdelivr.net/wysihtml5/0.3.0/wysihtml5-0.3.0.min.js"></script>
+        <script src="{{ asset('js/bootstrap-wysihtml5/bootstrap-wysihtml5-0.0.2.js')}}"></script>-->
+        <!--<script src="{{ asset('js/bootstrap-wysihtml5/custom_image_and_upload_wysihtml5.js')}}"></script>-->
+        <!--<script src="{{ asset('js/bootstrap-wysihtml5/jqueryupload.js')}}"></script>-->
 
         <!-- Slimscroll -->
         <script src="../assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
