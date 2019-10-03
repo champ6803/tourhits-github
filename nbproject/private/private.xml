@@ -5,15 +5,15 @@
         <group>
             <file>file:/D:/Champ/Project/tourhits-github/resources/views/layout/main.blade.php</file>
             <file>file:/D:/Champ/Project/tourhits-github/resources/views/article/article-manage-action.blade.php</file>
-            <file>file:/D:/Champ/Project/tourhits-github/app/Models/Tour_Package.php</file>
             <file>file:/D:/Champ/Project/tourhits-github/public/js/jqueryupload.js</file>
             <file>file:/D:/Champ/Project/tourhits-github/public/js/article/article-manage-action.js</file>
             <file>file:/D:/Champ/Project/tourhits-github/public/js/custom-insert-image.js</file>
+            <file>file:/D:/Champ/Project/tourhits-github/app/Models/Article_Detail.php</file>
             <file>file:/D:/Champ/Project/tourhits-github/resources/views/layout/main-admin.blade.php</file>
-            <file>file:/D:/Champ/Project/tourhits-github/resources/views/filter/search-tour.blade.php</file>
-            <file>file:/D:/Champ/Project/tourhits-github/app/Http/Controllers/FilterController.php</file>
+            <file>file:/D:/Champ/Project/tourhits-github/public/js/bootstrap-wysihtml5/jqueryupload.js</file>
             <file>file:/D:/Champ/Project/tourhits-github/resources/views/article/country-article-manage.blade.php</file>
             <file>file:/D:/Champ/Project/tourhits-github/app/Http/Controllers/ArticleIndexController.php</file>
+            <file>file:/D:/Champ/Project/tourhits-github/routes/web.php</file>
         </group>
     </open-files>
 </project-private>

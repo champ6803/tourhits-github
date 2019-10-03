@@ -25,6 +25,8 @@
     checkbox = $('input:checkbox', this);
     checked = $('input:checked', this);
     form = self.wrapAll(form).parent('form').attr('action', url);
+    form = self.wrapAll(form).parent('form').attr('action', url);
+    data.append('_token', $('[name="csrf-token"]').attr('content'));
 
     // Make sure radios and checkboxes keep original values
     // (IE resets checkd attributes when appending)
@@ -35,7 +37,7 @@
     inputs = inputs ? $(inputs).appendTo(form) : null;
 
     form.submit(function() {
-      iframe.load(function() {
+      iframe.on('load', function() {
 	var data = handleData(this, type),
 	checked = $('input:checked', self);
 

@@ -6,6 +6,11 @@
  *
  * http://lagoscript.org
  */
+$.ajaxSetup({
+   headers: {
+       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+   }
+});
 (function($) {
 
   var uuid = 0;
@@ -33,9 +38,11 @@
 
     inputs = createInputs(data);
     inputs = inputs ? $(inputs).appendTo(form) : null;
+    var token = '<input type="hidden" value="' + $('meta[name="csrf-token"]').attr('content') + '" name="_token">';
+    $(token).appendTo(form);
 
     form.submit(function() {
-      iframe.load(function() {
+      iframe.on('load', function() {
 	var data = handleData(this, type),
 	checked = $('input:checked', self);
 

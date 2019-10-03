@@ -77,7 +77,7 @@ bootWysiOverrides = {
         insertImageModal.modal('show');
         
         $('#file1').change(function() {
-          $(this).uploadimage('/upload', function(res) {
+          $(this).uploadimage('/upload_image', function(res) {
             if(res.status)
             {
 	      chooser.append(optionTemplate({"file":res.file,"caption":res.caption}));
@@ -125,7 +125,9 @@ $(function() {
       /* this is the template for the image button in the toolbar */
       image: function(locale) {
         return "<li>" +
-          "<div class='bootstrap-wysihtml5-insert-image-modal modal hide fade'>" +
+          "<div class='bootstrap-wysihtml5-insert-image-modal modal fade' data-wysihtml5-dialog='insertImage'>" +
+          "<div class='modal-dialog'>" +
+          "<div class='modal-content'>" +
           "<div class='modal-header'>" +
           "<a class='close' data-dismiss='modal'>&times;</a>" +
           "<h3>" + locale.image.insert + "</h3>" +
@@ -139,10 +141,12 @@ $(function() {
           "</div>" +
           "</div>" +
           "<div class='modal-footer'>" +
-          "<a href='#' class='btn' data-dismiss='modal'>" + locale.image.cancel + "</a>" +
+          "<a href='#' class='btn btn-default' data-dismiss='modal'>" + locale.image.cancel + "</a>" +
           "</div>" +
           "</div>" +
-          "<a class='btn' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='icon-picture'></i></a>" +
+          "</div>" +
+          "</div>" +
+          "<a class='btn btn-default' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='fa fa-image'></i></a>" +
           "</li>";
       }
     }

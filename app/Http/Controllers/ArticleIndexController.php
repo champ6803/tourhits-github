@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use App\Models\Country;
 use App\Models\Country_Article;
 use App\Models\Tour_Country;
+use Illuminate\Support\Facades\Input as Input;
 
 /**
  * Description of ArticleIndexController
@@ -158,7 +159,7 @@ class ArticleIndexController extends Controller {
             return response($msg);
         }
     }
-    
+
     public function removeCountryArticle() {
         $countryArticleModel = new Country_Article();
         try {
@@ -170,7 +171,7 @@ class ArticleIndexController extends Controller {
             return response($msg);
         }
     }
-    
+
     public function saveCountryArticle(Request $request) {
         $countryArticleModel = new Country_Article();
         try {
@@ -194,7 +195,6 @@ class ArticleIndexController extends Controller {
                         window.location.href='country-article-manage';
                         </script>";
             }
-            
         } catch (\Exception $e) {
             $msg = $e->getMessage();
             dd($msg);
@@ -203,6 +203,45 @@ class ArticleIndexController extends Controller {
                         window.location.href='country-article-manage';
                         </script>";
         }
+    }
+
+    public function attachableImages() {
+        try {
+            $IMAGEPATH = 'images/article-img-detail/';
+            $imagArr = [];
+            foreach (glob($IMAGEPATH . '*') as $filename) {
+                array_push($imagArr, (object) [
+                            'file' => $filename,
+                            'caption' => basename($filename)
+                ]);
+            }
+            return response()->json($imagArr);
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            dd($msg);
+        }
+    }
+
+    public function uploadImage() {
+        if (rand(0, 3) > 0) {
+            $filename = basename($_FILES['file']['name']);
+            $name = time().$filename;
+            if (Input::hasFile('file')) {
+                $file = Input::file('file');
+                $file->move('images/article-img-detail', $name);
+            }
+
+            //move_uploaded_file($_FILES['file']['name'].date('Y-m-dH:i:s'), 'images/article-img-detail/'.$filename);
+
+            $data = array('status' => 1,
+                'file' => 'images/article-img-detail/'.$name,
+                'caption' => $name);
+        } else {
+            $data = array('status' => 0);
+        }
+
+        header('Content-type: text/html');
+        echo json_encode($data);
     }
 
 }

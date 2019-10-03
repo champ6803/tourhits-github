@@ -33,7 +33,7 @@ $(function () {
 
     //$('textarea').wysihtml5($.extend(wysiwygOptions, {html:true, color:false}));
 
-    //$('textarea').wysihtml5();
+    $('#article_detail_name').wysihtml5();
     //$('textarea').wysihtml5($.extend(wysiwygOptions, {html: true, color: false}));
 
     var article_id = getUrlParameter('article_id');

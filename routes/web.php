@@ -268,3 +268,7 @@ Route::post('saveCountryArticle', 'ArticleIndexController@saveCountryArticle');
 Route::post('getArticleById', 'ArticleIndexController@getArticleById');
 
 Route::post('removeCountryArticle', 'ArticleIndexController@removeCountryArticle');
+
+Route::get('attachable_images', 'ArticleIndexController@attachableImages');
+
+Route::post('upload_image', 'ArticleIndexController@uploadImage');
