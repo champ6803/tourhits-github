@@ -72,7 +72,7 @@
                                                     <div class="form-group row">
                                                         <label for="country_article_detail" class="col-sm-2 control-label">รายละเอียด :</label>
                                                         <div class="col-sm-10">
-                                                            <textarea style="height: 500px;" type="text" class="form-control" id="country_article_detail" name="country_article_detail"></textarea>
+                                                            <textarea style="height: 500px;" type="text" class="form-control wysi" id="country_article_detail" name="country_article_detail"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>

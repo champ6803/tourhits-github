@@ -16,6 +16,8 @@
             <input name="tour_package_id" id="tour_package_id" hidden value="">
             <input name="tour_package_day_id" id="tour_package_day_id" hidden value="">
             <input name="tour_period_id" id="tour_period_id" hidden value="">
+            <input name="tour_period_id_add" id="tour_period_id_add" hidden value="">
+            <input name="tour_period_id_remove" id="tour_period_id_remove" hidden value="">
             <input name="tour_image_id" id="tour_image_id" hidden value="">
             <div class="box box-default">
                 <div class="box-header with-border">

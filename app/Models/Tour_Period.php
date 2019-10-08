@@ -88,7 +88,7 @@ class Tour_Period extends Model {
             return $ex;
         }
     }
-    
+
     public function updateTourPeriodStatus($tour_period_id, $tour_period_status) {
         try {
             $date = \Carbon\Carbon::now();
@@ -101,6 +101,19 @@ class Tour_Period extends Model {
                                 , 'updated_by' => 'admin'
                                 , 'updated_at' => $date]
             );
+            return true;
+        } catch (Exception $ex) {
+            return $ex;
+        }
+    }
+
+    public function removeTourPeriodList($idList) {
+        try {
+            $date = \Carbon\Carbon::now();
+            for ($i = 0; $i < count($idList); $i++) {
+                Tour_Period::where('tour_period.tour_period_id', $idList[$i])
+                    ->delete();
+            }
             return true;
         } catch (Exception $ex) {
             return $ex;

@@ -2,7 +2,6 @@ $(function () {
     $('#blog_manage').addClass("active");
     $('#country_article_manage').addClass("active");
 
-    $('textarea').wysihtml5();
     var country_article_id = getUrlParameter('country_article_id');
     getCountryArticle(country_article_id);
 });

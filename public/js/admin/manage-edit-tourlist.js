@@ -58,9 +58,10 @@ $(function () {
         var adult_price = $('#adult_price').autoNumeric('get');
         var child_price = $('#child_price').autoNumeric('get');
         var special_price = $('#special_price').autoNumeric('get');
-        var arrp = $('#tour_period_id').val() + ",0";
-        $('#tour_period_id').val(arrp);
+
         if (period_start && period_end && adult_price && child_price && special_price) {
+            var arrp = $('#tour_period_id').val() + ",0";
+            $('#tour_period_id').val(arrp);
             if (number == 0) {
                 $('#period_body').empty();
             }
@@ -75,6 +76,8 @@ $(function () {
             table = table + "<td align='center'><button type='button' class='btn btn-primary btn-xs' onclick='editPeriod(" + number + ")'><i class='fa fa-pencil-square'></i></button>&nbsp;<button type='button' class='btn btn-danger btn-xs' onclick='deletePeriod(" + number + ")'><i class='fa fa-trash'></i></button></td>";
             table = table + "</tr>";
             $('#period_body').append(table);
+        } else {
+            alert("กรุณากรอกข้อมูลให้ครบทุกช่อง");
         }
     });
 
@@ -153,6 +156,24 @@ function deletePeriod(num) {
     if (num) {
         var r_number = (parseInt(num) - 1);
         $('#period_body > tr').eq(r_number).remove();
+        var tour_period_id = $('#tour_period_id').val();
+        var tour_period_id_list = tour_period_id.split(",");
+
+        var tour_period_id_remove = $("#tour_period_id_remove").val();
+        var tour_period_id_remove_list = tour_period_id_remove === "" ? [] : tour_period_id_remove.split(",");
+        tour_period_id_remove_list.push(tour_period_id_list[r_number]);
+        $("#tour_period_id_remove").val(tour_period_id_remove_list.join(","));
+
+        tour_period_id_list.splice(r_number, 1);
+        $('#tour_period_id').val(tour_period_id_list.join(","));
+
+        $.each($('#period_body > tr'), function (key, val) {
+            var tr = $('#period_body > tr').eq(key);
+            var children = tr.children();
+            children.eq(0).html((key + 1) + '<input id="no_' + (key + 1) + '" type="hidden" class="run_number" value="' + (key + 1) + '" />');
+            children.eq(6).html("<button type='button' class='btn btn-primary btn-xs' onclick='editPeriod(" + (key + 1) + ")'><i class='fa fa-pencil-square'></i></button>&nbsp;<button type='button' class='btn btn-danger btn-xs' onclick='deletePeriod(" + (key + 1) + ")'><i class='fa fa-trash'></i></button>");
+        });
+        number--;
     }
 }
 

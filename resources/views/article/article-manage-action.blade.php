@@ -76,7 +76,7 @@
                                                     <div class="form-group row">
                                                         <label for="article_detail_name" class="col-sm-2 control-label">รายละเอียด :</label>
                                                         <div class="col-sm-10">
-                                                            <textarea style="height: 500px;" type="text" class="form-control" id="article_detail_name" name="article_detail_name"></textarea>
+                                                            <textarea style="height: 500px;" type="text" class="form-control wysi" id="article_detail_name" name="article_detail_name"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
