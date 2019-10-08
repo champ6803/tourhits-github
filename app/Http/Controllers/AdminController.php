@@ -1053,7 +1053,6 @@ class AdminController extends Controller {
                         $tour_period_adult_special_price = $_POST['special_price'];
                         $tour_period_child_special_price = 0;
                         $tour_period_status = 'Y';
-                        dd($arr_tour_period_id);
                         for ($i = 0; $i < count($tour_period_start); $i++) {
                             $tour_period_start[$i] = str_replace('/', '-', $tour_period_start[$i]);
                             $dateStart = date('Y-m-d H:i:s', strtotime($tour_period_start[$i]));
