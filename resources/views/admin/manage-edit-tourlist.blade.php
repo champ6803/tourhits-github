@@ -357,8 +357,8 @@
                                                 <div class="col-12">
                                                     <button id="btn_period_add" type="button" class="btn btn-info"> 
                                                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
-                                                    <button id="btn_period_delete" type="button" class="btn btn-danger"> 
-                                                        <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</button>
+<!--                                                    <button id="btn_period_delete" type="button" class="btn btn-danger"> 
+                                                        <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</button>-->
                                                 </div>
                                             </div>
                                             <br>

@@ -142,8 +142,14 @@ function editPeriod(num) {
 
         $('#label_update_no').html("No : " + num);
         $('#hidden_update_no').val(num);
-        $('#update_period_start').datepicker("setDate", period_start);
-        $('#update_period_end').datepicker("setDate", period_end);
+        $("#update_period_start").datepicker({
+            format: 'dd/mm/yyyy',
+            todayBtn: true
+        }).datepicker("setDate", period_start);
+        $("#update_period_end").datepicker({
+            format: 'dd/mm/yyyy',
+            todayBtn: true
+        }).datepicker("setDate", period_end);
         $('#update_adult_price').val(adult_price);
         $('#update_child_price').val(child_price);
         $('#update_special_price').val(special_price);
