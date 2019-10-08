@@ -1041,7 +1041,7 @@ class AdminController extends Controller {
                             , $tour_name, $tour_detail, $highlight_tour, $tourlist_picture, $day
                             , $night, $tourlist_pdf, $dateStart, $dateEnd, $main_price, $main_special_price, $remark, $meta_title, $meta_keywords, $meta_description);
 
-                    if ($tour_period_id != null && $tour_period_id != 0) {
+                    if ($tour_period_id != null) {
                         $arr_tour_period_id = explode(",", $tour_period_id);
                         $arr_tour_period_id_remove = explode(",", $tour_period_id_remove);
                         $tour_period_start = $_POST['period_start'];
@@ -1053,6 +1053,7 @@ class AdminController extends Controller {
                         $tour_period_adult_special_price = $_POST['special_price'];
                         $tour_period_child_special_price = 0;
                         $tour_period_status = 'Y';
+                        dd($arr_tour_period_id);
                         for ($i = 0; $i < count($tour_period_start); $i++) {
                             $tour_period_start[$i] = str_replace('/', '-', $tour_period_start[$i]);
                             $dateStart = date('Y-m-d H:i:s', strtotime($tour_period_start[$i]));

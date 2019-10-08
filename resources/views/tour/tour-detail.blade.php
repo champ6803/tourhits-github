@@ -263,7 +263,7 @@
 
     #owl-demo .tag-item{
         display: block;
-        background: #d7d7d7;
+        background: #f5f5f5;
         width: auto;
         margin-right: 10px;
         border-radius: 15px;
@@ -271,7 +271,7 @@
         -moz-border-radius: 15px;
         text-align: center;
         margin: 10px;
-        border: 1px solid #d7d7d7;
+        border: 1px solid #f5f5f5;
         -webkit-transition: all 1s ease;
         -o-transition: all 1s ease;
         transition: all 1s ease;
