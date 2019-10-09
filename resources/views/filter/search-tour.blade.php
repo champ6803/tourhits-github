@@ -434,7 +434,7 @@
                     <!--เทส Card-->
                     <div class="row">
                         <div id="card_area" class="card_show filter-item-wrapper">
-                            <li class="trip-item">
+<!--                            <li class="trip-item">
                                 <div class="item-media">
                                     <div class="image-cover">
                                         <img src="../images/tour/206-Fuji Mountain.jpg" alt="">
@@ -556,7 +556,7 @@
 
                                     </div>
                                 </div>
-                            </li>
+                            </li>-->
                         </div>
                     </div>
 

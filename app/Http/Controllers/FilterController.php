@@ -49,14 +49,27 @@ class FilterController extends Controller {
         $tourCountryList = $countryModel->getCountryByUrl($country);
         $countryList = $countryModel->getCountryAll();
         $tags = $this->_tagModel->getTagByUrl($country);
+
+        if (count($tourCountryList) > 0) {
+            $meta_title = $tourCountryList[0]->meta_title;
+            $meta_keywords = $tourCountryList[0]->meta_keywords;
+            $meta_description = $tourCountryList[0]->meta_description;
+        } else if (count($tags) > 0) {
+            $meta_title = $tags[0]->meta_title;
+            $meta_keywords = $tags[0]->meta_keywords;
+            $meta_description = $tags[0]->meta_description;
+        } else {
+            $meta_title = 'ทัวร์ต่างประเทศ ท่องเที่ยว ทัวร์ กับ บริษัททัวร์ ทัวร์ราคาถูก ทัวร์มีคุณภาพ ทัวร์ชั้นนำ ทัวร์ต่างประเทศ I บริษัททัวร์ต่างประเทศ I ทัวร์ I บริษัททัวร์ I ท่องเที่ยว';
+            $meta_keywords = 'ทัวร์ต่างประเทศ ท่องเที่ยว ทัวร์ กับ บริษัททัวร์ ทัวร์ราคาถูก ทัวร์มีคุณภาพ ทัวร์ชั้นนำ ทัวร์ต่างประเทศ I บริษัททัวร์ต่างประเทศ I ทัวร์ I บริษัททัวร์ I ท่องเที่ยว';
+            $meta_description = 'ทัวร์ต่างประเทศ ท่องเที่ยว ทัวร์ กับ บริษัททัวร์ ทัวร์ราคาถูก ทัวร์มีคุณภาพ ทัวร์ชั้นนำ ทัวร์ต่างประเทศ I บริษัททัวร์ต่างประเทศ I ทัวร์ I บริษัททัวร์ I ท่องเที่ยว';
+        }
         
-        $meta_title = count($tourCountryList) > 0 ? $tourCountryList[0]->meta_title : $tags[0]->meta_title;
-        $meta_keywords = count($tourCountryList) > 0 ? $tourCountryList[0]->meta_keywords : $tags[0]->meta_keywords;
-        $meta_description = count($tourCountryList) > 0 ? $tourCountryList[0]->meta_description : $tags[0]->meta_description;
-        
-        $title = count($tourCountryList) > 0 ? $tourCountryList[0]->tour_country_name : $tags[0]->tag_name;
+//        $meta_title = count($tourCountryList) > 0 ? $tourCountryList[0]->meta_title : count($tags) > 0 ? $tags[0]->meta_title : 'ทัวร์ต่างประเทศ ท่องเที่ยว ทัวร์ กับ บริษัททัวร์ ทัวร์ราคาถูก ทัวร์มีคุณภาพ ทัวร์ชั้นนำ ทัวร์ต่างประเทศ I บริษัททัวร์ต่างประเทศ I ทัวร์ I บริษัททัวร์ I ท่องเที่ยว';
+//        $meta_keywords = count($tourCountryList) > 0 ? $tourCountryList[0]->meta_keywords : count($tags) > 0 ? $tags[0]->meta_keywords : 'ทัวร์ต่างประเทศ ท่องเที่ยว ทัวร์ กับ บริษัททัวร์ ทัวร์ราคาถูก ทัวร์มีคุณภาพ ทัวร์ชั้นนำ ทัวร์ต่างประเทศ I บริษัททัวร์ต่างประเทศ I ทัวร์ I บริษัททัวร์ I ท่องเที่ยว';
+//        $meta_description = count($tourCountryList) > 0 ? $tourCountryList[0]->meta_description : count($tags) > 0 ? $tags[0]->meta_description : 'ทัวร์ต่างประเทศ ท่องเที่ยว ทัวร์ กับ บริษัททัวร์ ทัวร์ราคาถูก ทัวร์มีคุณภาพ ทัวร์ชั้นนำ ทัวร์ต่างประเทศ I บริษัททัวร์ต่างประเทศ I ทัวร์ I บริษัททัวร์ I ท่องเที่ยว';
+        //$title = count($tourCountryList) > 0 ? $tourCountryList[0]->tour_country_name : $tags[0]->tag_name;
         $page_title = $meta_title == '' ? 'ทัวร์ต่างประเทศ ท่องเที่ยว ทัวร์ กับ บริษัททัวร์ ทัวร์ราคาถูก ทัวร์มีคุณภาพ ทัวร์ชั้นนำ ทัวร์ต่างประเทศ I บริษัททัวร์ต่างประเทศ I ทัวร์ I บริษัททัวร์ I ท่องเที่ยว' : $meta_title;
-                
+
         return view('filter.search-tour', compact('routeList', 'airlineList', 'holidayList', 'monthList', 'dayList', 'tagList', 'price_most', 'attractionList', 'countryArticleList', 'countryList', 'tourCountryList', 'tags', 'meta_title', 'meta_keywords', 'meta_description', 'page_title'));
     }
 
@@ -816,4 +829,5 @@ class FilterController extends Controller {
         $tourModel = new Tour_Package();
         $tourModel->deleteRoute($id);
     }
+
 }

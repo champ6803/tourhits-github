@@ -24,8 +24,8 @@ $(function () {
     var page_num = 1; // default page number
     getTourPackage(page_num, sort_by); // init package tour card
     checkboxChecked();
-    $('.card_show').show();
-    $('#loading').hide();
+//    $('.card_show').show();
+    //$('#loading').hide();
     if (ary_days.length > 0) {
         $('#day_all').prop('checked', false);
         $('#day_' + days_no).prop('checked', true);
